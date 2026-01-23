@@ -75,7 +75,9 @@ export const TicketsProvider: React.FC<{ children: React.ReactNode }> = ({ child
 
   // Save tickets to localStorage whenever they change
   useEffect(() => {
-    localStorage.setItem('tickets', JSON.stringify(tickets));
+    if (tickets.length > 0) {
+      localStorage.setItem('tickets', JSON.stringify(tickets));
+    }
   }, [tickets]);
 
   const initializeDefaultTickets = () => {
@@ -140,17 +142,17 @@ export const TicketsProvider: React.FC<{ children: React.ReactNode }> = ({ child
       activities: [],
     };
 
-    setTickets([newTicket, ...tickets]);
+    setTickets(prevTickets => [newTicket, ...prevTickets]);
   };
 
   const updateTicket = (id: string, updates: Partial<Ticket>) => {
-    setTickets(tickets.map(ticket => 
+    setTickets(prevTickets => prevTickets.map(ticket => 
       ticket.id === id ? { ...ticket, ...updates } : ticket
     ));
   };
 
   const deleteTicket = (id: string) => {
-    setTickets(tickets.filter(ticket => ticket.id !== id));
+    setTickets(prevTickets => prevTickets.filter(ticket => ticket.id !== id));
   };
 
   const addComment = (ticketId: string, author: string, content: string) => {
@@ -161,15 +163,24 @@ export const TicketsProvider: React.FC<{ children: React.ReactNode }> = ({ child
       createdAt: new Date().toISOString(),
     };
 
-    updateTicket(ticketId, {
-      comments: [...(tickets.find(t => t.id === ticketId)?.comments || []), comment],
-    });
-
-    addActivity(ticketId, {
+    const activity: Activity = {
+      id: `activity_${Date.now()}`,
       type: 'comment',
       author,
       description: `Adicionou um comentário`,
-    });
+      createdAt: new Date().toISOString(),
+    };
+
+    setTickets(prevTickets => prevTickets.map(ticket => {
+      if (ticket.id === ticketId) {
+        return {
+          ...ticket,
+          comments: [...ticket.comments, comment],
+          activities: [...ticket.activities, activity]
+        };
+      }
+      return ticket;
+    }));
   };
 
   const addAttachment = (ticketId: string, name: string) => {
@@ -179,30 +190,42 @@ export const TicketsProvider: React.FC<{ children: React.ReactNode }> = ({ child
       uploadedAt: new Date().toISOString(),
     };
 
-    updateTicket(ticketId, {
-      attachments: [...(tickets.find(t => t.id === ticketId)?.attachments || []), attachment],
-    });
-
-    addActivity(ticketId, {
+    const activity: Activity = {
+      id: `activity_${Date.now()}`,
       type: 'attachment',
       author: 'sistema',
       description: `Anexou arquivo: ${name}`,
-    });
+      createdAt: new Date().toISOString(),
+    };
+
+    setTickets(prevTickets => prevTickets.map(ticket => {
+      if (ticket.id === ticketId) {
+        return {
+          ...ticket,
+          attachments: [...ticket.attachments, attachment],
+          activities: [...ticket.activities, activity]
+        };
+      }
+      return ticket;
+    }));
   };
 
-  const addActivity = (ticketId: string, activity: Omit<Activity, 'id' | 'createdAt'>) => {
+  const addActivity = (ticketId: string, activityData: Omit<Activity, 'id' | 'createdAt'>) => {
     const newActivity: Activity = {
-      ...activity,
+      ...activityData,
       id: `activity_${Date.now()}`,
       createdAt: new Date().toISOString(),
     };
 
-    const ticket = tickets.find(t => t.id === ticketId);
-    if (ticket) {
-      updateTicket(ticketId, {
-        activities: [...ticket.activities, newActivity],
-      });
-    }
+    setTickets(prevTickets => prevTickets.map(ticket => {
+      if (ticket.id === ticketId) {
+        return {
+          ...ticket,
+          activities: [...ticket.activities, newActivity]
+        };
+      }
+      return ticket;
+    }));
   };
 
   const getTicket = (id: string) => {
