@@ -60,12 +60,12 @@ export default function Dashboard() {
             >
               {sidebarOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-400 to-cyan-400 flex items-center justify-center">
-                <span className="text-lg font-bold text-slate-900">NJ</span>
+            <div className="flex items-center gap-3 cursor-pointer" onClick={() => setLocation('/dashboard')}>
+              <div className="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-900/50">
+                <span className="text-lg font-bold text-white">NJ</span>
               </div>
               <div>
-                <h1 className="text-xl font-bold text-white">NEROS JL</h1>
+                <h1 className="text-xl font-bold text-white">NEROS</h1>
                 <p className="text-xs text-blue-200">Help Desk</p>
               </div>
             </div>
@@ -76,6 +76,12 @@ export default function Dashboard() {
               <span className="text-sm">Bem-vindo,</span>
               <span className="font-semibold text-cyan-400">{user?.fullName}</span>
             </div>
+            <button
+              onClick={() => setLocation('/dashboard')}
+              className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-blue-100 text-sm transition border border-white/10"
+            >
+              Voltar ao Portal
+            </button>
             <button
               onClick={handleLogout}
               className="p-2 rounded-lg hover:bg-red-500/20 text-red-400 hover:text-red-300 transition"
