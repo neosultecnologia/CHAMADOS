@@ -43,74 +43,105 @@
 }
 
 :root {
-  --primary: #3b82f6;
-  --primary-foreground: #f0f9ff;
-  --sidebar-primary: #1e40af;
-  --sidebar-primary-foreground: #f0f9ff;
-  --chart-1: #06b6d4;
-  --chart-2: #3b82f6;
-  --chart-3: #1e40af;
-  --chart-4: #0f172a;
-  --chart-5: #0c0f1f;
-  --radius: 0.75rem;
-  --background: #0f172a;
-  --foreground: #f0f9ff;
-  --card: #1a2847;
-  --card-foreground: #f0f9ff;
-  --popover: #1a2847;
-  --popover-foreground: #f0f9ff;
-  --secondary: #1e40af;
-  --secondary-foreground: #f0f9ff;
-  --muted: #334155;
-  --muted-foreground: #cbd5e1;
-  --accent: #06b6d4;
-  --accent-foreground: #0f172a;
-  --destructive: #ef4444;
-  --destructive-foreground: #f0f9ff;
-  --border: #334155;
-  --input: #1e293b;
-  --ring: #06b6d4;
-  --sidebar: #1a2847;
-  --sidebar-foreground: #f0f9ff;
-  --sidebar-accent: #06b6d4;
-  --sidebar-accent-foreground: #0f172a;
-  --sidebar-border: #334155;
-  --sidebar-ring: #06b6d4;
+  /* NEROS Brand Colors - Light Mode */
+  /* Primary Blue Neosul */
+  --primary: oklch(0.45 0.15 260); /* Deep Corporate Blue */
+  --primary-foreground: oklch(0.98 0 0);
+  
+  /* Sidebar & Navigation */
+  --sidebar-primary: oklch(0.45 0.15 260);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  
+  /* Charts - Professional Blue Scale */
+  --chart-1: oklch(0.55 0.12 260);
+  --chart-2: oklch(0.50 0.14 260);
+  --chart-3: oklch(0.45 0.15 260);
+  --chart-4: oklch(0.40 0.16 260);
+  --chart-5: oklch(0.35 0.17 260);
+  
+  --radius: 0.5rem; /* More structured, less rounded */
+  
+  /* Backgrounds - Clean & Professional */
+  --background: oklch(0.98 0 0); /* White/Light Gray */
+  --foreground: oklch(0.20 0 0); /* Dark Gray for text */
+  
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.20 0 0);
+  
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.20 0 0);
+  
+  --secondary: oklch(0.95 0 0); /* Light Gray */
+  --secondary-foreground: oklch(0.30 0 0);
+  
+  --muted: oklch(0.95 0 0);
+  --muted-foreground: oklch(0.50 0 0);
+  
+  --accent: oklch(0.95 0 0);
+  --accent-foreground: oklch(0.20 0 0);
+  
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  
+  --border: oklch(0.90 0 0);
+  --input: oklch(0.90 0 0);
+  --ring: oklch(0.45 0.15 260);
+  
+  --sidebar: oklch(0.98 0 0);
+  --sidebar-foreground: oklch(0.20 0 0);
+  --sidebar-accent: oklch(0.95 0 0);
+  --sidebar-accent-foreground: oklch(0.20 0 0);
+  --sidebar-border: oklch(0.90 0 0);
+  --sidebar-ring: oklch(0.45 0.15 260);
 }
 
 .dark {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-500);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --background: oklch(0.141 0.005 285.823);
-  --foreground: oklch(0.85 0.005 65);
-  --card: oklch(0.21 0.006 285.885);
-  --card-foreground: oklch(0.85 0.005 65);
-  --popover: oklch(0.21 0.006 285.885);
-  --popover-foreground: oklch(0.85 0.005 65);
-  --secondary: oklch(0.24 0.006 286.033);
-  --secondary-foreground: oklch(0.7 0.005 65);
-  --muted: oklch(0.274 0.006 286.033);
-  --muted-foreground: oklch(0.705 0.015 286.067);
-  --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.488 0.243 264.376);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
-  --sidebar: oklch(0.21 0.006 285.885);
-  --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.488 0.243 264.376);
+  /* NEROS Brand Colors - Dark Mode (Deep Corporate) */
+  /* Primary Blue Neosul */
+  --primary: oklch(0.55 0.15 260); /* Slightly lighter blue for dark mode */
+  --primary-foreground: oklch(0.98 0 0);
+  
+  --sidebar-primary: oklch(0.55 0.15 260);
+  --sidebar-primary-foreground: oklch(0.98 0 0);
+  
+  /* Backgrounds - Deep Blue/Gray */
+  --background: oklch(0.15 0.05 260); /* Deep Navy Background */
+  --foreground: oklch(0.90 0 0); /* Light Gray Text */
+  
+  --card: oklch(0.20 0.05 260); /* Slightly lighter navy */
+  --card-foreground: oklch(0.90 0 0);
+  
+  --popover: oklch(0.20 0.05 260);
+  --popover-foreground: oklch(0.90 0 0);
+  
+  --secondary: oklch(0.25 0.05 260);
+  --secondary-foreground: oklch(0.80 0 0);
+  
+  --muted: oklch(0.25 0.05 260);
+  --muted-foreground: oklch(0.60 0 0);
+  
+  --accent: oklch(0.25 0.05 260);
+  --accent-foreground: oklch(0.95 0 0);
+  
+  --destructive: oklch(0.60 0.20 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  
+  --border: oklch(0.30 0.05 260);
+  --input: oklch(0.30 0.05 260);
+  --ring: oklch(0.55 0.15 260);
+  
+  --chart-1: oklch(0.55 0.12 260);
+  --chart-2: oklch(0.50 0.14 260);
+  --chart-3: oklch(0.45 0.15 260);
+  --chart-4: oklch(0.40 0.16 260);
+  --chart-5: oklch(0.35 0.17 260);
+  
+  --sidebar: oklch(0.18 0.05 260);
+  --sidebar-foreground: oklch(0.90 0 0);
+  --sidebar-accent: oklch(0.25 0.05 260);
+  --sidebar-accent-foreground: oklch(0.95 0 0);
+  --sidebar-border: oklch(0.30 0.05 260);
+  --sidebar-ring: oklch(0.55 0.15 260);
 }
 
 @layer base {

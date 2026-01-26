@@ -91,25 +91,28 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 flex items-center justify-center p-4">
-      {/* Animated background orbs */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
+    <div className="min-h-screen bg-[#0f172a] flex items-center justify-center p-4 relative overflow-hidden">
+      {/* NEROS Brand Background - Deep Corporate Blue */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a]"></div>
+      
+      {/* Subtle geometric accents (Brandbook: "Geométricos", "Sem detalhes excessivos") */}
+      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-blue-600/5 rounded-bl-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-blue-500/5 rounded-tr-full blur-3xl"></div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="w-full max-w-md"
+        className="w-full max-w-md relative z-10"
       >
-        <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-8 shadow-2xl">
-          {/* Logo and Title */}
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br from-blue-400 to-cyan-400 mb-4">
-              <span className="text-xl font-bold text-slate-900">NJ</span>
+        <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-8 shadow-2xl">
+          {/* Logo and Title - NEROS Identity */}
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-blue-600 mb-6 shadow-lg shadow-blue-900/50">
+              <span className="text-2xl font-bold text-white tracking-wider">NJ</span>
             </div>
-            <h1 className="text-3xl font-bold text-white mb-2">NEROS JL</h1>
-            <p className="text-blue-100">Sistema de Help Desk</p>
+            <h1 className="text-4xl font-bold text-white mb-2 tracking-tight">NEROS</h1>
+            <p className="text-slate-400 text-sm uppercase tracking-widest font-medium">Núcleo Estratégico de Resultados e Operações Neosul</p>
           </div>
 
           {!showRegister ? (
