@@ -10,35 +10,46 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard"; // This is the Help Desk module
 import PortalDashboard from "./pages/PortalDashboard"; // This is the new Portal Hub
 import ModulePlaceholder from "./pages/ModulePlaceholder";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function Router() {
-  const { isAuthenticated } = useAuth();
+  const { isAuthenticated, isLoading } = useAuth();
+
+  if (isLoading) {
+    return null; // Let AuthProvider handle initial loading state or show a global spinner
+  }
 
   return (
     <Switch>
       {/* Root redirects to Portal if logged in, else Login */}
-      <Route path="/" component={isAuthenticated ? PortalDashboard : Login} />
+      <Route path="/">
+        {isAuthenticated ? <ProtectedRoute component={PortalDashboard} /> : <Login />}
+      </Route>
       
       <Route path="/login" component={Login} />
       
       {/* Main Portal Hub */}
-      <Route path="/dashboard" component={PortalDashboard} />
+      <Route path="/dashboard">
+        <ProtectedRoute component={PortalDashboard} />
+      </Route>
       
       {/* Help Desk Module */}
-      <Route path="/chamados" component={Dashboard} />
+      <Route path="/chamados">
+        <ProtectedRoute component={Dashboard} />
+      </Route>
 
       {/* Other Modules Placeholders */}
       <Route path="/modulo/rh">
-        {() => <ModulePlaceholder title="RH" />}
+        <ProtectedRoute component={() => <ModulePlaceholder title="RH" />} />
       </Route>
       <Route path="/modulo/ecommerce">
-        {() => <ModulePlaceholder title="E-commerce" />}
+        <ProtectedRoute component={() => <ModulePlaceholder title="E-commerce" />} />
       </Route>
       <Route path="/modulo/marketing">
-        {() => <ModulePlaceholder title="Marketing" />}
+        <ProtectedRoute component={() => <ModulePlaceholder title="Marketing" />} />
       </Route>
       <Route path="/modulo/tecnologia">
-        {() => <ModulePlaceholder title="Tecnologia" />}
+        <ProtectedRoute component={() => <ModulePlaceholder title="Tecnologia" />} />
       </Route>
       
       <Route path="/404" component={NotFound} />
