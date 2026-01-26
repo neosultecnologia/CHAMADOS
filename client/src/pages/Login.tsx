@@ -1,247 +1,222 @@
 import React, { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { useLocation } from 'wouter';
-import { Eye, EyeOff, ArrowRight, Loader2 } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { toast } from 'sonner';
+import { Eye, EyeOff, Loader2 } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Login() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [isLogin, setIsLogin] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [showRegister, setShowRegister] = useState(false);
-  const [registerData, setRegisterData] = useState({
-    fullName: '',
-    username: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-  });
-
   const { login, register } = useAuth();
   const [, setLocation] = useLocation();
 
-  const handleLogin = async (e: React.FormEvent) => {
+  // Form states
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [fullName, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [error, setError] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError('');
     setIsLoading(true);
 
     try {
-      await login(username, password);
-      toast.success('Login realizado com sucesso!');
+      if (isLogin) {
+        await login(username, password);
+      } else {
+        if (password !== confirmPassword) {
+          throw new Error('As senhas não coincidem');
+        }
+        await register(fullName, username, email, password);
+      }
       setLocation('/dashboard');
-    } catch (error) {
-      toast.error(error instanceof Error ? error.message : 'Erro ao fazer login');
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const handleRegister = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (registerData.password !== registerData.confirmPassword) {
-      toast.error('As senhas não coincidem');
-      return;
-    }
-    setIsLoading(true);
-    try {
-      await register(registerData.fullName, registerData.username, registerData.email, registerData.password);
-      toast.success('Cadastro realizado com sucesso!');
-      setLocation('/dashboard');
-    } catch (error) {
-      toast.error(error instanceof Error ? error.message : 'Erro ao cadastrar');
+    } catch (err: any) {
+      setError(err.message || 'Ocorreu um erro. Tente novamente.');
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
-    <div className="min-h-screen w-full flex relative overflow-hidden bg-[#0047AB]">
-      {/* Background Gradient/Image Simulation */}
+    <div className="min-h-screen w-full bg-[#0047AB] flex items-center justify-center relative overflow-hidden">
+      {/* Background Effects */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-600 to-blue-400 opacity-100"></div>
-        {/* Abstract Waves/Glows */}
-        <div className="absolute top-[-20%] left-[-10%] w-[80%] h-[80%] bg-blue-400/30 rounded-full blur-[120px] mix-blend-overlay"></div>
-        <div className="absolute bottom-[-20%] right-[-10%] w-[80%] h-[80%] bg-cyan-400/20 rounded-full blur-[120px] mix-blend-overlay"></div>
-        <div className="absolute top-[40%] left-[30%] w-[60%] h-[60%] bg-blue-300/10 rounded-full blur-[100px] mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-700 to-blue-500 opacity-100"></div>
+        <div className="absolute top-[-20%] left-[-10%] w-[80%] h-[80%] bg-blue-400/20 rounded-full blur-[120px] mix-blend-overlay"></div>
+        <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-cyan-400/10 rounded-full blur-[100px] mix-blend-overlay"></div>
       </div>
 
-      {/* Content Container */}
-      <div className="container mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-between h-screen px-6 lg:px-12">
-        
-        {/* Left Side - Brand Info */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-center items-start text-white mb-10 lg:mb-0">
-          <div className="mb-8">
-            <h2 className="text-sm font-bold tracking-widest mb-4 uppercase opacity-80">NEROS JL</h2>
-            <h1 className="text-6xl lg:text-8xl font-black tracking-tighter mb-6">NEROS</h1>
-            <p className="text-xl lg:text-2xl font-light text-blue-100 max-w-lg leading-relaxed">
-              Sistema integrado que organiza processos, pessoas e performance.
-            </p>
-          </div>
-          <div className="mt-auto absolute bottom-8 left-12 hidden lg:block">
-            <p className="text-xs text-blue-200 opacity-60">Acesso exclusivo para colaboradores.</p>
-          </div>
-        </div>
+      <div className="relative z-10 w-full max-w-md px-4">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl overflow-hidden"
+        >
+          <div className="p-8">
+            <div className="text-center mb-8">
+              <div className="flex justify-center mb-4">
+                <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-400/20">
+                  <div className="w-6 h-6 bg-white rounded-sm"></div>
+                </div>
+              </div>
+              <h1 className="text-3xl font-bold text-white mb-2 tracking-tight">NEROS JL</h1>
+              <p className="text-blue-100 text-sm font-medium">Sistema de Help Desk</p>
+            </div>
 
-        {/* Right Side - Login Form */}
-        <div className="w-full lg:w-[420px]">
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 shadow-2xl"
-          >
-            <h2 className="text-2xl font-bold text-white mb-8">
-              {showRegister ? 'Crie sua conta' : 'Acesse sua conta'}
-            </h2>
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <AnimatePresence mode="wait">
+                {!isLogin && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="space-y-4 overflow-hidden"
+                  >
+                    <div className="space-y-1.5">
+                      <label className="text-xs font-semibold text-blue-100 uppercase tracking-wider ml-1">Nome Completo</label>
+                      <input
+                        type="text"
+                        value={fullName}
+                        onChange={(e) => setFullName(e.target.value)}
+                        className="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-blue-200/50 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-transparent transition-all"
+                        placeholder="Digite seu nome"
+                        required={!isLogin}
+                      />
+                    </div>
+                    <div className="space-y-1.5">
+                      <label className="text-xs font-semibold text-blue-100 uppercase tracking-wider ml-1">Email</label>
+                      <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-blue-200/50 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-transparent transition-all"
+                        placeholder="seu@email.com"
+                        required={!isLogin}
+                      />
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
-            {!showRegister ? (
-              <form onSubmit={handleLogin} className="space-y-5">
-                <div>
-                  <label className="block text-xs font-medium text-blue-100 mb-1.5 ml-1">Usuário</label>
+              <div className="space-y-1.5">
+                <label className="text-xs font-semibold text-blue-100 uppercase tracking-wider ml-1">Usuário</label>
+                <input
+                  type="text"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  className="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-blue-200/50 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-transparent transition-all"
+                  placeholder="Digite seu usuário"
+                  required
+                />
+              </div>
+
+              <div className="space-y-1.5">
+                <label className="text-xs font-semibold text-blue-100 uppercase tracking-wider ml-1">Senha</label>
+                <div className="relative">
                   <input
-                    type="text"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                    placeholder="seu@email.com" // Placeholder from screenshot
-                    className="w-full px-4 py-3 rounded-xl bg-blue-900/20 border border-blue-300/30 text-white placeholder-blue-300/50 focus:outline-none focus:border-white/50 focus:bg-blue-900/30 transition-all"
-                    disabled={isLoading}
+                    type={showPassword ? 'text' : 'password'}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-blue-200/50 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-transparent transition-all pr-10"
+                    placeholder="Digite sua senha"
+                    required
                   />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-medium text-blue-100 mb-1.5 ml-1">Senha</label>
-                  <div className="relative">
-                    <input
-                      type={showPassword ? 'text' : 'password'}
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      placeholder="••••••••"
-                      className="w-full px-4 py-3 rounded-xl bg-blue-900/20 border border-blue-300/30 text-white placeholder-blue-300/50 focus:outline-none focus:border-white/50 focus:bg-blue-900/30 transition-all"
-                      disabled={isLoading}
-                    />
-                    <button
-                      type="button"
-                      onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 text-blue-300 hover:text-white transition"
-                    >
-                      {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
-                    </button>
-                  </div>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="w-full py-3 px-4 rounded-xl bg-blue-500 hover:bg-blue-400 text-white font-semibold transition-all flex items-center justify-center gap-2 shadow-lg shadow-blue-900/20 mt-2"
-                >
-                  {isLoading ? <Loader2 className="animate-spin" size={20} /> : (
-                    <>
-                      Login <ArrowRight size={18} />
-                    </>
-                  )}
-                </button>
-
-                <div className="flex flex-col items-center gap-4 mt-6 pt-4 border-t border-white/10">
-                  <button type="button" className="text-sm text-blue-200 hover:text-white transition">
-                    Esqueci a senha?
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-blue-200 hover:text-white transition-colors"
+                  >
+                    {showPassword ? <EyeOff size={18} /> : <Eye size={18} />}
                   </button>
-                  
-                  <div className="w-full text-center">
-                    <p className="text-xs text-blue-300 mb-3">Não tem uma conta?</p>
-                    <button
-                      type="button"
-                      onClick={() => setShowRegister(true)}
-                      className="w-full py-2.5 px-4 rounded-xl border border-white/20 text-white hover:bg-white/10 transition-all text-sm font-medium"
-                    >
-                      Cadastrar-se
-                    </button>
-                  </div>
                 </div>
+              </div>
 
-                {/* Demo Credentials */}
-                <div className="mt-6 text-center">
-                  <p className="text-[10px] text-blue-300/60">
-                    Credenciais de teste:<br/>
-                    teste / 123
-                  </p>
-                </div>
-              </form>
-            ) : (
-              <form onSubmit={handleRegister} className="space-y-4">
-                <div>
-                  <label className="block text-xs font-medium text-blue-100 mb-1.5 ml-1">Nome Completo</label>
-                  <input
-                    type="text"
-                    value={registerData.fullName}
-                    onChange={(e) => setRegisterData({...registerData, fullName: e.target.value})}
-                    className="w-full px-4 py-3 rounded-xl bg-blue-900/20 border border-blue-300/30 text-white focus:outline-none focus:border-white/50 transition-all"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-blue-100 mb-1.5 ml-1">Usuário</label>
-                  <input
-                    type="text"
-                    value={registerData.username}
-                    onChange={(e) => setRegisterData({...registerData, username: e.target.value})}
-                    className="w-full px-4 py-3 rounded-xl bg-blue-900/20 border border-blue-300/30 text-white focus:outline-none focus:border-white/50 transition-all"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-blue-100 mb-1.5 ml-1">Email</label>
-                  <input
-                    type="email"
-                    value={registerData.email}
-                    onChange={(e) => setRegisterData({...registerData, email: e.target.value})}
-                    className="w-full px-4 py-3 rounded-xl bg-blue-900/20 border border-blue-300/30 text-white focus:outline-none focus:border-white/50 transition-all"
-                  />
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                  <div>
-                    <label className="block text-xs font-medium text-blue-100 mb-1.5 ml-1">Senha</label>
+              <AnimatePresence>
+                {!isLogin && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    className="space-y-1.5 overflow-hidden pt-4"
+                  >
+                    <label className="text-xs font-semibold text-blue-100 uppercase tracking-wider ml-1">Confirmar Senha</label>
                     <input
                       type="password"
-                      value={registerData.password}
-                      onChange={(e) => setRegisterData({...registerData, password: e.target.value})}
-                      className="w-full px-4 py-3 rounded-xl bg-blue-900/20 border border-blue-300/30 text-white focus:outline-none focus:border-white/50 transition-all"
+                      value={confirmPassword}
+                      onChange={(e) => setConfirmPassword(e.target.value)}
+                      className="w-full bg-white/10 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-blue-200/50 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-transparent transition-all"
+                      placeholder="Confirme sua senha"
+                      required={!isLogin}
                     />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-medium text-blue-100 mb-1.5 ml-1">Confirmar</label>
-                    <input
-                      type="password"
-                      value={registerData.confirmPassword}
-                      onChange={(e) => setRegisterData({...registerData, confirmPassword: e.target.value})}
-                      className="w-full px-4 py-3 rounded-xl bg-blue-900/20 border border-blue-300/30 text-white focus:outline-none focus:border-white/50 transition-all"
-                    />
-                  </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              {isLogin && (
+                <div className="flex justify-start">
+                  <button type="button" className="text-sm text-cyan-300 hover:text-cyan-200 transition-colors font-medium">
+                    Esqueceu a senha?
+                  </button>
                 </div>
+              )}
 
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="w-full py-3 px-4 rounded-xl bg-blue-500 hover:bg-blue-400 text-white font-semibold transition-all mt-2"
-                >
-                  {isLoading ? <Loader2 className="animate-spin" size={20} /> : 'Criar Conta'}
-                </button>
+              {error && (
+                <div className="p-3 rounded-lg bg-red-500/20 border border-red-500/30 text-red-200 text-sm text-center">
+                  {error}
+                </div>
+              )}
 
-                <button
-                  type="button"
-                  onClick={() => setShowRegister(false)}
-                  className="w-full py-2 text-sm text-blue-200 hover:text-white transition"
-                >
-                  Voltar para Login
-                </button>
-              </form>
-            )}
-          </motion.div>
-          
-          <div className="mt-8 text-center lg:text-right">
-            <p className="text-[10px] text-blue-300/40">
-              Copyright © 2025 Neosu Todos os direitos reservados
-            </p>
+              <button
+                type="submit"
+                disabled={isLoading}
+                className="w-full bg-cyan-500 hover:bg-cyan-400 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-cyan-500/25 transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed mt-2"
+              >
+                {isLoading ? (
+                  <Loader2 className="animate-spin" size={20} />
+                ) : (
+                  <>
+                    {isLogin ? 'Entrar' : 'Criar Conta'}
+                  </>
+                )}
+              </button>
+
+              <div className="relative py-2">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-white/10"></div>
+                </div>
+                <div className="relative flex justify-center text-xs uppercase">
+                  <span className="bg-transparent px-2 text-blue-200 font-medium">ou</span>
+                </div>
+              </div>
+
+              <button
+                type="button"
+                onClick={() => {
+                  setIsLogin(!isLogin);
+                  setError('');
+                }}
+                className="w-full bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold py-3 rounded-xl transition-all flex items-center justify-center gap-2"
+              >
+                {isLogin ? 'Cadastrar-se' : 'Já tenho uma conta'}
+              </button>
+            </form>
+
+            <div className="mt-8 pt-6 border-t border-white/10">
+              <div className="bg-white/5 rounded-lg p-4 border border-white/5">
+                <p className="text-xs text-blue-200 font-semibold mb-1">Credenciais de teste:</p>
+                <div className="flex justify-between items-center text-sm text-white font-mono">
+                  <span>Usuário: <span className="bg-white/10 px-1.5 py-0.5 rounded">teste</span></span>
+                  <span>Senha: <span className="bg-white/10 px-1.5 py-0.5 rounded">123</span></span>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
