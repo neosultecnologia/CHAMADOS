@@ -136,7 +136,7 @@ export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketMo
               <select
                 value={formData.category}
                 onChange={(e) => setFormData({ ...formData, category: e.target.value as any })}
-                className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 transition"
+                className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 transition [&>option]:bg-slate-800 [&>option]:text-white"
                 disabled={isLoading}
               >
                 <option value="Técnico">Técnico</option>
@@ -153,7 +153,7 @@ export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketMo
               <select
                 value={formData.priority}
                 onChange={(e) => setFormData({ ...formData, priority: e.target.value as any })}
-                className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 transition"
+                className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 transition [&>option]:bg-slate-800 [&>option]:text-white"
                 disabled={isLoading}
               >
                 <option value="Baixa">Baixa</option>
@@ -170,7 +170,7 @@ export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketMo
               <select
                 value={formData.sector}
                 onChange={(e) => setFormData({ ...formData, sector: e.target.value as any })}
-                className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 transition"
+                className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 transition [&>option]:bg-slate-800 [&>option]:text-white"
                 disabled={isLoading}
               >
                 <option value="TI">TI</option>

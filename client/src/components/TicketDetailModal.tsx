@@ -279,7 +279,7 @@ export default function TicketDetailModal({ ticket: initialTicket, onClose }: Ti
                 <select
                   value={selectedSector}
                   onChange={(e) => handleSectorChange(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-colors"
+                  className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-colors [&>option]:bg-slate-800 [&>option]:text-white"
                 >
                   <option value="TI">TI</option>
                   <option value="RH">RH</option>
@@ -294,7 +294,7 @@ export default function TicketDetailModal({ ticket: initialTicket, onClose }: Ti
                 <select
                   value={selectedAssigned}
                   onChange={(e) => handleAssignChange(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-colors"
+                  className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-colors [&>option]:bg-slate-800 [&>option]:text-white"
                 >
                   <option value="">Não atribuído</option>
                   <option value="suporte_1">Suporte 1</option>
