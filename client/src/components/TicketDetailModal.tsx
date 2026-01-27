@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { Ticket } from '@/contexts/TicketsContext';
-import { useTickets } from '@/contexts/TicketsContext';
-import { useAuth } from '@/contexts/AuthContext';
-import { X, Send, Paperclip, AlertCircle, CheckCircle, Clock, Pause, XCircle, User, Briefcase, Tag, Calendar } from 'lucide-react';
+import { useState } from 'react';
+import { trpc } from '@/lib/trpc';
+import { useAuth } from '@/_core/hooks/useAuth';
+import { X, Send, Paperclip, AlertCircle, CheckCircle, Clock, Pause, XCircle, User, Briefcase, Tag, Calendar, Loader2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { formatDistanceToNow } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
+import { toast } from 'sonner';
+import type { Ticket } from '@/pages/Dashboard';
 
 interface TicketDetailModalProps {
   ticket: Ticket;
   onClose: () => void;
+  onUpdate?: () => void;
 }
 
 const statusColors: Record<string, { bg: string; text: string; icon: React.ReactNode }> = {
@@ -27,86 +29,89 @@ const priorityColors: Record<string, string> = {
   'Crítica': 'text-red-400',
 };
 
-export default function TicketDetailModal({ ticket: initialTicket, onClose }: TicketDetailModalProps) {
-  const { getTicket, updateTicket, addComment, addAttachment, addActivity } = useTickets();
+export default function TicketDetailModal({ ticket, onClose, onUpdate }: TicketDetailModalProps) {
   const { user } = useAuth();
-  const [ticket, setTicket] = useState(initialTicket);
   const [commentText, setCommentText] = useState('');
-  const [selectedStatus, setSelectedStatus] = useState(initialTicket.status);
-  const [selectedSector, setSelectedSector] = useState(initialTicket.sector);
-  const [selectedAssigned, setSelectedAssigned] = useState(initialTicket.assignedTo || '');
-  const [isLoading, setIsLoading] = useState(false);
+  const [selectedStatus, setSelectedStatus] = useState(ticket.status);
+  const [selectedSector, setSelectedSector] = useState(ticket.sector);
+  const [selectedAssigned, setSelectedAssigned] = useState(ticket.assignedToName || '');
 
-  // Sync ticket from context when it changes
-  useEffect(() => {
-    const updatedTicket = getTicket(initialTicket.id);
-    if (updatedTicket) {
-      setTicket(updatedTicket);
-      setSelectedStatus(updatedTicket.status);
-      setSelectedSector(updatedTicket.sector);
-      setSelectedAssigned(updatedTicket.assignedTo || '');
-    }
-  }, [getTicket, initialTicket.id]);
+  // Fetch comments for this ticket
+  const { data: comments = [], refetch: refetchComments } = trpc.comments.list.useQuery({ ticketId: ticket.id });
+  
+  // Fetch activities for this ticket
+  const { data: activities = [], refetch: refetchActivities } = trpc.activities.list.useQuery({ ticketId: ticket.id });
+  
+  // Fetch attachments for this ticket
+  const { data: attachments = [], refetch: refetchAttachments } = trpc.attachments.list.useQuery({ ticketId: ticket.id });
+
+  // Fetch users for assignment dropdown
+  const { data: users = [] } = trpc.users.list.useQuery();
+
+  // Mutations
+  const updateTicketMutation = trpc.tickets.update.useMutation({
+    onSuccess: () => {
+      refetchActivities();
+      onUpdate?.();
+    },
+    onError: (error) => {
+      toast.error('Erro ao atualizar chamado: ' + error.message);
+    },
+  });
+
+  const addCommentMutation = trpc.comments.create.useMutation({
+    onSuccess: () => {
+      setCommentText('');
+      refetchComments();
+      refetchActivities();
+      toast.success('Comentário adicionado');
+    },
+    onError: (error) => {
+      toast.error('Erro ao adicionar comentário: ' + error.message);
+    },
+  });
 
   const handleStatusChange = (newStatus: string) => {
-    setSelectedStatus(newStatus as any);
-    updateTicket(ticket.id, { status: newStatus as any });
-    addActivity(ticket.id, {
-      type: 'status',
-      author: user?.username || 'sistema',
-      description: `Alterou o status de "${ticket.status}" para "${newStatus}"`,
+    setSelectedStatus(newStatus);
+    updateTicketMutation.mutate({
+      id: ticket.id,
+      status: newStatus as any,
     });
-    const updated = getTicket(ticket.id);
-    if (updated) setTicket(updated);
   };
 
   const handleSectorChange = (newSector: string) => {
-    setSelectedSector(newSector as any);
-    updateTicket(ticket.id, { sector: newSector as any });
-    addActivity(ticket.id, {
-      type: 'sector',
-      author: user?.username || 'sistema',
-      description: `Alterou o setor de "${ticket.sector}" para "${newSector}"`,
+    setSelectedSector(newSector);
+    updateTicketMutation.mutate({
+      id: ticket.id,
+      sector: newSector as any,
     });
-    const updated = getTicket(ticket.id);
-    if (updated) setTicket(updated);
   };
 
   const handleAssignChange = (newAssigned: string) => {
     setSelectedAssigned(newAssigned);
-    updateTicket(ticket.id, { assignedTo: newAssigned || undefined });
-    addActivity(ticket.id, {
-      type: 'assigned',
-      author: user?.username || 'sistema',
-      description: `Atribuiu o chamado a "${newAssigned || 'ninguém'}"`,
+    const selectedUser = users.find(u => u.name === newAssigned);
+    updateTicketMutation.mutate({
+      id: ticket.id,
+      assignedToId: selectedUser?.id || null,
+      assignedToName: newAssigned || null,
     });
-    const updated = getTicket(ticket.id);
-    if (updated) setTicket(updated);
   };
 
   const handleAddComment = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!commentText.trim()) return;
 
-    setIsLoading(true);
-    try {
-      addComment(ticket.id, user?.username || 'sistema', commentText);
-      setCommentText('');
-      const updated = getTicket(ticket.id);
-      if (updated) setTicket(updated);
-    } finally {
-      setIsLoading(false);
-    }
+    addCommentMutation.mutate({
+      ticketId: ticket.id,
+      content: commentText,
+    });
   };
 
   const handleAddAttachment = () => {
-    const fileName = `arquivo_${Date.now()}.pdf`;
-    addAttachment(ticket.id, fileName);
-    const updated = getTicket(ticket.id);
-    if (updated) setTicket(updated);
+    toast.info('Funcionalidade de upload em desenvolvimento');
   };
 
-  const statusColor = statusColors[ticket.status];
+  const statusColor = statusColors[ticket.status] || statusColors['Aberto'];
 
   return (
     <motion.div
@@ -132,7 +137,7 @@ export default function TicketDetailModal({ ticket: initialTicket, onClose }: Ti
             <div>
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-xs font-mono text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">
-                  #{ticket.id.split('_')[1]}
+                  #{ticket.ticketId.split('_')[1]}
                 </span>
                 <span className="text-xs text-slate-400 flex items-center gap-1">
                   <Calendar size={12} />
@@ -170,21 +175,21 @@ export default function TicketDetailModal({ ticket: initialTicket, onClose }: Ti
             <div>
               <h3 className="text-sm font-semibold text-blue-200 mb-4 flex items-center gap-2">
                 <User size={16} />
-                Comentários ({ticket.comments.length})
+                Comentários ({comments.length})
               </h3>
               
               <div className="space-y-4 mb-6 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
-                {ticket.comments.length === 0 ? (
+                {comments.length === 0 ? (
                   <p className="text-sm text-slate-500 italic text-center py-4">Nenhum comentário ainda.</p>
                 ) : (
-                  ticket.comments.map((comment) => (
+                  comments.map((comment) => (
                     <div key={comment.id} className="bg-white/5 border border-white/5 rounded-xl p-4">
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
                           <div className="w-6 h-6 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-[10px] font-bold text-white">
-                            {comment.author.charAt(0).toUpperCase()}
+                            {comment.authorName.charAt(0).toUpperCase()}
                           </div>
-                          <span className="text-sm font-medium text-cyan-300">{comment.author}</span>
+                          <span className="text-sm font-medium text-cyan-300">{comment.authorName}</span>
                         </div>
                         <span className="text-xs text-slate-500">
                           {formatDistanceToNow(new Date(comment.createdAt), { addSuffix: true, locale: ptBR })}
@@ -204,14 +209,14 @@ export default function TicketDetailModal({ ticket: initialTicket, onClose }: Ti
                   onChange={(e) => setCommentText(e.target.value)}
                   placeholder="Escreva um comentário..."
                   className="w-full pl-4 pr-12 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500/50 focus:bg-white/10 transition-all"
-                  disabled={isLoading}
+                  disabled={addCommentMutation.isPending}
                 />
                 <button
                   type="submit"
-                  disabled={isLoading || !commentText.trim()}
+                  disabled={addCommentMutation.isPending || !commentText.trim()}
                   className="absolute right-2 top-1/2 -translate-y-1/2 p-2 rounded-lg bg-cyan-500 text-white hover:bg-cyan-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <Send size={16} />
+                  {addCommentMutation.isPending ? <Loader2 size={16} className="animate-spin" /> : <Send size={16} />}
                 </button>
               </form>
             </div>
@@ -220,17 +225,21 @@ export default function TicketDetailModal({ ticket: initialTicket, onClose }: Ti
             <div>
               <h3 className="text-sm font-semibold text-blue-200 mb-4">Histórico de Atividades</h3>
               <div className="relative pl-4 border-l border-white/10 space-y-6">
-                {ticket.activities.map((activity) => (
+                {activities.map((activity) => (
                   <div key={activity.id} className="relative">
                     <div className="absolute -left-[21px] top-1 w-3 h-3 rounded-full bg-slate-700 border-2 border-[#0f172a]"></div>
                     <div className="text-xs text-slate-400 mb-0.5">
                       {formatDistanceToNow(new Date(activity.createdAt), { addSuffix: true, locale: ptBR })}
                     </div>
                     <div className="text-sm text-slate-300">
-                      <span className="font-medium text-cyan-400">{activity.author}</span> {activity.description}
+                      <span className="font-medium text-cyan-400">{activity.authorName}</span>{' '}
+                      {activity.description}
                     </div>
                   </div>
                 ))}
+                {activities.length === 0 && (
+                  <p className="text-sm text-slate-500 italic">Nenhuma atividade registrada.</p>
+                )}
               </div>
             </div>
           </div>
@@ -245,11 +254,12 @@ export default function TicketDetailModal({ ticket: initialTicket, onClose }: Ti
                   <button
                     key={status}
                     onClick={() => handleStatusChange(status)}
+                    disabled={updateTicketMutation.isPending}
                     className={`px-3 py-2 rounded-lg text-xs font-medium transition-all border ${
                       selectedStatus === status
                         ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-300 shadow-[0_0_10px_rgba(6,182,212,0.2)]'
                         : 'bg-white/5 border-white/5 text-slate-400 hover:bg-white/10 hover:text-slate-200'
-                    }`}
+                    } disabled:opacity-50`}
                   >
                     {status}
                   </button>
@@ -279,13 +289,15 @@ export default function TicketDetailModal({ ticket: initialTicket, onClose }: Ti
                 <select
                   value={selectedSector}
                   onChange={(e) => handleSectorChange(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-colors [&>option]:bg-slate-800 [&>option]:text-white"
+                  disabled={updateTicketMutation.isPending}
+                  className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/10 text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-colors"
                 >
                   <option value="TI">TI</option>
                   <option value="RH">RH</option>
                   <option value="Financeiro">Financeiro</option>
-                  <option value="Faturamento">Faturamento</option>
+                  <option value="Comercial">Comercial</option>
                   <option value="Suporte">Suporte</option>
+                  <option value="Operações">Operações</option>
                 </select>
               </div>
 
@@ -294,12 +306,15 @@ export default function TicketDetailModal({ ticket: initialTicket, onClose }: Ti
                 <select
                   value={selectedAssigned}
                   onChange={(e) => handleAssignChange(e.target.value)}
-                  className="w-full px-3 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-colors [&>option]:bg-slate-800 [&>option]:text-white"
+                  disabled={updateTicketMutation.isPending}
+                  className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/10 text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-colors"
                 >
                   <option value="">Não atribuído</option>
-                  <option value="suporte_1">Suporte 1</option>
-                  <option value="suporte_2">Suporte 2</option>
-                  <option value="admin">Admin</option>
+                  {users.map((u) => (
+                    <option key={u.id} value={u.name || ''}>
+                      {u.name || `Usuário ${u.id}`}
+                    </option>
+                  ))}
                 </select>
               </div>
             </div>
@@ -308,18 +323,18 @@ export default function TicketDetailModal({ ticket: initialTicket, onClose }: Ti
             <div>
               <label className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 block flex justify-between items-center">
                 Anexos
-                <span className="bg-white/10 text-white px-1.5 py-0.5 rounded text-[10px]">{ticket.attachments.length}</span>
+                <span className="bg-white/10 text-white px-1.5 py-0.5 rounded text-[10px]">{attachments.length}</span>
               </label>
               <div className="space-y-2 mb-3">
-                {ticket.attachments.map((attachment) => (
+                {attachments.map((attachment) => (
                   <div key={attachment.id} className="flex items-center gap-3 p-2 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 transition-colors group cursor-pointer">
                     <div className="p-2 rounded bg-blue-500/20 text-blue-400">
                       <Paperclip size={14} />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs text-slate-300 truncate font-medium">{attachment.name}</p>
+                      <p className="text-xs text-slate-300 truncate font-medium">{attachment.fileName}</p>
                       <p className="text-[10px] text-slate-500">
-                        {formatDistanceToNow(new Date(attachment.uploadedAt), { addSuffix: true, locale: ptBR })}
+                        {formatDistanceToNow(new Date(attachment.createdAt), { addSuffix: true, locale: ptBR })}
                       </p>
                     </div>
                   </div>

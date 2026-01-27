@@ -1,19 +1,35 @@
-import React, { useState } from 'react';
-import { useAuth } from '@/contexts/AuthContext';
+import { useState } from 'react';
+import { useAuth } from '@/_core/hooks/useAuth';
+import { trpc } from '@/lib/trpc';
 import { useLocation } from 'wouter';
-import { useTickets } from '@/contexts/TicketsContext';
-import { LogOut, Menu, X, Plus, Search, Filter } from 'lucide-react';
+import { LogOut, Menu, X, Plus, Search, Filter, Loader2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { toast } from 'sonner';
 import TicketsList from '@/components/TicketsList';
 import CreateTicketModal from '@/components/CreateTicketModal';
 import TicketDetailModal from '@/components/TicketDetailModal';
-import { Ticket } from '@/contexts/TicketsContext';
+
+// Type for ticket from database
+export type Ticket = {
+  id: number;
+  ticketId: string;
+  title: string;
+  description: string;
+  category: string;
+  priority: string;
+  status: string;
+  sector: string;
+  createdById: number;
+  createdByName: string;
+  assignedToId: number | null;
+  assignedToName: string | null;
+  createdAt: number;
+  updatedAt: number;
+};
 
 export default function Dashboard() {
   const { user, logout } = useAuth();
   const [, setLocation] = useLocation();
-  const { tickets } = useTickets();
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [selectedTicket, setSelectedTicket] = useState<Ticket | null>(null);
@@ -25,24 +41,32 @@ export default function Dashboard() {
     sector: '',
   });
 
-  const handleLogout = () => {
-    logout();
+  // Fetch tickets from database
+  const { data: tickets = [], isLoading, refetch } = trpc.tickets.list.useQuery({
+    status: filters.status || undefined,
+    priority: filters.priority || undefined,
+    sector: filters.sector || undefined,
+    search: searchQuery || undefined,
+  });
+
+  // Fetch announcements
+  const { data: announcements = [] } = trpc.announcements.list.useQuery();
+
+  const handleLogout = async () => {
+    await logout();
     toast.success('Logout realizado com sucesso');
     setLocation('/');
   };
 
-  const filteredTickets = tickets.filter(ticket => {
-    const matchesSearch = searchQuery === '' || 
-      ticket.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      ticket.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      ticket.id.toLowerCase().includes(searchQuery.toLowerCase());
+  const handleTicketCreated = () => {
+    setShowCreateModal(false);
+    refetch();
+    toast.success('Chamado criado com sucesso!');
+  };
 
-    const matchesStatus = filters.status === '' || ticket.status === filters.status;
-    const matchesPriority = filters.priority === '' || ticket.priority === filters.priority;
-    const matchesSector = filters.sector === '' || ticket.sector === filters.sector;
-
-    return matchesSearch && matchesStatus && matchesPriority && matchesSector;
-  });
+  const handleTicketUpdated = () => {
+    refetch();
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -74,7 +98,7 @@ export default function Dashboard() {
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center gap-2 text-blue-100">
               <span className="text-sm">Bem-vindo,</span>
-              <span className="font-semibold text-cyan-400">{user?.fullName}</span>
+              <span className="font-semibold text-cyan-400">{user?.name || 'Usuário'}</span>
             </div>
             <button
               onClick={() => setLocation('/dashboard')}
@@ -112,27 +136,45 @@ export default function Dashboard() {
             <a href="#" className="block px-4 py-2 rounded-lg text-blue-100 hover:bg-blue-500/20 transition">
               Documentos e Políticas
             </a>
-            <a href="#" className="block px-4 py-2 rounded-lg text-blue-100 hover:bg-blue-500/20 transition">
-              Administrador
-            </a>
+            {user?.role === 'admin' && (
+              <a href="#" className="block px-4 py-2 rounded-lg text-blue-100 hover:bg-blue-500/20 transition">
+                Administrador
+              </a>
+            )}
           </nav>
 
           {/* Announcements */}
           <div className="mt-8 pt-6 border-t border-white/10">
             <div className="text-xs font-semibold text-blue-300 uppercase tracking-wider mb-4">Avisos</div>
             <div className="space-y-3">
-              <div className="p-3 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
-                <p className="text-xs text-yellow-200">Manutenção programada para amanhã às 22h</p>
-              </div>
-              <div className="p-3 rounded-lg bg-blue-500/10 border border-blue-500/30">
-                <p className="text-xs text-blue-200">Novo sistema de backup implementado</p>
-              </div>
-              <div className="p-3 rounded-lg bg-green-500/10 border border-green-500/30">
-                <p className="text-xs text-green-200">Todos os sistemas operacionais</p>
-              </div>
-              <div className="p-3 rounded-lg bg-purple-500/10 border border-purple-500/30">
-                <p className="text-xs text-purple-200">Atualização de segurança disponível</p>
-              </div>
+              {announcements.length > 0 ? (
+                announcements.slice(0, 4).map((announcement) => {
+                  const colorMap: Record<string, string> = {
+                    info: 'blue',
+                    warning: 'yellow',
+                    success: 'green',
+                    error: 'red',
+                  };
+                  const color = colorMap[announcement.type] || 'blue';
+                  return (
+                    <div key={announcement.id} className={`p-3 rounded-lg bg-${color}-500/10 border border-${color}-500/30`}>
+                      <p className={`text-xs text-${color}-200`}>{announcement.title}</p>
+                    </div>
+                  );
+                })
+              ) : (
+                <>
+                  <div className="p-3 rounded-lg bg-yellow-500/10 border border-yellow-500/30">
+                    <p className="text-xs text-yellow-200">Manutenção programada para amanhã às 22h</p>
+                  </div>
+                  <div className="p-3 rounded-lg bg-blue-500/10 border border-blue-500/30">
+                    <p className="text-xs text-blue-200">Novo sistema de backup implementado</p>
+                  </div>
+                  <div className="p-3 rounded-lg bg-green-500/10 border border-green-500/30">
+                    <p className="text-xs text-green-200">Todos os sistemas operacionais</p>
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </motion.aside>
@@ -195,7 +237,7 @@ export default function Dashboard() {
                     <select
                       value={filters.status}
                       onChange={(e) => setFilters({ ...filters, status: e.target.value })}
-                      className="w-full px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-cyan-400 transition"
+                      className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/20 text-white focus:outline-none focus:border-cyan-400 transition"
                     >
                       <option value="">Todos</option>
                       <option value="Aberto">Aberto</option>
@@ -210,7 +252,7 @@ export default function Dashboard() {
                     <select
                       value={filters.priority}
                       onChange={(e) => setFilters({ ...filters, priority: e.target.value })}
-                      className="w-full px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-cyan-400 transition"
+                      className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/20 text-white focus:outline-none focus:border-cyan-400 transition"
                     >
                       <option value="">Todas</option>
                       <option value="Baixa">Baixa</option>
@@ -224,14 +266,15 @@ export default function Dashboard() {
                     <select
                       value={filters.sector}
                       onChange={(e) => setFilters({ ...filters, sector: e.target.value })}
-                      className="w-full px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-cyan-400 transition"
+                      className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/20 text-white focus:outline-none focus:border-cyan-400 transition"
                     >
                       <option value="">Todos</option>
                       <option value="TI">TI</option>
                       <option value="RH">RH</option>
                       <option value="Financeiro">Financeiro</option>
-                      <option value="Faturamento">Faturamento</option>
+                      <option value="Comercial">Comercial</option>
                       <option value="Suporte">Suporte</option>
+                      <option value="Operações">Operações</option>
                     </select>
                   </div>
                 </div>
@@ -239,12 +282,20 @@ export default function Dashboard() {
             )}
 
             {/* Tickets List */}
-            <TicketsList tickets={filteredTickets} onSelectTicket={setSelectedTicket} />
-
-            {filteredTickets.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-blue-200 text-lg">Nenhum chamado encontrado</p>
+            {isLoading ? (
+              <div className="flex items-center justify-center py-12">
+                <Loader2 className="w-8 h-8 animate-spin text-cyan-400" />
               </div>
+            ) : (
+              <>
+                <TicketsList tickets={tickets} onSelectTicket={setSelectedTicket} />
+
+                {tickets.length === 0 && (
+                  <div className="text-center py-12">
+                    <p className="text-blue-200 text-lg">Nenhum chamado encontrado</p>
+                  </div>
+                )}
+              </>
             )}
           </motion.div>
         </main>
@@ -254,10 +305,7 @@ export default function Dashboard() {
       {showCreateModal && (
         <CreateTicketModal
           onClose={() => setShowCreateModal(false)}
-          onSuccess={() => {
-            setShowCreateModal(false);
-            toast.success('Chamado criado com sucesso!');
-          }}
+          onSuccess={handleTicketCreated}
         />
       )}
 
@@ -265,6 +313,7 @@ export default function Dashboard() {
         <TicketDetailModal
           ticket={selectedTicket}
           onClose={() => setSelectedTicket(null)}
+          onUpdate={handleTicketUpdated}
         />
       )}
     </div>

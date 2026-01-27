@@ -1,29 +1,54 @@
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
-import { Route, Switch } from "wouter";
+import { Route, Switch, Redirect } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import { AuthProvider, useAuth } from "./contexts/AuthContext";
-import { TicketsProvider } from "./contexts/TicketsContext";
+import { useAuth } from "@/_core/hooks/useAuth";
+import { getLoginUrl } from "@/const";
 import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard"; // This is the Help Desk module
-import PortalDashboard from "./pages/PortalDashboard"; // This is the new Portal Hub
+import Dashboard from "./pages/Dashboard";
+import PortalDashboard from "./pages/PortalDashboard";
 import ModulePlaceholder from "./pages/ModulePlaceholder";
-import ProtectedRoute from "./components/ProtectedRoute";
+import { Loader2 } from "lucide-react";
+
+// Protected Route Component
+function ProtectedRoute({ component: Component }: { component: React.ComponentType }) {
+  const { isAuthenticated, loading } = useAuth();
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0a1628] via-[#1a365d] to-[#0a1628]">
+        <Loader2 className="w-8 h-8 animate-spin text-cyan-400" />
+      </div>
+    );
+  }
+
+  if (!isAuthenticated) {
+    // Redirect to Manus OAuth login
+    window.location.href = getLoginUrl();
+    return null;
+  }
+
+  return <Component />;
+}
 
 function Router() {
-  const { isAuthenticated, isLoading } = useAuth();
+  const { isAuthenticated, loading } = useAuth();
 
-  if (isLoading) {
-    return null; // Let AuthProvider handle initial loading state or show a global spinner
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0a1628] via-[#1a365d] to-[#0a1628]">
+        <Loader2 className="w-8 h-8 animate-spin text-cyan-400" />
+      </div>
+    );
   }
 
   return (
     <Switch>
-      {/* Root redirects to Portal if logged in, else Login */}
+      {/* Root redirects to Portal if logged in, else show Login page */}
       <Route path="/">
-        {isAuthenticated ? <ProtectedRoute component={PortalDashboard} /> : <Login />}
+        {isAuthenticated ? <Redirect to="/dashboard" /> : <Login />}
       </Route>
       
       <Route path="/login" component={Login} />
@@ -62,14 +87,10 @@ function App() {
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="dark">
-        <AuthProvider>
-          <TicketsProvider>
-            <TooltipProvider>
-              <Toaster />
-              <Router />
-            </TooltipProvider>
-          </TicketsProvider>
-        </AuthProvider>
+        <TooltipProvider>
+          <Toaster />
+          <Router />
+        </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );

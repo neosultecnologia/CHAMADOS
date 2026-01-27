@@ -1,0 +1,348 @@
+import { eq, desc, and, or, like, sql } from "drizzle-orm";
+import { drizzle } from "drizzle-orm/mysql2";
+import { 
+  InsertUser, users, 
+  tickets, InsertTicket, Ticket,
+  comments, InsertComment, Comment,
+  activities, InsertActivity, Activity,
+  attachments, InsertAttachment, Attachment,
+  announcements, InsertAnnouncement, Announcement
+} from "../drizzle/schema";
+import { ENV } from './_core/env';
+
+let _db: ReturnType<typeof drizzle> | null = null;
+
+// Lazily create the drizzle instance so local tooling can run without a DB.
+export async function getDb() {
+  if (!_db && process.env.DATABASE_URL) {
+    try {
+      _db = drizzle(process.env.DATABASE_URL);
+    } catch (error) {
+      console.warn("[Database] Failed to connect:", error);
+      _db = null;
+    }
+  }
+  return _db;
+}
+
+// ============ USER QUERIES ============
+
+export async function upsertUser(user: InsertUser): Promise<void> {
+  if (!user.openId) {
+    throw new Error("User openId is required for upsert");
+  }
+
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot upsert user: database not available");
+    return;
+  }
+
+  try {
+    const values: InsertUser = {
+      openId: user.openId,
+    };
+    const updateSet: Record<string, unknown> = {};
+
+    const textFields = ["name", "email", "loginMethod"] as const;
+    type TextField = (typeof textFields)[number];
+
+    const assignNullable = (field: TextField) => {
+      const value = user[field];
+      if (value === undefined) return;
+      const normalized = value ?? null;
+      values[field] = normalized;
+      updateSet[field] = normalized;
+    };
+
+    textFields.forEach(assignNullable);
+
+    if (user.lastSignedIn !== undefined) {
+      values.lastSignedIn = user.lastSignedIn;
+      updateSet.lastSignedIn = user.lastSignedIn;
+    }
+    if (user.role !== undefined) {
+      values.role = user.role;
+      updateSet.role = user.role;
+    } else if (user.openId === ENV.ownerOpenId) {
+      values.role = 'admin';
+      updateSet.role = 'admin';
+    }
+
+    if (!values.lastSignedIn) {
+      values.lastSignedIn = new Date();
+    }
+
+    if (Object.keys(updateSet).length === 0) {
+      updateSet.lastSignedIn = new Date();
+    }
+
+    await db.insert(users).values(values).onDuplicateKeyUpdate({
+      set: updateSet,
+    });
+  } catch (error) {
+    console.error("[Database] Failed to upsert user:", error);
+    throw error;
+  }
+}
+
+export async function getUserByOpenId(openId: string) {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot get user: database not available");
+    return undefined;
+  }
+
+  const result = await db.select().from(users).where(eq(users.openId, openId)).limit(1);
+
+  return result.length > 0 ? result[0] : undefined;
+}
+
+export async function getUserById(id: number) {
+  const db = await getDb();
+  if (!db) return undefined;
+
+  const result = await db.select().from(users).where(eq(users.id, id)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+export async function getAllUsers() {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(users).orderBy(users.name);
+}
+
+// ============ TICKET QUERIES ============
+
+export async function createTicket(ticket: InsertTicket): Promise<Ticket | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.insert(tickets).values(ticket);
+  const insertId = result[0].insertId;
+  
+  const created = await db.select().from(tickets).where(eq(tickets.id, insertId)).limit(1);
+  return created.length > 0 ? created[0] : null;
+}
+
+export async function getTicketById(id: number): Promise<Ticket | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.select().from(tickets).where(eq(tickets.id, id)).limit(1);
+  return result.length > 0 ? result[0] : null;
+}
+
+export async function getTicketByTicketId(ticketId: string): Promise<Ticket | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.select().from(tickets).where(eq(tickets.ticketId, ticketId)).limit(1);
+  return result.length > 0 ? result[0] : null;
+}
+
+export async function getAllTickets(filters?: {
+  status?: string;
+  priority?: string;
+  sector?: string;
+  search?: string;
+}): Promise<Ticket[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  let query = db.select().from(tickets);
+  
+  const conditions = [];
+  
+  if (filters?.status && filters.status !== 'all') {
+    conditions.push(eq(tickets.status, filters.status as any));
+  }
+  if (filters?.priority && filters.priority !== 'all') {
+    conditions.push(eq(tickets.priority, filters.priority as any));
+  }
+  if (filters?.sector && filters.sector !== 'all') {
+    conditions.push(eq(tickets.sector, filters.sector as any));
+  }
+  if (filters?.search) {
+    conditions.push(
+      or(
+        like(tickets.title, `%${filters.search}%`),
+        like(tickets.description, `%${filters.search}%`),
+        like(tickets.ticketId, `%${filters.search}%`)
+      )
+    );
+  }
+
+  if (conditions.length > 0) {
+    query = query.where(and(...conditions)) as any;
+  }
+
+  return await query.orderBy(desc(tickets.createdAt));
+}
+
+export async function updateTicket(id: number, data: Partial<InsertTicket>): Promise<Ticket | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  await db.update(tickets).set({
+    ...data,
+    updatedAt: Date.now(),
+  }).where(eq(tickets.id, id));
+
+  return await getTicketById(id);
+}
+
+export async function deleteTicket(id: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  // Delete related data first
+  await db.delete(comments).where(eq(comments.ticketId, id));
+  await db.delete(activities).where(eq(activities.ticketId, id));
+  await db.delete(attachments).where(eq(attachments.ticketId, id));
+  
+  const result = await db.delete(tickets).where(eq(tickets.id, id));
+  return result[0].affectedRows > 0;
+}
+
+export async function getNextTicketNumber(): Promise<number> {
+  const db = await getDb();
+  if (!db) return 1;
+
+  const result = await db.select({ count: sql<number>`COUNT(*)` }).from(tickets);
+  return (result[0]?.count || 0) + 1;
+}
+
+// ============ COMMENT QUERIES ============
+
+export async function createComment(comment: InsertComment): Promise<Comment | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.insert(comments).values(comment);
+  const insertId = result[0].insertId;
+  
+  const created = await db.select().from(comments).where(eq(comments.id, insertId)).limit(1);
+  return created.length > 0 ? created[0] : null;
+}
+
+export async function getCommentsByTicketId(ticketId: number): Promise<Comment[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(comments).where(eq(comments.ticketId, ticketId)).orderBy(desc(comments.createdAt));
+}
+
+// ============ ACTIVITY QUERIES ============
+
+export async function createActivity(activity: InsertActivity): Promise<Activity | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.insert(activities).values(activity);
+  const insertId = result[0].insertId;
+  
+  const created = await db.select().from(activities).where(eq(activities.id, insertId)).limit(1);
+  return created.length > 0 ? created[0] : null;
+}
+
+export async function getActivitiesByTicketId(ticketId: number): Promise<Activity[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(activities).where(eq(activities.ticketId, ticketId)).orderBy(desc(activities.createdAt));
+}
+
+// ============ ATTACHMENT QUERIES ============
+
+export async function createAttachment(attachment: InsertAttachment): Promise<Attachment | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.insert(attachments).values(attachment);
+  const insertId = result[0].insertId;
+  
+  const created = await db.select().from(attachments).where(eq(attachments.id, insertId)).limit(1);
+  return created.length > 0 ? created[0] : null;
+}
+
+export async function getAttachmentsByTicketId(ticketId: number): Promise<Attachment[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(attachments).where(eq(attachments.ticketId, ticketId)).orderBy(desc(attachments.createdAt));
+}
+
+export async function deleteAttachment(id: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  const result = await db.delete(attachments).where(eq(attachments.id, id));
+  return result[0].affectedRows > 0;
+}
+
+// ============ ANNOUNCEMENT QUERIES ============
+
+export async function createAnnouncement(announcement: InsertAnnouncement): Promise<Announcement | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.insert(announcements).values(announcement);
+  const insertId = result[0].insertId;
+  
+  const created = await db.select().from(announcements).where(eq(announcements.id, insertId)).limit(1);
+  return created.length > 0 ? created[0] : null;
+}
+
+export async function getActiveAnnouncements(): Promise<Announcement[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  const now = Date.now();
+  return await db.select().from(announcements)
+    .where(
+      and(
+        eq(announcements.isActive, 1),
+        or(
+          sql`${announcements.expiresAt} IS NULL`,
+          sql`${announcements.expiresAt} > ${now}`
+        )
+      )
+    )
+    .orderBy(desc(announcements.createdAt));
+}
+
+export async function updateAnnouncement(id: number, data: Partial<InsertAnnouncement>): Promise<Announcement | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  await db.update(announcements).set(data).where(eq(announcements.id, id));
+  
+  const updated = await db.select().from(announcements).where(eq(announcements.id, id)).limit(1);
+  return updated.length > 0 ? updated[0] : null;
+}
+
+export async function deleteAnnouncement(id: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  const result = await db.delete(announcements).where(eq(announcements.id, id));
+  return result[0].affectedRows > 0;
+}
+
+// ============ STATISTICS ============
+
+export async function getTicketStats() {
+  const db = await getDb();
+  if (!db) return { total: 0, open: 0, inProgress: 0, resolved: 0 };
+
+  const allTickets = await db.select().from(tickets);
+  
+  return {
+    total: allTickets.length,
+    open: allTickets.filter(t => t.status === 'Aberto').length,
+    inProgress: allTickets.filter(t => t.status === 'Em Progresso').length,
+    resolved: allTickets.filter(t => t.status === 'Resolvido' || t.status === 'Fechado').length,
+  };
+}

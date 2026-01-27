@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { useTickets } from '@/contexts/TicketsContext';
-import { useAuth } from '@/contexts/AuthContext';
-import { X, AlertCircle } from 'lucide-react';
+import { useState } from 'react';
+import { trpc } from '@/lib/trpc';
+import { X, AlertCircle, Loader2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { toast } from 'sonner';
 
 interface CreateTicketModalProps {
   onClose: () => void;
@@ -10,9 +10,6 @@ interface CreateTicketModalProps {
 }
 
 export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketModalProps) {
-  const { createTicket } = useTickets();
-  const { user } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [formData, setFormData] = useState({
     title: '',
@@ -20,6 +17,15 @@ export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketMo
     category: 'Técnico' as const,
     priority: 'Média' as const,
     sector: 'TI' as const,
+  });
+
+  const createTicketMutation = trpc.tickets.create.useMutation({
+    onSuccess: () => {
+      onSuccess();
+    },
+    onError: (error) => {
+      toast.error('Erro ao criar chamado: ' + error.message);
+    },
   });
 
   const validateForm = () => {
@@ -43,26 +49,16 @@ export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketMo
       return;
     }
 
-    setIsLoading(true);
-
-    try {
-      createTicket({
-        title: formData.title,
-        description: formData.description,
-        category: formData.category,
-        priority: formData.priority,
-        sector: formData.sector,
-        status: 'Aberto',
-        createdBy: user?.username || 'sistema',
-      });
-
-      onSuccess();
-    } catch (error) {
-      console.error('Error creating ticket:', error);
-    } finally {
-      setIsLoading(false);
-    }
+    createTicketMutation.mutate({
+      title: formData.title,
+      description: formData.description,
+      category: formData.category,
+      priority: formData.priority,
+      sector: formData.sector,
+    });
   };
+
+  const isLoading = createTicketMutation.isPending;
 
   return (
     <motion.div
@@ -136,12 +132,13 @@ export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketMo
               <select
                 value={formData.category}
                 onChange={(e) => setFormData({ ...formData, category: e.target.value as any })}
-                className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 transition [&>option]:bg-slate-800 [&>option]:text-white"
+                className="w-full px-4 py-2 rounded-lg bg-slate-800 border border-white/20 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 transition"
                 disabled={isLoading}
               >
                 <option value="Técnico">Técnico</option>
                 <option value="Acesso">Acesso</option>
                 <option value="Funcionalidade">Funcionalidade</option>
+                <option value="Dúvida">Dúvida</option>
                 <option value="Outro">Outro</option>
               </select>
             </div>
@@ -153,7 +150,7 @@ export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketMo
               <select
                 value={formData.priority}
                 onChange={(e) => setFormData({ ...formData, priority: e.target.value as any })}
-                className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 transition [&>option]:bg-slate-800 [&>option]:text-white"
+                className="w-full px-4 py-2 rounded-lg bg-slate-800 border border-white/20 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 transition"
                 disabled={isLoading}
               >
                 <option value="Baixa">Baixa</option>
@@ -170,14 +167,15 @@ export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketMo
               <select
                 value={formData.sector}
                 onChange={(e) => setFormData({ ...formData, sector: e.target.value as any })}
-                className="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/20 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 transition [&>option]:bg-slate-800 [&>option]:text-white"
+                className="w-full px-4 py-2 rounded-lg bg-slate-800 border border-white/20 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 transition"
                 disabled={isLoading}
               >
                 <option value="TI">TI</option>
                 <option value="RH">RH</option>
                 <option value="Financeiro">Financeiro</option>
-                <option value="Faturamento">Faturamento</option>
+                <option value="Comercial">Comercial</option>
                 <option value="Suporte">Suporte</option>
+                <option value="Operações">Operações</option>
               </select>
             </div>
           </div>
@@ -186,9 +184,16 @@ export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketMo
             <button
               type="submit"
               disabled={isLoading}
-              className="flex-1 py-2 px-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 py-2 px-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
-              {isLoading ? 'Criando...' : 'Criar Chamado'}
+              {isLoading ? (
+                <>
+                  <Loader2 size={18} className="animate-spin" />
+                  Criando...
+                </>
+              ) : (
+                'Criar Chamado'
+              )}
             </button>
             <button
               type="button"

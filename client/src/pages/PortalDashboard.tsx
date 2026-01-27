@@ -1,5 +1,5 @@
-import React from 'react';
-import { useAuth } from '@/contexts/AuthContext';
+import { useAuth } from '@/_core/hooks/useAuth';
+import { trpc } from '@/lib/trpc';
 import { useLocation } from 'wouter';
 import { 
   MessageSquare, 
@@ -11,7 +11,11 @@ import {
   LogOut, 
   Sun, 
   UserCircle,
-  Settings
+  Settings,
+  AlertCircle,
+  CheckCircle,
+  Info,
+  AlertTriangle
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -19,9 +23,12 @@ export default function PortalDashboard() {
   const { user, logout } = useAuth();
   const [, setLocation] = useLocation();
 
-  const handleLogout = () => {
-    logout();
-    setLocation('/login');
+  // Fetch announcements from database
+  const { data: announcements = [] } = trpc.announcements.list.useQuery();
+
+  const handleLogout = async () => {
+    await logout();
+    setLocation('/');
   };
 
   const modules = [
@@ -62,12 +69,21 @@ export default function PortalDashboard() {
     },
   ];
 
-  const notices = [
+  // Default notices if no announcements
+  const defaultNotices = [
     "Manutenção programada - 18/06 as 22h",
     "Nova política interna disponível",
-    "Indicadores atualizados do mês",
     "Indicadores atualizados do mês"
   ];
+
+  const getNoticeIcon = (type: string) => {
+    switch (type) {
+      case 'warning': return <AlertTriangle className="text-yellow-400" size={14} />;
+      case 'error': return <AlertCircle className="text-red-400" size={14} />;
+      case 'success': return <CheckCircle className="text-green-400" size={14} />;
+      default: return <Info className="text-cyan-400" size={14} />;
+    }
+  };
 
   return (
     <div className="min-h-screen w-full bg-[#0047AB] relative overflow-hidden flex flex-col">
@@ -88,7 +104,7 @@ export default function PortalDashboard() {
           <button onClick={() => setLocation('/dashboard')} className="text-white hover:text-white transition">Início</button>
           <button className="hover:text-white transition opacity-80">Ouvidoria</button>
           <button className="hover:text-white transition opacity-80">Documentos e Políticas</button>
-          {user?.username === 'admin' && (
+          {user?.role === 'admin' && (
             <button className="hover:text-white transition opacity-80 flex items-center gap-1">
               <Settings size={14} /> Administrador
             </button>
@@ -96,6 +112,9 @@ export default function PortalDashboard() {
         </nav>
 
         <div className="flex items-center gap-4 text-white">
+          <span className="text-sm text-blue-100 hidden md:block">
+            {user?.name || 'Usuário'}
+          </span>
           <button className="p-2 hover:bg-white/10 rounded-full transition opacity-80 hover:opacity-100">
             <UserCircle size={20} />
           </button>
@@ -105,6 +124,7 @@ export default function PortalDashboard() {
           <button 
             onClick={handleLogout}
             className="p-2 hover:bg-white/10 rounded-full transition opacity-80 hover:opacity-100"
+            title="Sair"
           >
             <LogOut size={20} />
           </button>
@@ -155,7 +175,6 @@ export default function PortalDashboard() {
                     {module.icon}
                   </div>
                   <span className="text-white font-medium text-sm tracking-wide">{module.name}</span>
-                  {/* <span className="text-blue-200 text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity">{module.description}</span> */}
                 </motion.div>
               ))}
             </div>
@@ -166,12 +185,26 @@ export default function PortalDashboard() {
             <h2 className="text-xl font-bold text-white mb-8">Avisos Importantes</h2>
             <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-xl">
               <ul className="space-y-4">
-                {notices.map((notice, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm text-blue-50 border-b border-white/5 pb-3 last:border-0 last:pb-0">
-                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-1.5 flex-shrink-0"></span>
-                    <span className="opacity-90 font-light">{notice}</span>
-                  </li>
-                ))}
+                {announcements.length > 0 ? (
+                  announcements.map((announcement) => (
+                    <li key={announcement.id} className="flex items-start gap-3 text-sm text-blue-50 border-b border-white/5 pb-3 last:border-0 last:pb-0">
+                      {getNoticeIcon(announcement.type)}
+                      <div className="flex-1">
+                        <span className="font-medium">{announcement.title}</span>
+                        {announcement.content && (
+                          <p className="text-xs text-blue-200 mt-1 opacity-80">{announcement.content}</p>
+                        )}
+                      </div>
+                    </li>
+                  ))
+                ) : (
+                  defaultNotices.map((notice, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-sm text-blue-50 border-b border-white/5 pb-3 last:border-0 last:pb-0">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-1.5 flex-shrink-0"></span>
+                      <span className="opacity-90 font-light">{notice}</span>
+                    </li>
+                  ))
+                )}
               </ul>
             </div>
           </div>

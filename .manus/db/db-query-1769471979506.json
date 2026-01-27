@@ -1,0 +1,33 @@
+{
+  "query": "SELECT * FROM tickets LIMIT 5; SELECT * FROM comments LIMIT 5; SELECT * FROM activities LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user M967bVXfxXUhp7W.root --database JLPd83LStLYaV7mJXtu8eL --execute SELECT * FROM tickets LIMIT 5; SELECT * FROM comments LIMIT 5; SELECT * FROM activities LIMIT 5;",
+  "rows": [
+    {
+      "id": "1",
+      "ticketId": "bilhete_1",
+      "title": "Problema de conexão com a impressora",
+      "description": "A impressora do setor financeiro não está respondendo. Já tentei reiniciar mas o problema persiste. Preciso de suporte urgente para imprimir relatórios.",
+      "category": "Técnico",
+      "priority": "Média",
+      "status": "Em Progresso",
+      "sector": "TI",
+      "createdById": "1",
+      "createdByName": "Neosul - Daniel TI",
+      "assignedToId": "NULL",
+      "assignedToName": "NULL",
+      "createdAt": "1769471886848",
+      "updatedAt": "1769471937147"
+    }
+  ],
+  "messages": [
+    "id\tticketId\tauthorId\tauthorName\tcontent\tcreatedAt",
+    "1\t1\t1\tNeosul - Daniel TI\tEstou verificando o problema agora. Vou entrar em contato com o setor financeiro.\t1769471924728",
+    "id\tticketId\ttype\tauthorId\tauthorName\toldValue\tnewValue\tdescription\tcreatedAt",
+    "1\t1\tcreated\t1\tNeosul - Daniel TI\tNULL\tNULL\tChamado criado por Neosul - Daniel TI\t1769471886848",
+    "2\t1\tcomment\t1\tNeosul - Daniel TI\tNULL\tNULL\tComentário adicionado por Neosul - Daniel TI\t1769471924728",
+    "3\t1\tstatus_change\t1\tNeosul - Daniel TI\tAberto\tEm Progresso\tStatus alterado de \"Aberto\" para \"Em Progresso\"\t1769471937133"
+  ],
+  "stdout": "id\tticketId\ttitle\tdescription\tcategory\tpriority\tstatus\tsector\tcreatedById\tcreatedByName\tassignedToId\tassignedToName\tcreatedAt\tupdatedAt\n1\tbilhete_1\tProblema de conexão com a impressora\tA impressora do setor financeiro não está respondendo. Já tentei reiniciar mas o problema persiste. Preciso de suporte urgente para imprimir relatórios.\tTécnico\tMédia\tEm Progresso\tTI\t1\tNeosul - Daniel TI\tNULL\tNULL\t1769471886848\t1769471937147\nid\tticketId\tauthorId\tauthorName\tcontent\tcreatedAt\n1\t1\t1\tNeosul - Daniel TI\tEstou verificando o problema agora. Vou entrar em contato com o setor financeiro.\t1769471924728\nid\tticketId\ttype\tauthorId\tauthorName\toldValue\tnewValue\tdescription\tcreatedAt\n1\t1\tcreated\t1\tNeosul - Daniel TI\tNULL\tNULL\tChamado criado por Neosul - Daniel TI\t1769471886848\n2\t1\tcomment\t1\tNeosul - Daniel TI\tNULL\tNULL\tComentário adicionado por Neosul - Daniel TI\t1769471924728\n3\t1\tstatus_change\t1\tNeosul - Daniel TI\tAberto\tEm Progresso\tStatus alterado de \"Aberto\" para \"Em Progresso\"\t1769471937133\n",
+  "stderr": "",
+  "execution_time_ms": 109
+}

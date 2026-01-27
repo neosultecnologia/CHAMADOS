@@ -1,9 +1,8 @@
-import React from 'react';
-import { Ticket } from '@/contexts/TicketsContext';
 import { motion } from 'framer-motion';
-import { AlertCircle, Clock, CheckCircle, Pause, XCircle, Search } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
+import type { Ticket } from '@/pages/Dashboard';
 
 interface TicketsListProps {
   tickets: Ticket[];
@@ -85,7 +84,7 @@ export default function TicketsList({ tickets, onSelectTicket }: TicketsListProp
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-3 mb-2">
                   <span className="font-mono text-xs text-slate-500 bg-slate-800/50 px-2 py-0.5 rounded border border-white/5">
-                    {ticket.id}
+                    {ticket.ticketId}
                   </span>
                   <span className={`text-xs font-bold uppercase tracking-wider ${priorityColors[ticket.priority]}`}>
                     {ticket.priority}
@@ -114,7 +113,7 @@ export default function TicketsList({ tickets, onSelectTicket }: TicketsListProp
               <div className="flex flex-row md:flex-col items-center md:items-end gap-4 md:gap-1 text-right min-w-[140px] border-t md:border-t-0 border-white/5 pt-4 md:pt-0 w-full md:w-auto justify-between md:justify-start">
                 <div className="flex flex-col items-start md:items-end">
                   <span className="text-[10px] uppercase tracking-wider text-slate-500 font-semibold">Criado por</span>
-                  <span className="text-sm text-slate-300 font-medium">{ticket.createdBy}</span>
+                  <span className="text-sm text-slate-300 font-medium">{ticket.createdByName}</span>
                 </div>
                 
                 <div className="flex flex-col items-start md:items-end">
@@ -127,7 +126,7 @@ export default function TicketsList({ tickets, onSelectTicket }: TicketsListProp
                 <div className="flex flex-col items-start md:items-end">
                   <span className="text-[10px] uppercase tracking-wider text-slate-500 font-semibold mt-2">Responsável</span>
                   <span className="text-sm text-blue-400 font-medium">
-                    {ticket.assignedTo || 'Não atribuído'}
+                    {ticket.assignedToName || 'Não atribuído'}
                   </span>
                 </div>
               </div>
