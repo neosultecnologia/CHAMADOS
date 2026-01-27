@@ -178,6 +178,25 @@ class SDKServer {
     );
   }
 
+  /**
+   * Create a session token for internal authentication (email/password)
+   * Uses user ID prefixed with 'internal_' as the openId
+   */
+  async createInternalSessionToken(
+    userId: number,
+    name: string,
+    options: { expiresInMs?: number } = {}
+  ): Promise<string> {
+    return this.signSession(
+      {
+        openId: `internal_${userId}`,
+        appId: ENV.appId,
+        name: name,
+      },
+      options
+    );
+  }
+
   async signSession(
     payload: SessionPayload,
     options: { expiresInMs?: number } = {}
@@ -267,6 +286,25 @@ class SDKServer {
     }
 
     const sessionUserId = session.openId;
+    
+    // Check if this is an internal auth user (prefixed with 'internal_')
+    if (sessionUserId.startsWith('internal_')) {
+      const userId = parseInt(sessionUserId.replace('internal_', ''), 10);
+      const user = await db.getUserById(userId);
+      
+      if (!user) {
+        throw ForbiddenError("User not found");
+      }
+      
+      // Check if user is still approved
+      if (user.approvalStatus !== 'approved') {
+        throw ForbiddenError("User account is not approved");
+      }
+      
+      return user;
+    }
+
+    // OAuth user flow
     const signedInAt = new Date();
     let user = await db.getUserByOpenId(sessionUserId);
 
@@ -274,12 +312,10 @@ class SDKServer {
     if (!user) {
       try {
         const userInfo = await this.getUserInfoWithJwt(sessionCookie ?? "");
-        await db.upsertUser({
+        await db.upsertOAuthUser({
           openId: userInfo.openId,
-          name: userInfo.name || null,
-          email: userInfo.email ?? null,
-          loginMethod: userInfo.loginMethod ?? userInfo.platform ?? null,
-          lastSignedIn: signedInAt,
+          name: userInfo.name || undefined,
+          email: userInfo.email || undefined,
         });
         user = await db.getUserByOpenId(userInfo.openId);
       } catch (error) {
@@ -292,10 +328,11 @@ class SDKServer {
       throw ForbiddenError("User not found");
     }
 
-    await db.upsertUser({
-      openId: user.openId,
-      lastSignedIn: signedInAt,
-    });
+    if (user.openId) {
+      await db.upsertOAuthUser({
+        openId: user.openId,
+      });
+    }
 
     return user;
   }

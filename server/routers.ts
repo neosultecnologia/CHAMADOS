@@ -4,17 +4,169 @@ import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { z } from "zod";
 import * as db from "./db";
+import bcrypt from "bcryptjs";
+import { sdk } from "./_core/sdk";
+import { TRPCError } from "@trpc/server";
+
+const ONE_YEAR_MS = 365 * 24 * 60 * 60 * 1000;
 
 export const appRouter = router({
   system: systemRouter,
   
   auth: router({
     me: publicProcedure.query(opts => opts.ctx.user),
+    
     logout: publicProcedure.mutation(({ ctx }) => {
       const cookieOptions = getSessionCookieOptions(ctx.req);
       ctx.res.clearCookie(COOKIE_NAME, { ...cookieOptions, maxAge: -1 });
       return { success: true } as const;
     }),
+
+    // Internal login with email/password
+    login: publicProcedure
+      .input(z.object({
+        email: z.string().email(),
+        password: z.string().min(6),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        const user = await db.getUserByEmail(input.email);
+        
+        if (!user || !user.passwordHash) {
+          throw new TRPCError({
+            code: "UNAUTHORIZED",
+            message: "Email ou senha inválidos",
+          });
+        }
+
+        const isValidPassword = await bcrypt.compare(input.password, user.passwordHash);
+        if (!isValidPassword) {
+          throw new TRPCError({
+            code: "UNAUTHORIZED",
+            message: "Email ou senha inválidos",
+          });
+        }
+
+        if (user.approvalStatus === "pending") {
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Sua conta está aguardando aprovação do administrador",
+          });
+        }
+
+        if (user.approvalStatus === "rejected") {
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Sua conta foi rejeitada. Entre em contato com o administrador.",
+          });
+        }
+
+        // Update last sign in
+        await db.updateUserLastSignIn(user.id);
+
+        // Create session token using internal user ID
+        const sessionToken = await sdk.createInternalSessionToken(user.id, user.name || "Usuário");
+        
+        const cookieOptions = getSessionCookieOptions(ctx.req);
+        ctx.res.cookie(COOKIE_NAME, sessionToken, { ...cookieOptions, maxAge: ONE_YEAR_MS });
+
+        return { success: true, user };
+      }),
+
+    // Register new user
+    register: publicProcedure
+      .input(z.object({
+        name: z.string().min(2),
+        email: z.string().email(),
+        password: z.string().min(6),
+        sector: z.enum(["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações", "Outro"]).optional(),
+      }))
+      .mutation(async ({ input }) => {
+        // Check if email already exists
+        const existingUser = await db.getUserByEmail(input.email);
+        if (existingUser) {
+          throw new TRPCError({
+            code: "CONFLICT",
+            message: "Este email já está cadastrado",
+          });
+        }
+
+        // Hash password
+        const passwordHash = await bcrypt.hash(input.password, 10);
+
+        // Create user with pending status
+        const user = await db.createUser({
+          name: input.name,
+          email: input.email,
+          passwordHash,
+          sector: input.sector || "Outro",
+          approvalStatus: "pending",
+        });
+
+        return { 
+          success: true, 
+          message: "Cadastro realizado com sucesso! Aguarde a aprovação do administrador." 
+        };
+      }),
+  }),
+
+  // ============ USER MANAGEMENT (Admin) ============
+  userManagement: router({
+    listPending: protectedProcedure.query(async ({ ctx }) => {
+      if (ctx.user.role !== "admin") {
+        throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
+      }
+      return await db.getPendingUsers();
+    }),
+
+    listAll: protectedProcedure.query(async ({ ctx }) => {
+      if (ctx.user.role !== "admin") {
+        throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
+      }
+      return await db.getAllUsers();
+    }),
+
+    approve: protectedProcedure
+      .input(z.object({ userId: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== "admin") {
+          throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
+        }
+        return await db.updateUserApprovalStatus(input.userId, "approved");
+      }),
+
+    reject: protectedProcedure
+      .input(z.object({ userId: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== "admin") {
+          throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
+        }
+        return await db.updateUserApprovalStatus(input.userId, "rejected");
+      }),
+
+    updateRole: protectedProcedure
+      .input(z.object({ 
+        userId: z.number(),
+        role: z.enum(["user", "admin"]),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== "admin") {
+          throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
+        }
+        return await db.updateUserRole(input.userId, input.role);
+      }),
+
+    delete: protectedProcedure
+      .input(z.object({ userId: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== "admin") {
+          throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
+        }
+        // Prevent self-deletion
+        if (input.userId === ctx.user.id) {
+          throw new TRPCError({ code: "BAD_REQUEST", message: "Você não pode excluir sua própria conta" });
+        }
+        return await db.deleteUser(input.userId);
+      }),
   }),
 
   // ============ TICKETS ============
@@ -307,7 +459,7 @@ export const appRouter = router({
   // ============ USERS (for assignment dropdown) ============
   users: router({
     list: protectedProcedure.query(async () => {
-      return await db.getAllUsers();
+      return await db.getApprovedUsers();
     }),
   }),
 });

@@ -46,3 +46,12 @@
 - [ ] Notificações por email
 - [ ] Dashboard com estatísticas
 - [ ] Relatórios de chamados
+
+## Sistema de Login Próprio
+- [x] Atualizar schema de usuários com campos de autenticação (email, password, status de aprovação)
+- [x] Criar routers tRPC para login, registro e gestão de usuários
+- [x] Criar tela de login
+- [x] Criar tela de cadastro
+- [x] Criar painel admin para aprovar/rejeitar usuários pendentes
+- [x] Atualizar App.tsx para usar novo sistema de autenticação
+- [x] Testar fluxo completo de cadastro e aprovação

@@ -1,7 +1,7 @@
 import { eq, desc, and, or, like, sql } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import { 
-  InsertUser, users, 
+  InsertUser, users, User,
   tickets, InsertTicket, Ticket,
   comments, InsertComment, Comment,
   activities, InsertActivity, Activity,
@@ -27,11 +27,50 @@ export async function getDb() {
 
 // ============ USER QUERIES ============
 
-export async function upsertUser(user: InsertUser): Promise<void> {
-  if (!user.openId) {
-    throw new Error("User openId is required for upsert");
-  }
+export async function createUser(user: {
+  name: string;
+  email: string;
+  passwordHash: string;
+  sector?: string;
+  role?: 'user' | 'admin';
+  approvalStatus?: 'pending' | 'approved' | 'rejected';
+}): Promise<User | null> {
+  const db = await getDb();
+  if (!db) return null;
 
+  try {
+    const result = await db.insert(users).values({
+      name: user.name,
+      email: user.email,
+      passwordHash: user.passwordHash,
+      loginMethod: 'internal',
+      role: user.role || 'user',
+      approvalStatus: user.approvalStatus || 'pending',
+      sector: (user.sector as any) || 'Outro',
+    });
+    
+    const insertId = result[0].insertId;
+    const created = await db.select().from(users).where(eq(users.id, insertId)).limit(1);
+    return created.length > 0 ? created[0] : null;
+  } catch (error) {
+    console.error("[Database] Failed to create user:", error);
+    throw error;
+  }
+}
+
+export async function getUserByEmail(email: string): Promise<User | undefined> {
+  const db = await getDb();
+  if (!db) return undefined;
+
+  const result = await db.select().from(users).where(eq(users.email, email)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+export async function upsertOAuthUser(user: {
+  openId: string;
+  name?: string;
+  email?: string;
+}): Promise<void> {
   const db = await getDb();
   if (!db) {
     console.warn("[Database] Cannot upsert user: database not available");
@@ -39,50 +78,41 @@ export async function upsertUser(user: InsertUser): Promise<void> {
   }
 
   try {
-    const values: InsertUser = {
-      openId: user.openId,
-    };
-    const updateSet: Record<string, unknown> = {};
-
-    const textFields = ["name", "email", "loginMethod"] as const;
-    type TextField = (typeof textFields)[number];
-
-    const assignNullable = (field: TextField) => {
-      const value = user[field];
-      if (value === undefined) return;
-      const normalized = value ?? null;
-      values[field] = normalized;
-      updateSet[field] = normalized;
-    };
-
-    textFields.forEach(assignNullable);
-
-    if (user.lastSignedIn !== undefined) {
-      values.lastSignedIn = user.lastSignedIn;
-      updateSet.lastSignedIn = user.lastSignedIn;
+    const existingUser = await db.select().from(users).where(eq(users.openId, user.openId)).limit(1);
+    
+    if (existingUser.length > 0) {
+      // Update existing user
+      await db.update(users).set({
+        lastSignedIn: new Date(),
+        ...(user.name && { name: user.name }),
+        ...(user.email && { email: user.email }),
+      }).where(eq(users.openId, user.openId));
+    } else {
+      // Create new OAuth user
+      await db.insert(users).values({
+        openId: user.openId,
+        name: user.name || 'Usuário OAuth',
+        email: user.email || `${user.openId}@oauth.local`,
+        loginMethod: 'oauth',
+        role: user.openId === ENV.ownerOpenId ? 'admin' : 'user',
+        approvalStatus: 'approved', // OAuth users are auto-approved
+        lastSignedIn: new Date(),
+      });
     }
-    if (user.role !== undefined) {
-      values.role = user.role;
-      updateSet.role = user.role;
-    } else if (user.openId === ENV.ownerOpenId) {
-      values.role = 'admin';
-      updateSet.role = 'admin';
-    }
-
-    if (!values.lastSignedIn) {
-      values.lastSignedIn = new Date();
-    }
-
-    if (Object.keys(updateSet).length === 0) {
-      updateSet.lastSignedIn = new Date();
-    }
-
-    await db.insert(users).values(values).onDuplicateKeyUpdate({
-      set: updateSet,
-    });
   } catch (error) {
-    console.error("[Database] Failed to upsert user:", error);
+    console.error("[Database] Failed to upsert OAuth user:", error);
     throw error;
+  }
+}
+
+// Legacy function for OAuth compatibility
+export async function upsertUser(user: InsertUser): Promise<void> {
+  if (user.openId) {
+    await upsertOAuthUser({
+      openId: user.openId,
+      name: user.name || undefined,
+      email: user.email || undefined,
+    });
   }
 }
 
@@ -111,6 +141,62 @@ export async function getAllUsers() {
   if (!db) return [];
 
   return await db.select().from(users).orderBy(users.name);
+}
+
+export async function getApprovedUsers() {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(users)
+    .where(eq(users.approvalStatus, 'approved'))
+    .orderBy(users.name);
+}
+
+export async function getPendingUsers() {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(users)
+    .where(eq(users.approvalStatus, 'pending'))
+    .orderBy(desc(users.createdAt));
+}
+
+export async function updateUserApprovalStatus(
+  id: number, 
+  status: 'approved' | 'rejected'
+): Promise<User | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  await db.update(users).set({ approvalStatus: status }).where(eq(users.id, id));
+  
+  const updated = await db.select().from(users).where(eq(users.id, id)).limit(1);
+  return updated.length > 0 ? updated[0] : null;
+}
+
+export async function updateUserRole(id: number, role: 'user' | 'admin'): Promise<User | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  await db.update(users).set({ role }).where(eq(users.id, id));
+  
+  const updated = await db.select().from(users).where(eq(users.id, id)).limit(1);
+  return updated.length > 0 ? updated[0] : null;
+}
+
+export async function updateUserLastSignIn(id: number): Promise<void> {
+  const db = await getDb();
+  if (!db) return;
+
+  await db.update(users).set({ lastSignedIn: new Date() }).where(eq(users.id, id));
+}
+
+export async function deleteUser(id: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  const result = await db.delete(users).where(eq(users.id, id));
+  return result[0].affectedRows > 0;
 }
 
 // ============ TICKET QUERIES ============
@@ -346,3 +432,11 @@ export async function getTicketStats() {
     resolved: allTickets.filter(t => t.status === 'Resolvido' || t.status === 'Fechado').length,
   };
 }
+
+// Export db object for tests
+export const db = {
+  getTickets: getAllTickets,
+  getTicketById,
+  createTicket,
+  updateTicket,
+};

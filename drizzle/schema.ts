@@ -2,24 +2,25 @@ import { int, mysqlEnum, mysqlTable, text, timestamp, varchar, bigint } from "dr
 
 /**
  * Core user table backing auth flow.
- * Extend this file with additional tables as your product grows.
- * Columns use camelCase to match both database fields and generated types.
+ * Supports both internal authentication (email/password) and OAuth.
  */
 export const users = mysqlTable("users", {
-  /**
-   * Surrogate primary key. Auto-incremented numeric value managed by the database.
-   * Use this for relations between tables.
-   */
   id: int("id").autoincrement().primaryKey(),
-  /** Manus OAuth identifier (openId) returned from the OAuth callback. Unique per user. */
-  openId: varchar("openId", { length: 64 }).notNull().unique(),
-  name: text("name"),
-  email: varchar("email", { length: 320 }),
-  loginMethod: varchar("loginMethod", { length: 64 }),
+  /** Manus OAuth identifier (openId) - optional for internal auth users */
+  openId: varchar("openId", { length: 64 }).unique(),
+  name: varchar("name", { length: 255 }).notNull(),
+  email: varchar("email", { length: 320 }).notNull().unique(),
+  /** Hashed password for internal authentication */
+  passwordHash: varchar("passwordHash", { length: 255 }),
+  loginMethod: mysqlEnum("loginMethod", ["internal", "oauth"]).default("internal").notNull(),
   role: mysqlEnum("role", ["user", "admin"]).default("user").notNull(),
+  /** Approval status for new registrations */
+  approvalStatus: mysqlEnum("approvalStatus", ["pending", "approved", "rejected"]).default("pending").notNull(),
+  /** Sector/department the user belongs to */
+  sector: mysqlEnum("sector", ["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações", "Outro"]).default("Outro"),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
-  lastSignedIn: timestamp("lastSignedIn").defaultNow().notNull(),
+  lastSignedIn: timestamp("lastSignedIn"),
 });
 
 export type User = typeof users.$inferSelect;

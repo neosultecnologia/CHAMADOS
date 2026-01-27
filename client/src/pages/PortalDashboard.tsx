@@ -105,7 +105,10 @@ export default function PortalDashboard() {
           <button className="hover:text-white transition opacity-80">Ouvidoria</button>
           <button className="hover:text-white transition opacity-80">Documentos e Políticas</button>
           {user?.role === 'admin' && (
-            <button className="hover:text-white transition opacity-80 flex items-center gap-1">
+            <button 
+              onClick={() => setLocation('/admin/usuarios')}
+              className="hover:text-white transition opacity-80 flex items-center gap-1"
+            >
               <Settings size={14} /> Administrador
             </button>
           )}

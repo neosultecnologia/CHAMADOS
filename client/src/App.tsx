@@ -5,11 +5,11 @@ import { Route, Switch, Redirect } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { useAuth } from "@/_core/hooks/useAuth";
-import { getLoginUrl } from "@/const";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import PortalDashboard from "./pages/PortalDashboard";
 import ModulePlaceholder from "./pages/ModulePlaceholder";
+import UserManagement from "./pages/UserManagement";
 import { Loader2 } from "lucide-react";
 
 // Protected Route Component
@@ -25,9 +25,8 @@ function ProtectedRoute({ component: Component }: { component: React.ComponentTy
   }
 
   if (!isAuthenticated) {
-    // Redirect to Manus OAuth login
-    window.location.href = getLoginUrl();
-    return null;
+    // Redirect to login page
+    return <Redirect to="/login" />;
   }
 
   return <Component />;
@@ -61,6 +60,11 @@ function Router() {
       {/* Help Desk Module */}
       <Route path="/chamados">
         <ProtectedRoute component={Dashboard} />
+      </Route>
+
+      {/* User Management (Admin only) */}
+      <Route path="/admin/usuarios">
+        <ProtectedRoute component={UserManagement} />
       </Route>
 
       {/* Other Modules Placeholders */}
