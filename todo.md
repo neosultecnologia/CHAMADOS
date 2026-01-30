@@ -55,3 +55,13 @@
 - [x] Criar painel admin para aprovar/rejeitar usuários pendentes
 - [x] Atualizar App.tsx para usar novo sistema de autenticação
 - [x] Testar fluxo completo de cadastro e aprovação
+
+## Redesign da Página de Login
+- [x] Layout dividido: branding à esquerda, formulário à direita
+- [x] Fundo gradiente azul com efeito de luz
+- [x] Título "NEROS" grande à esquerda com descrição
+- [x] Card de login com borda sutil à direita
+- [x] Botão "Login" amarelo/dourado
+- [x] Link "Esqueci a senha?" e "Cadastrar-se"
+- [x] Footer com copyright e "Acesso exclusivo para colaboradores"
+- [x] Testar responsividade em mobile

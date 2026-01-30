@@ -1,6 +1,6 @@
 import { useAuth } from '@/_core/hooks/useAuth';
 import { trpc } from '@/lib/trpc';
-import { Loader2, Mail, Lock, User, Building2, Eye, EyeOff, ArrowLeft } from 'lucide-react';
+import { Loader2, Eye, EyeOff, ArrowRight, ArrowLeft, User, Building2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'wouter';
@@ -65,7 +65,7 @@ export default function Login() {
   if (authLoading) {
     return (
       <div className="min-h-screen w-full bg-[#0047AB] flex items-center justify-center">
-        <Loader2 className="w-8 h-8 animate-spin text-cyan-400" />
+        <Loader2 className="w-8 h-8 animate-spin text-white" />
       </div>
     );
   }
@@ -81,180 +81,239 @@ export default function Login() {
   ];
 
   return (
-    <div className="min-h-screen w-full bg-[#0047AB] flex items-center justify-center relative overflow-hidden">
-      {/* Background Effects */}
+    <div className="min-h-screen w-full relative overflow-hidden">
+      {/* Background with gradient and light effect */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-700 to-blue-500 opacity-100"></div>
-        <div className="absolute top-[-20%] left-[-10%] w-[80%] h-[80%] bg-blue-400/20 rounded-full blur-[120px] mix-blend-overlay"></div>
-        <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-cyan-400/10 rounded-full blur-[100px] mix-blend-overlay"></div>
+        {/* Base gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#001a4d] via-[#0047AB] to-[#0066cc]"></div>
+        
+        {/* Light beam effect from top-left */}
+        <div 
+          className="absolute top-0 left-0 w-full h-full"
+          style={{
+            background: 'linear-gradient(135deg, rgba(100,180,255,0.15) 0%, transparent 40%)',
+          }}
+        ></div>
+        
+        {/* Light beam effect from bottom-right */}
+        <div 
+          className="absolute bottom-0 right-0 w-full h-full"
+          style={{
+            background: 'radial-gradient(ellipse at 80% 80%, rgba(255,255,255,0.2) 0%, transparent 50%)',
+          }}
+        ></div>
+        
+        {/* Subtle light streaks */}
+        <div 
+          className="absolute top-0 left-1/4 w-1/2 h-full opacity-30"
+          style={{
+            background: 'linear-gradient(160deg, transparent 0%, rgba(100,180,255,0.1) 30%, transparent 60%)',
+          }}
+        ></div>
       </div>
 
-      <div className="relative z-10 w-full max-w-md px-4">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl shadow-2xl overflow-hidden"
-        >
-          <div className="p-8">
-            {/* Header */}
-            <div className="text-center mb-8">
-              <div className="flex justify-center mb-4">
-                <div className="w-12 h-12 bg-cyan-400 rounded-lg flex items-center justify-center shadow-lg shadow-cyan-400/20">
-                  <div className="w-6 h-6 bg-white rounded-sm"></div>
-                </div>
-              </div>
-              <h1 className="text-3xl font-bold text-white mb-2 tracking-tight">NEROS JL</h1>
-              <p className="text-blue-100 text-sm font-medium">
-                {mode === 'login' ? 'Sistema de Help Desk' : 'Criar nova conta'}
-              </p>
-            </div>
+      {/* Header */}
+      <header className="absolute top-0 left-0 right-0 z-20 p-6">
+        <span className="text-white font-bold text-lg tracking-wide">NEROS JL</span>
+      </header>
 
-            <AnimatePresence mode="wait">
-              <motion.form
-                key={mode}
-                initial={{ opacity: 0, x: mode === 'login' ? -20 : 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: mode === 'login' ? 20 : -20 }}
-                transition={{ duration: 0.3 }}
-                onSubmit={handleSubmit}
-                className="space-y-4"
-              >
-                {/* Name field (only for register) */}
-                {mode === 'register' && (
-                  <div className="relative">
-                    <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-blue-200/50" />
-                    <input
-                      type="text"
-                      placeholder="Nome completo"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      required
-                      className="w-full bg-white/10 border border-white/20 rounded-xl py-3 pl-11 pr-4 text-white placeholder:text-blue-200/50 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-transparent transition-all"
-                    />
-                  </div>
-                )}
+      {/* Main content */}
+      <div className="relative z-10 min-h-screen flex">
+        {/* Left side - Branding */}
+        <div className="hidden lg:flex flex-1 flex-col justify-center px-16 xl:px-24">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="text-white text-6xl xl:text-7xl font-bold tracking-tight mb-6">
+              NEROS
+            </h1>
+            <p className="text-white/80 text-lg xl:text-xl max-w-md leading-relaxed">
+              Sistema integrado que organiza processos, pessoas e performance.
+            </p>
+          </motion.div>
+        </div>
 
-                {/* Email field */}
-                <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-blue-200/50" />
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    className="w-full bg-white/10 border border-white/20 rounded-xl py-3 pl-11 pr-4 text-white placeholder:text-blue-200/50 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-transparent transition-all"
-                  />
-                </div>
-
-                {/* Password field */}
-                <div className="relative">
-                  <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-blue-200/50" />
-                  <input
-                    type={showPassword ? 'text' : 'password'}
-                    placeholder="Senha"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                    minLength={6}
-                    className="w-full bg-white/10 border border-white/20 rounded-xl py-3 pl-11 pr-11 text-white placeholder:text-blue-200/50 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-transparent transition-all"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-blue-200/50 hover:text-white transition-colors"
-                  >
-                    {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                  </button>
-                </div>
-
-                {/* Sector field (only for register) */}
-                {mode === 'register' && (
-                  <div className="relative">
-                    <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-blue-200/50" />
-                    <select
-                      value={sector}
-                      onChange={(e) => setSector(e.target.value)}
-                      className="w-full bg-white/10 border border-white/20 rounded-xl py-3 pl-11 pr-4 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-transparent transition-all appearance-none cursor-pointer"
-                    >
-                      {sectors.map((s) => (
-                        <option key={s.value} value={s.value} className="bg-blue-900 text-white">
-                          {s.label}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                )}
-
-                {/* Submit button */}
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="w-full bg-cyan-500 hover:bg-cyan-400 disabled:bg-cyan-500/50 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-cyan-500/25 transition-all transform hover:scale-[1.02] active:scale-[0.98] disabled:transform-none flex items-center justify-center gap-2"
+        {/* Right side - Login form */}
+        <div className="flex-1 flex items-center justify-center p-6 lg:p-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="w-full max-w-md"
+          >
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 shadow-2xl">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={mode}
+                  initial={{ opacity: 0, x: mode === 'login' ? -20 : 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: mode === 'login' ? 20 : -20 }}
+                  transition={{ duration: 0.3 }}
                 >
-                  {isLoading ? (
-                    <Loader2 className="w-5 h-5 animate-spin" />
-                  ) : mode === 'login' ? (
-                    'Entrar'
-                  ) : (
-                    'Criar conta'
-                  )}
-                </button>
+                  <h2 className="text-white text-2xl font-bold mb-8">
+                    {mode === 'login' ? 'Acesse sua conta' : 'Criar nova conta'}
+                  </h2>
 
-                {/* Toggle mode */}
-                <div className="text-center pt-2">
-                  {mode === 'login' ? (
-                    <p className="text-blue-100 text-sm">
-                      Não tem uma conta?{' '}
+                  <form onSubmit={handleSubmit} className="space-y-5">
+                    {/* Name field (only for register) */}
+                    {mode === 'register' && (
+                      <div>
+                        <label className="block text-white/70 text-sm mb-2">Nome completo</label>
+                        <div className="relative">
+                          <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-white/30" />
+                          <input
+                            type="text"
+                            placeholder="Seu nome"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            required
+                            className="w-full bg-transparent border-b border-white/20 py-3 pl-10 pr-4 text-white placeholder:text-white/30 focus:outline-none focus:border-white/50 transition-colors"
+                          />
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Email field */}
+                    <div>
+                      <label className="block text-white/70 text-sm mb-2">Usuário</label>
+                      <input
+                        type="email"
+                        placeholder="seu@email.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        className="w-full bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-white/50 transition-colors"
+                      />
+                    </div>
+
+                    {/* Password field */}
+                    <div>
+                      <label className="block text-white/70 text-sm mb-2">Senha</label>
+                      <div className="relative">
+                        <input
+                          type={showPassword ? 'text' : 'password'}
+                          placeholder="••••••••"
+                          value={password}
+                          onChange={(e) => setPassword(e.target.value)}
+                          required
+                          minLength={6}
+                          className="w-full bg-transparent border-b border-white/20 py-3 pr-10 text-white placeholder:text-white/30 focus:outline-none focus:border-white/50 transition-colors"
+                        />
+                        <button
+                          type="button"
+                          onClick={() => setShowPassword(!showPassword)}
+                          className="absolute right-0 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/60 transition-colors"
+                        >
+                          {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Sector field (only for register) */}
+                    {mode === 'register' && (
+                      <div>
+                        <label className="block text-white/70 text-sm mb-2">Setor</label>
+                        <div className="relative">
+                          <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-white/30" />
+                          <select
+                            value={sector}
+                            onChange={(e) => setSector(e.target.value)}
+                            className="w-full bg-transparent border-b border-white/20 py-3 pl-10 text-white focus:outline-none focus:border-white/50 transition-colors appearance-none cursor-pointer"
+                          >
+                            {sectors.map((s) => (
+                              <option key={s.value} value={s.value} className="bg-[#0047AB] text-white">
+                                {s.label}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Submit button */}
+                    <button
+                      type="submit"
+                      disabled={isLoading}
+                      className="w-full bg-[#d4a853] hover:bg-[#c49943] disabled:bg-[#d4a853]/50 text-white font-semibold py-3.5 rounded-lg transition-all flex items-center justify-center gap-2 mt-8"
+                    >
+                      {isLoading ? (
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                      ) : (
+                        <>
+                          {mode === 'login' ? 'Login' : 'Criar conta'}
+                          <ArrowRight className="w-5 h-5" />
+                        </>
+                      )}
+                    </button>
+                  </form>
+
+                  {/* Links */}
+                  <div className="mt-6 space-y-4 text-center">
+                    {mode === 'login' && (
                       <button
                         type="button"
-                        onClick={() => setMode('register')}
-                        className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+                        className="text-white/60 hover:text-white/80 text-sm transition-colors"
+                        onClick={() => toast.info('Funcionalidade em desenvolvimento')}
                       >
-                        Cadastre-se
+                        Esqueci a senha?
                       </button>
-                    </p>
-                  ) : (
-                    <button
-                      type="button"
-                      onClick={() => setMode('login')}
-                      className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors flex items-center justify-center gap-1 mx-auto"
+                    )}
+
+                    <div className="pt-2">
+                      {mode === 'login' ? (
+                        <>
+                          <p className="text-white/50 text-sm mb-2">Não tem uma conta?</p>
+                          <button
+                            type="button"
+                            onClick={() => setMode('register')}
+                            className="w-full border border-white/20 hover:border-white/40 text-white font-medium py-3 rounded-lg transition-all"
+                          >
+                            Cadastrar-se
+                          </button>
+                        </>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={() => setMode('login')}
+                          className="text-white/60 hover:text-white/80 font-medium transition-colors flex items-center justify-center gap-1 mx-auto"
+                        >
+                          <ArrowLeft className="w-4 h-4" />
+                          Voltar para login
+                        </button>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Info text for registration */}
+                  {mode === 'register' && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      className="mt-6 p-3 bg-yellow-500/10 border border-yellow-500/20 rounded-lg"
                     >
-                      <ArrowLeft className="w-4 h-4" />
-                      Voltar para login
-                    </button>
+                      <p className="text-yellow-200/80 text-xs text-center">
+                        Após o cadastro, sua conta precisará ser aprovada por um administrador.
+                      </p>
+                    </motion.div>
                   )}
-                </div>
-              </motion.form>
-            </AnimatePresence>
-
-            {/* Info text for registration */}
-            {mode === 'register' && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="mt-4 p-3 bg-yellow-500/10 border border-yellow-500/20 rounded-xl"
-              >
-                <p className="text-yellow-200 text-xs text-center">
-                  Após o cadastro, sua conta precisará ser aprovada por um administrador antes de poder acessar o sistema.
-                </p>
-              </motion.div>
-            )}
-
-            <div className="mt-6 text-center text-xs text-blue-200/70">
-              <p>Ao continuar, você concorda com os termos de uso</p>
-              <p>e política de privacidade da Neosul.</p>
+                </motion.div>
+              </AnimatePresence>
             </div>
-          </div>
-        </motion.div>
-
-        <div className="mt-6 text-center">
-          <p className="text-blue-200/60 text-xs">
-            © {new Date().getFullYear()} Neosul. Todos os direitos reservados.
-          </p>
+          </motion.div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="absolute bottom-0 left-0 right-0 z-20 p-6 flex justify-between items-center">
+        <span className="text-white/50 text-sm">
+          Acesso exclusivo para colaboradores.
+        </span>
+        <span className="text-white/50 text-sm">
+          Copyright © {new Date().getFullYear()} Neosul. Todos os direitos reservados.
+        </span>
+      </footer>
     </div>
   );
 }
