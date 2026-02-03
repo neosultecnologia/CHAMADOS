@@ -19,10 +19,11 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Plus, Search, Calendar, User, Target, Clock } from "lucide-react";
+import { Plus, Search, Calendar as CalendarIcon, User, Target, Clock, LayoutGrid, CalendarDays } from "lucide-react";
 import CreateProjectModal from "@/components/CreateProjectModal";
 import EditProjectModal from "@/components/EditProjectModal";
 import ProjectComments from "@/components/ProjectComments";
+import { ProjectsCalendar } from "@/components/ProjectsCalendar";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 
@@ -33,6 +34,7 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [editingProject, setEditingProject] = useState<number | null>(null);
+  const [viewMode, setViewMode] = useState<'grid' | 'calendar'>('grid');
 
   const { data: projects = [], isLoading } = trpc.projects.list.useQuery({
     status: statusFilter !== "all" ? statusFilter : undefined,
@@ -129,6 +131,25 @@ export default function Projects() {
                 </SelectContent>
               </Select>
 
+              <div className="flex gap-2">
+                <Button
+                  variant={viewMode === 'grid' ? 'default' : 'outline'}
+                  onClick={() => setViewMode('grid')}
+                  className={viewMode === 'grid' ? 'bg-[#003366] hover:bg-[#004080] text-white' : ''}
+                >
+                  <LayoutGrid className="h-4 w-4 mr-2" />
+                  Grade
+                </Button>
+                <Button
+                  variant={viewMode === 'calendar' ? 'default' : 'outline'}
+                  onClick={() => setViewMode('calendar')}
+                  className={viewMode === 'calendar' ? 'bg-[#003366] hover:bg-[#004080] text-white' : ''}
+                >
+                  <CalendarDays className="h-4 w-4 mr-2" />
+                  Calendário
+                </Button>
+              </div>
+
               <Button onClick={() => setShowCreateModal(true)} className="whitespace-nowrap bg-[#003366] hover:bg-[#004080] text-white">
                 <Plus className="h-4 w-4 mr-2" />
                 Novo Projeto
@@ -137,7 +158,7 @@ export default function Projects() {
           </CardContent>
         </Card>
 
-        {/* Projects Grid */}
+        {/* Projects View */}
         {isLoading ? (
           <div className="text-center py-12">
             <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-white border-r-transparent"></div>
@@ -153,6 +174,11 @@ export default function Projects() {
               </Button>
             </CardContent>
           </Card>
+        ) : viewMode === 'calendar' ? (
+          <ProjectsCalendar
+            projects={projects}
+            onSelectEvent={(project) => setSelectedProject(project.id)}
+          />
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project) => {
@@ -195,7 +221,7 @@ export default function Projects() {
                     
                     {project.endDate && (
                       <div className="flex items-center text-sm text-gray-600">
-                        <Calendar className="h-4 w-4 mr-2" />
+                        <CalendarIcon className="h-4 w-4 mr-2" />
                         <span>Prazo: {format(new Date(project.endDate), "dd/MM/yyyy", { locale: ptBR })}</span>
                       </div>
                     )}
@@ -310,7 +336,7 @@ function ProjectDetailModal({ projectId, onClose, onEdit }: { projectId: number;
               </div>
               {project.startDate && (
                 <div className="flex items-center">
-                  <Calendar className="h-4 w-4 mr-2 text-gray-500" />
+                  <CalendarIcon className="h-4 w-4 mr-2 text-gray-500" />
                   <span className="text-sm text-gray-600 mr-2">Início:</span>
                   <span className="font-medium">{format(new Date(project.startDate), "dd/MM/yyyy", { locale: ptBR })}</span>
                 </div>

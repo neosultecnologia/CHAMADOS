@@ -113,3 +113,12 @@
 - [x] Adicionar badge de "Atrasado" para projetos vencidos
 - [x] Aplicar borda colorida nos cards conforme status do prazo
 - [x] Testar com diferentes datas de prazo
+
+## Visualização de Calendário de Projetos
+- [x] Instalar biblioteca react-big-calendar
+- [x] Criar componente ProjectsCalendar
+- [x] Integrar dados de projetos com eventos do calendário
+- [x] Adicionar toggle entre visualização de lista e calendário
+- [x] Implementar clique em evento para abrir detalhes do projeto
+- [x] Estilizar calendário com cores da Neosul
+- [x] Testar navegação entre meses e visualização de eventos
