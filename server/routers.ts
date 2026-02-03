@@ -7,6 +7,7 @@ import * as db from "./db";
 import bcrypt from "bcryptjs";
 import { sdk } from "./_core/sdk";
 import { TRPCError } from "@trpc/server";
+import { hasModulePermission, MODULES } from "@shared/permissions";
 
 const ONE_YEAR_MS = 365 * 24 * 60 * 60 * 1000;
 
@@ -178,7 +179,13 @@ export const appRouter = router({
         sector: z.string().optional(),
         search: z.string().optional(),
       }).optional())
-      .query(async ({ input }) => {
+      .query(async ({ ctx, input }) => {
+        if (!hasModulePermission(ctx.user, MODULES.CHAMADOS)) {
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Você não tem permissão para acessar o módulo de Chamados",
+          });
+        }
         return await db.getAllTickets(input);
       }),
 
@@ -465,7 +472,13 @@ export const appRouter = router({
         sector: z.string().optional(),
         search: z.string().optional(),
       }).optional())
-      .query(async ({ input }) => {
+      .query(async ({ ctx, input }) => {
+        if (!hasModulePermission(ctx.user, MODULES.PROJETOS)) {
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Você não tem permissão para acessar o módulo de Projetos",
+          });
+        }
         return await db.getAllProjects(input || {});
       }),
 
@@ -645,6 +658,23 @@ export const appRouter = router({
     list: protectedProcedure.query(async () => {
       return await db.getApprovedUsers();
     }),
+
+    updatePermissions: protectedProcedure
+      .input(z.object({
+        userId: z.number(),
+        permissions: z.array(z.string()),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        // Only admins can update permissions
+        if (ctx.user?.role !== 'admin') {
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Apenas administradores podem alterar permissões",
+          });
+        }
+        
+        return await db.updateUserPermissions(input.userId, input.permissions);
+      }),
   }),
 });
 

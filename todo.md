@@ -136,3 +136,13 @@
 - [x] Adicionar campos: título, descrição, data de publicação, status (ativo/inativo)
 - [x] Integrar notícias na home page (seção "Avisos Importantes")
 - [x] Adicionar link de acesso ao gerenciamento no painel admin
+
+## Sistema de Permissões por Módulo
+- [x] Atualizar schema de usuários com campo permissions (JSON)
+- [x] Criar tipos e interfaces para permissões
+- [x] Implementar middleware de verificação de permissões no backend
+- [x] Atualizar routers para verificar permissões antes de executar operações
+- [x] Criar interface de gerenciamento de permissões no painel de usuários
+- [x] Implementar restrições de acesso no frontend (ocultar módulos sem permissão)
+- [x] Atualizar PortalDashboard para mostrar apenas módulos permitidos
+- [x] Testar permissões com diferentes combinações de acesso

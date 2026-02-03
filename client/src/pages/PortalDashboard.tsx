@@ -18,6 +18,7 @@ import {
   AlertTriangle
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { hasModulePermission, MODULES } from '@shared/permissions';
 
 export default function PortalDashboard() {
   const { user, logout } = useAuth();
@@ -31,7 +32,7 @@ export default function PortalDashboard() {
     setLocation('/');
   };
 
-  const modules = [
+  const allModules = [
     { 
       id: 'chamados', 
       name: 'Chamados', 
@@ -75,6 +76,13 @@ export default function PortalDashboard() {
       description: 'Infraestrutura'
     },
   ];
+
+  // Filter modules based on user permissions
+  const modules = allModules.filter(module => {
+    const moduleKey = module.id.toUpperCase() as keyof typeof MODULES;
+    const modulePermission = MODULES[moduleKey];
+    return modulePermission ? hasModulePermission(user, modulePermission) : true;
+  });
 
   // Default notices if no announcements
   const defaultNotices = [

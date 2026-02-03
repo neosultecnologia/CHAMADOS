@@ -202,6 +202,18 @@ export async function deleteUser(id: number): Promise<boolean> {
   return result[0].affectedRows > 0;
 }
 
+export async function updateUserPermissions(id: number, permissions: string[]): Promise<User | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  await db.update(users)
+    .set({ permissions: permissions as any })
+    .where(eq(users.id, id));
+
+  const updated = await db.select().from(users).where(eq(users.id, id)).limit(1);
+  return updated[0] || null;
+}
+
 // ============ TICKET QUERIES ============
 
 export async function createTicket(ticket: InsertTicket): Promise<Ticket | null> {

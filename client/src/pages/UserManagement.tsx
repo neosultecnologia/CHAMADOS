@@ -19,6 +19,8 @@ import {
   Building2
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { PermissionsDialog } from '@/components/PermissionsDialog';
+import { Settings } from 'lucide-react';
 
 type Tab = 'pending' | 'all';
 
@@ -26,6 +28,7 @@ export default function UserManagement() {
   const { user, loading: authLoading, isAuthenticated } = useAuth();
   const [, setLocation] = useLocation();
   const [activeTab, setActiveTab] = useState<Tab>('pending');
+  const [permissionsDialog, setPermissionsDialog] = useState<{ open: boolean; userId: number; userName: string; permissions: string[] } | null>(null);
   const utils = trpc.useUtils();
 
   const { data: pendingUsers, isLoading: loadingPending } = trpc.userManagement.listPending.useQuery(
@@ -266,7 +269,7 @@ export default function UserManagement() {
                 <p className="text-blue-200/60">Todos os cadastros foram processados</p>
               </div>
             )}
-          </motion.div>
+        </motion.div>
         )}
 
         {/* All Users Tab */}
@@ -344,6 +347,20 @@ export default function UserManagement() {
                                 <Shield className="w-4 h-4" />
                               </button>
                             )}
+                            {listUser.approvalStatus === 'approved' && listUser.role !== 'admin' && (
+                              <button
+                                onClick={() => setPermissionsDialog({
+                                  open: true,
+                                  userId: listUser.id,
+                                  userName: listUser.name,
+                                  permissions: Array.isArray(listUser.permissions) ? listUser.permissions : [],
+                                })}
+                                className="p-2 text-blue-400 hover:bg-blue-500/20 rounded-lg transition-colors"
+                                title="Gerenciar permissões"
+                              >
+                                <Settings className="w-4 h-4" />
+                              </button>
+                            )}
                             {listUser.id !== user?.id && (
                               <button
                                 onClick={() => {
@@ -374,6 +391,16 @@ export default function UserManagement() {
           </motion.div>
         )}
       </main>
+
+      {permissionsDialog && (
+        <PermissionsDialog
+          open={permissionsDialog.open}
+          onOpenChange={(open) => !open && setPermissionsDialog(null)}
+          userId={permissionsDialog.userId}
+          userName={permissionsDialog.userName}
+          currentPermissions={permissionsDialog.permissions}
+        />
+      )}
     </div>
   );
 }

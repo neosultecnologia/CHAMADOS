@@ -43,6 +43,13 @@
       "when": 1770154935654,
       "tag": "0005_orange_felicia_hardy",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1770159570400,
+      "tag": "0006_military_sunspot",
+      "breakpoints": true
     }
   ]
 }
