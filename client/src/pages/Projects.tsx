@@ -22,6 +22,7 @@ import {
 import { Plus, Search, Calendar, User, Target, Clock } from "lucide-react";
 import CreateProjectModal from "@/components/CreateProjectModal";
 import EditProjectModal from "@/components/EditProjectModal";
+import ProjectComments from "@/components/ProjectComments";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 
@@ -342,6 +343,16 @@ function ProjectDetailModal({ projectId, onClose, onEdit }: { projectId: number;
                   ))}
                 </div>
               )}
+            </CardContent>
+          </Card>
+
+          {/* Comments Section */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-lg">Comentários</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ProjectComments projectId={projectId} />
             </CardContent>
           </Card>
         </div>

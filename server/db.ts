@@ -8,7 +8,8 @@ import {
   attachments, InsertAttachment, Attachment,
   announcements, InsertAnnouncement, Announcement,
   projects, InsertProject, Project,
-  projectPhases, InsertProjectPhase, ProjectPhase
+  projectPhases, InsertProjectPhase, ProjectPhase,
+  projectComments, InsertProjectComment, ProjectComment
 } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
@@ -596,4 +597,47 @@ export async function updateProjectProgress(projectId: number): Promise<void> {
   const progress = Math.round((completedPhases / phases.length) * 100);
 
   await db.update(projects).set({ progress }).where(eq(projects.id, projectId));
+}
+
+// ============ PROJECT COMMENT QUERIES ============
+
+export async function createProjectComment(comment: InsertProjectComment): Promise<ProjectComment | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    const result = await db.insert(projectComments).values(comment);
+    const insertId = (result as any)[0]?.insertId;
+    if (!insertId) return null;
+    const [newComment] = await db.select().from(projectComments).where(eq(projectComments.id, Number(insertId)));
+    return newComment || null;
+  } catch (error) {
+    console.error("[Database] Failed to create project comment:", error);
+    return null;
+  }
+}
+
+export async function getProjectComments(projectId: number): Promise<ProjectComment[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  try {
+    return await db.select().from(projectComments).where(eq(projectComments.projectId, projectId)).orderBy(desc(projectComments.createdAt));
+  } catch (error) {
+    console.error("[Database] Failed to get project comments:", error);
+    return [];
+  }
+}
+
+export async function deleteProjectComment(commentId: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  try {
+    await db.delete(projectComments).where(eq(projectComments.id, commentId));
+    return true;
+  } catch (error) {
+    console.error("[Database] Failed to delete project comment:", error);
+    return false;
+  }
 }

@@ -1,0 +1,18 @@
+{
+  "query": "SELECT * FROM projectComments ORDER BY createdAt DESC LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user M967bVXfxXUhp7W.root --database JLPd83LStLYaV7mJXtu8eL --execute SELECT * FROM projectComments ORDER BY createdAt DESC LIMIT 5;",
+  "rows": [
+    {
+      "id": "1",
+      "projectId": "1",
+      "authorId": "1",
+      "authorName": "Neosul - Daniel TI",
+      "content": "Ótimo progresso no projeto! A integração com o ERP está funcionando perfeitamente.",
+      "createdAt": "1770154612697"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tprojectId\tauthorId\tauthorName\tcontent\tcreatedAt\n1\t1\t1\tNeosul - Daniel TI\tÓtimo progresso no projeto! A integração com o ERP está funcionando perfeitamente.\t1770154612697\n",
+  "stderr": "",
+  "execution_time_ms": 54
+}

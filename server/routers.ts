@@ -608,6 +608,36 @@ export const appRouter = router({
       }),
   }),
 
+  // ============ PROJECT COMMENTS ============
+  projectComments: router({
+    listByProject: protectedProcedure
+      .input(z.object({ projectId: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getProjectComments(input.projectId);
+      }),
+
+    create: protectedProcedure
+      .input(z.object({
+        projectId: z.number(),
+        content: z.string().min(1),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        return await db.createProjectComment({
+          projectId: input.projectId,
+          authorId: ctx.user.id,
+          authorName: ctx.user.name || "Usuário",
+          content: input.content,
+          createdAt: Date.now(),
+        });
+      }),
+
+    delete: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input }) => {
+        return await db.deleteProjectComment(input.id);
+      }),
+  }),
+
   // ============ USERS (for assignment dropdown) ============
   users: router({
     list: protectedProcedure.query(async () => {

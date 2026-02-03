@@ -162,3 +162,18 @@ export const projectPhases = mysqlTable("projectPhases", {
 
 export type ProjectPhase = typeof projectPhases.$inferSelect;
 export type InsertProjectPhase = typeof projectPhases.$inferInsert;
+
+/**
+ * Comments on projects for team communication
+ */
+export const projectComments = mysqlTable("projectComments", {
+  id: int("id").autoincrement().primaryKey(),
+  projectId: int("projectId").notNull(),
+  authorId: int("authorId").notNull(),
+  authorName: varchar("authorName", { length: 255 }).notNull(),
+  content: text("content").notNull(),
+  createdAt: bigint("createdAt", { mode: "number" }).notNull(),
+});
+
+export type ProjectComment = typeof projectComments.$inferSelect;
+export type InsertProjectComment = typeof projectComments.$inferInsert;

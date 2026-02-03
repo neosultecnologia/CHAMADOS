@@ -85,3 +85,11 @@
 - [x] Adicionar botão para marcar fases como concluídas
 - [x] Atualizar progresso do projeto automaticamente ao concluir fases
 - [x] Testar todas as funcionalidades de edição
+
+## Sistema de Comentários em Projetos
+- [x] Criar tabela projectComments no banco de dados
+- [x] Implementar routers tRPC para CRUD de comentários
+- [x] Criar componente de lista de comentários
+- [x] Criar formulário de novo comentário
+- [x] Integrar comentários no modal de detalhes do projeto
+- [x] Testar criação e visualização de comentários
