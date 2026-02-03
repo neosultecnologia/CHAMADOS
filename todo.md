@@ -74,3 +74,14 @@
 - [x] Implementar criação e edição de projetos
 - [x] Implementar gestão de fases com prazos
 - [x] Testar funcionalidades completas
+
+## Edição de Projetos e Fases
+- [x] Criar modal de edição de projeto
+- [x] Implementar edição de informações do projeto (nome, descrição, prioridade, responsável, datas)
+- [x] Implementar alteração de status do projeto
+- [x] Criar interface para adicionar novas fases a projetos existentes
+- [x] Implementar edição de fases existentes
+- [x] Implementar exclusão de fases
+- [x] Adicionar botão para marcar fases como concluídas
+- [x] Atualizar progresso do projeto automaticamente ao concluir fases
+- [x] Testar todas as funcionalidades de edição

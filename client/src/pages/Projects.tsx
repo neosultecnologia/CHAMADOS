@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/dialog";
 import { Plus, Search, Calendar, User, Target, Clock } from "lucide-react";
 import CreateProjectModal from "@/components/CreateProjectModal";
+import EditProjectModal from "@/components/EditProjectModal";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 
@@ -30,6 +31,7 @@ export default function Projects() {
   const [priorityFilter, setPriorityFilter] = useState("all");
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [showCreateModal, setShowCreateModal] = useState(false);
+  const [editingProject, setEditingProject] = useState<number | null>(null);
 
   const { data: projects = [], isLoading } = trpc.projects.list.useQuery({
     status: statusFilter !== "all" ? statusFilter : undefined,
@@ -187,6 +189,10 @@ export default function Projects() {
           <ProjectDetailModal
             projectId={selectedProject}
             onClose={() => setSelectedProject(null)}
+            onEdit={() => {
+              setEditingProject(selectedProject);
+              setSelectedProject(null);
+            }}
           />
         )}
 
@@ -197,13 +203,23 @@ export default function Projects() {
             onSuccess={() => setShowCreateModal(false)}
           />
         )}
+
+        {/* Edit Project Modal */}
+        {editingProject && (
+          <EditProjectModal
+            open={true}
+            onOpenChange={(open) => !open && setEditingProject(null)}
+            projectId={editingProject}
+            onSuccess={() => setEditingProject(null)}
+          />
+        )}
       </div>
     </div>
   );
 }
 
 // Project Detail Modal Component
-function ProjectDetailModal({ projectId, onClose }: { projectId: number; onClose: () => void }) {
+function ProjectDetailModal({ projectId, onClose, onEdit }: { projectId: number; onClose: () => void; onEdit: () => void }) {
   const { data: project } = trpc.projects.getById.useQuery({ id: projectId });
   const { data: phases = [] } = trpc.projectPhases.listByProject.useQuery({ projectId });
 
@@ -230,7 +246,10 @@ function ProjectDetailModal({ projectId, onClose }: { projectId: number; onClose
                 {project.description || "Sem descrição"}
               </DialogDescription>
             </div>
-            <div className="flex gap-2">
+            <div className="flex gap-2 items-center">
+              <Button size="sm" variant="outline" onClick={onEdit}>
+                Editar Projeto
+              </Button>
               <Badge variant="outline" className={`${project.status === "Planejamento" ? "bg-blue-500/10 text-blue-500" : project.status === "Em Andamento" ? "bg-green-500/10 text-green-500" : project.status === "Em Pausa" ? "bg-yellow-500/10 text-yellow-500" : project.status === "Concluído" ? "bg-gray-500/10 text-gray-500" : "bg-red-500/10 text-red-500"}`}>
                 {project.status}
               </Badge>
