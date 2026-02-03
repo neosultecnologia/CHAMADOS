@@ -654,6 +654,67 @@ export const appRouter = router({
   }),
 
   // ============ USERS (for assignment dropdown) ============
+  permissionGroups: router({
+    list: protectedProcedure.query(async () => {
+      return await db.getPermissionGroups();
+    }),
+
+    create: protectedProcedure
+      .input(z.object({
+        name: z.string().min(1).max(100),
+        description: z.string().optional(),
+        permissions: z.record(z.string(), z.boolean()),
+        isDefault: z.boolean().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        // Only admins can create groups
+        if (ctx.user?.role !== 'admin') {
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Apenas administradores podem criar grupos",
+          });
+        }
+        
+        return await db.createPermissionGroup(input);
+      }),
+
+    update: protectedProcedure
+      .input(z.object({
+        id: z.number(),
+        name: z.string().min(1).max(100),
+        description: z.string().optional(),
+        permissions: z.record(z.string(), z.boolean()),
+        isDefault: z.boolean().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        // Only admins can update groups
+        if (ctx.user?.role !== 'admin') {
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Apenas administradores podem editar grupos",
+          });
+        }
+        
+        return await db.updatePermissionGroup(input.id, input);
+      }),
+
+    delete: protectedProcedure
+      .input(z.object({
+        id: z.number(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        // Only admins can delete groups
+        if (ctx.user?.role !== 'admin') {
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Apenas administradores podem excluir grupos",
+          });
+        }
+        
+        return await db.deletePermissionGroup(input.id);
+      }),
+  }),
+
   users: router({
     list: protectedProcedure.query(async () => {
       return await db.getApprovedUsers();
@@ -674,6 +735,23 @@ export const appRouter = router({
         }
         
         return await db.updateUserPermissions(input.userId, input.permissions);
+      }),
+
+    assignGroup: protectedProcedure
+      .input(z.object({
+        userId: z.number(),
+        groupId: z.number().nullable(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        // Only admins can assign groups
+        if (ctx.user?.role !== 'admin') {
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Apenas administradores podem atribuir grupos",
+          });
+        }
+        
+        return await db.assignGroupToUser(input.userId, input.groupId);
       }),
   }),
 });

@@ -12,6 +12,7 @@ import ModulePlaceholder from "./pages/ModulePlaceholder";
 import UserManagement from "./pages/UserManagement";
 import Projects from "./pages/Projects";
 import Announcements from "./pages/Announcements";
+import PermissionGroupsManagement from "./pages/PermissionGroupsManagement";
 import { Loader2 } from "lucide-react";
 
 // Protected Route Component
@@ -74,9 +75,14 @@ function Router() {
         <ProtectedRoute component={Projects} />
       </Route>
 
-      {/* Announcements Management (Admin only) */}
+         {/* Admin - Announcements Management */}
       <Route path="/admin/noticias">
         <ProtectedRoute component={Announcements} />
+      </Route>
+      
+      {/* Admin - Permission Groups Management */}
+      <Route path="/grupos-permissoes">
+        <ProtectedRoute component={PermissionGroupsManagement} />
       </Route>
 
       {/* Other Modules Placeholders */}

@@ -9,7 +9,8 @@ import {
   announcements, InsertAnnouncement, Announcement,
   projects, InsertProject, Project,
   projectPhases, InsertProjectPhase, ProjectPhase,
-  projectComments, InsertProjectComment, ProjectComment
+  projectComments, InsertProjectComment, ProjectComment,
+  permissionGroups, InsertPermissionGroup, PermissionGroup
 } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
@@ -652,4 +653,103 @@ export async function deleteProjectComment(commentId: number): Promise<boolean> 
     console.error("[Database] Failed to delete project comment:", error);
     return false;
   }
+}
+
+// ============ PERMISSION GROUPS ============
+
+export async function getPermissionGroups(): Promise<PermissionGroup[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(permissionGroups).orderBy(permissionGroups.name);
+}
+
+export async function getPermissionGroupById(id: number): Promise<PermissionGroup | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.select().from(permissionGroups).where(eq(permissionGroups.id, id)).limit(1);
+  return result.length > 0 ? result[0] : null;
+}
+
+export async function createPermissionGroup(group: {
+  name: string;
+  description?: string;
+  permissions: Record<string, boolean>;
+  isDefault?: boolean;
+}): Promise<PermissionGroup | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const now = Date.now();
+  const result = await db.insert(permissionGroups).values({
+    name: group.name,
+    description: group.description || null,
+    permissions: group.permissions as any,
+    isDefault: group.isDefault || false,
+    createdAt: now,
+    updatedAt: now,
+  });
+
+  const insertId = result[0].insertId;
+  return await getPermissionGroupById(Number(insertId));
+}
+
+export async function updatePermissionGroup(
+  id: number,
+  data: {
+    name?: string;
+    description?: string;
+    permissions?: Record<string, boolean>;
+    isDefault?: boolean;
+  }
+): Promise<PermissionGroup | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const updateData: any = {
+    ...data,
+    updatedAt: Date.now(),
+  };
+
+  if (data.permissions) {
+    updateData.permissions = data.permissions;
+  }
+
+  await db.update(permissionGroups).set(updateData).where(eq(permissionGroups.id, id));
+  
+  return await getPermissionGroupById(id);
+}
+
+export async function deletePermissionGroup(id: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  // First, remove group assignment from users
+  await db.update(users).set({ groupId: null }).where(eq(users.groupId, id));
+
+  const result = await db.delete(permissionGroups).where(eq(permissionGroups.id, id));
+  return result[0].affectedRows > 0;
+}
+
+export async function assignGroupToUser(userId: number, groupId: number | null): Promise<User | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  // If groupId is provided, copy group permissions to user
+  if (groupId !== null) {
+    const group = await getPermissionGroupById(groupId);
+    if (!group) return null;
+
+    await db.update(users).set({
+      groupId,
+      permissions: group.permissions as any,
+    }).where(eq(users.id, userId));
+  } else {
+    // Remove group assignment
+    await db.update(users).set({ groupId: null }).where(eq(users.id, userId));
+  }
+
+  const user = await getUserById(userId);
+  return user || null;
 }

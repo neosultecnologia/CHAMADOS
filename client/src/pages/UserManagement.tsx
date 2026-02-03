@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { PermissionsDialog } from '@/components/PermissionsDialog';
+import { GroupSelector } from '@/components/GroupSelector';
 import { Settings } from 'lucide-react';
 
 type Tab = 'pending' | 'all';
@@ -162,9 +163,18 @@ export default function UserManagement() {
                 <span>Voltar ao Portal</span>
               </button>
             </div>
-            <div className="flex items-center gap-2">
-              <UserCog className="w-6 h-6 text-cyan-400" />
-              <h1 className="text-xl font-bold text-white">Gerenciamento de Usuários</h1>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-2">
+                <UserCog className="w-6 h-6 text-cyan-400" />
+                <h1 className="text-xl font-bold text-white">Gerenciamento de Usuários</h1>
+              </div>
+              <button
+                onClick={() => setLocation('/grupos-permissoes')}
+                className="flex items-center gap-2 px-4 py-2 bg-[#FFD700] text-[#003366] hover:bg-[#FFC700] rounded-lg font-medium transition-colors"
+              >
+                <Shield className="w-4 h-4" />
+                Grupos de Permissões
+              </button>
             </div>
           </div>
         </div>
@@ -289,6 +299,7 @@ export default function UserManagement() {
                     <tr className="border-b border-white/10">
                       <th className="text-left px-6 py-4 text-blue-200 font-medium">Usuário</th>
                       <th className="text-left px-6 py-4 text-blue-200 font-medium">Setor</th>
+                      <th className="text-left px-6 py-4 text-blue-200 font-medium">Grupo</th>
                       <th className="text-left px-6 py-4 text-blue-200 font-medium">Status</th>
                       <th className="text-left px-6 py-4 text-blue-200 font-medium">Papel</th>
                       <th className="text-left px-6 py-4 text-blue-200 font-medium">Último Acesso</th>
@@ -310,6 +321,9 @@ export default function UserManagement() {
                           </div>
                         </td>
                         <td className="px-6 py-4 text-blue-200">{listUser.sector || '-'}</td>
+                        <td className="px-6 py-4">
+                          <GroupSelector userId={listUser.id} currentGroupId={listUser.groupId} />
+                        </td>
                         <td className="px-6 py-4">{getStatusBadge(listUser.approvalStatus)}</td>
                         <td className="px-6 py-4">{getRoleBadge(listUser.role)}</td>
                         <td className="px-6 py-4 text-blue-300/60 text-sm">

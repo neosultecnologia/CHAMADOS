@@ -146,3 +146,13 @@
 - [x] Implementar restrições de acesso no frontend (ocultar módulos sem permissão)
 - [x] Atualizar PortalDashboard para mostrar apenas módulos permitidos
 - [x] Testar permissões com diferentes combinações de acesso
+
+## Sistema de Grupos de Permissões (Perfis)
+- [x] Criar tabela permissionGroups no banco de dados
+- [x] Adicionar campo groupId aos usuários
+- [x] Criar routers tRPC para CRUD de grupos
+- [x] Criar página de gerenciamento de grupos
+- [x] Criar componente de seleção de grupo no painel de usuários
+- [x] Implementar aplicação automática de permissões ao atribuir grupo
+- [x] Criar grupos padrão (Suporte, Gerente, Desenvolvedor, etc.)
+- [x] Testar criação, edição e atribuição de grupos

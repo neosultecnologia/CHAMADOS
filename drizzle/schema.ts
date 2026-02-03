@@ -1,4 +1,4 @@
-import { int, mysqlEnum, mysqlTable, text, timestamp, varchar, bigint, json } from "drizzle-orm/mysql-core";
+import { int, mysqlEnum, mysqlTable, text, timestamp, varchar, bigint, json, boolean } from "drizzle-orm/mysql-core";
 
 /**
  * Core user table backing auth flow.
@@ -18,6 +18,8 @@ export const users = mysqlTable("users", {
   approvalStatus: mysqlEnum("approvalStatus", ["pending", "approved", "rejected"]).default("pending").notNull(),
   /** Sector/department the user belongs to */
   sector: mysqlEnum("sector", ["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações", "Outro"]).default("Outro"),
+  /** Permission group ID (optional) */
+  groupId: int("groupId"),
   /** Module permissions stored as JSON array */
   permissions: json("permissions").$defaultFn(() => []),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
@@ -180,3 +182,19 @@ export const projectComments = mysqlTable("projectComments", {
 
 export type ProjectComment = typeof projectComments.$inferSelect;
 export type InsertProjectComment = typeof projectComments.$inferInsert;
+
+/**
+ * Permission groups (profiles) for easier permission management
+ */
+export const permissionGroups = mysqlTable("permissionGroups", {
+  id: int("id").autoincrement().primaryKey(),
+  name: varchar("name", { length: 100 }).notNull().unique(),
+  description: text("description"),
+  permissions: json("permissions").notNull(), // JSON object with module permissions
+  isDefault: boolean("isDefault").default(false).notNull(), // Whether this is a default group
+  createdAt: bigint("createdAt", { mode: "number" }).notNull(),
+  updatedAt: bigint("updatedAt", { mode: "number" }).notNull(),
+});
+
+export type PermissionGroup = typeof permissionGroups.$inferSelect;
+export type InsertPermissionGroup = typeof permissionGroups.$inferInsert;
