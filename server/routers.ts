@@ -620,6 +620,7 @@ export const appRouter = router({
       .input(z.object({
         projectId: z.number(),
         content: z.string().min(1),
+        mentions: z.array(z.number()).optional(),
       }))
       .mutation(async ({ ctx, input }) => {
         return await db.createProjectComment({
@@ -627,6 +628,7 @@ export const appRouter = router({
           authorId: ctx.user.id,
           authorName: ctx.user.name || "Usuário",
           content: input.content,
+          mentions: input.mentions ? JSON.stringify(input.mentions) : null,
           createdAt: Date.now(),
         });
       }),

@@ -93,3 +93,10 @@
 - [x] Criar formulário de novo comentário
 - [x] Integrar comentários no modal de detalhes do projeto
 - [x] Testar criação e visualização de comentários
+
+## Menções em Comentários de Projetos
+- [x] Adicionar campo mentions ao schema de projectComments
+- [x] Atualizar router para salvar menções
+- [x] Criar componente de autocomplete para detectar '@'
+- [x] Implementar renderização de menções destacadas
+- [x] Testar funcionalidade de menções

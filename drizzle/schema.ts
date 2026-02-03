@@ -172,6 +172,7 @@ export const projectComments = mysqlTable("projectComments", {
   authorId: int("authorId").notNull(),
   authorName: varchar("authorName", { length: 255 }).notNull(),
   content: text("content").notNull(),
+  mentions: text("mentions"), // JSON array of mentioned user IDs
   createdAt: bigint("createdAt", { mode: "number" }).notNull(),
 });
 
