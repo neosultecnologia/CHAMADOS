@@ -62,16 +62,16 @@ export default function Projects() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-[#003366] via-[#004080] to-[#0059b3] p-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Gerenciamento de Projetos</h1>
-          <p className="text-gray-600">Acompanhe o andamento de todos os projetos</p>
+          <h1 className="text-3xl font-bold text-white mb-2">Gerenciamento de Projetos</h1>
+          <p className="text-blue-100">Acompanhe o andamento de todos os projetos</p>
         </div>
 
         {/* Filters */}
-        <Card className="mb-6">
+        <Card className="mb-6 bg-white/95 backdrop-blur border-none shadow-xl">
           <CardContent className="pt-6">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex-1 relative">
@@ -111,7 +111,7 @@ export default function Projects() {
                 </SelectContent>
               </Select>
 
-              <Button onClick={() => setShowCreateModal(true)} className="whitespace-nowrap">
+              <Button onClick={() => setShowCreateModal(true)} className="whitespace-nowrap bg-[#003366] hover:bg-[#004080] text-white">
                 <Plus className="h-4 w-4 mr-2" />
                 Novo Projeto
               </Button>
@@ -122,15 +122,15 @@ export default function Projects() {
         {/* Projects Grid */}
         {isLoading ? (
           <div className="text-center py-12">
-            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-600 border-r-transparent"></div>
-            <p className="mt-4 text-gray-600">Carregando projetos...</p>
+            <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-white border-r-transparent"></div>
+            <p className="mt-4 text-white">Carregando projetos...</p>
           </div>
         ) : projects.length === 0 ? (
-          <Card>
+          <Card className="bg-white/95 backdrop-blur border-none">
             <CardContent className="py-12 text-center">
               <Target className="h-12 w-12 text-gray-400 mx-auto mb-4" />
               <p className="text-gray-600">Nenhum projeto encontrado</p>
-              <Button onClick={() => setShowCreateModal(true)} className="mt-4">
+              <Button onClick={() => setShowCreateModal(true)} className="mt-4 bg-[#003366] hover:bg-[#004080]">
                 Criar Primeiro Projeto
               </Button>
             </CardContent>
@@ -140,7 +140,7 @@ export default function Projects() {
             {projects.map((project) => (
               <Card
                 key={project.id}
-                className="hover:shadow-lg transition-shadow cursor-pointer"
+                className="hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer bg-white/95 backdrop-blur border-none"
                 onClick={() => setSelectedProject(project.id)}
               >
                 <CardHeader>

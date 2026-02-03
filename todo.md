@@ -100,3 +100,9 @@
 - [x] Criar componente de autocomplete para detectar '@'
 - [x] Implementar renderização de menções destacadas
 - [x] Testar funcionalidade de menções
+
+## Melhorias Visuais da Página de Projetos
+- [x] Aplicar cores da Neosul (azul escuro) no background
+- [x] Melhorar cards de projetos com sombras e espaçamento
+- [x] Atualizar badges de status e prioridade
+- [x] Melhorar tipografia e hierarquia visual
