@@ -122,3 +122,17 @@
 - [x] Implementar clique em evento para abrir detalhes do projeto
 - [x] Estilizar calendário com cores da Neosul
 - [x] Testar navegação entre meses e visualização de eventos
+
+## Padronização de Cores e Navegação
+- [x] Revisar e padronizar cores em todo o sistema com paleta Neosul (#003366, #004080, #0059b3)
+- [x] Atualizar cores de badges de status e prioridade
+- [x] Padronizar cores de botões e elementos interativos
+- [x] Adicionar botão de retorno para home page em todas as páginas internas
+- [x] Criar breadcrumb ou navegação consistente
+
+## Gerenciamento de Notícias/Avisos
+- [x] Criar página de gerenciamento de notícias para administradores
+- [x] Implementar CRUD de notícias (criar, editar, excluir)
+- [x] Adicionar campos: título, descrição, data de publicação, status (ativo/inativo)
+- [x] Integrar notícias na home page (seção "Avisos Importantes")
+- [x] Adicionar link de acesso ao gerenciamento no painel admin

@@ -26,6 +26,8 @@ import ProjectComments from "@/components/ProjectComments";
 import { ProjectsCalendar } from "@/components/ProjectsCalendar";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
+import { getStatusColor as getStatusColorUtil, getPriorityColor as getPriorityColorUtil, NeosulColors } from "@/lib/colors";
+import { Home } from "lucide-react";
 
 export default function Projects() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -43,24 +45,13 @@ export default function Projects() {
   });
 
   const getStatusColor = (status: string) => {
-    switch (status) {
-      case "Planejamento": return "bg-blue-500/10 text-blue-500 border-blue-500/20";
-      case "Em Andamento": return "bg-green-500/10 text-green-500 border-green-500/20";
-      case "Em Pausa": return "bg-yellow-500/10 text-yellow-500 border-yellow-500/20";
-      case "Concluído": return "bg-gray-500/10 text-gray-500 border-gray-500/20";
-      case "Cancelado": return "bg-red-500/10 text-red-500 border-red-500/20";
-      default: return "bg-gray-500/10 text-gray-500 border-gray-500/20";
-    }
+    const colors = getStatusColorUtil(status);
+    return colors.badge;
   };
 
   const getPriorityColor = (priority: string) => {
-    switch (priority) {
-      case "Crítica": return "bg-red-500/10 text-red-500 border-red-500/20";
-      case "Alta": return "bg-orange-500/10 text-orange-500 border-orange-500/20";
-      case "Média": return "bg-yellow-500/10 text-yellow-500 border-yellow-500/20";
-      case "Baixa": return "bg-green-500/10 text-green-500 border-green-500/20";
-      default: return "bg-gray-500/10 text-gray-500 border-gray-500/20";
-    }
+    const colors = getPriorityColorUtil(priority);
+    return colors.badge;
   };
 
   const getDeadlineStatus = (endDate: string | null, status: string) => {
@@ -85,9 +76,19 @@ export default function Projects() {
     <div className="min-h-screen bg-gradient-to-br from-[#003366] via-[#004080] to-[#0059b3] p-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-white mb-2">Gerenciamento de Projetos</h1>
-          <p className="text-blue-100">Acompanhe o andamento de todos os projetos</p>
+        <div className="mb-6 flex items-center justify-between">
+          <div>
+            <h1 className="text-4xl font-bold text-white mb-2">Gerenciamento de Projetos</h1>
+            <p className="text-blue-100">Acompanhe o andamento de todos os projetos</p>
+          </div>
+          <Button
+            variant="outline"
+            onClick={() => window.location.href = '/dashboard'}
+            className="bg-white/10 border-white/20 text-white hover:bg-white/20"
+          >
+            <Home className="h-4 w-4 mr-2" />
+            Voltar ao Início
+          </Button>
         </div>
 
         {/* Filters */}

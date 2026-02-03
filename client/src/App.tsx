@@ -11,6 +11,7 @@ import PortalDashboard from "./pages/PortalDashboard";
 import ModulePlaceholder from "./pages/ModulePlaceholder";
 import UserManagement from "./pages/UserManagement";
 import Projects from "./pages/Projects";
+import Announcements from "./pages/Announcements";
 import { Loader2 } from "lucide-react";
 
 // Protected Route Component
@@ -71,6 +72,11 @@ function Router() {
       {/* Projects Management */}
       <Route path="/projetos">
         <ProtectedRoute component={Projects} />
+      </Route>
+
+      {/* Announcements Management (Admin only) */}
+      <Route path="/admin/noticias">
+        <ProtectedRoute component={Announcements} />
       </Route>
 
       {/* Other Modules Placeholders */}
