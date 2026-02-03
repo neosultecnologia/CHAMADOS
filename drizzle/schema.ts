@@ -117,3 +117,48 @@ export const announcements = mysqlTable("announcements", {
 
 export type Announcement = typeof announcements.$inferSelect;
 export type InsertAnnouncement = typeof announcements.$inferInsert;
+
+/**
+ * Projects table for project management
+ */
+export const projects = mysqlTable("projects", {
+  id: int("id").autoincrement().primaryKey(),
+  projectId: varchar("projectId", { length: 32 }).notNull().unique(), // e.g., "proj_1"
+  name: varchar("name", { length: 255 }).notNull(),
+  description: text("description"),
+  status: mysqlEnum("status", ["Planejamento", "Em Andamento", "Em Pausa", "Concluído", "Cancelado"]).default("Planejamento").notNull(),
+  priority: mysqlEnum("priority", ["Baixa", "Média", "Alta", "Crítica"]).default("Média").notNull(),
+  ownerId: int("ownerId").notNull(), // Project owner/manager
+  ownerName: varchar("ownerName", { length: 255 }).notNull(),
+  sector: mysqlEnum("sector", ["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações"]).default("TI").notNull(),
+  startDate: bigint("startDate", { mode: "number" }), // Unix timestamp in milliseconds
+  endDate: bigint("endDate", { mode: "number" }), // Unix timestamp in milliseconds
+  progress: int("progress").default(0).notNull(), // 0-100
+  createdById: int("createdById").notNull(),
+  createdByName: varchar("createdByName", { length: 255 }).notNull(),
+  createdAt: bigint("createdAt", { mode: "number" }).notNull(),
+  updatedAt: bigint("updatedAt", { mode: "number" }).notNull(),
+});
+
+export type Project = typeof projects.$inferSelect;
+export type InsertProject = typeof projects.$inferInsert;
+
+/**
+ * Project phases/milestones
+ */
+export const projectPhases = mysqlTable("projectPhases", {
+  id: int("id").autoincrement().primaryKey(),
+  projectId: int("projectId").notNull(),
+  name: varchar("name", { length: 255 }).notNull(),
+  description: text("description"),
+  status: mysqlEnum("status", ["Pendente", "Em Andamento", "Concluída", "Atrasada"]).default("Pendente").notNull(),
+  order: int("order").notNull(), // Display order
+  startDate: bigint("startDate", { mode: "number" }),
+  endDate: bigint("endDate", { mode: "number" }),
+  completedAt: bigint("completedAt", { mode: "number" }),
+  createdAt: bigint("createdAt", { mode: "number" }).notNull(),
+  updatedAt: bigint("updatedAt", { mode: "number" }).notNull(),
+});
+
+export type ProjectPhase = typeof projectPhases.$inferSelect;
+export type InsertProjectPhase = typeof projectPhases.$inferInsert;

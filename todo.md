@@ -65,3 +65,12 @@
 - [x] Link "Esqueci a senha?" e "Cadastrar-se"
 - [x] Footer com copyright e "Acesso exclusivo para colaboradores"
 - [x] Testar responsividade em mobile
+
+## Painel de Gerenciamento de Projetos
+- [x] Criar tabelas de projetos e fases no banco de dados
+- [x] Implementar routers tRPC para CRUD de projetos
+- [x] Criar página de listagem de projetos
+- [x] Criar página de detalhes do projeto com timeline de fases
+- [x] Implementar criação e edição de projetos
+- [x] Implementar gestão de fases com prazos
+- [x] Testar funcionalidades completas

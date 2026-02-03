@@ -6,7 +6,9 @@ import {
   comments, InsertComment, Comment,
   activities, InsertActivity, Activity,
   attachments, InsertAttachment, Attachment,
-  announcements, InsertAnnouncement, Announcement
+  announcements, InsertAnnouncement, Announcement,
+  projects, InsertProject, Project,
+  projectPhases, InsertProjectPhase, ProjectPhase
 } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
@@ -440,3 +442,158 @@ export const db = {
   createTicket,
   updateTicket,
 };
+
+// ============ PROJECT QUERIES ============
+
+export async function createProject(project: InsertProject): Promise<Project | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.insert(projects).values(project);
+  const insertId = result[0].insertId;
+  
+  const created = await db.select().from(projects).where(eq(projects.id, insertId)).limit(1);
+  return created.length > 0 ? created[0] : null;
+}
+
+export async function getProjectById(id: number): Promise<Project | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.select().from(projects).where(eq(projects.id, id)).limit(1);
+  return result.length > 0 ? result[0] : null;
+}
+
+export async function getProjectByProjectId(projectId: string): Promise<Project | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.select().from(projects).where(eq(projects.projectId, projectId)).limit(1);
+  return result.length > 0 ? result[0] : null;
+}
+
+export async function getAllProjects(filters?: {
+  status?: string;
+  priority?: string;
+  sector?: string;
+  search?: string;
+}): Promise<Project[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  let query = db.select().from(projects);
+  
+  const conditions = [];
+  
+  if (filters?.status && filters.status !== 'all') {
+    conditions.push(eq(projects.status, filters.status as any));
+  }
+  if (filters?.priority && filters.priority !== 'all') {
+    conditions.push(eq(projects.priority, filters.priority as any));
+  }
+  if (filters?.sector && filters.sector !== 'all') {
+    conditions.push(eq(projects.sector, filters.sector as any));
+  }
+  if (filters?.search) {
+    conditions.push(
+      or(
+        like(projects.name, `%${filters.search}%`),
+        like(projects.description, `%${filters.search}%`),
+        like(projects.projectId, `%${filters.search}%`)
+      )
+    );
+  }
+
+  if (conditions.length > 0) {
+    query = query.where(and(...conditions)) as any;
+  }
+
+  return await query.orderBy(desc(projects.createdAt));
+}
+
+export async function updateProject(id: number, data: Partial<InsertProject>): Promise<Project | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  await db.update(projects).set({
+    ...data,
+    updatedAt: Date.now(),
+  }).where(eq(projects.id, id));
+
+  return await getProjectById(id);
+}
+
+export async function deleteProject(id: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  // Delete related phases first
+  await db.delete(projectPhases).where(eq(projectPhases.projectId, id));
+  
+  const result = await db.delete(projects).where(eq(projects.id, id));
+  return result[0].affectedRows > 0;
+}
+
+export async function getNextProjectNumber(): Promise<number> {
+  const db = await getDb();
+  if (!db) return 1;
+
+  const result = await db.select({ count: sql<number>`COUNT(*)` }).from(projects);
+  return (result[0]?.count || 0) + 1;
+}
+
+// ============ PROJECT PHASE QUERIES ============
+
+export async function createProjectPhase(phase: InsertProjectPhase): Promise<ProjectPhase | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.insert(projectPhases).values(phase);
+  const insertId = result[0].insertId;
+  
+  const created = await db.select().from(projectPhases).where(eq(projectPhases.id, insertId)).limit(1);
+  return created.length > 0 ? created[0] : null;
+}
+
+export async function getPhasesByProjectId(projectId: number): Promise<ProjectPhase[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(projectPhases)
+    .where(eq(projectPhases.projectId, projectId))
+    .orderBy(projectPhases.order);
+}
+
+export async function updateProjectPhase(id: number, data: Partial<InsertProjectPhase>): Promise<ProjectPhase | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  await db.update(projectPhases).set({
+    ...data,
+    updatedAt: Date.now(),
+  }).where(eq(projectPhases.id, id));
+
+  const updated = await db.select().from(projectPhases).where(eq(projectPhases.id, id)).limit(1);
+  return updated.length > 0 ? updated[0] : null;
+}
+
+export async function deleteProjectPhase(id: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  const result = await db.delete(projectPhases).where(eq(projectPhases.id, id));
+  return result[0].affectedRows > 0;
+}
+
+export async function updateProjectProgress(projectId: number): Promise<void> {
+  const db = await getDb();
+  if (!db) return;
+
+  const phases = await getPhasesByProjectId(projectId);
+  if (phases.length === 0) return;
+
+  const completedPhases = phases.filter(p => p.status === 'Concluída').length;
+  const progress = Math.round((completedPhases / phases.length) * 100);
+
+  await db.update(projects).set({ progress }).where(eq(projects.id, projectId));
+}

@@ -40,6 +40,13 @@ export default function PortalDashboard() {
       description: 'Suporte Técnico'
     },
     { 
+      id: 'projetos', 
+      name: 'Projetos', 
+      icon: <Zap size={32} />, 
+      path: '/projetos',
+      description: 'Gerenciamento de Projetos'
+    },
+    { 
       id: 'rh', 
       name: 'RH', 
       icon: <User size={32} />, 

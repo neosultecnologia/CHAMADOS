@@ -456,6 +456,158 @@ export const appRouter = router({
       }),
   }),
 
+  // ============ PROJECTS ============
+  projects: router({
+    list: protectedProcedure
+      .input(z.object({
+        status: z.string().optional(),
+        priority: z.string().optional(),
+        sector: z.string().optional(),
+        search: z.string().optional(),
+      }).optional())
+      .query(async ({ input }) => {
+        return await db.getAllProjects(input || {});
+      }),
+
+    getById: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getProjectById(input.id);
+      }),
+
+    create: protectedProcedure
+      .input(z.object({
+        name: z.string().min(1),
+        description: z.string().optional(),
+        priority: z.enum(["Baixa", "Média", "Alta", "Crítica"]),
+        sector: z.enum(["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações"]),
+        ownerId: z.number(),
+        ownerName: z.string(),
+        startDate: z.number().optional(),
+        endDate: z.number().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        const projectNumber = await db.getNextProjectNumber();
+        const projectId = `proj_${projectNumber}`;
+
+        return await db.createProject({
+          projectId,
+          name: input.name,
+          description: input.description || null,
+          status: "Planejamento",
+          priority: input.priority,
+          ownerId: input.ownerId,
+          ownerName: input.ownerName,
+          sector: input.sector,
+          startDate: input.startDate || null,
+          endDate: input.endDate || null,
+          progress: 0,
+          createdById: ctx.user.id,
+          createdByName: ctx.user.name || "Usuário",
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
+        });
+      }),
+
+    update: protectedProcedure
+      .input(z.object({
+        id: z.number(),
+        name: z.string().optional(),
+        description: z.string().optional(),
+        status: z.enum(["Planejamento", "Em Andamento", "Em Pausa", "Concluído", "Cancelado"]).optional(),
+        priority: z.enum(["Baixa", "Média", "Alta", "Crítica"]).optional(),
+        ownerId: z.number().optional(),
+        ownerName: z.string().optional(),
+        sector: z.enum(["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações"]).optional(),
+        startDate: z.number().nullable().optional(),
+        endDate: z.number().nullable().optional(),
+      }))
+      .mutation(async ({ input }) => {
+        const { id, ...data } = input;
+        return await db.updateProject(id, data);
+      }),
+
+    delete: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input }) => {
+        return await db.deleteProject(input.id);
+      }),
+  }),
+
+  // ============ PROJECT PHASES ============
+  projectPhases: router({
+    listByProject: protectedProcedure
+      .input(z.object({ projectId: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getPhasesByProjectId(input.projectId);
+      }),
+
+    create: protectedProcedure
+      .input(z.object({
+        projectId: z.number(),
+        name: z.string().min(1),
+        description: z.string().optional(),
+        order: z.number(),
+        startDate: z.number().optional(),
+        endDate: z.number().optional(),
+      }))
+      .mutation(async ({ input }) => {
+        const phase = await db.createProjectPhase({
+          projectId: input.projectId,
+          name: input.name,
+          description: input.description || null,
+          status: "Pendente",
+          order: input.order,
+          startDate: input.startDate || null,
+          endDate: input.endDate || null,
+          completedAt: null,
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
+        });
+
+        // Update project progress
+        await db.updateProjectProgress(input.projectId);
+
+        return phase;
+      }),
+
+    update: protectedProcedure
+      .input(z.object({
+        id: z.number(),
+        projectId: z.number(),
+        name: z.string().optional(),
+        description: z.string().optional(),
+        status: z.enum(["Pendente", "Em Andamento", "Concluída", "Atrasada"]).optional(),
+        order: z.number().optional(),
+        startDate: z.number().nullable().optional(),
+        endDate: z.number().nullable().optional(),
+        completedAt: z.number().nullable().optional(),
+      }))
+      .mutation(async ({ input }) => {
+        const { id, projectId, ...data } = input;
+        const phase = await db.updateProjectPhase(id, data);
+
+        // Update project progress
+        await db.updateProjectProgress(projectId);
+
+        return phase;
+      }),
+
+    delete: protectedProcedure
+      .input(z.object({ 
+        id: z.number(),
+        projectId: z.number(),
+      }))
+      .mutation(async ({ input }) => {
+        const result = await db.deleteProjectPhase(input.id);
+
+        // Update project progress
+        await db.updateProjectProgress(input.projectId);
+
+        return result;
+      }),
+  }),
+
   // ============ USERS (for assignment dropdown) ============
   users: router({
     list: protectedProcedure.query(async () => {
