@@ -106,3 +106,10 @@
 - [x] Melhorar cards de projetos com sombras e espaçamento
 - [x] Atualizar badges de status e prioridade
 - [x] Melhorar tipografia e hierarquia visual
+
+## Alertas Visuais de Prazo em Projetos
+- [x] Implementar lógica para calcular dias restantes até o prazo
+- [x] Adicionar badge de "Prazo Próximo" (últimos 7 dias)
+- [x] Adicionar badge de "Atrasado" para projetos vencidos
+- [x] Aplicar borda colorida nos cards conforme status do prazo
+- [x] Testar com diferentes datas de prazo

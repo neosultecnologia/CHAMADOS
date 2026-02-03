@@ -1,0 +1,16 @@
+{
+  "query": "SELECT id, name, endDate, FROM_UNIXTIME(endDate/1000) as readable_date FROM projects WHERE id = 1;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user M967bVXfxXUhp7W.root --database JLPd83LStLYaV7mJXtu8eL --execute SELECT id, name, endDate, FROM_UNIXTIME(endDate/1000) as readable_date FROM projects WHERE id = 1;",
+  "rows": [
+    {
+      "id": "1",
+      "name": "Sistema de Integração ERP",
+      "endDate": "20260208221028",
+      "readable_date": "2612-01-09 03:37:01.0280"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tendDate\treadable_date\n1\tSistema de Integração ERP\t20260208221028\t2612-01-09 03:37:01.0280\n",
+  "stderr": "",
+  "execution_time_ms": 48
+}

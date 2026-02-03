@@ -61,6 +61,24 @@ export default function Projects() {
     }
   };
 
+  const getDeadlineStatus = (endDate: string | null, status: string) => {
+    if (!endDate || status === "Concluído" || status === "Cancelado") return null;
+    
+    const now = new Date();
+    // endDate comes as a timestamp number from database
+    const deadline = new Date(Number(endDate));
+    const diffTime = deadline.getTime() - now.getTime();
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    
+
+    if (diffDays < 0) {
+      return { label: "Atrasado", color: "bg-red-600 text-white", borderColor: "border-red-500" };
+    } else if (diffDays <= 7) {
+      return { label: "Prazo Próximo", color: "bg-yellow-600 text-white", borderColor: "border-yellow-500" };
+    }
+    return null;
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#003366] via-[#004080] to-[#0059b3] p-6">
       <div className="max-w-7xl mx-auto">
@@ -137,20 +155,31 @@ export default function Projects() {
           </Card>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project) => (
+            {projects.map((project) => {
+              const deadlineStatus = getDeadlineStatus(project.endDate ? String(project.endDate) : null, project.status);
+              return (
               <Card
                 key={project.id}
-                className="hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer bg-white/95 backdrop-blur border-none"
+                className={`hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer bg-white/95 backdrop-blur ${
+                  deadlineStatus ? `border-2 ${deadlineStatus.borderColor}` : "border-none"
+                }`}
                 onClick={() => setSelectedProject(project.id)}
               >
                 <CardHeader>
-                  <div className="flex items-start justify-between mb-2">
-                    <Badge variant="outline" className={getStatusColor(project.status)}>
-                      {project.status}
-                    </Badge>
-                    <Badge variant="outline" className={getPriorityColor(project.priority)}>
-                      {project.priority}
-                    </Badge>
+                  <div className="flex items-start justify-between mb-2 flex-wrap gap-2">
+                    <div className="flex gap-2">
+                      <Badge variant="outline" className={getStatusColor(project.status)}>
+                        {project.status}
+                      </Badge>
+                      <Badge variant="outline" className={getPriorityColor(project.priority)}>
+                        {project.priority}
+                      </Badge>
+                    </div>
+                    {deadlineStatus && (
+                      <Badge className={deadlineStatus.color}>
+                        {deadlineStatus.label}
+                      </Badge>
+                    )}
                   </div>
                   <CardTitle className="text-lg">{project.name}</CardTitle>
                   <CardDescription className="line-clamp-2">
@@ -181,7 +210,8 @@ export default function Projects() {
                   </div>
                 </CardContent>
               </Card>
-            ))}
+            );
+            })}
           </div>
         )}
 
