@@ -400,3 +400,14 @@
 - [x] Usuários comuns devem apenas visualizar quem é o responsável
 - [x] Testar criação de chamado como usuário comum
 - [x] Testar criação de chamado como admin
+
+## Sistema de Anexos em Chamados
+- [x] Verificar se tabela de attachments já existe no schema
+- [x] Adicionar campo de upload de arquivos no CreateTicketModal
+- [x] Implementar validação de tipos de arquivo (PNG, JPEG, PDF, XLS, XLSX)
+- [x] Implementar upload para S3 usando storagePut
+- [x] Salvar metadados dos anexos no banco (nome, tipo, URL, tamanho)
+- [x] Exibir lista de anexos no TicketDetailModal
+- [x] Adicionar preview de imagens e botão de download
+- [x] Permitir anexar arquivos em comentários
+- [x] Testar upload de diferentes tipos de arquivo

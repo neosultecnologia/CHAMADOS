@@ -5,6 +5,7 @@ import net from "net";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
 import { registerOAuthRoutes } from "./oauth";
 import { registerUploadRoute } from "../uploadRoute";
+import uploadAttachmentRouter from "../uploadAttachment";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
@@ -38,6 +39,8 @@ async function startServer() {
   registerOAuthRoutes(app);
   // File upload route
   registerUploadRoute(app);
+  // Attachment upload route
+  app.use('/api', uploadAttachmentRouter);
   // tRPC API
   app.use(
     "/api/trpc",
