@@ -1,0 +1,49 @@
+{
+  "query": "SHOW TABLES;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user M967bVXfxXUhp7W.root --database JLPd83LStLYaV7mJXtu8eL --execute SHOW TABLES;",
+  "rows": [
+    {
+      "Tables_in_JLPd83LStLYaV7mJXtu8eL": "__drizzle_migrations"
+    },
+    {
+      "Tables_in_JLPd83LStLYaV7mJXtu8eL": "activities"
+    },
+    {
+      "Tables_in_JLPd83LStLYaV7mJXtu8eL": "announcements"
+    },
+    {
+      "Tables_in_JLPd83LStLYaV7mJXtu8eL": "attachments"
+    },
+    {
+      "Tables_in_JLPd83LStLYaV7mJXtu8eL": "comments"
+    },
+    {
+      "Tables_in_JLPd83LStLYaV7mJXtu8eL": "dailyTasks"
+    },
+    {
+      "Tables_in_JLPd83LStLYaV7mJXtu8eL": "departments"
+    },
+    {
+      "Tables_in_JLPd83LStLYaV7mJXtu8eL": "permissionGroups"
+    },
+    {
+      "Tables_in_JLPd83LStLYaV7mJXtu8eL": "projectComments"
+    },
+    {
+      "Tables_in_JLPd83LStLYaV7mJXtu8eL": "projectPhases"
+    },
+    {
+      "Tables_in_JLPd83LStLYaV7mJXtu8eL": "projects"
+    },
+    {
+      "Tables_in_JLPd83LStLYaV7mJXtu8eL": "tickets"
+    },
+    {
+      "Tables_in_JLPd83LStLYaV7mJXtu8eL": "users"
+    }
+  ],
+  "messages": [],
+  "stdout": "Tables_in_JLPd83LStLYaV7mJXtu8eL\n__drizzle_migrations\nactivities\nannouncements\nattachments\ncomments\ndailyTasks\ndepartments\npermissionGroups\nprojectComments\nprojectPhases\nprojects\ntickets\nusers\n",
+  "stderr": "",
+  "execution_time_ms": 60
+}

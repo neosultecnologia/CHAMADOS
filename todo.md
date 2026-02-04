@@ -378,3 +378,17 @@
 - [x] Atualizar descrição para "Sistema integrado de gestão. Acesse chamados, projetos e ferramentas de produtividade em um só lugar."
 - [x] Atualizar título do projeto nas configurações
 - [x] Verificar e atualizar outras referências ao nome antigo
+
+## Remover Criação Automática de Dados de Teste
+- [ ] Identificar código que cria usuários automaticamente
+- [ ] Identificar código que cria grupos automaticamente
+- [ ] Remover toda lógica de seed/auto-criação
+- [ ] Verificar que dados só são criados via interface do usuário
+
+## Limpeza do Banco de Dados
+- [x] Verificar usuários existentes no banco
+- [x] Verificar grupos de permissões existentes
+- [x] Remover usuários de teste (manter apenas admins)
+- [x] Remover grupos de teste desnecessários
+- [x] Limpar chamados e projetos de teste
+- [x] Verificar integridade após limpeza
