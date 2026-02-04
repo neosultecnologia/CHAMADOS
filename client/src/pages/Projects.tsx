@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+import { EnhancedProgressBar } from "@/components/EnhancedProgressBar";
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -238,13 +239,7 @@ export default function Projects() {
                       </div>
                     )}
 
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between text-sm">
-                        <span className="text-gray-600">Progresso</span>
-                        <span className="font-semibold">{project.progress}%</span>
-                      </div>
-                      <Progress value={project.progress} className="h-2" />
-                    </div>
+                    <EnhancedProgressBar progress={project.progress} />
                   </div>
                 </CardContent>
               </Card>

@@ -226,3 +226,16 @@
 - [x] Adicionar animações em dropdowns e tooltips
 - [x] Otimizar performance das animações
 - [x] Testar fluidez em diferentes dispositivos
+
+## Animações de Lista
+- [x] Adicionar stagger effect na lista de chamados
+- [x] Adicionar stagger effect na lista de projetos
+- [x] Implementar animações de entrada com fade+slide
+- [x] Implementar animações de saída suaves
+- [x] Testar performance com muitos itens
+
+## Melhoria da Barra de Progresso
+- [x] Adicionar cores dinâmicas baseadas no progresso (vermelho → amarelo → verde)
+- [x] Implementar animação suave ao carregar
+- [x] Aumentar destaque visual com gradiente
+- [x] Melhorar indicador de porcentagem
