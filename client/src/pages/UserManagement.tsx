@@ -440,6 +440,18 @@ export default function UserManagement() {
         open={showCreateModal}
         onOpenChange={setShowCreateModal}
       />
+
+      {editingUser && (
+        <EditUserModal
+          isOpen={true}
+          onClose={() => setEditingUser(null)}
+          user={editingUser}
+          onSuccess={() => {
+            utils.userManagement.listAll.invalidate();
+            utils.userManagement.listPending.invalidate();
+          }}
+        />
+      )}
     </div>
   );
 }

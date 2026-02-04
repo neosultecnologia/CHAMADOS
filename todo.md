@@ -267,3 +267,9 @@
 - [x] Corrigir posicionamento e visibilidade do DeleteProjectButton
 - [x] Testar em projetos não concluídos
 - [x] Verificar que não aparece em projetos concluídos
+
+## Correção do Botão de Edição de Usuários
+- [x] Investigar por que o botão de edição não está ativo
+- [x] Corrigir funcionalidade do botão de edição
+- [x] Testar edição de usuários
+- [x] Verificar que modal de edição abre corretamente
