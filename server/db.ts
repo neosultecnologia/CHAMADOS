@@ -38,6 +38,7 @@ export async function createUser(user: {
   email: string;
   passwordHash: string;
   departmentId?: number;
+  groupId?: number;
   role?: 'user' | 'admin';
   approvalStatus?: 'pending' | 'approved' | 'rejected';
 }): Promise<User | null> {
@@ -53,6 +54,7 @@ export async function createUser(user: {
       role: user.role || 'user',
       approvalStatus: user.approvalStatus || 'pending',
       departmentId: user.departmentId,
+      groupId: user.groupId,
     });
     
     const insertId = result[0].insertId;

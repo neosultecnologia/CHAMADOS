@@ -133,6 +133,7 @@ export const appRouter = router({
         email: z.string().email(),
         password: z.string().min(6),
         departmentId: z.number().optional(),
+        groupId: z.number().optional(),
         role: z.enum(["user", "admin"]).default("user"),
       }))
       .mutation(async ({ ctx, input }) => {
@@ -158,6 +159,7 @@ export const appRouter = router({
           email: input.email,
           passwordHash,
           departmentId: input.departmentId,
+          groupId: input.groupId,
           role: input.role,
           approvalStatus: "approved",
         });

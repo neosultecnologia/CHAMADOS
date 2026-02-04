@@ -353,3 +353,12 @@
 - [x] Adicionar coluna "Setor" na tabela de usuários
 - [x] Criar testes unitários para operações de setores
 - [x] Testar fluxo completo de gerenciamento de setores
+
+## Reorganização do Gerenciamento de Setores
+- [x] Remover link "Setores" do menu de navegação do PortalDashboard
+- [x] Remover rota /admin/setores do App.tsx
+- [x] Adicionar botão "Criar Novo Setor" inline no CreateUserModal
+- [x] Adicionar botão "Criar Novo Setor" inline no EditUserModal
+- [x] Reorganizar layout do CreateUserModal para mostrar setor e grupo de permissões lado a lado
+- [x] Testar criação de setor inline durante criação de usuário
+- [x] Testar criação de setor inline durante edição de usuário
