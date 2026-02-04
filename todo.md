@@ -372,3 +372,9 @@
 - [x] Atualizar filtros para usar departamentos dinâmicos
 - [x] Adicionar filtro por responsável no Dashboard
 - [x] Testar criação e atribuição de chamados
+
+## Atualização de Branding e Visual da Home
+- [x] Alterar "NEROS JL" para "NEROS" na PortalDashboard
+- [x] Atualizar descrição para "Sistema integrado de gestão. Acesse chamados, projetos e ferramentas de produtividade em um só lugar."
+- [x] Atualizar título do projeto nas configurações
+- [x] Verificar e atualizar outras referências ao nome antigo

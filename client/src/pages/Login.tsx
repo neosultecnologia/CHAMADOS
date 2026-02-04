@@ -88,7 +88,7 @@ export default function Login() {
         <div className="flex items-center gap-3">
           <img src="/neosul-logo.png" alt="Neosul Logo" className="h-12 w-auto" />
           <div>
-            <span className="text-white font-bold text-xl tracking-wide block">NEROS JL</span>
+            <span className="text-white font-bold text-xl tracking-wide block">NEROS</span>
             <span className="text-blue-200 text-xs">Portal de Sistemas</span>
           </div>
         </div>
