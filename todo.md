@@ -191,3 +191,13 @@
 - [x] Adicionar gráfico de progresso ao longo do tempo
 - [x] Integrar dashboard na navegação principal
 - [x] Testar responsividade e performance
+
+## Gráfico de Gantt para Projetos
+- [x] Criar componente GanttChart com visualização de linha do tempo
+- [x] Implementar renderização de barras de projeto com datas
+- [x] Adicionar visualização de fases dentro dos projetos
+- [x] Implementar indicadores de progresso nas barras
+- [x] Adicionar marcadores de prazo e status
+- [x] Integrar Gantt no dashboard de projetos
+- [x] Adicionar controles de zoom e navegação temporal
+- [x] Testar responsividade e interatividade

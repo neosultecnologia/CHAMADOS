@@ -15,6 +15,7 @@ import {
 import { motion } from 'framer-motion';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
+import { GanttChart } from '@/components/GanttChart';
 
 export default function ProjectsDashboard() {
   const { user, loading: authLoading, isAuthenticated } = useAuth();
@@ -27,6 +28,11 @@ export default function ProjectsDashboard() {
 
   const { data: todayTasks, isLoading: loadingTasks } = trpc.projects.getTodayTasks.useQuery(
     undefined,
+    { enabled: isAuthenticated }
+  );
+
+  const { data: allProjects = [] } = trpc.projects.list.useQuery(
+    {},
     { enabled: isAuthenticated }
   );
 
@@ -322,6 +328,20 @@ export default function ProjectsDashboard() {
             )}
           </motion.div>
         </div>
+
+        {/* Gantt Chart Timeline */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+          className="mt-8 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-blue-400/20"
+        >
+          <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+            <Calendar className="w-5 h-5 text-cyan-400" />
+            Linha do Tempo (Gantt)
+          </h3>
+          <GanttChart projects={allProjects} />
+        </motion.div>
       </main>
     </div>
   );
