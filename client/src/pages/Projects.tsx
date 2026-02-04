@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { EnhancedProgressBar } from "@/components/EnhancedProgressBar";
+import { DeleteProjectButton } from "@/components/DeleteProjectButton";
 import { Input } from "@/components/ui/input";
 import {
   Select,
@@ -214,11 +215,14 @@ export default function Projects() {
                         {project.priority}
                       </Badge>
                     </div>
-                    {deadlineStatus && (
-                      <Badge className={deadlineStatus.color}>
-                        {deadlineStatus.label}
-                      </Badge>
-                    )}
+                    <div className="flex items-center gap-2">
+                      {deadlineStatus && (
+                        <Badge className={deadlineStatus.color}>
+                          {deadlineStatus.label}
+                        </Badge>
+                      )}
+                      <DeleteProjectButton project={project} />
+                    </div>
                   </div>
                   <CardTitle className="text-lg text-gray-900 font-bold">{project.name}</CardTitle>
                   <CardDescription className="line-clamp-2 text-gray-700">

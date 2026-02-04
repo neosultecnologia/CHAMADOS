@@ -253,3 +253,11 @@
 - [x] Adicionar botão de edição no painel de gerenciamento
 - [x] Implementar validações de email único
 - [x] Testar edição e redefinição de senha
+
+## Exclusão de Projetos Não Concluídos
+- [x] Criar função deleteProject no db.ts
+- [x] Criar router para exclusão com validação de status
+- [x] Adicionar botão de exclusão na interface de projetos
+- [x] Implementar confirmação antes de excluir
+- [x] Testar exclusão de projetos não concluídos
+- [x] Testar bloqueio de exclusão de projetos concluídos

@@ -622,7 +622,34 @@ export const appRouter = router({
       .use(requirePermission(MODULES.PROJETOS, ACTIONS.DELETE))
       .input(z.object({ id: z.number() }))
       .mutation(async ({ input }) => {
-        return await db.deleteProject(input.id);
+        // Get project to check status
+        const project = await db.getProjectById(input.id);
+        
+        if (!project) {
+          throw new TRPCError({
+            code: "NOT_FOUND",
+            message: "Projeto não encontrado",
+          });
+        }
+
+        // Only allow deletion of non-completed projects
+        if (project.status === "Concluído") {
+          throw new TRPCError({
+            code: "BAD_REQUEST",
+            message: "Não é possível excluir projetos concluídos",
+          });
+        }
+
+        const success = await db.deleteProject(input.id);
+        
+        if (!success) {
+          throw new TRPCError({
+            code: "INTERNAL_SERVER_ERROR",
+            message: "Erro ao excluir projeto",
+          });
+        }
+
+        return { success: true };
       }),
 
     // Dashboard analytics
