@@ -64,7 +64,7 @@ export default function Login() {
 
   if (authLoading) {
     return (
-      <div className="min-h-screen w-full bg-[#0047AB] flex items-center justify-center">
+      <div className="min-h-screen w-full bg-gradient-to-br from-[#003366] via-[#004080] to-[#0059b3] flex items-center justify-center">
         <Loader2 className="w-8 h-8 animate-spin text-white" />
       </div>
     );
@@ -82,68 +82,81 @@ export default function Login() {
 
   return (
     <div className="min-h-screen w-full relative overflow-hidden">
-      {/* Background with gradient and light effect */}
+      {/* Background with gradient matching Neosul branding */}
       <div className="absolute inset-0 z-0">
-        {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#001a4d] via-[#0047AB] to-[#0066cc]"></div>
+        {/* Base gradient - Neosul blue palette */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#003366] via-[#004080] to-[#0059b3]"></div>
         
-        {/* Light beam effect from top-left */}
-        <div 
-          className="absolute top-0 left-0 w-full h-full"
-          style={{
-            background: 'linear-gradient(135deg, rgba(100,180,255,0.15) 0%, transparent 40%)',
-          }}
-        ></div>
+        {/* Animated gradient orbs */}
+        <div className="absolute top-[-20%] left-[-10%] w-[80%] h-[80%] bg-blue-400/20 rounded-full blur-[120px] animate-pulse"></div>
+        <div className="absolute bottom-[-20%] right-[-10%] w-[80%] h-[80%] bg-cyan-400/20 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1s' }}></div>
         
-        {/* Light beam effect from bottom-right */}
-        <div 
-          className="absolute bottom-0 right-0 w-full h-full"
-          style={{
-            background: 'radial-gradient(ellipse at 80% 80%, rgba(255,255,255,0.2) 0%, transparent 50%)',
-          }}
-        ></div>
-        
-        {/* Subtle light streaks */}
-        <div 
-          className="absolute top-0 left-1/4 w-1/2 h-full opacity-30"
-          style={{
-            background: 'linear-gradient(160deg, transparent 0%, rgba(100,180,255,0.1) 30%, transparent 60%)',
-          }}
-        ></div>
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 opacity-5" style={{
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+          backgroundSize: '50px 50px'
+        }}></div>
       </div>
 
-      {/* Header */}
-      <header className="absolute top-0 left-0 right-0 z-20 p-6">
-        <span className="text-white font-bold text-lg tracking-wide">NEROS JL</span>
+      {/* Header with Neosul logo */}
+      <header className="absolute top-0 left-0 right-0 z-20 p-8">
+        <div className="flex items-center gap-3">
+          <img src="/neosul-logo.png" alt="Neosul Logo" className="h-12 w-auto" />
+          <div>
+            <span className="text-white font-bold text-xl tracking-wide block">NEROS JL</span>
+            <span className="text-blue-200 text-xs">Portal de Sistemas</span>
+          </div>
+        </div>
       </header>
 
       {/* Main content */}
-      <div className="relative z-10 min-h-screen flex">
-        {/* Left side - Branding */}
-        <div className="hidden lg:flex flex-1 flex-col justify-center px-16 xl:px-24">
+      <div className="relative z-10 min-h-screen flex items-center justify-center p-6">
+        <div className="w-full max-w-6xl grid lg:grid-cols-2 gap-12 items-center">
+          
+          {/* Left side - Branding and welcome message */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
+            className="text-center lg:text-left space-y-6"
           >
-            <h1 className="text-white text-6xl xl:text-7xl font-bold tracking-tight mb-6">
-              NEROS
+            <div className="inline-block">
+              <img src="/neosul-logo.png" alt="Neosul" className="h-24 w-auto mb-6" />
+            </div>
+            
+            <h1 className="text-white text-5xl xl:text-6xl font-bold tracking-tight leading-tight">
+              Bem-vindo ao<br />
+              <span className="text-cyan-300">Portal NEROS</span>
             </h1>
-            <p className="text-white/80 text-lg xl:text-xl max-w-md leading-relaxed">
-              Sistema integrado que organiza processos, pessoas e performance.
+            
+            <p className="text-blue-100 text-lg xl:text-xl max-w-lg leading-relaxed">
+              Sistema integrado de gestão empresarial. Acesse chamados, projetos e ferramentas de produtividade em um só lugar.
             </p>
-          </motion.div>
-        </div>
 
-        {/* Right side - Login form */}
-        <div className="flex-1 flex items-center justify-center p-6 lg:p-12">
+            <div className="flex flex-wrap gap-4 pt-4">
+              <div className="flex items-center gap-2 text-blue-200">
+                <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                <span className="text-sm">Gestão de Chamados</span>
+              </div>
+              <div className="flex items-center gap-2 text-blue-200">
+                <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                <span className="text-sm">Controle de Projetos</span>
+              </div>
+              <div className="flex items-center gap-2 text-blue-200">
+                <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                <span className="text-sm">Gestão de Equipes</span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right side - Login form */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="w-full max-w-md"
+            className="w-full max-w-md mx-auto"
           >
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 shadow-2xl">
+            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 shadow-2xl">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={mode}
@@ -152,24 +165,29 @@ export default function Login() {
                   exit={{ opacity: 0, x: mode === 'login' ? 20 : -20 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <h2 className="text-white text-2xl font-bold mb-8">
-                    {mode === 'login' ? 'Acesse sua conta' : 'Criar nova conta'}
-                  </h2>
+                  <div className="text-center mb-8">
+                    <h2 className="text-white text-3xl font-bold mb-2">
+                      {mode === 'login' ? 'Acesse sua conta' : 'Criar nova conta'}
+                    </h2>
+                    <p className="text-blue-200 text-sm">
+                      {mode === 'login' ? 'Entre com suas credenciais' : 'Preencha os dados para cadastro'}
+                    </p>
+                  </div>
 
                   <form onSubmit={handleSubmit} className="space-y-5">
                     {/* Name field (only for register) */}
                     {mode === 'register' && (
                       <div>
-                        <label className="block text-white/70 text-sm mb-2">Nome completo</label>
+                        <label className="block text-white/90 text-sm font-medium mb-2">Nome completo</label>
                         <div className="relative">
-                          <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-white/30" />
+                          <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-blue-300" />
                           <input
                             type="text"
                             placeholder="Seu nome"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             required
-                            className="w-full bg-transparent border-b border-white/20 py-3 pl-10 pr-4 text-white placeholder:text-white/30 focus:outline-none focus:border-white/50 transition-colors"
+                            className="w-full bg-white/5 border border-white/20 rounded-xl py-3.5 pl-12 pr-4 text-white placeholder:text-blue-300/50 focus:outline-none focus:border-cyan-400 focus:bg-white/10 transition-all"
                           />
                         </div>
                       </div>
@@ -177,20 +195,20 @@ export default function Login() {
 
                     {/* Email field */}
                     <div>
-                      <label className="block text-white/70 text-sm mb-2">Usuário</label>
+                      <label className="block text-white/90 text-sm font-medium mb-2">E-mail</label>
                       <input
                         type="email"
                         placeholder="seu@email.com"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         required
-                        className="w-full bg-transparent border-b border-white/20 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-white/50 transition-colors"
+                        className="w-full bg-white/5 border border-white/20 rounded-xl py-3.5 px-4 text-white placeholder:text-blue-300/50 focus:outline-none focus:border-cyan-400 focus:bg-white/10 transition-all"
                       />
                     </div>
 
                     {/* Password field */}
                     <div>
-                      <label className="block text-white/70 text-sm mb-2">Senha</label>
+                      <label className="block text-white/90 text-sm font-medium mb-2">Senha</label>
                       <div className="relative">
                         <input
                           type={showPassword ? 'text' : 'password'}
@@ -199,12 +217,12 @@ export default function Login() {
                           onChange={(e) => setPassword(e.target.value)}
                           required
                           minLength={6}
-                          className="w-full bg-transparent border-b border-white/20 py-3 pr-10 text-white placeholder:text-white/30 focus:outline-none focus:border-white/50 transition-colors"
+                          className="w-full bg-white/5 border border-white/20 rounded-xl py-3.5 px-4 pr-12 text-white placeholder:text-blue-300/50 focus:outline-none focus:border-cyan-400 focus:bg-white/10 transition-all"
                         />
                         <button
                           type="button"
                           onClick={() => setShowPassword(!showPassword)}
-                          className="absolute right-0 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/60 transition-colors"
+                          className="absolute right-4 top-1/2 -translate-y-1/2 text-blue-300 hover:text-white transition-colors"
                         >
                           {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                         </button>
@@ -214,16 +232,16 @@ export default function Login() {
                     {/* Sector field (only for register) */}
                     {mode === 'register' && (
                       <div>
-                        <label className="block text-white/70 text-sm mb-2">Setor</label>
+                        <label className="block text-white/90 text-sm font-medium mb-2">Setor</label>
                         <div className="relative">
-                          <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-white/30" />
+                          <Building2 className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-blue-300" />
                           <select
                             value={sector}
                             onChange={(e) => setSector(e.target.value)}
-                            className="w-full bg-transparent border-b border-white/20 py-3 pl-10 text-white focus:outline-none focus:border-white/50 transition-colors appearance-none cursor-pointer"
+                            className="w-full bg-white/5 border border-white/20 rounded-xl py-3.5 pl-12 pr-4 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/10 transition-all appearance-none cursor-pointer"
                           >
                             {sectors.map((s) => (
-                              <option key={s.value} value={s.value} className="bg-[#0047AB] text-white">
+                              <option key={s.value} value={s.value} className="bg-[#004080] text-white">
                                 {s.label}
                               </option>
                             ))}
@@ -236,13 +254,13 @@ export default function Login() {
                     <button
                       type="submit"
                       disabled={isLoading}
-                      className="w-full bg-[#d4a853] hover:bg-[#c49943] disabled:bg-[#d4a853]/50 text-white font-semibold py-3.5 rounded-lg transition-all flex items-center justify-center gap-2 mt-8"
+                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 disabled:from-cyan-500/50 disabled:to-blue-500/50 text-white font-semibold py-4 rounded-xl transition-all flex items-center justify-center gap-2 mt-8 shadow-lg shadow-cyan-500/30"
                     >
                       {isLoading ? (
                         <Loader2 className="w-5 h-5 animate-spin" />
                       ) : (
                         <>
-                          {mode === 'login' ? 'Login' : 'Criar conta'}
+                          {mode === 'login' ? 'Entrar' : 'Criar conta'}
                           <ArrowRight className="w-5 h-5" />
                         </>
                       )}
@@ -254,21 +272,21 @@ export default function Login() {
                     {mode === 'login' && (
                       <button
                         type="button"
-                        className="text-white/60 hover:text-white/80 text-sm transition-colors"
+                        className="text-blue-200 hover:text-white text-sm transition-colors"
                         onClick={() => toast.info('Funcionalidade em desenvolvimento')}
                       >
-                        Esqueci a senha?
+                        Esqueceu a senha?
                       </button>
                     )}
 
                     <div className="pt-2">
                       {mode === 'login' ? (
                         <>
-                          <p className="text-white/50 text-sm mb-2">Não tem uma conta?</p>
+                          <p className="text-blue-200 text-sm mb-3">Não tem uma conta?</p>
                           <button
                             type="button"
                             onClick={() => setMode('register')}
-                            className="w-full border border-white/20 hover:border-white/40 text-white font-medium py-3 rounded-lg transition-all"
+                            className="w-full border-2 border-white/30 hover:border-white/50 hover:bg-white/5 text-white font-medium py-3 rounded-xl transition-all"
                           >
                             Cadastrar-se
                           </button>
@@ -277,7 +295,7 @@ export default function Login() {
                         <button
                           type="button"
                           onClick={() => setMode('login')}
-                          className="text-white/60 hover:text-white/80 font-medium transition-colors flex items-center justify-center gap-1 mx-auto"
+                          className="text-blue-200 hover:text-white font-medium transition-colors flex items-center justify-center gap-2 mx-auto"
                         >
                           <ArrowLeft className="w-4 h-4" />
                           Voltar para login
@@ -291,10 +309,10 @@ export default function Login() {
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      className="mt-6 p-3 bg-yellow-500/10 border border-yellow-500/20 rounded-lg"
+                      className="mt-6 p-4 bg-cyan-500/10 border border-cyan-400/30 rounded-xl"
                     >
-                      <p className="text-yellow-200/80 text-xs text-center">
-                        Após o cadastro, sua conta precisará ser aprovada por um administrador.
+                      <p className="text-cyan-200 text-xs text-center leading-relaxed">
+                        Após o cadastro, sua conta precisará ser aprovada por um administrador antes de acessar o sistema.
                       </p>
                     </motion.div>
                   )}
@@ -306,13 +324,15 @@ export default function Login() {
       </div>
 
       {/* Footer */}
-      <footer className="absolute bottom-0 left-0 right-0 z-20 p-6 flex justify-between items-center">
-        <span className="text-white/50 text-sm">
-          Acesso exclusivo para colaboradores.
-        </span>
-        <span className="text-white/50 text-sm">
-          Copyright © {new Date().getFullYear()} Neosul. Todos os direitos reservados.
-        </span>
+      <footer className="absolute bottom-0 left-0 right-0 z-20 p-6">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
+          <span className="text-blue-200/70">
+            Acesso exclusivo para colaboradores autorizados
+          </span>
+          <span className="text-blue-200/70">
+            © {new Date().getFullYear()} Neosul. Todos os direitos reservados.
+          </span>
+        </div>
       </footer>
     </div>
   );

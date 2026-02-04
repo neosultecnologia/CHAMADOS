@@ -280,3 +280,11 @@
 - [x] Integrar logo da Neosul no header/painel principal
 - [x] Ajustar cores dos modais e componentes
 - [x] Testar consistência visual em todas as páginas
+
+## Tela de Login Personalizada
+- [x] Analisar fluxo de autenticação atual (Manus OAuth)
+- [x] Criar componente de tela de login com logo Neosul
+- [x] Aplicar paleta de cores corporativa azul
+- [x] Integrar tela de login no fluxo de autenticação
+- [x] Testar redirecionamento e autenticação
+- [x] Validar responsividade em diferentes dispositivos
