@@ -392,3 +392,11 @@
 - [x] Remover grupos de teste desnecessários
 - [x] Limpar chamados e projetos de teste
 - [x] Verificar integridade após limpeza
+
+## Restrição de Atribuição de Chamados (Apenas Admin)
+- [x] Ocultar seletor de responsável no CreateTicketModal para usuários comuns
+- [x] Mostrar campo de responsável apenas para admins no CreateTicketModal
+- [x] Restringir edição de responsável no TicketDetailModal apenas para admins
+- [x] Usuários comuns devem apenas visualizar quem é o responsável
+- [x] Testar criação de chamado como usuário comum
+- [x] Testar criação de chamado como admin

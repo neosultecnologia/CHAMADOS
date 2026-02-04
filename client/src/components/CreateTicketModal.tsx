@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { trpc } from '@/lib/trpc';
+import { useAuth } from '@/_core/hooks/useAuth';
 import { X, AlertCircle, Loader2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { toast } from 'sonner';
@@ -10,7 +11,9 @@ interface CreateTicketModalProps {
 }
 
 export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketModalProps) {
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const { user } = useAuth();
+  const isAdmin = user?.role === 'admin';
+  const [errors, setErrors] = useState<Record<string, string>>({}); 
   const [formData, setFormData] = useState({
     title: '',
     description: '',
@@ -184,22 +187,24 @@ export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketMo
                 ))}
               </select>
             </div>
-            <div>
-              <label className="block text-sm font-medium text-blue-100 mb-2">
-                Atribuir para (opcional)
-              </label>
-              <select
-                value={formData.assignedToId?.toString() || ""}
-                onChange={(e) => setFormData({ ...formData, assignedToId: e.target.value ? parseInt(e.target.value) : undefined })}
-                className="w-full px-4 py-2 rounded-lg bg-slate-800 border border-white/20 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 transition"
-                disabled={isLoading}
-              >
-                <option value="">Não atribuir</option>
-                {approvedUsers.map(user => (
-                  <option key={user.id} value={user.id}>{user.name}</option>
-                ))}
-              </select>
-            </div>
+            {isAdmin && (
+              <div>
+                <label className="block text-sm font-medium text-blue-100 mb-2">
+                  Atribuir para (opcional)
+                </label>
+                <select
+                  value={formData.assignedToId?.toString() || ""}
+                  onChange={(e) => setFormData({ ...formData, assignedToId: e.target.value ? parseInt(e.target.value) : undefined })}
+                  className="w-full px-4 py-2 rounded-lg bg-slate-800 border border-white/20 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 transition"
+                  disabled={isLoading}
+                >
+                  <option value="">Não atribuir</option>
+                  {approvedUsers.map(user => (
+                    <option key={user.id} value={user.id}>{user.name}</option>
+                  ))}
+                </select>
+              </div>
+            )}
           </div>
 
           <div className="flex gap-3 pt-4">
