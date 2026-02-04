@@ -88,7 +88,7 @@ export default function UserManagement() {
 
   if (authLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0a1628] via-[#1a365d] to-[#0a1628]">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#003366] to-[#0059b3]">
         <Loader2 className="w-8 h-8 animate-spin text-cyan-400" />
       </div>
     );
@@ -151,7 +151,7 @@ export default function UserManagement() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0a1628] via-[#1a365d] to-[#0a1628]">
+    <div className="min-h-screen bg-gradient-to-br from-[#003366] to-[#0059b3]">
       {/* Header */}
       <header className="bg-[#0a1628]/80 backdrop-blur-sm border-b border-white/10 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
@@ -242,7 +242,7 @@ export default function UserManagement() {
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+                      <div className="w-12 h-12 bg-gradient-to-br from-[#00D4FF] to-[#0059b3] rounded-full flex items-center justify-center text-white font-bold text-lg">
                         {pendingUser.name?.charAt(0).toUpperCase() || '?'}
                       </div>
                       <div>
@@ -322,7 +322,7 @@ export default function UserManagement() {
                       <tr key={listUser.id} className="border-b border-white/5 hover:bg-white/5 transition-colors">
                         <td className="px-6 py-4">
                           <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                            <div className="w-10 h-10 bg-gradient-to-br from-[#00D4FF] to-[#0059b3] rounded-full flex items-center justify-center text-white font-bold">
                               {listUser.name?.charAt(0).toUpperCase() || '?'}
                             </div>
                             <div>

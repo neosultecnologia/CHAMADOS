@@ -210,3 +210,11 @@
 - [x] Implementar filtros por data e status
 - [x] Adicionar marcação de conclusão de tarefas
 - [x] Criar testes para sistema de tarefas
+
+## Padronização de Cores Neosul
+- [x] Atualizar cores do módulo de Chamados
+- [x] Atualizar cores do módulo de Projetos
+- [x] Atualizar cores do módulo de Usuários
+- [x] Atualizar cores dos componentes modais
+- [x] Padronizar botões e elementos interativos
+- [x] Verificar contraste e legibilidade

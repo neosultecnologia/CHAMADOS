@@ -104,7 +104,7 @@ export default function PortalDashboard() {
     <div className="min-h-screen w-full bg-[#0047AB] relative overflow-hidden flex flex-col">
       {/* Background Effects */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-blue-600 to-blue-400 opacity-100"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#003366] via-[#0059b3] to-[#00D4FF] opacity-100"></div>
         <div className="absolute top-[-20%] left-[-10%] w-[80%] h-[80%] bg-blue-400/20 rounded-full blur-[120px] mix-blend-overlay"></div>
         <div className="absolute bottom-[-20%] right-[-10%] w-[80%] h-[80%] bg-cyan-400/20 rounded-full blur-[120px] mix-blend-overlay"></div>
       </div>

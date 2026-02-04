@@ -69,7 +69,7 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-[#003366] to-[#0059b3]">
       {/* Animated background orbs */}
       <div className="fixed top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
       <div className="fixed bottom-20 right-10 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse" style={{ animationDelay: '2s' }}></div>
@@ -215,7 +215,7 @@ export default function Dashboard() {
                 </button>
                 <button
                   onClick={() => setShowCreateModal(true)}
-                  className="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition flex items-center gap-2"
+                  className="px-4 py-2 rounded-lg bg-gradient-to-r from-[#0059b3] to-[#00D4FF] text-white font-semibold hover:from-[#003366] hover:to-[#0099CC] transition flex items-center gap-2"
                 >
                   <Plus size={18} />
                   Novo Chamado

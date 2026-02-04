@@ -184,7 +184,7 @@ export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketMo
             <button
               type="submit"
               disabled={isLoading}
-              className="flex-1 py-2 px-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              className="flex-1 py-2 px-4 rounded-lg bg-gradient-to-r from-[#0059b3] to-[#00D4FF] text-white font-semibold hover:from-[#003366] hover:to-[#0099CC] transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isLoading ? (
                 <>
