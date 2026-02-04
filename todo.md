@@ -311,3 +311,10 @@
 - [x] Otimizar performance das animações
 - [x] Testar transições entre diferentes páginas
 - [x] Validar suavidade e timing das animações
+
+## Correção de Erro ao Criar Projetos
+- [x] Investigar erro de SQL no INSERT de projetos
+- [x] Identificar campos obrigatórios faltantes
+- [x] Corrigir mutation createProject no backend
+- [x] Adicionar valores padrão para campos obrigatórios
+- [x] Testar criação de projetos com sucesso

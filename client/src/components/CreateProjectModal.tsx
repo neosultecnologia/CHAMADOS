@@ -49,20 +49,27 @@ export default function CreateProjectModal({ onClose, onSuccess }: CreateProject
 
   const { data: users = [] } = trpc.users.list.useQuery();
 
+  const createPhaseMutation = trpc.projectPhases.create.useMutation();
+
   const createProjectMutation = trpc.projects.create.useMutation({
     onSuccess: async (project) => {
       // Create phases if any
       if (phases.length > 0 && project) {
-        for (let i = 0; i < phases.length; i++) {
-          const phase = phases[i];
-          await utils.client.projectPhases.create.mutate({
-            projectId: project.id,
-            name: phase.name,
-            description: phase.description,
-            order: i + 1,
-            startDate: phase.startDate?.getTime(),
-            endDate: phase.endDate?.getTime(),
-          });
+        try {
+          for (let i = 0; i < phases.length; i++) {
+            const phase = phases[i];
+            await createPhaseMutation.mutateAsync({
+              projectId: project.id,
+              name: phase.name,
+              description: phase.description || undefined,
+              order: i + 1,
+              startDate: phase.startDate?.getTime(),
+              endDate: phase.endDate?.getTime(),
+            });
+          }
+        } catch (error) {
+          console.error("Error creating phases:", error);
+          toast.error("Projeto criado, mas houve erro ao criar algumas fases");
         }
       }
 

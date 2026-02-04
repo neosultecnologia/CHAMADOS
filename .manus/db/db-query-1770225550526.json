@@ -1,0 +1,138 @@
+{
+  "query": "DESCRIBE projects;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user M967bVXfxXUhp7W.root --database JLPd83LStLYaV7mJXtu8eL --execute DESCRIBE projects;",
+  "rows": [
+    {
+      "Field": "id",
+      "Type": "int(11)",
+      "Null": "NO",
+      "Key": "PRI",
+      "Default": "NULL",
+      "Extra": "auto_increment"
+    },
+    {
+      "Field": "projectId",
+      "Type": "varchar(32)",
+      "Null": "NO",
+      "Key": "UNI",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "name",
+      "Type": "varchar(255)",
+      "Null": "NO",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "description",
+      "Type": "text",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "status",
+      "Type": "enum('Planejamento','Em Andamento','Em Pausa','Concluído','Cancelado')",
+      "Null": "NO",
+      "Key": "",
+      "Default": "Planejamento",
+      "Extra": ""
+    },
+    {
+      "Field": "priority",
+      "Type": "enum('Baixa','Média','Alta','Crítica')",
+      "Null": "NO",
+      "Key": "",
+      "Default": "Média",
+      "Extra": ""
+    },
+    {
+      "Field": "ownerId",
+      "Type": "int(11)",
+      "Null": "NO",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "ownerName",
+      "Type": "varchar(255)",
+      "Null": "NO",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "sector",
+      "Type": "enum('TI','RH','Financeiro','Comercial','Suporte','Operações')",
+      "Null": "NO",
+      "Key": "",
+      "Default": "TI",
+      "Extra": ""
+    },
+    {
+      "Field": "startDate",
+      "Type": "bigint(20)",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "endDate",
+      "Type": "bigint(20)",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "progress",
+      "Type": "int(11)",
+      "Null": "NO",
+      "Key": "",
+      "Default": "0",
+      "Extra": ""
+    },
+    {
+      "Field": "createdById",
+      "Type": "int(11)",
+      "Null": "NO",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "createdByName",
+      "Type": "varchar(255)",
+      "Null": "NO",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "createdAt",
+      "Type": "bigint(20)",
+      "Null": "NO",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "updatedAt",
+      "Type": "bigint(20)",
+      "Null": "NO",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    }
+  ],
+  "messages": [],
+  "stdout": "Field\tType\tNull\tKey\tDefault\tExtra\nid\tint(11)\tNO\tPRI\tNULL\tauto_increment\nprojectId\tvarchar(32)\tNO\tUNI\tNULL\t\nname\tvarchar(255)\tNO\t\tNULL\t\ndescription\ttext\tYES\t\tNULL\t\nstatus\tenum('Planejamento','Em Andamento','Em Pausa','Concluído','Cancelado')\tNO\t\tPlanejamento\t\npriority\tenum('Baixa','Média','Alta','Crítica')\tNO\t\tMédia\t\nownerId\tint(11)\tNO\t\tNULL\t\nownerName\tvarchar(255)\tNO\t\tNULL\t\nsector\tenum('TI','RH','Financeiro','Comercial','Suporte','Operações')\tNO\t\tTI\t\nstartDate\tbigint(20)\tYES\t\tNULL\t\nendDate\tbigint(20)\tYES\t\tNULL\t\nprogress\tint(11)\tNO\t\t0\t\ncreatedById\tint(11)\tNO\t\tNULL\t\ncreatedByName\tvarchar(255)\tNO\t\tNULL\t\ncreatedAt\tbigint(20)\tNO\t\tNULL\t\nupdatedAt\tbigint(20)\tNO\t\tNULL\t\n",
+  "stderr": "",
+  "execution_time_ms": 145
+}
