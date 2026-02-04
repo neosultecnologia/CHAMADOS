@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { trpc } from '@/lib/trpc';
 import { useAuth } from '@/_core/hooks/useAuth';
-import { X, Send, Paperclip, AlertCircle, CheckCircle, Clock, Pause, XCircle, User, Briefcase, Tag, Calendar, Loader2 } from 'lucide-react';
+import { X, Send, Paperclip, AlertCircle, CheckCircle, Clock, Pause, XCircle, User, Briefcase, Tag, Calendar, Loader2, Download, Eye } from 'lucide-react';
+import { FileUpload } from './FileUpload';
+import { AttachmentPreview } from './AttachmentPreview';
 import { motion } from 'framer-motion';
 import { formatDistanceToNow } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
@@ -107,13 +109,29 @@ export default function TicketDetailModal({ ticket, onClose, onUpdate }: TicketD
     });
   };
 
-  const handleAddAttachment = () => {
-    toast.info('Funcionalidade de upload em desenvolvimento');
+  const [showUpload, setShowUpload] = useState(false);
+  const [previewAttachment, setPreviewAttachment] = useState<any | null>(null);
+
+  const handleUploadComplete = () => {
+    refetchAttachments();
+    setShowUpload(false);
+    toast.success('Arquivo anexado com sucesso!');
+  };
+
+  const handleDownload = (url: string, fileName: string) => {
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = fileName;
+    link.target = '_blank';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const statusColor = statusColors[ticket.status] || statusColors['Aberto'];
 
   return (
+    <>
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -327,30 +345,74 @@ export default function TicketDetailModal({ ticket, onClose, onUpdate }: TicketD
               </label>
               <div className="space-y-2 mb-3">
                 {attachments.map((attachment) => (
-                  <div key={attachment.id} className="flex items-center gap-3 p-2 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 transition-colors group cursor-pointer">
+                  <div key={attachment.id} className="flex items-center gap-3 p-2 rounded-lg bg-white/5 border border-white/5 hover:bg-white/10 transition-colors group">
                     <div className="p-2 rounded bg-blue-500/20 text-blue-400">
                       <Paperclip size={14} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="text-xs text-slate-300 truncate font-medium">{attachment.fileName}</p>
                       <p className="text-[10px] text-slate-500">
-                        {formatDistanceToNow(new Date(attachment.createdAt), { addSuffix: true, locale: ptBR })}
+                        {formatDistanceToNow(new Date(attachment.createdAt), { addSuffix: true, locale: ptBR })} • {attachment.uploadedByName}
                       </p>
+                    </div>
+                    <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100">
+                      {(attachment.mimeType?.startsWith('image/') || attachment.mimeType === 'application/pdf') && (
+                        <button
+                          onClick={() => setPreviewAttachment(attachment)}
+                          className="p-1.5 rounded hover:bg-white/10 text-slate-400 hover:text-white transition-all"
+                          title="Visualizar"
+                        >
+                          <Eye size={14} />
+                        </button>
+                      )}
+                      <button
+                        onClick={() => handleDownload(attachment.fileUrl, attachment.fileName)}
+                        className="p-1.5 rounded hover:bg-white/10 text-slate-400 hover:text-white transition-all"
+                        title="Baixar arquivo"
+                      >
+                        <Download size={14} />
+                      </button>
                     </div>
                   </div>
                 ))}
               </div>
-              <button
-                onClick={handleAddAttachment}
-                className="w-full px-3 py-2 rounded-lg border border-dashed border-slate-600 text-slate-400 hover:bg-white/5 hover:text-white hover:border-slate-400 transition-all flex items-center justify-center gap-2 text-xs font-medium"
-              >
-                <Paperclip size={14} />
-                Adicionar Anexo
-              </button>
+              {showUpload ? (
+                <div className="space-y-2">
+                  <FileUpload
+                    ticketId={ticket.id}
+                    onUploadComplete={handleUploadComplete}
+                  />
+                  <button
+                    onClick={() => setShowUpload(false)}
+                    className="w-full px-3 py-2 rounded-lg border border-slate-600 text-slate-400 hover:bg-white/5 hover:text-white transition-all text-xs font-medium"
+                  >
+                    Cancelar
+                  </button>
+                </div>
+              ) : (
+                <button
+                  onClick={() => setShowUpload(true)}
+                  className="w-full px-3 py-2 rounded-lg border border-dashed border-slate-600 text-slate-400 hover:bg-white/5 hover:text-white hover:border-slate-400 transition-all flex items-center justify-center gap-2 text-xs font-medium"
+                >
+                  <Paperclip size={14} />
+                  Adicionar Anexo
+                </button>
+              )}
             </div>
           </div>
         </div>
       </motion.div>
     </motion.div>
+
+    {/* Attachment Preview */}
+    {previewAttachment && (
+      <AttachmentPreview
+        fileUrl={previewAttachment.fileUrl}
+        fileName={previewAttachment.fileName}
+        mimeType={previewAttachment.mimeType}
+        onClose={() => setPreviewAttachment(null)}
+      />
+    )}
+    </>
   );
 }

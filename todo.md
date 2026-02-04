@@ -327,3 +327,15 @@
 - [x] Adicionar confirmação antes de excluir
 - [x] Testar que apenas admins conseguem excluir
 - [x] Testar que usuários comuns não veem o botão
+
+## Sistema de Anexos em Chamados
+- [x] Atualizar schema de attachments no banco de dados
+- [x] Criar routers tRPC para upload e listagem de anexos
+- [x] Implementar função de upload para S3
+- [x] Criar componente FileUpload para drag & drop
+- [x] Integrar upload na criação de chamados
+- [x] Integrar visualização de anexos nos detalhes do chamado
+- [x] Implementar preview de imagens e PDFs
+- [x] Implementar download de arquivos
+- [x] Adicionar validação de tipo e tamanho de arquivo
+- [x] Criar testes para sistema de anexos
