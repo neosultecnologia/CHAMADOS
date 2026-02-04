@@ -168,3 +168,8 @@
 - [x] Atualizar interface de grupos com controles granulares
 - [x] Implementar restrições no frontend baseadas em permissões de ação
 - [x] Criar testes para permissões granulares
+
+## Correções de Tipografia e Contraste
+- [x] Corrigir contraste do título nos cards de projetos
+- [x] Melhorar legibilidade de todos os textos nos cards
+- [x] Garantir contraste adequado em todos os componentes

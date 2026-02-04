@@ -208,8 +208,8 @@ export default function Projects() {
                       </Badge>
                     )}
                   </div>
-                  <CardTitle className="text-lg">{project.name}</CardTitle>
-                  <CardDescription className="line-clamp-2">
+                  <CardTitle className="text-lg text-gray-900 font-bold">{project.name}</CardTitle>
+                  <CardDescription className="line-clamp-2 text-gray-700">
                     {project.description || "Sem descrição"}
                   </CardDescription>
                 </CardHeader>
