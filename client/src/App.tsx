@@ -15,6 +15,9 @@ import ProjectsDashboard from "./pages/ProjectsDashboard";
 import Announcements from "./pages/Announcements";
 import PermissionGroupsManagement from "./pages/PermissionGroupsManagement";
 import { Loader2 } from "lucide-react";
+import { PageTransition } from "./components/PageTransition";
+import { AnimatePresence } from "framer-motion";
+import { useLocation } from "wouter";
 
 // Protected Route Component
 function ProtectedRoute({ component: Component }: { component: React.ComponentType }) {
@@ -33,7 +36,11 @@ function ProtectedRoute({ component: Component }: { component: React.ComponentTy
     return <Redirect to="/login" />;
   }
 
-  return <Component />;
+  return (
+    <PageTransition>
+      <Component />
+    </PageTransition>
+  );
 }
 
 function Router() {

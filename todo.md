@@ -218,3 +218,11 @@
 - [x] Atualizar cores dos componentes modais
 - [x] Padronizar botões e elementos interativos
 - [x] Verificar contraste e legibilidade
+
+## Animações de Transição
+- [x] Criar componente de transição de páginas
+- [x] Adicionar animações fade/slide entre rotas
+- [x] Implementar animações em modais (scale + fade)
+- [x] Adicionar animações em dropdowns e tooltips
+- [x] Otimizar performance das animações
+- [x] Testar fluidez em diferentes dispositivos
