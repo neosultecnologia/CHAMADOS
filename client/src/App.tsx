@@ -115,12 +115,16 @@ function Router() {
 }
 
 function App() {
+  const [location] = useLocation();
+
   return (
     <ErrorBoundary>
       <ThemeProvider defaultTheme="dark">
         <TooltipProvider>
           <Toaster />
-          <Router />
+          <AnimatePresence mode="wait" initial={false}>
+            <Router key={location} />
+          </AnimatePresence>
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
