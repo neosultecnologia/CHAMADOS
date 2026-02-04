@@ -1,6 +1,7 @@
 import { useAuth } from '@/_core/hooks/useAuth';
 import { trpc } from '@/lib/trpc';
-import { Loader2, Eye, EyeOff, ArrowRight, ArrowLeft, User, Building2 } from 'lucide-react';
+import { Eye, EyeOff, ArrowRight, ArrowLeft, User, Building2 } from 'lucide-react';
+import LoadingSpinner from '@/components/LoadingSpinner';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useLocation } from 'wouter';
@@ -63,11 +64,7 @@ export default function Login() {
   const isLoading = loginMutation.isPending || registerMutation.isPending;
 
   if (authLoading) {
-    return (
-      <div className="min-h-screen w-full bg-gradient-to-br from-[#003366] via-[#004080] to-[#0059b3] flex items-center justify-center">
-        <Loader2 className="w-8 h-8 animate-spin text-white" />
-      </div>
-    );
+    return <LoadingSpinner fullScreen size="lg" text="Carregando..." />;
   }
 
   const sectors = [
@@ -257,7 +254,10 @@ export default function Login() {
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 disabled:from-cyan-500/50 disabled:to-blue-500/50 text-white font-semibold py-4 rounded-xl transition-all flex items-center justify-center gap-2 mt-8 shadow-lg shadow-cyan-500/30"
                     >
                       {isLoading ? (
-                        <Loader2 className="w-5 h-5 animate-spin" />
+                        <div className="flex items-center gap-2">
+                          <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                          <span>Processando...</span>
+                        </div>
                       ) : (
                         <>
                           {mode === 'login' ? 'Entrar' : 'Criar conta'}

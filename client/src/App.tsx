@@ -14,7 +14,8 @@ import Projects from "./pages/Projects";
 import ProjectsDashboard from "./pages/ProjectsDashboard";
 import Announcements from "./pages/Announcements";
 import PermissionGroupsManagement from "./pages/PermissionGroupsManagement";
-import { Loader2 } from "lucide-react";
+import LoadingDemo from "./pages/LoadingDemo";
+import LoadingSpinner from "./components/LoadingSpinner";
 import { PageTransition } from "./components/PageTransition";
 import { AnimatePresence } from "framer-motion";
 import { useLocation } from "wouter";
@@ -24,11 +25,7 @@ function ProtectedRoute({ component: Component }: { component: React.ComponentTy
   const { isAuthenticated, loading } = useAuth();
 
   if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0a1628] via-[#1a365d] to-[#0a1628]">
-        <Loader2 className="w-8 h-8 animate-spin text-cyan-400" />
-      </div>
-    );
+    return <LoadingSpinner fullScreen size="lg" text="Verificando autenticação..." />;
   }
 
   if (!isAuthenticated) {
@@ -47,11 +44,7 @@ function Router() {
   const { isAuthenticated, loading } = useAuth();
 
   if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#0a1628] via-[#1a365d] to-[#0a1628]">
-        <Loader2 className="w-8 h-8 animate-spin text-cyan-400" />
-      </div>
-    );
+    return <LoadingSpinner fullScreen size="lg" text="Verificando autenticação..." />;
   }
 
   return (
@@ -97,6 +90,9 @@ function Router() {
       <Route path="/grupos-permissoes">
         <ProtectedRoute component={PermissionGroupsManagement} />
       </Route>
+
+      {/* Loading Demo (for development) */}
+      <Route path="/loading-demo" component={LoadingDemo} />
 
       {/* Other Modules Placeholders */}
       <Route path="/modulo/rh">

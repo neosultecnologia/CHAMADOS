@@ -295,3 +295,11 @@
 - [x] Atualizar referências no index.html
 - [x] Testar exibição do favicon no navegador
 - [x] Validar em diferentes navegadores e dispositivos
+
+## Loading Spinner Personalizado Neosul
+- [x] Criar componente LoadingSpinner com logo Neosul animado
+- [x] Adicionar animações CSS suaves (pulse, rotate, fade)
+- [x] Integrar spinner na autenticação e carregamento inicial
+- [x] Substituir Loader2 genérico por LoadingSpinner personalizado
+- [x] Testar animações em diferentes contextos
+- [x] Validar performance e suavidade das animações
