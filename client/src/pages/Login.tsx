@@ -115,7 +115,7 @@ export default function Login() {
             </h1>
             
             <p className="text-blue-100 text-lg xl:text-xl max-w-lg leading-relaxed">
-              Sistema integrado de gestão empresarial. Acesse chamados, projetos e ferramentas de produtividade em um só lugar.
+              Sistema integrado de gestão. Acesse chamados, projetos e ferramentas de produtividade em um só lugar.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
