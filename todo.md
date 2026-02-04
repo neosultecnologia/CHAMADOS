@@ -261,3 +261,9 @@
 - [x] Implementar confirmação antes de excluir
 - [x] Testar exclusão de projetos não concluídos
 - [x] Testar bloqueio de exclusão de projetos concluídos
+
+## Correção do Botão de Exclusão de Projetos
+- [x] Investigar por que o botão de lixeira não está aparecendo nos cards
+- [x] Corrigir posicionamento e visibilidade do DeleteProjectButton
+- [x] Testar em projetos não concluídos
+- [x] Verificar que não aparece em projetos concluídos

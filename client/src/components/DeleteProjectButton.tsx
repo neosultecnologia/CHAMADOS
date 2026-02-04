@@ -45,12 +45,13 @@ export function DeleteProjectButton({ project }: DeleteProjectButtonProps) {
   return (
     <Button
       variant="ghost"
-      size="sm"
+      size="icon"
       onClick={handleDelete}
-      className="text-red-500 hover:text-red-700 hover:bg-red-50"
+      className="text-red-500 hover:text-red-700 hover:bg-red-50 h-8 w-8"
       disabled={deleteProjectMutation.isPending}
+      title="Excluir projeto"
     >
-      <Trash2 className="h-4 w-4" />
+      <Trash2 className="h-5 w-5" />
     </Button>
   );
 }
