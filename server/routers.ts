@@ -403,7 +403,15 @@ export const appRouter = router({
 
     delete: protectedProcedure
       .input(z.object({ id: z.number() }))
-      .mutation(async ({ input }) => {
+      .mutation(async ({ ctx, input }) => {
+        // Only admins can delete tickets
+        if (ctx.user?.role !== 'admin') {
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Apenas administradores podem excluir chamados",
+          });
+        }
+        
         return await db.deleteTicket(input.id);
       }),
 

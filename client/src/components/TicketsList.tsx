@@ -3,6 +3,7 @@ import { Search } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import type { Ticket } from '@/pages/Dashboard';
+import { DeleteTicketButton } from './DeleteTicketButton';
 
 interface TicketsListProps {
   tickets: Ticket[];
@@ -73,13 +74,23 @@ export default function TicketsList({ tickets, onSelectTicket }: TicketsListProp
           <motion.div
             key={ticket.id}
             variants={item}
-            onClick={() => onSelectTicket(ticket)}
-            className="group bg-[#1e293b]/60 hover:bg-[#1e293b] border border-white/5 hover:border-blue-500/30 rounded-xl p-5 transition-all cursor-pointer shadow-lg hover:shadow-blue-500/5 relative overflow-hidden"
+            className="group bg-[#1e293b]/60 hover:bg-[#1e293b] border border-white/5 hover:border-blue-500/30 rounded-xl p-5 transition-all shadow-lg hover:shadow-blue-500/5 relative overflow-hidden"
           >
             {/* Left Accent Border */}
             <div className={`absolute left-0 top-0 bottom-0 w-1 ${priorityBorderColors[ticket.priority] || 'bg-slate-500'}`}></div>
+            
+            {/* Delete Button (Admin Only) */}
+            <div className="absolute top-3 right-3 z-10">
+              <DeleteTicketButton 
+                ticketId={ticket.id} 
+                ticketTitle={ticket.title}
+              />
+            </div>
 
-            <div className="flex flex-col md:flex-row gap-6 items-start md:items-center justify-between pl-2">
+            <div 
+              onClick={() => onSelectTicket(ticket)}
+              className="flex flex-col md:flex-row gap-6 items-start md:items-center justify-between pl-2 cursor-pointer"
+            >
               {/* Main Info */}
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-3 mb-2">

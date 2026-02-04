@@ -318,3 +318,12 @@
 - [x] Corrigir mutation createProject no backend
 - [x] Adicionar valores padrão para campos obrigatórios
 - [x] Testar criação de projetos com sucesso
+
+## Exclusão de Chamados (Admin Only)
+- [x] Criar mutation deleteTicket no backend com validação de admin
+- [x] Adicionar testes unitários para exclusão de chamados
+- [x] Criar componente DeleteTicketButton no frontend
+- [x] Integrar botão de exclusão na lista de chamados
+- [x] Adicionar confirmação antes de excluir
+- [x] Testar que apenas admins conseguem excluir
+- [x] Testar que usuários comuns não veem o botão
