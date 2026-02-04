@@ -339,3 +339,17 @@
 - [x] Implementar download de arquivos
 - [x] Adicionar validação de tipo e tamanho de arquivo
 - [x] Criar testes para sistema de anexos
+
+## Sistema de Gerenciamento de Setores
+- [x] Criar tabela departments no schema do banco de dados
+- [x] Adicionar campo departmentId aos usuários
+- [x] Criar routers tRPC para CRUD de setores (criar, listar, editar, excluir)
+- [x] Desenvolver componente DepartmentManagement para listar setores
+- [x] Criar modal CreateDepartmentModal para criar novos setores
+- [x] Criar modal EditDepartmentModal para editar setores existentes
+- [x] Adicionar funcionalidade de exclusão de setores (com validação)
+- [x] Integrar seleção de setor no modal de edição de usuários
+- [x] Integrar seleção de setor no modal de criação de usuários
+- [x] Adicionar coluna "Setor" na tabela de usuários
+- [x] Criar testes unitários para operações de setores
+- [x] Testar fluxo completo de gerenciamento de setores

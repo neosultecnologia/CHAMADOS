@@ -11,6 +11,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { toast } from "sonner";
 
 interface EditUserModalProps {
@@ -20,6 +27,7 @@ interface EditUserModalProps {
     id: number;
     name: string;
     email: string;
+    departmentId?: number | null;
   };
   onSuccess?: () => void;
 }
@@ -32,12 +40,15 @@ export function EditUserModal({
 }: EditUserModalProps) {
   const [name, setName] = useState(user.name);
   const [email, setEmail] = useState(user.email);
+  const [departmentId, setDepartmentId] = useState<number | null | undefined>(user.departmentId);
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
+  const { data: departments } = trpc.departments.list.useQuery();
   const updateUserMutation = trpc.userManagement.updateUser.useMutation();
   const resetPasswordMutation = trpc.userManagement.resetPassword.useMutation();
+  const assignDepartmentMutation = trpc.departments.assignToUser.useMutation();
 
   const handleUpdateUser = async () => {
     if (!name.trim() || !email.trim()) {
@@ -131,6 +142,39 @@ export function EditUserModal({
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="email@example.com"
               />
+            </div>
+
+            <div>
+              <Label htmlFor="department">Setor</Label>
+              <Select
+                value={departmentId?.toString() || "none"}
+                onValueChange={async (value) => {
+                  const newDeptId = value === "none" ? null : parseInt(value);
+                  setDepartmentId(newDeptId);
+                  try {
+                    await assignDepartmentMutation.mutateAsync({
+                      userId: user.id,
+                      departmentId: newDeptId,
+                    });
+                    toast.success("Setor atualizado com sucesso");
+                    onSuccess?.();
+                  } catch (error: any) {
+                    toast.error(error.message || "Erro ao atualizar setor");
+                  }
+                }}
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Selecione um setor" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="none">Sem setor</SelectItem>
+                  {departments?.map((dept) => (
+                    <SelectItem key={dept.id} value={dept.id.toString()}>
+                      {dept.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
 
             <div className="flex gap-2 pt-4">

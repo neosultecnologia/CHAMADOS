@@ -307,7 +307,7 @@ export default function EditProjectModal({ open, onOpenChange, projectId, onSucc
                   <SelectContent>
                     {users.map((user) => (
                       <SelectItem key={user.id} value={user.id.toString()}>
-                        {user.name} - {user.sector}
+                        {user.name}
                       </SelectItem>
                     ))}
                   </SelectContent>

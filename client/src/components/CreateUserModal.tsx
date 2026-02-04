@@ -23,11 +23,12 @@ export function CreateUserModal({ open, onOpenChange }: CreateUserModalProps) {
     name: '',
     email: '',
     password: '',
-    sector: 'TI' as 'TI' | 'RH' | 'Financeiro' | 'Comercial' | 'Suporte' | 'Operações' | 'Outro',
+    departmentId: undefined as number | undefined,
     role: 'user' as 'admin' | 'user',
   });
 
   const utils = trpc.useUtils();
+  const { data: departments } = trpc.departments.list.useQuery();
 
   const createUserMutation = trpc.userManagement.createUser.useMutation({
     onSuccess: () => {
@@ -38,7 +39,7 @@ export function CreateUserModal({ open, onOpenChange }: CreateUserModalProps) {
         name: '',
         email: '',
         password: '',
-        sector: 'TI',
+        departmentId: undefined,
         role: 'user',
       });
     },
@@ -119,24 +120,23 @@ export function CreateUserModal({ open, onOpenChange }: CreateUserModalProps) {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="sector" className="text-white">
-              Setor
+            <Label htmlFor="department" className="text-white">
+              Setor (opcional)
             </Label>
             <Select
-              value={formData.sector}
-              onValueChange={(value: any) => setFormData({ ...formData, sector: value })}
+              value={formData.departmentId?.toString() || "none"}
+              onValueChange={(value) => setFormData({ ...formData, departmentId: value === "none" ? undefined : parseInt(value) })}
             >
               <SelectTrigger className="bg-white/10 border-blue-300/30 text-white">
-                <SelectValue />
+                <SelectValue placeholder="Selecione um setor" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="TI">TI</SelectItem>
-                <SelectItem value="RH">RH</SelectItem>
-                <SelectItem value="Financeiro">Financeiro</SelectItem>
-                <SelectItem value="Comercial">Comercial</SelectItem>
-                <SelectItem value="Suporte">Suporte</SelectItem>
-                <SelectItem value="Operações">Operações</SelectItem>
-                <SelectItem value="Outro">Outro</SelectItem>
+                <SelectItem value="none">Sem setor</SelectItem>
+                {departments?.map((dept) => (
+                  <SelectItem key={dept.id} value={dept.id.toString()}>
+                    {dept.name}
+                  </SelectItem>
+                ))}
               </SelectContent>
             </Select>
           </div>

@@ -11,7 +11,8 @@ import {
   projectPhases, InsertProjectPhase, ProjectPhase,
   projectComments, InsertProjectComment, ProjectComment,
   dailyTasks, InsertDailyTask, DailyTask,
-  permissionGroups, InsertPermissionGroup, PermissionGroup
+  permissionGroups, InsertPermissionGroup, PermissionGroup,
+  departments, InsertDepartment, Department
 } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
@@ -36,7 +37,7 @@ export async function createUser(user: {
   name: string;
   email: string;
   passwordHash: string;
-  sector?: string;
+  departmentId?: number;
   role?: 'user' | 'admin';
   approvalStatus?: 'pending' | 'approved' | 'rejected';
 }): Promise<User | null> {
@@ -51,7 +52,7 @@ export async function createUser(user: {
       loginMethod: 'internal',
       role: user.role || 'user',
       approvalStatus: user.approvalStatus || 'pending',
-      sector: (user.sector as any) || 'Outro',
+      departmentId: user.departmentId,
     });
     
     const insertId = result[0].insertId;
@@ -974,4 +975,83 @@ export async function assignGroupToUser(userId: number, groupId: number | null):
 
   const user = await getUserById(userId);
   return user || null;
+}
+
+// ============ DEPARTMENT QUERIES ============
+
+export async function createDepartment(data: { name: string; description?: string }): Promise<Department | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    const result = await db.insert(departments).values({
+      name: data.name,
+      description: data.description,
+    });
+    
+    const insertId = result[0].insertId;
+    const created = await db.select().from(departments).where(eq(departments.id, insertId)).limit(1);
+    return created.length > 0 ? created[0] : null;
+  } catch (error) {
+    console.error("[Database] Failed to create department:", error);
+    throw error;
+  }
+}
+
+export async function getAllDepartments(): Promise<Department[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(departments).orderBy(departments.name);
+}
+
+export async function getDepartmentById(id: number): Promise<Department | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.select().from(departments).where(eq(departments.id, id)).limit(1);
+  return result.length > 0 ? result[0] : null;
+}
+
+export async function updateDepartment(id: number, data: { name?: string; description?: string }): Promise<Department | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    await db.update(departments).set(data).where(eq(departments.id, id));
+    return await getDepartmentById(id);
+  } catch (error) {
+    console.error("[Database] Failed to update department:", error);
+    throw error;
+  }
+}
+
+export async function deleteDepartment(id: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  try {
+    // First, remove department assignment from users
+    await db.update(users).set({ departmentId: null }).where(eq(users.departmentId, id));
+
+    const result = await db.delete(departments).where(eq(departments.id, id));
+    return result[0].affectedRows > 0;
+  } catch (error) {
+    console.error("[Database] Failed to delete department:", error);
+    throw error;
+  }
+}
+
+export async function assignDepartmentToUser(userId: number, departmentId: number | null): Promise<User | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    await db.update(users).set({ departmentId }).where(eq(users.id, userId));
+    const user = await getUserById(userId);
+    return user || null;
+  } catch (error) {
+    console.error("[Database] Failed to assign department to user:", error);
+    throw error;
+  }
 }

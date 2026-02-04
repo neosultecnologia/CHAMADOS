@@ -80,7 +80,7 @@ export const appRouter = router({
         name: z.string().min(2),
         email: z.string().email(),
         password: z.string().min(6),
-        sector: z.enum(["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações", "Outro"]).optional(),
+        departmentId: z.number().optional(),
       }))
       .mutation(async ({ input }) => {
         // Check if email already exists
@@ -100,7 +100,7 @@ export const appRouter = router({
           name: input.name,
           email: input.email,
           passwordHash,
-          sector: input.sector || "Outro",
+          departmentId: input.departmentId,
           approvalStatus: "pending",
         });
 
@@ -132,7 +132,7 @@ export const appRouter = router({
         name: z.string().min(2),
         email: z.string().email(),
         password: z.string().min(6),
-        sector: z.enum(["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações", "Outro"]).optional(),
+        departmentId: z.number().optional(),
         role: z.enum(["user", "admin"]).default("user"),
       }))
       .mutation(async ({ ctx, input }) => {
@@ -157,7 +157,7 @@ export const appRouter = router({
           name: input.name,
           email: input.email,
           passwordHash,
-          sector: input.sector || "Outro",
+          departmentId: input.departmentId,
           role: input.role,
           approvalStatus: "approved",
         });
@@ -954,6 +954,85 @@ export const appRouter = router({
         }
         
         return await db.assignGroupToUser(input.userId, input.groupId);
+      }),
+  }),
+
+  // ============ DEPARTMENT MANAGEMENT (Admin) ============
+  departments: router({
+    list: protectedProcedure.query(async ({ ctx }) => {
+      // Only admins can list departments
+      if (ctx.user?.role !== 'admin') {
+        throw new TRPCError({
+          code: "FORBIDDEN",
+          message: "Apenas administradores podem gerenciar setores",
+        });
+      }
+      return await db.getAllDepartments();
+    }),
+
+    create: protectedProcedure
+      .input(z.object({
+        name: z.string().min(2),
+        description: z.string().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        // Only admins can create departments
+        if (ctx.user?.role !== 'admin') {
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Apenas administradores podem criar setores",
+          });
+        }
+        return await db.createDepartment(input);
+      }),
+
+    update: protectedProcedure
+      .input(z.object({
+        id: z.number(),
+        name: z.string().min(2).optional(),
+        description: z.string().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        // Only admins can update departments
+        if (ctx.user?.role !== 'admin') {
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Apenas administradores podem editar setores",
+          });
+        }
+        const { id, ...data } = input;
+        return await db.updateDepartment(id, data);
+      }),
+
+    delete: protectedProcedure
+      .input(z.object({
+        id: z.number(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        // Only admins can delete departments
+        if (ctx.user?.role !== 'admin') {
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Apenas administradores podem excluir setores",
+          });
+        }
+        return await db.deleteDepartment(input.id);
+      }),
+
+    assignToUser: protectedProcedure
+      .input(z.object({
+        userId: z.number(),
+        departmentId: z.number().nullable(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        // Only admins can assign departments
+        if (ctx.user?.role !== 'admin') {
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Apenas administradores podem atribuir setores",
+          });
+        }
+        return await db.assignDepartmentToUser(input.userId, input.departmentId);
       }),
   }),
 });

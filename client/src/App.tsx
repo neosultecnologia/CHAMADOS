@@ -10,6 +10,7 @@ import Dashboard from "./pages/Dashboard";
 import PortalDashboard from "./pages/PortalDashboard";
 import ModulePlaceholder from "./pages/ModulePlaceholder";
 import UserManagement from "./pages/UserManagement";
+import DepartmentManagement from "./pages/DepartmentManagement";
 import Projects from "./pages/Projects";
 import ProjectsDashboard from "./pages/ProjectsDashboard";
 import Announcements from "./pages/Announcements";
@@ -69,6 +70,11 @@ function Router() {
       {/* User Management (Admin only) */}
       <Route path="/admin/usuarios">
         <ProtectedRoute component={UserManagement} />
+      </Route>
+
+      {/* Department Management (Admin only) */}
+      <Route path="/admin/setores">
+        <ProtectedRoute component={DepartmentManagement} />
       </Route>
 
       {/* Projects Management */}

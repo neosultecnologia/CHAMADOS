@@ -129,6 +129,12 @@ export default function PortalDashboard() {
                 <Settings size={14} /> Usuários
               </button>
               <button 
+                onClick={() => setLocation('/admin/setores')}
+                className="hover:text-white transition opacity-80 flex items-center gap-1"
+              >
+                <Settings size={14} /> Setores
+              </button>
+              <button 
                 onClick={() => setLocation('/admin/noticias')}
                 className="hover:text-white transition opacity-80 flex items-center gap-1"
               >
