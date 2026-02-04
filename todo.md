@@ -245,3 +245,11 @@
 - [x] Adicionar animação de contagem de 0 até porcentagem atual
 - [x] Sincronizar animação com transição da barra
 - [x] Testar performance e fluidez
+
+## Edição de Usuários no Painel
+- [x] Criar router para atualizar dados do usuário (nome, email)
+- [x] Criar router para redefinir senha
+- [x] Desenvolver modal de edição de usuário
+- [x] Adicionar botão de edição no painel de gerenciamento
+- [x] Implementar validações de email único
+- [x] Testar edição e redefinição de senha

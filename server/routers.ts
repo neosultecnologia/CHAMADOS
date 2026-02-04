@@ -207,6 +207,48 @@ export const appRouter = router({
         }
         return await db.deleteUser(input.userId);
       }),
+
+    updateUser: protectedProcedure
+      .input(z.object({
+        userId: z.number(),
+        name: z.string().min(2).optional(),
+        email: z.string().email().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== "admin") {
+          throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
+        }
+
+        // Check if email already exists (if changing email)
+        if (input.email) {
+          const existingUser = await db.getUserByEmail(input.email);
+          if (existingUser && existingUser.id !== input.userId) {
+            throw new TRPCError({
+              code: "CONFLICT",
+              message: "Este email já está cadastrado",
+            });
+          }
+        }
+
+        return await db.updateUserData(input.userId, {
+          name: input.name,
+          email: input.email,
+        });
+      }),
+
+    resetPassword: protectedProcedure
+      .input(z.object({
+        userId: z.number(),
+        newPassword: z.string().min(6),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== "admin") {
+          throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
+        }
+
+        const passwordHash = await bcrypt.hash(input.newPassword, 10);
+        return await db.updateUserPassword(input.userId, passwordHash);
+      }),
   }),
 
   // ============ TICKETS ============

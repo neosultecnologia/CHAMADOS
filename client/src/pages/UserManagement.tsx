@@ -22,7 +22,8 @@ import { motion } from 'framer-motion';
 import { PermissionsDialog } from '@/components/PermissionsDialog';
 import { GroupSelector } from '@/components/GroupSelector';
 import { CreateUserModal } from '@/components/CreateUserModal';
-import { Settings, Plus } from 'lucide-react';
+import { EditUserModal } from '@/components/EditUserModal';
+import { Settings, Plus, Edit } from 'lucide-react';
 
 type Tab = 'pending' | 'all';
 
@@ -32,6 +33,7 @@ export default function UserManagement() {
   const [activeTab, setActiveTab] = useState<Tab>('pending');
   const [permissionsDialog, setPermissionsDialog] = useState<{ open: boolean; userId: number; userName: string; permissions: string[] } | null>(null);
   const [showCreateModal, setShowCreateModal] = useState(false);
+  const [editingUser, setEditingUser] = useState<{ id: number; name: string; email: string } | null>(null);
   const utils = trpc.useUtils();
 
   const { data: pendingUsers, isLoading: loadingPending } = trpc.userManagement.listPending.useQuery(
@@ -386,6 +388,13 @@ export default function UserManagement() {
                                 <Settings className="w-4 h-4" />
                               </button>
                             )}
+                            <button
+                              onClick={() => setEditingUser({ id: listUser.id, name: listUser.name, email: listUser.email })}
+                              className="p-2 text-cyan-400 hover:bg-cyan-500/20 rounded-lg transition-colors"
+                              title="Editar"
+                            >
+                              <Edit className="w-4 h-4" />
+                            </button>
                             {listUser.id !== user?.id && (
                               <button
                                 onClick={() => {

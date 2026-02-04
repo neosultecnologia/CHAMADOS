@@ -204,6 +204,36 @@ export async function deleteUser(id: number): Promise<boolean> {
   return result[0].affectedRows > 0;
 }
 
+export async function updateUserData(id: number, data: { name?: string; email?: string }): Promise<User | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const updateData: any = {};
+  if (data.name) updateData.name = data.name;
+  if (data.email) updateData.email = data.email;
+
+  if (Object.keys(updateData).length === 0) return null;
+
+  await db.update(users)
+    .set(updateData)
+    .where(eq(users.id, id));
+
+  const updated = await db.select().from(users).where(eq(users.id, id)).limit(1);
+  return updated[0] || null;
+}
+
+export async function updateUserPassword(id: number, passwordHash: string): Promise<User | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  await db.update(users)
+    .set({ passwordHash })
+    .where(eq(users.id, id));
+
+  const updated = await db.select().from(users).where(eq(users.id, id)).limit(1);
+  return updated[0] || null;
+}
+
 export async function updateUserPermissions(id: number, permissions: string[]): Promise<User | null> {
   const db = await getDb();
   if (!db) return null;
