@@ -260,7 +260,7 @@ export const appRouter = router({
       .input(z.object({
         status: z.string().optional(),
         priority: z.string().optional(),
-        sector: z.string().optional(),
+        departmentId: z.number().optional(),
         search: z.string().optional(),
       }).optional())
       .query(async ({ ctx, input }) => {
@@ -288,12 +288,20 @@ export const appRouter = router({
         description: z.string().min(1),
         category: z.enum(["Técnico", "Acesso", "Funcionalidade", "Dúvida", "Outro"]),
         priority: z.enum(["Baixa", "Média", "Alta", "Crítica"]),
-        sector: z.enum(["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações"]),
+        departmentId: z.number().optional(),
+        assignedToId: z.number().optional(),
       }))
       .mutation(async ({ ctx, input }) => {
         const nextNumber = await db.getNextTicketNumber();
         const ticketId = `bilhete_${nextNumber}`;
         const now = Date.now();
+
+        // Get assigned user name if assignedToId is provided
+        let assignedToName = null;
+        if (input.assignedToId) {
+          const assignedUser = await db.getUserById(input.assignedToId);
+          assignedToName = assignedUser?.name || null;
+        }
 
         const ticket = await db.createTicket({
           ticketId,
@@ -301,10 +309,12 @@ export const appRouter = router({
           description: input.description,
           category: input.category,
           priority: input.priority,
-          sector: input.sector,
+          departmentId: input.departmentId,
           status: "Aberto",
           createdById: ctx.user.id,
           createdByName: ctx.user.name || "Usuário",
+          assignedToId: input.assignedToId,
+          assignedToName,
           createdAt: now,
           updatedAt: now,
         });
@@ -333,7 +343,7 @@ export const appRouter = router({
         category: z.enum(["Técnico", "Acesso", "Funcionalidade", "Dúvida", "Outro"]).optional(),
         priority: z.enum(["Baixa", "Média", "Alta", "Crítica"]).optional(),
         status: z.enum(["Aberto", "Em Progresso", "Aguardando", "Resolvido", "Fechado"]).optional(),
-        sector: z.enum(["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações"]).optional(),
+        departmentId: z.number().nullable().optional(),
         assignedToId: z.number().nullable().optional(),
         assignedToName: z.string().nullable().optional(),
       }))
@@ -374,15 +384,17 @@ export const appRouter = router({
           });
         }
 
-        if (input.sector && input.sector !== oldTicket.sector) {
+        if (input.departmentId !== undefined && input.departmentId !== oldTicket.departmentId) {
+          const oldDept = oldTicket.departmentId ? await db.getDepartmentById(oldTicket.departmentId) : null;
+          const newDept = input.departmentId ? await db.getDepartmentById(input.departmentId) : null;
           await db.createActivity({
             ticketId: id,
             type: "sector_change",
             authorId: ctx.user.id,
             authorName: ctx.user.name || "Usuário",
-            oldValue: oldTicket.sector,
-            newValue: input.sector,
-            description: `Setor alterado de "${oldTicket.sector}" para "${input.sector}"`,
+            oldValue: oldDept?.name || "Sem setor",
+            newValue: newDept?.name || "Sem setor",
+            description: `Setor alterado de "${oldDept?.name || "Sem setor"}" para "${newDept?.name || "Sem setor"}"`,
             createdAt: now,
           });
         }
@@ -619,7 +631,7 @@ export const appRouter = router({
         priority: z.enum(["Baixa", "Média", "Alta", "Crítica"]).optional(),
         ownerId: z.number().optional(),
         ownerName: z.string().optional(),
-        sector: z.enum(["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações"]).optional(),
+        departmentId: z.number().nullable().optional(),
         startDate: z.number().nullable().optional(),
         endDate: z.number().nullable().optional(),
       }))

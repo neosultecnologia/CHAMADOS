@@ -57,7 +57,7 @@ export const tickets = mysqlTable("tickets", {
   category: mysqlEnum("category", ["Técnico", "Acesso", "Funcionalidade", "Dúvida", "Outro"]).default("Técnico").notNull(),
   priority: mysqlEnum("priority", ["Baixa", "Média", "Alta", "Crítica"]).default("Média").notNull(),
   status: mysqlEnum("status", ["Aberto", "Em Progresso", "Aguardando", "Resolvido", "Fechado"]).default("Aberto").notNull(),
-  sector: mysqlEnum("sector", ["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações"]).default("TI").notNull(),
+  departmentId: int("departmentId"),
   createdById: int("createdById").notNull(),
   createdByName: varchar("createdByName", { length: 255 }).notNull(),
   assignedToId: int("assignedToId"),

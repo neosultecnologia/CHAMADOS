@@ -281,7 +281,7 @@ export async function getTicketByTicketId(ticketId: string): Promise<Ticket | nu
 export async function getAllTickets(filters?: {
   status?: string;
   priority?: string;
-  sector?: string;
+  departmentId?: number;
   search?: string;
 }): Promise<Ticket[]> {
   const db = await getDb();
@@ -297,8 +297,8 @@ export async function getAllTickets(filters?: {
   if (filters?.priority && filters.priority !== 'all') {
     conditions.push(eq(tickets.priority, filters.priority as any));
   }
-  if (filters?.sector && filters.sector !== 'all') {
-    conditions.push(eq(tickets.sector, filters.sector as any));
+  if (filters?.departmentId) {
+    conditions.push(eq(tickets.departmentId, filters.departmentId));
   }
   if (filters?.search) {
     conditions.push(

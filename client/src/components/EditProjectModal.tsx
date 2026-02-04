@@ -155,7 +155,6 @@ export default function EditProjectModal({ open, onOpenChange, projectId, onSucc
       description: description.trim(),
       priority,
       status,
-      sector,
       ownerId,
       ownerName: owner?.name || "",
       startDate: startDate?.getTime(),

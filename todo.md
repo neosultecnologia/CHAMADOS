@@ -362,3 +362,13 @@
 - [x] Reorganizar layout do CreateUserModal para mostrar setor e grupo de permissões lado a lado
 - [x] Testar criação de setor inline durante criação de usuário
 - [x] Testar criação de setor inline durante edição de usuário
+
+## Melhorias no Módulo de Chamados
+- [x] Substituir setor fixo por departmentId dinâmico no schema de tickets
+- [x] Adicionar campo assignedToId no CreateTicketModal para atribuir responsável
+- [x] Carregar lista de usuários aprovados no CreateTicketModal
+- [x] Atualizar TicketDetailModal para mostrar informações do responsável
+- [x] Sincronizar usuários criados com seletor de responsáveis
+- [x] Atualizar filtros para usar departamentos dinâmicos
+- [x] Adicionar filtro por responsável no Dashboard
+- [x] Testar criação e atribuição de chamados

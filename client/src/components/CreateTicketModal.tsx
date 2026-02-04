@@ -16,8 +16,13 @@ export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketMo
     description: '',
     category: 'Técnico' as const,
     priority: 'Média' as const,
-    sector: 'TI' as const,
+    departmentId: undefined as number | undefined,
+    assignedToId: undefined as number | undefined,
   });
+
+  const { data: departments = [] } = trpc.departments.list.useQuery();
+  const { data: users = [] } = trpc.userManagement.listAll.useQuery();
+  const approvedUsers = users.filter(u => u.approvalStatus === 'approved');
 
   const createTicketMutation = trpc.tickets.create.useMutation({
     onSuccess: () => {
@@ -54,7 +59,8 @@ export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketMo
       description: formData.description,
       category: formData.category,
       priority: formData.priority,
-      sector: formData.sector,
+      departmentId: formData.departmentId,
+      assignedToId: formData.assignedToId,
     });
   };
 
@@ -164,20 +170,34 @@ export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketMo
 
             <div>
               <label className="block text-sm font-medium text-blue-100 mb-2">
-                Setor
+                Setor (opcional)
               </label>
               <select
-                value={formData.sector}
-                onChange={(e) => setFormData({ ...formData, sector: e.target.value as any })}
+                value={formData.departmentId?.toString() || ""}
+                onChange={(e) => setFormData({ ...formData, departmentId: e.target.value ? parseInt(e.target.value) : undefined })}
                 className="w-full px-4 py-2 rounded-lg bg-slate-800 border border-white/20 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 transition"
                 disabled={isLoading}
               >
-                <option value="TI">TI</option>
-                <option value="RH">RH</option>
-                <option value="Financeiro">Financeiro</option>
-                <option value="Comercial">Comercial</option>
-                <option value="Suporte">Suporte</option>
-                <option value="Operações">Operações</option>
+                <option value="">Sem setor</option>
+                {departments.map(dept => (
+                  <option key={dept.id} value={dept.id}>{dept.name}</option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-blue-100 mb-2">
+                Atribuir para (opcional)
+              </label>
+              <select
+                value={formData.assignedToId?.toString() || ""}
+                onChange={(e) => setFormData({ ...formData, assignedToId: e.target.value ? parseInt(e.target.value) : undefined })}
+                className="w-full px-4 py-2 rounded-lg bg-slate-800 border border-white/20 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 transition"
+                disabled={isLoading}
+              >
+                <option value="">Não atribuir</option>
+                {approvedUsers.map(user => (
+                  <option key={user.id} value={user.id}>{user.name}</option>
+                ))}
               </select>
             </div>
           </div>
