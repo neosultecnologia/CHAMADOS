@@ -411,3 +411,22 @@
 - [x] Adicionar preview de imagens e botão de download
 - [x] Permitir anexar arquivos em comentários
 - [x] Testar upload de diferentes tipos de arquivo
+
+## Módulo de Compras (Substitui E-commerce)
+- [x] Criar tabela de fornecedores (suppliers) no schema
+- [x] Criar tabela de produtos/medicamentos no schema
+- [x] Criar tabela de cotações (quotations) no schema
+- [x] Criar tabela de pedidos de compra (purchase_orders) no schema
+- [x] Criar tabela de itens de pedido (purchase_order_items) no schema
+- [x] Implementar routers tRPC para fornecedores (CRUD)
+- [x] Implementar routers tRPC para produtos (CRUD)
+- [x] Implementar routers tRPC para cotações (criar, listar, aprovar)
+- [x] Implementar routers tRPC para pedidos de compra (criar, listar, aprovar, receber)
+- [x] Criar página de gestão de fornecedores
+- [x] Criar página de gestão de produtos/medicamentos
+- [ ] Criar página de cotações
+- [x] Criar página de pedidos de compra
+- [ ] Criar dashboard de compras com métricas
+- [x] Atualizar PortalDashboard substituindo E-commerce por Compras
+- [x] Adicionar rotas no App.tsx para módulo de compras
+- [x] Testar fluxo completo de compra

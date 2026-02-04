@@ -12,7 +12,12 @@ import {
   projectComments, InsertProjectComment, ProjectComment,
   dailyTasks, InsertDailyTask, DailyTask,
   permissionGroups, InsertPermissionGroup, PermissionGroup,
-  departments, InsertDepartment, Department
+  departments, InsertDepartment, Department,
+  suppliers, InsertSupplier, Supplier,
+  products, InsertProduct, Product,
+  quotations, InsertQuotation, Quotation,
+  purchaseOrders, InsertPurchaseOrder, PurchaseOrder,
+  purchaseOrderItems, InsertPurchaseOrderItem, PurchaseOrderItem
 } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
@@ -1056,4 +1061,196 @@ export async function assignDepartmentToUser(userId: number, departmentId: numbe
     console.error("[Database] Failed to assign department to user:", error);
     throw error;
   }
+}
+
+// ============ SUPPLIERS ============
+
+export async function getAllSuppliers(): Promise<Supplier[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(suppliers).orderBy(desc(suppliers.createdAt));
+}
+
+export async function getSupplierById(id: number): Promise<Supplier | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.select().from(suppliers).where(eq(suppliers.id, id)).limit(1);
+  return result.length > 0 ? result[0] : null;
+}
+
+export async function createSupplier(supplier: InsertSupplier): Promise<Supplier | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.insert(suppliers).values(supplier);
+  const insertId = result[0].insertId;
+  
+  return await getSupplierById(insertId);
+}
+
+export async function updateSupplier(id: number, updates: Partial<InsertSupplier>): Promise<Supplier | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  await db.update(suppliers).set({ ...updates, updatedAt: Date.now() }).where(eq(suppliers.id, id));
+  return await getSupplierById(id);
+}
+
+export async function deleteSupplier(id: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  const result = await db.delete(suppliers).where(eq(suppliers.id, id));
+  return result[0].affectedRows > 0;
+}
+
+// ============ PRODUCTS ============
+
+export async function getAllProducts(): Promise<Product[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(products).orderBy(products.name);
+}
+
+export async function getProductById(id: number): Promise<Product | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.select().from(products).where(eq(products.id, id)).limit(1);
+  return result.length > 0 ? result[0] : null;
+}
+
+export async function createProduct(product: InsertProduct): Promise<Product | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.insert(products).values(product);
+  const insertId = result[0].insertId;
+  
+  return await getProductById(insertId);
+}
+
+export async function updateProduct(id: number, updates: Partial<InsertProduct>): Promise<Product | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  await db.update(products).set({ ...updates, updatedAt: Date.now() }).where(eq(products.id, id));
+  return await getProductById(id);
+}
+
+export async function deleteProduct(id: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  const result = await db.delete(products).where(eq(products.id, id));
+  return result[0].affectedRows > 0;
+}
+
+// ============ QUOTATIONS ============
+
+export async function getAllQuotations(): Promise<Quotation[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(quotations).orderBy(desc(quotations.createdAt));
+}
+
+export async function getQuotationById(id: number): Promise<Quotation | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.select().from(quotations).where(eq(quotations.id, id)).limit(1);
+  return result.length > 0 ? result[0] : null;
+}
+
+export async function createQuotation(quotation: InsertQuotation): Promise<Quotation | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.insert(quotations).values(quotation);
+  const insertId = result[0].insertId;
+  
+  return await getQuotationById(insertId);
+}
+
+export async function updateQuotation(id: number, updates: Partial<InsertQuotation>): Promise<Quotation | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  await db.update(quotations).set({ ...updates, updatedAt: Date.now() }).where(eq(quotations.id, id));
+  return await getQuotationById(id);
+}
+
+// ============ PURCHASE ORDERS ============
+
+export async function getAllPurchaseOrders(): Promise<PurchaseOrder[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(purchaseOrders).orderBy(desc(purchaseOrders.createdAt));
+}
+
+export async function getPurchaseOrderById(id: number): Promise<PurchaseOrder | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.select().from(purchaseOrders).where(eq(purchaseOrders.id, id)).limit(1);
+  return result.length > 0 ? result[0] : null;
+}
+
+export async function createPurchaseOrder(order: InsertPurchaseOrder): Promise<PurchaseOrder | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.insert(purchaseOrders).values(order);
+  const insertId = result[0].insertId;
+  
+  return await getPurchaseOrderById(insertId);
+}
+
+export async function updatePurchaseOrder(id: number, updates: Partial<InsertPurchaseOrder>): Promise<PurchaseOrder | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  await db.update(purchaseOrders).set({ ...updates, updatedAt: Date.now() }).where(eq(purchaseOrders.id, id));
+  return await getPurchaseOrderById(id);
+}
+
+// ============ PURCHASE ORDER ITEMS ============
+
+export async function getPurchaseOrderItems(purchaseOrderId: number): Promise<PurchaseOrderItem[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(purchaseOrderItems).where(eq(purchaseOrderItems.purchaseOrderId, purchaseOrderId));
+}
+
+export async function createPurchaseOrderItem(item: InsertPurchaseOrderItem): Promise<PurchaseOrderItem | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.insert(purchaseOrderItems).values(item);
+  const insertId = result[0].insertId;
+  
+  const created = await db.select().from(purchaseOrderItems).where(eq(purchaseOrderItems.id, insertId)).limit(1);
+  return created.length > 0 ? created[0] : null;
+}
+
+export async function updatePurchaseOrderItem(id: number, updates: Partial<InsertPurchaseOrderItem>): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  const result = await db.update(purchaseOrderItems).set(updates).where(eq(purchaseOrderItems.id, id));
+  return result[0].affectedRows > 0;
+}
+
+export async function deletePurchaseOrderItem(id: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  const result = await db.delete(purchaseOrderItems).where(eq(purchaseOrderItems.id, id));
+  return result[0].affectedRows > 0;
 }

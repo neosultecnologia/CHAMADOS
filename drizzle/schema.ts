@@ -237,3 +237,124 @@ export const permissionGroups = mysqlTable("permissionGroups", {
 
 export type PermissionGroup = typeof permissionGroups.$inferSelect;
 export type InsertPermissionGroup = typeof permissionGroups.$inferInsert;
+
+/**
+ * Suppliers table for purchasing module
+ */
+export const suppliers = mysqlTable("suppliers", {
+  id: int("id").autoincrement().primaryKey(),
+  name: varchar("name", { length: 255 }).notNull(),
+  cnpj: varchar("cnpj", { length: 18 }).unique(),
+  email: varchar("email", { length: 320 }),
+  phone: varchar("phone", { length: 20 }),
+  address: text("address"),
+  city: varchar("city", { length: 100 }),
+  state: varchar("state", { length: 2 }),
+  zipCode: varchar("zipCode", { length: 10 }),
+  contactPerson: varchar("contactPerson", { length: 255 }),
+  status: mysqlEnum("status", ["Ativo", "Inativo", "Bloqueado"]).default("Ativo").notNull(),
+  notes: text("notes"),
+  createdById: int("createdById").notNull(),
+  createdByName: varchar("createdByName", { length: 255 }).notNull(),
+  createdAt: bigint("createdAt", { mode: "number" }).notNull(),
+  updatedAt: bigint("updatedAt", { mode: "number" }).notNull(),
+});
+
+export type Supplier = typeof suppliers.$inferSelect;
+export type InsertSupplier = typeof suppliers.$inferInsert;
+
+/**
+ * Products/Medicines table for purchasing module
+ */
+export const products = mysqlTable("products", {
+  id: int("id").autoincrement().primaryKey(),
+  code: varchar("code", { length: 50 }).notNull().unique(),
+  name: varchar("name", { length: 255 }).notNull(),
+  description: text("description"),
+  category: varchar("category", { length: 100 }),
+  unit: varchar("unit", { length: 20 }).default("UN").notNull(), // UN, CX, FR, etc
+  minStock: int("minStock").default(0),
+  currentStock: int("currentStock").default(0),
+  status: mysqlEnum("status", ["Ativo", "Inativo"]).default("Ativo").notNull(),
+  requiresPrescription: boolean("requiresPrescription").default(false),
+  notes: text("notes"),
+  createdById: int("createdById").notNull(),
+  createdByName: varchar("createdByName", { length: 255 }).notNull(),
+  createdAt: bigint("createdAt", { mode: "number" }).notNull(),
+  updatedAt: bigint("updatedAt", { mode: "number" }).notNull(),
+});
+
+export type Product = typeof products.$inferSelect;
+export type InsertProduct = typeof products.$inferInsert;
+
+/**
+ * Quotations table for price comparison
+ */
+export const quotations = mysqlTable("quotations", {
+  id: int("id").autoincrement().primaryKey(),
+  quotationNumber: varchar("quotationNumber", { length: 32 }).notNull().unique(),
+  supplierId: int("supplierId").notNull(),
+  supplierName: varchar("supplierName", { length: 255 }).notNull(),
+  productId: int("productId").notNull(),
+  productName: varchar("productName", { length: 255 }).notNull(),
+  quantity: int("quantity").notNull(),
+  unitPrice: int("unitPrice").notNull(), // Price in cents
+  totalPrice: int("totalPrice").notNull(), // Total in cents
+  deliveryDays: int("deliveryDays"),
+  status: mysqlEnum("status", ["Pendente", "Aprovada", "Rejeitada", "Expirada"]).default("Pendente").notNull(),
+  validUntil: bigint("validUntil", { mode: "number" }),
+  notes: text("notes"),
+  createdById: int("createdById").notNull(),
+  createdByName: varchar("createdByName", { length: 255 }).notNull(),
+  createdAt: bigint("createdAt", { mode: "number" }).notNull(),
+  updatedAt: bigint("updatedAt", { mode: "number" }).notNull(),
+});
+
+export type Quotation = typeof quotations.$inferSelect;
+export type InsertQuotation = typeof quotations.$inferInsert;
+
+/**
+ * Purchase Orders table
+ */
+export const purchaseOrders = mysqlTable("purchaseOrders", {
+  id: int("id").autoincrement().primaryKey(),
+  orderNumber: varchar("orderNumber", { length: 32 }).notNull().unique(),
+  supplierId: int("supplierId").notNull(),
+  supplierName: varchar("supplierName", { length: 255 }).notNull(),
+  status: mysqlEnum("status", ["Rascunho", "Pendente", "Aprovado", "Enviado", "Recebido Parcial", "Recebido", "Cancelado"]).default("Rascunho").notNull(),
+  totalAmount: int("totalAmount").notNull(), // Total in cents
+  expectedDelivery: bigint("expectedDelivery", { mode: "number" }),
+  actualDelivery: bigint("actualDelivery", { mode: "number" }),
+  paymentTerms: varchar("paymentTerms", { length: 100 }),
+  notes: text("notes"),
+  approvedById: int("approvedById"),
+  approvedByName: varchar("approvedByName", { length: 255 }),
+  approvedAt: bigint("approvedAt", { mode: "number" }),
+  createdById: int("createdById").notNull(),
+  createdByName: varchar("createdByName", { length: 255 }).notNull(),
+  createdAt: bigint("createdAt", { mode: "number" }).notNull(),
+  updatedAt: bigint("updatedAt", { mode: "number" }).notNull(),
+});
+
+export type PurchaseOrder = typeof purchaseOrders.$inferSelect;
+export type InsertPurchaseOrder = typeof purchaseOrders.$inferInsert;
+
+/**
+ * Purchase Order Items table
+ */
+export const purchaseOrderItems = mysqlTable("purchaseOrderItems", {
+  id: int("id").autoincrement().primaryKey(),
+  purchaseOrderId: int("purchaseOrderId").notNull(),
+  productId: int("productId").notNull(),
+  productCode: varchar("productCode", { length: 50 }).notNull(),
+  productName: varchar("productName", { length: 255 }).notNull(),
+  quantity: int("quantity").notNull(),
+  unitPrice: int("unitPrice").notNull(), // Price in cents
+  totalPrice: int("totalPrice").notNull(), // Total in cents
+  receivedQuantity: int("receivedQuantity").default(0).notNull(),
+  notes: text("notes"),
+  createdAt: bigint("createdAt", { mode: "number" }).notNull(),
+});
+
+export type PurchaseOrderItem = typeof purchaseOrderItems.$inferSelect;
+export type InsertPurchaseOrderItem = typeof purchaseOrderItems.$inferInsert;
