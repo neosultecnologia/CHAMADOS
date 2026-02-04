@@ -655,6 +655,110 @@ export async function deleteProjectComment(commentId: number): Promise<boolean> 
   }
 }
 
+// ============ PROJECT ANALYTICS ============
+
+export async function getProjectAnalytics() {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    const allProjects = await db.select().from(projects);
+    const now = Date.now();
+
+    const total = allProjects.length;
+    const byStatus = {
+      planejamento: allProjects.filter(p => p.status === 'Planejamento').length,
+      emAndamento: allProjects.filter(p => p.status === 'Em Andamento').length,
+      emPausa: allProjects.filter(p => p.status === 'Em Pausa').length,
+      concluido: allProjects.filter(p => p.status === 'Concluído').length,
+      cancelado: allProjects.filter(p => p.status === 'Cancelado').length,
+    };
+
+    const byPriority = {
+      baixa: allProjects.filter(p => p.priority === 'Baixa').length,
+      media: allProjects.filter(p => p.priority === 'Média').length,
+      alta: allProjects.filter(p => p.priority === 'Alta').length,
+      critica: allProjects.filter(p => p.priority === 'Crítica').length,
+    };
+
+    // Projects with deadline in next 7 days
+    const sevenDaysFromNow = now + (7 * 24 * 60 * 60 * 1000);
+    const upcomingDeadlines = allProjects.filter(
+      p => p.endDate && p.endDate > now && p.endDate <= sevenDaysFromNow && p.status !== 'Concluído'
+    );
+
+    // Overdue projects
+    const overdue = allProjects.filter(
+      p => p.endDate && p.endDate < now && p.status !== 'Concluído' && p.status !== 'Cancelado'
+    );
+
+    // Average progress
+    const activeProjects = allProjects.filter(
+      p => p.status !== 'Concluído' && p.status !== 'Cancelado'
+    );
+    const avgProgress = activeProjects.length > 0
+      ? Math.round(activeProjects.reduce((sum, p) => sum + (p.progress || 0), 0) / activeProjects.length)
+      : 0;
+
+    return {
+      total,
+      byStatus,
+      byPriority,
+      upcomingDeadlines: upcomingDeadlines.length,
+      overdue: overdue.length,
+      avgProgress,
+      criticalProjects: overdue.slice(0, 5).map(p => ({
+        id: p.id,
+        name: p.name,
+        priority: p.priority,
+        endDate: p.endDate,
+        progress: p.progress,
+      })),
+    };
+  } catch (error) {
+    console.error('[Database] Failed to get project analytics:', error);
+    return null;
+  }
+}
+
+export async function getTodayProjectTasks() {
+  const db = await getDb();
+  if (!db) return [];
+
+  try {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const todayStart = today.getTime();
+    const todayEnd = todayStart + (24 * 60 * 60 * 1000);
+
+    // Get phases that should be worked on today (within date range or in progress)
+    const phases = await db
+      .select({
+        id: projectPhases.id,
+        name: projectPhases.name,
+        status: projectPhases.status,
+        projectId: projectPhases.projectId,
+        projectName: projects.name,
+        startDate: projectPhases.startDate,
+        endDate: projectPhases.endDate,
+        priority: projects.priority,
+      })
+      .from(projectPhases)
+      .leftJoin(projects, eq(projectPhases.projectId, projects.id))
+      .where(
+        and(
+          eq(projectPhases.status, 'Em Andamento'),
+          eq(projects.status, 'Em Andamento')
+        )
+      );
+
+    return phases;
+  } catch (error) {
+    console.error('[Database] Failed to get today tasks:', error);
+    return [];
+  }
+}
+
 // ============ PERMISSION GROUPS ============
 
 export async function getPermissionGroups(): Promise<PermissionGroup[]> {

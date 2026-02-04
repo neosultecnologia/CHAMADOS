@@ -19,7 +19,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Plus, Search, Calendar as CalendarIcon, User, Target, Clock, LayoutGrid, CalendarDays } from "lucide-react";
+import { Plus, Search, Calendar as CalendarIcon, User, Target, Clock, LayoutGrid, CalendarDays, BarChart3 } from "lucide-react";
 import CreateProjectModal from "@/components/CreateProjectModal";
 import EditProjectModal from "@/components/EditProjectModal";
 import ProjectComments from "@/components/ProjectComments";
@@ -81,14 +81,24 @@ export default function Projects() {
             <h1 className="text-4xl font-bold text-white mb-2">Gerenciamento de Projetos</h1>
             <p className="text-blue-100">Acompanhe o andamento de todos os projetos</p>
           </div>
-          <Button
-            variant="outline"
-            onClick={() => window.location.href = '/dashboard'}
-            className="bg-white/10 border-white/20 text-white hover:bg-white/20"
-          >
-            <Home className="h-4 w-4 mr-2" />
-            Voltar ao Início
-          </Button>
+          <div className="flex gap-2">
+            <Button
+              variant="outline"
+              onClick={() => window.location.href = '/projetos/dashboard'}
+              className="bg-cyan-500/20 border-cyan-400/30 text-white hover:bg-cyan-500/30"
+            >
+              <BarChart3 className="h-4 w-4 mr-2" />
+              Dashboard
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => window.location.href = '/dashboard'}
+              className="bg-white/10 border-white/20 text-white hover:bg-white/20"
+            >
+              <Home className="h-4 w-4 mr-2" />
+              Voltar ao Início
+            </Button>
+          </div>
         </div>
 
         {/* Filters */}

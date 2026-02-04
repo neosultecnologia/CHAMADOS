@@ -11,6 +11,7 @@ import PortalDashboard from "./pages/PortalDashboard";
 import ModulePlaceholder from "./pages/ModulePlaceholder";
 import UserManagement from "./pages/UserManagement";
 import Projects from "./pages/Projects";
+import ProjectsDashboard from "./pages/ProjectsDashboard";
 import Announcements from "./pages/Announcements";
 import PermissionGroupsManagement from "./pages/PermissionGroupsManagement";
 import { Loader2 } from "lucide-react";
@@ -73,6 +74,11 @@ function Router() {
       {/* Projects Management */}
       <Route path="/projetos">
         <ProtectedRoute component={Projects} />
+      </Route>
+
+      {/* Projects Dashboard */}
+      <Route path="/projetos/dashboard">
+        <ProtectedRoute component={ProjectsDashboard} />
       </Route>
 
          {/* Admin - Announcements Management */}

@@ -180,3 +180,14 @@
 - [x] Adicionar botão "Novo Usuário" na página de gerenciamento
 - [x] Integrar formulário com backend
 - [x] Testar criação de usuários
+
+## Dashboard Analítico de Projetos
+- [x] Criar routers para estatísticas e métricas de projetos
+- [x] Criar router para tarefas diárias
+- [x] Desenvolver cards de métricas (total projetos, atrasados, concluídos)
+- [x] Criar gráficos de distribuição por status e prioridade
+- [x] Implementar lista de tarefas do dia
+- [x] Criar seção de projetos críticos/alertas
+- [x] Adicionar gráfico de progresso ao longo do tempo
+- [x] Integrar dashboard na navegação principal
+- [x] Testar responsividade e performance

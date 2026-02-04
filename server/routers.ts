@@ -582,6 +582,19 @@ export const appRouter = router({
       .mutation(async ({ input }) => {
         return await db.deleteProject(input.id);
       }),
+
+    // Dashboard analytics
+    getAnalytics: protectedProcedure
+      .use(requirePermission(MODULES.PROJETOS, ACTIONS.READ))
+      .query(async () => {
+        return await db.getProjectAnalytics();
+      }),
+
+    getTodayTasks: protectedProcedure
+      .use(requirePermission(MODULES.PROJETOS, ACTIONS.READ))
+      .query(async () => {
+        return await db.getTodayProjectTasks();
+      }),
   }),
 
   // ============ PROJECT PHASES ============
