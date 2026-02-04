@@ -184,6 +184,29 @@ export type ProjectComment = typeof projectComments.$inferSelect;
 export type InsertProjectComment = typeof projectComments.$inferInsert;
 
 /**
+ * Daily tasks within projects for day-to-day work tracking
+ */
+export const dailyTasks = mysqlTable("dailyTasks", {
+  id: int("id").autoincrement().primaryKey(),
+  projectId: int("projectId").notNull(),
+  title: varchar("title", { length: 255 }).notNull(),
+  description: text("description"),
+  status: mysqlEnum("status", ["Pendente", "Em Andamento", "Concluída"]).default("Pendente").notNull(),
+  priority: mysqlEnum("priority", ["Baixa", "Média", "Alta", "Crítica"]).default("Média").notNull(),
+  assignedToId: int("assignedToId"),
+  assignedToName: varchar("assignedToName", { length: 255 }),
+  dueDate: bigint("dueDate", { mode: "number" }), // Unix timestamp for the day this task is due
+  completedAt: bigint("completedAt", { mode: "number" }),
+  createdById: int("createdById").notNull(),
+  createdByName: varchar("createdByName", { length: 255 }).notNull(),
+  createdAt: bigint("createdAt", { mode: "number" }).notNull(),
+  updatedAt: bigint("updatedAt", { mode: "number" }).notNull(),
+});
+
+export type DailyTask = typeof dailyTasks.$inferSelect;
+export type InsertDailyTask = typeof dailyTasks.$inferInsert;
+
+/**
  * Permission groups (profiles) for easier permission management
  */
 export const permissionGroups = mysqlTable("permissionGroups", {

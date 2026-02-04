@@ -201,3 +201,12 @@
 - [x] Integrar Gantt no dashboard de projetos
 - [x] Adicionar controles de zoom e navegação temporal
 - [x] Testar responsividade e interatividade
+
+## Sistema de Tarefas Diárias nos Projetos
+- [x] Criar tabela de tarefas diárias no schema
+- [x] Adicionar routers CRUD para tarefas
+- [x] Criar interface de gerenciamento de tarefas na página de projetos
+- [x] Adicionar visualização de tarefas do dia no dashboard
+- [x] Implementar filtros por data e status
+- [x] Adicionar marcação de conclusão de tarefas
+- [x] Criar testes para sistema de tarefas

@@ -23,6 +23,7 @@ import { Plus, Search, Calendar as CalendarIcon, User, Target, Clock, LayoutGrid
 import CreateProjectModal from "@/components/CreateProjectModal";
 import EditProjectModal from "@/components/EditProjectModal";
 import ProjectComments from "@/components/ProjectComments";
+import { DailyTasksPanel } from "@/components/DailyTasksPanel";
 import { ProjectsCalendar } from "@/components/ProjectsCalendar";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
@@ -412,6 +413,9 @@ function ProjectDetailModal({ projectId, onClose, onEdit }: { projectId: number;
               )}
             </CardContent>
           </Card>
+
+          {/* Daily Tasks Section */}
+          <DailyTasksPanel projectId={projectId} />
 
           {/* Comments Section */}
           <Card>

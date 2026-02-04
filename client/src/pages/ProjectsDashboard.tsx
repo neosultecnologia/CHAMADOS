@@ -31,6 +31,11 @@ export default function ProjectsDashboard() {
     { enabled: isAuthenticated }
   );
 
+  const { data: todayDailyTasks = [] } = trpc.dailyTasks.getToday.useQuery(
+    undefined,
+    { enabled: isAuthenticated }
+  );
+
   const { data: allProjects = [] } = trpc.projects.list.useQuery(
     {},
     { enabled: isAuthenticated }
@@ -252,17 +257,48 @@ export default function ProjectsDashboard() {
             </h3>
             {loadingTasks ? (
               <div className="text-blue-200">Carregando...</div>
-            ) : todayTasks && todayTasks.length > 0 ? (
+            ) : (todayTasks && todayTasks.length > 0) || todayDailyTasks.length > 0 ? (
               <div className="space-y-3 max-h-96 overflow-y-auto">
-                {todayTasks.map((task: any) => (
+                {/* Project Phases */}
+                {todayTasks && todayTasks.map((task: any) => (
                   <div
-                    key={task.id}
+                    key={`phase-${task.id}`}
                     className="bg-white/5 rounded-lg p-4 border border-blue-400/10 hover:bg-white/10 transition-colors"
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
-                        <h4 className="text-white font-medium mb-1">{task.name}</h4>
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs text-blue-300 bg-blue-500/20 px-2 py-0.5 rounded">Fase</span>
+                          <h4 className="text-white font-medium">{task.name}</h4>
+                        </div>
                         <p className="text-blue-200 text-sm">{task.projectName}</p>
+                      </div>
+                      <span className={`px-2 py-1 rounded text-xs font-medium ${
+                        task.priority === 'Crítica' ? 'bg-red-500/20 text-red-300' :
+                        task.priority === 'Alta' ? 'bg-orange-500/20 text-orange-300' :
+                        task.priority === 'Média' ? 'bg-blue-500/20 text-blue-300' :
+                        'bg-gray-500/20 text-gray-300'
+                      }`}>
+                        {task.priority}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+                {/* Daily Tasks */}
+                {todayDailyTasks.map((task: any) => (
+                  <div
+                    key={`daily-${task.id}`}
+                    className="bg-white/5 rounded-lg p-4 border border-cyan-400/20 hover:bg-white/10 transition-colors"
+                  >
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs text-cyan-300 bg-cyan-500/20 px-2 py-0.5 rounded">Tarefa</span>
+                          <h4 className="text-white font-medium">{task.title}</h4>
+                        </div>
+                        {task.description && (
+                          <p className="text-blue-200 text-sm">{task.description}</p>
+                        )}
                       </div>
                       <span className={`px-2 py-1 rounded text-xs font-medium ${
                         task.priority === 'Crítica' ? 'bg-red-500/20 text-red-300' :

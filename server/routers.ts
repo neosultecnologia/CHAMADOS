@@ -703,6 +703,81 @@ export const appRouter = router({
       }),
   }),
 
+  // ============ DAILY TASKS ============
+  dailyTasks: router({
+    listByProject: protectedProcedure
+      .use(requirePermission(MODULES.PROJETOS, ACTIONS.READ))
+      .input(z.object({ projectId: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getDailyTasksByProjectId(input.projectId);
+      }),
+
+    getToday: protectedProcedure
+      .query(async () => {
+        return await db.getTodayDailyTasks();
+      }),
+
+    create: protectedProcedure
+      .use(requirePermission(MODULES.PROJETOS, ACTIONS.CREATE))
+      .input(z.object({
+        projectId: z.number(),
+        title: z.string().min(1),
+        description: z.string().optional(),
+        priority: z.enum(["Baixa", "Média", "Alta", "Crítica"]).optional(),
+        assignedToId: z.number().optional(),
+        assignedToName: z.string().optional(),
+        dueDate: z.number().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        return await db.createDailyTask({
+          projectId: input.projectId,
+          title: input.title,
+          description: input.description || null,
+          status: "Pendente",
+          priority: input.priority || "Média",
+          assignedToId: input.assignedToId || null,
+          assignedToName: input.assignedToName || null,
+          dueDate: input.dueDate || null,
+          completedAt: null,
+          createdById: ctx.user.id,
+          createdByName: ctx.user.name || "Usuário",
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
+        });
+      }),
+
+    update: protectedProcedure
+      .use(requirePermission(MODULES.PROJETOS, ACTIONS.UPDATE))
+      .input(z.object({
+        id: z.number(),
+        title: z.string().optional(),
+        description: z.string().optional(),
+        status: z.enum(["Pendente", "Em Andamento", "Concluída"]).optional(),
+        priority: z.enum(["Baixa", "Média", "Alta", "Crítica"]).optional(),
+        assignedToId: z.number().nullable().optional(),
+        assignedToName: z.string().nullable().optional(),
+        dueDate: z.number().nullable().optional(),
+      }))
+      .mutation(async ({ input }) => {
+        const { id, ...data } = input;
+        return await db.updateDailyTask(id, data);
+      }),
+
+    complete: protectedProcedure
+      .use(requirePermission(MODULES.PROJETOS, ACTIONS.UPDATE))
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input }) => {
+        return await db.completeDailyTask(input.id);
+      }),
+
+    delete: protectedProcedure
+      .use(requirePermission(MODULES.PROJETOS, ACTIONS.DELETE))
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input }) => {
+        return await db.deleteDailyTask(input.id);
+      }),
+  }),
+
   // ============ USERS (for assignment dropdown) ============
   permissionGroups: router({
     list: protectedProcedure.query(async () => {

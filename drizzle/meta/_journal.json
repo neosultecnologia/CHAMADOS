@@ -57,6 +57,13 @@
       "when": 1770160457592,
       "tag": "0007_spicy_ultron",
       "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "5",
+      "when": 1770204039064,
+      "tag": "0008_rapid_stryfe",
+      "breakpoints": true
     }
   ]
 }

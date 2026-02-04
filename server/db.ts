@@ -1,4 +1,4 @@
-import { eq, desc, and, or, like, sql } from "drizzle-orm";
+import { eq, desc, and, or, like, sql, gte, lt } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import { 
   InsertUser, users, User,
@@ -10,6 +10,7 @@ import {
   projects, InsertProject, Project,
   projectPhases, InsertProjectPhase, ProjectPhase,
   projectComments, InsertProjectComment, ProjectComment,
+  dailyTasks, InsertDailyTask, DailyTask,
   permissionGroups, InsertPermissionGroup, PermissionGroup
 } from "../drizzle/schema";
 import { ENV } from './_core/env';
@@ -757,6 +758,93 @@ export async function getTodayProjectTasks() {
     console.error('[Database] Failed to get today tasks:', error);
     return [];
   }
+}
+
+// ============ DAILY TASKS ============
+
+export async function createDailyTask(task: InsertDailyTask): Promise<DailyTask | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.insert(dailyTasks).values(task);
+  const insertId = result[0].insertId;
+  
+  const created = await db.select().from(dailyTasks).where(eq(dailyTasks.id, insertId)).limit(1);
+  return created.length > 0 ? created[0] : null;
+}
+
+export async function getDailyTasksByProjectId(projectId: number): Promise<DailyTask[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(dailyTasks)
+    .where(eq(dailyTasks.projectId, projectId))
+    .orderBy(desc(dailyTasks.dueDate));
+}
+
+export async function getDailyTaskById(id: number): Promise<DailyTask | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.select().from(dailyTasks).where(eq(dailyTasks.id, id)).limit(1);
+  return result.length > 0 ? result[0] : null;
+}
+
+export async function getTodayDailyTasks(): Promise<DailyTask[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  try {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const todayStart = today.getTime();
+    const todayEnd = todayStart + (24 * 60 * 60 * 1000);
+
+    return await db.select().from(dailyTasks)
+      .where(
+        and(
+          gte(dailyTasks.dueDate, todayStart),
+          lt(dailyTasks.dueDate, todayEnd)
+        )
+      )
+      .orderBy(dailyTasks.priority, dailyTasks.dueDate);
+  } catch (error) {
+    console.error('[Database] Failed to get today daily tasks:', error);
+    return [];
+  }
+}
+
+export async function updateDailyTask(id: number, data: Partial<InsertDailyTask>): Promise<DailyTask | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  await db.update(dailyTasks).set({
+    ...data,
+    updatedAt: Date.now(),
+  }).where(eq(dailyTasks.id, id));
+
+  return await getDailyTaskById(id);
+}
+
+export async function completeDailyTask(id: number): Promise<DailyTask | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  await db.update(dailyTasks).set({
+    status: 'Concluída',
+    completedAt: Date.now(),
+    updatedAt: Date.now(),
+  }).where(eq(dailyTasks.id, id));
+
+  return await getDailyTaskById(id);
+}
+
+export async function deleteDailyTask(id: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  const result = await db.delete(dailyTasks).where(eq(dailyTasks.id, id));
+  return result[0].affectedRows > 0;
 }
 
 // ============ PERMISSION GROUPS ============
