@@ -288,3 +288,10 @@
 - [x] Integrar tela de login no fluxo de autenticação
 - [x] Testar redirecionamento e autenticação
 - [x] Validar responsividade em diferentes dispositivos
+
+## Favicon Personalizado Neosul
+- [x] Preparar ícone da Neosul em formato favicon (múltiplos tamanhos)
+- [x] Adicionar favicon.ico ao diretório public
+- [x] Atualizar referências no index.html
+- [x] Testar exibição do favicon no navegador
+- [x] Validar em diferentes navegadores e dispositivos
