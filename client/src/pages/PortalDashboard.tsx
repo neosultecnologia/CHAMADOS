@@ -111,7 +111,8 @@ export default function PortalDashboard() {
 
       {/* Header */}
       <header className="relative z-20 w-full px-8 py-6 flex items-center justify-between">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
+          <img src="/neosul-logo.png" alt="Neosul Logo" className="h-10 w-auto" />
           <h1 className="text-xl font-bold text-white tracking-wider">NEROS JL</h1>
         </div>
 

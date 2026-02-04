@@ -273,3 +273,10 @@
 - [x] Corrigir funcionalidade do botão de edição
 - [x] Testar edição de usuários
 - [x] Verificar que modal de edição abre corretamente
+
+## Melhorias Visuais e Branding
+- [x] Adicionar logo da Neosul aos assets do projeto
+- [x] Sincronizar paleta de cores em todo o sistema
+- [x] Integrar logo da Neosul no header/painel principal
+- [x] Ajustar cores dos modais e componentes
+- [x] Testar consistência visual em todas as páginas

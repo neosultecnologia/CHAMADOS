@@ -80,9 +80,12 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-6 flex items-center justify-between">
-          <div>
-            <h1 className="text-4xl font-bold text-white mb-2">Gerenciamento de Projetos</h1>
-            <p className="text-blue-100">Acompanhe o andamento de todos os projetos</p>
+          <div className="flex items-center gap-4">
+            <img src="/neosul-logo.png" alt="Neosul Logo" className="h-12 w-auto" />
+            <div>
+              <h1 className="text-4xl font-bold text-white mb-2">Gerenciamento de Projetos</h1>
+              <p className="text-blue-100">Acompanhe o andamento de todos os projetos</p>
+            </div>
           </div>
           <div className="flex gap-2">
             <Button
