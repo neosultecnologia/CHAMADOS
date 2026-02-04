@@ -127,6 +127,44 @@ export const appRouter = router({
       return await db.getAllUsers();
     }),
 
+    createUser: protectedProcedure
+      .input(z.object({
+        name: z.string().min(2),
+        email: z.string().email(),
+        password: z.string().min(6),
+        sector: z.enum(["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações", "Outro"]).optional(),
+        role: z.enum(["user", "admin"]).default("user"),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== "admin") {
+          throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
+        }
+
+        // Check if email already exists
+        const existingUser = await db.getUserByEmail(input.email);
+        if (existingUser) {
+          throw new TRPCError({
+            code: "CONFLICT",
+            message: "Este email já está cadastrado",
+          });
+        }
+
+        // Hash password
+        const passwordHash = await bcrypt.hash(input.password, 10);
+
+        // Create user with approved status (admin-created users are auto-approved)
+        const user = await db.createUser({
+          name: input.name,
+          email: input.email,
+          passwordHash,
+          sector: input.sector || "Outro",
+          role: input.role,
+          approvalStatus: "approved",
+        });
+
+        return user;
+      }),
+
     approve: protectedProcedure
       .input(z.object({ userId: z.number() }))
       .mutation(async ({ ctx, input }) => {

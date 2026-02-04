@@ -21,7 +21,8 @@ import {
 import { motion } from 'framer-motion';
 import { PermissionsDialog } from '@/components/PermissionsDialog';
 import { GroupSelector } from '@/components/GroupSelector';
-import { Settings } from 'lucide-react';
+import { CreateUserModal } from '@/components/CreateUserModal';
+import { Settings, Plus } from 'lucide-react';
 
 type Tab = 'pending' | 'all';
 
@@ -30,6 +31,7 @@ export default function UserManagement() {
   const [, setLocation] = useLocation();
   const [activeTab, setActiveTab] = useState<Tab>('pending');
   const [permissionsDialog, setPermissionsDialog] = useState<{ open: boolean; userId: number; userName: string; permissions: string[] } | null>(null);
+  const [showCreateModal, setShowCreateModal] = useState(false);
   const utils = trpc.useUtils();
 
   const { data: pendingUsers, isLoading: loadingPending } = trpc.userManagement.listPending.useQuery(
@@ -168,13 +170,22 @@ export default function UserManagement() {
                 <UserCog className="w-6 h-6 text-cyan-400" />
                 <h1 className="text-xl font-bold text-white">Gerenciamento de Usuários</h1>
               </div>
-              <button
-                onClick={() => setLocation('/grupos-permissoes')}
-                className="flex items-center gap-2 px-4 py-2 bg-[#FFD700] text-[#003366] hover:bg-[#FFC700] rounded-lg font-medium transition-colors"
-              >
-                <Shield className="w-4 h-4" />
-                Grupos de Permissões
-              </button>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setShowCreateModal(true)}
+                  className="flex items-center gap-2 px-4 py-2 bg-green-500 text-white hover:bg-green-600 rounded-lg font-medium transition-colors"
+                >
+                  <Plus className="w-4 h-4" />
+                  Novo Usuário
+                </button>
+                <button
+                  onClick={() => setLocation('/grupos-permissoes')}
+                  className="flex items-center gap-2 px-4 py-2 bg-[#FFD700] text-[#003366] hover:bg-[#FFC700] rounded-lg font-medium transition-colors"
+                >
+                  <Shield className="w-4 h-4" />
+                  Grupos de Permissões
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -415,6 +426,11 @@ export default function UserManagement() {
           currentPermissions={permissionsDialog.permissions}
         />
       )}
+
+      <CreateUserModal
+        open={showCreateModal}
+        onOpenChange={setShowCreateModal}
+      />
     </div>
   );
 }

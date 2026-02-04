@@ -173,3 +173,10 @@
 - [x] Corrigir contraste do título nos cards de projetos
 - [x] Melhorar legibilidade de todos os textos nos cards
 - [x] Garantir contraste adequado em todos os componentes
+
+## Criação de Usuários pelo Administrador
+- [x] Criar modal de criação de usuário
+- [x] Adicionar router no backend para criar usuário
+- [x] Adicionar botão "Novo Usuário" na página de gerenciamento
+- [x] Integrar formulário com backend
+- [x] Testar criação de usuários
