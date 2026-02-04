@@ -7,7 +7,8 @@ import * as db from "./db";
 import bcrypt from "bcryptjs";
 import { sdk } from "./_core/sdk";
 import { TRPCError } from "@trpc/server";
-import { hasModulePermission, MODULES } from "@shared/permissions";
+import { hasModulePermission, MODULES, ACTIONS } from "@shared/permissions";
+import { requirePermission } from "./permissionMiddleware";
 
 const ONE_YEAR_MS = 365 * 24 * 60 * 60 * 1000;
 
@@ -173,6 +174,7 @@ export const appRouter = router({
   // ============ TICKETS ============
   tickets: router({
     list: protectedProcedure
+      .use(requirePermission(MODULES.CHAMADOS, ACTIONS.READ))
       .input(z.object({
         status: z.string().optional(),
         priority: z.string().optional(),
@@ -180,28 +182,25 @@ export const appRouter = router({
         search: z.string().optional(),
       }).optional())
       .query(async ({ ctx, input }) => {
-        if (!hasModulePermission(ctx.user, MODULES.CHAMADOS)) {
-          throw new TRPCError({
-            code: "FORBIDDEN",
-            message: "Você não tem permissão para acessar o módulo de Chamados",
-          });
-        }
         return await db.getAllTickets(input);
       }),
 
     getById: protectedProcedure
+      .use(requirePermission(MODULES.CHAMADOS, ACTIONS.READ))
       .input(z.object({ id: z.number() }))
       .query(async ({ input }) => {
         return await db.getTicketById(input.id);
       }),
 
     getByTicketId: protectedProcedure
+      .use(requirePermission(MODULES.CHAMADOS, ACTIONS.READ))
       .input(z.object({ ticketId: z.string() }))
       .query(async ({ input }) => {
         return await db.getTicketByTicketId(input.ticketId);
       }),
 
     create: protectedProcedure
+      .use(requirePermission(MODULES.CHAMADOS, ACTIONS.CREATE))
       .input(z.object({
         title: z.string().min(1),
         description: z.string().min(1),
@@ -244,6 +243,7 @@ export const appRouter = router({
       }),
 
     update: protectedProcedure
+      .use(requirePermission(MODULES.CHAMADOS, ACTIONS.UPDATE))
       .input(z.object({
         id: z.number(),
         title: z.string().optional(),
@@ -466,6 +466,7 @@ export const appRouter = router({
   // ============ PROJECTS ============
   projects: router({
     list: protectedProcedure
+      .use(requirePermission(MODULES.PROJETOS, ACTIONS.READ))
       .input(z.object({
         status: z.string().optional(),
         priority: z.string().optional(),
@@ -473,22 +474,18 @@ export const appRouter = router({
         search: z.string().optional(),
       }).optional())
       .query(async ({ ctx, input }) => {
-        if (!hasModulePermission(ctx.user, MODULES.PROJETOS)) {
-          throw new TRPCError({
-            code: "FORBIDDEN",
-            message: "Você não tem permissão para acessar o módulo de Projetos",
-          });
-        }
         return await db.getAllProjects(input || {});
       }),
 
     getById: protectedProcedure
+      .use(requirePermission(MODULES.PROJETOS, ACTIONS.READ))
       .input(z.object({ id: z.number() }))
       .query(async ({ input }) => {
         return await db.getProjectById(input.id);
       }),
 
     create: protectedProcedure
+      .use(requirePermission(MODULES.PROJETOS, ACTIONS.CREATE))
       .input(z.object({
         name: z.string().min(1),
         description: z.string().optional(),
@@ -523,6 +520,7 @@ export const appRouter = router({
       }),
 
     update: protectedProcedure
+      .use(requirePermission(MODULES.PROJETOS, ACTIONS.UPDATE))
       .input(z.object({
         id: z.number(),
         name: z.string().optional(),
@@ -541,6 +539,7 @@ export const appRouter = router({
       }),
 
     delete: protectedProcedure
+      .use(requirePermission(MODULES.PROJETOS, ACTIONS.DELETE))
       .input(z.object({ id: z.number() }))
       .mutation(async ({ input }) => {
         return await db.deleteProject(input.id);

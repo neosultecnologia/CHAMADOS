@@ -156,3 +156,15 @@
 - [x] Implementar aplicação automática de permissões ao atribuir grupo
 - [x] Criar grupos padrão (Suporte, Gerente, Desenvolvedor, etc.)
 - [x] Testar criação, edição e atribuição de grupos
+
+## Sistema de Permissões Granulares por Ação
+- [x] Atualizar tipos de permissões para incluir ações (create, read, update, delete)
+- [x] Atualizar schema de permissões no banco de dados
+- [x] Criar funções helper para verificar permissões de ação
+- [x] Aplicar verificações nos routers de chamados
+- [x] Aplicar verificações nos routers de projetos
+- [x] Aplicar verificações nos routers de notícias
+- [x] Atualizar interface de gerenciamento de permissões com controles granulares
+- [x] Atualizar interface de grupos com controles granulares
+- [x] Implementar restrições no frontend baseadas em permissões de ação
+- [x] Criar testes para permissões granulares
