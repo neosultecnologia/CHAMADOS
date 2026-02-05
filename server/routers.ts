@@ -16,7 +16,33 @@ export const appRouter = router({
   system: systemRouter,
   
   auth: router({
-    me: publicProcedure.query(opts => opts.ctx.user),
+    me: publicProcedure.query(async ({ ctx }) => {
+      if (!ctx.user) return null;
+      
+      // If user has a groupId, merge group permissions with user permissions
+      if (ctx.user.groupId) {
+        const group = await db.getPermissionGroupById(ctx.user.groupId);
+        if (group) {
+          // Parse both permissions
+          const userPerms = typeof ctx.user.permissions === 'string' 
+            ? JSON.parse(ctx.user.permissions) 
+            : ctx.user.permissions || {};
+          const groupPerms = typeof group.permissions === 'string'
+            ? JSON.parse(group.permissions)
+            : group.permissions || {};
+          
+          // Merge: group permissions as base, user permissions override
+          const mergedPermissions = { ...groupPerms, ...userPerms };
+          
+          return {
+            ...ctx.user,
+            permissions: mergedPermissions
+          };
+        }
+      }
+      
+      return ctx.user;
+    }),
     
     logout: publicProcedure.mutation(({ ctx }) => {
       const cookieOptions = getSessionCookieOptions(ctx.req);
@@ -80,7 +106,7 @@ export const appRouter = router({
         name: z.string().min(2),
         email: z.string().email(),
         password: z.string().min(6),
-        sector: z.enum(["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações", "Outro"]).optional(),
+        departmentId: z.number().optional(),
       }))
       .mutation(async ({ input }) => {
         // Check if email already exists
@@ -100,7 +126,7 @@ export const appRouter = router({
           name: input.name,
           email: input.email,
           passwordHash,
-          sector: input.sector || "Outro",
+          departmentId: input.departmentId,
           approvalStatus: "pending",
         });
 
@@ -132,7 +158,8 @@ export const appRouter = router({
         name: z.string().min(2),
         email: z.string().email(),
         password: z.string().min(6),
-        sector: z.enum(["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações", "Outro"]).optional(),
+        departmentId: z.number().optional(),
+        groupId: z.number().optional(),
         role: z.enum(["user", "admin"]).default("user"),
       }))
       .mutation(async ({ ctx, input }) => {
@@ -157,7 +184,8 @@ export const appRouter = router({
           name: input.name,
           email: input.email,
           passwordHash,
-          sector: input.sector || "Outro",
+          departmentId: input.departmentId,
+          groupId: input.groupId,
           role: input.role,
           approvalStatus: "approved",
         });
@@ -258,7 +286,7 @@ export const appRouter = router({
       .input(z.object({
         status: z.string().optional(),
         priority: z.string().optional(),
-        sector: z.string().optional(),
+        departmentId: z.number().optional(),
         search: z.string().optional(),
       }).optional())
       .query(async ({ ctx, input }) => {
@@ -286,12 +314,20 @@ export const appRouter = router({
         description: z.string().min(1),
         category: z.enum(["Técnico", "Acesso", "Funcionalidade", "Dúvida", "Outro"]),
         priority: z.enum(["Baixa", "Média", "Alta", "Crítica"]),
-        sector: z.enum(["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações"]),
+        departmentId: z.number().optional(),
+        assignedToId: z.number().optional(),
       }))
       .mutation(async ({ ctx, input }) => {
         const nextNumber = await db.getNextTicketNumber();
         const ticketId = `bilhete_${nextNumber}`;
         const now = Date.now();
+
+        // Get assigned user name if assignedToId is provided
+        let assignedToName = null;
+        if (input.assignedToId) {
+          const assignedUser = await db.getUserById(input.assignedToId);
+          assignedToName = assignedUser?.name || null;
+        }
 
         const ticket = await db.createTicket({
           ticketId,
@@ -299,10 +335,12 @@ export const appRouter = router({
           description: input.description,
           category: input.category,
           priority: input.priority,
-          sector: input.sector,
+          departmentId: input.departmentId,
           status: "Aberto",
           createdById: ctx.user.id,
           createdByName: ctx.user.name || "Usuário",
+          assignedToId: input.assignedToId,
+          assignedToName,
           createdAt: now,
           updatedAt: now,
         });
@@ -331,7 +369,7 @@ export const appRouter = router({
         category: z.enum(["Técnico", "Acesso", "Funcionalidade", "Dúvida", "Outro"]).optional(),
         priority: z.enum(["Baixa", "Média", "Alta", "Crítica"]).optional(),
         status: z.enum(["Aberto", "Em Progresso", "Aguardando", "Resolvido", "Fechado"]).optional(),
-        sector: z.enum(["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações"]).optional(),
+        departmentId: z.number().nullable().optional(),
         assignedToId: z.number().nullable().optional(),
         assignedToName: z.string().nullable().optional(),
       }))
@@ -372,15 +410,17 @@ export const appRouter = router({
           });
         }
 
-        if (input.sector && input.sector !== oldTicket.sector) {
+        if (input.departmentId !== undefined && input.departmentId !== oldTicket.departmentId) {
+          const oldDept = oldTicket.departmentId ? await db.getDepartmentById(oldTicket.departmentId) : null;
+          const newDept = input.departmentId ? await db.getDepartmentById(input.departmentId) : null;
           await db.createActivity({
             ticketId: id,
             type: "sector_change",
             authorId: ctx.user.id,
             authorName: ctx.user.name || "Usuário",
-            oldValue: oldTicket.sector,
-            newValue: input.sector,
-            description: `Setor alterado de "${oldTicket.sector}" para "${input.sector}"`,
+            oldValue: oldDept?.name || "Sem setor",
+            newValue: newDept?.name || "Sem setor",
+            description: `Setor alterado de "${oldDept?.name || "Sem setor"}" para "${newDept?.name || "Sem setor"}"`,
             createdAt: now,
           });
         }
@@ -617,7 +657,7 @@ export const appRouter = router({
         priority: z.enum(["Baixa", "Média", "Alta", "Crítica"]).optional(),
         ownerId: z.number().optional(),
         ownerName: z.string().optional(),
-        sector: z.enum(["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações"]).optional(),
+        departmentId: z.number().nullable().optional(),
         startDate: z.number().nullable().optional(),
         endDate: z.number().nullable().optional(),
       }))
@@ -922,368 +962,492 @@ export const appRouter = router({
       return await db.getApprovedUsers();
     }),
 
-    // updatePermissions: Disabled - permissions no longer stored in users table
-    // updatePermissions: protectedProcedure
-    //   .input(z.object({
-    //     userId: z.number(),
-    //     permissions: z.array(z.string()),
-    //   }))
-    //   .mutation(async ({ ctx, input }) => {
-    //     // Only admins can update permissions
-    //     if (ctx.user?.role !== 'admin') {
-    //       throw new TRPCError({
-    //         code: "FORBIDDEN",
-    //         message: "Apenas administradores podem alterar permissões",
-    //       });
-    //     }
-    //     
-    //     return await db.updateUserPermissions(input.userId, input.permissions);
-    //   }),
-
-    // assignGroup: Disabled - groupId no longer supported in users table
-    // assignGroup: protectedProcedure
-    //   .input(z.object({
-    //     userId: z.number(),
-    //     groupId: z.number().nullable(),
-    //   }))
-    //   .mutation(async ({ ctx, input }) => {
-    //     // Only admins can assign groups
-    //     if (ctx.user?.role !== 'admin') {
-    //       throw new TRPCError({
-    //         code: "FORBIDDEN",
-    //         message: "Apenas administradores podem atribuir grupos",
-    //       });
-    //     }
-    //     
-    //     return await db.assignGroupToUser(input.userId, input.groupId);
-    //   }),
-  }),
-
-  // Stock Management
-  stock: router({
-    // List all items (admin only)
-    listAll: protectedProcedure.query(async ({ ctx }) => {
-      if (ctx.user?.role !== 'admin') {
-        throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
-      }
-      return await db.getAllStockItems();
-    }),
-
-    // List available items (all users)
-    listAvailable: protectedProcedure.query(async () => {
-      return await db.getAvailableStockItems();
-    }),
-
-    // Get low stock items (admin only)
-    getLowStock: protectedProcedure.query(async ({ ctx }) => {
-      if (ctx.user?.role !== 'admin') {
-        throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
-      }
-      return await db.getLowStockItems();
-    }),
-
-    // Get item by ID
-    getById: protectedProcedure
-      .input(z.object({ id: z.number() }))
-      .query(async ({ input }) => {
-        return await db.getStockItemById(input.id);
-      }),
-
-    // Create item (admin only)
-    create: protectedProcedure
+    updatePermissions: protectedProcedure
       .input(z.object({
-        name: z.string().min(1),
-        description: z.string().optional(),
-        category: z.enum(["Computador", "Monitor", "Teclado", "Mouse", "Impressora", "Notebook", "Headset", "Webcam", "Hub USB", "Cabo", "Adaptador", "Outro"]),
-        brand: z.string().optional(),
-        model: z.string().optional(),
-        serialNumber: z.string().optional(),
-        quantity: z.number().default(0),
-        minQuantity: z.number().default(5),
-        location: z.string().optional(),
-        status: z.enum(["Disponível", "Reservado", "Em Manutenção", "Descartado"]).default("Disponível"),
-        unitPrice: z.string().optional(),
-        notes: z.string().optional(),
-        imageUrl: z.string().optional(),
+        userId: z.number(),
+        permissions: z.array(z.string()),
       }))
       .mutation(async ({ ctx, input }) => {
+        // Only admins can update permissions
         if (ctx.user?.role !== 'admin') {
-          throw new TRPCError({ code: "FORBIDDEN", message: "Apenas administradores podem adicionar itens" });
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Apenas administradores podem alterar permissões",
+          });
         }
-        const itemId = await db.createStockItem({
-          ...input,
-          createdById: ctx.user.id,
-          createdByName: ctx.user.name,
-          createdAt: Date.now(),
-          updatedAt: Date.now(),
-        });
-        return { id: itemId };
+        
+        return await db.updateUserPermissions(input.userId, input.permissions);
       }),
 
-    // Update item (admin only)
+    assignGroup: protectedProcedure
+      .input(z.object({
+        userId: z.number(),
+        groupId: z.number().nullable(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        // Only admins can assign groups
+        if (ctx.user?.role !== 'admin') {
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Apenas administradores podem atribuir grupos",
+          });
+        }
+        
+        return await db.assignGroupToUser(input.userId, input.groupId);
+      }),
+  }),
+
+  // ============ DEPARTMENT MANAGEMENT (Admin) ============
+  departments: router({
+    list: protectedProcedure.query(async ({ ctx }) => {
+      // Only admins can list departments
+      if (ctx.user?.role !== 'admin') {
+        throw new TRPCError({
+          code: "FORBIDDEN",
+          message: "Apenas administradores podem gerenciar setores",
+        });
+      }
+      return await db.getAllDepartments();
+    }),
+
+    create: protectedProcedure
+      .input(z.object({
+        name: z.string().min(2),
+        description: z.string().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        // Only admins can create departments
+        if (ctx.user?.role !== 'admin') {
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Apenas administradores podem criar setores",
+          });
+        }
+        return await db.createDepartment(input);
+      }),
+
     update: protectedProcedure
       .input(z.object({
         id: z.number(),
-        name: z.string().optional(),
+        name: z.string().min(2).optional(),
         description: z.string().optional(),
-        category: z.enum(["Computador", "Monitor", "Teclado", "Mouse", "Impressora", "Notebook", "Headset", "Webcam", "Hub USB", "Cabo", "Adaptador", "Outro"]).optional(),
-        brand: z.string().optional(),
-        model: z.string().optional(),
-        serialNumber: z.string().optional(),
-        quantity: z.number().optional(),
-        minQuantity: z.number().optional(),
-        location: z.string().optional(),
-        status: z.enum(["Disponível", "Reservado", "Em Manutenção", "Descartado"]).optional(),
-        unitPrice: z.string().optional(),
-        notes: z.string().optional(),
-        imageUrl: z.string().optional(),
       }))
       .mutation(async ({ ctx, input }) => {
+        // Only admins can update departments
         if (ctx.user?.role !== 'admin') {
-          throw new TRPCError({ code: "FORBIDDEN", message: "Apenas administradores podem editar itens" });
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Apenas administradores podem editar setores",
+          });
         }
         const { id, ...data } = input;
-        await db.updateStockItem(id, { ...data, updatedAt: Date.now() });
-        return { success: true };
+        return await db.updateDepartment(id, data);
       }),
 
-    // Delete item (admin only)
     delete: protectedProcedure
-      .input(z.object({ id: z.number() }))
-      .mutation(async ({ ctx, input }) => {
-        if (ctx.user?.role !== 'admin') {
-          throw new TRPCError({ code: "FORBIDDEN", message: "Apenas administradores podem excluir itens" });
-        }
-        await db.deleteStockItem(input.id);
-        return { success: true };
-      }),
-
-    // Adjust quantity (admin only) - creates movement record
-    adjustQuantity: protectedProcedure
       .input(z.object({
-        itemId: z.number(),
-        newQuantity: z.number(),
-        reason: z.string(),
+        id: z.number(),
       }))
       .mutation(async ({ ctx, input }) => {
+        // Only admins can delete departments
         if (ctx.user?.role !== 'admin') {
-          throw new TRPCError({ code: "FORBIDDEN", message: "Apenas administradores podem ajustar estoque" });
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Apenas administradores podem excluir setores",
+          });
         }
-        
-        const item = await db.getStockItemById(input.itemId);
-        if (!item) {
-          throw new TRPCError({ code: "NOT_FOUND", message: "Item não encontrado" });
-        }
-
-        const previousQty = item.quantity;
-        const quantityChange = input.newQuantity - previousQty;
-
-        // Update stock quantity
-        await db.updateStockQuantity(input.itemId, input.newQuantity);
-
-        // Create movement record
-        await db.createStockMovement({
-          stockItemId: input.itemId,
-          type: "Ajuste",
-          quantity: quantityChange,
-          previousQuantity: previousQty,
-          newQuantity: input.newQuantity,
-          reason: input.reason,
-          performedById: ctx.user.id,
-          performedByName: ctx.user.name,
-          createdAt: Date.now(),
-        });
-
-        return { success: true };
+        return await db.deleteDepartment(input.id);
       }),
 
-    // Get movements for an item
-    getMovements: protectedProcedure
-      .input(z.object({ itemId: z.number() }))
-      .query(async ({ ctx, input }) => {
+    assignToUser: protectedProcedure
+      .input(z.object({
+        userId: z.number(),
+        departmentId: z.number().nullable(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        // Only admins can assign departments
         if (ctx.user?.role !== 'admin') {
-          throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
+          throw new TRPCError({
+            code: "FORBIDDEN",
+            message: "Apenas administradores podem atribuir setores",
+          });
         }
-        return await db.getStockMovementsByItem(input.itemId);
+        return await db.assignDepartmentToUser(input.userId, input.departmentId);
       }),
   }),
 
-  // Stock Requests
-  stockRequests: router({
-    // Create request (all users)
+  // ============ PURCHASING MODULE ============
+  suppliers: router({
+    list: protectedProcedure.query(async () => {
+      return await db.getAllSuppliers();
+    }),
+
+    getById: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getSupplierById(input.id);
+      }),
+
     create: protectedProcedure
       .input(z.object({
-        stockItemId: z.number(),
-        requestedQuantity: z.number().min(1),
-        justification: z.string().min(10),
+        name: z.string().min(1),
+        cnpj: z.string().optional(),
+        email: z.string().email().optional(),
+        phone: z.string().optional(),
+        address: z.string().optional(),
+        city: z.string().optional(),
+        state: z.string().optional(),
+        zipCode: z.string().optional(),
+        contactPerson: z.string().optional(),
+        status: z.enum(["Ativo", "Inativo", "Bloqueado"]).default("Ativo"),
+        notes: z.string().optional(),
       }))
       .mutation(async ({ ctx, input }) => {
-        // Check if item exists and has enough quantity
-        const item = await db.getStockItemById(input.stockItemId);
-        if (!item) {
-          throw new TRPCError({ code: "NOT_FOUND", message: "Item não encontrado" });
-        }
-        if (item.quantity < input.requestedQuantity) {
-          throw new TRPCError({ code: "BAD_REQUEST", message: "Quantidade insuficiente em estoque" });
-        }
-
-        // Create ticket automatically
-        const ticketCount = await db.getTicketCount();
-        const ticketId = `bilhete_${ticketCount + 1}`;
-        const now = Date.now();
-
-        const newTicket = await db.createTicket({
-          ticketId,
-          title: `Solicitação de Estoque: ${item.name}`,
-          description: `**Item:** ${item.name}\n**Quantidade:** ${input.requestedQuantity}\n**Categoria:** ${item.category}\n\n**Justificativa:**\n${input.justification}`,
-          category: "Técnico",
-          priority: "Média",
-          status: "Aberto",
-          sector: "TI",
+        return await db.createSupplier({
+          ...input,
           createdById: ctx.user.id,
-          createdByName: ctx.user.name,
-          createdAt: now,
-          updatedAt: now,
+          createdByName: ctx.user.name || "Usuário",
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
         });
-
-        if (!newTicket) {
-          throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Erro ao criar chamado" });
-        }
-
-        // Create stock request linked to ticket
-        const requestId = await db.createStockRequest({
-          stockItemId: input.stockItemId,
-          requestedQuantity: input.requestedQuantity,
-          justification: input.justification,
-          status: "Pendente",
-          ticketId: newTicket.id,
-          requestedById: ctx.user.id,
-          requestedByName: ctx.user.name,
-          createdAt: now,
-          updatedAt: now,
-        });
-
-        // Create activity log for ticket
-        await db.createActivity({
-          ticketId: newTicket.id,
-          type: "created",
-          description: `Chamado criado automaticamente a partir de solicitação de estoque #${requestId}`,
-          authorId: ctx.user.id,
-          authorName: ctx.user.name,
-          createdAt: now,
-        });
-
-        return { id: requestId, ticketId: newTicket.id };
       }),
 
-    // List all requests (admin)
-    listAll: protectedProcedure.query(async ({ ctx }) => {
-      if (ctx.user?.role !== 'admin') {
-        throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
-      }
-      return await db.getAllStockRequests();
-    }),
-
-    // List user's own requests
-    listMine: protectedProcedure.query(async ({ ctx }) => {
-      return await db.getStockRequestsByUser(ctx.user.id);
-    }),
-
-    // Get pending requests (admin)
-    listPending: protectedProcedure.query(async ({ ctx }) => {
-      if (ctx.user?.role !== 'admin') {
-        throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
-      }
-      return await db.getPendingStockRequests();
-    }),
-
-    // Approve request (admin) - will create ticket in next phase
-    approve: protectedProcedure
-      .input(z.object({ id: z.number() }))
-      .mutation(async ({ ctx, input }) => {
-        if (ctx.user?.role !== 'admin') {
-          throw new TRPCError({ code: "FORBIDDEN", message: "Apenas administradores podem aprovar solicitações" });
-        }
-        await db.approveStockRequest(input.id, ctx.user.id, ctx.user.name);
-        return { success: true };
+    update: protectedProcedure
+      .input(z.object({
+        id: z.number(),
+        name: z.string().min(1).optional(),
+        cnpj: z.string().optional(),
+        email: z.string().email().optional(),
+        phone: z.string().optional(),
+        address: z.string().optional(),
+        city: z.string().optional(),
+        state: z.string().optional(),
+        zipCode: z.string().optional(),
+        contactPerson: z.string().optional(),
+        status: z.enum(["Ativo", "Inativo", "Bloqueado"]).optional(),
+        notes: z.string().optional(),
+      }))
+      .mutation(async ({ input }) => {
+        const { id, ...updates } = input;
+        return await db.updateSupplier(id, updates);
       }),
-
-    // Reject request (admin)
-    reject: protectedProcedure
-      .input(z.object({ id: z.number() }))
-      .mutation(async ({ ctx, input }) => {
-        if (ctx.user?.role !== 'admin') {
-          throw new TRPCError({ code: "FORBIDDEN", message: "Apenas administradores podem rejeitar solicitações" });
-        }
-        await db.rejectStockRequest(input.id, ctx.user.id, ctx.user.name);
-        return { success: true };
-      }),
-
-    // Mark as delivered (admin)
-    markDelivered: protectedProcedure
-      .input(z.object({ id: z.number() }))
-      .mutation(async ({ ctx, input }) => {
-        if (ctx.user?.role !== 'admin') {
-          throw new TRPCError({ code: "FORBIDDEN", message: "Apenas administradores podem marcar como entregue" });
-        }
-        await db.markStockRequestDelivered(input.id);
-        return { success: true };
-      }),
-  }),
-
-  notifications: router({
-    getNotifications: protectedProcedure
-      .input(z.object({ limit: z.number().default(50) }))
-      .query(async ({ ctx, input }) => {
-        return await db.getUserNotifications(ctx.user.id, input.limit);
-      }),
-
-    getUnread: protectedProcedure.query(async ({ ctx }) => {
-      return await db.getUnreadNotifications(ctx.user.id);
-    }),
-
-    getUnreadCount: protectedProcedure.query(async ({ ctx }) => {
-      return await db.getUnreadNotificationCount(ctx.user.id);
-    }),
-
-    markAsRead: protectedProcedure
-      .input(z.object({ id: z.number() }))
-      .mutation(async ({ ctx, input }) => {
-        await db.markNotificationAsRead(input.id);
-        return { success: true };
-      }),
-
-    markAllAsRead: protectedProcedure.mutation(async ({ ctx }) => {
-      await db.markAllNotificationsAsRead(ctx.user.id);
-      return { success: true };
-    }),
 
     delete: protectedProcedure
       .input(z.object({ id: z.number() }))
+      .mutation(async ({ input }) => {
+        return await db.deleteSupplier(input.id);
+      }),
+  }),
+
+  products: router({
+    list: protectedProcedure.query(async () => {
+      return await db.getAllProducts();
+    }),
+
+    getById: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getProductById(input.id);
+      }),
+
+    create: protectedProcedure
+      .input(z.object({
+        code: z.string().min(1),
+        name: z.string().min(1),
+        description: z.string().optional(),
+        category: z.string().optional(),
+        unit: z.string().default("UN"),
+        minStock: z.number().default(0),
+        currentStock: z.number().default(0),
+        status: z.enum(["Ativo", "Inativo"]).default("Ativo"),
+        requiresPrescription: z.boolean().default(false),
+        notes: z.string().optional(),
+      }))
       .mutation(async ({ ctx, input }) => {
-        await db.deleteNotification(input.id);
+        return await db.createProduct({
+          ...input,
+          createdById: ctx.user.id,
+          createdByName: ctx.user.name || "Usuário",
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
+        });
+      }),
+
+    update: protectedProcedure
+      .input(z.object({
+        id: z.number(),
+        code: z.string().min(1).optional(),
+        name: z.string().min(1).optional(),
+        description: z.string().optional(),
+        category: z.string().optional(),
+        unit: z.string().optional(),
+        minStock: z.number().optional(),
+        currentStock: z.number().optional(),
+        status: z.enum(["Ativo", "Inativo"]).optional(),
+        requiresPrescription: z.boolean().optional(),
+        notes: z.string().optional(),
+      }))
+      .mutation(async ({ input }) => {
+        const { id, ...updates } = input;
+        return await db.updateProduct(id, updates);
+      }),
+
+    delete: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input }) => {
+        return await db.deleteProduct(input.id);
+      }),
+  }),
+
+  purchaseOrders: router({
+    list: protectedProcedure.query(async () => {
+      return await db.getAllPurchaseOrders();
+    }),
+
+    getById: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getPurchaseOrderById(input.id);
+      }),
+
+    getItems: protectedProcedure
+      .input(z.object({ purchaseOrderId: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getPurchaseOrderItems(input.purchaseOrderId);
+      }),
+
+    create: protectedProcedure
+      .input(z.object({
+        supplierId: z.number(),
+        supplierName: z.string(),
+        items: z.array(z.object({
+          productId: z.number(),
+          productCode: z.string(),
+          productName: z.string(),
+          quantity: z.number(),
+          unitPrice: z.number(),
+        })),
+        expectedDelivery: z.number().optional(),
+        paymentTerms: z.string().optional(),
+        notes: z.string().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        const { items, ...orderData } = input;
+        
+        // Calculate total
+        const totalAmount = items.reduce((sum, item) => sum + (item.quantity * item.unitPrice), 0);
+        
+        // Generate order number
+        const orderNumber = `PO-${Date.now()}`;
+        
+        // Create purchase order
+        const order = await db.createPurchaseOrder({
+          ...orderData,
+          orderNumber,
+          totalAmount,
+          status: "Rascunho",
+          createdById: ctx.user.id,
+          createdByName: ctx.user.name || "Usuário",
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
+        });
+        
+        if (!order) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Falha ao criar pedido" });
+        
+        // Create order items
+        for (const item of items) {
+          await db.createPurchaseOrderItem({
+            purchaseOrderId: order.id,
+            ...item,
+            totalPrice: item.quantity * item.unitPrice,
+            receivedQuantity: 0,
+            createdAt: Date.now(),
+          });
+        }
+        
+        return order;
+      }),
+
+    updateStatus: protectedProcedure
+      .input(z.object({
+        id: z.number(),
+        status: z.enum(["Rascunho", "Pendente", "Aprovado", "Enviado", "Recebido Parcial", "Recebido", "Cancelado"]),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        const updates: any = { status: input.status };
+        
+        // If approving, set approval info
+        if (input.status === "Aprovado") {
+          updates.approvedById = ctx.user.id;
+          updates.approvedByName = ctx.user.name || "Usuário";
+          updates.approvedAt = Date.now();
+        }
+        
+        return await db.updatePurchaseOrder(input.id, updates);
+      }),
+  }),
+
+  backups: router({
+    list: protectedProcedure.query(async ({ ctx }) => {
+      // Only admins can access backups
+      if (ctx.user.role !== "admin") {
+        throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
+      }
+      const { listBackups } = await import("./backupService");
+      return await listBackups();
+    }),
+
+    create: protectedProcedure.mutation(async ({ ctx }) => {
+      // Only admins can create backups
+      if (ctx.user.role !== "admin") {
+        throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
+      }
+      const { createBackup } = await import("./backupService");
+      const result = await createBackup(ctx.user.name || "Admin");
+      if (!result.success) {
+        throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: result.error || "Falha ao criar backup" });
+      }
+      return result;
+    }),
+
+    verify: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .query(async ({ ctx, input }) => {
+        // Only admins can verify backups
+        if (ctx.user.role !== "admin") {
+          throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
+        }
+        const { verifyBackup } = await import("./backupService");
+        return await verifyBackup(input.id);
+      }),
+
+    restore: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        // Only admins can restore backups
+        if (ctx.user.role !== "admin") {
+          throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
+        }
+        const { restoreBackup } = await import("./backupService");
+        const result = await restoreBackup(input.id);
+        if (!result.success) {
+          throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: result.error || "Falha ao restaurar backup" });
+        }
+        return result;
+      }),
+  }),
+
+  // Purchasing Tasks (Kanban)
+  purchasingTasks: router({
+    list: protectedProcedure.query(async () => {
+      return await db.getAllPurchasingTasks();
+    }),
+
+    getById: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getPurchasingTaskById(input.id);
+      }),
+
+    create: protectedProcedure
+      .input(z.object({
+        title: z.string().min(1),
+        description: z.string().optional(),
+        status: z.enum(["todo", "quoting", "awaiting_approval", "ordered", "received", "completed"]).default("todo"),
+        priority: z.enum(["low", "medium", "high", "urgent"]).default("medium"),
+        assignedToId: z.number().optional(),
+        tags: z.array(z.string()).default([]),
+        dueDate: z.string().optional(),
+        position: z.number().default(0),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        const taskId = await db.createPurchasingTask({
+          ...input,
+          tags: input.tags.length > 0 ? input.tags.join(", ") : null,
+          dueDate: input.dueDate || null,
+          createdById: ctx.user.id,
+        });
+        return { id: taskId };
+      }),
+
+    update: protectedProcedure
+      .input(z.object({
+        id: z.number(),
+        title: z.string().optional(),
+        description: z.string().optional(),
+        status: z.enum(["todo", "quoting", "awaiting_approval", "ordered", "received", "completed"]).optional(),
+        priority: z.enum(["low", "medium", "high", "urgent"]).optional(),
+        assignedToId: z.number().optional(),
+        tags: z.array(z.string()).optional(),
+        dueDate: z.string().optional(),
+        position: z.number().optional(),
+      }))
+      .mutation(async ({ input }) => {
+        const { id, ...data } = input;
+        const updateData = {
+          ...data,
+          tags: data.tags ? (data.tags.length > 0 ? data.tags.join(", ") : null) : undefined,
+        };
+        await db.updatePurchasingTask(id, updateData);
         return { success: true };
       }),
 
-    getPreferences: protectedProcedure.query(async ({ ctx }) => {
-      let prefs = await db.getNotificationPreferences(ctx.user.id);
-      if (!prefs) {
-        prefs = await db.createNotificationPreferences(ctx.user.id);
-      }
-      return prefs;
-    }),
+    delete: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input }) => {
+        await db.deletePurchasingTask(input.id);
+        return { success: true };
+      }),
 
-    updatePreferences: protectedProcedure
+    getByStatus: protectedProcedure
+      .input(z.object({ status: z.string() }))
+      .query(async ({ input }) => {
+        return await db.getPurchasingTasksByStatus(input.status);
+      }),
+  }),
+
+  // Kanban Column Settings
+  kanbanColumns: router({
+    getAll: protectedProcedure
+      .query(async ({ ctx }) => {
+        if (!ctx.user) throw new TRPCError({ code: "UNAUTHORIZED" });
+        return await db.getKanbanColumnSettings(ctx.user.id, "purchasing");
+      }),
+    save: protectedProcedure
       .input(z.object({
-        stockCriticalAlert: z.boolean().optional(),
-        stockLowAlert: z.boolean().optional(),
-        requestApproved: z.boolean().optional(),
-        requestRejected: z.boolean().optional(),
-        requestDelivered: z.boolean().optional(),
-        requestPending: z.boolean().optional(),
+        columnId: z.string(),
+        customName: z.string(),
       }))
       .mutation(async ({ ctx, input }) => {
-        await db.updateNotificationPreferences(ctx.user.id, input);
+        if (!ctx.user) throw new TRPCError({ code: "UNAUTHORIZED" });
+        await db.upsertKanbanColumnSetting({
+          userId: ctx.user.id,
+          module: "purchasing",
+          columnKey: input.columnId,
+          customName: input.customName,
+        });
+        return { success: true };
+      }),
+    getSettings: protectedProcedure
+      .input(z.object({ module: z.string() }))
+      .query(async ({ ctx, input }) => {
+        if (!ctx.user) throw new TRPCError({ code: "UNAUTHORIZED" });
+        return await db.getKanbanColumnSettings(ctx.user.id, input.module);
+      }),
+    updateColumnName: protectedProcedure
+      .input(z.object({
+        module: z.string(),
+        columnKey: z.string(),
+        customName: z.string(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        if (!ctx.user) throw new TRPCError({ code: "UNAUTHORIZED" });
+        await db.upsertKanbanColumnSetting({
+          userId: ctx.user.id,
+          module: input.module,
+          columnKey: input.columnKey,
+          customName: input.customName,
+        });
         return { success: true };
       }),
   }),

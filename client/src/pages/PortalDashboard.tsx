@@ -5,7 +5,8 @@ import {
   MessageSquare, 
   User, 
   Globe, 
-  ShoppingBag, 
+  ShoppingBag,
+  ShoppingCart, 
   Zap, 
   Search, 
   LogOut, 
@@ -15,8 +16,7 @@ import {
   AlertCircle,
   CheckCircle,
   Info,
-  AlertTriangle,
-  Package
+  AlertTriangle
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { hasModulePermission, MODULES } from '@shared/permissions';
@@ -56,11 +56,11 @@ export default function PortalDashboard() {
       description: 'Recursos Humanos'
     },
     { 
-      id: 'ecommerce', 
-      name: 'E-commerce', 
-      icon: <Globe size={32} />, 
-      path: '/modulo/ecommerce',
-      description: 'Loja Virtual'
+      id: 'compras', 
+      name: 'Compras', 
+      icon: <ShoppingCart size={32} />, 
+      path: '/compras',
+      description: 'Gestão de Compras'
     },
     { 
       id: 'marketing', 
@@ -75,13 +75,6 @@ export default function PortalDashboard() {
       icon: <Zap size={32} />, 
       path: '/modulo/tecnologia',
       description: 'Infraestrutura'
-    },
-    { 
-      id: 'estoque', 
-      name: 'Estoque de TI', 
-      icon: <Package size={32} />, 
-      path: user?.role === 'admin' ? '/estoque/admin' : '/estoque',
-      description: 'Gerenciamento de Equipamentos'
     },
   ];
 
@@ -121,7 +114,7 @@ export default function PortalDashboard() {
       <header className="relative z-20 w-full px-8 py-6 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <img src="/neosul-logo.png" alt="Neosul Logo" className="h-10 w-auto" />
-          <h1 className="text-xl font-bold text-white tracking-wider">NEROS JL</h1>
+          <h1 className="text-xl font-bold text-white tracking-wider">NEROS</h1>
         </div>
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-blue-100">
@@ -141,6 +134,12 @@ export default function PortalDashboard() {
                 className="hover:text-white transition opacity-80 flex items-center gap-1"
               >
                 <Info size={14} /> Notícias
+              </button>
+              <button 
+                onClick={() => setLocation('/admin/backups')}
+                className="hover:text-white transition opacity-80 flex items-center gap-1"
+              >
+                <Settings size={14} /> Backups
               </button>
             </>
           )}
@@ -172,10 +171,10 @@ export default function PortalDashboard() {
         {/* Hero Section */}
         <div className="mb-16 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-            Central de Sistemas Neosul
+            Central de Sistemas NEROS
           </h1>
           <p className="text-lg text-blue-100 opacity-90 font-light">
-            Acesse os sistemas, ferramentas e informações disponíveis para o seu perfil.
+            Sistema integrado de gestão. Acesse chamados, projetos e ferramentas de produtividade em um só lugar.
           </p>
         </div>
 

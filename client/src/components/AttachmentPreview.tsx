@@ -40,7 +40,8 @@ export function AttachmentPreview({
   };
 
   return (
-    <motion.div
+    <AnimatePresence>
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -139,5 +140,6 @@ export function AttachmentPreview({
           </div>
         </motion.div>
       </motion.div>
+    </AnimatePresence>
   );
 }

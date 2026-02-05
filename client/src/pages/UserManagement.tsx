@@ -46,6 +46,11 @@ export default function UserManagement() {
     { enabled: isAuthenticated && user?.role === 'admin' && activeTab === 'all' }
   );
 
+  const { data: departments } = trpc.departments.list.useQuery(
+    undefined,
+    { enabled: isAuthenticated && user?.role === 'admin' }
+  );
+
   const approveMutation = trpc.userManagement.approve.useMutation({
     onSuccess: () => {
       toast.success('Usuário aprovado com sucesso!');
@@ -252,10 +257,10 @@ export default function UserManagement() {
                         <p className="text-blue-200 text-sm">{pendingUser.email}</p>
                         <div className="flex items-center gap-3 mt-2">
                           {getStatusBadge(pendingUser.approvalStatus)}
-                          {pendingUser.sector && (
+                          {pendingUser.departmentId && departments && (
                             <span className="inline-flex items-center gap-1 text-xs text-blue-300">
                               <Building2 className="w-3 h-3" />
-                              {pendingUser.sector}
+                              {departments.find(d => d.id === pendingUser.departmentId)?.name || 'Setor desconhecido'}
                             </span>
                           )}
                         </div>
@@ -333,10 +338,15 @@ export default function UserManagement() {
                             </div>
                           </div>
                         </td>
-                        <td className="px-6 py-4 text-blue-200">{listUser.sector || '-'}</td>
-                        {/* <td className="px-6 py-4">
+                        <td className="px-6 py-4 text-blue-200">
+                          {listUser.departmentId && departments
+                            ? departments.find(d => d.id === listUser.departmentId)?.name || '-'
+                            : '-'
+                          }
+                        </td>
+                        <td className="px-6 py-4">
                           <GroupSelector userId={listUser.id} currentGroupId={listUser.groupId} />
-                        </td> */}
+                        </td>
                         <td className="px-6 py-4">{getStatusBadge(listUser.approvalStatus)}</td>
                         <td className="px-6 py-4">{getRoleBadge(listUser.role)}</td>
                         <td className="px-6 py-4 text-blue-300/60 text-sm">

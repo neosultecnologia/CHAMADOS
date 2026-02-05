@@ -53,7 +53,7 @@ function getModuleLabel(module: Module): string {
     chamados: 'Chamados',
     projetos: 'Projetos',
     rh: 'RH',
-    ecommerce: 'E-commerce',
+    compras: 'Compras',
     marketing: 'Marketing',
     tecnologia: 'Tecnologia',
   };

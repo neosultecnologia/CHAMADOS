@@ -1,4 +1,4 @@
-import { eq, desc, and, or, like, sql, gte, lt, gt, asc } from "drizzle-orm";
+import { eq, desc, and, or, like, sql, gte, lt } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import { 
   InsertUser, users, User,
@@ -12,12 +12,20 @@ import {
   projectComments, InsertProjectComment, ProjectComment,
   dailyTasks, InsertDailyTask, DailyTask,
   permissionGroups, InsertPermissionGroup, PermissionGroup,
-  stockItems, InsertStockItem, StockItem,
-  stockMovements, InsertStockMovement, StockMovement,
-  stockRequests, InsertStockRequest, StockRequest,
-  notifications, InsertNotification, Notification,
-  notificationPreferences, InsertNotificationPreference, NotificationPreference
+  departments, InsertDepartment, Department,
+  suppliers, InsertSupplier, Supplier,
+  products, InsertProduct, Product,
+  quotations, InsertQuotation, Quotation,
+  purchaseOrders, InsertPurchaseOrder, PurchaseOrder,
+  purchaseOrderItems, InsertPurchaseOrderItem, PurchaseOrderItem
 } from "../drizzle/schema";
+import * as schema from "../drizzle/schema";
+const purchasingTasks = (schema as any).purchasingTasks;
+type PurchasingTask = any;
+type InsertPurchasingTask = any;
+const kanbanColumnSettings = (schema as any).kanbanColumnSettings;
+type KanbanColumnSetting = any;
+type InsertKanbanColumnSetting = any;
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -41,7 +49,8 @@ export async function createUser(user: {
   name: string;
   email: string;
   passwordHash: string;
-  sector?: string;
+  departmentId?: number;
+  groupId?: number;
   role?: 'user' | 'admin';
   approvalStatus?: 'pending' | 'approved' | 'rejected';
 }): Promise<User | null> {
@@ -56,7 +65,8 @@ export async function createUser(user: {
       loginMethod: 'internal',
       role: user.role || 'user',
       approvalStatus: user.approvalStatus || 'pending',
-      sector: (user.sector as any) || 'Outro',
+      departmentId: user.departmentId,
+      groupId: user.groupId,
     });
     
     const insertId = result[0].insertId;
@@ -240,10 +250,12 @@ export async function updateUserPassword(id: number, passwordHash: string): Prom
 }
 
 export async function updateUserPermissions(id: number, permissions: string[]): Promise<User | null> {
-  // Permissions are no longer stored in users table
-  // This function is kept for backwards compatibility but does nothing
   const db = await getDb();
   if (!db) return null;
+
+  await db.update(users)
+    .set({ permissions: permissions as any })
+    .where(eq(users.id, id));
 
   const updated = await db.select().from(users).where(eq(users.id, id)).limit(1);
   return updated[0] || null;
@@ -278,18 +290,10 @@ export async function getTicketByTicketId(ticketId: string): Promise<Ticket | nu
   return result.length > 0 ? result[0] : null;
 }
 
-export async function getTicketCount(): Promise<number> {
-  const db = await getDb();
-  if (!db) return 0;
-
-  const result = await db.select().from(tickets);
-  return result.length;
-}
-
 export async function getAllTickets(filters?: {
   status?: string;
   priority?: string;
-  sector?: string;
+  departmentId?: number;
   search?: string;
 }): Promise<Ticket[]> {
   const db = await getDb();
@@ -305,8 +309,8 @@ export async function getAllTickets(filters?: {
   if (filters?.priority && filters.priority !== 'all') {
     conditions.push(eq(tickets.priority, filters.priority as any));
   }
-  if (filters?.sector && filters.sector !== 'all') {
-    conditions.push(eq(tickets.sector, filters.sector as any));
+  if (filters?.departmentId) {
+    conditions.push(eq(tickets.departmentId, filters.departmentId));
   }
   if (filters?.search) {
     conditions.push(
@@ -958,334 +962,375 @@ export async function deletePermissionGroup(id: number): Promise<boolean> {
   const db = await getDb();
   if (!db) return false;
 
-  // GroupId is no longer used, just delete the permission group
+  // First, remove group assignment from users
+  await db.update(users).set({ groupId: null }).where(eq(users.groupId, id));
+
   const result = await db.delete(permissionGroups).where(eq(permissionGroups.id, id));
   return result[0].affectedRows > 0;
 }
 
-// export async function assignGroupToUser(userId: number, groupId: number | null): Promise<User | null> {
-//   // GroupId is no longer stored in users table
-//   // This function is kept for backwards compatibility but does nothing
-//   const user = await getUserById(userId);
-//   return user || null;
-// }
-
-// ============================================
-// Stock Management
-// ============================================
-
-export async function getAllStockItems() {
+export async function assignGroupToUser(userId: number, groupId: number | null): Promise<User | null> {
   const db = await getDb();
-  return db!.select().from(stockItems).orderBy(desc(stockItems.createdAt));
+  if (!db) return null;
+
+  // If groupId is provided, copy group permissions to user
+  if (groupId !== null) {
+    const group = await getPermissionGroupById(groupId);
+    if (!group) return null;
+
+    await db.update(users).set({
+      groupId,
+      permissions: group.permissions as any,
+    }).where(eq(users.id, userId));
+  } else {
+    // Remove group assignment
+    await db.update(users).set({ groupId: null }).where(eq(users.id, userId));
+  }
+
+  const user = await getUserById(userId);
+  return user || null;
 }
 
-export async function getStockItemById(id: number) {
-  const db = await getDb();
-  const result = await db!.select().from(stockItems).where(eq(stockItems.id, id));
-  return result[0];
-}
+// ============ DEPARTMENT QUERIES ============
 
-export async function getAvailableStockItems() {
-  const db = await getDb();
-  return db!.select().from(stockItems)
-    .where(and(
-      eq(stockItems.status, "Disponível"),
-      gt(stockItems.quantity, 0)
-    ))
-    .orderBy(desc(stockItems.createdAt));
-}
-
-export async function getLowStockItems() {
-  const db = await getDb();
-  return db!.select().from(stockItems)
-    .where(sql`${stockItems.quantity} <= ${stockItems.minQuantity}`)
-    .orderBy(asc(stockItems.quantity));
-}
-
-export async function createStockItem(data: InsertStockItem) {
-  const db = await getDb();
-  const result = await db!.insert(stockItems).values(data);
-  return result[0].insertId;
-}
-
-export async function updateStockItem(id: number, data: Partial<InsertStockItem>) {
-  const db = await getDb();
-  await db!.update(stockItems).set(data).where(eq(stockItems.id, id));
-}
-
-export async function deleteStockItem(id: number) {
-  const db = await getDb();
-  await db!.delete(stockItems).where(eq(stockItems.id, id));
-}
-
-export async function updateStockQuantity(id: number, newQuantity: number) {
-  const db = await getDb();
-  await db!.update(stockItems).set({ 
-    quantity: newQuantity,
-    updatedAt: Date.now()
-  }).where(eq(stockItems.id, id));
-}
-
-// Stock Movements
-export async function createStockMovement(data: InsertStockMovement) {
-  const db = await getDb();
-  const result = await db!.insert(stockMovements).values(data);
-  return result[0].insertId;
-}
-
-export async function getStockMovementsByItem(stockItemId: number) {
-  const db = await getDb();
-  return db!.select().from(stockMovements)
-    .where(eq(stockMovements.stockItemId, stockItemId))
-    .orderBy(desc(stockMovements.createdAt));
-}
-
-export async function getAllStockMovements() {
-  const db = await getDb();
-  return db!.select().from(stockMovements)
-    .orderBy(desc(stockMovements.createdAt))
-    .limit(100); // Last 100 movements
-}
-
-// Stock Requests
-export async function createStockRequest(data: InsertStockRequest) {
-  const db = await getDb();
-  const result = await db!.insert(stockRequests).values(data);
-  return result[0].insertId;
-}
-
-export async function getStockRequestById(id: number) {
-  const db = await getDb();
-  const result = await db!.select().from(stockRequests).where(eq(stockRequests.id, id));
-  return result[0];
-}
-
-export async function getAllStockRequests() {
-  const db = await getDb();
-  return db!.select().from(stockRequests)
-    .orderBy(desc(stockRequests.createdAt));
-}
-
-export async function getStockRequestsByUser(userId: number) {
-  const db = await getDb();
-  return db!.select().from(stockRequests)
-    .where(eq(stockRequests.requestedById, userId))
-    .orderBy(desc(stockRequests.createdAt));
-}
-
-export async function getPendingStockRequests() {
-  const db = await getDb();
-  return db!.select().from(stockRequests)
-    .where(eq(stockRequests.status, "Pendente"))
-    .orderBy(desc(stockRequests.createdAt));
-}
-
-export async function updateStockRequest(id: number, data: Partial<InsertStockRequest>) {
-  const db = await getDb();
-  await db!.update(stockRequests).set(data).where(eq(stockRequests.id, id));
-}
-
-export async function approveStockRequest(id: number, approvedById: number, approvedByName: string) {
-  const db = await getDb();
-  await db!.update(stockRequests).set({
-    status: "Aprovado",
-    approvedById,
-    approvedByName,
-    approvedAt: Date.now(),
-    updatedAt: Date.now(),
-  }).where(eq(stockRequests.id, id));
-}
-
-export async function rejectStockRequest(id: number, approvedById: number, approvedByName: string) {
-  const db = await getDb();
-  await db!.update(stockRequests).set({
-    status: "Rejeitado",
-    approvedById,
-    approvedByName,
-    approvedAt: Date.now(),
-    updatedAt: Date.now(),
-  }).where(eq(stockRequests.id, id));
-}
-
-export async function markStockRequestDelivered(id: number) {
-  const db = await getDb();
-  await db!.update(stockRequests).set({
-    status: "Entregue",
-    deliveredAt: Date.now(),
-    updatedAt: Date.now(),
-  }).where(eq(stockRequests.id, id));
-}
-
-
-// ============================================
-// Notifications
-// ============================================
-
-export async function createNotification(data: InsertNotification): Promise<Notification | null> {
+export async function createDepartment(data: { name: string; description?: string }): Promise<Department | null> {
   const db = await getDb();
   if (!db) return null;
 
   try {
-    const result = await db.insert(notifications).values(data);
-    const id = result[0].insertId;
-    return await getNotificationById(id);
-  } catch (error) {
-    console.error("[DB] Error creating notification:", error);
-    return null;
-  }
-}
-
-export async function getNotificationById(id: number): Promise<Notification | null> {
-  const db = await getDb();
-  if (!db) return null;
-
-  try {
-    const result = await db.select().from(notifications).where(eq(notifications.id, id));
-    return result[0] || null;
-  } catch (error) {
-    console.error("[DB] Error getting notification:", error);
-    return null;
-  }
-}
-
-export async function getUserNotifications(userId: number, limit: number = 50): Promise<Notification[]> {
-  const db = await getDb();
-  if (!db) return [];
-
-  try {
-    return await db.select().from(notifications)
-      .where(eq(notifications.userId, userId))
-      .orderBy(desc(notifications.createdAt))
-      .limit(limit);
-  } catch (error) {
-    console.error("[DB] Error getting user notifications:", error);
-    return [];
-  }
-}
-
-export async function getUnreadNotifications(userId: number): Promise<Notification[]> {
-  const db = await getDb();
-  if (!db) return [];
-
-  try {
-    return await db.select().from(notifications)
-      .where(and(
-        eq(notifications.userId, userId),
-        eq(notifications.isRead, false)
-      ))
-      .orderBy(desc(notifications.createdAt));
-  } catch (error) {
-    console.error("[DB] Error getting unread notifications:", error);
-    return [];
-  }
-}
-
-export async function markNotificationAsRead(id: number): Promise<void> {
-  const db = await getDb();
-  if (!db) return;
-
-  try {
-    await db.update(notifications).set({
-      isRead: true,
-      readAt: Date.now()
-    }).where(eq(notifications.id, id));
-  } catch (error) {
-    console.error("[DB] Error marking notification as read:", error);
-  }
-}
-
-export async function markAllNotificationsAsRead(userId: number): Promise<void> {
-  const db = await getDb();
-  if (!db) return;
-
-  try {
-    await db.update(notifications).set({
-      isRead: true,
-      readAt: Date.now()
-    }).where(and(
-      eq(notifications.userId, userId),
-      eq(notifications.isRead, false)
-    ));
-  } catch (error) {
-    console.error("[DB] Error marking all notifications as read:", error);
-  }
-}
-
-export async function deleteNotification(id: number): Promise<void> {
-  const db = await getDb();
-  if (!db) return;
-
-  try {
-    await db.delete(notifications).where(eq(notifications.id, id));
-  } catch (error) {
-    console.error("[DB] Error deleting notification:", error);
-  }
-}
-
-export async function getUnreadNotificationCount(userId: number): Promise<number> {
-  const db = await getDb();
-  if (!db) return 0;
-
-  try {
-    const result = await db.select({ count: sql`COUNT(*)` }).from(notifications)
-      .where(and(
-        eq(notifications.userId, userId),
-        eq(notifications.isRead, false)
-      ));
-    return (result[0]?.count as number) || 0;
-  } catch (error) {
-    console.error("[DB] Error getting unread notification count:", error);
-    return 0;
-  }
-}
-
-// Notification Preferences
-export async function getNotificationPreferences(userId: number): Promise<NotificationPreference | null> {
-  const db = await getDb();
-  if (!db) return null;
-
-  try {
-    const result = await db.select().from(notificationPreferences)
-      .where(eq(notificationPreferences.userId, userId));
-    return result[0] || null;
-  } catch (error) {
-    console.error("[DB] Error getting notification preferences:", error);
-    return null;
-  }
-}
-
-export async function createNotificationPreferences(userId: number): Promise<NotificationPreference | null> {
-  const db = await getDb();
-  if (!db) return null;
-
-  try {
-    await db.insert(notificationPreferences).values({
-      userId,
-      stockCriticalAlert: true,
-      stockLowAlert: true,
-      requestApproved: true,
-      requestRejected: true,
-      requestDelivered: true,
-      requestPending: false,
-      updatedAt: Date.now()
+    const result = await db.insert(departments).values({
+      name: data.name,
+      description: data.description,
     });
-    return await getNotificationPreferences(userId);
+    
+    const insertId = result[0].insertId;
+    const created = await db.select().from(departments).where(eq(departments.id, insertId)).limit(1);
+    return created.length > 0 ? created[0] : null;
   } catch (error) {
-    console.error("[DB] Error creating notification preferences:", error);
-    return null;
+    console.error("[Database] Failed to create department:", error);
+    throw error;
   }
 }
 
-export async function updateNotificationPreferences(userId: number, data: Partial<InsertNotificationPreference>): Promise<void> {
+export async function getAllDepartments(): Promise<Department[]> {
   const db = await getDb();
-  if (!db) return;
+  if (!db) return [];
+
+  return await db.select().from(departments).orderBy(departments.name);
+}
+
+export async function getDepartmentById(id: number): Promise<Department | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.select().from(departments).where(eq(departments.id, id)).limit(1);
+  return result.length > 0 ? result[0] : null;
+}
+
+export async function updateDepartment(id: number, data: { name?: string; description?: string }): Promise<Department | null> {
+  const db = await getDb();
+  if (!db) return null;
 
   try {
-    await db.update(notificationPreferences).set({
-      ...data,
-      updatedAt: Date.now()
-    }).where(eq(notificationPreferences.userId, userId));
+    await db.update(departments).set(data).where(eq(departments.id, id));
+    return await getDepartmentById(id);
   } catch (error) {
-    console.error("[DB] Error updating notification preferences:", error);
+    console.error("[Database] Failed to update department:", error);
+    throw error;
+  }
+}
+
+export async function deleteDepartment(id: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  try {
+    // First, remove department assignment from users
+    await db.update(users).set({ departmentId: null }).where(eq(users.departmentId, id));
+
+    const result = await db.delete(departments).where(eq(departments.id, id));
+    return result[0].affectedRows > 0;
+  } catch (error) {
+    console.error("[Database] Failed to delete department:", error);
+    throw error;
+  }
+}
+
+export async function assignDepartmentToUser(userId: number, departmentId: number | null): Promise<User | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    await db.update(users).set({ departmentId }).where(eq(users.id, userId));
+    const user = await getUserById(userId);
+    return user || null;
+  } catch (error) {
+    console.error("[Database] Failed to assign department to user:", error);
+    throw error;
+  }
+}
+
+// ============ SUPPLIERS ============
+
+export async function getAllSuppliers(): Promise<Supplier[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(suppliers).orderBy(desc(suppliers.createdAt));
+}
+
+export async function getSupplierById(id: number): Promise<Supplier | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.select().from(suppliers).where(eq(suppliers.id, id)).limit(1);
+  return result.length > 0 ? result[0] : null;
+}
+
+export async function createSupplier(supplier: InsertSupplier): Promise<Supplier | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.insert(suppliers).values(supplier);
+  const insertId = result[0].insertId;
+  
+  return await getSupplierById(insertId);
+}
+
+export async function updateSupplier(id: number, updates: Partial<InsertSupplier>): Promise<Supplier | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  await db.update(suppliers).set({ ...updates, updatedAt: Date.now() }).where(eq(suppliers.id, id));
+  return await getSupplierById(id);
+}
+
+export async function deleteSupplier(id: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  const result = await db.delete(suppliers).where(eq(suppliers.id, id));
+  return result[0].affectedRows > 0;
+}
+
+// ============ PRODUCTS ============
+
+export async function getAllProducts(): Promise<Product[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(products).orderBy(products.name);
+}
+
+export async function getProductById(id: number): Promise<Product | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.select().from(products).where(eq(products.id, id)).limit(1);
+  return result.length > 0 ? result[0] : null;
+}
+
+export async function createProduct(product: InsertProduct): Promise<Product | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.insert(products).values(product);
+  const insertId = result[0].insertId;
+  
+  return await getProductById(insertId);
+}
+
+export async function updateProduct(id: number, updates: Partial<InsertProduct>): Promise<Product | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  await db.update(products).set({ ...updates, updatedAt: Date.now() }).where(eq(products.id, id));
+  return await getProductById(id);
+}
+
+export async function deleteProduct(id: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  const result = await db.delete(products).where(eq(products.id, id));
+  return result[0].affectedRows > 0;
+}
+
+// ============ QUOTATIONS ============
+
+export async function getAllQuotations(): Promise<Quotation[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(quotations).orderBy(desc(quotations.createdAt));
+}
+
+export async function getQuotationById(id: number): Promise<Quotation | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.select().from(quotations).where(eq(quotations.id, id)).limit(1);
+  return result.length > 0 ? result[0] : null;
+}
+
+export async function createQuotation(quotation: InsertQuotation): Promise<Quotation | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.insert(quotations).values(quotation);
+  const insertId = result[0].insertId;
+  
+  return await getQuotationById(insertId);
+}
+
+export async function updateQuotation(id: number, updates: Partial<InsertQuotation>): Promise<Quotation | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  await db.update(quotations).set({ ...updates, updatedAt: Date.now() }).where(eq(quotations.id, id));
+  return await getQuotationById(id);
+}
+
+// ============ PURCHASE ORDERS ============
+
+export async function getAllPurchaseOrders(): Promise<PurchaseOrder[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(purchaseOrders).orderBy(desc(purchaseOrders.createdAt));
+}
+
+export async function getPurchaseOrderById(id: number): Promise<PurchaseOrder | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.select().from(purchaseOrders).where(eq(purchaseOrders.id, id)).limit(1);
+  return result.length > 0 ? result[0] : null;
+}
+
+export async function createPurchaseOrder(order: InsertPurchaseOrder): Promise<PurchaseOrder | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.insert(purchaseOrders).values(order);
+  const insertId = result[0].insertId;
+  
+  return await getPurchaseOrderById(insertId);
+}
+
+export async function updatePurchaseOrder(id: number, updates: Partial<InsertPurchaseOrder>): Promise<PurchaseOrder | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  await db.update(purchaseOrders).set({ ...updates, updatedAt: Date.now() }).where(eq(purchaseOrders.id, id));
+  return await getPurchaseOrderById(id);
+}
+
+// ============ PURCHASE ORDER ITEMS ============
+
+export async function getPurchaseOrderItems(purchaseOrderId: number): Promise<PurchaseOrderItem[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  return await db.select().from(purchaseOrderItems).where(eq(purchaseOrderItems.purchaseOrderId, purchaseOrderId));
+}
+
+export async function createPurchaseOrderItem(item: InsertPurchaseOrderItem): Promise<PurchaseOrderItem | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  const result = await db.insert(purchaseOrderItems).values(item);
+  const insertId = result[0].insertId;
+  
+  const created = await db.select().from(purchaseOrderItems).where(eq(purchaseOrderItems.id, insertId)).limit(1);
+  return created.length > 0 ? created[0] : null;
+}
+
+export async function updatePurchaseOrderItem(id: number, updates: Partial<InsertPurchaseOrderItem>): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  const result = await db.update(purchaseOrderItems).set(updates).where(eq(purchaseOrderItems.id, id));
+  return result[0].affectedRows > 0;
+}
+
+export async function deletePurchaseOrderItem(id: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  const result = await db.delete(purchaseOrderItems).where(eq(purchaseOrderItems.id, id));
+  return result[0].affectedRows > 0;
+}
+
+// ==================== Purchasing Tasks Functions ====================
+
+export async function getAllPurchasingTasks() {
+  const db = await getDb();
+  return db!.select().from(purchasingTasks).orderBy(purchasingTasks.position);
+}
+
+export async function getPurchasingTaskById(id: number) {
+  const db = await getDb();
+  const result = await db!.select().from(purchasingTasks).where(eq(purchasingTasks.id, id));
+  return result[0] || null;
+}
+
+export async function createPurchasingTask(data: InsertPurchasingTask) {
+  const db = await getDb();
+  const result = await db!.insert(purchasingTasks).values(data) as any;
+  return result.insertId;
+}
+
+export async function updatePurchasingTask(id: number, data: Partial<InsertPurchasingTask>) {
+  const db = await getDb();
+  await db!.update(purchasingTasks).set(data).where(eq(purchasingTasks.id, id));
+}
+
+export async function deletePurchasingTask(id: number) {
+  const db = await getDb();
+  await db!.delete(purchasingTasks).where(eq(purchasingTasks.id, id));
+}
+
+export async function getPurchasingTasksByStatus(status: string) {
+  const db = await getDb();
+  return db!.select().from(purchasingTasks).where(eq(purchasingTasks.status, status)).orderBy(purchasingTasks.position);
+}
+
+// ============================================
+// Kanban Column Settings
+// ============================================
+
+export async function getKanbanColumnSettings(userId: number, module: string) {
+  const db = await getDb();
+  return db!.select().from(kanbanColumnSettings)
+    .where(and(
+      eq(kanbanColumnSettings.userId, userId),
+      eq(kanbanColumnSettings.module, module)
+    ));
+}
+
+export async function upsertKanbanColumnSetting(data: InsertKanbanColumnSetting) {
+  const db = await getDb();
+  
+  // Check if setting exists
+  const existing = await db!.select().from(kanbanColumnSettings)
+    .where(and(
+      eq(kanbanColumnSettings.userId, data.userId),
+      eq(kanbanColumnSettings.module, data.module),
+      eq(kanbanColumnSettings.columnKey, data.columnKey)
+    ));
+  
+  if (existing.length > 0) {
+    // Update existing
+    await db!.update(kanbanColumnSettings)
+      .set({ customName: data.customName, updatedAt: new Date() })
+      .where(and(
+        eq(kanbanColumnSettings.userId, data.userId),
+        eq(kanbanColumnSettings.module, data.module),
+        eq(kanbanColumnSettings.columnKey, data.columnKey)
+      ));
+  } else {
+    // Insert new
+    await db!.insert(kanbanColumnSettings).values(data);
   }
 }

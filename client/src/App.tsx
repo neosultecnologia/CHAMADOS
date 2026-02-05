@@ -13,9 +13,12 @@ import UserManagement from "./pages/UserManagement";
 import Projects from "./pages/Projects";
 import ProjectsDashboard from "./pages/ProjectsDashboard";
 import Announcements from "./pages/Announcements";
+import BackupManagement from "./pages/BackupManagement";
 import PermissionGroupsManagement from "./pages/PermissionGroupsManagement";
-import StockManagement from "./pages/StockManagement";
-import StockCatalog from "./pages/StockCatalog";
+import Suppliers from "./pages/Suppliers";
+import Products from "./pages/Products";
+import PurchaseOrders from "./pages/PurchaseOrders";
+import PurchasingTasks from "./pages/PurchasingTasks";
 import LoadingDemo from "./pages/LoadingDemo";
 import LoadingSpinner from "./components/LoadingSpinner";
 import { PageTransition } from "./components/PageTransition";
@@ -68,16 +71,6 @@ function Router() {
         <ProtectedRoute component={Dashboard} />
       </Route>
 
-      {/* Stock Management (Admin only) */}
-      <Route path="/estoque/admin">
-        <ProtectedRoute component={StockManagement} />
-      </Route>
-
-      {/* Stock Catalog (All users) */}
-      <Route path="/estoque">
-        <ProtectedRoute component={StockCatalog} />
-      </Route>
-
       {/* User Management (Admin only) */}
       <Route path="/admin/usuarios">
         <ProtectedRoute component={UserManagement} />
@@ -98,6 +91,11 @@ function Router() {
         <ProtectedRoute component={Announcements} />
       </Route>
       
+      {/* Admin - Backup Management */}
+      <Route path="/admin/backups">
+        <ProtectedRoute component={BackupManagement} />
+      </Route>
+      
       {/* Admin - Permission Groups Management */}
       <Route path="/grupos-permissoes">
         <ProtectedRoute component={PermissionGroupsManagement} />
@@ -110,8 +108,18 @@ function Router() {
       <Route path="/modulo/rh">
         <ProtectedRoute component={() => <ModulePlaceholder title="RH" />} />
       </Route>
-      <Route path="/modulo/ecommerce">
-        <ProtectedRoute component={() => <ModulePlaceholder title="E-commerce" />} />
+      {/* Purchasing Module - Redirect to Tarefas */}
+      <Route path="/compras">
+        <Redirect to="/compras/tarefas" />
+      </Route>
+      <Route path="/compras/fornecedores">
+        <ProtectedRoute component={Suppliers} />
+      </Route>
+      <Route path="/compras/produtos">
+        <ProtectedRoute component={Products} />
+      </Route>
+      <Route path="/compras/tarefas">
+        <ProtectedRoute component={PurchasingTasks} />
       </Route>
       <Route path="/modulo/marketing">
         <ProtectedRoute component={() => <ModulePlaceholder title="Marketing" />} />

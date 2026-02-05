@@ -11,7 +11,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { toast } from "sonner";
+import { Plus } from "lucide-react";
 
 interface EditUserModalProps {
   isOpen: boolean;
@@ -20,6 +28,7 @@ interface EditUserModalProps {
     id: number;
     name: string;
     email: string;
+    departmentId?: number | null;
   };
   onSuccess?: () => void;
 }
@@ -32,12 +41,36 @@ export function EditUserModal({
 }: EditUserModalProps) {
   const [name, setName] = useState(user.name);
   const [email, setEmail] = useState(user.email);
+  const [departmentId, setDepartmentId] = useState<number | null | undefined>(user.departmentId);
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [showNewDepartment, setShowNewDepartment] = useState(false);
+  const [newDepartmentName, setNewDepartmentName] = useState('');
 
+  const utils = trpc.useUtils();
+  const { data: departments } = trpc.departments.list.useQuery();
   const updateUserMutation = trpc.userManagement.updateUser.useMutation();
   const resetPasswordMutation = trpc.userManagement.resetPassword.useMutation();
+  const assignDepartmentMutation = trpc.departments.assignToUser.useMutation();
+  const createDepartmentMutation = trpc.departments.create.useMutation({
+    onSuccess: (newDept) => {
+      toast.success('Setor criado com sucesso!');
+      utils.departments.list.invalidate();
+      if (newDept) {
+        setDepartmentId(newDept.id);
+        assignDepartmentMutation.mutate({
+          userId: user.id,
+          departmentId: newDept.id,
+        });
+      }
+      setShowNewDepartment(false);
+      setNewDepartmentName('');
+    },
+    onError: (error: any) => {
+      toast.error(error.message || 'Erro ao criar setor');
+    },
+  });
 
   const handleUpdateUser = async () => {
     if (!name.trim() || !email.trim()) {
@@ -131,6 +164,92 @@ export function EditUserModal({
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="email@example.com"
               />
+            </div>
+
+            <div>
+              <Label htmlFor="department">Setor</Label>
+              {showNewDepartment ? (
+                <div className="flex gap-2">
+                  <Input
+                    value={newDepartmentName}
+                    onChange={(e) => setNewDepartmentName(e.target.value)}
+                    placeholder="Nome do setor"
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter') {
+                        e.preventDefault();
+                        if (newDepartmentName.trim()) {
+                          createDepartmentMutation.mutate({ name: newDepartmentName.trim() });
+                        }
+                      }
+                    }}
+                  />
+                  <Button
+                    type="button"
+                    size="sm"
+                    onClick={() => {
+                      if (newDepartmentName.trim()) {
+                        createDepartmentMutation.mutate({ name: newDepartmentName.trim() });
+                      }
+                    }}
+                    disabled={createDepartmentMutation.isPending}
+                    className="bg-green-600 hover:bg-green-700 text-white"
+                  >
+                    ✓
+                  </Button>
+                  <Button
+                    type="button"
+                    size="sm"
+                    variant="outline"
+                    onClick={() => {
+                      setShowNewDepartment(false);
+                      setNewDepartmentName('');
+                    }}
+                  >
+                    ✕
+                  </Button>
+                </div>
+              ) : (
+                <div className="flex gap-2">
+                  <Select
+                    value={departmentId?.toString() || "none"}
+                    onValueChange={async (value) => {
+                      const newDeptId = value === "none" ? null : parseInt(value);
+                      setDepartmentId(newDeptId);
+                      try {
+                        await assignDepartmentMutation.mutateAsync({
+                          userId: user.id,
+                          departmentId: newDeptId,
+                        });
+                        toast.success("Setor atualizado com sucesso");
+                        onSuccess?.();
+                      } catch (error: any) {
+                        toast.error(error.message || "Erro ao atualizar setor");
+                      }
+                    }}
+                  >
+                    <SelectTrigger>
+                      <SelectValue placeholder="Selecione um setor" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="none">Sem setor</SelectItem>
+                      {departments?.map((dept) => (
+                        <SelectItem key={dept.id} value={dept.id.toString()}>
+                          {dept.name}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  <Button
+                    type="button"
+                    size="sm"
+                    onClick={() => setShowNewDepartment(true)}
+                    variant="outline"
+                    title="Criar novo setor"
+                  >
+                    <Plus className="w-4 h-4" />
+                  </Button>
+                </div>
+              )}
             </div>
 
             <div className="flex gap-2 pt-4">

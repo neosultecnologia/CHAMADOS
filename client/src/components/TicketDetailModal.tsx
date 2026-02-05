@@ -4,7 +4,7 @@ import { useAuth } from '@/_core/hooks/useAuth';
 import { X, Send, Paperclip, AlertCircle, CheckCircle, Clock, Pause, XCircle, User, Briefcase, Tag, Calendar, Loader2, Download, Eye } from 'lucide-react';
 import { FileUpload } from './FileUpload';
 import { AttachmentPreview } from './AttachmentPreview';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { formatDistanceToNow } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { toast } from 'sonner';
@@ -33,9 +33,10 @@ const priorityColors: Record<string, string> = {
 
 export default function TicketDetailModal({ ticket, onClose, onUpdate }: TicketDetailModalProps) {
   const { user } = useAuth();
+  const isAdmin = user?.role === 'admin';
   const [commentText, setCommentText] = useState('');
   const [selectedStatus, setSelectedStatus] = useState(ticket.status);
-  const [selectedSector, setSelectedSector] = useState(ticket.sector);
+  const [selectedDepartmentId, setSelectedDepartmentId] = useState<number | null>(ticket.departmentId);
   const [selectedAssigned, setSelectedAssigned] = useState(ticket.assignedToName || '');
 
   // Fetch comments for this ticket
@@ -47,8 +48,9 @@ export default function TicketDetailModal({ ticket, onClose, onUpdate }: TicketD
   // Fetch attachments for this ticket
   const { data: attachments = [], refetch: refetchAttachments } = trpc.attachments.list.useQuery({ ticketId: ticket.id });
 
-  // Fetch users for assignment dropdown
-  const { data: users = [] } = trpc.users.list.useQuery();
+  // Fetch users and departments for dropdowns
+  const { data: users = [] } = trpc.userManagement.listAll.useQuery();
+  const { data: departments = [] } = trpc.departments.list.useQuery();
 
   // Mutations
   const updateTicketMutation = trpc.tickets.update.useMutation({
@@ -81,11 +83,11 @@ export default function TicketDetailModal({ ticket, onClose, onUpdate }: TicketD
     });
   };
 
-  const handleSectorChange = (newSector: string) => {
-    setSelectedSector(newSector);
+  const handleDepartmentChange = (newDepartmentId: number | null) => {
+    setSelectedDepartmentId(newDepartmentId);
     updateTicketMutation.mutate({
       id: ticket.id,
-      sector: newSector as any,
+      departmentId: newDepartmentId,
     });
   };
 
@@ -132,8 +134,7 @@ export default function TicketDetailModal({ ticket, onClose, onUpdate }: TicketD
 
   return (
     <>
-    <AnimatePresence mode="wait">
-      <motion.div
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -306,35 +307,39 @@ export default function TicketDetailModal({ ticket, onClose, onUpdate }: TicketD
               <div>
                 <label className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2 block">Setor</label>
                 <select
-                  value={selectedSector}
-                  onChange={(e) => handleSectorChange(e.target.value)}
+                  value={selectedDepartmentId?.toString() || ""}
+                  onChange={(e) => handleDepartmentChange(e.target.value ? parseInt(e.target.value) : null)}
                   disabled={updateTicketMutation.isPending}
                   className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/10 text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-colors"
                 >
-                  <option value="TI">TI</option>
-                  <option value="RH">RH</option>
-                  <option value="Financeiro">Financeiro</option>
-                  <option value="Comercial">Comercial</option>
-                  <option value="Suporte">Suporte</option>
-                  <option value="Operações">Operações</option>
+                  <option value="">Sem setor</option>
+                  {departments.map(dept => (
+                    <option key={dept.id} value={dept.id}>{dept.name}</option>
+                  ))}
                 </select>
               </div>
 
               <div>
                 <label className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2 block">Responsável</label>
-                <select
-                  value={selectedAssigned}
-                  onChange={(e) => handleAssignChange(e.target.value)}
-                  disabled={updateTicketMutation.isPending}
-                  className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/10 text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-colors"
-                >
-                  <option value="">Não atribuído</option>
-                  {users.map((u) => (
-                    <option key={u.id} value={u.name || ''}>
-                      {u.name || `Usuário ${u.id}`}
-                    </option>
-                  ))}
-                </select>
+                {isAdmin ? (
+                  <select
+                    value={selectedAssigned}
+                    onChange={(e) => handleAssignChange(e.target.value)}
+                    disabled={updateTicketMutation.isPending}
+                    className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/10 text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-colors"
+                  >
+                    <option value="">Não atribuído</option>
+                    {users.map((u) => (
+                      <option key={u.id} value={u.name || ''}>
+                        {u.name || `Usuário ${u.id}`}
+                      </option>
+                    ))}
+                  </select>
+                ) : (
+                  <div className="w-full px-3 py-2 rounded-lg bg-slate-800/50 border border-white/10 text-slate-300">
+                    {selectedAssigned || 'Não atribuído'}
+                  </div>
+                )}
               </div>
             </div>
 
@@ -404,19 +409,16 @@ export default function TicketDetailModal({ ticket, onClose, onUpdate }: TicketD
         </div>
       </motion.div>
     </motion.div>
-    </AnimatePresence>
 
     {/* Attachment Preview */}
-    <AnimatePresence>
-      {previewAttachment && (
-        <AttachmentPreview
-          fileUrl={previewAttachment.fileUrl}
-          fileName={previewAttachment.fileName}
-          mimeType={previewAttachment.mimeType}
-          onClose={() => setPreviewAttachment(null)}
-        />
-      )}
-    </AnimatePresence>
+    {previewAttachment && (
+      <AttachmentPreview
+        fileUrl={previewAttachment.fileUrl}
+        fileName={previewAttachment.fileName}
+        mimeType={previewAttachment.mimeType}
+        onClose={() => setPreviewAttachment(null)}
+      />
+    )}
     </>
   );
 }
