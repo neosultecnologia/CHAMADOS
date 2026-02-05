@@ -307,15 +307,13 @@ export default function Dashboard() {
         />
       )}
 
-      <AnimatePresence mode="wait">
-        {selectedTicket && (
-          <TicketDetailModal
-            ticket={selectedTicket}
-            onClose={() => setSelectedTicket(null)}
-            onUpdate={handleTicketUpdated}
-          />
-        )}
-      </AnimatePresence>
+      {selectedTicket && (
+        <TicketDetailModal
+          ticket={selectedTicket}
+          onClose={() => setSelectedTicket(null)}
+          onUpdate={handleTicketUpdated}
+        />
+      )}
     </div>
   );
 }
