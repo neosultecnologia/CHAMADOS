@@ -3,7 +3,7 @@ import { useAuth } from '@/_core/hooks/useAuth';
 import { trpc } from '@/lib/trpc';
 import { useLocation } from 'wouter';
 import { LogOut, Menu, X, Plus, Search, Filter, Loader2 } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { toast } from 'sonner';
 import TicketsList from '@/components/TicketsList';
 import CreateTicketModal from '@/components/CreateTicketModal';
@@ -307,13 +307,15 @@ export default function Dashboard() {
         />
       )}
 
-      {selectedTicket && (
-        <TicketDetailModal
-          ticket={selectedTicket}
-          onClose={() => setSelectedTicket(null)}
-          onUpdate={handleTicketUpdated}
-        />
-      )}
+      <AnimatePresence mode="wait">
+        {selectedTicket && (
+          <TicketDetailModal
+            ticket={selectedTicket}
+            onClose={() => setSelectedTicket(null)}
+            onUpdate={handleTicketUpdated}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }

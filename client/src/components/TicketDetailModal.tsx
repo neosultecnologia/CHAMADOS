@@ -4,7 +4,7 @@ import { useAuth } from '@/_core/hooks/useAuth';
 import { X, Send, Paperclip, AlertCircle, CheckCircle, Clock, Pause, XCircle, User, Briefcase, Tag, Calendar, Loader2, Download, Eye } from 'lucide-react';
 import { FileUpload } from './FileUpload';
 import { AttachmentPreview } from './AttachmentPreview';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { formatDistanceToNow } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { toast } from 'sonner';
@@ -132,7 +132,8 @@ export default function TicketDetailModal({ ticket, onClose, onUpdate }: TicketD
 
   return (
     <>
-    <motion.div
+    <AnimatePresence mode="wait">
+      <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -403,6 +404,7 @@ export default function TicketDetailModal({ ticket, onClose, onUpdate }: TicketD
         </div>
       </motion.div>
     </motion.div>
+    </AnimatePresence>
 
     {/* Attachment Preview */}
     {previewAttachment && (
