@@ -171,7 +171,6 @@ export default function PurchasingTasks() {
         {/* Kanban Board */}
         <PurchasingKanban
           tasks={tasks}
-          onTaskMove={handleTaskMove}
           onTaskClick={handleTaskClick}
           onCreateTask={handleCreateTask}
         />

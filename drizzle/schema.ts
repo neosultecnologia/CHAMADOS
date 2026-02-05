@@ -407,3 +407,21 @@ export const purchasingTasks = mysqlTable("purchasing_tasks", {
 
 export type PurchasingTask = typeof purchasingTasks.$inferSelect;
 export type InsertPurchasingTask = typeof purchasingTasks.$inferInsert;
+
+/**
+ * Kanban Column Settings - stores custom names for Kanban columns
+ */
+export const kanbanColumnSettings = mysqlTable("kanban_column_settings", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull(), // Each user can have their own column names
+  module: varchar("module", { length: 50 }).notNull(), // e.g., "purchasing_tasks"
+  columnKey: varchar("columnKey", { length: 50 }).notNull(), // e.g., "todo", "quoting", etc.
+  customName: varchar("customName", { length: 100 }).notNull(), // User's custom name
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+}, (table) => ({
+  userModuleColumnIdx: index("user_module_column_idx").on(table.userId, table.module, table.columnKey),
+}));
+
+export type KanbanColumnSetting = typeof kanbanColumnSettings.$inferSelect;
+export type InsertKanbanColumnSetting = typeof kanbanColumnSettings.$inferInsert;

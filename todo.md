@@ -546,3 +546,25 @@
 - [x] Encontrar onde o código usa .join() sem verificar se o valor é null (linhas 262 e 362)
 - [x] Adicionar validação (tags || []) antes de usar .join() em arrays
 - [x] Testar criação/edição de tarefa novamente - funcionando perfeitamente
+
+## Personalização de Colunas do Kanban
+- [ ] Criar tabela no banco para armazenar nomes personalizados das colunas
+- [ ] Adicionar procedures tRPC para salvar/buscar nomes das colunas
+- [ ] Implementar UI com ícone de edição ao lado do nome de cada coluna
+- [ ] Criar modal ou input inline para editar nome da coluna
+- [ ] Testar renomeação e persistência dos nomes personalizados
+
+## Reimplementação de Renomeação de Colunas com Modal
+- [ ] Remover implementação inline atual que não funciona
+- [ ] Criar componente RenameColumnDialog com shadcn/ui Dialog
+- [ ] Adicionar ícone de edição que abre o modal
+- [ ] Implementar formulário de renomeação no modal
+- [ ] Conectar com backend tRPC (já implementado)
+- [ ] Testar personalização e persistência dos nomes
+
+## Correção de Salvamento de Nomes de Colunas
+- [ ] Investigar por que mutation kanbanColumns.save não é chamada
+- [ ] Verificar se handleRenameColumn está conectado corretamente ao modal
+- [ ] Adicionar logs para debug do fluxo de salvamento
+- [ ] Testar se mutation funciona corretamente após correção
+- [ ] Verificar se nomes personalizados persistem após reload

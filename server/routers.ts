@@ -1405,6 +1405,52 @@ export const appRouter = router({
         return await db.getPurchasingTasksByStatus(input.status);
       }),
   }),
+
+  // Kanban Column Settings
+  kanbanColumns: router({
+    getAll: protectedProcedure
+      .query(async ({ ctx }) => {
+        if (!ctx.user) throw new TRPCError({ code: "UNAUTHORIZED" });
+        return await db.getKanbanColumnSettings(ctx.user.id, "purchasing");
+      }),
+    save: protectedProcedure
+      .input(z.object({
+        columnId: z.string(),
+        customName: z.string(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        if (!ctx.user) throw new TRPCError({ code: "UNAUTHORIZED" });
+        await db.upsertKanbanColumnSetting({
+          userId: ctx.user.id,
+          module: "purchasing",
+          columnKey: input.columnId,
+          customName: input.customName,
+        });
+        return { success: true };
+      }),
+    getSettings: protectedProcedure
+      .input(z.object({ module: z.string() }))
+      .query(async ({ ctx, input }) => {
+        if (!ctx.user) throw new TRPCError({ code: "UNAUTHORIZED" });
+        return await db.getKanbanColumnSettings(ctx.user.id, input.module);
+      }),
+    updateColumnName: protectedProcedure
+      .input(z.object({
+        module: z.string(),
+        columnKey: z.string(),
+        customName: z.string(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        if (!ctx.user) throw new TRPCError({ code: "UNAUTHORIZED" });
+        await db.upsertKanbanColumnSetting({
+          userId: ctx.user.id,
+          module: input.module,
+          columnKey: input.columnKey,
+          customName: input.customName,
+        });
+        return { success: true };
+      }),
+  }),
 });
 
 export type AppRouter = typeof appRouter;

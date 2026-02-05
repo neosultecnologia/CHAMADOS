@@ -23,6 +23,9 @@ import * as schema from "../drizzle/schema";
 const purchasingTasks = (schema as any).purchasingTasks;
 type PurchasingTask = any;
 type InsertPurchasingTask = any;
+const kanbanColumnSettings = (schema as any).kanbanColumnSettings;
+type KanbanColumnSetting = any;
+type InsertKanbanColumnSetting = any;
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -1291,4 +1294,43 @@ export async function deletePurchasingTask(id: number) {
 export async function getPurchasingTasksByStatus(status: string) {
   const db = await getDb();
   return db!.select().from(purchasingTasks).where(eq(purchasingTasks.status, status)).orderBy(purchasingTasks.position);
+}
+
+// ============================================
+// Kanban Column Settings
+// ============================================
+
+export async function getKanbanColumnSettings(userId: number, module: string) {
+  const db = await getDb();
+  return db!.select().from(kanbanColumnSettings)
+    .where(and(
+      eq(kanbanColumnSettings.userId, userId),
+      eq(kanbanColumnSettings.module, module)
+    ));
+}
+
+export async function upsertKanbanColumnSetting(data: InsertKanbanColumnSetting) {
+  const db = await getDb();
+  
+  // Check if setting exists
+  const existing = await db!.select().from(kanbanColumnSettings)
+    .where(and(
+      eq(kanbanColumnSettings.userId, data.userId),
+      eq(kanbanColumnSettings.module, data.module),
+      eq(kanbanColumnSettings.columnKey, data.columnKey)
+    ));
+  
+  if (existing.length > 0) {
+    // Update existing
+    await db!.update(kanbanColumnSettings)
+      .set({ customName: data.customName, updatedAt: new Date() })
+      .where(and(
+        eq(kanbanColumnSettings.userId, data.userId),
+        eq(kanbanColumnSettings.module, data.module),
+        eq(kanbanColumnSettings.columnKey, data.columnKey)
+      ));
+  } else {
+    // Insert new
+    await db!.insert(kanbanColumnSettings).values(data);
+  }
 }
