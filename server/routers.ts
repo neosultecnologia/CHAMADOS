@@ -922,39 +922,41 @@ export const appRouter = router({
       return await db.getApprovedUsers();
     }),
 
-    updatePermissions: protectedProcedure
-      .input(z.object({
-        userId: z.number(),
-        permissions: z.array(z.string()),
-      }))
-      .mutation(async ({ ctx, input }) => {
-        // Only admins can update permissions
-        if (ctx.user?.role !== 'admin') {
-          throw new TRPCError({
-            code: "FORBIDDEN",
-            message: "Apenas administradores podem alterar permissões",
-          });
-        }
-        
-        return await db.updateUserPermissions(input.userId, input.permissions);
-      }),
+    // updatePermissions: Disabled - permissions no longer stored in users table
+    // updatePermissions: protectedProcedure
+    //   .input(z.object({
+    //     userId: z.number(),
+    //     permissions: z.array(z.string()),
+    //   }))
+    //   .mutation(async ({ ctx, input }) => {
+    //     // Only admins can update permissions
+    //     if (ctx.user?.role !== 'admin') {
+    //       throw new TRPCError({
+    //         code: "FORBIDDEN",
+    //         message: "Apenas administradores podem alterar permissões",
+    //       });
+    //     }
+    //     
+    //     return await db.updateUserPermissions(input.userId, input.permissions);
+    //   }),
 
-    assignGroup: protectedProcedure
-      .input(z.object({
-        userId: z.number(),
-        groupId: z.number().nullable(),
-      }))
-      .mutation(async ({ ctx, input }) => {
-        // Only admins can assign groups
-        if (ctx.user?.role !== 'admin') {
-          throw new TRPCError({
-            code: "FORBIDDEN",
-            message: "Apenas administradores podem atribuir grupos",
-          });
-        }
-        
-        return await db.assignGroupToUser(input.userId, input.groupId);
-      }),
+    // assignGroup: Disabled - groupId no longer supported in users table
+    // assignGroup: protectedProcedure
+    //   .input(z.object({
+    //     userId: z.number(),
+    //     groupId: z.number().nullable(),
+    //   }))
+    //   .mutation(async ({ ctx, input }) => {
+    //     // Only admins can assign groups
+    //     if (ctx.user?.role !== 'admin') {
+    //       throw new TRPCError({
+    //         code: "FORBIDDEN",
+    //         message: "Apenas administradores podem atribuir grupos",
+    //       });
+    //     }
+    //     
+    //     return await db.assignGroupToUser(input.userId, input.groupId);
+    //   }),
   }),
 
   // Stock Management

@@ -238,12 +238,10 @@ export async function updateUserPassword(id: number, passwordHash: string): Prom
 }
 
 export async function updateUserPermissions(id: number, permissions: string[]): Promise<User | null> {
+  // Permissions are no longer stored in users table
+  // This function is kept for backwards compatibility but does nothing
   const db = await getDb();
   if (!db) return null;
-
-  await db.update(users)
-    .set({ permissions: permissions as any })
-    .where(eq(users.id, id));
 
   const updated = await db.select().from(users).where(eq(users.id, id)).limit(1);
   return updated[0] || null;
@@ -958,31 +956,14 @@ export async function deletePermissionGroup(id: number): Promise<boolean> {
   const db = await getDb();
   if (!db) return false;
 
-  // First, remove group assignment from users
-  await db.update(users).set({ groupId: null }).where(eq(users.groupId, id));
-
+  // GroupId is no longer used, just delete the permission group
   const result = await db.delete(permissionGroups).where(eq(permissionGroups.id, id));
   return result[0].affectedRows > 0;
 }
 
 export async function assignGroupToUser(userId: number, groupId: number | null): Promise<User | null> {
-  const db = await getDb();
-  if (!db) return null;
-
-  // If groupId is provided, copy group permissions to user
-  if (groupId !== null) {
-    const group = await getPermissionGroupById(groupId);
-    if (!group) return null;
-
-    await db.update(users).set({
-      groupId,
-      permissions: group.permissions as any,
-    }).where(eq(users.id, userId));
-  } else {
-    // Remove group assignment
-    await db.update(users).set({ groupId: null }).where(eq(users.id, userId));
-  }
-
+  // GroupId is no longer stored in users table
+  // This function is kept for backwards compatibility but does nothing
   const user = await getUserById(userId);
   return user || null;
 }

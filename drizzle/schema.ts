@@ -18,10 +18,6 @@ export const users = mysqlTable("users", {
   approvalStatus: mysqlEnum("approvalStatus", ["pending", "approved", "rejected"]).default("pending").notNull(),
   /** Sector/department the user belongs to */
   sector: mysqlEnum("sector", ["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações", "Outro"]).default("Outro"),
-  /** Permission group ID (optional) */
-  groupId: int("groupId"),
-  /** Module permissions stored as JSON array */
-  permissions: json("permissions").$defaultFn(() => []),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
   lastSignedIn: timestamp("lastSignedIn"),
