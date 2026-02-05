@@ -646,3 +646,14 @@
 - [x] Admins devem ver todos os chamados
 - [x] Testar fluxo completo de finalização do chat (10 testes passando)
 - [x] Testar visibilidade de chamados por role (admin vs user)
+
+## Sistema de Avaliação de Atendimento
+- [x] Criar tabela chat_ratings no banco de dados (estrelas, comentário, conversationId)
+- [x] Implementar funções de banco de dados para avaliações
+- [x] Criar router tRPC para enviar avaliação
+- [x] Criar router tRPC para listar avaliações (admin)
+- [x] Criar componente RatingModal com estrelas (1-5) e campo de comentário
+- [x] Integrar avaliação no fluxo de finalização do chat
+- [x] Mostrar tela de avaliação quando operador finalizar atendimento
+- [x] Permitir usuário pular avaliação se desejar
+- [x] Testar sistema completo de avaliação (13 testes passando)

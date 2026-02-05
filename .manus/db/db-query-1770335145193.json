@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS chat_ratings (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  conversationId INT NOT NULL,\n  userId INT NOT NULL,\n  userName VARCHAR(255) NOT NULL,\n  operatorId INT NOT NULL,\n  operatorName VARCHAR(255) NOT NULL,\n  rating INT NOT NULL,\n  comment TEXT,\n  createdAt BIGINT NOT NULL,\n  INDEX rating_conversation_idx (conversationId),\n  INDEX rating_user_idx (userId),\n  INDEX rating_operator_idx (operatorId),\n  INDEX rating_rating_idx (rating)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user M967bVXfxXUhp7W.root --database JLPd83LStLYaV7mJXtu8eL --execute CREATE TABLE IF NOT EXISTS chat_ratings (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  conversationId INT NOT NULL,\n  userId INT NOT NULL,\n  userName VARCHAR(255) NOT NULL,\n  operatorId INT NOT NULL,\n  operatorName VARCHAR(255) NOT NULL,\n  rating INT NOT NULL,\n  comment TEXT,\n  createdAt BIGINT NOT NULL,\n  INDEX rating_conversation_idx (conversationId),\n  INDEX rating_user_idx (userId),\n  INDEX rating_operator_idx (operatorId),\n  INDEX rating_rating_idx (rating)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 340
+}

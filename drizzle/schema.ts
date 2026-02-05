@@ -655,3 +655,33 @@ export const operatorAvailability = mysqlTable("operator_availability", {
 
 export type OperatorAvailability = typeof operatorAvailability.$inferSelect;
 export type InsertOperatorAvailability = typeof operatorAvailability.$inferInsert;
+
+
+/**
+ * Chat Ratings - User ratings for chat support sessions
+ */
+export const chatRatings = mysqlTable("chat_ratings", {
+  id: int("id").autoincrement().primaryKey(),
+  /** Conversation ID being rated */
+  conversationId: int("conversationId").notNull(),
+  /** User who gave the rating */
+  userId: int("userId").notNull(),
+  userName: varchar("userName", { length: 255 }).notNull(),
+  /** Operator who provided the support */
+  operatorId: int("operatorId").notNull(),
+  operatorName: varchar("operatorName", { length: 255 }).notNull(),
+  /** Star rating (1-5) */
+  rating: int("rating").notNull(),
+  /** Optional comment from user */
+  comment: text("comment"),
+  /** When rating was submitted */
+  createdAt: bigint("createdAt", { mode: "number" }).notNull(),
+}, (table) => ({
+  conversationIdx: index("rating_conversation_idx").on(table.conversationId),
+  userIdx: index("rating_user_idx").on(table.userId),
+  operatorIdx: index("rating_operator_idx").on(table.operatorId),
+  ratingIdx: index("rating_rating_idx").on(table.rating),
+}));
+
+export type ChatRating = typeof chatRatings.$inferSelect;
+export type InsertChatRating = typeof chatRatings.$inferInsert;

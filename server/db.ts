@@ -17,7 +17,8 @@ import {
   products, InsertProduct, Product,
   quotations, InsertQuotation, Quotation,
   purchaseOrders, InsertPurchaseOrder, PurchaseOrder,
-  purchaseOrderItems, InsertPurchaseOrderItem, PurchaseOrderItem
+  purchaseOrderItems, InsertPurchaseOrderItem, PurchaseOrderItem,
+  chatRatings, InsertChatRating, ChatRating
 } from "../drizzle/schema";
 import * as schema from "../drizzle/schema";
 const purchasingTasks = (schema as any).purchasingTasks;
@@ -2706,5 +2707,169 @@ export async function getOperatorActiveChats(operatorId: number): Promise<ChatQu
   } catch (error) {
     console.error("[Database] Failed to get operator active chats:", error);
     return [];
+  }
+}
+
+
+// ============ CHAT RATINGS ============
+
+/**
+ * Submit a rating for a chat session
+ */
+export async function submitChatRating(data: {
+  conversationId: number;
+  userId: number;
+  userName: string;
+  operatorId: number;
+  operatorName: string;
+  rating: number;
+  comment?: string;
+}): Promise<ChatRating | null> {
+  const db = await getDb();
+  if (!db) return null;
+  
+  try {
+    const now = Date.now();
+    await db.insert(chatRatings).values({
+      conversationId: data.conversationId,
+      userId: data.userId,
+      userName: data.userName,
+      operatorId: data.operatorId,
+      operatorName: data.operatorName,
+      rating: data.rating,
+      comment: data.comment || null,
+      createdAt: now,
+    });
+    
+    const result = await db.select().from(chatRatings)
+      .where(eq(chatRatings.conversationId, data.conversationId))
+      .limit(1);
+    
+    return result.length > 0 ? result[0] : null;
+  } catch (error) {
+    console.error("[Database] Failed to submit chat rating:", error);
+    return null;
+  }
+}
+
+/**
+ * Get rating for a specific conversation
+ */
+export async function getChatRatingByConversation(conversationId: number): Promise<ChatRating | null> {
+  const db = await getDb();
+  if (!db) return null;
+  
+  try {
+    const result = await db.select().from(chatRatings)
+      .where(eq(chatRatings.conversationId, conversationId))
+      .limit(1);
+    
+    return result.length > 0 ? result[0] : null;
+  } catch (error) {
+    console.error("[Database] Failed to get chat rating:", error);
+    return null;
+  }
+}
+
+/**
+ * Get all ratings for an operator
+ */
+export async function getOperatorRatings(operatorId: number): Promise<ChatRating[]> {
+  const db = await getDb();
+  if (!db) return [];
+  
+  try {
+    return await db.select().from(chatRatings)
+      .where(eq(chatRatings.operatorId, operatorId))
+      .orderBy(desc(chatRatings.createdAt));
+  } catch (error) {
+    console.error("[Database] Failed to get operator ratings:", error);
+    return [];
+  }
+}
+
+/**
+ * Get operator average rating
+ */
+export async function getOperatorAverageRating(operatorId: number): Promise<{ average: number; count: number }> {
+  const db = await getDb();
+  if (!db) return { average: 0, count: 0 };
+  
+  try {
+    const ratings = await db.select().from(chatRatings)
+      .where(eq(chatRatings.operatorId, operatorId));
+    
+    if (ratings.length === 0) return { average: 0, count: 0 };
+    
+    const sum = ratings.reduce((acc, r) => acc + r.rating, 0);
+    return { 
+      average: Math.round((sum / ratings.length) * 10) / 10, 
+      count: ratings.length 
+    };
+  } catch (error) {
+    console.error("[Database] Failed to get operator average rating:", error);
+    return { average: 0, count: 0 };
+  }
+}
+
+/**
+ * Get all ratings (admin view)
+ */
+export async function getAllChatRatings(limit: number = 50): Promise<ChatRating[]> {
+  const db = await getDb();
+  if (!db) return [];
+  
+  try {
+    return await db.select().from(chatRatings)
+      .orderBy(desc(chatRatings.createdAt))
+      .limit(limit);
+  } catch (error) {
+    console.error("[Database] Failed to get all chat ratings:", error);
+    return [];
+  }
+}
+
+/**
+ * Get ratings statistics
+ */
+export async function getChatRatingsStats(): Promise<{
+  totalRatings: number;
+  averageRating: number;
+  ratingDistribution: { rating: number; count: number }[];
+}> {
+  const db = await getDb();
+  if (!db) return { totalRatings: 0, averageRating: 0, ratingDistribution: [] };
+  
+  try {
+    const ratings = await db.select().from(chatRatings);
+    
+    if (ratings.length === 0) {
+      return { totalRatings: 0, averageRating: 0, ratingDistribution: [] };
+    }
+    
+    const sum = ratings.reduce((acc, r) => acc + r.rating, 0);
+    const average = Math.round((sum / ratings.length) * 10) / 10;
+    
+    // Calculate distribution
+    const distribution: { [key: number]: number } = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+    ratings.forEach(r => {
+      if (r.rating >= 1 && r.rating <= 5) {
+        distribution[r.rating]++;
+      }
+    });
+    
+    const ratingDistribution = Object.entries(distribution).map(([rating, count]) => ({
+      rating: parseInt(rating),
+      count,
+    }));
+    
+    return {
+      totalRatings: ratings.length,
+      averageRating: average,
+      ratingDistribution,
+    };
+  } catch (error) {
+    console.error("[Database] Failed to get chat ratings stats:", error);
+    return { totalRatings: 0, averageRating: 0, ratingDistribution: [] };
   }
 }

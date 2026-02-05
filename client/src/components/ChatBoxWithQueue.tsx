@@ -26,6 +26,7 @@ import { cn } from "@/lib/utils";
 import { format, isToday, isYesterday } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import { toast } from "sonner";
+import RatingModal from "@/components/RatingModal";
 
 interface ChatBoxWithQueueProps {
   ticketId?: number;
@@ -70,6 +71,10 @@ export function ChatBoxWithQueue({
   const [chatState, setChatState] = useState<ChatState>('idle');
   const [waitStartTime, setWaitStartTime] = useState<number | null>(null);
   const [waitTime, setWaitTime] = useState(0);
+  const [showRatingModal, setShowRatingModal] = useState(false);
+  const [ratingOperatorId, setRatingOperatorId] = useState<number | null>(null);
+  const [ratingOperatorName, setRatingOperatorName] = useState<string>('');
+  const [ratingConversationId, setRatingConversationId] = useState<number | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const typingTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -142,19 +147,26 @@ export function ChatBoxWithQueue({
       setChatState('connected');
       toast.success("Um operador aceitou seu atendimento!");
     } else if (myQueueStatus?.status === 'completed') {
-      // Chat was finalized by operator
-      toast.info("Atendimento finalizado pelo operador. Obrigado!");
-      setChatState('idle');
-      setConversationId(undefined);
-      setMessages([]);
-      setWaitStartTime(null);
-      setWaitTime(0);
-      // Close chat after a short delay
-      setTimeout(() => {
-        onClose?.();
-      }, 2000);
+      // Chat was finalized by operator - show rating modal
+      toast.info("Atendimento finalizado pelo operador.");
+      
+      // Get operator info from queue status
+      if (myQueueStatus.assignedOperatorId && myQueueStatus.conversationId) {
+        setRatingOperatorId(myQueueStatus.assignedOperatorId);
+        setRatingOperatorName(myQueueStatus.assignedOperatorName || 'Operador');
+        setRatingConversationId(myQueueStatus.conversationId);
+        setShowRatingModal(true);
+      } else {
+        // No operator info, just close
+        setChatState('idle');
+        setConversationId(undefined);
+        setMessages([]);
+        setWaitStartTime(null);
+        setWaitTime(0);
+        setTimeout(() => onClose?.(), 1000);
+      }
     }
-  }, [myQueueStatus?.status, myQueueStatus?.conversationId, onClose]);
+  }, [myQueueStatus?.status, myQueueStatus?.conversationId, myQueueStatus?.assignedOperatorId, myQueueStatus?.assignedOperatorName, onClose]);
 
   // Update wait time every second
   useEffect(() => {
@@ -658,10 +670,41 @@ export function ChatBoxWithQueue({
               </Button>
             </div>
           </div>
-        </>
+         </>
+      )}
+
+      {/* Rating Modal */}
+      {showRatingModal && ratingConversationId && ratingOperatorId && (
+        <RatingModal
+          isOpen={showRatingModal}
+          onClose={() => {
+            setShowRatingModal(false);
+            setChatState('idle');
+            setConversationId(undefined);
+            setMessages([]);
+            setWaitStartTime(null);
+            setWaitTime(0);
+            setRatingOperatorId(null);
+            setRatingOperatorName('');
+            setRatingConversationId(null);
+            setTimeout(() => onClose?.(), 500);
+          }}
+          conversationId={ratingConversationId}
+          operatorId={ratingOperatorId}
+          operatorName={ratingOperatorName}
+          onRatingSubmitted={() => {
+            setChatState('idle');
+            setConversationId(undefined);
+            setMessages([]);
+            setWaitStartTime(null);
+            setWaitTime(0);
+            setRatingOperatorId(null);
+            setRatingOperatorName('');
+            setRatingConversationId(null);
+          }}
+        />
       )}
     </div>
   );
 }
-
 export default ChatBoxWithQueue;

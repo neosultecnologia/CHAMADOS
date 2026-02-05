@@ -1869,12 +1869,82 @@ export const appRouter = router({
         return await db.getAvailableOperators();
       }),
 
-    // Get operator stats summary
+     // Get operator stats summary
     getStats: protectedProcedure
       .query(async () => {
         return await db.getOperatorStats();
       }),
   }),
-});
 
+  // ============ CHAT RATINGS ============
+  chatRatings: router({
+    // Submit a rating for a chat session
+    submit: protectedProcedure
+      .input(z.object({
+        conversationId: z.number(),
+        operatorId: z.number(),
+        operatorName: z.string(),
+        rating: z.number().min(1).max(5),
+        comment: z.string().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        const result = await db.submitChatRating({
+          conversationId: input.conversationId,
+          userId: ctx.user.id,
+          userName: ctx.user.name,
+          operatorId: input.operatorId,
+          operatorName: input.operatorName,
+          rating: input.rating,
+          comment: input.comment,
+        });
+        if (!result) {
+          throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Falha ao enviar avaliação' });
+        }
+        return result;
+      }),
+
+    // Check if conversation already has a rating
+    getByConversation: protectedProcedure
+      .input(z.object({ conversationId: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getChatRatingByConversation(input.conversationId);
+      }),
+
+    // Get ratings for an operator (admin only)
+    getOperatorRatings: protectedProcedure
+      .input(z.object({ operatorId: z.number() }))
+      .query(async ({ ctx, input }) => {
+        if (ctx.user.role !== 'admin') {
+          throw new TRPCError({ code: 'FORBIDDEN', message: 'Apenas administradores podem ver avaliações' });
+        }
+        return await db.getOperatorRatings(input.operatorId);
+      }),
+
+    // Get operator average rating
+    getOperatorAverage: protectedProcedure
+      .input(z.object({ operatorId: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getOperatorAverageRating(input.operatorId);
+      }),
+
+    // Get all ratings (admin only)
+    getAll: protectedProcedure
+      .input(z.object({ limit: z.number().optional() }).optional())
+      .query(async ({ ctx, input }) => {
+        if (ctx.user.role !== 'admin') {
+          throw new TRPCError({ code: 'FORBIDDEN', message: 'Apenas administradores podem ver avaliações' });
+        }
+        return await db.getAllChatRatings(input?.limit);
+      }),
+
+    // Get ratings statistics (admin only)
+    getStats: protectedProcedure
+      .query(async ({ ctx }) => {
+        if (ctx.user.role !== 'admin') {
+          throw new TRPCError({ code: 'FORBIDDEN', message: 'Apenas administradores podem ver estatísticas' });
+        }
+        return await db.getChatRatingsStats();
+      }),
+  }),
+});
 export type AppRouter = typeof appRouter;
