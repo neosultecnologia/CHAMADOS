@@ -295,6 +295,7 @@ export async function getAllTickets(filters?: {
   priority?: string;
   departmentId?: number;
   search?: string;
+  creatorId?: number; // Filter by creator for non-admin users
 }): Promise<Ticket[]> {
   const db = await getDb();
   if (!db) return [];
@@ -302,6 +303,11 @@ export async function getAllTickets(filters?: {
   let query = db.select().from(tickets);
   
   const conditions = [];
+  
+  // Filter by creator (for non-admin users to see only their own tickets)
+  if (filters?.creatorId) {
+    conditions.push(eq(tickets.createdById, filters.creatorId));
+  }
   
   if (filters?.status && filters.status !== 'all') {
     conditions.push(eq(tickets.status, filters.status as any));

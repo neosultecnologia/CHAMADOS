@@ -290,7 +290,12 @@ export const appRouter = router({
         search: z.string().optional(),
       }).optional())
       .query(async ({ ctx, input }) => {
-        return await db.getAllTickets(input);
+        // Admins see all tickets, regular users see only their own
+        const isAdmin = ctx.user?.role === 'admin';
+        return await db.getAllTickets({
+          ...input,
+          creatorId: isAdmin ? undefined : ctx.user?.id,
+        });
       }),
 
     getById: protectedProcedure

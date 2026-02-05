@@ -1,0 +1,8 @@
+{
+  "query": "INSERT INTO chat_queue (user_id, user_name, initial_message, status, position, created_at) VALUES (2, 'Monique', 'Preciso de ajuda com meu chamado de notebook', 'waiting', 1, NOW());",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user M967bVXfxXUhp7W.root --database JLPd83LStLYaV7mJXtu8eL --execute INSERT INTO chat_queue (user_id, user_name, initial_message, status, position, created_at) VALUES (2, 'Monique', 'Preciso de ajuda com meu chamado de notebook', 'waiting', 1, NOW());",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1054 (42S22) at line 1: Unknown column 'user_id' in 'field list'"
+  ]
+}

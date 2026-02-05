@@ -86,12 +86,12 @@ export function ChatBoxWithQueue({
     { refetchInterval: 5000, enabled: chatState !== 'connected' }
   );
 
-  // Get my queue status
+  // Get my queue status (poll during waiting AND connected to detect completion)
   const { data: myQueueStatus, refetch: refetchQueueStatus } = trpc.chatQueue.getMyStatus.useQuery(
     undefined,
     { 
       refetchInterval: 3000,
-      enabled: chatState === 'waiting',
+      enabled: chatState === 'waiting' || chatState === 'connected',
     }
   );
 
@@ -135,14 +135,26 @@ export function ChatBoxWithQueue({
   const enterQueueMutation = trpc.chatQueue.enterQueue.useMutation();
   const leaveQueueMutation = trpc.chatQueue.leaveQueue.useMutation();
 
-  // Check if chat was accepted
+  // Check if chat was accepted or completed
   useEffect(() => {
     if (myQueueStatus?.status === 'in_progress' && myQueueStatus.conversationId) {
       setConversationId(myQueueStatus.conversationId);
       setChatState('connected');
       toast.success("Um operador aceitou seu atendimento!");
+    } else if (myQueueStatus?.status === 'completed') {
+      // Chat was finalized by operator
+      toast.info("Atendimento finalizado pelo operador. Obrigado!");
+      setChatState('idle');
+      setConversationId(undefined);
+      setMessages([]);
+      setWaitStartTime(null);
+      setWaitTime(0);
+      // Close chat after a short delay
+      setTimeout(() => {
+        onClose?.();
+      }, 2000);
     }
-  }, [myQueueStatus?.status, myQueueStatus?.conversationId]);
+  }, [myQueueStatus?.status, myQueueStatus?.conversationId, onClose]);
 
   // Update wait time every second
   useEffect(() => {

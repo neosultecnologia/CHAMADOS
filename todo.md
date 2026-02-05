@@ -638,3 +638,11 @@
 - [x] Esconder botão do painel de operadores para usuários comuns
 - [x] Criar componente AdminChatView para admin conversar com usuários
 - [x] Testar fluxo: usuário abre chat → entra na fila → aguarda atendimento - Funcionando!
+
+## Correções de Chat e Visibilidade de Chamados
+- [x] Implementar fechamento do chat em tempo real quando operador finalizar
+- [x] Usuário deve ver mensagem "Atendimento finalizado" e chat fechar automaticamente
+- [x] Verificar visibilidade dos chamados - usuários devem ver apenas seus próprios chamados
+- [x] Admins devem ver todos os chamados
+- [x] Testar fluxo completo de finalização do chat (10 testes passando)
+- [x] Testar visibilidade de chamados por role (admin vs user)

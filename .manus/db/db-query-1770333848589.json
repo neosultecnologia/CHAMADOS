@@ -1,0 +1,122 @@
+{
+  "query": "SHOW COLUMNS FROM chat_queue;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user M967bVXfxXUhp7W.root --database JLPd83LStLYaV7mJXtu8eL --execute SHOW COLUMNS FROM chat_queue;",
+  "rows": [
+    {
+      "Field": "id",
+      "Type": "int(11)",
+      "Null": "NO",
+      "Key": "PRI",
+      "Default": "NULL",
+      "Extra": "auto_increment"
+    },
+    {
+      "Field": "userId",
+      "Type": "int(11)",
+      "Null": "NO",
+      "Key": "MUL",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "userName",
+      "Type": "varchar(255)",
+      "Null": "NO",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "conversationId",
+      "Type": "int(11)",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "ticketId",
+      "Type": "int(11)",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "position",
+      "Type": "int(11)",
+      "Null": "NO",
+      "Key": "MUL",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "status",
+      "Type": "enum('waiting','assigned','in_progress','completed','cancelled')",
+      "Null": "NO",
+      "Key": "MUL",
+      "Default": "waiting",
+      "Extra": ""
+    },
+    {
+      "Field": "assignedOperatorId",
+      "Type": "int(11)",
+      "Null": "YES",
+      "Key": "MUL",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "assignedOperatorName",
+      "Type": "varchar(255)",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "initialMessage",
+      "Type": "text",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "priority",
+      "Type": "enum('normal','high','urgent')",
+      "Null": "NO",
+      "Key": "",
+      "Default": "normal",
+      "Extra": ""
+    },
+    {
+      "Field": "enteredAt",
+      "Type": "bigint(20)",
+      "Null": "NO",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "acceptedAt",
+      "Type": "bigint(20)",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "completedAt",
+      "Type": "bigint(20)",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    }
+  ],
+  "messages": [],
+  "stdout": "Field\tType\tNull\tKey\tDefault\tExtra\nid\tint(11)\tNO\tPRI\tNULL\tauto_increment\nuserId\tint(11)\tNO\tMUL\tNULL\t\nuserName\tvarchar(255)\tNO\t\tNULL\t\nconversationId\tint(11)\tYES\t\tNULL\t\nticketId\tint(11)\tYES\t\tNULL\t\nposition\tint(11)\tNO\tMUL\tNULL\t\nstatus\tenum('waiting','assigned','in_progress','completed','cancelled')\tNO\tMUL\twaiting\t\nassignedOperatorId\tint(11)\tYES\tMUL\tNULL\t\nassignedOperatorName\tvarchar(255)\tYES\t\tNULL\t\ninitialMessage\ttext\tYES\t\tNULL\t\npriority\tenum('normal','high','urgent')\tNO\t\tnormal\t\nenteredAt\tbigint(20)\tNO\t\tNULL\t\nacceptedAt\tbigint(20)\tYES\t\tNULL\t\ncompletedAt\tbigint(20)\tYES\t\tNULL\t\n",
+  "stderr": "",
+  "execution_time_ms": 52
+}
