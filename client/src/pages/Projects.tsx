@@ -21,12 +21,13 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Plus, Search, Calendar as CalendarIcon, User, Target, Clock, LayoutGrid, CalendarDays, BarChart3 } from "lucide-react";
+import { Plus, Search, Calendar as CalendarIcon, User, Target, Clock, LayoutGrid, CalendarDays, BarChart3, Columns3 } from "lucide-react";
 import CreateProjectModal from "@/components/CreateProjectModal";
 import EditProjectModal from "@/components/EditProjectModal";
 import ProjectComments from "@/components/ProjectComments";
 import { DailyTasksPanel } from "@/components/DailyTasksPanel";
 import { ProjectsCalendar } from "@/components/ProjectsCalendar";
+import KanbanBoard from "@/components/KanbanBoard";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import { getStatusColor as getStatusColorUtil, getPriorityColor as getPriorityColorUtil, NeosulColors } from "@/lib/colors";
@@ -39,13 +40,27 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [editingProject, setEditingProject] = useState<number | null>(null);
-  const [viewMode, setViewMode] = useState<'grid' | 'calendar'>('grid');
+  const [viewMode, setViewMode] = useState<'grid' | 'calendar' | 'kanban'>('grid');
 
   const { data: projects = [], isLoading } = trpc.projects.list.useQuery({
     status: statusFilter !== "all" ? statusFilter : undefined,
     priority: priorityFilter !== "all" ? priorityFilter : undefined,
     search: searchTerm || undefined,
   });
+
+  const utils = trpc.useUtils();
+  const updateProjectMutation = trpc.projects.update.useMutation({
+    onSuccess: () => {
+      utils.projects.list.invalidate();
+    },
+  });
+
+  const handleStatusChange = (projectId: number, newStatus: string) => {
+    updateProjectMutation.mutate({ 
+      id: projectId, 
+      status: newStatus as "Planejamento" | "Em Andamento" | "Concluído" | "Cancelado" | "Em Pausa"
+    });
+  };
 
   const getStatusColor = (status: string) => {
     const colors = getStatusColorUtil(status);
@@ -158,6 +173,14 @@ export default function Projects() {
                   Grade
                 </Button>
                 <Button
+                  variant={viewMode === 'kanban' ? 'default' : 'outline'}
+                  onClick={() => setViewMode('kanban')}
+                  className={viewMode === 'kanban' ? 'bg-[#003366] hover:bg-[#004080] text-white' : ''}
+                >
+                  <Columns3 className="h-4 w-4 mr-2" />
+                  Kanban
+                </Button>
+                <Button
                   variant={viewMode === 'calendar' ? 'default' : 'outline'}
                   onClick={() => setViewMode('calendar')}
                   className={viewMode === 'calendar' ? 'bg-[#003366] hover:bg-[#004080] text-white' : ''}
@@ -195,6 +218,12 @@ export default function Projects() {
           <ProjectsCalendar
             projects={projects}
             onSelectEvent={(project) => setSelectedProject(project.id)}
+          />
+        ) : viewMode === 'kanban' ? (
+          <KanbanBoard
+            projects={projects}
+            onStatusChange={handleStatusChange}
+            onProjectClick={(project) => setSelectedProject(project.id)}
           />
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

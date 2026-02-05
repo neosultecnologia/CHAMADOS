@@ -430,3 +430,13 @@
 - [x] Atualizar PortalDashboard substituindo E-commerce por Compras
 - [x] Adicionar rotas no App.tsx para módulo de compras
 - [x] Testar fluxo completo de compra
+
+## Visualização Kanban nos Projetos (Estilo Trello)
+- [x] Instalar biblioteca de drag-and-drop (@dnd-kit ou react-beautiful-dnd)
+- [x] Criar componente KanbanBoard para visualização em colunas
+- [x] Implementar colunas por status (Planejamento, Em Andamento, Concluído, Cancelado)
+- [x] Adicionar drag-and-drop para mover projetos entre colunas
+- [x] Atualizar status do projeto ao soltar em nova coluna
+- [x] Adicionar botão de alternância entre visualização lista e Kanban
+- [x] Estilizar cards dos projetos no estilo Trello
+- [x] Testar funcionalidade de arrastar e soltar
