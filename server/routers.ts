@@ -16,7 +16,33 @@ export const appRouter = router({
   system: systemRouter,
   
   auth: router({
-    me: publicProcedure.query(opts => opts.ctx.user),
+    me: publicProcedure.query(async ({ ctx }) => {
+      if (!ctx.user) return null;
+      
+      // If user has a groupId, merge group permissions with user permissions
+      if (ctx.user.groupId) {
+        const group = await db.getPermissionGroupById(ctx.user.groupId);
+        if (group) {
+          // Parse both permissions
+          const userPerms = typeof ctx.user.permissions === 'string' 
+            ? JSON.parse(ctx.user.permissions) 
+            : ctx.user.permissions || {};
+          const groupPerms = typeof group.permissions === 'string'
+            ? JSON.parse(group.permissions)
+            : group.permissions || {};
+          
+          // Merge: group permissions as base, user permissions override
+          const mergedPermissions = { ...groupPerms, ...userPerms };
+          
+          return {
+            ...ctx.user,
+            permissions: mergedPermissions
+          };
+        }
+      }
+      
+      return ctx.user;
+    }),
     
     logout: publicProcedure.mutation(({ ctx }) => {
       const cookieOptions = getSessionCookieOptions(ctx.req);

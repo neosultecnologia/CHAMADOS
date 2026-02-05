@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { appRouter } from './routers';
 import type { Context } from './_core/context';
 import { hasModulePermission, MODULES, type UserPermissions } from '../shared/permissions';
+import * as db from './db';
 
 describe('Module Permissions System', () => {
   describe('Permission Helper Functions', () => {
@@ -216,5 +217,56 @@ describe('Module Permissions System', () => {
       const projects = await caller.projects.list();
       expect(Array.isArray(projects)).toBe(true);
     });
+  });
+});
+
+describe('Group Permissions Integration', () => {
+  it('should merge group permissions with user permissions in auth.me', async () => {
+    // Create a test group with compras permission
+    const group = await db.createPermissionGroup({
+      name: `Test Group ${Date.now()}`,
+      description: 'Test group for permission testing',
+      permissions: {
+        compras: {
+          create: true,
+          read: true,
+          update: true,
+          delete: true,
+        },
+      },
+    });
+
+    expect(group).toBeDefined();
+    if (!group) throw new Error('Failed to create test group');
+
+    // Create a test user with this group
+    const user = await db.createUser({
+      name: 'Test User',
+      email: `test${Date.now()}@example.com`,
+      passwordHash: 'test',
+      groupId: group.id,
+      role: 'user',
+      approvalStatus: 'approved',
+    });
+
+    expect(user).toBeDefined();
+    if (!user) throw new Error('Failed to create test user');
+
+    // Simulate auth.me call
+    const caller = appRouter.createCaller({
+      user: user,
+    } as Context);
+
+    const me = await caller.auth.me();
+    expect(me).toBeDefined();
+    expect(me?.groupId).toBe(group.id);
+    
+    // Check that permissions were merged
+    const permissions = typeof me?.permissions === 'string'
+      ? JSON.parse(me.permissions)
+      : me?.permissions;
+    
+    expect(permissions).toHaveProperty('compras');
+    expect(permissions.compras).toHaveProperty('read', true);
   });
 });

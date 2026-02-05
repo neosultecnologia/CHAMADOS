@@ -527,3 +527,10 @@
 - [x] Corrigir erro no campo dueDate (enviar null ao invés de string vazia)
 - [x] Alterar campo tags de JSON para TEXT no schema
 - [x] Testar criação de tarefas no Kanban
+
+## Correção do Sistema de Permissões
+- [x] Investigar por que usuários com grupos atribuídos não veem módulos
+- [x] Verificar lógica de exibição de módulos no PortalDashboard
+- [x] Corrigir auth.me para mesclar permissões de grupo com permissões de usuário
+- [x] Adicionar teste para verificar mesclagem de permissões
+- [x] Testar visibilidade de módulos com usuário não-admin (Monique)
