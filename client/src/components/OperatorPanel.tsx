@@ -24,7 +24,7 @@ import { toast } from "sonner";
 interface OperatorPanelProps {
   isOpen: boolean;
   onClose: () => void;
-  onChatAccepted?: (conversationId: number) => void;
+  onChatAccepted?: (conversationId: number, queueId: number, userName: string) => void;
 }
 
 export function OperatorPanel({ isOpen, onClose, onChatAccepted }: OperatorPanelProps) {
@@ -80,8 +80,8 @@ export function OperatorPanel({ isOpen, onClose, onChatAccepted }: OperatorPanel
       refetchQueue();
       refetchMyChats();
       refetchStats();
-      if (onChatAccepted && result.conversation) {
-        onChatAccepted(result.conversation.id);
+      if (onChatAccepted && result.conversation && result.queue) {
+        onChatAccepted(result.conversation.id, result.queue.id, result.queue.userName);
       }
     },
     onError: (error) => {

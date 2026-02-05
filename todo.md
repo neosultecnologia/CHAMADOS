@@ -629,3 +629,12 @@
 - [x] Implementar contador de tempo de espera em tempo real
 - [x] Implementar notificação quando operador aceitar atendimento
 - [x] Testar fluxo completo: usuário entra na fila → aguarda atendimento - Funcionando!
+
+## Ajuste do Chat Estilo Movidesk
+- [x] Verificar role do usuário ao abrir chat (admin vs user)
+- [x] Usuários comuns sempre entram na fila de espera
+- [x] Apenas admins podem ver o painel de atendimento
+- [x] Apenas admins podem aceitar conversas da fila
+- [x] Esconder botão do painel de operadores para usuários comuns
+- [x] Criar componente AdminChatView para admin conversar com usuários
+- [x] Testar fluxo: usuário abre chat → entra na fila → aguarda atendimento - Funcionando!

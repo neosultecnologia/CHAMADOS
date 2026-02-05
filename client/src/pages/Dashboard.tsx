@@ -9,6 +9,7 @@ import NotificationBell from '@/components/NotificationBell';
 import TicketsList from '@/components/TicketsList';
 import ChatBoxWithQueue from '@/components/ChatBoxWithQueue';
 import OperatorPanel from '@/components/OperatorPanel';
+import AdminChatView from '@/components/AdminChatView';
 import OnlineOperators from '@/components/OnlineOperators';
 import CreateTicketModal from '@/components/CreateTicketModal';
 import TicketDetailModal from '@/components/TicketDetailModal';
@@ -47,6 +48,7 @@ export default function Dashboard() {
   const [showChat, setShowChat] = useState(false);
   const [chatMinimized, setChatMinimized] = useState(false);
   const [showOperatorPanel, setShowOperatorPanel] = useState(false);
+  const [adminChat, setAdminChat] = useState<{ conversationId: number; queueId: number; userName: string } | null>(null);
 
   // Fetch tickets from database
   const { data: tickets = [], isLoading, refetch } = trpc.tickets.list.useQuery({
@@ -363,10 +365,21 @@ export default function Dashboard() {
         <OperatorPanel
           isOpen={showOperatorPanel}
           onClose={() => setShowOperatorPanel(false)}
-          onChatAccepted={(conversationId) => {
+          onChatAccepted={(conversationId, queueId, userName) => {
             setShowOperatorPanel(false);
-            setShowChat(true);
+            setAdminChat({ conversationId, queueId, userName });
           }}
+        />
+      )}
+
+      {/* Admin Chat View */}
+      {adminChat && (
+        <AdminChatView
+          conversationId={adminChat.conversationId}
+          queueId={adminChat.queueId}
+          userName={adminChat.userName}
+          onClose={() => setAdminChat(null)}
+          onComplete={() => setAdminChat(null)}
         />
       )}
     </div>
