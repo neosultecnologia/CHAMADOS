@@ -179,7 +179,11 @@ export default defineConfig({
       "localhost",
       "127.0.0.1",
     ],
-
+    hmr: {
+      host: "localhost",
+      port: 5173,
+      protocol: "ws",
+    },
     fs: {
       strict: true,
       deny: ["**/.*"],
