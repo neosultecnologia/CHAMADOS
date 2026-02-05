@@ -1,0 +1,20 @@
+{
+  "query": "SELECT id, name, permissions FROM permissionGroups;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user M967bVXfxXUhp7W.root --database JLPd83LStLYaV7mJXtu8eL --execute SELECT id, name, permissions FROM permissionGroups;",
+  "rows": [
+    {
+      "id": "4",
+      "name": "ADMIN",
+      "permissions": "{\"chamados\": true, \"ecommerce\": true, \"marketing\": true, \"projetos\": true, \"rh\": true, \"tecnologia\": true}"
+    },
+    {
+      "id": "150001",
+      "name": "Financeiro ",
+      "permissions": "{\"chamados\": true, \"ecommerce\": false, \"marketing\": false, \"projetos\": false, \"rh\": false, \"tecnologia\": false}"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\tpermissions\n4\tADMIN\t{\"chamados\": true, \"ecommerce\": true, \"marketing\": true, \"projetos\": true, \"rh\": true, \"tecnologia\": true}\n150001\tFinanceiro \t{\"chamados\": true, \"ecommerce\": false, \"marketing\": false, \"projetos\": false, \"rh\": false, \"tecnologia\": false}\n",
+  "stderr": "",
+  "execution_time_ms": 89
+}

@@ -497,3 +497,10 @@
 - [x] Criar página dedicada para o Kanban de Compras
 - [x] Integrar no menu do módulo de Compras
 - [x] Testar drag-and-drop e persistência de mudanças
+
+## Sincronização de Módulos nos Grupos de Permissões
+- [x] Remover "E-commerce" do enum de módulos no schema
+- [x] Adicionar "Compras" ao enum de módulos no schema
+- [x] Atualizar grupos existentes no banco de dados
+- [x] Verificar sincronização em todos os módulos
+- [x] Testar criação de novos grupos com módulo Compras
