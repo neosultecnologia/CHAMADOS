@@ -1049,6 +1049,217 @@ export const appRouter = router({
         return await db.assignDepartmentToUser(input.userId, input.departmentId);
       }),
   }),
+
+  // ============ PURCHASING MODULE ============
+  suppliers: router({
+    list: protectedProcedure.query(async () => {
+      return await db.getAllSuppliers();
+    }),
+
+    getById: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getSupplierById(input.id);
+      }),
+
+    create: protectedProcedure
+      .input(z.object({
+        name: z.string().min(1),
+        cnpj: z.string().optional(),
+        email: z.string().email().optional(),
+        phone: z.string().optional(),
+        address: z.string().optional(),
+        city: z.string().optional(),
+        state: z.string().optional(),
+        zipCode: z.string().optional(),
+        contactPerson: z.string().optional(),
+        status: z.enum(["Ativo", "Inativo", "Bloqueado"]).default("Ativo"),
+        notes: z.string().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        return await db.createSupplier({
+          ...input,
+          createdById: ctx.user.id,
+          createdByName: ctx.user.name || "Usuário",
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
+        });
+      }),
+
+    update: protectedProcedure
+      .input(z.object({
+        id: z.number(),
+        name: z.string().min(1).optional(),
+        cnpj: z.string().optional(),
+        email: z.string().email().optional(),
+        phone: z.string().optional(),
+        address: z.string().optional(),
+        city: z.string().optional(),
+        state: z.string().optional(),
+        zipCode: z.string().optional(),
+        contactPerson: z.string().optional(),
+        status: z.enum(["Ativo", "Inativo", "Bloqueado"]).optional(),
+        notes: z.string().optional(),
+      }))
+      .mutation(async ({ input }) => {
+        const { id, ...updates } = input;
+        return await db.updateSupplier(id, updates);
+      }),
+
+    delete: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input }) => {
+        return await db.deleteSupplier(input.id);
+      }),
+  }),
+
+  products: router({
+    list: protectedProcedure.query(async () => {
+      return await db.getAllProducts();
+    }),
+
+    getById: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getProductById(input.id);
+      }),
+
+    create: protectedProcedure
+      .input(z.object({
+        code: z.string().min(1),
+        name: z.string().min(1),
+        description: z.string().optional(),
+        category: z.string().optional(),
+        unit: z.string().default("UN"),
+        minStock: z.number().default(0),
+        currentStock: z.number().default(0),
+        status: z.enum(["Ativo", "Inativo"]).default("Ativo"),
+        requiresPrescription: z.boolean().default(false),
+        notes: z.string().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        return await db.createProduct({
+          ...input,
+          createdById: ctx.user.id,
+          createdByName: ctx.user.name || "Usuário",
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
+        });
+      }),
+
+    update: protectedProcedure
+      .input(z.object({
+        id: z.number(),
+        code: z.string().min(1).optional(),
+        name: z.string().min(1).optional(),
+        description: z.string().optional(),
+        category: z.string().optional(),
+        unit: z.string().optional(),
+        minStock: z.number().optional(),
+        currentStock: z.number().optional(),
+        status: z.enum(["Ativo", "Inativo"]).optional(),
+        requiresPrescription: z.boolean().optional(),
+        notes: z.string().optional(),
+      }))
+      .mutation(async ({ input }) => {
+        const { id, ...updates } = input;
+        return await db.updateProduct(id, updates);
+      }),
+
+    delete: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input }) => {
+        return await db.deleteProduct(input.id);
+      }),
+  }),
+
+  purchaseOrders: router({
+    list: protectedProcedure.query(async () => {
+      return await db.getAllPurchaseOrders();
+    }),
+
+    getById: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getPurchaseOrderById(input.id);
+      }),
+
+    getItems: protectedProcedure
+      .input(z.object({ purchaseOrderId: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getPurchaseOrderItems(input.purchaseOrderId);
+      }),
+
+    create: protectedProcedure
+      .input(z.object({
+        supplierId: z.number(),
+        supplierName: z.string(),
+        items: z.array(z.object({
+          productId: z.number(),
+          productCode: z.string(),
+          productName: z.string(),
+          quantity: z.number(),
+          unitPrice: z.number(),
+        })),
+        expectedDelivery: z.number().optional(),
+        paymentTerms: z.string().optional(),
+        notes: z.string().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        const { items, ...orderData } = input;
+        
+        // Calculate total
+        const totalAmount = items.reduce((sum, item) => sum + (item.quantity * item.unitPrice), 0);
+        
+        // Generate order number
+        const orderNumber = `PO-${Date.now()}`;
+        
+        // Create purchase order
+        const order = await db.createPurchaseOrder({
+          ...orderData,
+          orderNumber,
+          totalAmount,
+          status: "Rascunho",
+          createdById: ctx.user.id,
+          createdByName: ctx.user.name || "Usuário",
+          createdAt: Date.now(),
+          updatedAt: Date.now(),
+        });
+        
+        if (!order) throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: "Falha ao criar pedido" });
+        
+        // Create order items
+        for (const item of items) {
+          await db.createPurchaseOrderItem({
+            purchaseOrderId: order.id,
+            ...item,
+            totalPrice: item.quantity * item.unitPrice,
+            receivedQuantity: 0,
+            createdAt: Date.now(),
+          });
+        }
+        
+        return order;
+      }),
+
+    updateStatus: protectedProcedure
+      .input(z.object({
+        id: z.number(),
+        status: z.enum(["Rascunho", "Pendente", "Aprovado", "Enviado", "Recebido Parcial", "Recebido", "Cancelado"]),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        const updates: any = { status: input.status };
+        
+        // If approving, set approval info
+        if (input.status === "Aprovado") {
+          updates.approvedById = ctx.user.id;
+          updates.approvedByName = ctx.user.name || "Usuário";
+          updates.approvedAt = Date.now();
+        }
+        
+        return await db.updatePurchaseOrder(input.id, updates);
+      }),
+  }),
 });
 
 export type AppRouter = typeof appRouter;

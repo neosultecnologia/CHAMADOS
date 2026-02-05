@@ -14,6 +14,9 @@ import Projects from "./pages/Projects";
 import ProjectsDashboard from "./pages/ProjectsDashboard";
 import Announcements from "./pages/Announcements";
 import PermissionGroupsManagement from "./pages/PermissionGroupsManagement";
+import Suppliers from "./pages/Suppliers";
+import Products from "./pages/Products";
+import PurchaseOrders from "./pages/PurchaseOrders";
 import LoadingDemo from "./pages/LoadingDemo";
 import LoadingSpinner from "./components/LoadingSpinner";
 import { PageTransition } from "./components/PageTransition";
@@ -98,8 +101,15 @@ function Router() {
       <Route path="/modulo/rh">
         <ProtectedRoute component={() => <ModulePlaceholder title="RH" />} />
       </Route>
-      <Route path="/modulo/ecommerce">
-        <ProtectedRoute component={() => <ModulePlaceholder title="E-commerce" />} />
+      {/* Purchasing Module */}
+      <Route path="/compras">
+        <ProtectedRoute component={PurchaseOrders} />
+      </Route>
+      <Route path="/compras/fornecedores">
+        <ProtectedRoute component={Suppliers} />
+      </Route>
+      <Route path="/compras/produtos">
+        <ProtectedRoute component={Products} />
       </Route>
       <Route path="/modulo/marketing">
         <ProtectedRoute component={() => <ModulePlaceholder title="Marketing" />} />

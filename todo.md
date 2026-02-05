@@ -400,3 +400,33 @@
 - [x] Usuários comuns devem apenas visualizar quem é o responsável
 - [x] Testar criação de chamado como usuário comum
 - [x] Testar criação de chamado como admin
+
+## Sistema de Anexos em Chamados
+- [x] Verificar se tabela de attachments já existe no schema
+- [x] Adicionar campo de upload de arquivos no CreateTicketModal
+- [x] Implementar validação de tipos de arquivo (PNG, JPEG, PDF, XLS, XLSX)
+- [x] Implementar upload para S3 usando storagePut
+- [x] Salvar metadados dos anexos no banco (nome, tipo, URL, tamanho)
+- [x] Exibir lista de anexos no TicketDetailModal
+- [x] Adicionar preview de imagens e botão de download
+- [x] Permitir anexar arquivos em comentários
+- [x] Testar upload de diferentes tipos de arquivo
+
+## Módulo de Compras (Substitui E-commerce)
+- [x] Criar tabela de fornecedores (suppliers) no schema
+- [x] Criar tabela de produtos/medicamentos no schema
+- [x] Criar tabela de cotações (quotations) no schema
+- [x] Criar tabela de pedidos de compra (purchase_orders) no schema
+- [x] Criar tabela de itens de pedido (purchase_order_items) no schema
+- [x] Implementar routers tRPC para fornecedores (CRUD)
+- [x] Implementar routers tRPC para produtos (CRUD)
+- [x] Implementar routers tRPC para cotações (criar, listar, aprovar)
+- [x] Implementar routers tRPC para pedidos de compra (criar, listar, aprovar, receber)
+- [x] Criar página de gestão de fornecedores
+- [x] Criar página de gestão de produtos/medicamentos
+- [ ] Criar página de cotações
+- [x] Criar página de pedidos de compra
+- [ ] Criar dashboard de compras com métricas
+- [x] Atualizar PortalDashboard substituindo E-commerce por Compras
+- [x] Adicionar rotas no App.tsx para módulo de compras
+- [x] Testar fluxo completo de compra
