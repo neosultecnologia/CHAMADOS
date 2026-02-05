@@ -540,3 +540,9 @@
 - [x] Redirecionar rota /compras para /compras/tarefas
 - [x] Verificar se há outros elementos relacionados a Pedidos/Fornecedores/Produtos
 - [x] Garantir que apenas Tarefas Diárias está acessível
+
+## Correção de Erro ao Criar Tarefa
+- [x] Investigar TypeError: Cannot read properties of null (reading 'join') em produção
+- [x] Encontrar onde o código usa .join() sem verificar se o valor é null (linhas 262 e 362)
+- [x] Adicionar validação (tags || []) antes de usar .join() em arrays
+- [x] Testar criação/edição de tarefa novamente - funcionando perfeitamente

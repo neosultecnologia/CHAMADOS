@@ -259,7 +259,7 @@ export default function PurchasingTasks() {
                 <Label htmlFor="tags">Etiquetas (separadas por vírgula)</Label>
                 <Input
                   id="tags"
-                  value={newTask.tags.join(", ")}
+                  value={(newTask.tags || []).join(", ")}
                   onChange={(e) => setNewTask({ ...newTask, tags: e.target.value.split(",").map(t => t.trim()).filter(Boolean) })}
                   placeholder="Ex: Urgente, Estoque Baixo"
                 />
@@ -359,7 +359,7 @@ export default function PurchasingTasks() {
                   <Label htmlFor="edit-tags">Etiquetas (separadas por vírgula)</Label>
                   <Input
                     id="edit-tags"
-                    value={selectedTask.tags.join(", ")}
+                    value={(selectedTask.tags || []).join(", ")}
                     onChange={(e) => setSelectedTask({ ...selectedTask, tags: e.target.value.split(",").map(t => t.trim()).filter(Boolean) })}
                   />
                 </div>
