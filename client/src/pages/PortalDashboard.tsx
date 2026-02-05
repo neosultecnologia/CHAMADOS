@@ -5,8 +5,7 @@ import {
   MessageSquare, 
   User, 
   Globe, 
-  ShoppingBag,
-  ShoppingCart, 
+  ShoppingBag, 
   Zap, 
   Search, 
   LogOut, 
@@ -56,11 +55,11 @@ export default function PortalDashboard() {
       description: 'Recursos Humanos'
     },
     { 
-      id: 'compras', 
-      name: 'Compras', 
-      icon: <ShoppingCart size={32} />, 
-      path: '/compras',
-      description: 'Gestão de Compras'
+      id: 'ecommerce', 
+      name: 'E-commerce', 
+      icon: <Globe size={32} />, 
+      path: '/modulo/ecommerce',
+      description: 'Loja Virtual'
     },
     { 
       id: 'marketing', 
