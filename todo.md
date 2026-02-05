@@ -504,3 +504,18 @@
 - [x] Atualizar grupos existentes no banco de dados
 - [x] Verificar sincronização em todos os módulos
 - [x] Testar criação de novos grupos com módulo Compras
+
+## Melhoria de Navegação no Módulo de Compras
+- [ ] Adicionar breadcrumb ou menu lateral nas páginas de Compras
+- [ ] Criar botão "Voltar ao Hub" em todas as subpáginas
+- [ ] Adicionar links rápidos entre submódulos (Pedidos, Fornecedores, Produtos, Tarefas)
+- [ ] Testar navegação completa no módulo
+
+## Melhorias de Navegação no Módulo de Compras
+- [x] Criar componente PurchasingLayout com sidebar de navegação
+- [x] Adicionar navegação lateral com ícones para todos os submódulos
+- [x] Implementar botão "Voltar ao Portal" na sidebar
+- [x] Aplicar layout na página de Pedidos de Compra
+- [x] Aplicar layout na página de Fornecedores
+- [x] Aplicar layout na página de Produtos
+- [x] Aplicar layout na página de Tarefas Diárias

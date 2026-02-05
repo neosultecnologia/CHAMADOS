@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { trpc } from '@/lib/trpc';
 import { Plus, Edit, Trash2, Building2, Phone, Mail, MapPin } from 'lucide-react';
 import { toast } from 'sonner';
+import PurchasingLayout from '@/components/PurchasingLayout';
 
 export default function Suppliers() {
   const [showCreateModal, setShowCreateModal] = useState(false);
@@ -26,14 +27,13 @@ export default function Suppliers() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 p-6">
+    <PurchasingLayout 
+      title="Fornecedores" 
+      description="Gerencie os fornecedores da distribuidora"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
-          <div>
-            <h1 className="text-3xl font-bold text-white mb-2">Fornecedores</h1>
-            <p className="text-blue-200">Gerencie os fornecedores da distribuidora</p>
-          </div>
+        <div className="flex items-center justify-end mb-8">
           <button
             onClick={() => setShowCreateModal(true)}
             className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition"
@@ -142,7 +142,7 @@ export default function Suppliers() {
           }}
         />
       )}
-    </div>
+    </PurchasingLayout>
   );
 }
 

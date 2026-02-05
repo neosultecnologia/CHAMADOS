@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { trpc } from "@/lib/trpc";
 import { PurchasingKanban } from "@/components/PurchasingKanban";
+import PurchasingLayout from '@/components/PurchasingLayout';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -153,24 +154,13 @@ export default function PurchasingTasks() {
   };
 
   return (
-    <div className="min-h-screen bg-background p-6">
+    <PurchasingLayout 
+      title="Tarefas Diárias" 
+      description="Kanban de tarefas do setor de compras"
+    >
       <div className="max-w-[1800px] mx-auto space-y-6">
         {/* Header */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <Link href="/modulo/compras">
-              <Button variant="ghost" size="icon">
-                <ArrowLeft className="h-5 w-5" />
-              </Button>
-            </Link>
-            <div>
-              <h1 className="text-3xl font-bold">Tarefas de Compras</h1>
-              <p className="text-muted-foreground">
-                Gerencie tarefas diárias do setor de compras
-              </p>
-            </div>
-          </div>
-          
+        <div className="flex items-center justify-end mb-6">
           <Button onClick={() => handleCreateTask("todo")}>
             <Plus className="mr-2 h-4 w-4" />
             Nova Tarefa
@@ -391,6 +381,6 @@ export default function PurchasingTasks() {
           </DialogContent>
         </Dialog>
       </div>
-    </div>
+    </PurchasingLayout>
   );
 }
