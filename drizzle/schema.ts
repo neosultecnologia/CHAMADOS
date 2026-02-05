@@ -16,8 +16,6 @@ export const users = mysqlTable("users", {
   role: mysqlEnum("role", ["user", "admin"]).default("user").notNull(),
   /** Approval status for new registrations */
   approvalStatus: mysqlEnum("approvalStatus", ["pending", "approved", "rejected"]).default("pending").notNull(),
-  /** Sector/department the user belongs to */
-  sector: mysqlEnum("sector", ["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações", "Outro"]).default("Outro"),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
 });
@@ -286,3 +284,41 @@ export const stockRequests = mysqlTable("stockRequests", {
 
 export type StockRequest = typeof stockRequests.$inferSelect;
 export type InsertStockRequest = typeof stockRequests.$inferInsert;
+
+/**
+ * Notifications - System notifications for stock alerts and request status changes
+ */
+export const notifications = mysqlTable("notifications", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull(), // Recipient user
+  type: mysqlEnum("type", ["stock_critical", "stock_low", "request_approved", "request_rejected", "request_delivered", "request_pending"]).notNull(),
+  title: varchar("title", { length: 255 }).notNull(),
+  message: text("message").notNull(),
+  relatedEntityType: mysqlEnum("relatedEntityType", ["stock_item", "stock_request", "ticket"]),
+  relatedEntityId: int("relatedEntityId"), // ID of the related entity (stockItemId, stockRequestId, etc.)
+  isRead: boolean("isRead").default(false).notNull(),
+  actionUrl: varchar("actionUrl", { length: 500 }), // URL to navigate to when clicking notification
+  createdAt: bigint("createdAt", { mode: "number" }).notNull(),
+  readAt: bigint("readAt", { mode: "number" }),
+});
+
+export type Notification = typeof notifications.$inferSelect;
+export type InsertNotification = typeof notifications.$inferInsert;
+
+/**
+ * Notification Preferences - User preferences for notification types
+ */
+export const notificationPreferences = mysqlTable("notificationPreferences", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().unique(),
+  stockCriticalAlert: boolean("stockCriticalAlert").default(true).notNull(),
+  stockLowAlert: boolean("stockLowAlert").default(true).notNull(),
+  requestApproved: boolean("requestApproved").default(true).notNull(),
+  requestRejected: boolean("requestRejected").default(true).notNull(),
+  requestDelivered: boolean("requestDelivered").default(true).notNull(),
+  requestPending: boolean("requestPending").default(false).notNull(),
+  updatedAt: bigint("updatedAt", { mode: "number" }).notNull(),
+});
+
+export type NotificationPreference = typeof notificationPreferences.$inferSelect;
+export type InsertNotificationPreference = typeof notificationPreferences.$inferInsert;

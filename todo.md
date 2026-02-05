@@ -362,3 +362,14 @@
 - [x] Limpar cache de compilação e TypeScript
 - [x] Validar autenticação e funcionalidades principais
 - [x] Revisar e corrigir todos os erros de banco de dados
+
+## Sistema de Notificações
+- [x] Criar tabelas de notificações no banco de dados
+- [x] Implementar funções de banco de dados para notificações
+- [x] Criar routers tRPC para notificações
+- [x] Integrar notificações com sistema de estoque (alertas de estoque crítico)
+- [x] Integrar notificações com sistema de solicitações (mudanças de status)
+- [ ] Criar componente de centro de notificações no dashboard
+- [ ] Implementar notificações em tempo real com polling
+- [ ] Adicionar badge de notificações não lidas no header
+- [x] Testar sistema completo de notificações (testes unitários criados e passando)

@@ -14,7 +14,9 @@ import {
   permissionGroups, InsertPermissionGroup, PermissionGroup,
   stockItems, InsertStockItem, StockItem,
   stockMovements, InsertStockMovement, StockMovement,
-  stockRequests, InsertStockRequest, StockRequest
+  stockRequests, InsertStockRequest, StockRequest,
+  notifications, InsertNotification, Notification,
+  notificationPreferences, InsertNotificationPreference, NotificationPreference
 } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
@@ -1112,4 +1114,178 @@ export async function markStockRequestDelivered(id: number) {
     deliveredAt: Date.now(),
     updatedAt: Date.now(),
   }).where(eq(stockRequests.id, id));
+}
+
+
+// ============================================
+// Notifications
+// ============================================
+
+export async function createNotification(data: InsertNotification): Promise<Notification | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    const result = await db.insert(notifications).values(data);
+    const id = result[0].insertId;
+    return await getNotificationById(id);
+  } catch (error) {
+    console.error("[DB] Error creating notification:", error);
+    return null;
+  }
+}
+
+export async function getNotificationById(id: number): Promise<Notification | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    const result = await db.select().from(notifications).where(eq(notifications.id, id));
+    return result[0] || null;
+  } catch (error) {
+    console.error("[DB] Error getting notification:", error);
+    return null;
+  }
+}
+
+export async function getUserNotifications(userId: number, limit: number = 50): Promise<Notification[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  try {
+    return await db.select().from(notifications)
+      .where(eq(notifications.userId, userId))
+      .orderBy(desc(notifications.createdAt))
+      .limit(limit);
+  } catch (error) {
+    console.error("[DB] Error getting user notifications:", error);
+    return [];
+  }
+}
+
+export async function getUnreadNotifications(userId: number): Promise<Notification[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  try {
+    return await db.select().from(notifications)
+      .where(and(
+        eq(notifications.userId, userId),
+        eq(notifications.isRead, false)
+      ))
+      .orderBy(desc(notifications.createdAt));
+  } catch (error) {
+    console.error("[DB] Error getting unread notifications:", error);
+    return [];
+  }
+}
+
+export async function markNotificationAsRead(id: number): Promise<void> {
+  const db = await getDb();
+  if (!db) return;
+
+  try {
+    await db.update(notifications).set({
+      isRead: true,
+      readAt: Date.now()
+    }).where(eq(notifications.id, id));
+  } catch (error) {
+    console.error("[DB] Error marking notification as read:", error);
+  }
+}
+
+export async function markAllNotificationsAsRead(userId: number): Promise<void> {
+  const db = await getDb();
+  if (!db) return;
+
+  try {
+    await db.update(notifications).set({
+      isRead: true,
+      readAt: Date.now()
+    }).where(and(
+      eq(notifications.userId, userId),
+      eq(notifications.isRead, false)
+    ));
+  } catch (error) {
+    console.error("[DB] Error marking all notifications as read:", error);
+  }
+}
+
+export async function deleteNotification(id: number): Promise<void> {
+  const db = await getDb();
+  if (!db) return;
+
+  try {
+    await db.delete(notifications).where(eq(notifications.id, id));
+  } catch (error) {
+    console.error("[DB] Error deleting notification:", error);
+  }
+}
+
+export async function getUnreadNotificationCount(userId: number): Promise<number> {
+  const db = await getDb();
+  if (!db) return 0;
+
+  try {
+    const result = await db.select({ count: sql`COUNT(*)` }).from(notifications)
+      .where(and(
+        eq(notifications.userId, userId),
+        eq(notifications.isRead, false)
+      ));
+    return (result[0]?.count as number) || 0;
+  } catch (error) {
+    console.error("[DB] Error getting unread notification count:", error);
+    return 0;
+  }
+}
+
+// Notification Preferences
+export async function getNotificationPreferences(userId: number): Promise<NotificationPreference | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    const result = await db.select().from(notificationPreferences)
+      .where(eq(notificationPreferences.userId, userId));
+    return result[0] || null;
+  } catch (error) {
+    console.error("[DB] Error getting notification preferences:", error);
+    return null;
+  }
+}
+
+export async function createNotificationPreferences(userId: number): Promise<NotificationPreference | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    await db.insert(notificationPreferences).values({
+      userId,
+      stockCriticalAlert: true,
+      stockLowAlert: true,
+      requestApproved: true,
+      requestRejected: true,
+      requestDelivered: true,
+      requestPending: false,
+      updatedAt: Date.now()
+    });
+    return await getNotificationPreferences(userId);
+  } catch (error) {
+    console.error("[DB] Error creating notification preferences:", error);
+    return null;
+  }
+}
+
+export async function updateNotificationPreferences(userId: number, data: Partial<InsertNotificationPreference>): Promise<void> {
+  const db = await getDb();
+  if (!db) return;
+
+  try {
+    await db.update(notificationPreferences).set({
+      ...data,
+      updatedAt: Date.now()
+    }).where(eq(notificationPreferences.userId, userId));
+  } catch (error) {
+    console.error("[DB] Error updating notification preferences:", error);
+  }
 }

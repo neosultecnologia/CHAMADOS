@@ -99,6 +99,20 @@
       "when": 1770294508005,
       "tag": "0013_kind_electro",
       "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "5",
+      "when": 1770309124697,
+      "tag": "0014_sleepy_randall",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "5",
+      "when": 1770309465970,
+      "tag": "0015_yellow_namora",
+      "breakpoints": true
     }
   ]
 }

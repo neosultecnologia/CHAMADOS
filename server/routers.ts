@@ -1230,6 +1230,63 @@ export const appRouter = router({
         return { success: true };
       }),
   }),
+
+  notifications: router({
+    getNotifications: protectedProcedure
+      .input(z.object({ limit: z.number().default(50) }))
+      .query(async ({ ctx, input }) => {
+        return await db.getUserNotifications(ctx.user.id, input.limit);
+      }),
+
+    getUnread: protectedProcedure.query(async ({ ctx }) => {
+      return await db.getUnreadNotifications(ctx.user.id);
+    }),
+
+    getUnreadCount: protectedProcedure.query(async ({ ctx }) => {
+      return await db.getUnreadNotificationCount(ctx.user.id);
+    }),
+
+    markAsRead: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        await db.markNotificationAsRead(input.id);
+        return { success: true };
+      }),
+
+    markAllAsRead: protectedProcedure.mutation(async ({ ctx }) => {
+      await db.markAllNotificationsAsRead(ctx.user.id);
+      return { success: true };
+    }),
+
+    delete: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        await db.deleteNotification(input.id);
+        return { success: true };
+      }),
+
+    getPreferences: protectedProcedure.query(async ({ ctx }) => {
+      let prefs = await db.getNotificationPreferences(ctx.user.id);
+      if (!prefs) {
+        prefs = await db.createNotificationPreferences(ctx.user.id);
+      }
+      return prefs;
+    }),
+
+    updatePreferences: protectedProcedure
+      .input(z.object({
+        stockCriticalAlert: z.boolean().optional(),
+        stockLowAlert: z.boolean().optional(),
+        requestApproved: z.boolean().optional(),
+        requestRejected: z.boolean().optional(),
+        requestDelivered: z.boolean().optional(),
+        requestPending: z.boolean().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        await db.updateNotificationPreferences(ctx.user.id, input);
+        return { success: true };
+      }),
+  }),
 });
 
 export type AppRouter = typeof appRouter;
