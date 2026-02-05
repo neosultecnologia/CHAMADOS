@@ -1,5 +1,5 @@
 import { useLocation } from 'wouter';
-import { Package, Building2, ShoppingCart, TrendingUp } from 'lucide-react';
+import { Package, Building2, ShoppingCart, TrendingUp, Kanban } from 'lucide-react';
 
 export default function PurchasingHub() {
   const [, setLocation] = useLocation();
@@ -25,6 +25,13 @@ export default function PurchasingHub() {
       path: '/compras/produtos',
       description: 'Catálogo de medicamentos e produtos',
       color: 'from-indigo-500 to-purple-500',
+    },
+    {
+      name: 'Tarefas Diárias',
+      icon: <Kanban size={48} />,
+      path: '/compras/tarefas',
+      description: 'Kanban para gestão de tarefas do setor',
+      color: 'from-purple-500 to-pink-500',
     },
   ];
 

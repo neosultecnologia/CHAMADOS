@@ -19,6 +19,10 @@ import {
   purchaseOrders, InsertPurchaseOrder, PurchaseOrder,
   purchaseOrderItems, InsertPurchaseOrderItem, PurchaseOrderItem
 } from "../drizzle/schema";
+import * as schema from "../drizzle/schema";
+const purchasingTasks = (schema as any).purchasingTasks;
+type PurchasingTask = any;
+type InsertPurchasingTask = any;
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -1253,4 +1257,38 @@ export async function deletePurchaseOrderItem(id: number): Promise<boolean> {
 
   const result = await db.delete(purchaseOrderItems).where(eq(purchaseOrderItems.id, id));
   return result[0].affectedRows > 0;
+}
+
+// ==================== Purchasing Tasks Functions ====================
+
+export async function getAllPurchasingTasks() {
+  const db = await getDb();
+  return db!.select().from(purchasingTasks).orderBy(purchasingTasks.position);
+}
+
+export async function getPurchasingTaskById(id: number) {
+  const db = await getDb();
+  const result = await db!.select().from(purchasingTasks).where(eq(purchasingTasks.id, id));
+  return result[0] || null;
+}
+
+export async function createPurchasingTask(data: InsertPurchasingTask) {
+  const db = await getDb();
+  const result = await db!.insert(purchasingTasks).values(data) as any;
+  return result.insertId;
+}
+
+export async function updatePurchasingTask(id: number, data: Partial<InsertPurchasingTask>) {
+  const db = await getDb();
+  await db!.update(purchasingTasks).set(data).where(eq(purchasingTasks.id, id));
+}
+
+export async function deletePurchasingTask(id: number) {
+  const db = await getDb();
+  await db!.delete(purchasingTasks).where(eq(purchasingTasks.id, id));
+}
+
+export async function getPurchasingTasksByStatus(status: string) {
+  const db = await getDb();
+  return db!.select().from(purchasingTasks).where(eq(purchasingTasks.status, status)).orderBy(purchasingTasks.position);
 }

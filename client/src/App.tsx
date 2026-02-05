@@ -18,6 +18,7 @@ import PermissionGroupsManagement from "./pages/PermissionGroupsManagement";
 import Suppliers from "./pages/Suppliers";
 import Products from "./pages/Products";
 import PurchaseOrders from "./pages/PurchaseOrders";
+import PurchasingTasks from "./pages/PurchasingTasks";
 import LoadingDemo from "./pages/LoadingDemo";
 import LoadingSpinner from "./components/LoadingSpinner";
 import { PageTransition } from "./components/PageTransition";
@@ -116,6 +117,9 @@ function Router() {
       </Route>
       <Route path="/compras/produtos">
         <ProtectedRoute component={Products} />
+      </Route>
+      <Route path="/compras/tarefas">
+        <ProtectedRoute component={PurchasingTasks} />
       </Route>
       <Route path="/modulo/marketing">
         <ProtectedRoute component={() => <ModulePlaceholder title="Marketing" />} />

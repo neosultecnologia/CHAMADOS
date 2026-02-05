@@ -483,3 +483,17 @@
 - [x] Adicionar botão de alternância entre visualização lista e Kanban
 - [x] Estilizar cards dos projetos no estilo Trello
 - [x] Testar funcionalidade de arrastar e soltar
+
+## Kanban de Tarefas para Compras (Estilo Trello)
+- [x] Criar tabela purchasingTasks no schema do banco de dados
+- [x] Definir colunas personalizadas (A Fazer, Cotando, Aguardando Aprovação, Pedido Realizado, Recebido, Concluído)
+- [x] Adicionar campos: título, descrição, prioridade, responsável, prazo, etiquetas
+- [x] Criar routers tRPC para CRUD de tarefas de compras
+- [x] Implementar componente PurchasingKanban com drag-and-drop
+- [x] Adicionar criação rápida de tarefas inline
+- [x] Implementar edição de tarefas ao clicar no card
+- [x] Adicionar sistema de etiquetas coloridas (Urgente, Estoque Baixo, Cotação, etc.)
+- [x] Implementar filtros por responsável, prioridade e etiquetas
+- [x] Criar página dedicada para o Kanban de Compras
+- [x] Integrar no menu do módulo de Compras
+- [x] Testar drag-and-drop e persistência de mudanças

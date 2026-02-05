@@ -1,4 +1,4 @@
-import { int, mysqlEnum, mysqlTable, text, timestamp, varchar, bigint, json, boolean, index } from "drizzle-orm/mysql-core";
+import { int, mysqlEnum, mysqlTable, text, timestamp, varchar, bigint, json, boolean, index, date } from "drizzle-orm/mysql-core";
 
 /**
  * Core user table backing auth flow.
@@ -376,3 +376,34 @@ export const backups = mysqlTable("backups", {
 
 export type Backup = typeof backups.$inferSelect;
 export type InsertBackup = typeof backups.$inferInsert;
+
+/**
+ * Purchasing Tasks table for Kanban board
+ */
+export const purchasingTasks = mysqlTable("purchasing_tasks", {
+  id: int("id").autoincrement().primaryKey(),
+  title: varchar("title", { length: 255 }).notNull(),
+  description: text("description"),
+  status: mysqlEnum("status", [
+    "todo",           // A Fazer
+    "quoting",        // Cotando
+    "awaiting_approval", // Aguardando Aprovação
+    "ordered",        // Pedido Realizado
+    "received",       // Recebido
+    "completed"       // Concluído
+  ]).default("todo").notNull(),
+  priority: mysqlEnum("priority", ["low", "medium", "high", "urgent"]).default("medium").notNull(),
+  assignedToId: int("assignedToId"), // User responsible
+  tags: json("tags").$defaultFn(() => []), // Array of tags like ["Urgente", "Estoque Baixo", "Cotação"]
+  dueDate: date("dueDate"),
+  position: int("position").default(0).notNull(), // For ordering within column
+  createdById: int("createdById").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+}, (table) => ({
+  statusIdx: index("status_idx").on(table.status),
+  assignedToIdx: index("assigned_to_idx").on(table.assignedToId),
+}));
+
+export type PurchasingTask = typeof purchasingTasks.$inferSelect;
+export type InsertPurchasingTask = typeof purchasingTasks.$inferInsert;

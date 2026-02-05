@@ -1310,6 +1310,69 @@ export const appRouter = router({
         return result;
       }),
   }),
+
+  // Purchasing Tasks (Kanban)
+  purchasingTasks: router({
+    list: protectedProcedure.query(async () => {
+      return await db.getAllPurchasingTasks();
+    }),
+
+    getById: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getPurchasingTaskById(input.id);
+      }),
+
+    create: protectedProcedure
+      .input(z.object({
+        title: z.string().min(1),
+        description: z.string().optional(),
+        status: z.enum(["todo", "quoting", "awaiting_approval", "ordered", "received", "completed"]).default("todo"),
+        priority: z.enum(["low", "medium", "high", "urgent"]).default("medium"),
+        assignedToId: z.number().optional(),
+        tags: z.array(z.string()).default([]),
+        dueDate: z.string().optional(),
+        position: z.number().default(0),
+      }))
+      .mutation(async ({ input, ctx }) => {
+        const taskId = await db.createPurchasingTask({
+          ...input,
+          createdById: ctx.user.id,
+        });
+        return { id: taskId };
+      }),
+
+    update: protectedProcedure
+      .input(z.object({
+        id: z.number(),
+        title: z.string().optional(),
+        description: z.string().optional(),
+        status: z.enum(["todo", "quoting", "awaiting_approval", "ordered", "received", "completed"]).optional(),
+        priority: z.enum(["low", "medium", "high", "urgent"]).optional(),
+        assignedToId: z.number().optional(),
+        tags: z.array(z.string()).optional(),
+        dueDate: z.string().optional(),
+        position: z.number().optional(),
+      }))
+      .mutation(async ({ input }) => {
+        const { id, ...data } = input;
+        await db.updatePurchasingTask(id, data);
+        return { success: true };
+      }),
+
+    delete: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ input }) => {
+        await db.deletePurchasingTask(input.id);
+        return { success: true };
+      }),
+
+    getByStatus: protectedProcedure
+      .input(z.object({ status: z.string() }))
+      .query(async ({ input }) => {
+        return await db.getPurchasingTasksByStatus(input.status);
+      }),
+  }),
 });
 
 export type AppRouter = typeof appRouter;
