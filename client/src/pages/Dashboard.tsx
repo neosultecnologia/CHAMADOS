@@ -5,6 +5,7 @@ import { useLocation } from 'wouter';
 import { LogOut, Menu, X, Plus, Search, Filter, Loader2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { toast } from 'sonner';
+import NotificationBell from '@/components/NotificationBell';
 import TicketsList from '@/components/TicketsList';
 import CreateTicketModal from '@/components/CreateTicketModal';
 import TicketDetailModal from '@/components/TicketDetailModal';
@@ -99,6 +100,7 @@ export default function Dashboard() {
               <span className="text-sm">Bem-vindo,</span>
               <span className="font-semibold text-cyan-400">{user?.name || 'Usuário'}</span>
             </div>
+            <NotificationBell />
             <button
               onClick={() => setLocation('/dashboard')}
               className="hidden md:flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 text-blue-100 text-sm transition border border-white/10"

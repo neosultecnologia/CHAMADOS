@@ -20,6 +20,7 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { hasModulePermission, MODULES } from '@shared/permissions';
+import NotificationBell from '@/components/NotificationBell';
 
 export default function PortalDashboard() {
   const { user, logout } = useAuth();
@@ -149,6 +150,7 @@ export default function PortalDashboard() {
           <span className="text-sm text-blue-100 hidden md:block">
             {user?.name || 'Usuário'}
           </span>
+          <NotificationBell />
           <button className="p-2 hover:bg-white/10 rounded-full transition opacity-80 hover:opacity-100">
             <UserCircle size={20} />
           </button>

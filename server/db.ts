@@ -1334,3 +1334,220 @@ export async function upsertKanbanColumnSetting(data: InsertKanbanColumnSetting)
     await db!.insert(kanbanColumnSettings).values(data);
   }
 }
+
+// ============ NOTIFICATION QUERIES ============
+
+const notifications = (schema as any).notifications;
+type Notification = any;
+type InsertNotification = any;
+
+export async function createNotification(notification: {
+  userId: number;
+  type: 'stock_critical' | 'stock_low' | 'request_created' | 'request_updated' | 'request_completed' | 'task_assigned' | 'task_due_soon' | 'system';
+  title: string;
+  message: string;
+  referenceId?: number;
+  referenceType?: string;
+  actionUrl?: string;
+}): Promise<Notification | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    const result = await db.insert(notifications).values({
+      ...notification,
+      isRead: false,
+      createdAt: Date.now(),
+    });
+    
+    const insertId = result[0].insertId;
+    const created = await db.select().from(notifications).where(eq(notifications.id, insertId)).limit(1);
+    return created.length > 0 ? created[0] : null;
+  } catch (error) {
+    console.error("[Database] Failed to create notification:", error);
+    throw error;
+  }
+}
+
+export async function getNotificationsByUserId(userId: number, options?: {
+  unreadOnly?: boolean;
+  limit?: number;
+}): Promise<Notification[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  try {
+    let conditions = [eq(notifications.userId, userId)];
+    
+    if (options?.unreadOnly) {
+      conditions.push(eq(notifications.isRead, false));
+    }
+    
+    let query = db.select().from(notifications)
+      .where(and(...conditions))
+      .orderBy(desc(notifications.createdAt));
+    
+    if (options?.limit) {
+      query = query.limit(options.limit) as any;
+    }
+    
+    return await query;
+  } catch (error) {
+    console.error("[Database] Failed to get notifications:", error);
+    return [];
+  }
+}
+
+export async function getUnreadNotificationCount(userId: number): Promise<number> {
+  const db = await getDb();
+  if (!db) return 0;
+
+  try {
+    const result = await db.select({ count: sql<number>`count(*)` })
+      .from(notifications)
+      .where(and(
+        eq(notifications.userId, userId),
+        eq(notifications.isRead, false)
+      ));
+    
+    return result[0]?.count || 0;
+  } catch (error) {
+    console.error("[Database] Failed to get unread count:", error);
+    return 0;
+  }
+}
+
+export async function markNotificationAsRead(id: number, userId: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  try {
+    const result = await db.update(notifications)
+      .set({ isRead: true })
+      .where(and(
+        eq(notifications.id, id),
+        eq(notifications.userId, userId)
+      ));
+    
+    return result[0].affectedRows > 0;
+  } catch (error) {
+    console.error("[Database] Failed to mark notification as read:", error);
+    return false;
+  }
+}
+
+export async function markAllNotificationsAsRead(userId: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  try {
+    await db.update(notifications)
+      .set({ isRead: true })
+      .where(eq(notifications.userId, userId));
+    
+    return true;
+  } catch (error) {
+    console.error("[Database] Failed to mark all notifications as read:", error);
+    return false;
+  }
+}
+
+export async function deleteNotification(id: number, userId: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  try {
+    const result = await db.delete(notifications)
+      .where(and(
+        eq(notifications.id, id),
+        eq(notifications.userId, userId)
+      ));
+    
+    return result[0].affectedRows > 0;
+  } catch (error) {
+    console.error("[Database] Failed to delete notification:", error);
+    return false;
+  }
+}
+
+export async function deleteAllNotifications(userId: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  try {
+    await db.delete(notifications)
+      .where(eq(notifications.userId, userId));
+    
+    return true;
+  } catch (error) {
+    console.error("[Database] Failed to delete all notifications:", error);
+    return false;
+  }
+}
+
+// ============ STOCK ALERT NOTIFICATIONS ============
+
+export async function checkAndCreateStockAlerts(): Promise<void> {
+  const db = await getDb();
+  if (!db) return;
+
+  try {
+    // Get all products with low or critical stock
+    const lowStockProducts = await db.select().from(products)
+      .where(
+        and(
+          eq(products.status, 'Ativo'),
+          sql`${products.currentStock} <= ${products.minStock}`
+        )
+      );
+
+    // Get all admin users to notify
+    const adminUsers = await db.select().from(users)
+      .where(
+        and(
+          eq(users.role, 'admin'),
+          eq(users.approvalStatus, 'approved')
+        )
+      );
+
+    for (const product of lowStockProducts) {
+      const isCritical = product.currentStock === 0;
+      const notificationType = isCritical ? 'stock_critical' : 'stock_low';
+      const title = isCritical 
+        ? `⚠️ Estoque Crítico: ${product.name}`
+        : `📦 Estoque Baixo: ${product.name}`;
+      const message = isCritical
+        ? `O produto "${product.name}" (${product.code}) está com estoque zerado. Ação imediata necessária.`
+        : `O produto "${product.name}" (${product.code}) está com estoque baixo (${product.currentStock}/${product.minStock}).`;
+
+      // Create notification for each admin
+      for (const admin of adminUsers) {
+        // Check if similar notification already exists (avoid duplicates)
+        const existing = await db.select().from(notifications)
+          .where(
+            and(
+              eq(notifications.userId, admin.id),
+              eq(notifications.type, notificationType),
+              eq(notifications.referenceId, product.id),
+              eq(notifications.isRead, false)
+            )
+          )
+          .limit(1);
+
+        if (existing.length === 0) {
+          await createNotification({
+            userId: admin.id,
+            type: notificationType,
+            title,
+            message,
+            referenceId: product.id,
+            referenceType: 'product',
+            actionUrl: '/compras/produtos',
+          });
+        }
+      }
+    }
+  } catch (error) {
+    console.error("[Database] Failed to check stock alerts:", error);
+  }
+}

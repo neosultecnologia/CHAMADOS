@@ -425,3 +425,38 @@ export const kanbanColumnSettings = mysqlTable("kanban_column_settings", {
 
 export type KanbanColumnSetting = typeof kanbanColumnSettings.$inferSelect;
 export type InsertKanbanColumnSetting = typeof kanbanColumnSettings.$inferInsert;
+
+
+/**
+ * Notifications table for real-time alerts
+ */
+export const notifications = mysqlTable("notifications", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull(), // Target user
+  type: mysqlEnum("type", [
+    "stock_critical",     // Estoque crítico (abaixo do mínimo)
+    "stock_low",          // Estoque baixo (próximo do mínimo)
+    "request_created",    // Nova solicitação criada
+    "request_updated",    // Solicitação atualizada
+    "request_completed",  // Solicitação concluída
+    "task_assigned",      // Tarefa atribuída
+    "task_due_soon",      // Tarefa com prazo próximo
+    "system"              // Notificação do sistema
+  ]).notNull(),
+  title: varchar("title", { length: 255 }).notNull(),
+  message: text("message").notNull(),
+  /** Reference to related entity (productId, taskId, etc) */
+  referenceId: int("referenceId"),
+  referenceType: varchar("referenceType", { length: 50 }), // "product", "task", "ticket", etc
+  /** Link to navigate when clicking the notification */
+  actionUrl: varchar("actionUrl", { length: 512 }),
+  isRead: boolean("isRead").default(false).notNull(),
+  createdAt: bigint("createdAt", { mode: "number" }).notNull(),
+}, (table) => ({
+  userIdx: index("notification_user_idx").on(table.userId),
+  userReadIdx: index("notification_user_read_idx").on(table.userId, table.isRead),
+  typeIdx: index("notification_type_idx").on(table.type),
+}));
+
+export type Notification = typeof notifications.$inferSelect;
+export type InsertNotification = typeof notifications.$inferInsert;

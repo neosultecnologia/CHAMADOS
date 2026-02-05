@@ -568,3 +568,15 @@
 - [ ] Adicionar logs para debug do fluxo de salvamento
 - [ ] Testar se mutation funciona corretamente após correção
 - [ ] Verificar se nomes personalizados persistem após reload
+
+## Sistema de Notificações em Tempo Real
+- [x] Criar tabela de notificações no banco de dados
+- [x] Implementar funções de banco de dados para notificações
+- [x] Criar routers tRPC para notificações (listar, marcar como lida, deletar)
+- [x] Criar componente NotificationBell com ícone de sino
+- [x] Implementar dropdown com lista de notificações
+- [x] Integrar NotificationBell no header/layout
+- [x] Implementar polling para atualização em tempo real (30s)
+- [x] Criar notificações automáticas para alertas de estoque crítico
+- [x] Adicionar badge com contagem de notificações não lidas
+- [x] Testar sistema completo de notificações (9 testes passando)

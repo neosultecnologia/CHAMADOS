@@ -1451,6 +1451,68 @@ export const appRouter = router({
         return { success: true };
       }),
   }),
+
+  // Notifications
+  notifications: router({
+    list: protectedProcedure
+      .input(z.object({
+        unreadOnly: z.boolean().optional(),
+        limit: z.number().optional(),
+      }).optional())
+      .query(async ({ ctx, input }) => {
+        if (!ctx.user) throw new TRPCError({ code: "UNAUTHORIZED" });
+        return await db.getNotificationsByUserId(ctx.user.id, {
+          unreadOnly: input?.unreadOnly,
+          limit: input?.limit || 50,
+        });
+      }),
+
+    unreadCount: protectedProcedure
+      .query(async ({ ctx }) => {
+        if (!ctx.user) throw new TRPCError({ code: "UNAUTHORIZED" });
+        return await db.getUnreadNotificationCount(ctx.user.id);
+      }),
+
+    markAsRead: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        if (!ctx.user) throw new TRPCError({ code: "UNAUTHORIZED" });
+        const success = await db.markNotificationAsRead(input.id, ctx.user.id);
+        return { success };
+      }),
+
+    markAllAsRead: protectedProcedure
+      .mutation(async ({ ctx }) => {
+        if (!ctx.user) throw new TRPCError({ code: "UNAUTHORIZED" });
+        const success = await db.markAllNotificationsAsRead(ctx.user.id);
+        return { success };
+      }),
+
+    delete: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        if (!ctx.user) throw new TRPCError({ code: "UNAUTHORIZED" });
+        const success = await db.deleteNotification(input.id, ctx.user.id);
+        return { success };
+      }),
+
+    deleteAll: protectedProcedure
+      .mutation(async ({ ctx }) => {
+        if (!ctx.user) throw new TRPCError({ code: "UNAUTHORIZED" });
+        const success = await db.deleteAllNotifications(ctx.user.id);
+        return { success };
+      }),
+
+    // Check for stock alerts (can be called periodically)
+    checkStockAlerts: protectedProcedure
+      .mutation(async ({ ctx }) => {
+        if (!ctx.user || ctx.user.role !== 'admin') {
+          throw new TRPCError({ code: "FORBIDDEN", message: "Apenas administradores podem verificar alertas" });
+        }
+        await db.checkAndCreateStockAlerts();
+        return { success: true };
+      }),
+  }),
 });
 
 export type AppRouter = typeof appRouter;
