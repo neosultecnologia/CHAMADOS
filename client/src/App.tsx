@@ -22,7 +22,7 @@ import PurchasingTasks from "./pages/PurchasingTasks";
 import LoadingDemo from "./pages/LoadingDemo";
 import LoadingSpinner from "./components/LoadingSpinner";
 import { PageTransition } from "./components/PageTransition";
-import { AnimatePresence } from "framer-motion";
+
 import { useLocation } from "wouter";
 
 // Protected Route Component
@@ -142,9 +142,9 @@ function App() {
       <ThemeProvider defaultTheme="dark">
         <TooltipProvider>
           <Toaster />
-          <AnimatePresence mode="wait" initial={false}>
-            <Router key={location} />
-          </AnimatePresence>
+          <div key={location}>
+            <Router />
+          </div>
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
