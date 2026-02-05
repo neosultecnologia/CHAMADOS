@@ -407,14 +407,16 @@ export default function TicketDetailModal({ ticket, onClose, onUpdate }: TicketD
     </AnimatePresence>
 
     {/* Attachment Preview */}
-    {previewAttachment && (
-      <AttachmentPreview
-        fileUrl={previewAttachment.fileUrl}
-        fileName={previewAttachment.fileName}
-        mimeType={previewAttachment.mimeType}
-        onClose={() => setPreviewAttachment(null)}
-      />
-    )}
+    <AnimatePresence>
+      {previewAttachment && (
+        <AttachmentPreview
+          fileUrl={previewAttachment.fileUrl}
+          fileName={previewAttachment.fileName}
+          mimeType={previewAttachment.mimeType}
+          onClose={() => setPreviewAttachment(null)}
+        />
+      )}
+    </AnimatePresence>
     </>
   );
 }
