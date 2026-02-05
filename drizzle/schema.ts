@@ -460,3 +460,116 @@ export const notifications = mysqlTable("notifications", {
 
 export type Notification = typeof notifications.$inferSelect;
 export type InsertNotification = typeof notifications.$inferInsert;
+
+
+/**
+ * Chat Conversations - Each conversation can be linked to a ticket
+ */
+export const chatConversations = mysqlTable("chat_conversations", {
+  id: int("id").autoincrement().primaryKey(),
+  /** Optional link to a ticket */
+  ticketId: int("ticketId"),
+  /** Conversation title/subject */
+  title: varchar("title", { length: 255 }),
+  /** Type of conversation */
+  type: mysqlEnum("type", ["ticket_chat", "direct_message", "support_request"]).default("ticket_chat").notNull(),
+  /** Status of the conversation */
+  status: mysqlEnum("status", ["active", "waiting", "resolved", "closed"]).default("active").notNull(),
+  /** Last message timestamp for ordering */
+  lastMessageAt: bigint("lastMessageAt", { mode: "number" }),
+  createdById: int("createdById").notNull(),
+  createdByName: varchar("createdByName", { length: 255 }).notNull(),
+  createdAt: bigint("createdAt", { mode: "number" }).notNull(),
+  updatedAt: bigint("updatedAt", { mode: "number" }).notNull(),
+}, (table) => ({
+  ticketIdx: index("chat_ticket_idx").on(table.ticketId),
+  statusIdx: index("chat_status_idx").on(table.status),
+  lastMessageIdx: index("chat_last_message_idx").on(table.lastMessageAt),
+}));
+
+export type ChatConversation = typeof chatConversations.$inferSelect;
+export type InsertChatConversation = typeof chatConversations.$inferInsert;
+
+/**
+ * Chat Participants - Users involved in a conversation
+ */
+export const chatParticipants = mysqlTable("chat_participants", {
+  id: int("id").autoincrement().primaryKey(),
+  conversationId: int("conversationId").notNull(),
+  userId: int("userId").notNull(),
+  userName: varchar("userName", { length: 255 }).notNull(),
+  /** Role in the conversation */
+  role: mysqlEnum("role", ["user", "operator", "admin"]).default("user").notNull(),
+  /** Last time user read messages in this conversation */
+  lastReadAt: bigint("lastReadAt", { mode: "number" }),
+  /** Whether user is currently typing */
+  isTyping: boolean("isTyping").default(false).notNull(),
+  /** When typing status was last updated */
+  typingUpdatedAt: bigint("typingUpdatedAt", { mode: "number" }),
+  joinedAt: bigint("joinedAt", { mode: "number" }).notNull(),
+  leftAt: bigint("leftAt", { mode: "number" }),
+}, (table) => ({
+  conversationIdx: index("participant_conversation_idx").on(table.conversationId),
+  userIdx: index("participant_user_idx").on(table.userId),
+  conversationUserIdx: index("participant_conv_user_idx").on(table.conversationId, table.userId),
+}));
+
+export type ChatParticipant = typeof chatParticipants.$inferSelect;
+export type InsertChatParticipant = typeof chatParticipants.$inferInsert;
+
+/**
+ * Chat Messages - Individual messages in conversations
+ */
+export const chatMessages = mysqlTable("chat_messages", {
+  id: int("id").autoincrement().primaryKey(),
+  conversationId: int("conversationId").notNull(),
+  senderId: int("senderId").notNull(),
+  senderName: varchar("senderName", { length: 255 }).notNull(),
+  senderRole: mysqlEnum("senderRole", ["user", "operator", "admin", "system"]).default("user").notNull(),
+  /** Message content */
+  content: text("content").notNull(),
+  /** Type of message */
+  messageType: mysqlEnum("messageType", ["text", "file", "image", "system"]).default("text").notNull(),
+  /** Optional file attachment URL */
+  attachmentUrl: text("attachmentUrl"),
+  attachmentName: varchar("attachmentName", { length: 255 }),
+  /** Whether message has been edited */
+  isEdited: boolean("isEdited").default(false).notNull(),
+  editedAt: bigint("editedAt", { mode: "number" }),
+  /** Whether message has been deleted (soft delete) */
+  isDeleted: boolean("isDeleted").default(false).notNull(),
+  deletedAt: bigint("deletedAt", { mode: "number" }),
+  createdAt: bigint("createdAt", { mode: "number" }).notNull(),
+}, (table) => ({
+  conversationIdx: index("message_conversation_idx").on(table.conversationId),
+  senderIdx: index("message_sender_idx").on(table.senderId),
+  createdAtIdx: index("message_created_at_idx").on(table.createdAt),
+}));
+
+export type ChatMessage = typeof chatMessages.$inferSelect;
+export type InsertChatMessage = typeof chatMessages.$inferInsert;
+
+/**
+ * User Online Status - Track when users/operators are online
+ */
+export const userOnlineStatus = mysqlTable("user_online_status", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId").notNull().unique(),
+  userName: varchar("userName", { length: 255 }).notNull(),
+  userRole: mysqlEnum("userRole", ["user", "admin"]).default("user").notNull(),
+  /** Whether user is currently online */
+  isOnline: boolean("isOnline").default(false).notNull(),
+  /** Last activity timestamp */
+  lastActivityAt: bigint("lastActivityAt", { mode: "number" }).notNull(),
+  /** Current page/module the user is viewing */
+  currentPage: varchar("currentPage", { length: 255 }),
+  /** Status message (e.g., "Disponível", "Ocupado", "Ausente") */
+  statusMessage: varchar("statusMessage", { length: 100 }).default("Disponível"),
+}, (table) => ({
+  userIdx: index("online_user_idx").on(table.userId),
+  onlineIdx: index("online_status_idx").on(table.isOnline),
+  roleOnlineIdx: index("online_role_status_idx").on(table.userRole, table.isOnline),
+}));
+
+export type UserOnlineStatus = typeof userOnlineStatus.$inferSelect;
+export type InsertUserOnlineStatus = typeof userOnlineStatus.$inferInsert;

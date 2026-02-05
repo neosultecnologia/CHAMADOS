@@ -1,4 +1,4 @@
-import { eq, desc, and, or, like, sql, gte, lt } from "drizzle-orm";
+import { eq, desc, asc, and, or, like, sql, gte, gt, lt, ne, isNull, inArray } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import { 
   InsertUser, users, User,
@@ -1549,5 +1549,641 @@ export async function checkAndCreateStockAlerts(): Promise<void> {
     }
   } catch (error) {
     console.error("[Database] Failed to check stock alerts:", error);
+  }
+}
+
+
+// ============ CHAT SYSTEM ============
+
+// Import chat tables from schema
+const chatConversations = (schema as any).chatConversations;
+const chatParticipants = (schema as any).chatParticipants;
+const chatMessages = (schema as any).chatMessages;
+const userOnlineStatus = (schema as any).userOnlineStatus;
+
+type ChatConversation = any;
+type InsertChatConversation = any;
+type ChatParticipant = any;
+type InsertChatParticipant = any;
+type ChatMessage = any;
+type InsertChatMessage = any;
+type UserOnlineStatus = any;
+type InsertUserOnlineStatus = any;
+
+// ============ CONVERSATION QUERIES ============
+
+export async function createConversation(data: {
+  ticketId?: number;
+  title?: string;
+  type: 'ticket_chat' | 'direct_message' | 'support_request';
+  createdById: number;
+  createdByName: string;
+  participantIds: { id: number; name: string; role: 'user' | 'operator' | 'admin' }[];
+}): Promise<ChatConversation | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    const now = Date.now();
+    
+    // Create the conversation
+    const result = await db.insert(chatConversations).values({
+      ticketId: data.ticketId,
+      title: data.title,
+      type: data.type,
+      status: 'active',
+      createdById: data.createdById,
+      createdByName: data.createdByName,
+      createdAt: now,
+      updatedAt: now,
+    });
+
+    const conversationId = result[0].insertId;
+
+    // Add creator as participant
+    await db.insert(chatParticipants).values({
+      conversationId,
+      userId: data.createdById,
+      userName: data.createdByName,
+      role: data.participantIds.find(p => p.id === data.createdById)?.role || 'user',
+      joinedAt: now,
+    });
+
+    // Add other participants
+    for (const participant of data.participantIds) {
+      if (participant.id !== data.createdById) {
+        await db.insert(chatParticipants).values({
+          conversationId,
+          userId: participant.id,
+          userName: participant.name,
+          role: participant.role,
+          joinedAt: now,
+        });
+      }
+    }
+
+    // Create system message
+    await db.insert(chatMessages).values({
+      conversationId,
+      senderId: data.createdById,
+      senderName: 'Sistema',
+      senderRole: 'system',
+      content: `Conversa iniciada por ${data.createdByName}`,
+      messageType: 'system',
+      createdAt: now,
+    });
+
+    const created = await db.select().from(chatConversations)
+      .where(eq(chatConversations.id, conversationId))
+      .limit(1);
+    
+    return created.length > 0 ? created[0] : null;
+  } catch (error) {
+    console.error("[Database] Failed to create conversation:", error);
+    return null;
+  }
+}
+
+export async function getConversationById(id: number): Promise<ChatConversation | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    const result = await db.select().from(chatConversations)
+      .where(eq(chatConversations.id, id))
+      .limit(1);
+    
+    return result.length > 0 ? result[0] : null;
+  } catch (error) {
+    console.error("[Database] Failed to get conversation:", error);
+    return null;
+  }
+}
+
+export async function getConversationByTicketId(ticketId: number): Promise<ChatConversation | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    const result = await db.select().from(chatConversations)
+      .where(eq(chatConversations.ticketId, ticketId))
+      .limit(1);
+    
+    return result.length > 0 ? result[0] : null;
+  } catch (error) {
+    console.error("[Database] Failed to get conversation by ticket:", error);
+    return null;
+  }
+}
+
+export async function getUserConversations(userId: number): Promise<any[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  try {
+    // Get all conversation IDs where user is a participant
+    const participations = await db.select()
+      .from(chatParticipants)
+      .where(
+        and(
+          eq(chatParticipants.userId, userId),
+          isNull(chatParticipants.leftAt)
+        )
+      );
+
+    if (participations.length === 0) return [];
+
+    const conversationIds = participations.map(p => p.conversationId);
+
+    // Get conversations with last message and unread count
+    const conversations = await db.select()
+      .from(chatConversations)
+      .where(inArray(chatConversations.id, conversationIds))
+      .orderBy(desc(chatConversations.lastMessageAt));
+
+    // Enrich with participant info and unread count
+    const enrichedConversations = await Promise.all(
+      conversations.map(async (conv) => {
+        const participants = await db.select()
+          .from(chatParticipants)
+          .where(
+            and(
+              eq(chatParticipants.conversationId, conv.id),
+              isNull(chatParticipants.leftAt)
+            )
+          );
+
+        const userParticipation = participations.find(p => p.conversationId === conv.id);
+        const lastReadAt = userParticipation?.lastReadAt || 0;
+
+        // Count unread messages
+        const unreadResult = await db.select({ count: sql<number>`COUNT(*)` })
+          .from(chatMessages)
+          .where(
+            and(
+              eq(chatMessages.conversationId, conv.id),
+              gt(chatMessages.createdAt, lastReadAt),
+              ne(chatMessages.senderId, userId),
+              eq(chatMessages.isDeleted, false)
+            )
+          );
+
+        const unreadCount = unreadResult[0]?.count || 0;
+
+        // Get last message
+        const lastMessage = await db.select()
+          .from(chatMessages)
+          .where(
+            and(
+              eq(chatMessages.conversationId, conv.id),
+              eq(chatMessages.isDeleted, false)
+            )
+          )
+          .orderBy(desc(chatMessages.createdAt))
+          .limit(1);
+
+        return {
+          ...conv,
+          participants,
+          unreadCount,
+          lastMessage: lastMessage[0] || null,
+        };
+      })
+    );
+
+    return enrichedConversations;
+  } catch (error) {
+    console.error("[Database] Failed to get user conversations:", error);
+    return [];
+  }
+}
+
+export async function updateConversationStatus(
+  id: number,
+  status: 'active' | 'waiting' | 'resolved' | 'closed'
+): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  try {
+    await db.update(chatConversations)
+      .set({ status, updatedAt: Date.now() })
+      .where(eq(chatConversations.id, id));
+    
+    return true;
+  } catch (error) {
+    console.error("[Database] Failed to update conversation status:", error);
+    return false;
+  }
+}
+
+// ============ MESSAGE QUERIES ============
+
+export async function sendMessage(data: {
+  conversationId: number;
+  senderId: number;
+  senderName: string;
+  senderRole: 'user' | 'operator' | 'admin';
+  content: string;
+  messageType?: 'text' | 'file' | 'image';
+  attachmentUrl?: string;
+  attachmentName?: string;
+}): Promise<ChatMessage | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    const now = Date.now();
+    
+    const result = await db.insert(chatMessages).values({
+      conversationId: data.conversationId,
+      senderId: data.senderId,
+      senderName: data.senderName,
+      senderRole: data.senderRole,
+      content: data.content,
+      messageType: data.messageType || 'text',
+      attachmentUrl: data.attachmentUrl,
+      attachmentName: data.attachmentName,
+      createdAt: now,
+    });
+
+    // Update conversation lastMessageAt
+    await db.update(chatConversations)
+      .set({ lastMessageAt: now, updatedAt: now })
+      .where(eq(chatConversations.id, data.conversationId));
+
+    const messageId = result[0].insertId;
+    const created = await db.select().from(chatMessages)
+      .where(eq(chatMessages.id, messageId))
+      .limit(1);
+    
+    return created.length > 0 ? created[0] : null;
+  } catch (error) {
+    console.error("[Database] Failed to send message:", error);
+    return null;
+  }
+}
+
+export async function getConversationMessages(
+  conversationId: number,
+  options?: { limit?: number; before?: number }
+): Promise<ChatMessage[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  try {
+    let conditions = [
+      eq(chatMessages.conversationId, conversationId),
+      eq(chatMessages.isDeleted, false),
+    ];
+
+    if (options?.before) {
+      conditions.push(lt(chatMessages.createdAt, options.before));
+    }
+
+    let query = db.select()
+      .from(chatMessages)
+      .where(and(...conditions))
+      .orderBy(desc(chatMessages.createdAt));
+
+    if (options?.limit) {
+      query = query.limit(options.limit) as any;
+    }
+
+    const messages = await query;
+    return messages.reverse(); // Return in chronological order
+  } catch (error) {
+    console.error("[Database] Failed to get messages:", error);
+    return [];
+  }
+}
+
+export async function getNewMessages(
+  conversationId: number,
+  afterTimestamp: number
+): Promise<ChatMessage[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  try {
+    const messages = await db.select()
+      .from(chatMessages)
+      .where(
+        and(
+          eq(chatMessages.conversationId, conversationId),
+          gt(chatMessages.createdAt, afterTimestamp),
+          eq(chatMessages.isDeleted, false)
+        )
+      )
+      .orderBy(asc(chatMessages.createdAt));
+
+    return messages;
+  } catch (error) {
+    console.error("[Database] Failed to get new messages:", error);
+    return [];
+  }
+}
+
+export async function markMessagesAsRead(
+  conversationId: number,
+  userId: number
+): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  try {
+    await db.update(chatParticipants)
+      .set({ lastReadAt: Date.now() })
+      .where(
+        and(
+          eq(chatParticipants.conversationId, conversationId),
+          eq(chatParticipants.userId, userId)
+        )
+      );
+    
+    return true;
+  } catch (error) {
+    console.error("[Database] Failed to mark messages as read:", error);
+    return false;
+  }
+}
+
+export async function deleteMessage(
+  messageId: number,
+  userId: number
+): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  try {
+    const result = await db.update(chatMessages)
+      .set({ isDeleted: true, deletedAt: Date.now() })
+      .where(
+        and(
+          eq(chatMessages.id, messageId),
+          eq(chatMessages.senderId, userId)
+        )
+      );
+    
+    return true;
+  } catch (error) {
+    console.error("[Database] Failed to delete message:", error);
+    return false;
+  }
+}
+
+// ============ TYPING INDICATOR ============
+
+export async function updateTypingStatus(
+  conversationId: number,
+  userId: number,
+  isTyping: boolean
+): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  try {
+    await db.update(chatParticipants)
+      .set({ 
+        isTyping,
+        typingUpdatedAt: Date.now()
+      })
+      .where(
+        and(
+          eq(chatParticipants.conversationId, conversationId),
+          eq(chatParticipants.userId, userId)
+        )
+      );
+    
+    return true;
+  } catch (error) {
+    console.error("[Database] Failed to update typing status:", error);
+    return false;
+  }
+}
+
+export async function getTypingUsers(conversationId: number): Promise<{ userId: number; userName: string }[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  try {
+    // Get users who are typing and updated within last 5 seconds
+    const fiveSecondsAgo = Date.now() - 5000;
+    
+    const typing = await db.select({
+      userId: chatParticipants.userId,
+      userName: chatParticipants.userName,
+    })
+      .from(chatParticipants)
+      .where(
+        and(
+          eq(chatParticipants.conversationId, conversationId),
+          eq(chatParticipants.isTyping, true),
+          gt(chatParticipants.typingUpdatedAt, fiveSecondsAgo)
+        )
+      );
+
+    return typing;
+  } catch (error) {
+    console.error("[Database] Failed to get typing users:", error);
+    return [];
+  }
+}
+
+// ============ ONLINE STATUS ============
+
+export async function updateUserOnlineStatus(data: {
+  userId: number;
+  userName: string;
+  userRole: 'user' | 'admin';
+  isOnline: boolean;
+  currentPage?: string;
+  statusMessage?: string;
+}): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  try {
+    // Try to update existing record
+    const existing = await db.select().from(userOnlineStatus)
+      .where(eq(userOnlineStatus.userId, data.userId))
+      .limit(1);
+
+    if (existing.length > 0) {
+      await db.update(userOnlineStatus)
+        .set({
+          isOnline: data.isOnline,
+          lastActivityAt: Date.now(),
+          currentPage: data.currentPage,
+          statusMessage: data.statusMessage || 'Disponível',
+        })
+        .where(eq(userOnlineStatus.userId, data.userId));
+    } else {
+      await db.insert(userOnlineStatus).values({
+        userId: data.userId,
+        userName: data.userName,
+        userRole: data.userRole,
+        isOnline: data.isOnline,
+        lastActivityAt: Date.now(),
+        currentPage: data.currentPage,
+        statusMessage: data.statusMessage || 'Disponível',
+      });
+    }
+    
+    return true;
+  } catch (error) {
+    console.error("[Database] Failed to update online status:", error);
+    return false;
+  }
+}
+
+export async function getOnlineOperators(): Promise<UserOnlineStatus[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  try {
+    // Consider users online if they were active in the last 2 minutes
+    const twoMinutesAgo = Date.now() - 120000;
+    
+    const operators = await db.select()
+      .from(userOnlineStatus)
+      .where(
+        and(
+          eq(userOnlineStatus.userRole, 'admin'),
+          eq(userOnlineStatus.isOnline, true),
+          gt(userOnlineStatus.lastActivityAt, twoMinutesAgo)
+        )
+      );
+
+    return operators;
+  } catch (error) {
+    console.error("[Database] Failed to get online operators:", error);
+    return [];
+  }
+}
+
+export async function getAllOnlineUsers(): Promise<UserOnlineStatus[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  try {
+    const twoMinutesAgo = Date.now() - 120000;
+    
+    const users = await db.select()
+      .from(userOnlineStatus)
+      .where(
+        and(
+          eq(userOnlineStatus.isOnline, true),
+          gt(userOnlineStatus.lastActivityAt, twoMinutesAgo)
+        )
+      );
+
+    return users;
+  } catch (error) {
+    console.error("[Database] Failed to get online users:", error);
+    return [];
+  }
+}
+
+// ============ PARTICIPANT QUERIES ============
+
+export async function addParticipantToConversation(data: {
+  conversationId: number;
+  userId: number;
+  userName: string;
+  role: 'user' | 'operator' | 'admin';
+}): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  try {
+    // Check if already a participant
+    const existing = await db.select().from(chatParticipants)
+      .where(
+        and(
+          eq(chatParticipants.conversationId, data.conversationId),
+          eq(chatParticipants.userId, data.userId)
+        )
+      )
+      .limit(1);
+
+    if (existing.length > 0) {
+      // Rejoin if previously left
+      if (existing[0].leftAt) {
+        await db.update(chatParticipants)
+          .set({ leftAt: null, joinedAt: Date.now() })
+          .where(eq(chatParticipants.id, existing[0].id));
+      }
+      return true;
+    }
+
+    await db.insert(chatParticipants).values({
+      conversationId: data.conversationId,
+      userId: data.userId,
+      userName: data.userName,
+      role: data.role,
+      joinedAt: Date.now(),
+    });
+
+    // Add system message
+    await db.insert(chatMessages).values({
+      conversationId: data.conversationId,
+      senderId: data.userId,
+      senderName: 'Sistema',
+      senderRole: 'system',
+      content: `${data.userName} entrou na conversa`,
+      messageType: 'system',
+      createdAt: Date.now(),
+    });
+    
+    return true;
+  } catch (error) {
+    console.error("[Database] Failed to add participant:", error);
+    return false;
+  }
+}
+
+export async function removeParticipantFromConversation(
+  conversationId: number,
+  userId: number
+): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  try {
+    await db.update(chatParticipants)
+      .set({ leftAt: Date.now() })
+      .where(
+        and(
+          eq(chatParticipants.conversationId, conversationId),
+          eq(chatParticipants.userId, userId)
+        )
+      );
+    
+    return true;
+  } catch (error) {
+    console.error("[Database] Failed to remove participant:", error);
+    return false;
+  }
+}
+
+export async function getConversationParticipants(conversationId: number): Promise<ChatParticipant[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  try {
+    const participants = await db.select()
+      .from(chatParticipants)
+      .where(
+        and(
+          eq(chatParticipants.conversationId, conversationId),
+          isNull(chatParticipants.leftAt)
+        )
+      );
+
+    return participants;
+  } catch (error) {
+    console.error("[Database] Failed to get participants:", error);
+    return [];
   }
 }

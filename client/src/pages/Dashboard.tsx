@@ -7,6 +7,8 @@ import { motion } from 'framer-motion';
 import { toast } from 'sonner';
 import NotificationBell from '@/components/NotificationBell';
 import TicketsList from '@/components/TicketsList';
+import ChatBox from '@/components/ChatBox';
+import OnlineOperators from '@/components/OnlineOperators';
 import CreateTicketModal from '@/components/CreateTicketModal';
 import TicketDetailModal from '@/components/TicketDetailModal';
 
@@ -41,6 +43,8 @@ export default function Dashboard() {
     priority: '',
     departmentId: undefined as number | undefined,
   });
+  const [showChat, setShowChat] = useState(false);
+  const [chatMinimized, setChatMinimized] = useState(false);
 
   // Fetch tickets from database
   const { data: tickets = [], isLoading, refetch } = trpc.tickets.list.useQuery({
@@ -313,6 +317,31 @@ export default function Dashboard() {
           onClose={() => setSelectedTicket(null)}
           onUpdate={handleTicketUpdated}
         />
+      )}
+
+      {/* Floating Chat Button */}
+      {!showChat && (
+        <button
+          onClick={() => setShowChat(true)}
+          className="fixed bottom-6 right-6 z-50 bg-cyan-500 hover:bg-cyan-600 text-white p-4 rounded-full shadow-lg hover:scale-105 transition-all"
+          title="Abrir Chat de Suporte"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/>
+          </svg>
+        </button>
+      )}
+
+      {/* Chat Box */}
+      {showChat && (
+        <div className="fixed bottom-6 right-6 z-50">
+          <ChatBox
+            onClose={() => setShowChat(false)}
+            minimized={chatMinimized}
+            onToggleMinimize={() => setChatMinimized(!chatMinimized)}
+            className="shadow-2xl"
+          />
+        </div>
       )}
     </div>
   );

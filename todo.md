@@ -591,3 +591,22 @@
 - [x] Testar sistema de notificações - Funcionando (dropdown aparece corretamente)
 - [x] Verificar navegação entre páginas - Funcionando
 - [x] Corrigir erro de WebSocket do Vite - Não afeta funcionalidade
+
+## Sistema de Chat em Tempo Real para Chamados
+- [x] Criar tabela de conversas (chat_conversations) no banco de dados
+- [x] Criar tabela de mensagens (chat_messages) no banco de dados
+- [x] Criar tabela de participantes (chat_participants) no banco de dados
+- [x] Criar tabela de status online (user_online_status) no banco de dados
+- [x] Implementar funções de banco de dados para conversas
+- [x] Implementar funções de banco de dados para mensagens
+- [x] Implementar funções de banco de dados para status online
+- [x] Criar routers tRPC para chat (criar conversa, enviar mensagem, listar mensagens)
+- [x] Criar routers tRPC para status online (atualizar, listar operadores online)
+- [x] Criar componente ChatBox com interface de mensagens
+- [x] Criar componente OnlineOperators para mostrar operadores online
+- [x] Implementar indicador de digitação em tempo real
+- [x] Implementar polling para novas mensagens (3 segundos)
+- [x] Implementar polling para status online (30 segundos)
+- [x] Integrar chat no módulo de Chamados (botão flutuante)
+- [x] Vincular conversas aos tickets específicos
+- [x] Testar sistema completo de chat - Funcionando!

@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS chat_messages (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  conversationId INT NOT NULL,\n  senderId INT NOT NULL,\n  senderName VARCHAR(255) NOT NULL,\n  senderRole ENUM('user', 'operator', 'admin', 'system') DEFAULT 'user' NOT NULL,\n  content TEXT NOT NULL,\n  messageType ENUM('text', 'file', 'image', 'system') DEFAULT 'text' NOT NULL,\n  attachmentUrl TEXT,\n  attachmentName VARCHAR(255),\n  isEdited BOOLEAN DEFAULT FALSE NOT NULL,\n  editedAt BIGINT,\n  isDeleted BOOLEAN DEFAULT FALSE NOT NULL,\n  deletedAt BIGINT,\n  createdAt BIGINT NOT NULL,\n  INDEX message_conversation_idx (conversationId),\n  INDEX message_sender_idx (senderId),\n  INDEX message_created_at_idx (createdAt)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user M967bVXfxXUhp7W.root --database JLPd83LStLYaV7mJXtu8eL --execute CREATE TABLE IF NOT EXISTS chat_messages (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  conversationId INT NOT NULL,\n  senderId INT NOT NULL,\n  senderName VARCHAR(255) NOT NULL,\n  senderRole ENUM('user', 'operator', 'admin', 'system') DEFAULT 'user' NOT NULL,\n  content TEXT NOT NULL,\n  messageType ENUM('text', 'file', 'image', 'system') DEFAULT 'text' NOT NULL,\n  attachmentUrl TEXT,\n  attachmentName VARCHAR(255),\n  isEdited BOOLEAN DEFAULT FALSE NOT NULL,\n  editedAt BIGINT,\n  isDeleted BOOLEAN DEFAULT FALSE NOT NULL,\n  deletedAt BIGINT,\n  createdAt BIGINT NOT NULL,\n  INDEX message_conversation_idx (conversationId),\n  INDEX message_sender_idx (senderId),\n  INDEX message_created_at_idx (createdAt)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 212
+}

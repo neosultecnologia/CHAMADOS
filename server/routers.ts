@@ -1513,6 +1513,219 @@ export const appRouter = router({
         return { success: true };
       }),
   }),
+
+  // ============ CHAT SYSTEM ============
+  chat: router({
+    // Create a new conversation
+    createConversation: protectedProcedure
+      .input(z.object({
+        ticketId: z.number().optional(),
+        title: z.string().optional(),
+        type: z.enum(['ticket_chat', 'direct_message', 'support_request']),
+        participantIds: z.array(z.object({
+          id: z.number(),
+          name: z.string(),
+          role: z.enum(['user', 'operator', 'admin']),
+        })),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        const conversation = await db.createConversation({
+          ...input,
+          createdById: ctx.user.id,
+          createdByName: ctx.user.name,
+        });
+        if (!conversation) {
+          throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Falha ao criar conversa' });
+        }
+        return conversation;
+      }),
+
+    // Get conversation by ID
+    getConversation: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getConversationById(input.id);
+      }),
+
+    // Get conversation by ticket ID
+    getConversationByTicket: protectedProcedure
+      .input(z.object({ ticketId: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getConversationByTicketId(input.ticketId);
+      }),
+
+    // Get user's conversations
+    getMyConversations: protectedProcedure
+      .query(async ({ ctx }) => {
+        return await db.getUserConversations(ctx.user.id);
+      }),
+
+    // Update conversation status
+    updateConversationStatus: protectedProcedure
+      .input(z.object({
+        id: z.number(),
+        status: z.enum(['active', 'waiting', 'resolved', 'closed']),
+      }))
+      .mutation(async ({ input }) => {
+        const success = await db.updateConversationStatus(input.id, input.status);
+        if (!success) {
+          throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Falha ao atualizar status' });
+        }
+        return { success: true };
+      }),
+
+    // Send a message
+    sendMessage: protectedProcedure
+      .input(z.object({
+        conversationId: z.number(),
+        content: z.string().min(1),
+        messageType: z.enum(['text', 'file', 'image']).optional(),
+        attachmentUrl: z.string().optional(),
+        attachmentName: z.string().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        const message = await db.sendMessage({
+          ...input,
+          senderId: ctx.user.id,
+          senderName: ctx.user.name,
+          senderRole: ctx.user.role as 'user' | 'admin',
+        });
+        if (!message) {
+          throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Falha ao enviar mensagem' });
+        }
+        return message;
+      }),
+
+    // Get messages from a conversation
+    getMessages: protectedProcedure
+      .input(z.object({
+        conversationId: z.number(),
+        limit: z.number().optional(),
+        before: z.number().optional(),
+      }))
+      .query(async ({ input }) => {
+        return await db.getConversationMessages(input.conversationId, {
+          limit: input.limit,
+          before: input.before,
+        });
+      }),
+
+    // Get new messages (for polling)
+    getNewMessages: protectedProcedure
+      .input(z.object({
+        conversationId: z.number(),
+        afterTimestamp: z.number(),
+      }))
+      .query(async ({ input }) => {
+        return await db.getNewMessages(input.conversationId, input.afterTimestamp);
+      }),
+
+    // Mark messages as read
+    markAsRead: protectedProcedure
+      .input(z.object({ conversationId: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        const success = await db.markMessagesAsRead(input.conversationId, ctx.user.id);
+        return { success };
+      }),
+
+    // Delete a message
+    deleteMessage: protectedProcedure
+      .input(z.object({ messageId: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        const success = await db.deleteMessage(input.messageId, ctx.user.id);
+        if (!success) {
+          throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Falha ao deletar mensagem' });
+        }
+        return { success: true };
+      }),
+
+    // Update typing status
+    updateTyping: protectedProcedure
+      .input(z.object({
+        conversationId: z.number(),
+        isTyping: z.boolean(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        await db.updateTypingStatus(input.conversationId, ctx.user.id, input.isTyping);
+        return { success: true };
+      }),
+
+    // Get typing users
+    getTypingUsers: protectedProcedure
+      .input(z.object({ conversationId: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getTypingUsers(input.conversationId);
+      }),
+
+    // Get conversation participants
+    getParticipants: protectedProcedure
+      .input(z.object({ conversationId: z.number() }))
+      .query(async ({ input }) => {
+        return await db.getConversationParticipants(input.conversationId);
+      }),
+
+    // Add participant to conversation
+    addParticipant: protectedProcedure
+      .input(z.object({
+        conversationId: z.number(),
+        userId: z.number(),
+        userName: z.string(),
+        role: z.enum(['user', 'operator', 'admin']),
+      }))
+      .mutation(async ({ input }) => {
+        const success = await db.addParticipantToConversation(input);
+        if (!success) {
+          throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Falha ao adicionar participante' });
+        }
+        return { success: true };
+      }),
+
+    // Remove participant from conversation
+    removeParticipant: protectedProcedure
+      .input(z.object({
+        conversationId: z.number(),
+        userId: z.number(),
+      }))
+      .mutation(async ({ input }) => {
+        const success = await db.removeParticipantFromConversation(input.conversationId, input.userId);
+        if (!success) {
+          throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Falha ao remover participante' });
+        }
+        return { success: true };
+      }),
+  }),
+
+  // ============ ONLINE STATUS ============
+  onlineStatus: router({
+    // Update current user's online status
+    updateStatus: protectedProcedure
+      .input(z.object({
+        isOnline: z.boolean(),
+        currentPage: z.string().optional(),
+        statusMessage: z.string().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        await db.updateUserOnlineStatus({
+          userId: ctx.user.id,
+          userName: ctx.user.name,
+          userRole: ctx.user.role as 'user' | 'admin',
+          ...input,
+        });
+        return { success: true };
+      }),
+
+    // Get online operators/admins
+    getOnlineOperators: protectedProcedure
+      .query(async () => {
+        return await db.getOnlineOperators();
+      }),
+
+    // Get all online users
+    getAllOnline: protectedProcedure
+      .query(async () => {
+        return await db.getAllOnlineUsers();
+      }),
+  }),
 });
 
 export type AppRouter = typeof appRouter;
