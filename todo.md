@@ -440,3 +440,46 @@
 - [x] Adicionar botão de alternância entre visualização lista e Kanban
 - [x] Estilizar cards dos projetos no estilo Trello
 - [x] Testar funcionalidade de arrastar e soltar
+
+## Sistema de Backup Automático Diário
+- [ ] Criar tabela backups no schema para registrar histórico
+- [ ] Implementar serviço de backup que exporta todo banco de dados
+- [ ] Adicionar verificação de integridade do backup (checksum)
+- [ ] Implementar rotação automática de 7 dias (apaga o mais antigo)
+- [ ] Criar agendamento diário do backup (cron job)
+- [ ] Criar routers tRPC para listar backups disponíveis
+- [ ] Criar router tRPC para restaurar backup específico
+- [ ] Desenvolver página BackupManagement no painel admin
+- [ ] Adicionar visualização de lista de backups com data/tamanho/status
+- [ ] Implementar botão de restauração com confirmação
+- [ ] Adicionar indicador de integridade dos backups
+- [ ] Testar criação automática de backup
+- [ ] Testar rotação após 7 dias
+- [ ] Testar restauração de backup
+
+## Sistema de Backup Automático Diário
+- [x] Criar tabela backups no schema do banco de dados
+- [x] Implementar serviço de backup (backupService.ts)
+- [x] Adicionar função de exportação de todas as tabelas para JSON
+- [x] Implementar upload de backup para S3
+- [x] Adicionar verificação de integridade (checksum SHA-256)
+- [x] Implementar rotação automática (7 dias)
+- [x] Criar routers tRPC para backup (list, create, verify, restore)
+- [x] Implementar agendamento diário às 2h da manhã
+- [x] Criar página BackupManagement no painel admin
+- [x] Adicionar visualização de histórico de backups
+- [x] Implementar botão de criar backup manual
+- [x] Implementar botão de verificar integridade
+- [x] Implementar botão de restaurar backup (com confirmação)
+- [x] Adicionar link para backups no menu admin
+- [x] Testar criação, verificação e restauração de backup
+
+## Visualização Kanban nos Projetos (Estilo Trello)
+- [x] Instalar biblioteca de drag-and-drop (@dnd-kit ou react-beautiful-dnd)
+- [x] Criar componente KanbanBoard para visualização em colunas
+- [x] Implementar colunas por status (Planejamento, Em Andamento, Concluído, Cancelado)
+- [x] Adicionar drag-and-drop para mover projetos entre colunas
+- [x] Atualizar status do projeto ao soltar em nova coluna
+- [x] Adicionar botão de alternância entre visualização lista e Kanban
+- [x] Estilizar cards dos projetos no estilo Trello
+- [x] Testar funcionalidade de arrastar e soltar

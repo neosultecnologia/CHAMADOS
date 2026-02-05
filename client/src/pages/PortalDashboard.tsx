@@ -135,6 +135,12 @@ export default function PortalDashboard() {
               >
                 <Info size={14} /> Notícias
               </button>
+              <button 
+                onClick={() => setLocation('/admin/backups')}
+                className="hover:text-white transition opacity-80 flex items-center gap-1"
+              >
+                <Settings size={14} /> Backups
+              </button>
             </>
           )}
         </nav>

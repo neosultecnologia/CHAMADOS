@@ -358,3 +358,21 @@ export const purchaseOrderItems = mysqlTable("purchaseOrderItems", {
 
 export type PurchaseOrderItem = typeof purchaseOrderItems.$inferSelect;
 export type InsertPurchaseOrderItem = typeof purchaseOrderItems.$inferInsert;
+
+// Database Backups
+export const backups = mysqlTable("backups", {
+  id: int("id").autoincrement().primaryKey(),
+  filename: varchar("filename", { length: 255 }).notNull(),
+  fileSize: bigint("fileSize", { mode: "number" }).notNull(), // Size in bytes
+  checksum: varchar("checksum", { length: 64 }).notNull(), // SHA-256 hash
+  status: mysqlEnum("status", ["completed", "failed", "in_progress"]).default("in_progress").notNull(),
+  s3Key: varchar("s3Key", { length: 512 }).notNull(), // S3 storage path
+  s3Url: varchar("s3Url", { length: 1024 }).notNull(), // S3 public URL
+  tablesBackedUp: json("tablesBackedUp").$defaultFn(() => []), // List of table names
+  recordCount: int("recordCount").default(0).notNull(), // Total records backed up
+  createdAt: bigint("createdAt", { mode: "number" }).notNull(),
+  createdBy: varchar("createdBy", { length: 255 }).notNull(),
+});
+
+export type Backup = typeof backups.$inferSelect;
+export type InsertBackup = typeof backups.$inferInsert;

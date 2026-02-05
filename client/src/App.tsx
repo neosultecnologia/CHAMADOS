@@ -13,6 +13,7 @@ import UserManagement from "./pages/UserManagement";
 import Projects from "./pages/Projects";
 import ProjectsDashboard from "./pages/ProjectsDashboard";
 import Announcements from "./pages/Announcements";
+import BackupManagement from "./pages/BackupManagement";
 import PermissionGroupsManagement from "./pages/PermissionGroupsManagement";
 import Suppliers from "./pages/Suppliers";
 import Products from "./pages/Products";
@@ -87,6 +88,11 @@ function Router() {
          {/* Admin - Announcements Management */}
       <Route path="/admin/noticias">
         <ProtectedRoute component={Announcements} />
+      </Route>
+      
+      {/* Admin - Backup Management */}
+      <Route path="/admin/backups">
+        <ProtectedRoute component={BackupManagement} />
       </Route>
       
       {/* Admin - Permission Groups Management */}

@@ -1260,6 +1260,56 @@ export const appRouter = router({
         return await db.updatePurchaseOrder(input.id, updates);
       }),
   }),
+
+  backups: router({
+    list: protectedProcedure.query(async ({ ctx }) => {
+      // Only admins can access backups
+      if (ctx.user.role !== "admin") {
+        throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
+      }
+      const { listBackups } = await import("./backupService");
+      return await listBackups();
+    }),
+
+    create: protectedProcedure.mutation(async ({ ctx }) => {
+      // Only admins can create backups
+      if (ctx.user.role !== "admin") {
+        throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
+      }
+      const { createBackup } = await import("./backupService");
+      const result = await createBackup(ctx.user.name || "Admin");
+      if (!result.success) {
+        throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: result.error || "Falha ao criar backup" });
+      }
+      return result;
+    }),
+
+    verify: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .query(async ({ ctx, input }) => {
+        // Only admins can verify backups
+        if (ctx.user.role !== "admin") {
+          throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
+        }
+        const { verifyBackup } = await import("./backupService");
+        return await verifyBackup(input.id);
+      }),
+
+    restore: protectedProcedure
+      .input(z.object({ id: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        // Only admins can restore backups
+        if (ctx.user.role !== "admin") {
+          throw new TRPCError({ code: "FORBIDDEN", message: "Acesso negado" });
+        }
+        const { restoreBackup } = await import("./backupService");
+        const result = await restoreBackup(input.id);
+        if (!result.success) {
+          throw new TRPCError({ code: "INTERNAL_SERVER_ERROR", message: result.error || "Falha ao restaurar backup" });
+        }
+        return result;
+      }),
+  }),
 });
 
 export type AppRouter = typeof appRouter;
