@@ -182,7 +182,7 @@ export default defineConfig({
       "localhost",
       "127.0.0.1",
     ],
-    hmr: isManus ? undefined : {
+    hmr: isManus ? false : {
       protocol: "ws",
       host: "localhost",
       port: 5173,
