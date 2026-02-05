@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS operator_availability (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  operatorId INT NOT NULL UNIQUE,\n  operatorName VARCHAR(255) NOT NULL,\n  isAvailableForChat BOOLEAN DEFAULT FALSE NOT NULL,\n  status ENUM('available', 'busy', 'away', 'offline') DEFAULT 'offline' NOT NULL,\n  maxConcurrentChats INT DEFAULT 3 NOT NULL,\n  currentActiveChats INT DEFAULT 0 NOT NULL,\n  lastActiveAt BIGINT,\n  statusMessage VARCHAR(255),\n  updatedAt BIGINT NOT NULL,\n  INDEX availability_operator_idx (operatorId),\n  INDEX availability_status_idx (status),\n  INDEX availability_available_idx (isAvailableForChat)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user M967bVXfxXUhp7W.root --database JLPd83LStLYaV7mJXtu8eL --execute CREATE TABLE IF NOT EXISTS operator_availability (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  operatorId INT NOT NULL UNIQUE,\n  operatorName VARCHAR(255) NOT NULL,\n  isAvailableForChat BOOLEAN DEFAULT FALSE NOT NULL,\n  status ENUM('available', 'busy', 'away', 'offline') DEFAULT 'offline' NOT NULL,\n  maxConcurrentChats INT DEFAULT 3 NOT NULL,\n  currentActiveChats INT DEFAULT 0 NOT NULL,\n  lastActiveAt BIGINT,\n  statusMessage VARCHAR(255),\n  updatedAt BIGINT NOT NULL,\n  INDEX availability_operator_idx (operatorId),\n  INDEX availability_status_idx (status),\n  INDEX availability_available_idx (isAvailableForChat)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 369
+}

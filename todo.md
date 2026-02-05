@@ -610,3 +610,22 @@
 - [x] Integrar chat no módulo de Chamados (botão flutuante)
 - [x] Vincular conversas aos tickets específicos
 - [x] Testar sistema completo de chat - Funcionando!
+
+## Sistema de Fila de Atendimento do Chat
+- [x] Criar tabela chat_queue no banco de dados (posição, status, tempo de espera)
+- [x] Criar tabela operator_availability no banco de dados
+- [x] Adicionar campo availableForChat aos operadores (disponível para atendimento)
+- [x] Adicionar campo currentChats aos operadores (quantidade de chats ativos)
+- [x] Criar enum de status do operador (available, busy, offline)
+- [x] Implementar funções de banco para gerenciar fila
+- [x] Criar router tRPC para entrar na fila de atendimento
+- [x] Criar router tRPC para listar fila de espera (admin)
+- [x] Criar router tRPC para aceitar atendimento da fila
+- [x] Criar router tRPC para liberar/bloquear operador para atendimento
+- [x] Criar router tRPC para listar status de todos operadores
+- [x] Criar componente OperatorPanel para admin (disponíveis, ocupados, offline)
+- [x] Criar componente ChatBoxWithQueue para usuário ver posição na fila
+- [x] Implementar polling para atualizar posição na fila (3 segundos)
+- [x] Implementar contador de tempo de espera em tempo real
+- [x] Implementar notificação quando operador aceitar atendimento
+- [x] Testar fluxo completo: usuário entra na fila → aguarda atendimento - Funcionando!

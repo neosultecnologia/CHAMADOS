@@ -7,7 +7,8 @@ import { motion } from 'framer-motion';
 import { toast } from 'sonner';
 import NotificationBell from '@/components/NotificationBell';
 import TicketsList from '@/components/TicketsList';
-import ChatBox from '@/components/ChatBox';
+import ChatBoxWithQueue from '@/components/ChatBoxWithQueue';
+import OperatorPanel from '@/components/OperatorPanel';
 import OnlineOperators from '@/components/OnlineOperators';
 import CreateTicketModal from '@/components/CreateTicketModal';
 import TicketDetailModal from '@/components/TicketDetailModal';
@@ -45,6 +46,7 @@ export default function Dashboard() {
   });
   const [showChat, setShowChat] = useState(false);
   const [chatMinimized, setChatMinimized] = useState(false);
+  const [showOperatorPanel, setShowOperatorPanel] = useState(false);
 
   // Fetch tickets from database
   const { data: tickets = [], isLoading, refetch } = trpc.tickets.list.useQuery({
@@ -332,16 +334,40 @@ export default function Dashboard() {
         </button>
       )}
 
-      {/* Chat Box */}
+      {/* Operator Panel Button (Admin Only) */}
+      {user?.role === 'admin' && (
+        <button
+          onClick={() => setShowOperatorPanel(true)}
+          className="fixed bottom-6 right-24 z-50 bg-purple-500 hover:bg-purple-600 text-white p-4 rounded-full shadow-lg hover:scale-105 transition-all"
+          title="Painel de Atendimento"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+          </svg>
+        </button>
+      )}
+
+      {/* Chat Box with Queue */}
       {showChat && (
-        <div className="fixed bottom-6 right-6 z-50">
-          <ChatBox
-            onClose={() => setShowChat(false)}
-            minimized={chatMinimized}
-            onToggleMinimize={() => setChatMinimized(!chatMinimized)}
-            className="shadow-2xl"
-          />
-        </div>
+        <ChatBoxWithQueue
+          onClose={() => setShowChat(false)}
+          minimized={chatMinimized}
+          onToggleMinimize={() => setChatMinimized(!chatMinimized)}
+          className="shadow-2xl"
+        />
+      )}
+
+      {/* Operator Panel */}
+      {showOperatorPanel && (
+        <OperatorPanel
+          isOpen={showOperatorPanel}
+          onClose={() => setShowOperatorPanel(false)}
+          onChatAccepted={(conversationId) => {
+            setShowOperatorPanel(false);
+            setShowChat(true);
+          }}
+        />
       )}
     </div>
   );

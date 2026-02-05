@@ -1726,6 +1726,150 @@ export const appRouter = router({
         return await db.getAllOnlineUsers();
       }),
   }),
+
+  // ============ CHAT QUEUE ============
+  chatQueue: router({
+    // User enters the queue
+    enterQueue: protectedProcedure
+      .input(z.object({
+        ticketId: z.number().optional(),
+        initialMessage: z.string().optional(),
+        priority: z.enum(['normal', 'high', 'urgent']).optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        const queueEntry = await db.addToQueue({
+          userId: ctx.user.id,
+          userName: ctx.user.name,
+          ...input,
+        });
+        if (!queueEntry) {
+          throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Falha ao entrar na fila' });
+        }
+        return queueEntry;
+      }),
+
+    // Get user's current queue status
+    getMyStatus: protectedProcedure
+      .query(async ({ ctx }) => {
+        return await db.getUserQueueStatus(ctx.user.id);
+      }),
+
+    // Get user's position in queue
+    getMyPosition: protectedProcedure
+      .query(async ({ ctx }) => {
+        return await db.getQueuePosition(ctx.user.id);
+      }),
+
+    // User leaves the queue
+    leaveQueue: protectedProcedure
+      .mutation(async ({ ctx }) => {
+        const success = await db.cancelQueueEntry(ctx.user.id);
+        return { success };
+      }),
+
+    // Get waiting queue (admin only)
+    getWaitingQueue: protectedProcedure
+      .query(async ({ ctx }) => {
+        if (ctx.user.role !== 'admin') {
+          throw new TRPCError({ code: 'FORBIDDEN', message: 'Apenas administradores podem ver a fila' });
+        }
+        return await db.getWaitingQueue();
+      }),
+
+    // Accept a chat from queue (admin only)
+    acceptChat: protectedProcedure
+      .input(z.object({ queueId: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== 'admin') {
+          throw new TRPCError({ code: 'FORBIDDEN', message: 'Apenas administradores podem aceitar atendimentos' });
+        }
+        const result = await db.acceptChatFromQueue(input.queueId, ctx.user.id, ctx.user.name);
+        if (!result) {
+          throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Falha ao aceitar atendimento' });
+        }
+        return result;
+      }),
+
+    // Complete a chat (admin only)
+    completeChat: protectedProcedure
+      .input(z.object({ queueId: z.number() }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== 'admin') {
+          throw new TRPCError({ code: 'FORBIDDEN', message: 'Apenas administradores podem finalizar atendimentos' });
+        }
+        const success = await db.completeChatFromQueue(input.queueId);
+        if (!success) {
+          throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Falha ao finalizar atendimento' });
+        }
+        return { success: true };
+      }),
+
+    // Get operator's active chats
+    getMyActiveChats: protectedProcedure
+      .query(async ({ ctx }) => {
+        if (ctx.user.role !== 'admin') {
+          return [];
+        }
+        return await db.getOperatorActiveChats(ctx.user.id);
+      }),
+  }),
+
+  // ============ OPERATOR AVAILABILITY ============
+  operatorAvailability: router({
+    // Update operator availability (admin only)
+    updateAvailability: protectedProcedure
+      .input(z.object({
+        isAvailableForChat: z.boolean(),
+        status: z.enum(['available', 'busy', 'away', 'offline']).optional(),
+        maxConcurrentChats: z.number().optional(),
+        statusMessage: z.string().optional(),
+      }))
+      .mutation(async ({ ctx, input }) => {
+        if (ctx.user.role !== 'admin') {
+          throw new TRPCError({ code: 'FORBIDDEN', message: 'Apenas administradores podem atualizar disponibilidade' });
+        }
+        const result = await db.updateOperatorAvailability({
+          operatorId: ctx.user.id,
+          operatorName: ctx.user.name,
+          ...input,
+        });
+        if (!result) {
+          throw new TRPCError({ code: 'INTERNAL_SERVER_ERROR', message: 'Falha ao atualizar disponibilidade' });
+        }
+        return result;
+      }),
+
+    // Get my availability (admin only)
+    getMyAvailability: protectedProcedure
+      .query(async ({ ctx }) => {
+        if (ctx.user.role !== 'admin') {
+          return null;
+        }
+        const operators = await db.getAllOperatorsAvailability();
+        return operators.find(op => op.operatorId === ctx.user.id) || null;
+      }),
+
+    // Get all operators availability (admin only)
+    getAllOperators: protectedProcedure
+      .query(async ({ ctx }) => {
+        if (ctx.user.role !== 'admin') {
+          throw new TRPCError({ code: 'FORBIDDEN', message: 'Apenas administradores podem ver operadores' });
+        }
+        return await db.getAllOperatorsAvailability();
+      }),
+
+    // Get available operators (for users to see)
+    getAvailable: protectedProcedure
+      .query(async () => {
+        return await db.getAvailableOperators();
+      }),
+
+    // Get operator stats summary
+    getStats: protectedProcedure
+      .query(async () => {
+        return await db.getOperatorStats();
+      }),
+  }),
 });
 
 export type AppRouter = typeof appRouter;

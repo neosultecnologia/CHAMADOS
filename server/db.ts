@@ -2187,3 +2187,518 @@ export async function getConversationParticipants(conversationId: number): Promi
     return [];
   }
 }
+
+
+// ============ CHAT QUEUE FUNCTIONS ============
+
+const chatQueue = (schema as any).chatQueue;
+type ChatQueue = any;
+const operatorAvailability = (schema as any).operatorAvailability;
+type OperatorAvailability = any;
+
+/**
+ * Add user to chat queue
+ */
+export async function addToQueue(data: {
+  userId: number;
+  userName: string;
+  ticketId?: number;
+  initialMessage?: string;
+  priority?: 'normal' | 'high' | 'urgent';
+}): Promise<ChatQueue | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    // Check if user is already in queue
+    const existing = await db.select().from(chatQueue)
+      .where(
+        and(
+          eq(chatQueue.userId, data.userId),
+          inArray(chatQueue.status, ['waiting', 'assigned'])
+        )
+      )
+      .limit(1);
+
+    if (existing.length > 0) {
+      return existing[0]; // Already in queue
+    }
+
+    // Get next position
+    const lastInQueue = await db.select({ maxPos: sql<number>`MAX(position)` })
+      .from(chatQueue)
+      .where(eq(chatQueue.status, 'waiting'));
+    
+    const nextPosition = (lastInQueue[0]?.maxPos || 0) + 1;
+
+    const result = await db.insert(chatQueue).values({
+      userId: data.userId,
+      userName: data.userName,
+      ticketId: data.ticketId,
+      position: nextPosition,
+      status: 'waiting',
+      initialMessage: data.initialMessage,
+      priority: data.priority || 'normal',
+      enteredAt: Date.now(),
+    });
+
+    const queueId = result[0].insertId;
+    const created = await db.select().from(chatQueue)
+      .where(eq(chatQueue.id, queueId))
+      .limit(1);
+
+    return created.length > 0 ? created[0] : null;
+  } catch (error) {
+    console.error("[Database] Failed to add to queue:", error);
+    return null;
+  }
+}
+
+/**
+ * Get current queue status for a user
+ */
+export async function getUserQueueStatus(userId: number): Promise<ChatQueue | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    const status = await db.select().from(chatQueue)
+      .where(
+        and(
+          eq(chatQueue.userId, userId),
+          inArray(chatQueue.status, ['waiting', 'assigned', 'in_progress'])
+        )
+      )
+      .orderBy(desc(chatQueue.enteredAt))
+      .limit(1);
+
+    return status.length > 0 ? status[0] : null;
+  } catch (error) {
+    console.error("[Database] Failed to get user queue status:", error);
+    return null;
+  }
+}
+
+/**
+ * Get all users waiting in queue (for operators)
+ */
+export async function getWaitingQueue(): Promise<ChatQueue[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  try {
+    const queue = await db.select().from(chatQueue)
+      .where(eq(chatQueue.status, 'waiting'))
+      .orderBy(
+        desc(chatQueue.priority), // urgent first
+        asc(chatQueue.position)   // then by position
+      );
+
+    return queue;
+  } catch (error) {
+    console.error("[Database] Failed to get waiting queue:", error);
+    return [];
+  }
+}
+
+/**
+ * Get queue position for a user
+ */
+export async function getQueuePosition(userId: number): Promise<{ position: number; total: number } | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    const userQueue = await db.select().from(chatQueue)
+      .where(
+        and(
+          eq(chatQueue.userId, userId),
+          eq(chatQueue.status, 'waiting')
+        )
+      )
+      .limit(1);
+
+    if (userQueue.length === 0) return null;
+
+    const userPosition = userQueue[0].position;
+
+    // Count how many are ahead
+    const ahead = await db.select({ count: sql<number>`COUNT(*)` })
+      .from(chatQueue)
+      .where(
+        and(
+          eq(chatQueue.status, 'waiting'),
+          lt(chatQueue.position, userPosition)
+        )
+      );
+
+    const total = await db.select({ count: sql<number>`COUNT(*)` })
+      .from(chatQueue)
+      .where(eq(chatQueue.status, 'waiting'));
+
+    return {
+      position: (ahead[0]?.count || 0) + 1,
+      total: total[0]?.count || 0,
+    };
+  } catch (error) {
+    console.error("[Database] Failed to get queue position:", error);
+    return null;
+  }
+}
+
+/**
+ * Accept a chat from queue (operator action)
+ */
+export async function acceptChatFromQueue(
+  queueId: number,
+  operatorId: number,
+  operatorName: string
+): Promise<{ queue: ChatQueue; conversation: ChatConversation } | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    // Get queue entry
+    const queueEntry = await db.select().from(chatQueue)
+      .where(eq(chatQueue.id, queueId))
+      .limit(1);
+
+    if (queueEntry.length === 0 || queueEntry[0].status !== 'waiting') {
+      return null;
+    }
+
+    const entry = queueEntry[0];
+    const now = Date.now();
+
+    // Create conversation
+    const convResult = await db.insert(chatConversations).values({
+      ticketId: entry.ticketId,
+      title: entry.initialMessage?.substring(0, 50) || 'Chat de Suporte',
+      type: 'support_request',
+      status: 'active',
+      createdById: entry.userId,
+      createdByName: entry.userName,
+      lastMessageAt: now,
+      createdAt: now,
+      updatedAt: now,
+    });
+
+    const conversationId = convResult[0].insertId;
+
+    // Add participants
+    await db.insert(chatParticipants).values([
+      {
+        conversationId,
+        userId: entry.userId,
+        userName: entry.userName,
+        role: 'user',
+        joinedAt: now,
+      },
+      {
+        conversationId,
+        userId: operatorId,
+        userName: operatorName,
+        role: 'operator',
+        joinedAt: now,
+      },
+    ]);
+
+    // Add system message
+    await db.insert(chatMessages).values({
+      conversationId,
+      senderId: operatorId,
+      senderName: 'Sistema',
+      senderRole: 'system',
+      content: `${operatorName} aceitou o atendimento`,
+      messageType: 'system',
+      createdAt: now,
+    });
+
+    // Update queue entry
+    await db.update(chatQueue)
+      .set({
+        status: 'in_progress',
+        conversationId,
+        assignedOperatorId: operatorId,
+        assignedOperatorName: operatorName,
+        acceptedAt: now,
+      })
+      .where(eq(chatQueue.id, queueId));
+
+    // Update operator active chats count
+    await db.update(operatorAvailability)
+      .set({
+        currentActiveChats: sql`currentActiveChats + 1`,
+        lastActiveAt: now,
+        updatedAt: now,
+      })
+      .where(eq(operatorAvailability.operatorId, operatorId));
+
+    // Get updated records
+    const updatedQueue = await db.select().from(chatQueue)
+      .where(eq(chatQueue.id, queueId))
+      .limit(1);
+
+    const conversation = await db.select().from(chatConversations)
+      .where(eq(chatConversations.id, conversationId))
+      .limit(1);
+
+    return {
+      queue: updatedQueue[0],
+      conversation: conversation[0],
+    };
+  } catch (error) {
+    console.error("[Database] Failed to accept chat from queue:", error);
+    return null;
+  }
+}
+
+/**
+ * Complete/close a chat from queue
+ */
+export async function completeChatFromQueue(queueId: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  try {
+    const queueEntry = await db.select().from(chatQueue)
+      .where(eq(chatQueue.id, queueId))
+      .limit(1);
+
+    if (queueEntry.length === 0) return false;
+
+    const entry = queueEntry[0];
+    const now = Date.now();
+
+    // Update queue
+    await db.update(chatQueue)
+      .set({
+        status: 'completed',
+        completedAt: now,
+      })
+      .where(eq(chatQueue.id, queueId));
+
+    // Update conversation if exists
+    if (entry.conversationId) {
+      await db.update(chatConversations)
+        .set({ status: 'resolved', updatedAt: now })
+        .where(eq(chatConversations.id, entry.conversationId));
+    }
+
+    // Decrease operator active chats
+    if (entry.assignedOperatorId) {
+      await db.update(operatorAvailability)
+        .set({
+          currentActiveChats: sql`GREATEST(currentActiveChats - 1, 0)`,
+          updatedAt: now,
+        })
+        .where(eq(operatorAvailability.operatorId, entry.assignedOperatorId));
+    }
+
+    return true;
+  } catch (error) {
+    console.error("[Database] Failed to complete chat from queue:", error);
+    return false;
+  }
+}
+
+/**
+ * Cancel queue entry (user leaves queue)
+ */
+export async function cancelQueueEntry(userId: number): Promise<boolean> {
+  const db = await getDb();
+  if (!db) return false;
+
+  try {
+    await db.update(chatQueue)
+      .set({ status: 'cancelled' })
+      .where(
+        and(
+          eq(chatQueue.userId, userId),
+          eq(chatQueue.status, 'waiting')
+        )
+      );
+
+    return true;
+  } catch (error) {
+    console.error("[Database] Failed to cancel queue entry:", error);
+    return false;
+  }
+}
+
+// ============ OPERATOR AVAILABILITY FUNCTIONS ============
+
+/**
+ * Update operator availability
+ */
+export async function updateOperatorAvailability(data: {
+  operatorId: number;
+  operatorName: string;
+  isAvailableForChat: boolean;
+  status?: 'available' | 'busy' | 'away' | 'offline';
+  maxConcurrentChats?: number;
+  statusMessage?: string;
+}): Promise<OperatorAvailability | null> {
+  const db = await getDb();
+  if (!db) return null;
+
+  try {
+    const now = Date.now();
+    
+    // Check if record exists
+    const existing = await db.select().from(operatorAvailability)
+      .where(eq(operatorAvailability.operatorId, data.operatorId))
+      .limit(1);
+
+    if (existing.length > 0) {
+      await db.update(operatorAvailability)
+        .set({
+          operatorName: data.operatorName,
+          isAvailableForChat: data.isAvailableForChat,
+          status: data.status || (data.isAvailableForChat ? 'available' : 'offline'),
+          maxConcurrentChats: data.maxConcurrentChats ?? existing[0].maxConcurrentChats,
+          statusMessage: data.statusMessage,
+          lastActiveAt: now,
+          updatedAt: now,
+        })
+        .where(eq(operatorAvailability.operatorId, data.operatorId));
+    } else {
+      await db.insert(operatorAvailability).values({
+        operatorId: data.operatorId,
+        operatorName: data.operatorName,
+        isAvailableForChat: data.isAvailableForChat,
+        status: data.status || (data.isAvailableForChat ? 'available' : 'offline'),
+        maxConcurrentChats: data.maxConcurrentChats || 3,
+        currentActiveChats: 0,
+        statusMessage: data.statusMessage,
+        lastActiveAt: now,
+        updatedAt: now,
+      });
+    }
+
+    const updated = await db.select().from(operatorAvailability)
+      .where(eq(operatorAvailability.operatorId, data.operatorId))
+      .limit(1);
+
+    return updated.length > 0 ? updated[0] : null;
+  } catch (error) {
+    console.error("[Database] Failed to update operator availability:", error);
+    return null;
+  }
+}
+
+/**
+ * Get all operators with their availability status
+ */
+export async function getAllOperatorsAvailability(): Promise<OperatorAvailability[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  try {
+    const operators = await db.select().from(operatorAvailability)
+      .orderBy(
+        desc(operatorAvailability.isAvailableForChat),
+        asc(operatorAvailability.currentActiveChats)
+      );
+
+    return operators;
+  } catch (error) {
+    console.error("[Database] Failed to get operators availability:", error);
+    return [];
+  }
+}
+
+/**
+ * Get available operators (can accept new chats)
+ */
+export async function getAvailableOperators(): Promise<OperatorAvailability[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  try {
+    const operators = await db.select().from(operatorAvailability)
+      .where(
+        and(
+          eq(operatorAvailability.isAvailableForChat, true),
+          eq(operatorAvailability.status, 'available'),
+          sql`currentActiveChats < maxConcurrentChats`
+        )
+      )
+      .orderBy(asc(operatorAvailability.currentActiveChats));
+
+    return operators;
+  } catch (error) {
+    console.error("[Database] Failed to get available operators:", error);
+    return [];
+  }
+}
+
+/**
+ * Get operator stats summary
+ */
+export async function getOperatorStats(): Promise<{
+  available: number;
+  busy: number;
+  away: number;
+  offline: number;
+  totalInQueue: number;
+}> {
+  const db = await getDb();
+  if (!db) return { available: 0, busy: 0, away: 0, offline: 0, totalInQueue: 0 };
+
+  try {
+    const stats = await db.select({
+      status: operatorAvailability.status,
+      count: sql<number>`COUNT(*)`,
+    })
+      .from(operatorAvailability)
+      .groupBy(operatorAvailability.status);
+
+    const queueCount = await db.select({ count: sql<number>`COUNT(*)` })
+      .from(chatQueue)
+      .where(eq(chatQueue.status, 'waiting'));
+
+    const result = {
+      available: 0,
+      busy: 0,
+      away: 0,
+      offline: 0,
+      totalInQueue: queueCount[0]?.count || 0,
+    };
+
+    stats.forEach((s) => {
+      if (s.status in result) {
+        (result as any)[s.status] = s.count;
+      }
+    });
+
+    return result;
+  } catch (error) {
+    console.error("[Database] Failed to get operator stats:", error);
+    return { available: 0, busy: 0, away: 0, offline: 0, totalInQueue: 0 };
+  }
+}
+
+/**
+ * Get operator's active chats
+ */
+export async function getOperatorActiveChats(operatorId: number): Promise<ChatQueue[]> {
+  const db = await getDb();
+  if (!db) return [];
+
+  try {
+    const chats = await db.select().from(chatQueue)
+      .where(
+        and(
+          eq(chatQueue.assignedOperatorId, operatorId),
+          eq(chatQueue.status, 'in_progress')
+        )
+      )
+      .orderBy(desc(chatQueue.acceptedAt));
+
+    return chats;
+  } catch (error) {
+    console.error("[Database] Failed to get operator active chats:", error);
+    return [];
+  }
+}

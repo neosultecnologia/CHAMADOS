@@ -573,3 +573,85 @@ export const userOnlineStatus = mysqlTable("user_online_status", {
 
 export type UserOnlineStatus = typeof userOnlineStatus.$inferSelect;
 export type InsertUserOnlineStatus = typeof userOnlineStatus.$inferInsert;
+
+
+/**
+ * Chat Queue - Users waiting for operator attention
+ */
+export const chatQueue = mysqlTable("chat_queue", {
+  id: int("id").autoincrement().primaryKey(),
+  /** User waiting in queue */
+  userId: int("userId").notNull(),
+  userName: varchar("userName", { length: 255 }).notNull(),
+  /** Optional conversation ID if already created */
+  conversationId: int("conversationId"),
+  /** Optional ticket ID if related to a ticket */
+  ticketId: int("ticketId"),
+  /** Position in queue (1 = first) */
+  position: int("position").notNull(),
+  /** Queue status */
+  status: mysqlEnum("status", [
+    "waiting",      // Aguardando atendimento
+    "assigned",     // Atribuído a um operador
+    "in_progress",  // Em atendimento
+    "completed",    // Atendimento concluído
+    "cancelled"     // Cancelado pelo usuário
+  ]).default("waiting").notNull(),
+  /** Operator who accepted the chat */
+  assignedOperatorId: int("assignedOperatorId"),
+  assignedOperatorName: varchar("assignedOperatorName", { length: 255 }),
+  /** Initial message/reason for contact */
+  initialMessage: text("initialMessage"),
+  /** Priority (VIP users, urgent tickets, etc) */
+  priority: mysqlEnum("priority", ["normal", "high", "urgent"]).default("normal").notNull(),
+  /** When user entered the queue */
+  enteredAt: bigint("enteredAt", { mode: "number" }).notNull(),
+  /** When operator accepted */
+  acceptedAt: bigint("acceptedAt", { mode: "number" }),
+  /** When chat was completed */
+  completedAt: bigint("completedAt", { mode: "number" }),
+}, (table) => ({
+  userIdx: index("queue_user_idx").on(table.userId),
+  statusIdx: index("queue_status_idx").on(table.status),
+  positionIdx: index("queue_position_idx").on(table.position),
+  operatorIdx: index("queue_operator_idx").on(table.assignedOperatorId),
+}));
+
+export type ChatQueue = typeof chatQueue.$inferSelect;
+export type InsertChatQueue = typeof chatQueue.$inferInsert;
+
+/**
+ * Operator Availability - Track operator availability for chat
+ */
+export const operatorAvailability = mysqlTable("operator_availability", {
+  id: int("id").autoincrement().primaryKey(),
+  /** Operator user ID (must be admin) */
+  operatorId: int("operatorId").notNull().unique(),
+  operatorName: varchar("operatorName", { length: 255 }).notNull(),
+  /** Whether operator is available to receive new chats */
+  isAvailableForChat: boolean("isAvailableForChat").default(false).notNull(),
+  /** Current status */
+  status: mysqlEnum("status", [
+    "available",    // Disponível para novos chats
+    "busy",         // Ocupado (atendendo no limite)
+    "away",         // Ausente temporariamente
+    "offline"       // Offline/Indisponível
+  ]).default("offline").notNull(),
+  /** Maximum concurrent chats this operator can handle */
+  maxConcurrentChats: int("maxConcurrentChats").default(3).notNull(),
+  /** Current number of active chats */
+  currentActiveChats: int("currentActiveChats").default(0).notNull(),
+  /** Last time operator was active */
+  lastActiveAt: bigint("lastActiveAt", { mode: "number" }),
+  /** Custom status message */
+  statusMessage: varchar("statusMessage", { length: 255 }),
+  /** When availability was last updated */
+  updatedAt: bigint("updatedAt", { mode: "number" }).notNull(),
+}, (table) => ({
+  operatorIdx: index("availability_operator_idx").on(table.operatorId),
+  statusIdx: index("availability_status_idx").on(table.status),
+  availableIdx: index("availability_available_idx").on(table.isAvailableForChat),
+}));
+
+export type OperatorAvailability = typeof operatorAvailability.$inferSelect;
+export type InsertOperatorAvailability = typeof operatorAvailability.$inferInsert;
