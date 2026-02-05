@@ -534,3 +534,9 @@
 - [x] Corrigir auth.me para mesclar permissões de grupo com permissões de usuário
 - [x] Adicionar teste para verificar mesclagem de permissões
 - [x] Testar visibilidade de módulos com usuário não-admin (Monique)
+
+## Limpeza do Módulo de Compras
+- [x] Remover botão "Novo Pedido" que ainda aparece no módulo
+- [x] Redirecionar rota /compras para /compras/tarefas
+- [x] Verificar se há outros elementos relacionados a Pedidos/Fornecedores/Produtos
+- [x] Garantir que apenas Tarefas Diárias está acessível

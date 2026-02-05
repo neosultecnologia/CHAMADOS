@@ -108,9 +108,9 @@ function Router() {
       <Route path="/modulo/rh">
         <ProtectedRoute component={() => <ModulePlaceholder title="RH" />} />
       </Route>
-      {/* Purchasing Module */}
+      {/* Purchasing Module - Redirect to Tarefas */}
       <Route path="/compras">
-        <ProtectedRoute component={PurchaseOrders} />
+        <Redirect to="/compras/tarefas" />
       </Route>
       <Route path="/compras/fornecedores">
         <ProtectedRoute component={Suppliers} />
