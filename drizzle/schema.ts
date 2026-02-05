@@ -394,7 +394,7 @@ export const purchasingTasks = mysqlTable("purchasing_tasks", {
   ]).default("todo").notNull(),
   priority: mysqlEnum("priority", ["low", "medium", "high", "urgent"]).default("medium").notNull(),
   assignedToId: int("assignedToId"), // User responsible
-  tags: json("tags").$defaultFn(() => []), // Array of tags like ["Urgente", "Estoque Baixo", "Cotação"]
+  tags: text("tags"), // Comma-separated tags like "Urgente, Estoque Baixo, Cotação"
   dueDate: date("dueDate"),
   position: int("position").default(0).notNull(), // For ordering within column
   createdById: int("createdById").notNull(),

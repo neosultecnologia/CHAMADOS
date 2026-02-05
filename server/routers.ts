@@ -1337,6 +1337,8 @@ export const appRouter = router({
       .mutation(async ({ input, ctx }) => {
         const taskId = await db.createPurchasingTask({
           ...input,
+          tags: input.tags.length > 0 ? input.tags.join(", ") : null,
+          dueDate: input.dueDate || null,
           createdById: ctx.user.id,
         });
         return { id: taskId };
@@ -1356,7 +1358,11 @@ export const appRouter = router({
       }))
       .mutation(async ({ input }) => {
         const { id, ...data } = input;
-        await db.updatePurchasingTask(id, data);
+        const updateData = {
+          ...data,
+          tags: data.tags ? (data.tags.length > 0 ? data.tags.join(", ") : null) : undefined,
+        };
+        await db.updatePurchasingTask(id, updateData);
         return { success: true };
       }),
 

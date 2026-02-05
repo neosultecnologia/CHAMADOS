@@ -13,9 +13,6 @@ export default function PurchasingLayout({ children, title, description }: Purch
   const [location, setLocation] = useLocation();
 
   const navItems = [
-    { name: 'Pedidos', path: '/compras', icon: ShoppingCart },
-    { name: 'Fornecedores', path: '/compras/fornecedores', icon: Building2 },
-    { name: 'Produtos', path: '/compras/produtos', icon: Package },
     { name: 'Tarefas Diárias', path: '/compras/tarefas', icon: Kanban },
   ];
 

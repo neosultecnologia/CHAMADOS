@@ -126,6 +126,7 @@ export default function PurchasingTasks() {
 
     createMutation.mutate({
       ...newTask,
+      tags: newTask.tags || [],
       status: defaultStatus as any,
       position: 0,
     });
@@ -226,14 +227,14 @@ export default function PurchasingTasks() {
                 <div>
                   <Label htmlFor="assignedTo">Responsável</Label>
                   <Select
-                    value={newTask.assignedToId?.toString() || ""}
-                    onValueChange={(value) => setNewTask({ ...newTask, assignedToId: value ? parseInt(value) : undefined })}
+                    value={newTask.assignedToId?.toString() || "unassigned"}
+                    onValueChange={(value) => setNewTask({ ...newTask, assignedToId: value === "unassigned" ? undefined : parseInt(value) })}
                   >
                     <SelectTrigger>
                       <SelectValue placeholder="Selecione..." />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">Nenhum</SelectItem>
+                      <SelectItem value="unassigned">Nenhum</SelectItem>
                       {users.map((user: any) => (
                         <SelectItem key={user.id} value={user.id.toString()}>
                           {user.name}
@@ -326,14 +327,14 @@ export default function PurchasingTasks() {
                   <div>
                     <Label htmlFor="edit-assignedTo">Responsável</Label>
                     <Select
-                      value={selectedTask.assignedToId?.toString() || ""}
-                      onValueChange={(value) => setSelectedTask({ ...selectedTask, assignedToId: value ? parseInt(value) : undefined })}
+                      value={selectedTask.assignedToId?.toString() || "unassigned"}
+                      onValueChange={(value) => setSelectedTask({ ...selectedTask, assignedToId: value === "unassigned" ? undefined : parseInt(value) })}
                     >
                       <SelectTrigger>
                         <SelectValue placeholder="Selecione..." />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="">Nenhum</SelectItem>
+                        <SelectItem value="unassigned">Nenhum</SelectItem>
                         {users.map((user: any) => (
                           <SelectItem key={user.id} value={user.id.toString()}>
                             {user.name}

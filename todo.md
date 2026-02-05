@@ -519,3 +519,11 @@
 - [x] Aplicar layout na página de Fornecedores
 - [x] Aplicar layout na página de Produtos
 - [x] Aplicar layout na página de Tarefas Diárias
+
+## Simplificação do Módulo de Compras
+- [x] Remover Pedidos, Fornecedores e Produtos da navegação lateral
+- [x] Deixar apenas Tarefas Diárias no módulo de Compras
+- [x] Corrigir erro no Select.Item ao criar tarefas (valor vazio)
+- [x] Corrigir erro no campo dueDate (enviar null ao invés de string vazia)
+- [x] Alterar campo tags de JSON para TEXT no schema
+- [x] Testar criação de tarefas no Kanban
