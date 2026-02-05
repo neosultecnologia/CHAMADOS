@@ -250,16 +250,15 @@ export function PurchasingKanban({ tasks, onTaskClick, onCreateTask }: Purchasin
   const utils = trpc.useUtils();
   const { data: columnSettings } = trpc.kanbanColumns.getAll.useQuery() as any;
   const saveColumnName = trpc.kanbanColumns.save.useMutation() as any;
-
-  const updateTaskStatus = trpc.purchasingTasks.update.useMutation({
+  const updateTaskMutation = trpc.purchasingTasks.update.useMutation({
     onSuccess: () => {
       utils.purchasingTasks.list.invalidate();
     },
-    onError: (error: Error) => {
-      toast.error("Erro ao mover tarefa: " + error.message);
+    onError: (error: any) => {
+      const errorMsg = typeof error === 'string' ? error : (error?.message || "Erro desconhecido");
+      toast.error("Erro ao mover tarefa: " + errorMsg);
     },
   });
-
   const handleDragStart = (event: DragStartEvent) => {
     setActiveId(event.active.id as number);
   };
@@ -274,9 +273,9 @@ export function PurchasingKanban({ tasks, onTaskClick, onCreateTask }: Purchasin
 
     const task = tasks.find(t => t.id === taskId);
     if (task && task.status !== newStatus) {
-      updateTaskStatus.mutate({
+      updateTaskMutation.mutate({
         id: taskId,
-        status: newStatus,
+        status: newStatus as any,
       });
     }
 
