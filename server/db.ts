@@ -961,12 +961,12 @@ export async function deletePermissionGroup(id: number): Promise<boolean> {
   return result[0].affectedRows > 0;
 }
 
-export async function assignGroupToUser(userId: number, groupId: number | null): Promise<User | null> {
-  // GroupId is no longer stored in users table
-  // This function is kept for backwards compatibility but does nothing
-  const user = await getUserById(userId);
-  return user || null;
-}
+// export async function assignGroupToUser(userId: number, groupId: number | null): Promise<User | null> {
+//   // GroupId is no longer stored in users table
+//   // This function is kept for backwards compatibility but does nothing
+//   const user = await getUserById(userId);
+//   return user || null;
+// }
 
 // ============================================
 // Stock Management

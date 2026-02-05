@@ -334,9 +334,9 @@ export default function UserManagement() {
                           </div>
                         </td>
                         <td className="px-6 py-4 text-blue-200">{listUser.sector || '-'}</td>
-                        <td className="px-6 py-4">
+                        {/* <td className="px-6 py-4">
                           <GroupSelector userId={listUser.id} currentGroupId={listUser.groupId} />
-                        </td>
+                        </td> */}
                         <td className="px-6 py-4">{getStatusBadge(listUser.approvalStatus)}</td>
                         <td className="px-6 py-4">{getRoleBadge(listUser.role)}</td>
                         <td className="px-6 py-4 text-blue-300/60 text-sm">

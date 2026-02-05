@@ -354,3 +354,11 @@
 - [x] Testar fluxo completo: admin adiciona item → usuário solicita → chamado criado
 - [x] Implementar histórico de movimentações de estoque
 - [x] Adicionar alertas de estoque baixo para administradores
+
+## Correções de Integridade do Projeto
+- [x] Remover campos inexistentes do schema (groupId, permissions, lastSignedIn)
+- [x] Sincronizar schema local com banco de dados publicado
+- [x] Corrigir conflitos de AnimatePresence em componentes
+- [x] Limpar cache de compilação e TypeScript
+- [x] Validar autenticação e funcionalidades principais
+- [x] Revisar e corrigir todos os erros de banco de dados
