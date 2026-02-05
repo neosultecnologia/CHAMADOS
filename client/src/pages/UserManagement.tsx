@@ -46,11 +46,6 @@ export default function UserManagement() {
     { enabled: isAuthenticated && user?.role === 'admin' && activeTab === 'all' }
   );
 
-  const { data: departments } = trpc.departments.list.useQuery(
-    undefined,
-    { enabled: isAuthenticated && user?.role === 'admin' }
-  );
-
   const approveMutation = trpc.userManagement.approve.useMutation({
     onSuccess: () => {
       toast.success('Usuário aprovado com sucesso!');
@@ -257,10 +252,10 @@ export default function UserManagement() {
                         <p className="text-blue-200 text-sm">{pendingUser.email}</p>
                         <div className="flex items-center gap-3 mt-2">
                           {getStatusBadge(pendingUser.approvalStatus)}
-                          {pendingUser.departmentId && departments && (
+                          {pendingUser.sector && (
                             <span className="inline-flex items-center gap-1 text-xs text-blue-300">
                               <Building2 className="w-3 h-3" />
-                              {departments.find(d => d.id === pendingUser.departmentId)?.name || 'Setor desconhecido'}
+                              {pendingUser.sector}
                             </span>
                           )}
                         </div>
@@ -338,12 +333,7 @@ export default function UserManagement() {
                             </div>
                           </div>
                         </td>
-                        <td className="px-6 py-4 text-blue-200">
-                          {listUser.departmentId && departments
-                            ? departments.find(d => d.id === listUser.departmentId)?.name || '-'
-                            : '-'
-                          }
-                        </td>
+                        <td className="px-6 py-4 text-blue-200">{listUser.sector || '-'}</td>
                         <td className="px-6 py-4">
                           <GroupSelector userId={listUser.id} currentGroupId={listUser.groupId} />
                         </td>

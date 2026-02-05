@@ -2,8 +2,7 @@ import { motion } from 'framer-motion';
 import { Search } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
-import { Ticket } from '@/pages/Dashboard';
-import { trpc } from '@/lib/trpc';
+import type { Ticket } from '@/pages/Dashboard';
 import { DeleteTicketButton } from './DeleteTicketButton';
 
 interface TicketsListProps {
@@ -34,13 +33,6 @@ const priorityBorderColors: Record<string, string> = {
 };
 
 export default function TicketsList({ tickets, onSelectTicket }: TicketsListProps) {
-  const { data: departments = [] } = trpc.departments.list.useQuery();
-  
-  const getDepartmentName = (departmentId: number | null) => {
-    if (!departmentId) return 'Sem setor';
-    const dept = departments.find(d => d.id === departmentId);
-    return dept?.name || 'Sem setor';
-  };
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -123,7 +115,7 @@ export default function TicketsList({ tickets, onSelectTicket }: TicketsListProp
                     {ticket.status}
                   </span>
                   <span className="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-800/50 text-slate-400 border border-white/5">
-                    {getDepartmentName(ticket.departmentId)}
+                    {ticket.sector}
                   </span>
                 </div>
               </div>

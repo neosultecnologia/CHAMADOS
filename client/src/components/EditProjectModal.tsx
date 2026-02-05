@@ -155,6 +155,7 @@ export default function EditProjectModal({ open, onOpenChange, projectId, onSucc
       description: description.trim(),
       priority,
       status,
+      sector,
       ownerId,
       ownerName: owner?.name || "",
       startDate: startDate?.getTime(),
@@ -306,7 +307,7 @@ export default function EditProjectModal({ open, onOpenChange, projectId, onSucc
                   <SelectContent>
                     {users.map((user) => (
                       <SelectItem key={user.id} value={user.id.toString()}>
-                        {user.name}
+                        {user.name} - {user.sector}
                       </SelectItem>
                     ))}
                   </SelectContent>

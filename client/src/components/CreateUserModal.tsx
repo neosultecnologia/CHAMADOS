@@ -12,7 +12,6 @@ import {
 } from '@/components/ui/select';
 import { trpc } from '@/lib/trpc';
 import { toast } from 'sonner';
-import { Plus } from 'lucide-react';
 
 interface CreateUserModalProps {
   open: boolean;
@@ -24,31 +23,11 @@ export function CreateUserModal({ open, onOpenChange }: CreateUserModalProps) {
     name: '',
     email: '',
     password: '',
-    departmentId: undefined as number | undefined,
-    groupId: undefined as number | undefined,
+    sector: 'TI' as 'TI' | 'RH' | 'Financeiro' | 'Comercial' | 'Suporte' | 'Operações' | 'Outro',
     role: 'user' as 'admin' | 'user',
   });
-  const [showNewDepartment, setShowNewDepartment] = useState(false);
-  const [newDepartmentName, setNewDepartmentName] = useState('');
 
   const utils = trpc.useUtils();
-  const { data: departments } = trpc.departments.list.useQuery();
-  const { data: groups } = trpc.permissionGroups.list.useQuery();
-
-  const createDepartmentMutation = trpc.departments.create.useMutation({
-    onSuccess: (newDept) => {
-      toast.success('Setor criado com sucesso!');
-      utils.departments.list.invalidate();
-      if (newDept) {
-        setFormData({ ...formData, departmentId: newDept.id });
-      }
-      setShowNewDepartment(false);
-      setNewDepartmentName('');
-    },
-    onError: (error: any) => {
-      toast.error(error.message || 'Erro ao criar setor');
-    },
-  });
 
   const createUserMutation = trpc.userManagement.createUser.useMutation({
     onSuccess: () => {
@@ -59,8 +38,7 @@ export function CreateUserModal({ open, onOpenChange }: CreateUserModalProps) {
         name: '',
         email: '',
         password: '',
-        departmentId: undefined,
-        groupId: undefined,
+        sector: 'TI',
         role: 'user',
       });
     },
@@ -87,7 +65,7 @@ export function CreateUserModal({ open, onOpenChange }: CreateUserModalProps) {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="bg-gradient-to-br from-[#003366] to-[#0059b3] border-blue-400/30 text-white max-w-2xl">
+      <DialogContent className="bg-gradient-to-br from-[#003366] to-[#0059b3] border-blue-400/30 text-white max-w-md">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold">
             Criar Novo Usuário
@@ -140,105 +118,27 @@ export function CreateUserModal({ open, onOpenChange }: CreateUserModalProps) {
             />
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label htmlFor="department" className="text-white">
-                Setor (opcional)
-              </Label>
-              {showNewDepartment ? (
-                <div className="flex gap-2">
-                  <Input
-                    value={newDepartmentName}
-                    onChange={(e) => setNewDepartmentName(e.target.value)}
-                    placeholder="Nome do setor"
-                    className="bg-white/10 border-blue-300/30 text-white placeholder:text-blue-200/50"
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter') {
-                        e.preventDefault();
-                        if (newDepartmentName.trim()) {
-                          createDepartmentMutation.mutate({ name: newDepartmentName.trim() });
-                        }
-                      }
-                    }}
-                  />
-                  <Button
-                    type="button"
-                    size="sm"
-                    onClick={() => {
-                      if (newDepartmentName.trim()) {
-                        createDepartmentMutation.mutate({ name: newDepartmentName.trim() });
-                      }
-                    }}
-                    disabled={createDepartmentMutation.isPending}
-                    className="bg-green-600 hover:bg-green-700 text-white"
-                  >
-                    ✓
-                  </Button>
-                  <Button
-                    type="button"
-                    size="sm"
-                    variant="outline"
-                    onClick={() => {
-                      setShowNewDepartment(false);
-                      setNewDepartmentName('');
-                    }}
-                    className="bg-transparent border-blue-300 text-white hover:bg-white/10"
-                  >
-                    ✕
-                  </Button>
-                </div>
-              ) : (
-                <div className="flex gap-2">
-                  <Select
-                    value={formData.departmentId?.toString() || "none"}
-                    onValueChange={(value) => setFormData({ ...formData, departmentId: value === "none" ? undefined : parseInt(value) })}
-                  >
-                    <SelectTrigger className="bg-white/10 border-blue-300/30 text-white">
-                      <SelectValue placeholder="Selecione um setor" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="none">Sem setor</SelectItem>
-                      {departments?.map((dept) => (
-                        <SelectItem key={dept.id} value={dept.id.toString()}>
-                          {dept.name}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                  <Button
-                    type="button"
-                    size="sm"
-                    onClick={() => setShowNewDepartment(true)}
-                    className="bg-white/10 hover:bg-white/20 text-white border-blue-300/30"
-                    title="Criar novo setor"
-                  >
-                    <Plus className="w-4 h-4" />
-                  </Button>
-                </div>
-              )}
-            </div>
-
-            <div className="space-y-2">
-              <Label htmlFor="group" className="text-white">
-                Grupo de Permissões (opcional)
-              </Label>
-              <Select
-                value={formData.groupId?.toString() || "none"}
-                onValueChange={(value) => setFormData({ ...formData, groupId: value === "none" ? undefined : parseInt(value) })}
-              >
-                <SelectTrigger className="bg-white/10 border-blue-300/30 text-white">
-                  <SelectValue placeholder="Selecione um grupo" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="none">Sem grupo</SelectItem>
-                  {groups?.map((group) => (
-                    <SelectItem key={group.id} value={group.id.toString()}>
-                      {group.name}
-                    </SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-            </div>
+          <div className="space-y-2">
+            <Label htmlFor="sector" className="text-white">
+              Setor
+            </Label>
+            <Select
+              value={formData.sector}
+              onValueChange={(value: any) => setFormData({ ...formData, sector: value })}
+            >
+              <SelectTrigger className="bg-white/10 border-blue-300/30 text-white">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="TI">TI</SelectItem>
+                <SelectItem value="RH">RH</SelectItem>
+                <SelectItem value="Financeiro">Financeiro</SelectItem>
+                <SelectItem value="Comercial">Comercial</SelectItem>
+                <SelectItem value="Suporte">Suporte</SelectItem>
+                <SelectItem value="Operações">Operações</SelectItem>
+                <SelectItem value="Outro">Outro</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
 
           <div className="space-y-2">

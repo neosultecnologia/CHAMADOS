@@ -213,7 +213,7 @@ export default function CreateProjectModal({ onClose, onSuccess }: CreateProject
                 <SelectContent>
                   {users.map((user) => (
                     <SelectItem key={user.id} value={user.id.toString()}>
-                      {user.name}
+                      {user.name} - {user.sector}
                     </SelectItem>
                   ))}
                 </SelectContent>

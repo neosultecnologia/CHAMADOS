@@ -20,7 +20,7 @@ const MODULE_LABELS: Record<string, string> = {
   [MODULES.CHAMADOS]: 'Chamados (Help Desk)',
   [MODULES.PROJETOS]: 'Projetos',
   [MODULES.RH]: 'RH',
-  [MODULES.COMPRAS]: 'Compras',
+  [MODULES.ECOMMERCE]: 'E-commerce',
   [MODULES.MARKETING]: 'Marketing',
   [MODULES.TECNOLOGIA]: 'Tecnologia',
 };

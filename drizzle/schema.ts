@@ -1,4 +1,4 @@
-import { int, mysqlEnum, mysqlTable, text, timestamp, varchar, bigint, json, boolean, index, date } from "drizzle-orm/mysql-core";
+import { int, mysqlEnum, mysqlTable, text, timestamp, varchar, bigint, json, boolean, decimal } from "drizzle-orm/mysql-core";
 
 /**
  * Core user table backing auth flow.
@@ -16,8 +16,8 @@ export const users = mysqlTable("users", {
   role: mysqlEnum("role", ["user", "admin"]).default("user").notNull(),
   /** Approval status for new registrations */
   approvalStatus: mysqlEnum("approvalStatus", ["pending", "approved", "rejected"]).default("pending").notNull(),
-  /** Department ID - references departments table */
-  departmentId: int("departmentId"),
+  /** Sector/department the user belongs to */
+  sector: mysqlEnum("sector", ["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações", "Outro"]).default("Outro"),
   /** Permission group ID (optional) */
   groupId: int("groupId"),
   /** Module permissions stored as JSON array */
@@ -31,22 +31,6 @@ export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
 /**
- * Departments/Sectors table
- */
-export const departments = mysqlTable("departments", {
-  id: int("id").autoincrement().primaryKey(),
-  name: varchar("name", { length: 255 }).notNull().unique(),
-  description: text("description"),
-  createdAt: timestamp("createdAt").defaultNow().notNull(),
-  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
-}, (table) => ({
-  nameIdx: index("name_idx").on(table.name),
-}));
-
-export type Department = typeof departments.$inferSelect;
-export type InsertDepartment = typeof departments.$inferInsert;
-
-/**
  * Tickets table for help desk system
  */
 export const tickets = mysqlTable("tickets", {
@@ -57,7 +41,7 @@ export const tickets = mysqlTable("tickets", {
   category: mysqlEnum("category", ["Técnico", "Acesso", "Funcionalidade", "Dúvida", "Outro"]).default("Técnico").notNull(),
   priority: mysqlEnum("priority", ["Baixa", "Média", "Alta", "Crítica"]).default("Média").notNull(),
   status: mysqlEnum("status", ["Aberto", "Em Progresso", "Aguardando", "Resolvido", "Fechado"]).default("Aberto").notNull(),
-  departmentId: int("departmentId"),
+  sector: mysqlEnum("sector", ["TI", "RH", "Financeiro", "Comercial", "Suporte", "Operações"]).default("TI").notNull(),
   createdById: int("createdById").notNull(),
   createdByName: varchar("createdByName", { length: 255 }).notNull(),
   assignedToId: int("assignedToId"),
@@ -239,189 +223,71 @@ export type PermissionGroup = typeof permissionGroups.$inferSelect;
 export type InsertPermissionGroup = typeof permissionGroups.$inferInsert;
 
 /**
- * Suppliers table for purchasing module
+ * IT Stock Items - Peripherals, computers, and equipment inventory
  */
-export const suppliers = mysqlTable("suppliers", {
+export const stockItems = mysqlTable("stockItems", {
   id: int("id").autoincrement().primaryKey(),
-  name: varchar("name", { length: 255 }).notNull(),
-  cnpj: varchar("cnpj", { length: 18 }).unique(),
-  email: varchar("email", { length: 320 }),
-  phone: varchar("phone", { length: 20 }),
-  address: text("address"),
-  city: varchar("city", { length: 100 }),
-  state: varchar("state", { length: 2 }),
-  zipCode: varchar("zipCode", { length: 10 }),
-  contactPerson: varchar("contactPerson", { length: 255 }),
-  status: mysqlEnum("status", ["Ativo", "Inativo", "Bloqueado"]).default("Ativo").notNull(),
-  notes: text("notes"),
-  createdById: int("createdById").notNull(),
-  createdByName: varchar("createdByName", { length: 255 }).notNull(),
-  createdAt: bigint("createdAt", { mode: "number" }).notNull(),
-  updatedAt: bigint("updatedAt", { mode: "number" }).notNull(),
-});
-
-export type Supplier = typeof suppliers.$inferSelect;
-export type InsertSupplier = typeof suppliers.$inferInsert;
-
-/**
- * Products/Medicines table for purchasing module
- */
-export const products = mysqlTable("products", {
-  id: int("id").autoincrement().primaryKey(),
-  code: varchar("code", { length: 50 }).notNull().unique(),
   name: varchar("name", { length: 255 }).notNull(),
   description: text("description"),
-  category: varchar("category", { length: 100 }),
-  unit: varchar("unit", { length: 20 }).default("UN").notNull(), // UN, CX, FR, etc
-  minStock: int("minStock").default(0),
-  currentStock: int("currentStock").default(0),
-  status: mysqlEnum("status", ["Ativo", "Inativo"]).default("Ativo").notNull(),
-  requiresPrescription: boolean("requiresPrescription").default(false),
+  category: mysqlEnum("category", ["Computador", "Monitor", "Teclado", "Mouse", "Impressora", "Notebook", "Headset", "Webcam", "Hub USB", "Cabo", "Adaptador", "Outro"]).default("Outro").notNull(),
+  brand: varchar("brand", { length: 100 }),
+  model: varchar("model", { length: 100 }),
+  serialNumber: varchar("serialNumber", { length: 100 }),
+  quantity: int("quantity").default(0).notNull(),
+  minQuantity: int("minQuantity").default(5).notNull(), // Alert threshold
+  location: varchar("location", { length: 255 }), // Physical storage location
+  status: mysqlEnum("status", ["Disponível", "Reservado", "Em Manutenção", "Descartado"]).default("Disponível").notNull(),
+  unitPrice: decimal("unitPrice", { precision: 10, scale: 2 }),
   notes: text("notes"),
+  imageUrl: varchar("imageUrl", { length: 500 }),
   createdById: int("createdById").notNull(),
   createdByName: varchar("createdByName", { length: 255 }).notNull(),
   createdAt: bigint("createdAt", { mode: "number" }).notNull(),
   updatedAt: bigint("updatedAt", { mode: "number" }).notNull(),
 });
 
-export type Product = typeof products.$inferSelect;
-export type InsertProduct = typeof products.$inferInsert;
+export type StockItem = typeof stockItems.$inferSelect;
+export type InsertStockItem = typeof stockItems.$inferInsert;
 
 /**
- * Quotations table for price comparison
+ * Stock Movements - Track all stock changes (in/out/adjustment)
  */
-export const quotations = mysqlTable("quotations", {
+export const stockMovements = mysqlTable("stockMovements", {
   id: int("id").autoincrement().primaryKey(),
-  quotationNumber: varchar("quotationNumber", { length: 32 }).notNull().unique(),
-  supplierId: int("supplierId").notNull(),
-  supplierName: varchar("supplierName", { length: 255 }).notNull(),
-  productId: int("productId").notNull(),
-  productName: varchar("productName", { length: 255 }).notNull(),
-  quantity: int("quantity").notNull(),
-  unitPrice: int("unitPrice").notNull(), // Price in cents
-  totalPrice: int("totalPrice").notNull(), // Total in cents
-  deliveryDays: int("deliveryDays"),
-  status: mysqlEnum("status", ["Pendente", "Aprovada", "Rejeitada", "Expirada"]).default("Pendente").notNull(),
-  validUntil: bigint("validUntil", { mode: "number" }),
-  notes: text("notes"),
-  createdById: int("createdById").notNull(),
-  createdByName: varchar("createdByName", { length: 255 }).notNull(),
+  stockItemId: int("stockItemId").notNull(),
+  type: mysqlEnum("type", ["Entrada", "Saída", "Ajuste", "Solicitação"]).notNull(),
+  quantity: int("quantity").notNull(), // Positive for in, negative for out
+  previousQuantity: int("previousQuantity").notNull(),
+  newQuantity: int("newQuantity").notNull(),
+  reason: text("reason"),
+  relatedTicketId: int("relatedTicketId"), // Link to ticket if movement is from a request
+  performedById: int("performedById").notNull(),
+  performedByName: varchar("performedByName", { length: 255 }).notNull(),
   createdAt: bigint("createdAt", { mode: "number" }).notNull(),
-  updatedAt: bigint("updatedAt", { mode: "number" }).notNull(),
 });
 
-export type Quotation = typeof quotations.$inferSelect;
-export type InsertQuotation = typeof quotations.$inferInsert;
+export type StockMovement = typeof stockMovements.$inferSelect;
+export type InsertStockMovement = typeof stockMovements.$inferInsert;
 
 /**
- * Purchase Orders table
+ * Stock Requests - User requests for stock items (creates ticket automatically)
  */
-export const purchaseOrders = mysqlTable("purchaseOrders", {
+export const stockRequests = mysqlTable("stockRequests", {
   id: int("id").autoincrement().primaryKey(),
-  orderNumber: varchar("orderNumber", { length: 32 }).notNull().unique(),
-  supplierId: int("supplierId").notNull(),
-  supplierName: varchar("supplierName", { length: 255 }).notNull(),
-  status: mysqlEnum("status", ["Rascunho", "Pendente", "Aprovado", "Enviado", "Recebido Parcial", "Recebido", "Cancelado"]).default("Rascunho").notNull(),
-  totalAmount: int("totalAmount").notNull(), // Total in cents
-  expectedDelivery: bigint("expectedDelivery", { mode: "number" }),
-  actualDelivery: bigint("actualDelivery", { mode: "number" }),
-  paymentTerms: varchar("paymentTerms", { length: 100 }),
-  notes: text("notes"),
+  stockItemId: int("stockItemId").notNull(),
+  requestedQuantity: int("requestedQuantity").notNull(),
+  justification: text("justification"),
+  status: mysqlEnum("status", ["Pendente", "Aprovado", "Rejeitado", "Entregue"]).default("Pendente").notNull(),
+  ticketId: int("ticketId"), // Auto-created ticket ID
+  requestedById: int("requestedById").notNull(),
+  requestedByName: varchar("requestedByName", { length: 255 }).notNull(),
   approvedById: int("approvedById"),
   approvedByName: varchar("approvedByName", { length: 255 }),
   approvedAt: bigint("approvedAt", { mode: "number" }),
-  createdById: int("createdById").notNull(),
-  createdByName: varchar("createdByName", { length: 255 }).notNull(),
+  deliveredAt: bigint("deliveredAt", { mode: "number" }),
   createdAt: bigint("createdAt", { mode: "number" }).notNull(),
   updatedAt: bigint("updatedAt", { mode: "number" }).notNull(),
 });
 
-export type PurchaseOrder = typeof purchaseOrders.$inferSelect;
-export type InsertPurchaseOrder = typeof purchaseOrders.$inferInsert;
-
-/**
- * Purchase Order Items table
- */
-export const purchaseOrderItems = mysqlTable("purchaseOrderItems", {
-  id: int("id").autoincrement().primaryKey(),
-  purchaseOrderId: int("purchaseOrderId").notNull(),
-  productId: int("productId").notNull(),
-  productCode: varchar("productCode", { length: 50 }).notNull(),
-  productName: varchar("productName", { length: 255 }).notNull(),
-  quantity: int("quantity").notNull(),
-  unitPrice: int("unitPrice").notNull(), // Price in cents
-  totalPrice: int("totalPrice").notNull(), // Total in cents
-  receivedQuantity: int("receivedQuantity").default(0).notNull(),
-  notes: text("notes"),
-  createdAt: bigint("createdAt", { mode: "number" }).notNull(),
-});
-
-export type PurchaseOrderItem = typeof purchaseOrderItems.$inferSelect;
-export type InsertPurchaseOrderItem = typeof purchaseOrderItems.$inferInsert;
-
-// Database Backups
-export const backups = mysqlTable("backups", {
-  id: int("id").autoincrement().primaryKey(),
-  filename: varchar("filename", { length: 255 }).notNull(),
-  fileSize: bigint("fileSize", { mode: "number" }).notNull(), // Size in bytes
-  checksum: varchar("checksum", { length: 64 }).notNull(), // SHA-256 hash
-  status: mysqlEnum("status", ["completed", "failed", "in_progress"]).default("in_progress").notNull(),
-  s3Key: varchar("s3Key", { length: 512 }).notNull(), // S3 storage path
-  s3Url: varchar("s3Url", { length: 1024 }).notNull(), // S3 public URL
-  tablesBackedUp: json("tablesBackedUp").$defaultFn(() => []), // List of table names
-  recordCount: int("recordCount").default(0).notNull(), // Total records backed up
-  createdAt: bigint("createdAt", { mode: "number" }).notNull(),
-  createdBy: varchar("createdBy", { length: 255 }).notNull(),
-});
-
-export type Backup = typeof backups.$inferSelect;
-export type InsertBackup = typeof backups.$inferInsert;
-
-/**
- * Purchasing Tasks table for Kanban board
- */
-export const purchasingTasks = mysqlTable("purchasing_tasks", {
-  id: int("id").autoincrement().primaryKey(),
-  title: varchar("title", { length: 255 }).notNull(),
-  description: text("description"),
-  status: mysqlEnum("status", [
-    "todo",           // A Fazer
-    "quoting",        // Cotando
-    "awaiting_approval", // Aguardando Aprovação
-    "ordered",        // Pedido Realizado
-    "received",       // Recebido
-    "completed"       // Concluído
-  ]).default("todo").notNull(),
-  priority: mysqlEnum("priority", ["low", "medium", "high", "urgent"]).default("medium").notNull(),
-  assignedToId: int("assignedToId"), // User responsible
-  tags: text("tags"), // Comma-separated tags like "Urgente, Estoque Baixo, Cotação"
-  dueDate: date("dueDate"),
-  position: int("position").default(0).notNull(), // For ordering within column
-  createdById: int("createdById").notNull(),
-  createdAt: timestamp("createdAt").defaultNow().notNull(),
-  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
-}, (table) => ({
-  statusIdx: index("status_idx").on(table.status),
-  assignedToIdx: index("assigned_to_idx").on(table.assignedToId),
-}));
-
-export type PurchasingTask = typeof purchasingTasks.$inferSelect;
-export type InsertPurchasingTask = typeof purchasingTasks.$inferInsert;
-
-/**
- * Kanban Column Settings - stores custom names for Kanban columns
- */
-export const kanbanColumnSettings = mysqlTable("kanban_column_settings", {
-  id: int("id").autoincrement().primaryKey(),
-  userId: int("userId").notNull(), // Each user can have their own column names
-  module: varchar("module", { length: 50 }).notNull(), // e.g., "purchasing_tasks"
-  columnKey: varchar("columnKey", { length: 50 }).notNull(), // e.g., "todo", "quoting", etc.
-  customName: varchar("customName", { length: 100 }).notNull(), // User's custom name
-  createdAt: timestamp("createdAt").defaultNow().notNull(),
-  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
-}, (table) => ({
-  userModuleColumnIdx: index("user_module_column_idx").on(table.userId, table.module, table.columnKey),
-}));
-
-export type KanbanColumnSetting = typeof kanbanColumnSettings.$inferSelect;
-export type InsertKanbanColumnSetting = typeof kanbanColumnSettings.$inferInsert;
+export type StockRequest = typeof stockRequests.$inferSelect;
+export type InsertStockRequest = typeof stockRequests.$inferInsert;

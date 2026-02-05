@@ -5,7 +5,6 @@ import net from "net";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
 import { registerOAuthRoutes } from "./oauth";
 import { registerUploadRoute } from "../uploadRoute";
-import uploadAttachmentRouter from "../uploadAttachment";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
@@ -39,8 +38,6 @@ async function startServer() {
   registerOAuthRoutes(app);
   // File upload route
   registerUploadRoute(app);
-  // Attachment upload route
-  app.use('/api', uploadAttachmentRouter);
   // tRPC API
   app.use(
     "/api/trpc",
@@ -65,47 +62,7 @@ async function startServer() {
 
   server.listen(port, () => {
     console.log(`Server running on http://localhost:${port}/`);
-    
-    // Schedule daily backup at 2 AM
-    scheduleDailyBackup();
   });
-}
-
-/**
- * Schedules daily backup at 2 AM
- */
-function scheduleDailyBackup() {
-  const now = new Date();
-  const next2AM = new Date(now);
-  next2AM.setHours(2, 0, 0, 0);
-  
-  // If 2 AM has already passed today, schedule for tomorrow
-  if (next2AM <= now) {
-    next2AM.setDate(next2AM.getDate() + 1);
-  }
-  
-  const msUntilNext2AM = next2AM.getTime() - now.getTime();
-  
-  console.log(`[Backup] Next automatic backup scheduled for ${next2AM.toLocaleString('pt-BR')}`);
-  
-  setTimeout(async () => {
-    try {
-      const { runDailyBackup } = await import('../cronBackup');
-      await runDailyBackup();
-    } catch (error) {
-      console.error('[Backup] Error running daily backup:', error);
-    }
-    
-    // Schedule next backup (24 hours later)
-    setInterval(async () => {
-      try {
-        const { runDailyBackup } = await import('../cronBackup');
-        await runDailyBackup();
-      } catch (error) {
-        console.error('[Backup] Error running daily backup:', error);
-      }
-    }, 24 * 60 * 60 * 1000); // 24 hours
-  }, msUntilNext2AM);
 }
 
 startServer().catch(console.error);

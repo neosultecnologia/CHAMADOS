@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { trpc } from '@/lib/trpc';
-import { useAuth } from '@/_core/hooks/useAuth';
-import { X, AlertCircle, Loader2, Paperclip, FileIcon } from 'lucide-react';
+import { X, AlertCircle, Loader2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { toast } from 'sonner';
 
@@ -11,23 +10,14 @@ interface CreateTicketModalProps {
 }
 
 export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketModalProps) {
-  const { user } = useAuth();
-  const isAdmin = user?.role === 'admin';
-  const [errors, setErrors] = useState<Record<string, string>>({}); 
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const [formData, setFormData] = useState({
     title: '',
     description: '',
     category: 'Técnico' as const,
     priority: 'Média' as const,
-    departmentId: undefined as number | undefined,
-    assignedToId: undefined as number | undefined,
+    sector: 'TI' as const,
   });
-  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
-  const [uploadProgress, setUploadProgress] = useState(false);
-
-  const { data: departments = [] } = trpc.departments.list.useQuery();
-  const { data: users = [] } = trpc.userManagement.listAll.useQuery();
-  const approvedUsers = users.filter(u => u.approvalStatus === 'approved');
 
   const createTicketMutation = trpc.tickets.create.useMutation({
     onSuccess: () => {
@@ -52,8 +42,6 @@ export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketMo
     return Object.keys(newErrors).length === 0;
   };
 
-  const uploadAttachmentMutation = trpc.attachments.create.useMutation();
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -61,71 +49,13 @@ export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketMo
       return;
     }
 
-    try {
-      // Create ticket first
-      const ticket = await createTicketMutation.mutateAsync({
-        title: formData.title,
-        description: formData.description,
-        category: formData.category,
-        priority: formData.priority,
-        departmentId: formData.departmentId,
-        assignedToId: formData.assignedToId,
-      });
-
-      // Upload attachments if any
-      if (selectedFiles.length > 0 && ticket) {
-        setUploadProgress(true);
-        
-        for (const file of selectedFiles) {
-          try {
-            // Convert file to base64
-            const reader = new FileReader();
-            const fileData = await new Promise<string>((resolve, reject) => {
-              reader.onload = () => resolve(reader.result as string);
-              reader.onerror = reject;
-              reader.readAsDataURL(file);
-            });
-
-            // Upload to S3 via tRPC
-            const response = await fetch('/api/upload-attachment', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                fileName: file.name,
-                fileData: fileData.split(',')[1], // Remove data:mime;base64, prefix
-                mimeType: file.type,
-                ticketId: ticket.id,
-              }),
-            });
-
-            if (!response.ok) {
-              throw new Error('Falha no upload');
-            }
-
-            const { fileUrl, fileKey } = await response.json();
-
-            // Save attachment metadata
-            await uploadAttachmentMutation.mutateAsync({
-              ticketId: ticket.id,
-              fileName: file.name,
-              fileUrl,
-              fileKey,
-              mimeType: file.type,
-              fileSize: file.size,
-            });
-          } catch (error) {
-            console.error('Erro ao fazer upload do arquivo:', file.name, error);
-            toast.error(`Erro ao fazer upload de ${file.name}`);
-          }
-        }
-
-        setUploadProgress(false);
-      }
-
-      onSuccess();
-    } catch (error: any) {
-      toast.error('Erro ao criar chamado: ' + error.message);
-    }
+    createTicketMutation.mutate({
+      title: formData.title,
+      description: formData.description,
+      category: formData.category,
+      priority: formData.priority,
+      sector: formData.sector,
+    });
   };
 
   const isLoading = createTicketMutation.isPending;
@@ -234,87 +164,21 @@ export default function CreateTicketModal({ onClose, onSuccess }: CreateTicketMo
 
             <div>
               <label className="block text-sm font-medium text-blue-100 mb-2">
-                Setor (opcional)
+                Setor
               </label>
               <select
-                value={formData.departmentId?.toString() || ""}
-                onChange={(e) => setFormData({ ...formData, departmentId: e.target.value ? parseInt(e.target.value) : undefined })}
+                value={formData.sector}
+                onChange={(e) => setFormData({ ...formData, sector: e.target.value as any })}
                 className="w-full px-4 py-2 rounded-lg bg-slate-800 border border-white/20 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 transition"
                 disabled={isLoading}
               >
-                <option value="">Sem setor</option>
-                {departments.map(dept => (
-                  <option key={dept.id} value={dept.id}>{dept.name}</option>
-                ))}
+                <option value="TI">TI</option>
+                <option value="RH">RH</option>
+                <option value="Financeiro">Financeiro</option>
+                <option value="Comercial">Comercial</option>
+                <option value="Suporte">Suporte</option>
+                <option value="Operações">Operações</option>
               </select>
-            </div>
-            {isAdmin && (
-              <div>
-                <label className="block text-sm font-medium text-blue-100 mb-2">
-                  Atribuir para (opcional)
-                </label>
-                <select
-                  value={formData.assignedToId?.toString() || ""}
-                  onChange={(e) => setFormData({ ...formData, assignedToId: e.target.value ? parseInt(e.target.value) : undefined })}
-                  className="w-full px-4 py-2 rounded-lg bg-slate-800 border border-white/20 text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/50 transition"
-                  disabled={isLoading}
-                >
-                  <option value="">Não atribuir</option>
-                  {approvedUsers.map(user => (
-                    <option key={user.id} value={user.id}>{user.name}</option>
-                  ))}
-                </select>
-              </div>
-            )}
-          </div>
-
-          {/* File Upload Section */}
-          <div className="mt-4">
-            <label className="block text-sm font-medium text-blue-100 mb-2">
-              <Paperclip size={16} className="inline mr-1" />
-              Anexar arquivos (opcional)
-            </label>
-            <div className="space-y-2">
-              <input
-                type="file"
-                multiple
-                accept=".png,.jpg,.jpeg,.pdf,.xls,.xlsx"
-                onChange={(e) => {
-                  const files = Array.from(e.target.files || []);
-                  const validFiles = files.filter(f => {
-                    const ext = f.name.split('.').pop()?.toLowerCase();
-                    return ['png', 'jpg', 'jpeg', 'pdf', 'xls', 'xlsx'].includes(ext || '');
-                  });
-                  if (validFiles.length !== files.length) {
-                    toast.error('Alguns arquivos foram ignorados. Apenas PNG, JPEG, PDF, XLS e XLSX são permitidos.');
-                  }
-                  setSelectedFiles(prev => [...prev, ...validFiles]);
-                  e.target.value = ''; // Reset input
-                }}
-                className="w-full px-4 py-2 rounded-lg bg-slate-800 border border-white/20 text-white file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-cyan-500 file:text-white hover:file:bg-cyan-600 file:cursor-pointer"
-                disabled={isLoading || uploadProgress}
-              />
-              {selectedFiles.length > 0 && (
-                <div className="space-y-1">
-                  {selectedFiles.map((file, idx) => (
-                    <div key={idx} className="flex items-center justify-between px-3 py-2 bg-slate-800/50 rounded-lg border border-white/10">
-                      <div className="flex items-center gap-2 text-sm text-slate-300">
-                        <FileIcon size={16} />
-                        <span className="truncate max-w-xs">{file.name}</span>
-                        <span className="text-xs text-slate-500">({(file.size / 1024).toFixed(1)} KB)</span>
-                      </div>
-                      <button
-                        type="button"
-                        onClick={() => setSelectedFiles(prev => prev.filter((_, i) => i !== idx))}
-                        className="text-red-400 hover:text-red-300 transition"
-                        disabled={isLoading || uploadProgress}
-                      >
-                        <X size={16} />
-                      </button>
-                    </div>
-                  ))}
-                </div>
-              )}
             </div>
           </div>
 

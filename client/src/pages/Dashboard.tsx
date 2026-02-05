@@ -18,7 +18,7 @@ export type Ticket = {
   category: string;
   priority: string;
   status: string;
-  departmentId: number | null;
+  sector: string;
   createdById: number;
   createdByName: string;
   assignedToId: number | null;
@@ -38,20 +38,19 @@ export default function Dashboard() {
   const [filters, setFilters] = useState({
     status: '',
     priority: '',
-    departmentId: undefined as number | undefined,
+    sector: '',
   });
 
   // Fetch tickets from database
   const { data: tickets = [], isLoading, refetch } = trpc.tickets.list.useQuery({
     status: filters.status || undefined,
     priority: filters.priority || undefined,
-    departmentId: filters.departmentId,
+    sector: filters.sector || undefined,
     search: searchQuery || undefined,
   });
 
-  // Fetch announcements and departments
+  // Fetch announcements
   const { data: announcements = [] } = trpc.announcements.list.useQuery();
-  const { data: departments = [] } = trpc.departments.list.useQuery();
 
   const handleLogout = async () => {
     await logout();
@@ -263,14 +262,17 @@ export default function Dashboard() {
                   <div>
                     <label className="block text-sm font-medium text-blue-100 mb-2">Setor</label>
                     <select
-                      value={filters.departmentId?.toString() || ""}
-                      onChange={(e) => setFilters({ ...filters, departmentId: e.target.value ? parseInt(e.target.value) : undefined })}
+                      value={filters.sector}
+                      onChange={(e) => setFilters({ ...filters, sector: e.target.value })}
                       className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/20 text-white focus:outline-none focus:border-cyan-400 transition"
                     >
                       <option value="">Todos</option>
-                      {departments.map(dept => (
-                        <option key={dept.id} value={dept.id}>{dept.name}</option>
-                      ))}
+                      <option value="TI">TI</option>
+                      <option value="RH">RH</option>
+                      <option value="Financeiro">Financeiro</option>
+                      <option value="Comercial">Comercial</option>
+                      <option value="Suporte">Suporte</option>
+                      <option value="Operações">Operações</option>
                     </select>
                   </div>
                 </div>

@@ -7,7 +7,7 @@ export const MODULES = {
   CHAMADOS: 'chamados',
   PROJETOS: 'projetos',
   RH: 'rh',
-  COMPRAS: 'compras',
+  ECOMMERCE: 'ecommerce',
   MARKETING: 'marketing',
   TECNOLOGIA: 'tecnologia',
 } as const;

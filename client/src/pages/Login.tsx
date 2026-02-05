@@ -19,6 +19,7 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
+  const [sector, setSector] = useState('Outro');
 
   const loginMutation = trpc.auth.login.useMutation({
     onSuccess: () => {
@@ -36,6 +37,7 @@ export default function Login() {
       setMode('login');
       setName('');
       setPassword('');
+      setSector('Outro');
     },
     onError: (error) => {
       toast.error(error.message);
@@ -55,7 +57,7 @@ export default function Login() {
     if (mode === 'login') {
       loginMutation.mutate({ email, password });
     } else {
-      registerMutation.mutate({ name, email, password });
+      registerMutation.mutate({ name, email, password, sector: sector as any });
     }
   };
 
@@ -64,6 +66,16 @@ export default function Login() {
   if (authLoading) {
     return <LoadingSpinner fullScreen size="lg" text="Carregando..." />;
   }
+
+  const sectors = [
+    { value: 'TI', label: 'TI' },
+    { value: 'RH', label: 'RH' },
+    { value: 'Financeiro', label: 'Financeiro' },
+    { value: 'Comercial', label: 'Comercial' },
+    { value: 'Suporte', label: 'Suporte' },
+    { value: 'Operações', label: 'Operações' },
+    { value: 'Outro', label: 'Outro' },
+  ];
 
   return (
     <div className="min-h-screen w-full relative overflow-hidden">
@@ -88,7 +100,7 @@ export default function Login() {
         <div className="flex items-center gap-3">
           <img src="/neosul-logo.png" alt="Neosul Logo" className="h-12 w-auto" />
           <div>
-            <span className="text-white font-bold text-xl tracking-wide block">NEROS</span>
+            <span className="text-white font-bold text-xl tracking-wide block">NEROS JL</span>
             <span className="text-blue-200 text-xs">Portal de Sistemas</span>
           </div>
         </div>
@@ -115,7 +127,7 @@ export default function Login() {
             </h1>
             
             <p className="text-blue-100 text-lg xl:text-xl max-w-lg leading-relaxed">
-              Sistema integrado de gestão. Acesse chamados, projetos e ferramentas de produtividade em um só lugar.
+              Sistema integrado de gestão empresarial. Acesse chamados, projetos e ferramentas de produtividade em um só lugar.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
@@ -213,6 +225,27 @@ export default function Login() {
                         </button>
                       </div>
                     </div>
+
+                    {/* Sector field (only for register) */}
+                    {mode === 'register' && (
+                      <div>
+                        <label className="block text-white/90 text-sm font-medium mb-2">Setor</label>
+                        <div className="relative">
+                          <Building2 className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-blue-300" />
+                          <select
+                            value={sector}
+                            onChange={(e) => setSector(e.target.value)}
+                            className="w-full bg-white/5 border border-white/20 rounded-xl py-3.5 pl-12 pr-4 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/10 transition-all appearance-none cursor-pointer"
+                          >
+                            {sectors.map((s) => (
+                              <option key={s.value} value={s.value} className="bg-[#004080] text-white">
+                                {s.label}
+                              </option>
+                            ))}
+                          </select>
+                        </div>
+                      </div>
+                    )}
 
                     {/* Submit button */}
                     <button

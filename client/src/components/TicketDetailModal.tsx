@@ -33,10 +33,9 @@ const priorityColors: Record<string, string> = {
 
 export default function TicketDetailModal({ ticket, onClose, onUpdate }: TicketDetailModalProps) {
   const { user } = useAuth();
-  const isAdmin = user?.role === 'admin';
   const [commentText, setCommentText] = useState('');
   const [selectedStatus, setSelectedStatus] = useState(ticket.status);
-  const [selectedDepartmentId, setSelectedDepartmentId] = useState<number | null>(ticket.departmentId);
+  const [selectedSector, setSelectedSector] = useState(ticket.sector);
   const [selectedAssigned, setSelectedAssigned] = useState(ticket.assignedToName || '');
 
   // Fetch comments for this ticket
@@ -48,9 +47,8 @@ export default function TicketDetailModal({ ticket, onClose, onUpdate }: TicketD
   // Fetch attachments for this ticket
   const { data: attachments = [], refetch: refetchAttachments } = trpc.attachments.list.useQuery({ ticketId: ticket.id });
 
-  // Fetch users and departments for dropdowns
-  const { data: users = [] } = trpc.userManagement.listAll.useQuery();
-  const { data: departments = [] } = trpc.departments.list.useQuery();
+  // Fetch users for assignment dropdown
+  const { data: users = [] } = trpc.users.list.useQuery();
 
   // Mutations
   const updateTicketMutation = trpc.tickets.update.useMutation({
@@ -83,11 +81,11 @@ export default function TicketDetailModal({ ticket, onClose, onUpdate }: TicketD
     });
   };
 
-  const handleDepartmentChange = (newDepartmentId: number | null) => {
-    setSelectedDepartmentId(newDepartmentId);
+  const handleSectorChange = (newSector: string) => {
+    setSelectedSector(newSector);
     updateTicketMutation.mutate({
       id: ticket.id,
-      departmentId: newDepartmentId,
+      sector: newSector as any,
     });
   };
 
@@ -307,39 +305,35 @@ export default function TicketDetailModal({ ticket, onClose, onUpdate }: TicketD
               <div>
                 <label className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2 block">Setor</label>
                 <select
-                  value={selectedDepartmentId?.toString() || ""}
-                  onChange={(e) => handleDepartmentChange(e.target.value ? parseInt(e.target.value) : null)}
+                  value={selectedSector}
+                  onChange={(e) => handleSectorChange(e.target.value)}
                   disabled={updateTicketMutation.isPending}
                   className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/10 text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-colors"
                 >
-                  <option value="">Sem setor</option>
-                  {departments.map(dept => (
-                    <option key={dept.id} value={dept.id}>{dept.name}</option>
-                  ))}
+                  <option value="TI">TI</option>
+                  <option value="RH">RH</option>
+                  <option value="Financeiro">Financeiro</option>
+                  <option value="Comercial">Comercial</option>
+                  <option value="Suporte">Suporte</option>
+                  <option value="Operações">Operações</option>
                 </select>
               </div>
 
               <div>
                 <label className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2 block">Responsável</label>
-                {isAdmin ? (
-                  <select
-                    value={selectedAssigned}
-                    onChange={(e) => handleAssignChange(e.target.value)}
-                    disabled={updateTicketMutation.isPending}
-                    className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/10 text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-colors"
-                  >
-                    <option value="">Não atribuído</option>
-                    {users.map((u) => (
-                      <option key={u.id} value={u.name || ''}>
-                        {u.name || `Usuário ${u.id}`}
-                      </option>
-                    ))}
-                  </select>
-                ) : (
-                  <div className="w-full px-3 py-2 rounded-lg bg-slate-800/50 border border-white/10 text-slate-300">
-                    {selectedAssigned || 'Não atribuído'}
-                  </div>
-                )}
+                <select
+                  value={selectedAssigned}
+                  onChange={(e) => handleAssignChange(e.target.value)}
+                  disabled={updateTicketMutation.isPending}
+                  className="w-full px-3 py-2 rounded-lg bg-slate-800 border border-white/10 text-slate-300 focus:outline-none focus:border-cyan-500/50 transition-colors"
+                >
+                  <option value="">Não atribuído</option>
+                  {users.map((u) => (
+                    <option key={u.id} value={u.name || ''}>
+                      {u.name || `Usuário ${u.id}`}
+                    </option>
+                  ))}
+                </select>
               </div>
             </div>
 

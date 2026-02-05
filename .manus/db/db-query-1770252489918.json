@@ -1,9 +1,0 @@
-{
-  "query": "UPDATE permissionGroups \nSET permissions = JSON_REPLACE(\n  JSON_REMOVE(permissions, '$.ecommerce'),\n  '$.compras',\n  JSON_EXTRACT(permissions, '$.ecommerce')\n)\nWHERE JSON_CONTAINS_PATH(permissions, 'one', '$.ecommerce');",
-  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user M967bVXfxXUhp7W.root --database JLPd83LStLYaV7mJXtu8eL --execute UPDATE permissionGroups \nSET permissions = JSON_REPLACE(\n  JSON_REMOVE(permissions, '$.ecommerce'),\n  '$.compras',\n  JSON_EXTRACT(permissions, '$.ecommerce')\n)\nWHERE JSON_CONTAINS_PATH(permissions, 'one', '$.ecommerce');",
-  "rows": [],
-  "messages": [],
-  "stdout": "",
-  "stderr": "",
-  "execution_time_ms": 56
-}
