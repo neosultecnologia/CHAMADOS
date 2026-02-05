@@ -6,6 +6,9 @@ import path from "node:path";
 import { defineConfig, type Plugin, type ViteDevServer } from "vite";
 import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
+// Detect if running in Manus environment
+const isManus = process.env.VITE_APP_ID !== undefined;
+
 // =============================================================================
 // Manus Debug Collector - Vite Plugin
 // Writes browser logs directly to files, trimmed when exceeding size limit
@@ -179,6 +182,11 @@ export default defineConfig({
       "localhost",
       "127.0.0.1",
     ],
+    hmr: isManus ? undefined : {
+      protocol: "ws",
+      host: "localhost",
+      port: 5173,
+    },
     fs: {
       strict: true,
       deny: ["**/.*"],
