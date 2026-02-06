@@ -667,3 +667,10 @@
 - [x] Frontend não precisou de alteração (filtragem feita no backend)
 - [x] Criar testes unitários para visibilidade por grupo (16 testes passando)
 - [x] Testar fluxo completo com diferentes grupos (183 testes totais passando)
+
+## Backup Automático para GitHub
+- [ ] Configurar repositório remoto GitHub (neosultecnologia/CHAMADOS)
+- [ ] Fazer push inicial do código-fonte completo
+- [ ] Configurar script de backup dos dados do banco de dados
+- [ ] Integrar backup de dados com commit automático para GitHub
+- [ ] Testar push e restauração do backup
