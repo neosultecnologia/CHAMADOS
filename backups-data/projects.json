@@ -22,7 +22,7 @@
     "projectId": "proj_2",
     "name": "Zeca",
     "description": "Projeto piloto já em produção\n\nDesenvolvimento",
-    "status": "Planejamento",
+    "status": "Em Andamento",
     "priority": "Média",
     "ownerId": 1,
     "ownerName": "Daniel TI",
@@ -33,14 +33,14 @@
     "createdById": 1,
     "createdByName": "Daniel TI",
     "createdAt": 1770321106938,
-    "updatedAt": 1770379216351
+    "updatedAt": 1770396865210
   },
   {
     "id": 300001,
     "projectId": "proj_3",
     "name": "Martins",
     "description": "Projeto em andamento \n\nhttps://painelsellers.martins.com.br/login",
-    "status": "Planejamento",
+    "status": "Em Andamento",
     "priority": "Alta",
     "ownerId": 1,
     "ownerName": "Daniel TI",
@@ -51,14 +51,14 @@
     "createdById": 1,
     "createdByName": "Daniel TI",
     "createdAt": 1770379305284,
-    "updatedAt": 1770379473213
+    "updatedAt": 1770396859146
   },
   {
     "id": 300002,
     "projectId": "proj_4",
     "name": "Descontão",
     "description": "Integração com a Descontão",
-    "status": "Planejamento",
+    "status": "Em Andamento",
     "priority": "Alta",
     "ownerId": 1,
     "ownerName": "Daniel TI",
@@ -69,14 +69,14 @@
     "createdById": 1,
     "createdByName": "Daniel TI",
     "createdAt": 1770379518655,
-    "updatedAt": 1770379545843
+    "updatedAt": 1770396852184
   },
   {
     "id": 300003,
     "projectId": "proj_5",
     "name": "CALLFARMA",
     "description": "Validação de Layout",
-    "status": "Planejamento",
+    "status": "Em Andamento",
     "priority": "Alta",
     "ownerId": 1,
     "ownerName": "Daniel TI",
@@ -87,14 +87,14 @@
     "createdById": 1,
     "createdByName": "Daniel TI",
     "createdAt": 1770379839310,
-    "updatedAt": 1770379907173
+    "updatedAt": 1770396841427
   },
   {
     "id": 300004,
     "projectId": "proj_6",
     "name": "NEOGRID - FARMAX",
     "description": "Integração nova",
-    "status": "Planejamento",
+    "status": "Em Andamento",
     "priority": "Alta",
     "ownerId": 1,
     "ownerName": "Daniel TI",
@@ -105,6 +105,24 @@
     "createdById": 1,
     "createdByName": "Daniel TI",
     "createdAt": 1770379986213,
-    "updatedAt": 1770380192082
+    "updatedAt": 1770396834385
+  },
+  {
+    "id": 300029,
+    "projectId": "proj_7",
+    "name": "DRE - GERENCIAL",
+    "description": "DRE - GERENCIAL",
+    "status": "Planejamento",
+    "priority": "Alta",
+    "ownerId": 1,
+    "ownerName": "Daniel TI",
+    "sector": "TI",
+    "startDate": 1770260400000,
+    "endDate": 1772247600000,
+    "progress": 0,
+    "createdById": 1,
+    "createdByName": "Daniel TI",
+    "createdAt": 1770398267998,
+    "updatedAt": 1770398300637
   }
 ]

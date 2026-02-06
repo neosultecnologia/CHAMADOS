@@ -219,5 +219,18 @@
     "completedAt": null,
     "createdAt": 1770380190419,
     "updatedAt": 1770380190419
+  },
+  {
+    "id": 330024,
+    "projectId": 300029,
+    "name": "Alimentando informações na base",
+    "description": null,
+    "status": "Pendente",
+    "order": 1,
+    "startDate": 1770260400000,
+    "endDate": 1770346800000,
+    "completedAt": null,
+    "createdAt": 1770398298498,
+    "updatedAt": 1770398298498
   }
 ]
