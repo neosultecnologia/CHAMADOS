@@ -296,7 +296,8 @@ export async function getAllTickets(filters?: {
   priority?: string;
   departmentId?: number;
   search?: string;
-  creatorId?: number; // Filter by creator for non-admin users
+  creatorId?: number; // Filter by creator (fallback if no group)
+  groupId?: number; // Filter by permission group - users in same group see each other's tickets
 }): Promise<Ticket[]> {
   const db = await getDb();
   if (!db) return [];
@@ -305,8 +306,25 @@ export async function getAllTickets(filters?: {
   
   const conditions = [];
   
-  // Filter by creator (for non-admin users to see only their own tickets)
-  if (filters?.creatorId) {
+  // Filter by group: users in the same permission group see each other's tickets
+  if (filters?.groupId) {
+    // Get all user IDs that belong to the same group
+    const groupMembers = await db.select({ id: users.id })
+      .from(users)
+      .where(eq(users.groupId, filters.groupId));
+    
+    const memberIds = groupMembers.map(m => m.id);
+    
+    if (memberIds.length > 0) {
+      conditions.push(inArray(tickets.createdById, memberIds));
+    } else {
+      // No members in group, show only own tickets
+      if (filters?.creatorId) {
+        conditions.push(eq(tickets.createdById, filters.creatorId));
+      }
+    }
+  } else if (filters?.creatorId) {
+    // Fallback: if user has no group, show only their own tickets
     conditions.push(eq(tickets.createdById, filters.creatorId));
   }
   

@@ -290,11 +290,20 @@ export const appRouter = router({
         search: z.string().optional(),
       }).optional())
       .query(async ({ ctx, input }) => {
-        // Admins see all tickets, regular users see only their own
+        // Admins see all tickets
+        // Regular users see tickets from all members of their permission group
+        // Users without a group see only their own tickets
         const isAdmin = ctx.user?.role === 'admin';
+        
+        if (isAdmin) {
+          return await db.getAllTickets({ ...input });
+        }
+        
+        // Non-admin: filter by group if user has a groupId, otherwise by creatorId
         return await db.getAllTickets({
           ...input,
-          creatorId: isAdmin ? undefined : ctx.user?.id,
+          groupId: ctx.user?.groupId ?? undefined,
+          creatorId: ctx.user?.id,
         });
       }),
 

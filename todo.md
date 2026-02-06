@@ -657,3 +657,13 @@
 - [x] Mostrar tela de avaliação quando operador finalizar atendimento
 - [x] Permitir usuário pular avaliação se desejar
 - [x] Testar sistema completo de avaliação (13 testes passando)
+
+## Visibilidade de Chamados por Grupo de Permissões
+- [x] Analisar código atual de visibilidade de chamados (tickets)
+- [x] Analisar estrutura de grupos de permissões e vínculo com usuários
+- [x] Alterar lógica de listagem de tickets no backend para filtrar por grupo
+- [x] Usuários do mesmo grupo devem ver chamados uns dos outros
+- [x] Admins (grupo administrador) devem continuar vendo todos os chamados
+- [x] Frontend não precisou de alteração (filtragem feita no backend)
+- [x] Criar testes unitários para visibilidade por grupo (16 testes passando)
+- [x] Testar fluxo completo com diferentes grupos (183 testes totais passando)
