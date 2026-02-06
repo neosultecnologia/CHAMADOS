@@ -222,5 +222,21 @@
     "enteredAt": 1770378297881,
     "acceptedAt": 1770378309778,
     "completedAt": 1770378349660
+  },
+  {
+    "id": 90001,
+    "userId": 1,
+    "userName": "Daniel TI",
+    "conversationId": null,
+    "ticketId": null,
+    "position": 1,
+    "status": "cancelled",
+    "assignedOperatorId": null,
+    "assignedOperatorName": null,
+    "initialMessage": null,
+    "priority": "normal",
+    "enteredAt": 1770409898589,
+    "acceptedAt": null,
+    "completedAt": null
   }
 ]

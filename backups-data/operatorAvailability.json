@@ -3,12 +3,12 @@
     "id": 1,
     "operatorId": 1,
     "operatorName": "Daniel TI",
-    "isAvailableForChat": false,
-    "status": "offline",
+    "isAvailableForChat": true,
+    "status": "available",
     "maxConcurrentChats": 3,
     "currentActiveChats": 0,
-    "lastActiveAt": 1770387491024,
+    "lastActiveAt": 1770409877057,
     "statusMessage": null,
-    "updatedAt": 1770387491024
+    "updatedAt": 1770409877057
   }
 ]
