@@ -1,0 +1,30 @@
+[
+  {
+    "id": 30001,
+    "title": "Analisar Mili",
+    "description": "Verificar a colaborativa Associativistas RS\nAnalisar venda dos itens que venderam fora da curva em janeiro (validar se a Clamed matera a solicitação)",
+    "status": "todo",
+    "priority": "high",
+    "assignedToId": null,
+    "tags": "Colaborativas",
+    "dueDate": "2026-02-05T00:00:00.000Z",
+    "position": 0,
+    "createdById": 240039,
+    "createdAt": "2026-02-05T11:32:16.000Z",
+    "updatedAt": "2026-02-05T11:32:16.000Z"
+  },
+  {
+    "id": 30002,
+    "title": "Analisar Maxinutri",
+    "description": "Pedir somente o necessário\nAnalisar colaborativa de Ação enviada pelo Becker no e-mail ",
+    "status": "todo",
+    "priority": "medium",
+    "assignedToId": null,
+    "tags": null,
+    "dueDate": "2025-02-05T00:00:00.000Z",
+    "position": 0,
+    "createdById": 240039,
+    "createdAt": "2026-02-05T11:35:21.000Z",
+    "updatedAt": "2026-02-05T11:35:21.000Z"
+  }
+]

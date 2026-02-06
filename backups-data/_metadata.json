@@ -1,0 +1,31 @@
+{
+  "exportedAt": "2026-02-06T15:04:15.795Z",
+  "tables": [
+    "users",
+    "departments",
+    "tickets",
+    "projects",
+    "projectPhases",
+    "projectComments",
+    "dailyTasks",
+    "activities",
+    "comments",
+    "attachments",
+    "announcements",
+    "permissionGroups",
+    "suppliers",
+    "products",
+    "quotations",
+    "purchaseOrders",
+    "purchaseOrderItems",
+    "chatRatings",
+    "operatorAvailability",
+    "chatQueue",
+    "notifications",
+    "purchasingTasks",
+    "kanbanColumnSettings",
+    "backups"
+  ],
+  "totalRecords": 133,
+  "version": "1.0"
+}

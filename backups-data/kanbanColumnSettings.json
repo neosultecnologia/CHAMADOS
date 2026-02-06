@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "userId": 240039,
+    "module": "purchasing",
+    "columnKey": "todo",
+    "customName": "A Fazer",
+    "createdAt": "2026-02-05T02:16:43.000Z",
+    "updatedAt": "2026-02-05T02:38:47.000Z"
+  },
+  {
+    "id": 30001,
+    "userId": 240039,
+    "module": "purchasing",
+    "columnKey": "quoting",
+    "customName": "Analise Quarentena",
+    "createdAt": "2026-02-05T20:03:22.000Z",
+    "updatedAt": "2026-02-05T20:03:22.000Z"
+  }
+]

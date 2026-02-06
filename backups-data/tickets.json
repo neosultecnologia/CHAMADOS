@@ -1,0 +1,34 @@
+[
+  {
+    "id": 90001,
+    "ticketId": "bilhete_1",
+    "title": "NOTEBOOK LENTO",
+    "description": "Boa tarde,\n\nGostaria de solicitar analise do meu notebook, quando é necessário participar de reunião on-line o mesmo trava, sendo necessário após o fim da reunião reiniciar o computador.\n\nGrata ",
+    "category": "Técnico",
+    "priority": "Crítica",
+    "status": "Em Progresso",
+    "departmentId": 17,
+    "createdById": 240039,
+    "createdByName": "Monique",
+    "assignedToId": 1,
+    "assignedToName": "Daniel TI",
+    "createdAt": 1770320755920,
+    "updatedAt": 1770324054977
+  },
+  {
+    "id": 150001,
+    "ticketId": "bilhete_2",
+    "title": "E-mail com problemas",
+    "description": "Não estou conseguindo receber e-mails, já fiz a exclusão dos de e-mails antigos, mas ainda assim consta com 100% de uso.",
+    "category": "Técnico",
+    "priority": "Crítica",
+    "status": "Em Progresso",
+    "departmentId": 17,
+    "createdById": 300002,
+    "createdByName": "JULIA.S",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "createdAt": 1770380717589,
+    "updatedAt": 1770381066360
+  }
+]

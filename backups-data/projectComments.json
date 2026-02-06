@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "projectId": 1,
+    "authorId": 1,
+    "authorName": "Neosul - Daniel TI",
+    "content": "Ótimo progresso no projeto! A integração com o ERP está funcionando perfeitamente.",
+    "mentions": null,
+    "createdAt": 1770154612697
+  },
+  {
+    "id": 2,
+    "projectId": 1,
+    "authorId": 1,
+    "authorName": "Neosul - Daniel TI",
+    "content": "Olá @Admin Teste , preciso da sua ajuda neste projeto!",
+    "mentions": "[23]",
+    "createdAt": 1770155089046
+  }
+]

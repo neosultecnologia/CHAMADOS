@@ -1,0 +1,22 @@
+[
+  {
+    "id": 30001,
+    "title": "Teste",
+    "content": "teste",
+    "type": "info",
+    "isActive": 1,
+    "createdById": 23,
+    "createdAt": 1770248065908,
+    "expiresAt": 1770334440000
+  },
+  {
+    "id": 60001,
+    "title": "Chamados com atendimento Online",
+    "content": null,
+    "type": "info",
+    "isActive": 1,
+    "createdById": 1,
+    "createdAt": 1770336291072,
+    "expiresAt": 1772323440000
+  }
+]

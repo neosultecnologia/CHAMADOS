@@ -1,0 +1,30 @@
+[
+  {
+    "id": 17,
+    "name": "TI",
+    "description": null,
+    "createdAt": "2026-02-04T23:34:51.000Z",
+    "updatedAt": "2026-02-04T23:34:51.000Z"
+  },
+  {
+    "id": 18,
+    "name": "Controladoria",
+    "description": null,
+    "createdAt": "2026-02-04T23:35:22.000Z",
+    "updatedAt": "2026-02-04T23:35:22.000Z"
+  },
+  {
+    "id": 19,
+    "name": "Diretoria",
+    "description": null,
+    "createdAt": "2026-02-04T23:35:31.000Z",
+    "updatedAt": "2026-02-04T23:35:31.000Z"
+  },
+  {
+    "id": 20,
+    "name": "Compras",
+    "description": null,
+    "createdAt": "2026-02-05T01:16:50.000Z",
+    "updatedAt": "2026-02-05T01:16:50.000Z"
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "id": 90001,
+    "ticketId": 90001,
+    "type": "created",
+    "authorId": 240039,
+    "authorName": "Monique",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Monique",
+    "createdAt": 1770320755920
+  },
+  {
+    "id": 90002,
+    "ticketId": 90001,
+    "type": "sector_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Sem setor",
+    "newValue": "TI",
+    "description": "Setor alterado de \"Sem setor\" para \"TI\"",
+    "createdAt": 1770321187101
+  },
+  {
+    "id": 90003,
+    "ticketId": 90001,
+    "type": "assignment",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Daniel TI",
+    "description": "Responsável alterado para \"Daniel TI\"",
+    "createdAt": 1770321191106
+  },
+  {
+    "id": 90004,
+    "ticketId": 90001,
+    "type": "comment",
+    "authorId": 240039,
+    "authorName": "Monique",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Monique",
+    "createdAt": 1770322039776
+  },
+  {
+    "id": 90005,
+    "ticketId": 90001,
+    "type": "status_change",
+    "authorId": 240039,
+    "authorName": "Monique",
+    "oldValue": "Aberto",
+    "newValue": "Em Progresso",
+    "description": "Status alterado de \"Aberto\" para \"Em Progresso\"",
+    "createdAt": 1770323618554
+  },
+  {
+    "id": 90006,
+    "ticketId": 90001,
+    "type": "status_change",
+    "authorId": 240039,
+    "authorName": "Monique",
+    "oldValue": "Em Progresso",
+    "newValue": "Aberto",
+    "description": "Status alterado de \"Em Progresso\" para \"Aberto\"",
+    "createdAt": 1770323620540
+  },
+  {
+    "id": 90007,
+    "ticketId": 90001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Aberto",
+    "newValue": "Em Progresso",
+    "description": "Status alterado de \"Aberto\" para \"Em Progresso\"",
+    "createdAt": 1770324054951
+  },
+  {
+    "id": 120001,
+    "ticketId": 150001,
+    "type": "created",
+    "authorId": 300002,
+    "authorName": "JULIA.S",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por JULIA.S",
+    "createdAt": 1770380717589
+  },
+  {
+    "id": 120002,
+    "ticketId": 90001,
+    "type": "comment",
+    "authorId": 240039,
+    "authorName": "Monique",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Monique",
+    "createdAt": 1770380805765
+  },
+  {
+    "id": 120003,
+    "ticketId": 150001,
+    "type": "sector_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Sem setor",
+    "newValue": "TI",
+    "description": "Setor alterado de \"Sem setor\" para \"TI\"",
+    "createdAt": 1770381040645
+  },
+  {
+    "id": 120004,
+    "ticketId": 150001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1770381045843
+  },
+  {
+    "id": 120005,
+    "ticketId": 150001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Aberto",
+    "newValue": "Em Progresso",
+    "description": "Status alterado de \"Aberto\" para \"Em Progresso\"",
+    "createdAt": 1770381066338
+  }
+]

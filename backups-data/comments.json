@@ -1,0 +1,18 @@
+[
+  {
+    "id": 30001,
+    "ticketId": 90001,
+    "authorId": 240039,
+    "authorName": "Monique",
+    "content": "Aguardando resolução...",
+    "createdAt": 1770322039776
+  },
+  {
+    "id": 60001,
+    "ticketId": 90001,
+    "authorId": 240039,
+    "authorName": "Monique",
+    "content": "Ainda não solucionado ...",
+    "createdAt": 1770380805765
+  }
+]
