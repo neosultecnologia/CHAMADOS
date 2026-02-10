@@ -22,5 +22,21 @@
     "authorName": "Monique",
     "content": "Aguardando ainda...",
     "createdAt": 1770659619259
+  },
+  {
+    "id": 120001,
+    "ticketId": 90001,
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "content": "Boa tarde Monique, estamos providenciando a compra de um notebook.",
+    "createdAt": 1770731768283
+  },
+  {
+    "id": 120002,
+    "ticketId": 150001,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "Caixa de email esta com 63% de uso.",
+    "createdAt": 1770731869800
   }
 ]

@@ -141,5 +141,49 @@
     "newValue": null,
     "description": "Comentário adicionado por Monique",
     "createdAt": 1770659619259
+  },
+  {
+    "id": 180001,
+    "ticketId": 90001,
+    "type": "comment",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Daniel TI",
+    "createdAt": 1770731768283
+  },
+  {
+    "id": 180002,
+    "ticketId": 90001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Em Progresso",
+    "newValue": "Fechado",
+    "description": "Status alterado de \"Em Progresso\" para \"Fechado\"",
+    "createdAt": 1770731786587
+  },
+  {
+    "id": 180003,
+    "ticketId": 150001,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1770731869800
+  },
+  {
+    "id": 180004,
+    "ticketId": 150001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Progresso",
+    "newValue": "Resolvido",
+    "description": "Status alterado de \"Em Progresso\" para \"Resolvido\"",
+    "createdAt": 1770731878731
   }
 ]

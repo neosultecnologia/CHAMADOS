@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "id": 1,
+    "projectId": 330001,
+    "title": "Corrigir inclusão na gerencial",
+    "description": "Incluir apenas produtos com custo diferente da nota.",
+    "status": "Pendente",
+    "priority": "Média",
+    "assignedToId": null,
+    "assignedToName": null,
+    "dueDate": 1770940800000,
+    "completedAt": null,
+    "createdById": 60001,
+    "createdByName": "Gabriel Bino",
+    "createdAt": 1770732862086,
+    "updatedAt": 1770732862086
+  }
+]

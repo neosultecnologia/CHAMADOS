@@ -124,5 +124,23 @@
     "createdByName": "Daniel TI",
     "createdAt": 1770398267998,
     "updatedAt": 1770398300637
+  },
+  {
+    "id": 330001,
+    "projectId": "proj_8",
+    "name": "Precificação",
+    "description": "Automação do processo de precificação de produtos.",
+    "status": "Planejamento",
+    "priority": "Alta",
+    "ownerId": 60001,
+    "ownerName": "Gabriel Bino",
+    "sector": "TI",
+    "startDate": 1762138800000,
+    "endDate": 1772506800000,
+    "progress": 25,
+    "createdById": 60001,
+    "createdByName": "Gabriel Bino",
+    "createdAt": 1770732632794,
+    "updatedAt": 1770732738504
   }
 ]

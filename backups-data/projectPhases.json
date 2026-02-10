@@ -232,5 +232,57 @@
     "completedAt": null,
     "createdAt": 1770398298498,
     "updatedAt": 1770398298498
+  },
+  {
+    "id": 360001,
+    "projectId": 330001,
+    "name": "Importação dos arquivos para o Infarma",
+    "description": "Importar arquivos com os produtos precificados para o Infarma.",
+    "status": "Concluída",
+    "order": 1,
+    "startDate": null,
+    "endDate": null,
+    "completedAt": 1770732735707,
+    "createdAt": 1770732633042,
+    "updatedAt": 1770732736090
+  },
+  {
+    "id": 360002,
+    "projectId": 330001,
+    "name": "Cálculo da precificação",
+    "description": "Calcular preços de custo do produto com base em condições como comparação com preço anterior cadastrado no sistema e quantidade em estoque.",
+    "status": "Pendente",
+    "order": 2,
+    "startDate": null,
+    "endDate": null,
+    "completedAt": null,
+    "createdAt": 1770732633335,
+    "updatedAt": 1770732633335
+  },
+  {
+    "id": 360003,
+    "projectId": 330001,
+    "name": "Inclusão de produtos na gerencial",
+    "description": "Incluir produtos com custo diferente da nota na planilha de custo gerencial",
+    "status": "Pendente",
+    "order": 3,
+    "startDate": null,
+    "endDate": null,
+    "completedAt": null,
+    "createdAt": 1770732633576,
+    "updatedAt": 1770732633576
+  },
+  {
+    "id": 360004,
+    "projectId": 330001,
+    "name": "Download de XML",
+    "description": "Baixar XMLs via Auxílio NF-e e Auxílio Cloud.",
+    "status": "Pendente",
+    "order": 4,
+    "startDate": null,
+    "endDate": null,
+    "completedAt": null,
+    "createdAt": 1770732633796,
+    "updatedAt": 1770732633796
   }
 ]

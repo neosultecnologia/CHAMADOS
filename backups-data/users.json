@@ -19,8 +19,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-02-10T00:05:44.000Z",
-    "lastSignedIn": "2026-02-10T00:05:45.000Z"
+    "updatedAt": "2026-02-10T14:45:45.000Z",
+    "lastSignedIn": "2026-02-10T14:45:45.000Z"
   },
   {
     "id": 23,
@@ -65,15 +65,15 @@
       "tecnologia": true
     },
     "createdAt": "2026-02-04T11:57:53.000Z",
-    "updatedAt": "2026-02-09T13:26:49.000Z",
-    "lastSignedIn": "2026-02-09T13:26:49.000Z"
+    "updatedAt": "2026-02-10T13:28:35.000Z",
+    "lastSignedIn": "2026-02-10T13:28:35.000Z"
   },
   {
     "id": 90001,
     "openId": null,
     "name": "Teo",
     "email": "teo@neosuldistribuidora.com.br",
-    "passwordHash": "$2b$10$ePiYwxIg2sD2XYhw08b6Ye2dhqarhi5s8uSN137vxxEf3xa9GUV46",
+    "passwordHash": "$2b$10$RVNKgrXrug9FiMTs/df.ieO17AQ3JoDCA0.pQiKlN088JX0GIh84u",
     "loginMethod": "internal",
     "role": "admin",
     "approvalStatus": "approved",
@@ -88,7 +88,7 @@
       "tecnologia": true
     },
     "createdAt": "2026-02-04T13:17:56.000Z",
-    "updatedAt": "2026-02-05T19:43:08.000Z",
+    "updatedAt": "2026-02-10T14:04:53.000Z",
     "lastSignedIn": null
   },
   {
@@ -157,8 +157,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-02-06T11:27:15.000Z",
-    "updatedAt": "2026-02-06T16:40:45.000Z",
-    "lastSignedIn": "2026-02-06T16:40:45.000Z"
+    "updatedAt": "2026-02-10T12:15:06.000Z",
+    "lastSignedIn": "2026-02-10T12:15:07.000Z"
   },
   {
     "id": 300002,
