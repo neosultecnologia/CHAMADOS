@@ -130,5 +130,16 @@
     "newValue": "Em Progresso",
     "description": "Status alterado de \"Aberto\" para \"Em Progresso\"",
     "createdAt": 1770381066338
+  },
+  {
+    "id": 150001,
+    "ticketId": 90001,
+    "type": "comment",
+    "authorId": 240039,
+    "authorName": "Monique",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Monique",
+    "createdAt": 1770659619259
   }
 ]

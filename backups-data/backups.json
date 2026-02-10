@@ -339,5 +339,36 @@
     "recordCount": 60,
     "createdAt": 1770638714639,
     "createdBy": "Daniel TI"
+  },
+  {
+    "id": 210001,
+    "filename": "backup-2026-02-09T13-35-38-016Z.json",
+    "fileSize": 24186,
+    "checksum": "0ce99febc3d4a18adf3c1a64bd67cb9e148bf7cb388038c5fc316fef5480a588",
+    "status": "completed",
+    "s3Key": "backups/backup-2026-02-09T13-35-38-016Z.json",
+    "s3Url": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/backups/backup-2026-02-09T13-35-38-016Z.json",
+    "tablesBackedUp": [
+      "users",
+      "departments",
+      "tickets",
+      "projects",
+      "suppliers",
+      "products",
+      "purchaseOrders",
+      "purchaseOrderItems",
+      "quotations",
+      "permissionGroups",
+      "announcements",
+      "attachments",
+      "comments",
+      "projectComments",
+      "dailyTasks",
+      "activities",
+      "projectPhases"
+    ],
+    "recordCount": 60,
+    "createdAt": 1770644138150,
+    "createdBy": "Daniel TI"
   }
 ]

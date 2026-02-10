@@ -19,8 +19,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-02-09T13:34:42.000Z",
-    "lastSignedIn": "2026-02-09T13:34:43.000Z"
+    "updatedAt": "2026-02-10T00:00:37.000Z",
+    "lastSignedIn": "2026-02-10T00:00:37.000Z"
   },
   {
     "id": 23,
@@ -101,17 +101,17 @@
     "role": "admin",
     "approvalStatus": "approved",
     "departmentId": 18,
-    "groupId": 4,
+    "groupId": 240001,
     "permissions": {
       "chamados": true,
-      "compras": true,
-      "marketing": true,
-      "projetos": true,
-      "rh": true,
-      "tecnologia": true
+      "compras": false,
+      "marketing": false,
+      "projetos": false,
+      "rh": false,
+      "tecnologia": false
     },
     "createdAt": "2026-02-04T13:22:36.000Z",
-    "updatedAt": "2026-02-05T19:43:09.000Z",
+    "updatedAt": "2026-02-09T18:24:33.000Z",
     "lastSignedIn": null
   },
   {
@@ -134,8 +134,8 @@
       "tecnologia": false
     },
     "createdAt": "2026-02-05T01:16:56.000Z",
-    "updatedAt": "2026-02-05T23:21:39.000Z",
-    "lastSignedIn": "2026-02-05T23:21:40.000Z"
+    "updatedAt": "2026-02-09T20:12:33.000Z",
+    "lastSignedIn": "2026-02-09T20:12:33.000Z"
   },
   {
     "id": 300001,
@@ -182,5 +182,28 @@
     "createdAt": "2026-02-06T11:49:24.000Z",
     "updatedAt": "2026-02-06T15:19:41.000Z",
     "lastSignedIn": "2026-02-06T13:05:28.000Z"
+  },
+  {
+    "id": 330001,
+    "openId": null,
+    "name": "Luxane Peres Guimarães",
+    "email": "controladoria@neosuldistribuidora.com.br",
+    "passwordHash": "$2b$10$ult6ELw597AL9Wrdp27s0.HsXDeMNlQE/Pl/0pHs5R1aFz4sSm8VW",
+    "loginMethod": "internal",
+    "role": "user",
+    "approvalStatus": "approved",
+    "departmentId": 18,
+    "groupId": 240001,
+    "permissions": {
+      "chamados": true,
+      "compras": false,
+      "marketing": false,
+      "projetos": false,
+      "rh": false,
+      "tecnologia": false
+    },
+    "createdAt": "2026-02-09T17:40:14.000Z",
+    "updatedAt": "2026-02-09T18:24:41.000Z",
+    "lastSignedIn": null
   }
 ]

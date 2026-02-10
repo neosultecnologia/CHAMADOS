@@ -45,5 +45,21 @@
     "isDefault": false,
     "createdAt": 1770252829737,
     "updatedAt": 1770259436956
+  },
+  {
+    "id": 240001,
+    "name": "Controladoria",
+    "description": null,
+    "permissions": {
+      "chamados": true,
+      "compras": false,
+      "marketing": false,
+      "projetos": false,
+      "rh": false,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770661461652,
+    "updatedAt": 1770661461652
   }
 ]

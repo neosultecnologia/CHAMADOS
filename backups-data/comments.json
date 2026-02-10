@@ -14,5 +14,13 @@
     "authorName": "Monique",
     "content": "Ainda não solucionado ...",
     "createdAt": 1770380805765
+  },
+  {
+    "id": 90001,
+    "ticketId": 90001,
+    "authorId": 240039,
+    "authorName": "Monique",
+    "content": "Aguardando ainda...",
+    "createdAt": 1770659619259
   }
 ]
