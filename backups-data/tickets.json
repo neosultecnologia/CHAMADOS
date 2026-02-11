@@ -6,14 +6,14 @@
     "description": "Boa tarde,\n\nGostaria de solicitar analise do meu notebook, quando é necessário participar de reunião on-line o mesmo trava, sendo necessário após o fim da reunião reiniciar o computador.\n\nGrata ",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Fechado",
+    "status": "Resolvido",
     "departmentId": 17,
     "createdById": 240039,
     "createdByName": "Monique",
     "assignedToId": 1,
     "assignedToName": "Daniel TI",
     "createdAt": 1770320755920,
-    "updatedAt": 1770731786605
+    "updatedAt": 1770811218105
   },
   {
     "id": 150001,

@@ -185,5 +185,16 @@
     "newValue": "Resolvido",
     "description": "Status alterado de \"Em Progresso\" para \"Resolvido\"",
     "createdAt": 1770731878731
+  },
+  {
+    "id": 210001,
+    "ticketId": 90001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Fechado",
+    "newValue": "Resolvido",
+    "description": "Status alterado de \"Fechado\" para \"Resolvido\"",
+    "createdAt": 1770811218082
   }
 ]
