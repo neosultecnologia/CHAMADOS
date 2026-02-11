@@ -8,19 +8,19 @@
     "loginMethod": "oauth",
     "role": "admin",
     "approvalStatus": "approved",
-    "departmentId": 17,
-    "groupId": 4,
+    "departmentId": 18,
+    "groupId": 240001,
     "permissions": {
       "chamados": true,
-      "compras": true,
-      "marketing": true,
-      "projetos": true,
-      "rh": true,
-      "tecnologia": true
+      "compras": false,
+      "marketing": false,
+      "projetos": false,
+      "rh": false,
+      "tecnologia": false
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-02-10T14:45:45.000Z",
-    "lastSignedIn": "2026-02-10T14:45:45.000Z"
+    "updatedAt": "2026-02-10T15:23:35.000Z",
+    "lastSignedIn": "2026-02-10T15:18:59.000Z"
   },
   {
     "id": 23,
@@ -180,8 +180,8 @@
       "tecnologia": false
     },
     "createdAt": "2026-02-06T11:49:24.000Z",
-    "updatedAt": "2026-02-06T15:19:41.000Z",
-    "lastSignedIn": "2026-02-06T13:05:28.000Z"
+    "updatedAt": "2026-02-10T17:02:39.000Z",
+    "lastSignedIn": "2026-02-10T17:02:39.000Z"
   },
   {
     "id": 330001,
@@ -204,6 +204,54 @@
     },
     "createdAt": "2026-02-09T17:40:14.000Z",
     "updatedAt": "2026-02-09T18:24:41.000Z",
+    "lastSignedIn": null
+  },
+  {
+    "id": 360001,
+    "openId": null,
+    "name": "ELEN CARLINDO",
+    "email": "compras1.sc@neosuldistribuidora.com.br",
+    "passwordHash": "$2b$10$rDsnAM9VG4aLIK6hKFmeju5pPNahhlwkMZ8dnWQ8lFDk5eROOb3gS",
+    "loginMethod": "internal",
+    "role": "user",
+    "approvalStatus": "pending",
+    "departmentId": null,
+    "groupId": null,
+    "permissions": [],
+    "createdAt": "2026-02-10T17:00:56.000Z",
+    "updatedAt": "2026-02-10T17:00:56.000Z",
+    "lastSignedIn": null
+  },
+  {
+    "id": 360002,
+    "openId": null,
+    "name": "Renata Sousa",
+    "email": "compras4.sc@neosuldistribuidora.com.br",
+    "passwordHash": "$2b$10$8BtkAenH93Bipd9w1YgmouV3uUIIauf.wJK0mcvtt6N7MdrpvzYWu",
+    "loginMethod": "internal",
+    "role": "user",
+    "approvalStatus": "pending",
+    "departmentId": null,
+    "groupId": null,
+    "permissions": [],
+    "createdAt": "2026-02-10T17:05:04.000Z",
+    "updatedAt": "2026-02-10T17:05:04.000Z",
+    "lastSignedIn": null
+  },
+  {
+    "id": 390001,
+    "openId": null,
+    "name": "Maria Eduarda Chagas",
+    "email": "compras2.sc@neosuldistribuidora.com.br",
+    "passwordHash": "$2b$10$ZmLKdikdAqMR3V6l3NgsZOHlKSpL/YaC1IiLzoCAqD2jhC2gOodUK",
+    "loginMethod": "internal",
+    "role": "user",
+    "approvalStatus": "pending",
+    "departmentId": null,
+    "groupId": null,
+    "permissions": [],
+    "createdAt": "2026-02-10T17:43:46.000Z",
+    "updatedAt": "2026-02-10T17:43:46.000Z",
     "lastSignedIn": null
   }
 ]

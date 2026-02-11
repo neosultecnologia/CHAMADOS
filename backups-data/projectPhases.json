@@ -284,5 +284,70 @@
     "completedAt": null,
     "createdAt": 1770732633796,
     "updatedAt": 1770732633796
+  },
+  {
+    "id": 360005,
+    "projectId": 330002,
+    "name": "Mapear endereços",
+    "description": "Definir endereços de alto e baixo giro",
+    "status": "Concluída",
+    "order": 1,
+    "startDate": null,
+    "endDate": null,
+    "completedAt": 1770736387424,
+    "createdAt": 1770736376470,
+    "updatedAt": 1770736387810
+  },
+  {
+    "id": 360006,
+    "projectId": 330002,
+    "name": "Comparar produtos",
+    "description": "Gerar relatório de Curva ABC por Produto; Comparar produtos pela quantidade de Acessos; Alternar posição dos produtos.",
+    "status": "Concluída",
+    "order": 2,
+    "startDate": null,
+    "endDate": null,
+    "completedAt": 1770736388791,
+    "createdAt": 1770736376689,
+    "updatedAt": 1770736388970
+  },
+  {
+    "id": 360007,
+    "projectId": 330002,
+    "name": "Realocação de produtos",
+    "description": "Definir novo endereçamento dos produtos",
+    "status": "Concluída",
+    "order": 3,
+    "startDate": null,
+    "endDate": null,
+    "completedAt": 1770736395377,
+    "createdAt": 1770736376912,
+    "updatedAt": 1770736395545
+  },
+  {
+    "id": 360008,
+    "projectId": 330002,
+    "name": "Gerar relatório final",
+    "description": "Gerar relatório com a relação dos produtos e seus respectivos endereços atuais e de destino",
+    "status": "Concluída",
+    "order": 4,
+    "startDate": null,
+    "endDate": null,
+    "completedAt": 1770736398592,
+    "createdAt": 1770736377130,
+    "updatedAt": 1770736398758
+  },
+  {
+    "id": 360009,
+    "projectId": 330002,
+    "name": "Controle de limites",
+    "description": "Definir quantidade mínima e máxima suportada em cada endereço, junto com a quantidade esperada para cada produto em seu novo endereço",
+    "status": "Pendente",
+    "order": 5,
+    "startDate": null,
+    "endDate": null,
+    "completedAt": null,
+    "createdAt": 1770736659379,
+    "updatedAt": 1770736659379
   }
 ]

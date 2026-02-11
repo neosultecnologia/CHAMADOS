@@ -141,6 +141,24 @@
     "createdById": 60001,
     "createdByName": "Gabriel Bino",
     "createdAt": 1770732632794,
-    "updatedAt": 1770732738504
+    "updatedAt": 1770736843525
+  },
+  {
+    "id": 330002,
+    "projectId": "proj_9",
+    "name": "Balanceamento de Produtos",
+    "description": "Realizar o balanceamento dos produtos na esteira de alto giro.",
+    "status": "Planejamento",
+    "priority": "Média",
+    "ownerId": 60001,
+    "ownerName": "Gabriel Bino",
+    "sector": "TI",
+    "startDate": 1766458800000,
+    "endDate": 1774926000000,
+    "progress": 80,
+    "createdById": 60001,
+    "createdByName": "Gabriel Bino",
+    "createdAt": 1770736376268,
+    "updatedAt": 1770736830432
   }
 ]
