@@ -30,5 +30,21 @@
     "assignedToName": "Carlos TI",
     "createdAt": 1770380717589,
     "updatedAt": 1770731878748
+  },
+  {
+    "id": 180001,
+    "ticketId": "bilhete_3",
+    "title": "TESTE",
+    "description": "Teste",
+    "category": "Técnico",
+    "priority": "Média",
+    "status": "Fechado",
+    "departmentId": null,
+    "createdById": 510001,
+    "createdByName": "BARBARA PANTOJA",
+    "assignedToId": 1,
+    "assignedToName": "Daniel TI",
+    "createdAt": 1770921890517,
+    "updatedAt": 1770922704849
   }
 ]

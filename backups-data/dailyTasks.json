@@ -14,5 +14,53 @@
     "createdByName": "Gabriel Bino",
     "createdAt": 1770732862086,
     "updatedAt": 1770732862086
+  },
+  {
+    "id": 30002,
+    "projectId": 360003,
+    "title": "Geração de listas",
+    "description": null,
+    "status": "Pendente",
+    "priority": "Alta",
+    "assignedToId": null,
+    "assignedToName": null,
+    "dueDate": null,
+    "completedAt": null,
+    "createdById": 300001,
+    "createdByName": "Carlos TI",
+    "createdAt": 1770904382445,
+    "updatedAt": 1770904382445
+  },
+  {
+    "id": 60001,
+    "projectId": 390001,
+    "title": "Gerar listas",
+    "description": null,
+    "status": "Pendente",
+    "priority": "Alta",
+    "assignedToId": null,
+    "assignedToName": null,
+    "dueDate": null,
+    "completedAt": null,
+    "createdById": 300001,
+    "createdByName": "Carlos TI",
+    "createdAt": 1770915828982,
+    "updatedAt": 1770915828982
+  },
+  {
+    "id": 60002,
+    "projectId": 390002,
+    "title": "Gerar listas",
+    "description": null,
+    "status": "Pendente",
+    "priority": "Alta",
+    "assignedToId": null,
+    "assignedToName": null,
+    "dueDate": null,
+    "completedAt": null,
+    "createdById": 300001,
+    "createdByName": "Carlos TI",
+    "createdAt": 1770916853658,
+    "updatedAt": 1770916853658
   }
 ]

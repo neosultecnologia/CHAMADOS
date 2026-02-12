@@ -36,7 +36,7 @@
     "description": "",
     "permissions": {
       "chamados": true,
-      "compras": true,
+      "compras": false,
       "marketing": false,
       "projetos": false,
       "rh": false,
@@ -44,7 +44,7 @@
     },
     "isDefault": false,
     "createdAt": 1770252829737,
-    "updatedAt": 1770259436956
+    "updatedAt": 1770922412092
   },
   {
     "id": 240001,
@@ -63,19 +63,19 @@
     "updatedAt": 1770661461652
   },
   {
-    "id": 270001,
-    "name": "Apresentação",
+    "id": 300001,
+    "name": "Comercial",
     "description": null,
     "permissions": {
       "chamados": true,
       "compras": false,
       "marketing": false,
-      "projetos": true,
+      "projetos": false,
       "rh": false,
       "tecnologia": false
     },
     "isDefault": false,
-    "createdAt": 1770835881888,
-    "updatedAt": 1770835881888
+    "createdAt": 1770922468551,
+    "updatedAt": 1770922468551
   }
 ]
