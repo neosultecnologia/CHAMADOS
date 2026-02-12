@@ -25,5 +25,14 @@
     "content": "Primeira entrega feita no dia 06/01/26.",
     "mentions": null,
     "createdAt": 1770736513533
+  },
+  {
+    "id": 60001,
+    "projectId": 330001,
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "content": "Aguardando retorno da @Maria Eduarda Chagas via e-mail com as condições de inclusão na planilha de custo gerencial.",
+    "mentions": "[390001]",
+    "createdAt": 1770819735557
   }
 ]

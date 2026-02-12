@@ -251,13 +251,13 @@
     "projectId": 330001,
     "name": "Cálculo da precificação",
     "description": "Calcular preços de custo do produto com base em condições como comparação com preço anterior cadastrado no sistema e quantidade em estoque.",
-    "status": "Pendente",
+    "status": "Concluída",
     "order": 2,
     "startDate": null,
     "endDate": null,
-    "completedAt": null,
+    "completedAt": 1770819449104,
     "createdAt": 1770732633335,
-    "updatedAt": 1770732633335
+    "updatedAt": 1770819449310
   },
   {
     "id": 360003,

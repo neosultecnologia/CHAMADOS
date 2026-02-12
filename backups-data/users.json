@@ -19,8 +19,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-02-11T12:02:24.000Z",
-    "lastSignedIn": "2026-02-11T12:02:24.000Z"
+    "updatedAt": "2026-02-12T02:48:29.000Z",
+    "lastSignedIn": "2026-02-12T02:48:30.000Z"
   },
   {
     "id": 23,
@@ -249,8 +249,8 @@
       "tecnologia": false
     },
     "createdAt": "2026-02-10T17:05:04.000Z",
-    "updatedAt": "2026-02-11T12:00:54.000Z",
-    "lastSignedIn": null
+    "updatedAt": "2026-02-11T14:50:51.000Z",
+    "lastSignedIn": "2026-02-11T14:50:52.000Z"
   },
   {
     "id": 390001,
@@ -272,7 +272,23 @@
       "tecnologia": false
     },
     "createdAt": "2026-02-10T17:43:46.000Z",
-    "updatedAt": "2026-02-11T12:00:47.000Z",
-    "lastSignedIn": null
+    "updatedAt": "2026-02-11T14:24:41.000Z",
+    "lastSignedIn": "2026-02-11T14:24:42.000Z"
+  },
+  {
+    "id": 420001,
+    "openId": null,
+    "name": "Comercial",
+    "email": "daniel@neosul.com.br",
+    "passwordHash": "$2b$10$sQIvPhBX.8Bfh9a.MMTrputd8NaLJ7OnzTdqtno9ebDaRhEHdPvUy",
+    "loginMethod": "internal",
+    "role": "user",
+    "approvalStatus": "approved",
+    "departmentId": 17,
+    "groupId": 270001,
+    "permissions": [],
+    "createdAt": "2026-02-11T18:52:40.000Z",
+    "updatedAt": "2026-02-11T18:53:33.000Z",
+    "lastSignedIn": "2026-02-11T18:53:33.000Z"
   }
 ]

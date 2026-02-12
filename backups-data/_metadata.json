@@ -1,5 +1,5 @@
 {
-  "exportedAt": "2026-02-11T12:02:35.684Z",
+  "exportedAt": "2026-02-12T12:53:39.117Z",
   "tables": [
     "users",
     "departments",
@@ -26,6 +26,6 @@
     "kanbanColumnSettings",
     "backups"
   ],
-  "totalRecords": 124,
+  "totalRecords": 128,
   "version": "1.0"
 }

@@ -61,5 +61,21 @@
     "isDefault": false,
     "createdAt": 1770661461652,
     "updatedAt": 1770661461652
+  },
+  {
+    "id": 270001,
+    "name": "Apresentação",
+    "description": null,
+    "permissions": {
+      "chamados": true,
+      "compras": false,
+      "marketing": false,
+      "projetos": true,
+      "rh": false,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770835881888,
+    "updatedAt": 1770835881888
   }
 ]
