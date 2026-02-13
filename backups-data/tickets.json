@@ -39,13 +39,13 @@
     "category": "Técnico",
     "priority": "Média",
     "status": "Fechado",
-    "departmentId": null,
+    "departmentId": 17,
     "createdById": 510001,
     "createdByName": "BARBARA PANTOJA",
     "assignedToId": 1,
     "assignedToName": "Daniel TI",
     "createdAt": 1770921890517,
-    "updatedAt": 1770923617814
+    "updatedAt": 1770991466870
   },
   {
     "id": 210004,

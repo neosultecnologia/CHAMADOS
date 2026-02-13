@@ -339,5 +339,27 @@
     "newValue": "Em Progresso",
     "description": "Status alterado de \"Aberto\" para \"Em Progresso\"",
     "createdAt": 1770990311343
+  },
+  {
+    "id": 300007,
+    "ticketId": 180001,
+    "type": "comment",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Daniel TI",
+    "createdAt": 1770991462538
+  },
+  {
+    "id": 300008,
+    "ticketId": 180001,
+    "type": "sector_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Sem setor",
+    "newValue": "TI",
+    "description": "Setor alterado de \"Sem setor\" para \"TI\"",
+    "createdAt": 1770991466849
   }
 ]

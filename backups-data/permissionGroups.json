@@ -6,14 +6,16 @@
     "permissions": {
       "chamados": true,
       "compras": true,
+      "desenvolvimento": true,
       "marketing": true,
       "projetos": true,
       "rh": true,
+      "suporte": true,
       "tecnologia": true
     },
     "isDefault": true,
     "createdAt": 1770160822191,
-    "updatedAt": 1770252838657
+    "updatedAt": 1770994206936
   },
   {
     "id": 150001,
@@ -24,11 +26,12 @@
       "marketing": false,
       "projetos": false,
       "rh": false,
+      "suporte": true,
       "tecnologia": false
     },
     "isDefault": false,
     "createdAt": 1770244407982,
-    "updatedAt": 1770244407982
+    "updatedAt": 1770994181558
   },
   {
     "id": 150022,
@@ -40,74 +43,79 @@
       "marketing": false,
       "projetos": false,
       "rh": false,
+      "suporte": true,
       "tecnologia": false
     },
     "isDefault": false,
     "createdAt": 1770252829737,
-    "updatedAt": 1770922412092
+    "updatedAt": 1770994198921
   },
   {
     "id": 240001,
     "name": "Controladoria",
-    "description": null,
+    "description": "",
     "permissions": {
       "chamados": true,
       "compras": false,
       "marketing": false,
       "projetos": false,
       "rh": false,
+      "suporte": true,
       "tecnologia": false
     },
     "isDefault": false,
     "createdAt": 1770661461652,
-    "updatedAt": 1770661461652
+    "updatedAt": 1770994201412
   },
   {
     "id": 300001,
     "name": "Comercial",
-    "description": null,
+    "description": "",
     "permissions": {
       "chamados": true,
       "compras": false,
       "marketing": false,
       "projetos": false,
       "rh": false,
+      "suporte": true,
       "tecnologia": false
     },
     "isDefault": false,
     "createdAt": 1770922468551,
-    "updatedAt": 1770922468551
+    "updatedAt": 1770994195324
   },
   {
     "id": 330001,
     "name": "Logistica",
-    "description": null,
+    "description": "",
     "permissions": {
       "chamados": true,
       "compras": false,
       "marketing": false,
       "projetos": false,
       "rh": false,
+      "suporte": true,
       "tecnologia": false
     },
     "isDefault": false,
     "createdAt": 1770925040950,
-    "updatedAt": 1770925040950
+    "updatedAt": 1770994177949
   },
   {
     "id": 360007,
     "name": "RH/DP",
-    "description": null,
+    "description": "",
     "permissions": {
       "chamados": true,
       "compras": false,
       "marketing": false,
       "projetos": false,
       "rh": false,
+      "suporte": true,
       "tecnologia": false
     },
     "isDefault": false,
     "createdAt": 1770985333375,
-    "updatedAt": 1770985333375
+    "updatedAt": 1770994185737
   }
 ]

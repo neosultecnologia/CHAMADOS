@@ -1,36 +1,5 @@
 [
   {
-    "id": 90004,
-    "filename": "backup-2026-02-06T14-44-55-209Z.json",
-    "fileSize": 34161,
-    "checksum": "490f74bdc8a75f34be6b22ff5e917403271894a112891cd4675e60c4f6b49676",
-    "status": "completed",
-    "s3Key": "backups/backup-2026-02-06T14-44-55-209Z.json",
-    "s3Url": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/backups/backup-2026-02-06T14-44-55-209Z.json",
-    "tablesBackedUp": [
-      "users",
-      "departments",
-      "tickets",
-      "projects",
-      "suppliers",
-      "products",
-      "purchaseOrders",
-      "purchaseOrderItems",
-      "quotations",
-      "permissionGroups",
-      "announcements",
-      "attachments",
-      "comments",
-      "projectComments",
-      "dailyTasks",
-      "activities",
-      "projectPhases"
-    ],
-    "recordCount": 82,
-    "createdAt": 1770389095476,
-    "createdBy": "Daniel TI"
-  },
-  {
     "id": 120001,
     "filename": "backup-2026-02-07T02-00-15-937Z.json",
     "fileSize": 24164,
@@ -524,6 +493,37 @@
     ],
     "recordCount": 135,
     "createdAt": 1770990871546,
+    "createdBy": "Daniel TI"
+  },
+  {
+    "id": 480001,
+    "filename": "backup-2026-02-13T14-54-42-070Z.json",
+    "fileSize": 57356,
+    "checksum": "92031e9371d6e8258bc7d53b2675d11a5d1394b3b31288b54b25705a2d3854ad",
+    "status": "completed",
+    "s3Key": "backups/backup-2026-02-13T14-54-42-070Z.json",
+    "s3Url": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/backups/backup-2026-02-13T14-54-42-070Z.json",
+    "tablesBackedUp": [
+      "users",
+      "departments",
+      "tickets",
+      "projects",
+      "suppliers",
+      "products",
+      "purchaseOrders",
+      "purchaseOrderItems",
+      "quotations",
+      "permissionGroups",
+      "announcements",
+      "attachments",
+      "comments",
+      "projectComments",
+      "dailyTasks",
+      "activities",
+      "projectPhases"
+    ],
+    "recordCount": 138,
+    "createdAt": 1770994482213,
     "createdBy": "Daniel TI"
   }
 ]

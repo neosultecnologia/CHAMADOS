@@ -18,5 +18,15 @@
     "createdById": 1,
     "createdAt": 1770336291072,
     "expiresAt": 1779408240000
+  },
+  {
+    "id": 120001,
+    "title": "Novas funcionalidades em breve",
+    "content": null,
+    "type": "warning",
+    "isActive": 1,
+    "createdById": 1,
+    "createdAt": 1770991543622,
+    "expiresAt": null
   }
 ]

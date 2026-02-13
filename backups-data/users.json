@@ -19,8 +19,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-02-13T13:54:08.000Z",
-    "lastSignedIn": "2026-02-13T13:54:09.000Z"
+    "updatedAt": "2026-02-13T14:54:36.000Z",
+    "lastSignedIn": "2026-02-13T14:54:36.000Z"
   },
   {
     "id": 23,
@@ -157,8 +157,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-02-06T11:27:15.000Z",
-    "updatedAt": "2026-02-13T13:46:09.000Z",
-    "lastSignedIn": "2026-02-13T13:46:10.000Z"
+    "updatedAt": "2026-02-13T14:54:36.000Z",
+    "lastSignedIn": "2026-02-13T14:54:37.000Z"
   },
   {
     "id": 300002,
@@ -408,8 +408,8 @@
       "tecnologia": false
     },
     "createdAt": "2026-02-12T22:36:37.000Z",
-    "updatedAt": "2026-02-13T12:29:40.000Z",
-    "lastSignedIn": null
+    "updatedAt": "2026-02-13T14:44:07.000Z",
+    "lastSignedIn": "2026-02-13T14:44:08.000Z"
   },
   {
     "id": 540002,
@@ -479,21 +479,5 @@
     "createdAt": "2026-02-13T12:07:28.000Z",
     "updatedAt": "2026-02-13T12:42:20.000Z",
     "lastSignedIn": "2026-02-13T12:42:20.000Z"
-  },
-  {
-    "id": 600018,
-    "openId": null,
-    "name": "Name Only Updated 1770990350451",
-    "email": "test-name-only-1770990350451@example.com",
-    "passwordHash": "hashedpassword123",
-    "loginMethod": "internal",
-    "role": "user",
-    "approvalStatus": "approved",
-    "departmentId": null,
-    "groupId": null,
-    "permissions": [],
-    "createdAt": "2026-02-13T13:45:50.000Z",
-    "updatedAt": "2026-02-13T13:45:50.000Z",
-    "lastSignedIn": null
   }
 ]
