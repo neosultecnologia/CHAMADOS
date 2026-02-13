@@ -251,5 +251,27 @@
     "newValue": "Fechado",
     "description": "Status alterado de \"Resolvido\" para \"Fechado\"",
     "createdAt": 1770923617799
+  },
+  {
+    "id": 270001,
+    "ticketId": 210004,
+    "type": "created",
+    "authorId": 570012,
+    "authorName": "Francielle Vieira Schmitz Bueno",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Francielle Vieira Schmitz Bueno",
+    "createdAt": 1770986731983
+  },
+  {
+    "id": 270002,
+    "ticketId": 210023,
+    "type": "created",
+    "authorId": 570012,
+    "authorName": "Francielle Vieira Schmitz Bueno",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Francielle Vieira Schmitz Bueno",
+    "createdAt": 1770988191012
   }
 ]

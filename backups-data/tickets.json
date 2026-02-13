@@ -46,5 +46,37 @@
     "assignedToName": "Daniel TI",
     "createdAt": 1770921890517,
     "updatedAt": 1770923617814
+  },
+  {
+    "id": 210004,
+    "ticketId": "bilhete_4",
+    "title": "LENTIDÃO COMPUTADOR",
+    "description": "Conforme conversamos e já estamos vindo desde ano passado com nossos computadores apresentando vários problemas de lentidão, travamento de aplicativos (no caso Excel quando abre 2 planilhas junto, trava tudo, levando tempo de demanda alta para execução de tarefas), o computador do DP por vezes desliga sozinho quando abre mais de 1 planilha junto,  O do RH essa semana saiu fora do ar a tela, ficando sem visualização. E o teclado do meu PC (RH) está com problemas na barra de espaço.\n \nPara isso solicitamos que verifique a possibilidade de troca dos mesmos.   ",
+    "category": "Outro",
+    "priority": "Média",
+    "status": "Aberto",
+    "departmentId": null,
+    "createdById": 570012,
+    "createdByName": "Francielle Vieira Schmitz Bueno",
+    "assignedToId": null,
+    "assignedToName": null,
+    "createdAt": 1770986731983,
+    "updatedAt": 1770986731983
+  },
+  {
+    "id": 210023,
+    "ticketId": "bilhete_11",
+    "title": "TROCA NOBREAK",
+    "description": "Solicitamos a troca do Nobreak do computador do DP, pelo que esta aqui no computador  que era do administrativo, pois esse do DP não tem margem de tempo em queda de eenrgia",
+    "category": "Técnico",
+    "priority": "Média",
+    "status": "Aberto",
+    "departmentId": null,
+    "createdById": 570012,
+    "createdByName": "Francielle Vieira Schmitz Bueno",
+    "assignedToId": null,
+    "assignedToName": null,
+    "createdAt": 1770988191012,
+    "updatedAt": 1770988191012
   }
 ]

@@ -26,5 +26,33 @@
     "description": null,
     "createdAt": "2026-02-05T01:16:50.000Z",
     "updatedAt": "2026-02-05T01:16:50.000Z"
+  },
+  {
+    "id": 90004,
+    "name": "Logistica",
+    "description": null,
+    "createdAt": "2026-02-13T12:27:13.000Z",
+    "updatedAt": "2026-02-13T12:27:13.000Z"
+  },
+  {
+    "id": 90005,
+    "name": "Financeiro",
+    "description": null,
+    "createdAt": "2026-02-13T12:28:16.000Z",
+    "updatedAt": "2026-02-13T12:28:16.000Z"
+  },
+  {
+    "id": 90006,
+    "name": "Comercial",
+    "description": null,
+    "createdAt": "2026-02-13T12:29:04.000Z",
+    "updatedAt": "2026-02-13T12:29:04.000Z"
+  },
+  {
+    "id": 90007,
+    "name": "RH",
+    "description": null,
+    "createdAt": "2026-02-13T12:29:27.000Z",
+    "updatedAt": "2026-02-13T12:29:27.000Z"
   }
 ]

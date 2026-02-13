@@ -232,5 +232,23 @@
     "createdByName": "Carlos TI",
     "createdAt": 1770916840527,
     "updatedAt": 1770916860939
+  },
+  {
+    "id": 420005,
+    "projectId": "proj_14",
+    "name": "Relação dos E-mails",
+    "description": "Gerir e controlar endereços ativos:\n- Relação de e-mails e responsáveis\n- Desativação de endereços inutilizados",
+    "status": "Planejamento",
+    "priority": "Média",
+    "ownerId": 60001,
+    "ownerName": "Gabriel Bino",
+    "sector": "TI",
+    "startDate": 1770951600000,
+    "endDate": 1771210800000,
+    "progress": 0,
+    "createdById": 60001,
+    "createdByName": "Gabriel Bino",
+    "createdAt": 1770985742755,
+    "updatedAt": 1770985742755
   }
 ]

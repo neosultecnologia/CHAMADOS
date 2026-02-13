@@ -388,5 +388,44 @@
     "completedAt": null,
     "createdAt": 1770902847488,
     "updatedAt": 1770902847488
+  },
+  {
+    "id": 420003,
+    "projectId": 420005,
+    "name": "Gerar relação de endereços de e-mail ativos em SC",
+    "description": "Compartilhar Google planilha com colaboradores solicitando o preenchimento do nome e e-mail corporativo utilizado.",
+    "status": "Pendente",
+    "order": 1,
+    "startDate": null,
+    "endDate": null,
+    "completedAt": null,
+    "createdAt": 1770985742970,
+    "updatedAt": 1770985742970
+  },
+  {
+    "id": 420004,
+    "projectId": 420005,
+    "name": "Gerar relação de endereços de e-mail ativos em RS",
+    "description": "Compartilhar Google planilha com colaboradores solicitando o preenchimento do nome e e-mail corporativo utilizado.",
+    "status": "Pendente",
+    "order": 2,
+    "startDate": null,
+    "endDate": null,
+    "completedAt": null,
+    "createdAt": 1770985743194,
+    "updatedAt": 1770985743194
+  },
+  {
+    "id": 420005,
+    "projectId": 420005,
+    "name": "Desativar endereços não utilizados",
+    "description": "Desativar endereços de e-mail não utilizados.",
+    "status": "Pendente",
+    "order": 3,
+    "startDate": null,
+    "endDate": null,
+    "completedAt": null,
+    "createdAt": 1770985743423,
+    "updatedAt": 1770985743423
   }
 ]

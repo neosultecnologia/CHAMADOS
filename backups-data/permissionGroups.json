@@ -93,5 +93,341 @@
     "isDefault": false,
     "createdAt": 1770925040950,
     "updatedAt": 1770925040950
+  },
+  {
+    "id": 360007,
+    "name": "RH/DP",
+    "description": null,
+    "permissions": {
+      "chamados": true,
+      "compras": false,
+      "marketing": false,
+      "projetos": false,
+      "rh": false,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770985333375,
+    "updatedAt": 1770985333375
+  },
+  {
+    "id": 360008,
+    "name": "Test Group 1770987433390",
+    "description": "Test group for permission testing",
+    "permissions": {
+      "compras": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      }
+    },
+    "isDefault": false,
+    "createdAt": 1770987433390,
+    "updatedAt": 1770987433390
+  },
+  {
+    "id": 360009,
+    "name": "Suporte Técnico 1770987433282",
+    "description": "Acesso a chamados e projetos",
+    "permissions": {
+      "chamados": true,
+      "ecommerce": false,
+      "marketing": false,
+      "projetos": true,
+      "rh": false,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770987433292,
+    "updatedAt": 1770987433292
+  },
+  {
+    "id": 360010,
+    "name": "Updated Group Name 1770987433447",
+    "description": "Updated description",
+    "permissions": {
+      "chamados": true,
+      "ecommerce": false,
+      "marketing": false,
+      "projetos": true,
+      "rh": false,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770987433433,
+    "updatedAt": 1770987433447
+  },
+  {
+    "id": 360012,
+    "name": "Assignment Test Group 1770987433501",
+    "description": "For testing assignment",
+    "permissions": {
+      "chamados": true,
+      "ecommerce": false,
+      "marketing": false,
+      "projetos": true,
+      "rh": false,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770987433501,
+    "updatedAt": 1770987433501
+  },
+  {
+    "id": 360013,
+    "name": "Inheritance Test Group 1770987433547",
+    "description": "Testing permission inheritance",
+    "permissions": {
+      "chamados": true,
+      "ecommerce": false,
+      "marketing": false,
+      "projetos": false,
+      "rh": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770987433547,
+    "updatedAt": 1770987433547
+  },
+  {
+    "id": 360014,
+    "name": "Suporte Técnico 1770987487053",
+    "description": "Acesso a chamados e projetos",
+    "permissions": {
+      "chamados": true,
+      "ecommerce": false,
+      "marketing": false,
+      "projetos": true,
+      "rh": false,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770987487059,
+    "updatedAt": 1770987487059
+  },
+  {
+    "id": 360015,
+    "name": "Updated Group Name 1770987487237",
+    "description": "Updated description",
+    "permissions": {
+      "chamados": true,
+      "ecommerce": false,
+      "marketing": false,
+      "projetos": true,
+      "rh": false,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770987487223,
+    "updatedAt": 1770987487238
+  },
+  {
+    "id": 360017,
+    "name": "Test Group 1770987487267",
+    "description": "Test group for permission testing",
+    "permissions": {
+      "compras": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      }
+    },
+    "isDefault": false,
+    "createdAt": 1770987487267,
+    "updatedAt": 1770987487267
+  },
+  {
+    "id": 360018,
+    "name": "Assignment Test Group 1770987487287",
+    "description": "For testing assignment",
+    "permissions": {
+      "chamados": true,
+      "ecommerce": false,
+      "marketing": false,
+      "projetos": true,
+      "rh": false,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770987487287,
+    "updatedAt": 1770987487287
+  },
+  {
+    "id": 360019,
+    "name": "Inheritance Test Group 1770987487328",
+    "description": "Testing permission inheritance",
+    "permissions": {
+      "chamados": true,
+      "ecommerce": false,
+      "marketing": false,
+      "projetos": false,
+      "rh": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770987487328,
+    "updatedAt": 1770987487328
+  },
+  {
+    "id": 360020,
+    "name": "Suporte Técnico 1770987503370",
+    "description": "Acesso a chamados e projetos",
+    "permissions": {
+      "chamados": true,
+      "ecommerce": false,
+      "marketing": false,
+      "projetos": true,
+      "rh": false,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770987503375,
+    "updatedAt": 1770987503375
+  },
+  {
+    "id": 360021,
+    "name": "Test Group 1770987503506",
+    "description": "Test group for permission testing",
+    "permissions": {
+      "compras": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      }
+    },
+    "isDefault": false,
+    "createdAt": 1770987503506,
+    "updatedAt": 1770987503506
+  },
+  {
+    "id": 360022,
+    "name": "Updated Group Name 1770987503525",
+    "description": "Updated description",
+    "permissions": {
+      "chamados": true,
+      "ecommerce": false,
+      "marketing": false,
+      "projetos": true,
+      "rh": false,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770987503511,
+    "updatedAt": 1770987503526
+  },
+  {
+    "id": 360024,
+    "name": "Assignment Test Group 1770987503579",
+    "description": "For testing assignment",
+    "permissions": {
+      "chamados": true,
+      "ecommerce": false,
+      "marketing": false,
+      "projetos": true,
+      "rh": false,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770987503579,
+    "updatedAt": 1770987503579
+  },
+  {
+    "id": 360025,
+    "name": "Inheritance Test Group 1770987503619",
+    "description": "Testing permission inheritance",
+    "permissions": {
+      "chamados": true,
+      "ecommerce": false,
+      "marketing": false,
+      "projetos": false,
+      "rh": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770987503619,
+    "updatedAt": 1770987503619
+  },
+  {
+    "id": 360026,
+    "name": "Suporte Técnico 1770987660931",
+    "description": "Acesso a chamados e projetos",
+    "permissions": {
+      "chamados": true,
+      "ecommerce": false,
+      "marketing": false,
+      "projetos": true,
+      "rh": false,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770987660939,
+    "updatedAt": 1770987660939
+  },
+  {
+    "id": 360027,
+    "name": "Test Group 1770987661112",
+    "description": "Test group for permission testing",
+    "permissions": {
+      "compras": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      }
+    },
+    "isDefault": false,
+    "createdAt": 1770987661112,
+    "updatedAt": 1770987661112
+  },
+  {
+    "id": 360028,
+    "name": "Updated Group Name 1770987661140",
+    "description": "Updated description",
+    "permissions": {
+      "chamados": true,
+      "ecommerce": false,
+      "marketing": false,
+      "projetos": true,
+      "rh": false,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770987661126,
+    "updatedAt": 1770987661141
+  },
+  {
+    "id": 360030,
+    "name": "Assignment Test Group 1770987661195",
+    "description": "For testing assignment",
+    "permissions": {
+      "chamados": true,
+      "ecommerce": false,
+      "marketing": false,
+      "projetos": true,
+      "rh": false,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770987661195,
+    "updatedAt": 1770987661195
+  },
+  {
+    "id": 360031,
+    "name": "Inheritance Test Group 1770987661246",
+    "description": "Testing permission inheritance",
+    "permissions": {
+      "chamados": true,
+      "ecommerce": false,
+      "marketing": false,
+      "projetos": false,
+      "rh": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770987661246,
+    "updatedAt": 1770987661246
   }
 ]
