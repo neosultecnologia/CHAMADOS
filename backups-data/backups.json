@@ -556,5 +556,36 @@
     "recordCount": 139,
     "createdAt": 1771009800086,
     "createdBy": "Neosul - Daniel TI"
+  },
+  {
+    "id": 510001,
+    "filename": "backup-2026-02-13T20-07-14-521Z.json",
+    "fileSize": 58089,
+    "checksum": "74896aad2cfda61a6d72e4bf17f05fe596b5135450372e90e8f8b57e79a83a25",
+    "status": "completed",
+    "s3Key": "backups/backup-2026-02-13T20-07-14-521Z.json",
+    "s3Url": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/backups/backup-2026-02-13T20-07-14-521Z.json",
+    "tablesBackedUp": [
+      "users",
+      "departments",
+      "tickets",
+      "projects",
+      "suppliers",
+      "products",
+      "purchaseOrders",
+      "purchaseOrderItems",
+      "quotations",
+      "permissionGroups",
+      "announcements",
+      "attachments",
+      "comments",
+      "projectComments",
+      "dailyTasks",
+      "activities",
+      "projectPhases"
+    ],
+    "recordCount": 139,
+    "createdAt": 1771013234671,
+    "createdBy": "Daniel TI"
   }
 ]
