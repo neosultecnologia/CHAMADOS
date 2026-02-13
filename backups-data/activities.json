@@ -273,5 +273,71 @@
     "newValue": null,
     "description": "Chamado criado por Francielle Vieira Schmitz Bueno",
     "createdAt": 1770988191012
+  },
+  {
+    "id": 300001,
+    "ticketId": 210004,
+    "type": "sector_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Sem setor",
+    "newValue": "TI",
+    "description": "Setor alterado de \"Sem setor\" para \"TI\"",
+    "createdAt": 1770990176539
+  },
+  {
+    "id": 300002,
+    "ticketId": 210004,
+    "type": "assignment",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Daniel TI",
+    "description": "Responsável alterado para \"Daniel TI\"",
+    "createdAt": 1770990181351
+  },
+  {
+    "id": 300003,
+    "ticketId": 210023,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Aberto",
+    "newValue": "Em Progresso",
+    "description": "Status alterado de \"Aberto\" para \"Em Progresso\"",
+    "createdAt": 1770990188649
+  },
+  {
+    "id": 300004,
+    "ticketId": 210023,
+    "type": "sector_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Sem setor",
+    "newValue": "TI",
+    "description": "Setor alterado de \"Sem setor\" para \"TI\"",
+    "createdAt": 1770990193437
+  },
+  {
+    "id": 300005,
+    "ticketId": 210023,
+    "type": "assignment",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Daniel TI",
+    "description": "Responsável alterado para \"Daniel TI\"",
+    "createdAt": 1770990195622
+  },
+  {
+    "id": 300006,
+    "ticketId": 210004,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Aberto",
+    "newValue": "Em Progresso",
+    "description": "Status alterado de \"Aberto\" para \"Em Progresso\"",
+    "createdAt": 1770990311343
   }
 ]

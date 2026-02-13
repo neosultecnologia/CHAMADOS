@@ -54,14 +54,14 @@
     "description": "Conforme conversamos e já estamos vindo desde ano passado com nossos computadores apresentando vários problemas de lentidão, travamento de aplicativos (no caso Excel quando abre 2 planilhas junto, trava tudo, levando tempo de demanda alta para execução de tarefas), o computador do DP por vezes desliga sozinho quando abre mais de 1 planilha junto,  O do RH essa semana saiu fora do ar a tela, ficando sem visualização. E o teclado do meu PC (RH) está com problemas na barra de espaço.\n \nPara isso solicitamos que verifique a possibilidade de troca dos mesmos.   ",
     "category": "Outro",
     "priority": "Média",
-    "status": "Aberto",
-    "departmentId": null,
+    "status": "Em Progresso",
+    "departmentId": 17,
     "createdById": 570012,
     "createdByName": "Francielle Vieira Schmitz Bueno",
-    "assignedToId": null,
-    "assignedToName": null,
+    "assignedToId": 1,
+    "assignedToName": "Daniel TI",
     "createdAt": 1770986731983,
-    "updatedAt": 1770986731983
+    "updatedAt": 1770990311357
   },
   {
     "id": 210023,
@@ -70,13 +70,13 @@
     "description": "Solicitamos a troca do Nobreak do computador do DP, pelo que esta aqui no computador  que era do administrativo, pois esse do DP não tem margem de tempo em queda de eenrgia",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Aberto",
-    "departmentId": null,
+    "status": "Em Progresso",
+    "departmentId": 17,
     "createdById": 570012,
     "createdByName": "Francielle Vieira Schmitz Bueno",
-    "assignedToId": null,
-    "assignedToName": null,
+    "assignedToId": 1,
+    "assignedToName": "Daniel TI",
     "createdAt": 1770988191012,
-    "updatedAt": 1770988191012
+    "updatedAt": 1770990195636
   }
 ]

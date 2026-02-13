@@ -19,8 +19,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-02-13T13:30:23.000Z",
-    "lastSignedIn": "2026-02-13T13:30:24.000Z"
+    "updatedAt": "2026-02-13T13:50:17.000Z",
+    "lastSignedIn": "2026-02-13T13:50:18.000Z"
   },
   {
     "id": 23,
@@ -157,8 +157,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-02-06T11:27:15.000Z",
-    "updatedAt": "2026-02-13T13:02:15.000Z",
-    "lastSignedIn": "2026-02-13T13:02:16.000Z"
+    "updatedAt": "2026-02-13T13:46:09.000Z",
+    "lastSignedIn": "2026-02-13T13:46:10.000Z"
   },
   {
     "id": 300002,
@@ -479,5 +479,117 @@
     "createdAt": "2026-02-13T12:07:28.000Z",
     "updatedAt": "2026-02-13T12:42:20.000Z",
     "lastSignedIn": "2026-02-13T12:42:20.000Z"
+  },
+  {
+    "id": 600012,
+    "openId": null,
+    "name": "Test User",
+    "email": "test1770990348822@example.com",
+    "passwordHash": "test",
+    "loginMethod": "internal",
+    "role": "user",
+    "approvalStatus": "approved",
+    "departmentId": null,
+    "groupId": 390008,
+    "permissions": [],
+    "createdAt": "2026-02-13T13:45:48.000Z",
+    "updatedAt": "2026-02-13T13:45:48.000Z",
+    "lastSignedIn": null
+  },
+  {
+    "id": 600013,
+    "openId": null,
+    "name": "Test Project Owner",
+    "email": "project-test-1770990349363@test.com",
+    "passwordHash": "test-hash",
+    "loginMethod": "internal",
+    "role": "user",
+    "approvalStatus": "approved",
+    "departmentId": null,
+    "groupId": null,
+    "permissions": [],
+    "createdAt": "2026-02-13T13:45:49.000Z",
+    "updatedAt": "2026-02-13T13:45:49.000Z",
+    "lastSignedIn": null
+  },
+  {
+    "id": 600016,
+    "openId": null,
+    "name": "Updated User 1770990350245",
+    "email": "test-update-new-1770990350245@example.com",
+    "passwordHash": "hashedpassword123",
+    "loginMethod": "internal",
+    "role": "user",
+    "approvalStatus": "approved",
+    "departmentId": null,
+    "groupId": null,
+    "permissions": [],
+    "createdAt": "2026-02-13T13:45:50.000Z",
+    "updatedAt": "2026-02-13T13:45:50.000Z",
+    "lastSignedIn": null
+  },
+  {
+    "id": 600018,
+    "openId": null,
+    "name": "Name Only Updated 1770990350451",
+    "email": "test-name-only-1770990350451@example.com",
+    "passwordHash": "hashedpassword123",
+    "loginMethod": "internal",
+    "role": "user",
+    "approvalStatus": "approved",
+    "departmentId": null,
+    "groupId": null,
+    "permissions": [],
+    "createdAt": "2026-02-13T13:45:50.000Z",
+    "updatedAt": "2026-02-13T13:45:50.000Z",
+    "lastSignedIn": null
+  },
+  {
+    "id": 600020,
+    "openId": null,
+    "name": "Test User 1770990350479",
+    "email": "test-email-only-new-1770990350479@example.com",
+    "passwordHash": "hashedpassword123",
+    "loginMethod": "internal",
+    "role": "user",
+    "approvalStatus": "approved",
+    "departmentId": null,
+    "groupId": null,
+    "permissions": [],
+    "createdAt": "2026-02-13T13:45:50.000Z",
+    "updatedAt": "2026-02-13T13:45:50.000Z",
+    "lastSignedIn": null
+  },
+  {
+    "id": 600021,
+    "openId": null,
+    "name": "Test User 1770990350511",
+    "email": "test-password-1770990350511@example.com",
+    "passwordHash": "newhash123456",
+    "loginMethod": "internal",
+    "role": "user",
+    "approvalStatus": "approved",
+    "departmentId": null,
+    "groupId": null,
+    "permissions": [],
+    "createdAt": "2026-02-13T13:45:50.000Z",
+    "updatedAt": "2026-02-13T13:45:50.000Z",
+    "lastSignedIn": null
+  },
+  {
+    "id": 600022,
+    "openId": null,
+    "name": "Test User 1770990350537",
+    "email": "test-empty-1770990350537@example.com",
+    "passwordHash": "hashedpassword123",
+    "loginMethod": "internal",
+    "role": "user",
+    "approvalStatus": "approved",
+    "departmentId": null,
+    "groupId": null,
+    "permissions": [],
+    "createdAt": "2026-02-13T13:45:50.000Z",
+    "updatedAt": "2026-02-13T13:45:50.000Z",
+    "lastSignedIn": null
   }
 ]
