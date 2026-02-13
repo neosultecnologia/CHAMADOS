@@ -77,5 +77,21 @@
     "isDefault": false,
     "createdAt": 1770922468551,
     "updatedAt": 1770922468551
+  },
+  {
+    "id": 330001,
+    "name": "Logistica",
+    "description": null,
+    "permissions": {
+      "chamados": true,
+      "compras": false,
+      "marketing": false,
+      "projetos": false,
+      "rh": false,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1770925040950,
+    "updatedAt": 1770925040950
   }
 ]

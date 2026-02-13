@@ -229,5 +229,27 @@
     "newValue": "Daniel TI",
     "description": "Responsável alterado para \"Daniel TI\"",
     "createdAt": 1770922704805
+  },
+  {
+    "id": 240004,
+    "ticketId": 180001,
+    "type": "status_change",
+    "authorId": 510001,
+    "authorName": "BARBARA PANTOJA",
+    "oldValue": "Fechado",
+    "newValue": "Resolvido",
+    "description": "Status alterado de \"Fechado\" para \"Resolvido\"",
+    "createdAt": 1770923599994
+  },
+  {
+    "id": 240005,
+    "ticketId": 180001,
+    "type": "status_change",
+    "authorId": 510001,
+    "authorName": "BARBARA PANTOJA",
+    "oldValue": "Resolvido",
+    "newValue": "Fechado",
+    "description": "Status alterado de \"Resolvido\" para \"Fechado\"",
+    "createdAt": 1770923617799
   }
 ]

@@ -11,12 +11,12 @@
   },
   {
     "id": 60001,
-    "title": "Chamados e Projetos ativos ",
+    "title": "Portal em Desenvolvimento ",
     "content": null,
-    "type": "info",
+    "type": "warning",
     "isActive": 1,
     "createdById": 1,
     "createdAt": 1770336291072,
-    "expiresAt": 1772323440000
+    "expiresAt": 1779408240000
   }
 ]
