@@ -32,22 +32,6 @@
     "updatedAt": 1770731878748
   },
   {
-    "id": 180001,
-    "ticketId": "bilhete_3",
-    "title": "TESTE",
-    "description": "Teste",
-    "category": "Técnico",
-    "priority": "Média",
-    "status": "Fechado",
-    "departmentId": 17,
-    "createdById": 510001,
-    "createdByName": "BARBARA PANTOJA",
-    "assignedToId": 1,
-    "assignedToName": "Daniel TI",
-    "createdAt": 1770921890517,
-    "updatedAt": 1770991466870
-  },
-  {
     "id": 210004,
     "ticketId": "bilhete_4",
     "title": "LENTIDÃO COMPUTADOR",
