@@ -284,5 +284,27 @@
     "newValue": "Em Progresso",
     "description": "Status alterado de \"Aberto\" para \"Em Progresso\"",
     "createdAt": 1770990311343
+  },
+  {
+    "id": 360010,
+    "ticketId": 300049,
+    "type": "created",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mauricio Ramos",
+    "createdAt": 1771281502583
+  },
+  {
+    "id": 360011,
+    "ticketId": 300050,
+    "type": "created",
+    "authorId": 540002,
+    "authorName": "ADHARA",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por ADHARA",
+    "createdAt": 1771285785813
   }
 ]

@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "id": 1,
+    "ticketId": 300050,
+    "fileName": "Screenshot_1.png",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/300050/1771285786371-26spp-Screenshot_1.png",
+    "fileKey": "tickets/300050/1771285786371-26spp-Screenshot_1.png",
+    "mimeType": "image/png",
+    "fileSize": 73122,
+    "uploadedById": 540002,
+    "uploadedByName": "ADHARA",
+    "createdAt": 1771285786758
+  }
+]

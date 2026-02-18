@@ -62,5 +62,37 @@
     "assignedToName": "Daniel TI",
     "createdAt": 1770988191012,
     "updatedAt": 1770990195636
+  },
+  {
+    "id": 300049,
+    "ticketId": "bilhete_5",
+    "title": "Espelhamento de login",
+    "description": "Precisamos que o login dos seguintes colaboradores:\n* LEONARDO OLIVEIRA RIBEIRO\n* KEURIANE BRAGA DA SILVA\nSeja espelhado no login da colaboradora:\nVANESSA APARECIDA LUDKE\n",
+    "category": "Técnico",
+    "priority": "Média",
+    "status": "Aberto",
+    "departmentId": null,
+    "createdById": 540001,
+    "createdByName": "Mauricio Ramos",
+    "assignedToId": null,
+    "assignedToName": null,
+    "createdAt": 1771281502583,
+    "updatedAt": 1771281502583
+  },
+  {
+    "id": 300050,
+    "ticketId": "bilhete_6",
+    "title": "liberação acesso analista ",
+    "description": "meu sistema Adhara tava liberado o F9 que faz poder mudar a quantidade de itens da conferencia e hoje fui utilizar e não deu. peço para ativar novamente tenho muitos pedidos p fecha manualmente e ter que digita código varias vezes demora muito ",
+    "category": "Técnico",
+    "priority": "Média",
+    "status": "Aberto",
+    "departmentId": null,
+    "createdById": 540002,
+    "createdByName": "ADHARA",
+    "assignedToId": null,
+    "assignedToName": null,
+    "createdAt": 1771285785813,
+    "updatedAt": 1771285785813
   }
 ]
