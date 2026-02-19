@@ -34,5 +34,14 @@
     "content": "Aguardando retorno da @Maria Eduarda Chagas via e-mail com as condições de inclusão na planilha de custo gerencial.",
     "mentions": "[390001]",
     "createdAt": 1770819735557
+  },
+  {
+    "id": 90002,
+    "projectId": 330001,
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "content": "Foram implementadas as condições de inclusão na planilha de custo gerencial. Atualmente, estamos na fase final de testes e ajustes pontuais no processo de importação no Infarma.",
+    "mentions": null,
+    "createdAt": 1771439497960
   }
 ]

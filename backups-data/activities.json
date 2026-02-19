@@ -306,5 +306,203 @@
     "newValue": null,
     "description": "Chamado criado por ADHARA",
     "createdAt": 1771285785813
+  },
+  {
+    "id": 390001,
+    "ticketId": 330001,
+    "type": "created",
+    "authorId": 330001,
+    "authorName": "Luxane Peres Guimarães",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Luxane Peres Guimarães",
+    "createdAt": 1771418352468
+  },
+  {
+    "id": 450001,
+    "ticketId": 300050,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1771500966595
+  },
+  {
+    "id": 450002,
+    "ticketId": 300050,
+    "type": "sector_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Sem setor",
+    "newValue": "TI",
+    "description": "Setor alterado de \"Sem setor\" para \"TI\"",
+    "createdAt": 1771500969811
+  },
+  {
+    "id": 450003,
+    "ticketId": 300050,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Aberto",
+    "newValue": "Em Progresso",
+    "description": "Status alterado de \"Aberto\" para \"Em Progresso\"",
+    "createdAt": 1771500972321
+  },
+  {
+    "id": 480001,
+    "ticketId": 300050,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Progresso",
+    "newValue": "Aguardando",
+    "description": "Status alterado de \"Em Progresso\" para \"Aguardando\"",
+    "createdAt": 1771501853913
+  },
+  {
+    "id": 480002,
+    "ticketId": 300050,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1771501865485
+  },
+  {
+    "id": 480003,
+    "ticketId": 300050,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1771501894242
+  },
+  {
+    "id": 480004,
+    "ticketId": 330001,
+    "type": "sector_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Sem setor",
+    "newValue": "TI",
+    "description": "Setor alterado de \"Sem setor\" para \"TI\"",
+    "createdAt": 1771501916435
+  },
+  {
+    "id": 480005,
+    "ticketId": 330001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1771501918964
+  },
+  {
+    "id": 480006,
+    "ticketId": 330001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Aberto",
+    "newValue": "Em Progresso",
+    "description": "Status alterado de \"Aberto\" para \"Em Progresso\"",
+    "createdAt": 1771501920373
+  },
+  {
+    "id": 480007,
+    "ticketId": 330001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Progresso",
+    "newValue": "Aguardando",
+    "description": "Status alterado de \"Em Progresso\" para \"Aguardando\"",
+    "createdAt": 1771502089127
+  },
+  {
+    "id": 480008,
+    "ticketId": 330001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Aguardando",
+    "newValue": "Resolvido",
+    "description": "Status alterado de \"Aguardando\" para \"Resolvido\"",
+    "createdAt": 1771502258900
+  },
+  {
+    "id": 480009,
+    "ticketId": 330001,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1771502270304
+  },
+  {
+    "id": 480010,
+    "ticketId": 300049,
+    "type": "sector_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Sem setor",
+    "newValue": "TI",
+    "description": "Setor alterado de \"Sem setor\" para \"TI\"",
+    "createdAt": 1771502292303
+  },
+  {
+    "id": 480011,
+    "ticketId": 300049,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1771502294366
+  },
+  {
+    "id": 480012,
+    "ticketId": 300049,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Aberto",
+    "newValue": "Em Progresso",
+    "description": "Status alterado de \"Aberto\" para \"Em Progresso\"",
+    "createdAt": 1771502296888
+  },
+  {
+    "id": 480013,
+    "ticketId": 300049,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Progresso",
+    "newValue": "Resolvido",
+    "description": "Status alterado de \"Em Progresso\" para \"Resolvido\"",
+    "createdAt": 1771503983116
+  },
+  {
+    "id": 480014,
+    "ticketId": 300049,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1771504043792
   }
 ]

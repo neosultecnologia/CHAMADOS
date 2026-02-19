@@ -4,16 +4,16 @@
     "projectId": 330001,
     "title": "Corrigir inclusão na gerencial",
     "description": "Incluir apenas produtos com custo diferente da nota.",
-    "status": "Pendente",
+    "status": "Concluída",
     "priority": "Média",
     "assignedToId": null,
     "assignedToName": null,
     "dueDate": 1770940800000,
-    "completedAt": null,
+    "completedAt": 1771433977046,
     "createdById": 60001,
     "createdByName": "Gabriel Bino",
     "createdAt": 1770732862086,
-    "updatedAt": 1770732862086
+    "updatedAt": 1771433977046
   },
   {
     "id": 30002,
@@ -62,5 +62,37 @@
     "createdByName": "Carlos TI",
     "createdAt": 1770916853658,
     "updatedAt": 1770916853658
+  },
+  {
+    "id": 90001,
+    "projectId": 330001,
+    "title": "Testes em ambiente controlado",
+    "description": "Realizar testes finais da precificação com inclusão na planilha de custo gerencial.\n\nTeste com arquivo na rede, para testar conectividade e velocidade de acesso.",
+    "status": "Pendente",
+    "priority": "Média",
+    "assignedToId": null,
+    "assignedToName": null,
+    "dueDate": 1771804800000,
+    "completedAt": null,
+    "createdById": 60001,
+    "createdByName": "Gabriel Bino",
+    "createdAt": 1771438966273,
+    "updatedAt": 1771438966273
+  },
+  {
+    "id": 90002,
+    "projectId": 330001,
+    "title": "Ajuste do módulo RPA Infarma",
+    "description": "Corrigir fluxo RPA com imagens na etapa de importação do Infarma.",
+    "status": "Pendente",
+    "priority": "Média",
+    "assignedToId": null,
+    "assignedToName": null,
+    "dueDate": 1771804800000,
+    "completedAt": null,
+    "createdById": 60001,
+    "createdByName": "Gabriel Bino",
+    "createdAt": 1771439132027,
+    "updatedAt": 1771439132027
   }
 ]

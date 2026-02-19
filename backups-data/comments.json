@@ -38,5 +38,37 @@
     "authorName": "Carlos TI",
     "content": "Caixa de email esta com 63% de uso.",
     "createdAt": 1770731869800
+  },
+  {
+    "id": 210001,
+    "ticketId": 300050,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "Bom dia.",
+    "createdAt": 1771501865485
+  },
+  {
+    "id": 210002,
+    "ticketId": 300050,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "Favor testar a funcionalidade novamente.",
+    "createdAt": 1771501894242
+  },
+  {
+    "id": 210003,
+    "ticketId": 330001,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "Pasta liberada.",
+    "createdAt": 1771502270304
+  },
+  {
+    "id": 210004,
+    "ticketId": 300049,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "Espelhamento concluido.",
+    "createdAt": 1771504043792
   }
 ]
