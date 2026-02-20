@@ -212,13 +212,13 @@
     "projectId": 300004,
     "name": "Validação das informações",
     "description": "Arquivos gerados e já enviados a Neogrid para a validação da estrutura",
-    "status": "Pendente",
+    "status": "Concluída",
     "order": 2,
     "startDate": 1770087600000,
     "endDate": 1772247600000,
-    "completedAt": null,
+    "completedAt": 1771507933938,
     "createdAt": 1770380190419,
-    "updatedAt": 1770380190419
+    "updatedAt": 1771507934183
   },
   {
     "id": 330024,
@@ -427,5 +427,18 @@
     "completedAt": null,
     "createdAt": 1770985743423,
     "updatedAt": 1770985743423
+  },
+  {
+    "id": 540001,
+    "projectId": 300004,
+    "name": "Ajustes com base em críticas",
+    "description": "Validar junto ao Infarma as críticas devolvidas pela Neogrid referente aos arquivos gerados.",
+    "status": "Pendente",
+    "order": 3,
+    "startDate": 1771470000000,
+    "endDate": 1772766000000,
+    "completedAt": null,
+    "createdAt": 1771508224366,
+    "updatedAt": 1771508224366
   }
 ]

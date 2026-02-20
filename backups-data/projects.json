@@ -96,16 +96,16 @@
     "description": "Integração nova",
     "status": "Em Andamento",
     "priority": "Alta",
-    "ownerId": 1,
-    "ownerName": "Daniel TI",
+    "ownerId": 60001,
+    "ownerName": "Gabriel Bino",
     "sector": "TI",
     "startDate": 1767322800000,
     "endDate": 1772247600000,
-    "progress": 50,
+    "progress": 67,
     "createdById": 1,
     "createdByName": "Daniel TI",
     "createdAt": 1770379986213,
-    "updatedAt": 1770396834385
+    "updatedAt": 1771508621275
   },
   {
     "id": 300029,
@@ -244,11 +244,11 @@
     "ownerName": "Gabriel Bino",
     "sector": "TI",
     "startDate": 1770951600000,
-    "endDate": 1771210800000,
+    "endDate": 1772074800000,
     "progress": 0,
     "createdById": 60001,
     "createdByName": "Gabriel Bino",
     "createdAt": 1770985742755,
-    "updatedAt": 1770985742755
+    "updatedAt": 1771523398776
   }
 ]

@@ -94,5 +94,37 @@
     "createdByName": "Gabriel Bino",
     "createdAt": 1771439132027,
     "updatedAt": 1771439132027
+  },
+  {
+    "id": 120001,
+    "projectId": 300004,
+    "title": "Abrir Chamado no Infarma",
+    "description": "Reportar ao Infarma as ocorrências registradas na geração dos arquivos da integração.",
+    "status": "Concluída",
+    "priority": "Média",
+    "assignedToId": null,
+    "assignedToName": null,
+    "dueDate": 1771459200000,
+    "completedAt": 1771508581133,
+    "createdById": 60001,
+    "createdByName": "Gabriel Bino",
+    "createdAt": 1771508288883,
+    "updatedAt": 1771508581133
+  },
+  {
+    "id": 120002,
+    "projectId": 300004,
+    "title": "Atualizar Andamento da Integração via E-mail",
+    "description": "Atualizar Neogrid sobre o andamento da integração e passar um prazo estipulado para correção das críticas.",
+    "status": "Pendente",
+    "priority": "Média",
+    "assignedToId": null,
+    "assignedToName": null,
+    "dueDate": 1771459200000,
+    "completedAt": null,
+    "createdById": 60001,
+    "createdByName": "Gabriel Bino",
+    "createdAt": 1771508577094,
+    "updatedAt": 1771508577094
   }
 ]

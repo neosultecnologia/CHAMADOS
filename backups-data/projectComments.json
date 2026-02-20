@@ -43,5 +43,14 @@
     "content": "Foram implementadas as condições de inclusão na planilha de custo gerencial. Atualmente, estamos na fase final de testes e ajustes pontuais no processo de importação no Infarma.",
     "mentions": null,
     "createdAt": 1771439497960
+  },
+  {
+    "id": 120001,
+    "projectId": 420005,
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "content": "Aguardando setor de RH enviar formulário de e-mail para os colaboradores.",
+    "mentions": null,
+    "createdAt": 1771523514995
   }
 ]

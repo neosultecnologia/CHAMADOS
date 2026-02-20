@@ -504,5 +504,104 @@
     "newValue": null,
     "description": "Comentário adicionado por Carlos TI",
     "createdAt": 1771504043792
+  },
+  {
+    "id": 510002,
+    "ticketId": 390002,
+    "type": "created",
+    "authorId": 690001,
+    "authorName": "Caroline Borges batista",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Caroline Borges batista",
+    "createdAt": 1771511418702
+  },
+  {
+    "id": 540001,
+    "ticketId": 300050,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Aguardando",
+    "newValue": "Resolvido",
+    "description": "Status alterado de \"Aguardando\" para \"Resolvido\"",
+    "createdAt": 1771515724249
+  },
+  {
+    "id": 540002,
+    "ticketId": 300050,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1771515773404
+  },
+  {
+    "id": 540005,
+    "ticketId": 420002,
+    "type": "created",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Daniel TI",
+    "createdAt": 1771518903335
+  },
+  {
+    "id": 540006,
+    "ticketId": 420002,
+    "type": "comment",
+    "authorId": 90001,
+    "authorName": "Teo",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Teo",
+    "createdAt": 1771522314760
+  },
+  {
+    "id": 540007,
+    "ticketId": 420003,
+    "type": "created",
+    "authorId": 630282,
+    "authorName": "Márcia Freitas",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Márcia Freitas",
+    "createdAt": 1771533938058
+  },
+  {
+    "id": 570001,
+    "ticketId": 420003,
+    "type": "assignment",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Daniel TI",
+    "description": "Responsável alterado para \"Daniel TI\"",
+    "createdAt": 1771541056374
+  },
+  {
+    "id": 570002,
+    "ticketId": 420003,
+    "type": "comment",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Daniel TI",
+    "createdAt": 1771541096771
+  },
+  {
+    "id": 570003,
+    "ticketId": 420003,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Aberto",
+    "newValue": "Aguardando",
+    "description": "Status alterado de \"Aberto\" para \"Aguardando\"",
+    "createdAt": 1771541107071
   }
 ]
