@@ -603,5 +603,71 @@
     "newValue": "Aguardando",
     "description": "Status alterado de \"Aberto\" para \"Aguardando\"",
     "createdAt": 1771541107071
+  },
+  {
+    "id": 630001,
+    "ticketId": 480001,
+    "type": "created",
+    "authorId": 540003,
+    "authorName": "Beatriz do Nascimento de Sousa ",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Beatriz do Nascimento de Sousa ",
+    "createdAt": 1771607307815
+  },
+  {
+    "id": 660001,
+    "ticketId": 420002,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Aberto",
+    "newValue": "Em Progresso",
+    "description": "Status alterado de \"Aberto\" para \"Em Progresso\"",
+    "createdAt": 1771613864482
+  },
+  {
+    "id": 660002,
+    "ticketId": 420002,
+    "type": "assignment",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1771613868958
+  },
+  {
+    "id": 660003,
+    "ticketId": 480001,
+    "type": "assignment",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1771614005397
+  },
+  {
+    "id": 660004,
+    "ticketId": 480001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Aberto",
+    "newValue": "Em Progresso",
+    "description": "Status alterado de \"Aberto\" para \"Em Progresso\"",
+    "createdAt": 1771614006585
+  },
+  {
+    "id": 660005,
+    "ticketId": 390002,
+    "type": "comment",
+    "authorId": 690001,
+    "authorName": "Caroline Borges batista",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Caroline Borges batista",
+    "createdAt": 1771618034428
   }
 ]

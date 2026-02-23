@@ -134,14 +134,14 @@
     "description": "Providenciar lider Picking\n1º notebook\n2º E-mail\n3º Teams\n",
     "category": "Outro",
     "priority": "Média",
-    "status": "Aberto",
+    "status": "Em Progresso",
     "departmentId": 17,
     "createdById": 1,
     "createdByName": "Daniel TI",
-    "assignedToId": null,
-    "assignedToName": null,
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
     "createdAt": 1771518903335,
-    "updatedAt": 1771518903335
+    "updatedAt": 1771613868975
   },
   {
     "id": 420003,
@@ -158,5 +158,21 @@
     "assignedToName": "Daniel TI",
     "createdAt": 1771533938058,
     "updatedAt": 1771541107087
+  },
+  {
+    "id": 480001,
+    "ticketId": "bilhete_420004",
+    "title": "Cadastro de longin infarma",
+    "description": "Solicito acesso de  longin infarma dos funcionários novos. \n*Jhenifer Abdallah- conferencia - ref Fabiana Antunes \n*Maria Castro -conferencia - ref Fabiana Antunes \n*Paulo de Almeida - conferencia/caixa fechada- ref Fabiana Antunes/ Felipe De Oliveira\n*Diego Mattozo- conferencia/caixa fechada- ref Fabiana Antunes/ Felipe De Oliveira\n*Emanuel Richerd- conferencia/caixa fechada- ref Fabiana Antunes/ Felipe De Oliveira",
+    "category": "Acesso",
+    "priority": "Alta",
+    "status": "Em Progresso",
+    "departmentId": 90004,
+    "createdById": 540003,
+    "createdByName": "Beatriz do Nascimento de Sousa ",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "createdAt": 1771607307815,
+    "updatedAt": 1771614006599
   }
 ]

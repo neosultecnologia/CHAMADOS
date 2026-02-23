@@ -94,5 +94,13 @@
     "authorName": "Daniel TI",
     "content": "Boa noite Marcia, poderia nos enviar prints sobre esse processo, até conheço porem desconheço com troca de politica.",
     "createdAt": 1771541096771
+  },
+  {
+    "id": 300001,
+    "ticketId": 390002,
+    "authorId": 690001,
+    "authorName": "Caroline Borges batista",
+    "content": "A nova colaboradora do MKT, terá inicio dia 25/02/2026",
+    "createdAt": 1771618034428
   }
 ]
