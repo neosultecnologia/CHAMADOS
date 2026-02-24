@@ -117,7 +117,7 @@
     "title": "Troca de lugar",
     "description": "Trocar a Camila, para o lugar do marketing e o marketing para a mesa da porta.",
     "category": "Outro",
-    "priority": "Crítica",
+    "priority": "Baixa",
     "status": "Aberto",
     "departmentId": 17,
     "createdById": 690001,
@@ -125,7 +125,7 @@
     "assignedToId": null,
     "assignedToName": null,
     "createdAt": 1771511418702,
-    "updatedAt": 1771511418702
+    "updatedAt": 1771872712635
   },
   {
     "id": 420002,
@@ -166,13 +166,61 @@
     "description": "Solicito acesso de  longin infarma dos funcionários novos. \n*Jhenifer Abdallah- conferencia - ref Fabiana Antunes \n*Maria Castro -conferencia - ref Fabiana Antunes \n*Paulo de Almeida - conferencia/caixa fechada- ref Fabiana Antunes/ Felipe De Oliveira\n*Diego Mattozo- conferencia/caixa fechada- ref Fabiana Antunes/ Felipe De Oliveira\n*Emanuel Richerd- conferencia/caixa fechada- ref Fabiana Antunes/ Felipe De Oliveira",
     "category": "Acesso",
     "priority": "Alta",
-    "status": "Em Progresso",
+    "status": "Aguardando",
     "departmentId": 90004,
     "createdById": 540003,
     "createdByName": "Beatriz do Nascimento de Sousa ",
     "assignedToId": 300001,
     "assignedToName": "Carlos TI",
     "createdAt": 1771607307815,
-    "updatedAt": 1771614006599
+    "updatedAt": 1771871283197
+  },
+  {
+    "id": 570001,
+    "ticketId": "bilhete_480002",
+    "title": "Fazer \"Chamados\"",
+    "description": "Os PCs do recebimento ( devolução, SAC, e recebimento ) não conseguem acessar o site portal.neosul para solicitar \"CHAMADOS\"",
+    "category": "Técnico",
+    "priority": "Alta",
+    "status": "Aberto",
+    "departmentId": 17,
+    "createdById": 540001,
+    "createdByName": "Mauricio Ramos",
+    "assignedToId": null,
+    "assignedToName": null,
+    "createdAt": 1771865670220,
+    "updatedAt": 1771865670220
+  },
+  {
+    "id": 570037,
+    "ticketId": "bilhete_570002",
+    "title": "TROCA DE EMAIL GERENTES",
+    "description": "Dani,\n \nAlinhado com o Cesar a migração dos email do Josiel e do Eduardo\n \nFavor migrar o eduardo para o email - gvscoeste@neosul\ne ativar o e-mail gvscnorte@neosul para o Josiel\n \nApós precisamos efetuar o comunicado aos mesmos e em geral para todos os coordenadores de setor / gerentes / gestores / sobre a mudança realizada.",
+    "category": "Acesso",
+    "priority": "Alta",
+    "status": "Aberto",
+    "departmentId": 90006,
+    "createdById": 570012,
+    "createdByName": "Francielle Vieira Schmitz Bueno",
+    "assignedToId": null,
+    "assignedToName": null,
+    "createdAt": 1771867976438,
+    "updatedAt": 1771867976438
+  },
+  {
+    "id": 600001,
+    "ticketId": "bilhete_570038",
+    "title": "ajuste de autorização infarma",
+    "description": "meu login do infarma ADHARA não esta excluindo volume de outro usuário, sexta feira estava normal e hoje não liberou, preciso desse acesso pois faço os cortes de volume em divergência.",
+    "category": "Técnico",
+    "priority": "Média",
+    "status": "Aberto",
+    "departmentId": 90004,
+    "createdById": 540002,
+    "createdByName": "ADHARA",
+    "assignedToId": null,
+    "assignedToName": null,
+    "createdAt": 1771869750934,
+    "updatedAt": 1771869750934
   }
 ]

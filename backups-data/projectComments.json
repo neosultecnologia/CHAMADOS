@@ -52,5 +52,32 @@
     "content": "Aguardando setor de RH enviar formulário de e-mail para os colaboradores.",
     "mentions": null,
     "createdAt": 1771523514995
+  },
+  {
+    "id": 150001,
+    "projectId": 330001,
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "content": "Surgiram dificuldades de processamento dos arquivos de custo gerencial, um deles com mais de 100.000 linhas. O projeto está sendo ajustado e testado simultaneamente. Dia 24/02 será dado continuidade na etapa de teste com o executável na sua última versão.",
+    "mentions": null,
+    "createdAt": 1771880831394
+  },
+  {
+    "id": 180001,
+    "projectId": 300002,
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "content": "@Teo, Finalizado!",
+    "mentions": "[90001]",
+    "createdAt": 1771932939854
+  },
+  {
+    "id": 180002,
+    "projectId": 300003,
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "content": "@Teo, Finalizado",
+    "mentions": "[90001]",
+    "createdAt": 1771932961997
   }
 ]

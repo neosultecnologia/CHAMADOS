@@ -160,13 +160,13 @@
     "projectId": 300002,
     "name": "Criando a lista de preço",
     "description": null,
-    "status": "Pendente",
+    "status": "Concluída",
     "order": 1,
     "startDate": 1770174000000,
     "endDate": 1770346800000,
-    "completedAt": null,
+    "completedAt": 1771856481093,
     "createdAt": 1770379543498,
-    "updatedAt": 1770379543498
+    "updatedAt": 1771856481975
   },
   {
     "id": 330008,
@@ -186,13 +186,13 @@
     "projectId": 300003,
     "name": "Pedido teste",
     "description": "Aguardando o Cliente\n\nKA e GV já informados sobre",
-    "status": "Pendente",
+    "status": "Concluída",
     "order": 2,
     "startDate": 1770174000000,
     "endDate": 1772247600000,
-    "completedAt": null,
+    "completedAt": 1771856327454,
     "createdAt": 1770379905471,
-    "updatedAt": 1770379905471
+    "updatedAt": 1771856328334
   },
   {
     "id": 330010,
@@ -355,26 +355,26 @@
     "projectId": 360001,
     "name": "Analise do layout",
     "description": null,
-    "status": "Pendente",
+    "status": "Concluída",
     "order": 1,
     "startDate": 1770865200000,
     "endDate": 1770951600000,
-    "completedAt": null,
+    "completedAt": 1771868237074,
     "createdAt": 1770902783508,
-    "updatedAt": 1770902783508
+    "updatedAt": 1771868237857
   },
   {
     "id": 390002,
     "projectId": 360001,
     "name": "Ajuste do layout",
     "description": "Adequação das informações",
-    "status": "Pendente",
+    "status": "Concluída",
     "order": 2,
     "startDate": 1771210800000,
     "endDate": 1771383600000,
-    "completedAt": null,
+    "completedAt": 1771868238922,
     "createdAt": 1770902829177,
-    "updatedAt": 1770902829177
+    "updatedAt": 1771868239694
   },
   {
     "id": 390003,
@@ -440,5 +440,18 @@
     "completedAt": null,
     "createdAt": 1771508224366,
     "updatedAt": 1771508224366
+  },
+  {
+    "id": 600002,
+    "projectId": 300003,
+    "name": "Ajuste interno",
+    "description": "Ajuste realizado no pedido que esta fora do enquadro \"layout\" este que foi realizado pela próprio equipe de TI.",
+    "status": "Concluída",
+    "order": 3,
+    "startDate": 1771470000000,
+    "endDate": 1771556400000,
+    "completedAt": 1771856402614,
+    "createdAt": 1771856401465,
+    "updatedAt": 1771856403273
   }
 ]

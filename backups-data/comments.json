@@ -102,5 +102,21 @@
     "authorName": "Caroline Borges batista",
     "content": "A nova colaboradora do MKT, terá inicio dia 25/02/2026",
     "createdAt": 1771618034428
+  },
+  {
+    "id": 330001,
+    "ticketId": 480001,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "Favor passar os nomes completos",
+    "createdAt": 1771852694583
+  },
+  {
+    "id": 420001,
+    "ticketId": 570037,
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "content": "@Carlos TI ",
+    "createdAt": 1771933170452
   }
 ]

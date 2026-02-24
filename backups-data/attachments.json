@@ -22,5 +22,17 @@
     "uploadedById": 630282,
     "uploadedByName": "Márcia Freitas",
     "createdAt": 1771533939360
+  },
+  {
+    "id": 60001,
+    "ticketId": 600001,
+    "fileName": "negado.png",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/600001/1771869751667-x11dbt-negado.png",
+    "fileKey": "tickets/600001/1771869751667-x11dbt-negado.png",
+    "mimeType": "image/png",
+    "fileSize": 75635,
+    "uploadedById": 540002,
+    "uploadedByName": "ADHARA",
+    "createdAt": 1771869752093
   }
 ]
