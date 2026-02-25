@@ -911,5 +911,115 @@
     "newValue": null,
     "description": "Comentário adicionado por Daniel TI",
     "createdAt": 1771933170452
+  },
+  {
+    "id": 870002,
+    "ticketId": 480001,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1771958865505
+  },
+  {
+    "id": 870003,
+    "ticketId": 480001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Aguardando",
+    "newValue": "Resolvido",
+    "description": "Status alterado de \"Aguardando\" para \"Resolvido\"",
+    "createdAt": 1771958869005
+  },
+  {
+    "id": 870004,
+    "ticketId": 570001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Aberto",
+    "newValue": "Em Progresso",
+    "description": "Status alterado de \"Aberto\" para \"Em Progresso\"",
+    "createdAt": 1771960718298
+  },
+  {
+    "id": 870005,
+    "ticketId": 570001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1771960721632
+  },
+  {
+    "id": 870006,
+    "ticketId": 570001,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1771960756615
+  },
+  {
+    "id": 870007,
+    "ticketId": 570037,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1771960801532
+  },
+  {
+    "id": 900001,
+    "ticketId": 420003,
+    "type": "comment",
+    "authorId": 630282,
+    "authorName": "Márcia Freitas",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Márcia Freitas",
+    "createdAt": 1771965199985
+  },
+  {
+    "id": 900002,
+    "ticketId": 420003,
+    "type": "comment",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Daniel TI",
+    "createdAt": 1771965707177
+  },
+  {
+    "id": 900003,
+    "ticketId": 420003,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Aguardando",
+    "newValue": "Em Progresso",
+    "description": "Status alterado de \"Aguardando\" para \"Em Progresso\"",
+    "createdAt": 1771965721514
+  },
+  {
+    "id": 900004,
+    "ticketId": 420003,
+    "type": "comment",
+    "authorId": 630282,
+    "authorName": "Márcia Freitas",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Márcia Freitas",
+    "createdAt": 1771966716769
   }
 ]

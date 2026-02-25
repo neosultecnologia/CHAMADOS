@@ -150,14 +150,14 @@
     "description": "Por gentileza, verificar com Infarma a função cópia de pedido com troca de polícia não esta funcionando.  ",
     "category": "Funcionalidade",
     "priority": "Média",
-    "status": "Aguardando",
+    "status": "Em Progresso",
     "departmentId": 90006,
     "createdById": 630282,
     "createdByName": "Márcia Freitas",
     "assignedToId": 1,
     "assignedToName": "Daniel TI",
     "createdAt": 1771533938058,
-    "updatedAt": 1771541107087
+    "updatedAt": 1771965721543
   },
   {
     "id": 480001,
@@ -166,14 +166,14 @@
     "description": "Solicito acesso de  longin infarma dos funcionários novos. \n*Jhenifer Abdallah- conferencia - ref Fabiana Antunes \n*Maria Castro -conferencia - ref Fabiana Antunes \n*Paulo de Almeida - conferencia/caixa fechada- ref Fabiana Antunes/ Felipe De Oliveira\n*Diego Mattozo- conferencia/caixa fechada- ref Fabiana Antunes/ Felipe De Oliveira\n*Emanuel Richerd- conferencia/caixa fechada- ref Fabiana Antunes/ Felipe De Oliveira",
     "category": "Acesso",
     "priority": "Alta",
-    "status": "Aguardando",
+    "status": "Resolvido",
     "departmentId": 90004,
     "createdById": 540003,
     "createdByName": "Beatriz do Nascimento de Sousa ",
     "assignedToId": 300001,
     "assignedToName": "Carlos TI",
     "createdAt": 1771607307815,
-    "updatedAt": 1771871283197
+    "updatedAt": 1771958869042
   },
   {
     "id": 570001,
@@ -182,14 +182,14 @@
     "description": "Os PCs do recebimento ( devolução, SAC, e recebimento ) não conseguem acessar o site portal.neosul para solicitar \"CHAMADOS\"",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Aberto",
+    "status": "Em Progresso",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
-    "assignedToId": null,
-    "assignedToName": null,
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
     "createdAt": 1771865670220,
-    "updatedAt": 1771865670220
+    "updatedAt": 1771960721666
   },
   {
     "id": 570037,
@@ -202,10 +202,10 @@
     "departmentId": 90006,
     "createdById": 570012,
     "createdByName": "Francielle Vieira Schmitz Bueno",
-    "assignedToId": null,
-    "assignedToName": null,
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
     "createdAt": 1771867976438,
-    "updatedAt": 1771867976438
+    "updatedAt": 1771960801570
   },
   {
     "id": 600001,

@@ -32,7 +32,7 @@
     "referenceId": 570035,
     "referenceType": "ticket",
     "actionUrl": "/suporte/570035",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1771867402760
   },
   {
@@ -92,7 +92,7 @@
     "referenceId": 570036,
     "referenceType": "ticket",
     "actionUrl": "/suporte/570036",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1771867704043
   },
   {
@@ -152,7 +152,7 @@
     "referenceId": 570037,
     "referenceType": "ticket",
     "actionUrl": "/suporte/570037",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1771867976532
   },
   {
@@ -212,7 +212,7 @@
     "referenceId": 600001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/600001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1771869751067
   },
   {
@@ -286,5 +286,185 @@
     "actionUrl": "/suporte/570037",
     "isRead": false,
     "createdAt": 1771933170530
+  },
+  {
+    "id": 120001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Daniel TI abriu um novo chamado: \"testet\"",
+    "referenceId": 690004,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/690004",
+    "isRead": false,
+    "createdAt": 1771953512236
+  },
+  {
+    "id": 120002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Daniel TI abriu um novo chamado: \"testet\"",
+    "referenceId": 690004,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/690004",
+    "isRead": false,
+    "createdAt": 1771953512348
+  },
+  {
+    "id": 120004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Daniel TI abriu um novo chamado: \"testet\"",
+    "referenceId": 690004,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/690004",
+    "isRead": true,
+    "createdAt": 1771953512560
+  },
+  {
+    "id": 120005,
+    "userId": 90002,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Daniel TI abriu um novo chamado: \"testet\"",
+    "referenceId": 690004,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/690004",
+    "isRead": false,
+    "createdAt": 1771953512665
+  },
+  {
+    "id": 120006,
+    "userId": 90001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Daniel TI abriu um novo chamado: \"testet\"",
+    "referenceId": 690004,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/690004",
+    "isRead": false,
+    "createdAt": 1771953512772
+  },
+  {
+    "id": 120007,
+    "userId": 540003,
+    "type": "ticket_comment",
+    "title": "Resposta no Chamado",
+    "message": "Carlos TI respondeu seu chamado: \"Cadastro de longin infarma\"",
+    "referenceId": 480001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/480001",
+    "isRead": false,
+    "createdAt": 1771958865568
+  },
+  {
+    "id": 120008,
+    "userId": 540003,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido",
+    "referenceId": 480001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/480001",
+    "isRead": false,
+    "createdAt": 1771958869022
+  },
+  {
+    "id": 120009,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Progresso",
+    "referenceId": 570001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/570001",
+    "isRead": false,
+    "createdAt": 1771960718319
+  },
+  {
+    "id": 120010,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Fazer \"Chamados\"\"",
+    "referenceId": 570001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/570001",
+    "isRead": false,
+    "createdAt": 1771960721649
+  },
+  {
+    "id": 120011,
+    "userId": 540001,
+    "type": "ticket_comment",
+    "title": "Resposta no Chamado",
+    "message": "Carlos TI respondeu seu chamado: \"Fazer \"Chamados\"\"",
+    "referenceId": 570001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/570001",
+    "isRead": false,
+    "createdAt": 1771960756655
+  },
+  {
+    "id": 120012,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"TROCA DE EMAIL GERENTES\"",
+    "referenceId": 570037,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/570037",
+    "isRead": false,
+    "createdAt": 1771960801552
+  },
+  {
+    "id": 150001,
+    "userId": 1,
+    "type": "ticket_comment",
+    "title": "Novo Comentario no Chamado",
+    "message": "Márcia Freitas comentou no chamado: \"FUNÇÃO COPIA DE PEDIDO - INFARMA\"",
+    "referenceId": 420003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/420003",
+    "isRead": true,
+    "createdAt": 1771965200056
+  },
+  {
+    "id": 150002,
+    "userId": 630282,
+    "type": "ticket_comment",
+    "title": "Resposta no Chamado",
+    "message": "Daniel TI respondeu seu chamado: \"FUNÇÃO COPIA DE PEDIDO - INFARMA\"",
+    "referenceId": 420003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/420003",
+    "isRead": false,
+    "createdAt": 1771965707222
+  },
+  {
+    "id": 150003,
+    "userId": 630282,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Progresso",
+    "referenceId": 420003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/420003",
+    "isRead": false,
+    "createdAt": 1771965721529
+  },
+  {
+    "id": 150004,
+    "userId": 1,
+    "type": "ticket_comment",
+    "title": "Novo Comentario no Chamado",
+    "message": "Márcia Freitas comentou no chamado: \"FUNÇÃO COPIA DE PEDIDO - INFARMA\"",
+    "referenceId": 420003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/420003",
+    "isRead": true,
+    "createdAt": 1771966716820
   }
 ]

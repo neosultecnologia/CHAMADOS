@@ -4,7 +4,9 @@
     "name": "ADMIN",
     "description": "PERFIL GERENCIADOR",
     "permissions": {
+      "almoxarifado": true,
       "chamados": true,
+      "comercial": true,
       "compras": true,
       "desenvolvimento": true,
       "marketing": true,
@@ -15,7 +17,7 @@
     },
     "isDefault": true,
     "createdAt": 1770160822191,
-    "updatedAt": 1770994206936
+    "updatedAt": 1771986812339
   },
   {
     "id": 150001,
@@ -119,83 +121,17 @@
     "updatedAt": 1770994185737
   },
   {
-    "id": 570057,
-    "name": "Suporte Técnico 1771879855981",
-    "description": "Acesso a suporte e desenvolvimento",
+    "id": 660001,
+    "name": "Diretoria",
+    "description": null,
     "permissions": {
+      "almoxarifado": true,
+      "comercial": false,
       "desenvolvimento": true,
-      "ecommerce": false,
-      "marketing": false,
-      "rh": false,
-      "suporte": true,
-      "tecnologia": false
+      "suporte": true
     },
     "isDefault": false,
-    "createdAt": 1771879855985,
-    "updatedAt": 1771879855985
-  },
-  {
-    "id": 570058,
-    "name": "Updated Group Name 1771879856532",
-    "description": "Updated description",
-    "permissions": {
-      "desenvolvimento": true,
-      "ecommerce": false,
-      "marketing": false,
-      "rh": false,
-      "suporte": true,
-      "tecnologia": false
-    },
-    "isDefault": false,
-    "createdAt": 1771879856431,
-    "updatedAt": 1771879856533
-  },
-  {
-    "id": 570060,
-    "name": "Test Group 1771879856479",
-    "description": "Test group for permission testing",
-    "permissions": {
-      "compras": {
-        "create": true,
-        "delete": true,
-        "read": true,
-        "update": true
-      }
-    },
-    "isDefault": false,
-    "createdAt": 1771879856479,
-    "updatedAt": 1771879856479
-  },
-  {
-    "id": 570063,
-    "name": "Assignment Test Group 1771879856942",
-    "description": "For testing assignment",
-    "permissions": {
-      "desenvolvimento": true,
-      "ecommerce": false,
-      "marketing": false,
-      "rh": false,
-      "suporte": true,
-      "tecnologia": false
-    },
-    "isDefault": false,
-    "createdAt": 1771879856943,
-    "updatedAt": 1771879856943
-  },
-  {
-    "id": 570064,
-    "name": "Inheritance Test Group 1771879857294",
-    "description": "Testing permission inheritance",
-    "permissions": {
-      "desenvolvimento": false,
-      "ecommerce": false,
-      "marketing": false,
-      "rh": true,
-      "suporte": true,
-      "tecnologia": false
-    },
-    "isDefault": false,
-    "createdAt": 1771879857294,
-    "updatedAt": 1771879857294
+    "createdAt": 1771986716672,
+    "updatedAt": 1771986716672
   }
 ]

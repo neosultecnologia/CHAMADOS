@@ -34,5 +34,17 @@
     "uploadedById": 540002,
     "uploadedByName": "ADHARA",
     "createdAt": 1771869752093
+  },
+  {
+    "id": 90001,
+    "ticketId": 420003,
+    "fileName": "copia de pedido por troca de politica .png",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/420003/1771965420831-nva46x-copia de pedido por troca de politica .png",
+    "fileKey": "tickets/420003/1771965420831-nva46x-copia de pedido por troca de politica .png",
+    "mimeType": "image/png",
+    "fileSize": 27953,
+    "uploadedById": 630282,
+    "uploadedByName": "Márcia Freitas",
+    "createdAt": 1771965421945
   }
 ]
