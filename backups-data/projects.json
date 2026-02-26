@@ -14,6 +14,8 @@
     "progress": 0,
     "createdById": 1,
     "createdByName": "Daniel TI",
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1770320539866,
     "updatedAt": 1770382513724
   },
@@ -32,6 +34,8 @@
     "progress": 75,
     "createdById": 1,
     "createdByName": "Daniel TI",
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1770321106938,
     "updatedAt": 1770396865210
   },
@@ -50,6 +54,8 @@
     "progress": 50,
     "createdById": 1,
     "createdByName": "Daniel TI",
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1770379305284,
     "updatedAt": 1770396859146
   },
@@ -68,6 +74,8 @@
     "progress": 100,
     "createdById": 1,
     "createdByName": "Daniel TI",
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1770379518655,
     "updatedAt": 1771856494408
   },
@@ -86,6 +94,8 @@
     "progress": 100,
     "createdById": 1,
     "createdByName": "Daniel TI",
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1770379839310,
     "updatedAt": 1771856460368
   },
@@ -101,11 +111,13 @@
     "sector": "TI",
     "startDate": 1767322800000,
     "endDate": 1772247600000,
-    "progress": 67,
+    "progress": 50,
     "createdById": 1,
     "createdByName": "Daniel TI",
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1770379986213,
-    "updatedAt": 1771508621275
+    "updatedAt": 1772036444963
   },
   {
     "id": 300029,
@@ -122,6 +134,8 @@
     "progress": 0,
     "createdById": 1,
     "createdByName": "Daniel TI",
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1770398267998,
     "updatedAt": 1770398300637
   },
@@ -130,7 +144,7 @@
     "projectId": "proj_8",
     "name": "Precificação",
     "description": "Automação do processo de precificação de produtos.",
-    "status": "Planejamento",
+    "status": "Em Andamento",
     "priority": "Alta",
     "ownerId": 60001,
     "ownerName": "Gabriel Bino",
@@ -140,8 +154,10 @@
     "progress": 50,
     "createdById": 60001,
     "createdByName": "Gabriel Bino",
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1770732632794,
-    "updatedAt": 1770819456084
+    "updatedAt": 1772026546608
   },
   {
     "id": 330002,
@@ -158,6 +174,8 @@
     "progress": 80,
     "createdById": 60001,
     "createdByName": "Gabriel Bino",
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1770736376268,
     "updatedAt": 1770736830432
   },
@@ -176,8 +194,10 @@
     "progress": 67,
     "createdById": 1,
     "createdByName": "Daniel TI",
+    "updatedById": 1,
+    "updatedByName": "Daniel TI",
     "createdAt": 1770902542514,
-    "updatedAt": 1771936031329
+    "updatedAt": 1772044759441
   },
   {
     "id": 360003,
@@ -194,6 +214,8 @@
     "progress": 0,
     "createdById": 300001,
     "createdByName": "Carlos TI",
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1770904257152,
     "updatedAt": 1770904296328
   },
@@ -212,6 +234,8 @@
     "progress": 0,
     "createdById": 300001,
     "createdByName": "Carlos TI",
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1770915757304,
     "updatedAt": 1770915812711
   },
@@ -230,6 +254,8 @@
     "progress": 0,
     "createdById": 300001,
     "createdByName": "Carlos TI",
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1770916840527,
     "updatedAt": 1770916860939
   },
@@ -248,6 +274,8 @@
     "progress": 0,
     "createdById": 60001,
     "createdByName": "Gabriel Bino",
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1770985742755,
     "updatedAt": 1771523398776
   }

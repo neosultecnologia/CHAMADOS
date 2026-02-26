@@ -46,5 +46,53 @@
     "uploadedById": 630282,
     "uploadedByName": "Márcia Freitas",
     "createdAt": 1771965421945
+  },
+  {
+    "id": 120001,
+    "ticketId": 780007,
+    "fileName": "CODIGO CORRETO.png",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/780007/1772054179753-fjvaq-CODIGO CORRETO.png",
+    "fileKey": "tickets/780007/1772054179753-fjvaq-CODIGO CORRETO.png",
+    "mimeType": "image/png",
+    "fileSize": 111873,
+    "uploadedById": 540002,
+    "uploadedByName": "ADHARA",
+    "createdAt": 1772054180120
+  },
+  {
+    "id": 120002,
+    "ticketId": 780007,
+    "fileName": "CORRETO.png",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/780007/1772054180707-ahedhg-CORRETO.png",
+    "fileKey": "tickets/780007/1772054180707-ahedhg-CORRETO.png",
+    "mimeType": "image/png",
+    "fileSize": 135520,
+    "uploadedById": 540002,
+    "uploadedByName": "ADHARA",
+    "createdAt": 1772054181030
+  },
+  {
+    "id": 120003,
+    "ticketId": 780007,
+    "fileName": "Screenshot_2.png",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/780007/1772054181621-3lejmn-Screenshot_2.png",
+    "fileKey": "tickets/780007/1772054181621-3lejmn-Screenshot_2.png",
+    "mimeType": "image/png",
+    "fileSize": 155566,
+    "uploadedById": 540002,
+    "uploadedByName": "ADHARA",
+    "createdAt": 1772054181969
+  },
+  {
+    "id": 120004,
+    "ticketId": 780007,
+    "fileName": "SEM CODIGO.png",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/780007/1772054182570-a5ucnc-SEM CODIGO.png",
+    "fileKey": "tickets/780007/1772054182570-a5ucnc-SEM CODIGO.png",
+    "mimeType": "image/png",
+    "fileSize": 148988,
+    "uploadedById": 540002,
+    "uploadedByName": "ADHARA",
+    "createdAt": 1772054182899
   }
 ]

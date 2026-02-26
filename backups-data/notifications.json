@@ -248,7 +248,7 @@
     "referenceId": 480001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/480001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1771871283162
   },
   {
@@ -332,7 +332,7 @@
     "referenceId": 690004,
     "referenceType": "ticket",
     "actionUrl": "/suporte/690004",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1771953512665
   },
   {
@@ -356,7 +356,7 @@
     "referenceId": 480001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/480001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1771958865568
   },
   {
@@ -368,7 +368,7 @@
     "referenceId": 480001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/480001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1771958869022
   },
   {
@@ -420,18 +420,6 @@
     "createdAt": 1771960801552
   },
   {
-    "id": 150001,
-    "userId": 1,
-    "type": "ticket_comment",
-    "title": "Novo Comentario no Chamado",
-    "message": "Márcia Freitas comentou no chamado: \"FUNÇÃO COPIA DE PEDIDO - INFARMA\"",
-    "referenceId": 420003,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/420003",
-    "isRead": true,
-    "createdAt": 1771965200056
-  },
-  {
     "id": 150002,
     "userId": 630282,
     "type": "ticket_comment",
@@ -456,15 +444,111 @@
     "createdAt": 1771965721529
   },
   {
-    "id": 150004,
-    "userId": 1,
-    "type": "ticket_comment",
-    "title": "Novo Comentario no Chamado",
-    "message": "Márcia Freitas comentou no chamado: \"FUNÇÃO COPIA DE PEDIDO - INFARMA\"",
-    "referenceId": 420003,
+    "id": 180001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Computador da conferencia desliga sozinho \"",
+    "referenceId": 720001,
     "referenceType": "ticket",
-    "actionUrl": "/suporte/420003",
-    "isRead": true,
-    "createdAt": 1771966716820
+    "actionUrl": "/suporte/720001",
+    "isRead": false,
+    "createdAt": 1772028659272
+  },
+  {
+    "id": 180002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Computador da conferencia desliga sozinho \"",
+    "referenceId": 720001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/720001",
+    "isRead": false,
+    "createdAt": 1772028659305
+  },
+  {
+    "id": 180004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Computador da conferencia desliga sozinho \"",
+    "referenceId": 720001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/720001",
+    "isRead": false,
+    "createdAt": 1772028659355
+  },
+  {
+    "id": 210001,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Troca de lugar\"",
+    "referenceId": 390002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/390002",
+    "isRead": false,
+    "createdAt": 1772043397930
+  },
+  {
+    "id": 210002,
+    "userId": 690001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido",
+    "referenceId": 390002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/390002",
+    "isRead": false,
+    "createdAt": 1772043399296
+  },
+  {
+    "id": 240001,
+    "userId": 570012,
+    "type": "ticket_comment",
+    "title": "Resposta no Chamado",
+    "message": "Daniel TI respondeu seu chamado: \"TROCA DE EMAIL GERENTES\"",
+    "referenceId": 570037,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/570037",
+    "isRead": false,
+    "createdAt": 1772053502678
+  },
+  {
+    "id": 240002,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "ADHARA abriu um novo chamado: \"Login infarma com erro - Urgente\"",
+    "referenceId": 780007,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/780007",
+    "isRead": false,
+    "createdAt": 1772054179147
+  },
+  {
+    "id": 240003,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "ADHARA abriu um novo chamado: \"Login infarma com erro - Urgente\"",
+    "referenceId": 780007,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/780007",
+    "isRead": false,
+    "createdAt": 1772054179164
+  },
+  {
+    "id": 240005,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "ADHARA abriu um novo chamado: \"Login infarma com erro - Urgente\"",
+    "referenceId": 780007,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/780007",
+    "isRead": false,
+    "createdAt": 1772054179198
   }
 ]

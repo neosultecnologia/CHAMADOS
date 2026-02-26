@@ -1021,5 +1021,60 @@
     "newValue": null,
     "description": "Comentário adicionado por Márcia Freitas",
     "createdAt": 1771966716769
+  },
+  {
+    "id": 930001,
+    "ticketId": 720001,
+    "type": "created",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mauricio Ramos",
+    "createdAt": 1772028659135
+  },
+  {
+    "id": 960001,
+    "ticketId": 390002,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1772043397903
+  },
+  {
+    "id": 960002,
+    "ticketId": 390002,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Aberto",
+    "newValue": "Resolvido",
+    "description": "Status alterado de \"Aberto\" para \"Resolvido\"",
+    "createdAt": 1772043399280
+  },
+  {
+    "id": 990001,
+    "ticketId": 570037,
+    "type": "comment",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Daniel TI",
+    "createdAt": 1772053502229
+  },
+  {
+    "id": 990002,
+    "ticketId": 780007,
+    "type": "created",
+    "authorId": 540002,
+    "authorName": "ADHARA",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por ADHARA",
+    "createdAt": 1772054179101
   }
 ]

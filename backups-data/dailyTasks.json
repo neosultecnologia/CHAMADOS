@@ -20,6 +20,8 @@
     "recurrencePattern": null,
     "templateId": null,
     "order": 0,
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1770732862086,
     "updatedAt": 1771433977046
   },
@@ -44,6 +46,8 @@
     "recurrencePattern": null,
     "templateId": null,
     "order": 0,
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1770904382445,
     "updatedAt": 1770904382445
   },
@@ -68,6 +72,8 @@
     "recurrencePattern": null,
     "templateId": null,
     "order": 0,
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1770915828982,
     "updatedAt": 1770915828982
   },
@@ -92,6 +98,8 @@
     "recurrencePattern": null,
     "templateId": null,
     "order": 0,
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1770916853658,
     "updatedAt": 1770916853658
   },
@@ -116,6 +124,8 @@
     "recurrencePattern": null,
     "templateId": null,
     "order": 0,
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1771438966273,
     "updatedAt": 1771438966273
   },
@@ -140,6 +150,8 @@
     "recurrencePattern": null,
     "templateId": null,
     "order": 0,
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1771439132027,
     "updatedAt": 1771858461449
   },
@@ -164,6 +176,8 @@
     "recurrencePattern": null,
     "templateId": null,
     "order": 0,
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1771508288883,
     "updatedAt": 1771508581133
   },
@@ -188,6 +202,8 @@
     "recurrencePattern": null,
     "templateId": null,
     "order": 0,
+    "updatedById": null,
+    "updatedByName": null,
     "createdAt": 1771508577094,
     "updatedAt": 1771508577094
   }
