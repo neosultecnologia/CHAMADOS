@@ -158,5 +158,29 @@
     "authorName": "Márcia Freitas",
     "content": "@Daniel TI Grata pela agilidade! ",
     "createdAt": 1771966716769
+  },
+  {
+    "id": 510002,
+    "ticketId": 420002,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "Notebook entregue.",
+    "createdAt": 1772106240210
+  },
+  {
+    "id": 540001,
+    "ticketId": 420003,
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "content": "@Gabriel Bino, favor verificar",
+    "createdAt": 1772130269892
+  },
+  {
+    "id": 540002,
+    "ticketId": 420003,
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "content": "@Márcia Freitas, abrimos um chamado no Infarma para corrigir o problema. Assim que a solução for disponibilizada, programaremos a atualização para resolver a situação definitivamente.",
+    "createdAt": 1772134083244
   }
 ]

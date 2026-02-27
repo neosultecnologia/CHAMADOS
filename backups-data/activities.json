@@ -1076,5 +1076,93 @@
     "newValue": null,
     "description": "Chamado criado por ADHARA",
     "createdAt": 1772054179101
+  },
+  {
+    "id": 990003,
+    "ticketId": 420002,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Progresso",
+    "newValue": "Resolvido",
+    "description": "Status alterado de \"Em Progresso\" para \"Resolvido\"",
+    "createdAt": 1772106228791
+  },
+  {
+    "id": 990004,
+    "ticketId": 420002,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1772106240210
+  },
+  {
+    "id": 1020001,
+    "ticketId": 810001,
+    "type": "created",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mauricio Ramos",
+    "createdAt": 1772128104513
+  },
+  {
+    "id": 1020002,
+    "ticketId": 420003,
+    "type": "comment",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Daniel TI",
+    "createdAt": 1772130269892
+  },
+  {
+    "id": 1020003,
+    "ticketId": 420003,
+    "type": "status_change",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Em Progresso",
+    "newValue": "Fechado",
+    "description": "Status alterado de \"Em Progresso\" para \"Fechado\"",
+    "createdAt": 1772133736934
+  },
+  {
+    "id": 1020004,
+    "ticketId": 420003,
+    "type": "comment",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Gabriel Bino",
+    "createdAt": 1772134083244
+  },
+  {
+    "id": 1020005,
+    "ticketId": 420003,
+    "type": "assignment",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Daniel TI",
+    "newValue": "Gabriel Bino",
+    "description": "Responsável alterado para \"Gabriel Bino\"",
+    "createdAt": 1772134125233
+  },
+  {
+    "id": 1020006,
+    "ticketId": 810002,
+    "type": "created",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mauricio Ramos",
+    "createdAt": 1772137287610
   }
 ]

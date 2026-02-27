@@ -82,12 +82,12 @@
     "projectId": 390002,
     "title": "Gerar listas",
     "description": null,
-    "status": "Pendente",
+    "status": "Concluída",
     "priority": "Alta",
     "assignedToId": null,
     "assignedToName": null,
     "dueDate": null,
-    "completedAt": null,
+    "completedAt": 1772124730430,
     "createdById": 300001,
     "createdByName": "Carlos TI",
     "points": 0,
@@ -101,7 +101,7 @@
     "updatedById": null,
     "updatedByName": null,
     "createdAt": 1770916853658,
-    "updatedAt": 1770916853658
+    "updatedAt": 1772124730430
   },
   {
     "id": 90001,

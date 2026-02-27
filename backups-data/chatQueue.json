@@ -238,5 +238,21 @@
     "enteredAt": 1770409898589,
     "acceptedAt": null,
     "completedAt": null
+  },
+  {
+    "id": 120001,
+    "userId": 240039,
+    "userName": "Monique",
+    "conversationId": null,
+    "ticketId": null,
+    "position": 1,
+    "status": "waiting",
+    "assignedOperatorId": null,
+    "assignedOperatorName": null,
+    "initialMessage": null,
+    "priority": "normal",
+    "enteredAt": 1772106823305,
+    "acceptedAt": null,
+    "completedAt": null
   }
 ]

@@ -79,5 +79,14 @@
     "content": "@Teo, Finalizado",
     "mentions": "[90001]",
     "createdAt": 1771932961997
+  },
+  {
+    "id": 210002,
+    "projectId": 330001,
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "content": "@Teo, amanhã (27/02) será validado o resultado da execução mais recente da automação junto com o setor de Compras. Caso a validação seja aprovada, a estimativa de entrega dessa versão será para iniciar em ambiente de produção já na segunda-feira (02/03).",
+    "mentions": "[90001]",
+    "createdAt": 1772139797693
   }
 ]
