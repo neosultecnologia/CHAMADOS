@@ -226,7 +226,7 @@
     "description": "Os PCs do recebimento ( devolução, SAC, e recebimento ) não conseguem acessar o site portal.neosul para solicitar \"CHAMADOS\"",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Em Progresso",
+    "status": "Resolvido",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -237,7 +237,7 @@
     "lastRespondentId": null,
     "lastRespondentName": null,
     "createdAt": 1771865670220,
-    "updatedAt": 1771960721666
+    "updatedAt": 1772212457252
   },
   {
     "id": 570037,
@@ -246,18 +246,18 @@
     "description": "Dani,\n \nAlinhado com o Cesar a migração dos email do Josiel e do Eduardo\n \nFavor migrar o eduardo para o email - gvscoeste@neosul\ne ativar o e-mail gvscnorte@neosul para o Josiel\n \nApós precisamos efetuar o comunicado aos mesmos e em geral para todos os coordenadores de setor / gerentes / gestores / sobre a mudança realizada.",
     "category": "Acesso",
     "priority": "Alta",
-    "status": "Aberto",
+    "status": "Resolvido",
     "departmentId": 90006,
     "createdById": 570012,
     "createdByName": "Francielle Vieira Schmitz Bueno",
     "assignedToId": 300001,
     "assignedToName": "Carlos TI",
-    "waitingForDepartment": "Comercial",
-    "lastRespondentRole": "admin",
-    "lastRespondentId": 1,
-    "lastRespondentName": "Daniel TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
     "createdAt": 1771867976438,
-    "updatedAt": 1772053502568
+    "updatedAt": 1772225232317
   },
   {
     "id": 600001,
@@ -306,18 +306,18 @@
     "description": "Os novos logins do infarma, dos últimos colaboradores que entraram na empresa, estão com erro. Ao fechar o pedido, não aparece o login automaticamente pra pessoa digitar. Ele tem que ficar digitando manual e na hora de faturar, isso causa um travamento no faturamento, pois não aparece como na imagem anexada. tem que digita o separador e o faturador têm que digitar manualmente, assim travando tudo e demorando e atrasando o faturamento. E ao fecha pedido conferente não aparece o codigo",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Aberto",
+    "status": "Resolvido",
     "departmentId": 90004,
     "createdById": 540002,
     "createdByName": "ADHARA",
-    "assignedToId": null,
-    "assignedToName": null,
+    "assignedToId": 1,
+    "assignedToName": "Daniel TI",
     "waitingForDepartment": null,
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
     "createdAt": 1772054179101,
-    "updatedAt": 1772054179101
+    "updatedAt": 1772226043027
   },
   {
     "id": 810001,

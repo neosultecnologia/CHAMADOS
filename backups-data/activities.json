@@ -1164,5 +1164,82 @@
     "newValue": null,
     "description": "Chamado criado por Mauricio Ramos",
     "createdAt": 1772137287610
+  },
+  {
+    "id": 1050001,
+    "ticketId": 570001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Progresso",
+    "newValue": "Resolvido",
+    "description": "Status alterado de \"Em Progresso\" para \"Resolvido\"",
+    "createdAt": 1772212457207
+  },
+  {
+    "id": 1050002,
+    "ticketId": 570037,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Aberto",
+    "newValue": "Em Progresso",
+    "description": "Status alterado de \"Aberto\" para \"Em Progresso\"",
+    "createdAt": 1772218372946
+  },
+  {
+    "id": 1050003,
+    "ticketId": 570037,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Progresso",
+    "newValue": "Resolvido",
+    "description": "Status alterado de \"Em Progresso\" para \"Resolvido\"",
+    "createdAt": 1772225232273
+  },
+  {
+    "id": 1050004,
+    "ticketId": 780007,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Aberto",
+    "newValue": "Em Progresso",
+    "description": "Status alterado de \"Aberto\" para \"Em Progresso\"",
+    "createdAt": 1772225743870
+  },
+  {
+    "id": 1050005,
+    "ticketId": 780007,
+    "type": "assignment",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Daniel TI",
+    "description": "Responsável alterado para \"Daniel TI\"",
+    "createdAt": 1772225749846
+  },
+  {
+    "id": 1050006,
+    "ticketId": 780007,
+    "type": "comment",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Daniel TI",
+    "createdAt": 1772226040255
+  },
+  {
+    "id": 1050007,
+    "ticketId": 780007,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Em Progresso",
+    "newValue": "Resolvido",
+    "description": "Status alterado de \"Em Progresso\" para \"Resolvido\"",
+    "createdAt": 1772226042996
   }
 ]

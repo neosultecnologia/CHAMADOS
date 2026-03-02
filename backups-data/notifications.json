@@ -754,5 +754,89 @@
     "actionUrl": "/suporte/810002",
     "isRead": false,
     "createdAt": 1772137287693
+  },
+  {
+    "id": 300001,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido",
+    "referenceId": 570001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/570001",
+    "isRead": false,
+    "createdAt": 1772212457229
+  },
+  {
+    "id": 300002,
+    "userId": 570012,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Progresso",
+    "referenceId": 570037,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/570037",
+    "isRead": false,
+    "createdAt": 1772218372969
+  },
+  {
+    "id": 300003,
+    "userId": 570012,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido",
+    "referenceId": 570037,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/570037",
+    "isRead": false,
+    "createdAt": 1772225232295
+  },
+  {
+    "id": 300004,
+    "userId": 540002,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Progresso",
+    "referenceId": 780007,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/780007",
+    "isRead": false,
+    "createdAt": 1772225743886
+  },
+  {
+    "id": 300005,
+    "userId": 1,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Login infarma com erro - Urgente\"",
+    "referenceId": 780007,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/780007",
+    "isRead": true,
+    "createdAt": 1772225749897
+  },
+  {
+    "id": 300006,
+    "userId": 540002,
+    "type": "ticket_comment",
+    "title": "Resposta no Chamado",
+    "message": "Daniel TI respondeu seu chamado: \"Login infarma com erro - Urgente\"",
+    "referenceId": 780007,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/780007",
+    "isRead": false,
+    "createdAt": 1772226040333
+  },
+  {
+    "id": 300007,
+    "userId": 540002,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido",
+    "referenceId": 780007,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/780007",
+    "isRead": false,
+    "createdAt": 1772226043013
   }
 ]

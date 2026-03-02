@@ -18,7 +18,9 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770320539866,
-    "updatedAt": 1772134300650
+    "updatedAt": 1772450506421,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 240002,
@@ -39,7 +41,9 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770321106938,
-    "updatedAt": 1772136757064
+    "updatedAt": 1772450526800,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 300001,
@@ -60,7 +64,9 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770379305284,
-    "updatedAt": 1772136769489
+    "updatedAt": 1772136769489,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 300002,
@@ -81,7 +87,9 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770379518655,
-    "updatedAt": 1772134276159
+    "updatedAt": 1772134276159,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 300003,
@@ -102,7 +110,9 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770379839310,
-    "updatedAt": 1772134268754
+    "updatedAt": 1772134268754,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 300004,
@@ -123,7 +133,9 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770379986213,
-    "updatedAt": 1772134262026
+    "updatedAt": 1772450490022,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 300029,
@@ -144,7 +156,9 @@
     "updatedById": null,
     "updatedByName": null,
     "createdAt": 1770398267998,
-    "updatedAt": 1770398300637
+    "updatedAt": 1770398300637,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 330001,
@@ -165,7 +179,9 @@
     "updatedById": 60001,
     "updatedByName": "Gabriel Bino",
     "createdAt": 1770732632794,
-    "updatedAt": 1772139797733
+    "updatedAt": 1772450506435,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 330002,
@@ -186,7 +202,9 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770736376268,
-    "updatedAt": 1772137628698
+    "updatedAt": 1772137628698,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 360001,
@@ -207,7 +225,9 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770902542514,
-    "updatedAt": 1772134231807
+    "updatedAt": 1772450490037,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 360003,
@@ -219,7 +239,7 @@
     "ownerId": 300001,
     "ownerName": "Carlos TI",
     "sector": "TI",
-    "projectType": "Automação",
+    "projectType": "Ajustes",
     "startDate": null,
     "endDate": null,
     "progress": 0,
@@ -228,7 +248,9 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770904257152,
-    "updatedAt": 1772134221006
+    "updatedAt": 1772224865136,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 390001,
@@ -240,7 +262,7 @@
     "ownerId": 300001,
     "ownerName": "Carlos TI",
     "sector": "TI",
-    "projectType": "Automação",
+    "projectType": "Ajustes",
     "startDate": null,
     "endDate": null,
     "progress": 0,
@@ -249,7 +271,9 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770915757304,
-    "updatedAt": 1772134214844
+    "updatedAt": 1772224867507,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 390002,
@@ -261,7 +285,7 @@
     "ownerId": 300001,
     "ownerName": "Carlos TI",
     "sector": "TI",
-    "projectType": "Automação",
+    "projectType": "Ajustes",
     "startDate": null,
     "endDate": null,
     "progress": 0,
@@ -270,7 +294,9 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770916840527,
-    "updatedAt": 1772134209254
+    "updatedAt": 1772224869250,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 420005,
@@ -282,16 +308,18 @@
     "ownerId": 60001,
     "ownerName": "Gabriel Bino",
     "sector": "TI",
-    "projectType": "Interno",
+    "projectType": "Ajustes",
     "startDate": 1770951600000,
     "endDate": 1772074800000,
     "progress": 0,
     "createdById": 60001,
     "createdByName": "Gabriel Bino",
-    "updatedById": null,
-    "updatedByName": null,
+    "updatedById": 1,
+    "updatedByName": "Daniel TI",
     "createdAt": 1770985742755,
-    "updatedAt": 1771523398776
+    "updatedAt": 1772224892010,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 780001,
@@ -312,7 +340,9 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772122531913,
-    "updatedAt": 1772134174001
+    "updatedAt": 1772450506488,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 780002,
@@ -324,7 +354,7 @@
     "ownerId": 1,
     "ownerName": "Daniel TI",
     "sector": "Comercial",
-    "projectType": "Automação",
+    "projectType": "Ajustes",
     "startDate": 1772074800000,
     "endDate": 1774926000000,
     "progress": 0,
@@ -333,7 +363,9 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772122608174,
-    "updatedAt": 1772134167780
+    "updatedAt": 1772224875249,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 780003,
@@ -354,7 +386,9 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772122797910,
-    "updatedAt": 1772134160906
+    "updatedAt": 1772450506475,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 780004,
@@ -375,7 +409,9 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772122841047,
-    "updatedAt": 1772134155262
+    "updatedAt": 1772450506462,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 780005,
@@ -396,7 +432,9 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772122981317,
-    "updatedAt": 1772137209735
+    "updatedAt": 1772137209735,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 780006,
@@ -417,7 +455,9 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772123827682,
-    "updatedAt": 1772134133891
+    "updatedAt": 1772134133891,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 780007,
@@ -438,7 +478,9 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772124789351,
-    "updatedAt": 1772134124270
+    "updatedAt": 1772450506448,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 780008,
@@ -459,7 +501,9 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772127950780,
-    "updatedAt": 1772136779600
+    "updatedAt": 1772136779600,
+    "isBeingTreated": false,
+    "treatedByName": null
   },
   {
     "id": 780009,
@@ -480,6 +524,8 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772139095309,
-    "updatedAt": 1772139095309
+    "updatedAt": 1772225510707,
+    "isBeingTreated": false,
+    "treatedByName": null
   }
 ]

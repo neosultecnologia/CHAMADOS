@@ -182,5 +182,13 @@
     "authorName": "Gabriel Bino",
     "content": "@Márcia Freitas, abrimos um chamado no Infarma para corrigir o problema. Assim que a solução for disponibilizada, programaremos a atualização para resolver a situação definitivamente.",
     "createdAt": 1772134083244
+  },
+  {
+    "id": 570001,
+    "ticketId": 780007,
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "content": "Olá @ADHARA , perfil ajustados.",
+    "createdAt": 1772226040255
   }
 ]
