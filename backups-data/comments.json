@@ -190,5 +190,37 @@
     "authorName": "Daniel TI",
     "content": "Olá @ADHARA , perfil ajustados.",
     "createdAt": 1772226040255
+  },
+  {
+    "id": 600001,
+    "ticketId": 600001,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "@ADHARA favor testar a funcionalidade novamente",
+    "createdAt": 1772458566072
+  },
+  {
+    "id": 600002,
+    "ticketId": 720001,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "Será respondido no outro chamado",
+    "createdAt": 1772459780832
+  },
+  {
+    "id": 630001,
+    "ticketId": 840001,
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "content": "Ficou acordado que a pessoa responsável pelo e-mail irá remover as mensagens de forma manual, para evitar a perda de mensagens importantes.",
+    "createdAt": 1772485181208
+  },
+  {
+    "id": 660001,
+    "ticketId": 600001,
+    "authorId": 540002,
+    "authorName": "ADHARA",
+    "content": "funcionando\n",
+    "createdAt": 1772573592111
   }
 ]

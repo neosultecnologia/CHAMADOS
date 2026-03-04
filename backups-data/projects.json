@@ -2,7 +2,7 @@
   {
     "id": 240001,
     "projectId": "proj_1",
-    "name": "Conciliação bancaria - Financeiro",
+    "name": "Conciliação bancaria automação",
     "description": "Automação - Conciliação financeiro a pagar",
     "status": "Planejamento",
     "priority": "Média",
@@ -10,17 +10,19 @@
     "ownerName": "Daniel TI",
     "sector": "Financeiro",
     "projectType": "Automação",
-    "startDate": 1770346800000,
-    "endDate": 1772247600000,
-    "progress": 0,
+    "startDate": 1772506800000,
+    "endDate": 1774580400000,
+    "progress": 50,
     "createdById": 1,
     "createdByName": "Daniel TI",
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770320539866,
-    "updatedAt": 1772450506421,
-    "isBeingTreated": false,
-    "treatedByName": null
+    "updatedAt": 1772624581568,
+    "kanbanOrder": 1000,
+    "isBeingTreated": true,
+    "treatedByName": "Daniel TI",
+    "treatedAt": 1772623641986
   },
   {
     "id": 240002,
@@ -32,7 +34,7 @@
     "ownerId": 1,
     "ownerName": "Daniel TI",
     "sector": "TI",
-    "projectType": "Interno",
+    "projectType": "Desenvolvimento",
     "startDate": null,
     "endDate": null,
     "progress": 80,
@@ -41,9 +43,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770321106938,
-    "updatedAt": 1772450526800,
-    "isBeingTreated": false,
-    "treatedByName": null
+    "updatedAt": 1772456744820,
+    "kanbanOrder": 1000,
+    "isBeingTreated": true,
+    "treatedByName": "Daniel TI",
+    "treatedAt": 1772456744820
   },
   {
     "id": 300001,
@@ -55,7 +59,7 @@
     "ownerId": 1,
     "ownerName": "Daniel TI",
     "sector": "TI",
-    "projectType": "Interno",
+    "projectType": "Desenvolvimento",
     "startDate": 1764558000000,
     "endDate": 1777518000000,
     "progress": 50,
@@ -64,9 +68,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770379305284,
-    "updatedAt": 1772136769489,
+    "updatedAt": 1772454811720,
+    "kanbanOrder": 1007,
     "isBeingTreated": false,
-    "treatedByName": null
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 300002,
@@ -88,8 +94,10 @@
     "updatedByName": "Daniel TI",
     "createdAt": 1770379518655,
     "updatedAt": 1772134276159,
+    "kanbanOrder": 2003,
     "isBeingTreated": false,
-    "treatedByName": null
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 300003,
@@ -111,8 +119,10 @@
     "updatedByName": "Daniel TI",
     "createdAt": 1770379839310,
     "updatedAt": 1772134268754,
+    "kanbanOrder": 2002,
     "isBeingTreated": false,
-    "treatedByName": null
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 300004,
@@ -130,12 +140,14 @@
     "progress": 50,
     "createdById": 1,
     "createdByName": "Daniel TI",
-    "updatedById": 1,
-    "updatedByName": "Daniel TI",
+    "updatedById": 60001,
+    "updatedByName": "Gabriel Bino",
     "createdAt": 1770379986213,
-    "updatedAt": 1772450490022,
-    "isBeingTreated": false,
-    "treatedByName": null
+    "updatedAt": 1772571398897,
+    "kanbanOrder": 2001,
+    "isBeingTreated": true,
+    "treatedByName": "Gabriel Bino",
+    "treatedAt": 1772571398897
   },
   {
     "id": 300029,
@@ -147,7 +159,7 @@
     "ownerId": 1,
     "ownerName": "Daniel TI",
     "sector": "TI",
-    "projectType": "Interno",
+    "projectType": "Desenvolvimento",
     "startDate": 1770260400000,
     "endDate": 1772247600000,
     "progress": 0,
@@ -156,9 +168,11 @@
     "updatedById": null,
     "updatedByName": null,
     "createdAt": 1770398267998,
-    "updatedAt": 1770398300637,
+    "updatedAt": 1772454811706,
+    "kanbanOrder": 1006,
     "isBeingTreated": false,
-    "treatedByName": null
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 330001,
@@ -179,9 +193,11 @@
     "updatedById": 60001,
     "updatedByName": "Gabriel Bino",
     "createdAt": 1770732632794,
-    "updatedAt": 1772450506435,
+    "updatedAt": 1772624581584,
+    "kanbanOrder": 1001,
     "isBeingTreated": false,
-    "treatedByName": null
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 330002,
@@ -193,7 +209,7 @@
     "ownerId": 60001,
     "ownerName": "Gabriel Bino",
     "sector": "TI",
-    "projectType": "Interno",
+    "projectType": "Desenvolvimento",
     "startDate": 1766458800000,
     "endDate": 1774926000000,
     "progress": 80,
@@ -202,9 +218,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770736376268,
-    "updatedAt": 1772137628698,
+    "updatedAt": 1772454811690,
+    "kanbanOrder": 1005,
     "isBeingTreated": false,
-    "treatedByName": null
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 360001,
@@ -225,9 +243,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770902542514,
-    "updatedAt": 1772450490037,
-    "isBeingTreated": false,
-    "treatedByName": null
+    "updatedAt": 1772565043645,
+    "kanbanOrder": 2000,
+    "isBeingTreated": true,
+    "treatedByName": "Daniel TI",
+    "treatedAt": 1772467394364
   },
   {
     "id": 360003,
@@ -248,9 +268,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770904257152,
-    "updatedAt": 1772224865136,
+    "updatedAt": 1772624629154,
+    "kanbanOrder": 4005,
     "isBeingTreated": false,
-    "treatedByName": null
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 390001,
@@ -271,9 +293,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770915757304,
-    "updatedAt": 1772224867507,
+    "updatedAt": 1772624629138,
+    "kanbanOrder": 4004,
     "isBeingTreated": false,
-    "treatedByName": null
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 390002,
@@ -294,9 +318,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770916840527,
-    "updatedAt": 1772224869250,
+    "updatedAt": 1772624629122,
+    "kanbanOrder": 4003,
     "isBeingTreated": false,
-    "treatedByName": null
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 420005,
@@ -317,9 +343,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770985742755,
-    "updatedAt": 1772224892010,
+    "updatedAt": 1772624631240,
+    "kanbanOrder": 4000,
     "isBeingTreated": false,
-    "treatedByName": null
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 780001,
@@ -340,9 +368,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772122531913,
-    "updatedAt": 1772450506488,
+    "updatedAt": 1772624581647,
+    "kanbanOrder": 1005,
     "isBeingTreated": false,
-    "treatedByName": null
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 780002,
@@ -363,9 +393,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772122608174,
-    "updatedAt": 1772224875249,
+    "updatedAt": 1772624629104,
+    "kanbanOrder": 4002,
     "isBeingTreated": false,
-    "treatedByName": null
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 780003,
@@ -386,9 +418,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772122797910,
-    "updatedAt": 1772450506475,
+    "updatedAt": 1772624581632,
+    "kanbanOrder": 1004,
     "isBeingTreated": false,
-    "treatedByName": null
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 780004,
@@ -409,9 +443,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772122841047,
-    "updatedAt": 1772450506462,
+    "updatedAt": 1772624581616,
+    "kanbanOrder": 1003,
     "isBeingTreated": false,
-    "treatedByName": null
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 780005,
@@ -423,7 +459,7 @@
     "ownerId": 1,
     "ownerName": "Daniel TI",
     "sector": "Comercial",
-    "projectType": "Interno",
+    "projectType": "Desenvolvimento",
     "startDate": 1772074800000,
     "endDate": 1774926000000,
     "progress": 0,
@@ -432,9 +468,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772122981317,
-    "updatedAt": 1772137209735,
+    "updatedAt": 1772454811676,
+    "kanbanOrder": 1004,
     "isBeingTreated": false,
-    "treatedByName": null
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 780006,
@@ -446,7 +484,7 @@
     "ownerId": 1,
     "ownerName": "Daniel TI",
     "sector": "TI",
-    "projectType": "Interno",
+    "projectType": "Desenvolvimento",
     "startDate": 1769914800000,
     "endDate": 1780196400000,
     "progress": 50,
@@ -455,9 +493,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772123827682,
-    "updatedAt": 1772134133891,
+    "updatedAt": 1772454811662,
+    "kanbanOrder": 1003,
     "isBeingTreated": false,
-    "treatedByName": null
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 780007,
@@ -478,9 +518,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772124789351,
-    "updatedAt": 1772450506448,
+    "updatedAt": 1772624581602,
+    "kanbanOrder": 1002,
     "isBeingTreated": false,
-    "treatedByName": null
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 780008,
@@ -492,7 +534,7 @@
     "ownerId": 1,
     "ownerName": "Daniel TI",
     "sector": "Comercial",
-    "projectType": "Interno",
+    "projectType": "Desenvolvimento",
     "startDate": 1771470000000,
     "endDate": 1774926000000,
     "progress": 0,
@@ -501,9 +543,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772127950780,
-    "updatedAt": 1772136779600,
+    "updatedAt": 1772454811644,
+    "kanbanOrder": 1002,
     "isBeingTreated": false,
-    "treatedByName": null
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 780009,
@@ -515,7 +559,7 @@
     "ownerId": 1,
     "ownerName": "Daniel TI",
     "sector": "TI",
-    "projectType": "Interno",
+    "projectType": "Desenvolvimento",
     "startDate": null,
     "endDate": null,
     "progress": 0,
@@ -524,8 +568,35 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772139095309,
-    "updatedAt": 1772225510707,
+    "updatedAt": 1772454811630,
+    "kanbanOrder": 1001,
     "isBeingTreated": false,
-    "treatedByName": null
+    "treatedByName": null,
+    "treatedAt": null
+  },
+  {
+    "id": 810001,
+    "projectId": "proj_24",
+    "name": "Conciliacao bancaria",
+    "description": "Erro no calculo na conta 136 SC dia 23/07/2025",
+    "status": "Planejamento",
+    "priority": "Média",
+    "ownerId": 1,
+    "ownerName": "Daniel TI",
+    "sector": "TI",
+    "projectType": "Ajustes",
+    "startDate": 1772506800000,
+    "endDate": 1774580400000,
+    "progress": 50,
+    "createdById": 1,
+    "createdByName": "Daniel TI",
+    "updatedById": 1,
+    "updatedByName": "Daniel TI",
+    "createdAt": 1772565204717,
+    "updatedAt": 1772624629088,
+    "kanbanOrder": 4001,
+    "isBeingTreated": false,
+    "treatedByName": null,
+    "treatedAt": null
   }
 ]

@@ -1241,5 +1241,203 @@
     "newValue": "Resolvido",
     "description": "Status alterado de \"Em Progresso\" para \"Resolvido\"",
     "createdAt": 1772226042996
+  },
+  {
+    "id": 1080001,
+    "ticketId": 600001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Aberto",
+    "newValue": "Em Progresso",
+    "description": "Status alterado de \"Aberto\" para \"Em Progresso\"",
+    "createdAt": 1772458365099
+  },
+  {
+    "id": 1080002,
+    "ticketId": 600001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1772458367863
+  },
+  {
+    "id": 1080003,
+    "ticketId": 600001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Progresso",
+    "newValue": "Aguardando",
+    "description": "Status alterado de \"Em Progresso\" para \"Aguardando\"",
+    "createdAt": 1772458536195
+  },
+  {
+    "id": 1080004,
+    "ticketId": 600001,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1772458566072
+  },
+  {
+    "id": 1080005,
+    "ticketId": 720001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Aberto",
+    "newValue": "Fechado",
+    "description": "Status alterado de \"Aberto\" para \"Fechado\"",
+    "createdAt": 1772459763688
+  },
+  {
+    "id": 1080006,
+    "ticketId": 720001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1772459767534
+  },
+  {
+    "id": 1080007,
+    "ticketId": 720001,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1772459780832
+  },
+  {
+    "id": 1110001,
+    "ticketId": 840001,
+    "type": "created",
+    "authorId": 360002,
+    "authorName": "Renata Sousa",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Renata Sousa",
+    "createdAt": 1772484250915
+  },
+  {
+    "id": 1110002,
+    "ticketId": 840001,
+    "type": "status_change",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Aberto",
+    "newValue": "Em Progresso",
+    "description": "Status alterado de \"Aberto\" para \"Em Progresso\"",
+    "createdAt": 1772484461271
+  },
+  {
+    "id": 1110003,
+    "ticketId": 840001,
+    "type": "assignment",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Não atribuído",
+    "newValue": "Gabriel Bino",
+    "description": "Responsável alterado para \"Gabriel Bino\"",
+    "createdAt": 1772484468014
+  },
+  {
+    "id": 1110004,
+    "ticketId": 840001,
+    "type": "comment",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Gabriel Bino",
+    "createdAt": 1772485181208
+  },
+  {
+    "id": 1110005,
+    "ticketId": 840001,
+    "type": "status_change",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Em Progresso",
+    "newValue": "Resolvido",
+    "description": "Status alterado de \"Em Progresso\" para \"Resolvido\"",
+    "createdAt": 1772485185289
+  },
+  {
+    "id": 1140001,
+    "ticketId": 870001,
+    "type": "created",
+    "authorId": 240039,
+    "authorName": "Monique",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Monique",
+    "createdAt": 1772560540693
+  },
+  {
+    "id": 1140002,
+    "ticketId": 870001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1772561129891
+  },
+  {
+    "id": 1140003,
+    "ticketId": 870001,
+    "type": "status_change",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Aberto",
+    "newValue": "Em Progresso",
+    "description": "Status alterado de \"Aberto\" para \"Em Progresso\"",
+    "createdAt": 1772561172258
+  },
+  {
+    "id": 1140004,
+    "ticketId": 870001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Progresso",
+    "newValue": "Resolvido",
+    "description": "Status alterado de \"Em Progresso\" para \"Resolvido\"",
+    "createdAt": 1772561379678
+  },
+  {
+    "id": 1170001,
+    "ticketId": 900001,
+    "type": "created",
+    "authorId": 540002,
+    "authorName": "ADHARA",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por ADHARA",
+    "createdAt": 1772570358272
+  },
+  {
+    "id": 1200001,
+    "ticketId": 600001,
+    "type": "comment",
+    "authorId": 540002,
+    "authorName": "ADHARA",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por ADHARA",
+    "createdAt": 1772573592111
   }
 ]
