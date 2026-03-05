@@ -1439,5 +1439,192 @@
     "newValue": null,
     "description": "Comentário adicionado por ADHARA",
     "createdAt": 1772573592111
+  },
+  {
+    "id": 1230001,
+    "ticketId": 870001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Análise",
+    "newValue": "Resolvido",
+    "description": "Status alterado de \"Em Análise\" para \"Resolvido\"",
+    "createdAt": 1772637544485
+  },
+  {
+    "id": 1230002,
+    "ticketId": 870001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Análise",
+    "newValue": "Resolvido",
+    "description": "Status alterado de \"Em Análise\" para \"Resolvido\"",
+    "createdAt": 1772637545754
+  },
+  {
+    "id": 1230003,
+    "ticketId": 870001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Análise",
+    "newValue": "Resolvido",
+    "description": "Status alterado de \"Em Análise\" para \"Resolvido\"",
+    "createdAt": 1772637548619
+  },
+  {
+    "id": 1230004,
+    "ticketId": 420003,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Pendente Infarma",
+    "newValue": "Novos",
+    "description": "Status alterado de \"Pendente Infarma\" para \"Novos\"",
+    "createdAt": 1772641805678
+  },
+  {
+    "id": 1230005,
+    "ticketId": 720001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Pendente Infarma",
+    "newValue": "Novos",
+    "description": "Status alterado de \"Pendente Infarma\" para \"Novos\"",
+    "createdAt": 1772641809404
+  },
+  {
+    "id": 1230006,
+    "ticketId": 420003,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Novos",
+    "newValue": "Em Análise",
+    "description": "Status alterado de \"Novos\" para \"Em Análise\"",
+    "createdAt": 1772642423526
+  },
+  {
+    "id": 1230007,
+    "ticketId": 900001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Novos",
+    "newValue": "Concluído",
+    "description": "Status alterado de \"Novos\" para \"Concluído\"",
+    "createdAt": 1772643705951
+  },
+  {
+    "id": 1230008,
+    "ticketId": 900001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Concluído",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Concluído\" para \"Em Andamento\"",
+    "createdAt": 1772644019172
+  },
+  {
+    "id": 1230009,
+    "ticketId": 600001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Pendente Cliente",
+    "newValue": "Em Análise",
+    "description": "Status alterado de \"Pendente Cliente\" para \"Em Análise\"",
+    "createdAt": 1772644036222
+  },
+  {
+    "id": 1230010,
+    "ticketId": 600001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Em Análise",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Em Análise\" para \"Em Andamento\"",
+    "createdAt": 1772644040590
+  },
+  {
+    "id": 1230011,
+    "ticketId": 600001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Em Análise",
+    "description": "Status alterado de \"Em Andamento\" para \"Em Análise\"",
+    "createdAt": 1772644046501
+  },
+  {
+    "id": 1230012,
+    "ticketId": 210023,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Em Análise",
+    "description": "Status alterado de \"Em Andamento\" para \"Em Análise\"",
+    "createdAt": 1772645096885
+  },
+  {
+    "id": 1230013,
+    "ticketId": 600001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Em Análise",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Em Análise\" para \"Em Andamento\"",
+    "createdAt": 1772646485605
+  },
+  {
+    "id": 1230014,
+    "ticketId": 870001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Em Análise",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Em Análise\" para \"Em Andamento\"",
+    "createdAt": 1772646493895
+  },
+  {
+    "id": 1230015,
+    "ticketId": 900001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Pendente Cliente",
+    "description": "Status alterado de \"Em Andamento\" para \"Pendente Cliente\"",
+    "createdAt": 1772647708157
+  },
+  {
+    "id": 1230016,
+    "ticketId": 900001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Pendente Cliente",
+    "newValue": "Em Análise",
+    "description": "Status alterado de \"Pendente Cliente\" para \"Em Análise\"",
+    "createdAt": 1772648522840
+  },
+  {
+    "id": 1230017,
+    "ticketId": 900001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Em Análise",
+    "newValue": "Pendente Cliente",
+    "description": "Status alterado de \"Em Análise\" para \"Pendente Cliente\"",
+    "createdAt": 1772649109710
   }
 ]

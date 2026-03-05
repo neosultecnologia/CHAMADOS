@@ -243,16 +243,16 @@
     "id": 120001,
     "userId": 240039,
     "userName": "Monique",
-    "conversationId": null,
+    "conversationId": 90001,
     "ticketId": null,
     "position": 1,
-    "status": "waiting",
-    "assignedOperatorId": null,
-    "assignedOperatorName": null,
+    "status": "completed",
+    "assignedOperatorId": 1,
+    "assignedOperatorName": "Daniel TI",
     "initialMessage": null,
     "priority": "normal",
     "enteredAt": 1772106823305,
-    "acceptedAt": null,
-    "completedAt": null
+    "acceptedAt": 1772645719855,
+    "completedAt": 1772645727758
   }
 ]
