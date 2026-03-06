@@ -143,11 +143,11 @@
     "updatedById": 60001,
     "updatedByName": "Gabriel Bino",
     "createdAt": 1770379986213,
-    "updatedAt": 1772571398897,
+    "updatedAt": 1772717080877,
     "kanbanOrder": 2001,
-    "isBeingTreated": true,
-    "treatedByName": "Gabriel Bino",
-    "treatedAt": 1772571398897
+    "isBeingTreated": false,
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 300029,
@@ -193,11 +193,11 @@
     "updatedById": 60001,
     "updatedByName": "Gabriel Bino",
     "createdAt": 1770732632794,
-    "updatedAt": 1772624581584,
+    "updatedAt": 1772717122724,
     "kanbanOrder": 1001,
-    "isBeingTreated": false,
-    "treatedByName": null,
-    "treatedAt": null
+    "isBeingTreated": true,
+    "treatedByName": "Gabriel Bino",
+    "treatedAt": 1772717122724
   },
   {
     "id": 330002,

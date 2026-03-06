@@ -1626,5 +1626,38 @@
     "newValue": "Pendente Cliente",
     "description": "Status alterado de \"Em Análise\" para \"Pendente Cliente\"",
     "createdAt": 1772649109710
+  },
+  {
+    "id": 1260001,
+    "ticketId": 930001,
+    "type": "created",
+    "authorId": 540003,
+    "authorName": "Beatriz do Nascimento de Sousa ",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Beatriz do Nascimento de Sousa ",
+    "createdAt": 1772737190393
+  },
+  {
+    "id": 1290001,
+    "ticketId": 420003,
+    "type": "status_change",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Em Análise",
+    "newValue": "Pendente Infarma",
+    "description": "Status alterado de \"Em Análise\" para \"Pendente Infarma\"",
+    "createdAt": 1772743850162
+  },
+  {
+    "id": 1290002,
+    "ticketId": 840001,
+    "type": "status_change",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Em Análise",
+    "newValue": "Concluído",
+    "description": "Status alterado de \"Em Análise\" para \"Concluído\"",
+    "createdAt": 1772743877181
   }
 ]

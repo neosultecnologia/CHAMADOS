@@ -260,7 +260,7 @@
     "referenceId": 600001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/600001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1771873333468
   },
   {
@@ -800,7 +800,7 @@
     "referenceId": 780007,
     "referenceType": "ticket",
     "actionUrl": "/suporte/780007",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1772225743886
   },
   {
@@ -812,7 +812,7 @@
     "referenceId": 780007,
     "referenceType": "ticket",
     "actionUrl": "/suporte/780007",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1772226040333
   },
   {
@@ -824,7 +824,7 @@
     "referenceId": 780007,
     "referenceType": "ticket",
     "actionUrl": "/suporte/780007",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1772226043013
   },
   {
@@ -836,7 +836,7 @@
     "referenceId": 600001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/600001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1772458365131
   },
   {
@@ -860,7 +860,7 @@
     "referenceId": 600001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/600001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1772458536217
   },
   {
@@ -872,7 +872,7 @@
     "referenceId": 600001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/600001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1772458566173
   },
   {
@@ -1208,7 +1208,7 @@
     "referenceId": 900001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/900001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1772643705976
   },
   {
@@ -1220,7 +1220,7 @@
     "referenceId": 900001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/900001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1772644019189
   },
   {
@@ -1232,7 +1232,7 @@
     "referenceId": 600001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/600001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1772644036239
   },
   {
@@ -1244,7 +1244,7 @@
     "referenceId": 600001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/600001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1772644040607
   },
   {
@@ -1256,7 +1256,7 @@
     "referenceId": 600001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/600001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1772644046515
   },
   {
@@ -1280,7 +1280,7 @@
     "referenceId": 600001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/600001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1772646485633
   },
   {
@@ -1304,7 +1304,7 @@
     "referenceId": 900001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/900001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1772647708171
   },
   {
@@ -1316,7 +1316,7 @@
     "referenceId": 900001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/900001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1772648522860
   },
   {
@@ -1328,7 +1328,79 @@
     "referenceId": 900001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/900001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1772649109728
+  },
+  {
+    "id": 510001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Beatriz do Nascimento de Sousa  abriu um novo chamado: \"ESPELHAMENTO DE LOGIN\"",
+    "referenceId": 930001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/930001",
+    "isRead": false,
+    "createdAt": 1772737190480
+  },
+  {
+    "id": 510002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Beatriz do Nascimento de Sousa  abriu um novo chamado: \"ESPELHAMENTO DE LOGIN\"",
+    "referenceId": 930001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/930001",
+    "isRead": false,
+    "createdAt": 1772737190511
+  },
+  {
+    "id": 510003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Beatriz do Nascimento de Sousa  abriu um novo chamado: \"ESPELHAMENTO DE LOGIN\"",
+    "referenceId": 930001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/930001",
+    "isRead": false,
+    "createdAt": 1772737190531
+  },
+  {
+    "id": 510004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Beatriz do Nascimento de Sousa  abriu um novo chamado: \"ESPELHAMENTO DE LOGIN\"",
+    "referenceId": 930001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/930001",
+    "isRead": true,
+    "createdAt": 1772737190553
+  },
+  {
+    "id": 540001,
+    "userId": 630282,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Pendente Infarma",
+    "referenceId": 420003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/420003",
+    "isRead": false,
+    "createdAt": 1772743850193
+  },
+  {
+    "id": 540002,
+    "userId": 360002,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Concluído",
+    "referenceId": 840001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/840001",
+    "isRead": false,
+    "createdAt": 1772743877200
   }
 ]

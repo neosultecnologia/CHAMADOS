@@ -6,7 +6,7 @@
     "description": "Boa tarde,\n\nGostaria de solicitar analise do meu notebook, quando é necessário participar de reunião on-line o mesmo trava, sendo necessário após o fim da reunião reiniciar o computador.\n\nGrata ",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Resolvido",
+    "status": "Em Análise",
     "departmentId": 17,
     "createdById": 240039,
     "createdByName": "Monique",
@@ -16,8 +16,9 @@
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
+    "order": 14,
     "createdAt": 1770320755920,
-    "updatedAt": 1770811218105
+    "updatedAt": 1772646490025
   },
   {
     "id": 150001,
@@ -26,7 +27,7 @@
     "description": "Não estou conseguindo receber e-mails, já fiz a exclusão dos de e-mails antigos, mas ainda assim consta com 100% de uso.",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Resolvido",
+    "status": "Em Análise",
     "departmentId": 17,
     "createdById": 300002,
     "createdByName": "JULIA.S",
@@ -36,8 +37,9 @@
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
+    "order": 13,
     "createdAt": 1770380717589,
-    "updatedAt": 1770731878748
+    "updatedAt": 1772646490011
   },
   {
     "id": 210004,
@@ -46,7 +48,7 @@
     "description": "Conforme conversamos e já estamos vindo desde ano passado com nossos computadores apresentando vários problemas de lentidão, travamento de aplicativos (no caso Excel quando abre 2 planilhas junto, trava tudo, levando tempo de demanda alta para execução de tarefas), o computador do DP por vezes desliga sozinho quando abre mais de 1 planilha junto,  O do RH essa semana saiu fora do ar a tela, ficando sem visualização. E o teclado do meu PC (RH) está com problemas na barra de espaço.\n \nPara isso solicitamos que verifique a possibilidade de troca dos mesmos.   ",
     "category": "Outro",
     "priority": "Média",
-    "status": "Em Progresso",
+    "status": "Em Andamento",
     "departmentId": 17,
     "createdById": 570012,
     "createdByName": "Francielle Vieira Schmitz Bueno",
@@ -56,6 +58,7 @@
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
+    "order": 0,
     "createdAt": 1770986731983,
     "updatedAt": 1770990311357
   },
@@ -66,7 +69,7 @@
     "description": "Solicitamos a troca do Nobreak do computador do DP, pelo que esta aqui no computador  que era do administrativo, pois esse do DP não tem margem de tempo em queda de eenrgia",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Em Progresso",
+    "status": "Em Análise",
     "departmentId": 17,
     "createdById": 570012,
     "createdByName": "Francielle Vieira Schmitz Bueno",
@@ -76,8 +79,9 @@
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
+    "order": 12,
     "createdAt": 1770988191012,
-    "updatedAt": 1770990195636
+    "updatedAt": 1772646490008
   },
   {
     "id": 300049,
@@ -86,7 +90,7 @@
     "description": "Precisamos que o login dos seguintes colaboradores:\n* LEONARDO OLIVEIRA RIBEIRO\n* KEURIANE BRAGA DA SILVA\nSeja espelhado no login da colaboradora:\nVANESSA APARECIDA LUDKE\n",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Resolvido",
+    "status": "Em Análise",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -96,8 +100,9 @@
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
+    "order": 11,
     "createdAt": 1771281502583,
-    "updatedAt": 1771503983133
+    "updatedAt": 1772646489938
   },
   {
     "id": 300050,
@@ -106,7 +111,7 @@
     "description": "meu sistema Adhara tava liberado o F9 que faz poder mudar a quantidade de itens da conferencia e hoje fui utilizar e não deu. peço para ativar novamente tenho muitos pedidos p fecha manualmente e ter que digita código varias vezes demora muito ",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Resolvido",
+    "status": "Em Análise",
     "departmentId": 17,
     "createdById": 540002,
     "createdByName": "ADHARA",
@@ -116,8 +121,9 @@
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
+    "order": 10,
     "createdAt": 1771285785813,
-    "updatedAt": 1771515724316
+    "updatedAt": 1772646489937
   },
   {
     "id": 330001,
@@ -126,7 +132,7 @@
     "description": "Bom dia!\nPreciso do acesso para a pasta abaixo para ter acesso ao extrato da Swile\n\n\\\\192.168.64.220\\Dados\\03 - RH\\01 - NEOSUL S.A\\02 - DEPARTAMENTO PESSOAL\\05 - BENEFICIOS\\SWILE",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Resolvido",
+    "status": "Em Análise",
     "departmentId": 17,
     "createdById": 330001,
     "createdByName": "Luxane Peres Guimarães",
@@ -136,8 +142,9 @@
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
+    "order": 9,
     "createdAt": 1771418352468,
-    "updatedAt": 1771502258915
+    "updatedAt": 1772646490099
   },
   {
     "id": 390002,
@@ -146,7 +153,7 @@
     "description": "Trocar a Camila, para o lugar do marketing e o marketing para a mesa da porta.",
     "category": "Outro",
     "priority": "Baixa",
-    "status": "Resolvido",
+    "status": "Em Análise",
     "departmentId": 17,
     "createdById": 690001,
     "createdByName": "Caroline Borges batista",
@@ -156,8 +163,9 @@
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
+    "order": 8,
     "createdAt": 1771511418702,
-    "updatedAt": 1772043399313
+    "updatedAt": 1772646490026
   },
   {
     "id": 420002,
@@ -166,7 +174,7 @@
     "description": "Providenciar lider Picking\n1º notebook\n2º E-mail\n3º Teams\n",
     "category": "Outro",
     "priority": "Média",
-    "status": "Resolvido",
+    "status": "Em Análise",
     "departmentId": 17,
     "createdById": 1,
     "createdByName": "Daniel TI",
@@ -176,8 +184,9 @@
     "lastRespondentRole": "admin",
     "lastRespondentId": 300001,
     "lastRespondentName": "Carlos TI",
+    "order": 7,
     "createdAt": 1771518903335,
-    "updatedAt": 1772106240249
+    "updatedAt": 1772646490027
   },
   {
     "id": 420003,
@@ -186,18 +195,19 @@
     "description": "Por gentileza, verificar com Infarma a função cópia de pedido com troca de polícia não esta funcionando.  ",
     "category": "Funcionalidade",
     "priority": "Média",
-    "status": "Fechado",
+    "status": "Pendente Infarma",
     "departmentId": 90006,
     "createdById": 630282,
     "createdByName": "Márcia Freitas",
     "assignedToId": 60001,
     "assignedToName": "Gabriel Bino",
-    "waitingForDepartment": "Comercial",
-    "lastRespondentRole": "admin",
-    "lastRespondentId": 60001,
-    "lastRespondentName": "Gabriel Bino",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 6,
     "createdAt": 1771533938058,
-    "updatedAt": 1772134125268
+    "updatedAt": 1772743850232
   },
   {
     "id": 480001,
@@ -206,7 +216,7 @@
     "description": "Solicito acesso de  longin infarma dos funcionários novos. \n*Jhenifer Abdallah- conferencia - ref Fabiana Antunes \n*Maria Castro -conferencia - ref Fabiana Antunes \n*Paulo de Almeida - conferencia/caixa fechada- ref Fabiana Antunes/ Felipe De Oliveira\n*Diego Mattozo- conferencia/caixa fechada- ref Fabiana Antunes/ Felipe De Oliveira\n*Emanuel Richerd- conferencia/caixa fechada- ref Fabiana Antunes/ Felipe De Oliveira",
     "category": "Acesso",
     "priority": "Alta",
-    "status": "Resolvido",
+    "status": "Em Análise",
     "departmentId": 90004,
     "createdById": 540003,
     "createdByName": "Beatriz do Nascimento de Sousa ",
@@ -216,8 +226,9 @@
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
+    "order": 5,
     "createdAt": 1771607307815,
-    "updatedAt": 1771958869042
+    "updatedAt": 1772646490028
   },
   {
     "id": 570001,
@@ -226,7 +237,7 @@
     "description": "Os PCs do recebimento ( devolução, SAC, e recebimento ) não conseguem acessar o site portal.neosul para solicitar \"CHAMADOS\"",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Resolvido",
+    "status": "Em Análise",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -236,8 +247,9 @@
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
+    "order": 4,
     "createdAt": 1771865670220,
-    "updatedAt": 1772212457252
+    "updatedAt": 1772646490100
   },
   {
     "id": 570037,
@@ -246,7 +258,7 @@
     "description": "Dani,\n \nAlinhado com o Cesar a migração dos email do Josiel e do Eduardo\n \nFavor migrar o eduardo para o email - gvscoeste@neosul\ne ativar o e-mail gvscnorte@neosul para o Josiel\n \nApós precisamos efetuar o comunicado aos mesmos e em geral para todos os coordenadores de setor / gerentes / gestores / sobre a mudança realizada.",
     "category": "Acesso",
     "priority": "Alta",
-    "status": "Resolvido",
+    "status": "Em Análise",
     "departmentId": 90006,
     "createdById": 570012,
     "createdByName": "Francielle Vieira Schmitz Bueno",
@@ -256,8 +268,9 @@
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
+    "order": 3,
     "createdAt": 1771867976438,
-    "updatedAt": 1772225232317
+    "updatedAt": 1772646490028
   },
   {
     "id": 600001,
@@ -266,18 +279,19 @@
     "description": "meu login do infarma ADHARA não esta excluindo volume de outro usuário, sexta feira estava normal e hoje não liberou, preciso desse acesso pois faço os cortes de volume em divergência.",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Aberto",
+    "status": "Em Andamento",
     "departmentId": 90004,
     "createdById": 540002,
     "createdByName": "ADHARA",
-    "assignedToId": null,
-    "assignedToName": null,
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
     "waitingForDepartment": null,
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
+    "order": 0,
     "createdAt": 1771869750934,
-    "updatedAt": 1771869750934
+    "updatedAt": 1772646485650
   },
   {
     "id": 720001,
@@ -286,18 +300,19 @@
     "description": "O computador 04 da conferencia esta desligando sozinho durante processo.",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Aberto",
+    "status": "Novos",
     "departmentId": 90004,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
-    "assignedToId": null,
-    "assignedToName": null,
-    "waitingForDepartment": null,
-    "lastRespondentRole": null,
-    "lastRespondentId": null,
-    "lastRespondentName": null,
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": "Logistica",
+    "lastRespondentRole": "admin",
+    "lastRespondentId": 300001,
+    "lastRespondentName": "Carlos TI",
+    "order": 0,
     "createdAt": 1772028659135,
-    "updatedAt": 1772028659135
+    "updatedAt": 1772641809434
   },
   {
     "id": 780007,
@@ -306,7 +321,7 @@
     "description": "Os novos logins do infarma, dos últimos colaboradores que entraram na empresa, estão com erro. Ao fechar o pedido, não aparece o login automaticamente pra pessoa digitar. Ele tem que ficar digitando manual e na hora de faturar, isso causa um travamento no faturamento, pois não aparece como na imagem anexada. tem que digita o separador e o faturador têm que digitar manualmente, assim travando tudo e demorando e atrasando o faturamento. E ao fecha pedido conferente não aparece o codigo",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Resolvido",
+    "status": "Em Análise",
     "departmentId": 90004,
     "createdById": 540002,
     "createdByName": "ADHARA",
@@ -316,8 +331,9 @@
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
+    "order": 2,
     "createdAt": 1772054179101,
-    "updatedAt": 1772226043027
+    "updatedAt": 1772646490107
   },
   {
     "id": 810001,
@@ -326,7 +342,7 @@
     "description": "Precisamos de um leitor de códigos de barras para a devolução",
     "category": "Outro",
     "priority": "Média",
-    "status": "Aberto",
+    "status": "Novos",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -336,6 +352,7 @@
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
+    "order": 0,
     "createdAt": 1772128104513,
     "updatedAt": 1772128104513
   },
@@ -346,7 +363,7 @@
     "description": "PC 04 desliga sozinho, PC 07 trava e precisa ser reiniciado",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Aberto",
+    "status": "Novos",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -356,7 +373,92 @@
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
+    "order": 0,
     "createdAt": 1772137287610,
     "updatedAt": 1772137287610
+  },
+  {
+    "id": 840001,
+    "ticketId": "bilhete_810003",
+    "title": "E-MAIL COM PROBLEMAS",
+    "description": "Boa tarde, tudo bem?\nNão estou conseguindo receber e-mails, quem me envia recebe uma notificação que estou com a caixa de mensagem cheia. Não consigo logar no WEB pois, não tenho a senha do mesmo.",
+    "category": "Funcionalidade",
+    "priority": "Crítica",
+    "status": "Concluído",
+    "departmentId": 20,
+    "createdById": 360002,
+    "createdByName": "Renata Sousa",
+    "assignedToId": 60001,
+    "assignedToName": "Gabriel Bino",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1772484250915,
+    "updatedAt": 1772743877220
+  },
+  {
+    "id": 870001,
+    "ticketId": "bilhete_840002",
+    "title": "teclado",
+    "description": "Boa tarde, \n\nPoderiam verificar o meu teclado, por gentileza? Parou de funcionar.",
+    "category": "Técnico",
+    "priority": "Média",
+    "status": "Em Andamento",
+    "departmentId": 20,
+    "createdById": 240039,
+    "createdByName": "Monique",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 1,
+    "createdAt": 1772560540693,
+    "updatedAt": 1772646493925
+  },
+  {
+    "id": 900001,
+    "ticketId": "bilhete_870002",
+    "title": "sistema infarma travando e não fatura",
+    "description": "o sistema infarma esta apresentando a alguns dias já travamento e demoras de ate 8 min por NF atrasando e impossibilitado o processo tenho video do occorido mas não consigo anexar",
+    "category": "Técnico",
+    "priority": "Média",
+    "status": "Pendente Cliente",
+    "departmentId": 90004,
+    "createdById": 540002,
+    "createdByName": "ADHARA",
+    "assignedToId": null,
+    "assignedToName": null,
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1772570358272,
+    "updatedAt": 1772649109748
+  },
+  {
+    "id": 930001,
+    "ticketId": "bilhete_900002",
+    "title": "ESPELHAMENTO DE LOGIN",
+    "description": "Preciso que o login da Adrielly Coutinho Silva, seja espelhado no Login da Keuriane Braga da Silva.",
+    "category": "Técnico",
+    "priority": "Alta",
+    "status": "Novos",
+    "departmentId": 17,
+    "createdById": 540003,
+    "createdByName": "Beatriz do Nascimento de Sousa ",
+    "assignedToId": null,
+    "assignedToName": null,
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1772737190393,
+    "updatedAt": 1772737190393
   }
 ]

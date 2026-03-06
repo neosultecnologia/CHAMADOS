@@ -88,5 +88,14 @@
     "content": "@Teo, amanhã (27/02) será validado o resultado da execução mais recente da automação junto com o setor de Compras. Caso a validação seja aprovada, a estimativa de entrega dessa versão será para iniciar em ambiente de produção já na segunda-feira (02/03).",
     "mentions": "[90001]",
     "createdAt": 1772139797693
+  },
+  {
+    "id": 240001,
+    "projectId": 300004,
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "content": "Chamado encaminhado para análise pelo suporte Infarma. Motivo: erro na geração dos arquivos do estabelecimento 2.",
+    "mentions": null,
+    "createdAt": 1772717080821
   }
 ]
