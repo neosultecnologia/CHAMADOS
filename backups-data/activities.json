@@ -1659,5 +1659,16 @@
     "newValue": "Concluído",
     "description": "Status alterado de \"Em Análise\" para \"Concluído\"",
     "createdAt": 1772743877181
+  },
+  {
+    "id": 1320001,
+    "ticketId": 900001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Pendente Cliente",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Pendente Cliente\" para \"Em Andamento\"",
+    "createdAt": 1772814257501
   }
 ]

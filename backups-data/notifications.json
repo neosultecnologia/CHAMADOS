@@ -1092,18 +1092,6 @@
     "createdAt": 1772570358349
   },
   {
-    "id": 420003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "ADHARA abriu um novo chamado: \"sistema infarma travando e não fatura \"",
-    "referenceId": 900001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/900001",
-    "isRead": true,
-    "createdAt": 1772570358366
-  },
-  {
     "id": 420004,
     "userId": 60001,
     "type": "ticket_created",
@@ -1356,18 +1344,6 @@
     "createdAt": 1772737190511
   },
   {
-    "id": 510003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Beatriz do Nascimento de Sousa  abriu um novo chamado: \"ESPELHAMENTO DE LOGIN\"",
-    "referenceId": 930001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/930001",
-    "isRead": false,
-    "createdAt": 1772737190531
-  },
-  {
     "id": 510004,
     "userId": 60001,
     "type": "ticket_created",
@@ -1402,5 +1378,17 @@
     "actionUrl": "/suporte/840001",
     "isRead": false,
     "createdAt": 1772743877200
+  },
+  {
+    "id": 570001,
+    "userId": 540002,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 900001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/900001",
+    "isRead": false,
+    "createdAt": 1772814257522
   }
 ]
