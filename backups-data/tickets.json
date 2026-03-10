@@ -6,7 +6,7 @@
     "description": "Boa tarde,\n\nGostaria de solicitar analise do meu notebook, quando é necessário participar de reunião on-line o mesmo trava, sendo necessário após o fim da reunião reiniciar o computador.\n\nGrata ",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Em Análise",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 240039,
     "createdByName": "Monique",
@@ -18,7 +18,7 @@
     "lastRespondentName": null,
     "order": 14,
     "createdAt": 1770320755920,
-    "updatedAt": 1772646490025
+    "updatedAt": 1773055449949
   },
   {
     "id": 150001,
@@ -27,7 +27,7 @@
     "description": "Não estou conseguindo receber e-mails, já fiz a exclusão dos de e-mails antigos, mas ainda assim consta com 100% de uso.",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Em Análise",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 300002,
     "createdByName": "JULIA.S",
@@ -39,7 +39,7 @@
     "lastRespondentName": null,
     "order": 13,
     "createdAt": 1770380717589,
-    "updatedAt": 1772646490011
+    "updatedAt": 1773055454664
   },
   {
     "id": 210004,
@@ -90,7 +90,7 @@
     "description": "Precisamos que o login dos seguintes colaboradores:\n* LEONARDO OLIVEIRA RIBEIRO\n* KEURIANE BRAGA DA SILVA\nSeja espelhado no login da colaboradora:\nVANESSA APARECIDA LUDKE\n",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Em Análise",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -102,7 +102,7 @@
     "lastRespondentName": null,
     "order": 11,
     "createdAt": 1771281502583,
-    "updatedAt": 1772646489938
+    "updatedAt": 1773055464292
   },
   {
     "id": 300050,
@@ -111,7 +111,7 @@
     "description": "meu sistema Adhara tava liberado o F9 que faz poder mudar a quantidade de itens da conferencia e hoje fui utilizar e não deu. peço para ativar novamente tenho muitos pedidos p fecha manualmente e ter que digita código varias vezes demora muito ",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Em Análise",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540002,
     "createdByName": "ADHARA",
@@ -123,7 +123,7 @@
     "lastRespondentName": null,
     "order": 10,
     "createdAt": 1771285785813,
-    "updatedAt": 1772646489937
+    "updatedAt": 1773055469261
   },
   {
     "id": 330001,
@@ -132,7 +132,7 @@
     "description": "Bom dia!\nPreciso do acesso para a pasta abaixo para ter acesso ao extrato da Swile\n\n\\\\192.168.64.220\\Dados\\03 - RH\\01 - NEOSUL S.A\\02 - DEPARTAMENTO PESSOAL\\05 - BENEFICIOS\\SWILE",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Em Análise",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 330001,
     "createdByName": "Luxane Peres Guimarães",
@@ -144,7 +144,7 @@
     "lastRespondentName": null,
     "order": 9,
     "createdAt": 1771418352468,
-    "updatedAt": 1772646490099
+    "updatedAt": 1773055475644
   },
   {
     "id": 390002,
@@ -153,7 +153,7 @@
     "description": "Trocar a Camila, para o lugar do marketing e o marketing para a mesa da porta.",
     "category": "Outro",
     "priority": "Baixa",
-    "status": "Em Análise",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 690001,
     "createdByName": "Caroline Borges batista",
@@ -165,7 +165,7 @@
     "lastRespondentName": null,
     "order": 8,
     "createdAt": 1771511418702,
-    "updatedAt": 1772646490026
+    "updatedAt": 1773055497585
   },
   {
     "id": 420002,
@@ -174,7 +174,7 @@
     "description": "Providenciar lider Picking\n1º notebook\n2º E-mail\n3º Teams\n",
     "category": "Outro",
     "priority": "Média",
-    "status": "Em Análise",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 1,
     "createdByName": "Daniel TI",
@@ -186,7 +186,7 @@
     "lastRespondentName": "Carlos TI",
     "order": 7,
     "createdAt": 1771518903335,
-    "updatedAt": 1772646490027
+    "updatedAt": 1773055504486
   },
   {
     "id": 420003,
@@ -207,7 +207,7 @@
     "lastRespondentName": null,
     "order": 6,
     "createdAt": 1771533938058,
-    "updatedAt": 1772743850232
+    "updatedAt": 1773055523218
   },
   {
     "id": 480001,
@@ -216,7 +216,7 @@
     "description": "Solicito acesso de  longin infarma dos funcionários novos. \n*Jhenifer Abdallah- conferencia - ref Fabiana Antunes \n*Maria Castro -conferencia - ref Fabiana Antunes \n*Paulo de Almeida - conferencia/caixa fechada- ref Fabiana Antunes/ Felipe De Oliveira\n*Diego Mattozo- conferencia/caixa fechada- ref Fabiana Antunes/ Felipe De Oliveira\n*Emanuel Richerd- conferencia/caixa fechada- ref Fabiana Antunes/ Felipe De Oliveira",
     "category": "Acesso",
     "priority": "Alta",
-    "status": "Em Análise",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 540003,
     "createdByName": "Beatriz do Nascimento de Sousa ",
@@ -228,7 +228,7 @@
     "lastRespondentName": null,
     "order": 5,
     "createdAt": 1771607307815,
-    "updatedAt": 1772646490028
+    "updatedAt": 1773055535495
   },
   {
     "id": 570001,
@@ -258,7 +258,7 @@
     "description": "Dani,\n \nAlinhado com o Cesar a migração dos email do Josiel e do Eduardo\n \nFavor migrar o eduardo para o email - gvscoeste@neosul\ne ativar o e-mail gvscnorte@neosul para o Josiel\n \nApós precisamos efetuar o comunicado aos mesmos e em geral para todos os coordenadores de setor / gerentes / gestores / sobre a mudança realizada.",
     "category": "Acesso",
     "priority": "Alta",
-    "status": "Em Análise",
+    "status": "Concluído",
     "departmentId": 90006,
     "createdById": 570012,
     "createdByName": "Francielle Vieira Schmitz Bueno",
@@ -270,7 +270,7 @@
     "lastRespondentName": null,
     "order": 3,
     "createdAt": 1771867976438,
-    "updatedAt": 1772646490028
+    "updatedAt": 1773055547206
   },
   {
     "id": 600001,
@@ -405,7 +405,7 @@
     "description": "Boa tarde, \n\nPoderiam verificar o meu teclado, por gentileza? Parou de funcionar.",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Em Andamento",
+    "status": "Concluído",
     "departmentId": 20,
     "createdById": 240039,
     "createdByName": "Monique",
@@ -417,7 +417,7 @@
     "lastRespondentName": null,
     "order": 1,
     "createdAt": 1772560540693,
-    "updatedAt": 1772646493925
+    "updatedAt": 1773087831747
   },
   {
     "id": 900001,
@@ -426,7 +426,7 @@
     "description": "o sistema infarma esta apresentando a alguns dias já travamento e demoras de ate 8 min por NF atrasando e impossibilitado o processo tenho video do occorido mas não consigo anexar",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Pendente Cliente",
+    "status": "Em Andamento",
     "departmentId": 90004,
     "createdById": 540002,
     "createdByName": "ADHARA",
@@ -438,7 +438,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1772570358272,
-    "updatedAt": 1772649109748
+    "updatedAt": 1772814257543
   },
   {
     "id": 930001,
@@ -460,5 +460,47 @@
     "order": 0,
     "createdAt": 1772737190393,
     "updatedAt": 1772737190393
+  },
+  {
+    "id": 960001,
+    "ticketId": "bilhete_930002",
+    "title": "Liberar acesso no infarma - Recebimento",
+    "description": "Preciso que o usuário de Argelys Del Valle Cabello Foucault seja espelhado com o usuário de Kerolaine Morganti da Cruz, pois ela irá realizar as mesmas atividades.",
+    "category": "Acesso",
+    "priority": "Média",
+    "status": "Novos",
+    "departmentId": 90004,
+    "createdById": 1050001,
+    "createdByName": "Kerolaine Morgantti da Cruz",
+    "assignedToId": null,
+    "assignedToName": null,
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1773064182845,
+    "updatedAt": 1773064182845
+  },
+  {
+    "id": 990001,
+    "ticketId": "bilhete_960002",
+    "title": "TELEFONE FIXO RECEBIMENTO",
+    "description": "Bom dia Meninos, \n\nGentileza realizar a troca do telefone fixo do recebimento.",
+    "category": "Técnico",
+    "priority": "Média",
+    "status": "Novos",
+    "departmentId": 90004,
+    "createdById": 240039,
+    "createdByName": "Monique",
+    "assignedToId": null,
+    "assignedToName": null,
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1773144666548,
+    "updatedAt": 1773144666548
   }
 ]

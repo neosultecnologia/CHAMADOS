@@ -1670,5 +1670,159 @@
     "newValue": "Em Andamento",
     "description": "Status alterado de \"Pendente Cliente\" para \"Em Andamento\"",
     "createdAt": 1772814257501
+  },
+  {
+    "id": 1350001,
+    "ticketId": 90001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Em Análise",
+    "newValue": "Concluído",
+    "description": "Status alterado de \"Em Análise\" para \"Concluído\"",
+    "createdAt": 1773055449889
+  },
+  {
+    "id": 1350002,
+    "ticketId": 150001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Em Análise",
+    "newValue": "Concluído",
+    "description": "Status alterado de \"Em Análise\" para \"Concluído\"",
+    "createdAt": 1773055454626
+  },
+  {
+    "id": 1350003,
+    "ticketId": 300049,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Em Análise",
+    "newValue": "Concluído",
+    "description": "Status alterado de \"Em Análise\" para \"Concluído\"",
+    "createdAt": 1773055464255
+  },
+  {
+    "id": 1350004,
+    "ticketId": 300050,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Em Análise",
+    "newValue": "Concluído",
+    "description": "Status alterado de \"Em Análise\" para \"Concluído\"",
+    "createdAt": 1773055469218
+  },
+  {
+    "id": 1350005,
+    "ticketId": 330001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Em Análise",
+    "newValue": "Concluído",
+    "description": "Status alterado de \"Em Análise\" para \"Concluído\"",
+    "createdAt": 1773055475612
+  },
+  {
+    "id": 1350006,
+    "ticketId": 390002,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Em Análise",
+    "newValue": "Concluído",
+    "description": "Status alterado de \"Em Análise\" para \"Concluído\"",
+    "createdAt": 1773055497546
+  },
+  {
+    "id": 1350007,
+    "ticketId": 420002,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Em Análise",
+    "newValue": "Concluído",
+    "description": "Status alterado de \"Em Análise\" para \"Concluído\"",
+    "createdAt": 1773055504450
+  },
+  {
+    "id": 1350008,
+    "ticketId": 420003,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Pendente Infarma",
+    "newValue": "Concluído",
+    "description": "Status alterado de \"Pendente Infarma\" para \"Concluído\"",
+    "createdAt": 1773055521149
+  },
+  {
+    "id": 1350009,
+    "ticketId": 420003,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Concluído",
+    "newValue": "Pendente Infarma",
+    "description": "Status alterado de \"Concluído\" para \"Pendente Infarma\"",
+    "createdAt": 1773055523177
+  },
+  {
+    "id": 1350010,
+    "ticketId": 480001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Em Análise",
+    "newValue": "Concluído",
+    "description": "Status alterado de \"Em Análise\" para \"Concluído\"",
+    "createdAt": 1773055535465
+  },
+  {
+    "id": 1350011,
+    "ticketId": 570037,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Em Análise",
+    "newValue": "Concluído",
+    "description": "Status alterado de \"Em Análise\" para \"Concluído\"",
+    "createdAt": 1773055547176
+  },
+  {
+    "id": 1350012,
+    "ticketId": 960001,
+    "type": "created",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Kerolaine Morgantti da Cruz",
+    "createdAt": 1773064182845
+  },
+  {
+    "id": 1380001,
+    "ticketId": 870001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Concluído",
+    "description": "Status alterado de \"Em Andamento\" para \"Concluído\"",
+    "createdAt": 1773087831696
+  },
+  {
+    "id": 1410001,
+    "ticketId": 990001,
+    "type": "created",
+    "authorId": 240039,
+    "authorName": "Monique",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Monique",
+    "createdAt": 1773144666548
   }
 ]

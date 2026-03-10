@@ -1,36 +1,5 @@
 [
   {
-    "id": 930001,
-    "filename": "backup-2026-03-02T11-22-29-373Z.json",
-    "fileSize": 131434,
-    "checksum": "15a49d471adf7a072c7a59cc15481cda124e8dd91a6a37e72a48f5da801015aa",
-    "status": "completed",
-    "s3Key": "backups/backup-2026-03-02T11-22-29-373Z.json",
-    "s3Url": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/backups/backup-2026-03-02T11-22-29-373Z.json",
-    "tablesBackedUp": [
-      "users",
-      "departments",
-      "tickets",
-      "projects",
-      "suppliers",
-      "products",
-      "purchaseOrders",
-      "purchaseOrderItems",
-      "quotations",
-      "permissionGroups",
-      "announcements",
-      "attachments",
-      "comments",
-      "projectComments",
-      "dailyTasks",
-      "activities",
-      "projectPhases"
-    ],
-    "recordCount": 291,
-    "createdAt": 1772450551415,
-    "createdBy": "System (Automated)"
-  },
-  {
     "id": 960001,
     "filename": "backup-2026-03-04T14-52-45-219Z.json",
     "fileSize": 144427,
@@ -152,6 +121,37 @@
     ],
     "recordCount": 385,
     "createdAt": 1773054207898,
+    "createdBy": "System (Automated)"
+  },
+  {
+    "id": 1080001,
+    "filename": "backup-2026-03-10T15-01-07-466Z.json",
+    "fileSize": 179064,
+    "checksum": "fe2fb2657e28f2c9e41bb06dc3ce5604818044d1d83c5b12c3a46517a53aaa6c",
+    "status": "completed",
+    "s3Key": "backups/backup-2026-03-10T15-01-07-466Z.json",
+    "s3Url": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/backups/backup-2026-03-10T15-01-07-466Z.json",
+    "tablesBackedUp": [
+      "users",
+      "departments",
+      "tickets",
+      "projects",
+      "suppliers",
+      "products",
+      "purchaseOrders",
+      "purchaseOrderItems",
+      "quotations",
+      "permissionGroups",
+      "announcements",
+      "attachments",
+      "comments",
+      "projectComments",
+      "dailyTasks",
+      "activities",
+      "projectPhases"
+    ],
+    "recordCount": 403,
+    "createdAt": 1773154867729,
     "createdBy": "System (Automated)"
   }
 ]

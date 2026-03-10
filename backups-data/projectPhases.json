@@ -701,16 +701,33 @@
     "projectId": 810001,
     "name": "Aguardando informações do ctpar",
     "description": "Solicitei a seguinte analise\nverificar se o erro contido no calculo da soma no extrato financeiro existe somente em julho/2025.\nQual o motivo, identifiquei que os valores que não estão somando se tratam de lotes lançados pelo contas a receber",
-    "status": "Pendente",
+    "status": "Concluída",
     "order": 2,
     "startDate": 1772593200000,
     "endDate": 1774580400000,
-    "completedAt": null,
+    "completedAt": 1773142348837,
     "createdById": 1,
     "createdByName": "Daniel TI",
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772623621815,
-    "updatedAt": 1772623621815
+    "updatedAt": 1773142349722
+  },
+  {
+    "id": 960001,
+    "projectId": 810001,
+    "name": "Conclusão",
+    "description": "Ajustes realizados nas datas informadas com saldos errados.",
+    "status": "Concluída",
+    "order": 3,
+    "startDate": 1772679600000,
+    "endDate": 1773025200000,
+    "completedAt": 1773142350359,
+    "createdById": 1,
+    "createdByName": "Daniel TI",
+    "updatedById": 1,
+    "updatedByName": "Daniel TI",
+    "createdAt": 1773142349357,
+    "updatedAt": 1773142351184
   }
 ]
