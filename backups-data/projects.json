@@ -43,11 +43,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770321106938,
-    "updatedAt": 1773065261002,
+    "updatedAt": 1773162298033,
     "kanbanOrder": 1000,
-    "isBeingTreated": false,
-    "treatedByName": null,
-    "treatedAt": null
+    "isBeingTreated": true,
+    "treatedByName": "Daniel TI",
+    "treatedAt": 1773162298033
   },
   {
     "id": 300001,
@@ -140,10 +140,10 @@
     "progress": 50,
     "createdById": 1,
     "createdByName": "Daniel TI",
-    "updatedById": 60001,
-    "updatedByName": "Gabriel Bino",
+    "updatedById": 1,
+    "updatedByName": "Daniel TI",
     "createdAt": 1770379986213,
-    "updatedAt": 1772717080877,
+    "updatedAt": 1773162346042,
     "kanbanOrder": 2001,
     "isBeingTreated": false,
     "treatedByName": null,
@@ -243,11 +243,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770902542514,
-    "updatedAt": 1772827921192,
+    "updatedAt": 1773162349925,
     "kanbanOrder": 2000,
-    "isBeingTreated": false,
-    "treatedByName": null,
-    "treatedAt": null
+    "isBeingTreated": true,
+    "treatedByName": "Daniel TI",
+    "treatedAt": 1773162349925
   },
   {
     "id": 360003,

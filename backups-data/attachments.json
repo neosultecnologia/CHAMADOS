@@ -106,5 +106,17 @@
     "uploadedById": 360002,
     "uploadedByName": "Renata Sousa",
     "createdAt": 1772484252508
+  },
+  {
+    "id": 180001,
+    "ticketId": 1020001,
+    "fileName": "WhatsApp Image 2026-03-11 at 10.28.36.jpeg",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/1020001/1773236061281-d16rat-WhatsApp Image 2026-03-11 at 10.28.36.jpeg",
+    "fileKey": "tickets/1020001/1773236061281-d16rat-WhatsApp Image 2026-03-11 at 10.28.36.jpeg",
+    "mimeType": "image/jpeg",
+    "fileSize": 125211,
+    "uploadedById": 720001,
+    "uploadedByName": "VERIDIANA",
+    "createdAt": 1773236062063
   }
 ]

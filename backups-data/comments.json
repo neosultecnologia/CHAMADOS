@@ -222,5 +222,21 @@
     "authorName": "ADHARA",
     "content": "funcionando\n",
     "createdAt": 1772573592111
+  },
+  {
+    "id": 690001,
+    "ticketId": 720001,
+    "authorId": 540002,
+    "authorName": "ADHARA",
+    "content": "ok\n",
+    "createdAt": 1773155974911
+  },
+  {
+    "id": 720001,
+    "ticketId": 1020001,
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "content": "PASTAS PARA O PC DA DEVOLUÇÃO",
+    "createdAt": 1773236315539
   }
 ]
