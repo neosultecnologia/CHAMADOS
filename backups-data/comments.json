@@ -238,5 +238,29 @@
     "authorName": "VERIDIANA",
     "content": "PASTAS PARA O PC DA DEVOLUÇÃO",
     "createdAt": 1773236315539
+  },
+  {
+    "id": 750001,
+    "ticketId": 1020003,
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "content": "Ajustado!",
+    "createdAt": 1773253032793
+  },
+  {
+    "id": 750002,
+    "ticketId": 1020001,
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "content": "Feito!",
+    "createdAt": 1773253397495
+  },
+  {
+    "id": 750003,
+    "ticketId": 720001,
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "content": "Ajustado!",
+    "createdAt": 1773253501264
   }
 ]

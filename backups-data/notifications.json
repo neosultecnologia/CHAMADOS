@@ -1880,7 +1880,7 @@
     "referenceId": 1020001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1020001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1773236450912
   },
   {
@@ -1892,7 +1892,7 @@
     "referenceId": 1020001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1020001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1773236878093
   },
   {
@@ -1904,7 +1904,7 @@
     "referenceId": 1020002,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1020002",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1773236900709
   },
   {
@@ -1964,7 +1964,7 @@
     "referenceId": 1020002,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1020002",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1773240635260
   },
   {
@@ -1978,5 +1978,101 @@
     "actionUrl": "/suporte/1020002",
     "isRead": false,
     "createdAt": 1773240641808
+  },
+  {
+    "id": 780001,
+    "userId": 240039,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1020003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1020003",
+    "isRead": false,
+    "createdAt": 1773252981703
+  },
+  {
+    "id": 780002,
+    "userId": 1,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Acesso a Qlik\"",
+    "referenceId": 1020003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1020003",
+    "isRead": true,
+    "createdAt": 1773253031562
+  },
+  {
+    "id": 780003,
+    "userId": 240039,
+    "type": "ticket_comment",
+    "title": "Resposta no Chamado",
+    "message": "Daniel TI respondeu seu chamado: \"Acesso a Qlik\"",
+    "referenceId": 1020003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1020003",
+    "isRead": false,
+    "createdAt": 1773253032878
+  },
+  {
+    "id": 780004,
+    "userId": 720001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1020001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1020001",
+    "isRead": false,
+    "createdAt": 1773253347792
+  },
+  {
+    "id": 780005,
+    "userId": 720001,
+    "type": "ticket_comment",
+    "title": "Resposta no Chamado",
+    "message": "Daniel TI respondeu seu chamado: \"liberação de pasta DEVOLUÇÃO\"",
+    "referenceId": 1020001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1020001",
+    "isRead": false,
+    "createdAt": 1773253397563
+  },
+  {
+    "id": 780006,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 720001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/720001",
+    "isRead": false,
+    "createdAt": 1773253493129
+  },
+  {
+    "id": 780007,
+    "userId": 540001,
+    "type": "ticket_comment",
+    "title": "Resposta no Chamado",
+    "message": "Daniel TI respondeu seu chamado: \"Computador da conferencia desliga sozinho\"",
+    "referenceId": 720001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/720001",
+    "isRead": false,
+    "createdAt": 1773253501330
+  },
+  {
+    "id": 780008,
+    "userId": 1,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 420002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/420002",
+    "isRead": true,
+    "createdAt": 1773253518448
   }
 ]
