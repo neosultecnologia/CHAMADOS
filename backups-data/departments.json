@@ -54,5 +54,12 @@
     "description": null,
     "createdAt": "2026-02-13T12:29:27.000Z",
     "updatedAt": "2026-02-13T12:29:27.000Z"
+  },
+  {
+    "id": 480001,
+    "name": "Faturamento",
+    "description": null,
+    "createdAt": "2026-03-06T19:49:27.000Z",
+    "updatedAt": "2026-03-06T19:49:27.000Z"
   }
 ]

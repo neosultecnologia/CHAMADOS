@@ -2074,5 +2074,53 @@
     "actionUrl": "/suporte/420002",
     "isRead": true,
     "createdAt": 1773253518448
+  },
+  {
+    "id": 810001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Beatriz Sousa  abriu um novo chamado: \"Cadastro de login infarma\"",
+    "referenceId": 1080001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1080001",
+    "isRead": false,
+    "createdAt": 1773346866075
+  },
+  {
+    "id": 810002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Beatriz Sousa  abriu um novo chamado: \"Cadastro de login infarma\"",
+    "referenceId": 1080001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1080001",
+    "isRead": false,
+    "createdAt": 1773346866097
+  },
+  {
+    "id": 810003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Beatriz Sousa  abriu um novo chamado: \"Cadastro de login infarma\"",
+    "referenceId": 1080001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1080001",
+    "isRead": false,
+    "createdAt": 1773346866112
+  },
+  {
+    "id": 810004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Beatriz Sousa  abriu um novo chamado: \"Cadastro de login infarma\"",
+    "referenceId": 1080001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1080001",
+    "isRead": false,
+    "createdAt": 1773346866127
   }
 ]

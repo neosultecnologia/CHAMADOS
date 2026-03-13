@@ -2066,5 +2066,115 @@
     "newValue": "Carlos TI",
     "description": "Responsável alterado para \"Carlos TI\"",
     "createdAt": 1773240641793
+  },
+  {
+    "id": 1530001,
+    "ticketId": 1020003,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1773252981675
+  },
+  {
+    "id": 1530002,
+    "ticketId": 1020003,
+    "type": "assignment",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Daniel TI",
+    "description": "Responsável alterado para \"Daniel TI\"",
+    "createdAt": 1773253031544
+  },
+  {
+    "id": 1530003,
+    "ticketId": 1020003,
+    "type": "comment",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Daniel TI",
+    "createdAt": 1773253032793
+  },
+  {
+    "id": 1530004,
+    "ticketId": 1020001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Concluído",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Concluído\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1773253347769
+  },
+  {
+    "id": 1530005,
+    "ticketId": 1020001,
+    "type": "comment",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Daniel TI",
+    "createdAt": 1773253397495
+  },
+  {
+    "id": 1530006,
+    "ticketId": 720001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1773253493113
+  },
+  {
+    "id": 1530007,
+    "ticketId": 720001,
+    "type": "comment",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Daniel TI",
+    "createdAt": 1773253501264
+  },
+  {
+    "id": 1530008,
+    "ticketId": 420002,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Concluído",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Concluído\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1773253518427
+  },
+  {
+    "id": 1530009,
+    "ticketId": 1020003,
+    "type": "status_change",
+    "authorId": 240039,
+    "authorName": "Monique",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1773253591475
+  },
+  {
+    "id": 1560001,
+    "ticketId": 1080001,
+    "type": "created",
+    "authorId": 540003,
+    "authorName": "Beatriz Sousa ",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Beatriz Sousa ",
+    "createdAt": 1773346866023
   }
 ]
