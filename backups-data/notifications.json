@@ -1568,7 +1568,7 @@
     "referenceId": 960001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/960001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1773064182945
   },
   {
@@ -1628,7 +1628,7 @@
     "referenceId": 990001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/990001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1773144666658
   },
   {
@@ -1808,7 +1808,7 @@
     "referenceId": 1020001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1020001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1773236060593
   },
   {
@@ -1856,7 +1856,7 @@
     "referenceId": 1020002,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1020002",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1773236265701
   },
   {
@@ -1952,7 +1952,7 @@
     "referenceId": 1020003,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1020003",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1773237684568
   },
   {
@@ -2120,7 +2120,7 @@
     "referenceId": 1080001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1080001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1773346866127
   }
 ]

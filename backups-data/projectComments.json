@@ -97,5 +97,14 @@
     "content": "Chamado encaminhado para análise pelo suporte Infarma. Motivo: erro na geração dos arquivos do estabelecimento 2.",
     "mentions": null,
     "createdAt": 1772717080821
+  },
+  {
+    "id": 270001,
+    "projectId": 330001,
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "content": "Status do projeto: Foi encontrado alguns erros na quantidade de estoque dos produtos por falta de filtragem das filiais. Apliquei o filtro para garantir as quantidade corretas por filial.\n\nO próximo passo é filtrar o estabelecimento nas notas, para garantir a precificação correta. Em seguida, testar novamente.\n\n@Teo ",
+    "mentions": "[90001]",
+    "createdAt": 1773435214224
   }
 ]
