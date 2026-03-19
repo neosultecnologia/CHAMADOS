@@ -262,5 +262,29 @@
     "authorName": "Daniel TI",
     "content": "Ajustado!",
     "createdAt": 1773253501264
+  },
+  {
+    "id": 780001,
+    "ticketId": 1080001,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "Usuários criados.",
+    "createdAt": 1773771239554
+  },
+  {
+    "id": 780002,
+    "ticketId": 1080001,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "AMANDA.M\nROXANA.A\nsenha padrão",
+    "createdAt": 1773771307659
+  },
+  {
+    "id": 780003,
+    "ticketId": 1140001,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "1-Favor passar as pastas que são necessárias.\n2-Favor contatar o técnico da Alternativo para a instalação dos scanners na maquina(a tratativa é por WhatsApp e o técnico conecta na maquina)\n3-No caso da configuração de internet poderia me passar detalhadamente o que está acontecendo.",
+    "createdAt": 1773772585477
   }
 ]

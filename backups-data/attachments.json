@@ -118,5 +118,29 @@
     "uploadedById": 720001,
     "uploadedByName": "VERIDIANA",
     "createdAt": 1773236062063
+  },
+  {
+    "id": 210001,
+    "ticketId": 1170001,
+    "fileName": "etiquetas.png",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/1170001/1773755098590-a10wyr-etiquetas.png",
+    "fileKey": "tickets/1170001/1773755098590-a10wyr-etiquetas.png",
+    "mimeType": "image/png",
+    "fileSize": 354922,
+    "uploadedById": 720001,
+    "uploadedByName": "VERIDIANA",
+    "createdAt": 1773755099079
+  },
+  {
+    "id": 210002,
+    "ticketId": 1170001,
+    "fileName": "descrição das rota.png",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/1170001/1773755099371-ntsq4g-descrição das rota.png",
+    "fileKey": "tickets/1170001/1773755099371-ntsq4g-descrição das rota.png",
+    "mimeType": "image/png",
+    "fileSize": 21759,
+    "uploadedById": 720001,
+    "uploadedByName": "VERIDIANA",
+    "createdAt": 1773755099716
   }
 ]

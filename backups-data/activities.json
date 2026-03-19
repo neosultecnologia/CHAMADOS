@@ -2176,5 +2176,170 @@
     "newValue": null,
     "description": "Chamado criado por Beatriz Sousa ",
     "createdAt": 1773346866023
+  },
+  {
+    "id": 1590001,
+    "ticketId": 1110001,
+    "type": "created",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Kerolaine Morgantti da Cruz",
+    "createdAt": 1773681468522
+  },
+  {
+    "id": 1590002,
+    "ticketId": 1110001,
+    "type": "priority_change",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Média",
+    "newValue": "Baixa",
+    "description": "Prioridade alterada de \"Média\" para \"Baixa\"",
+    "createdAt": 1773681751176
+  },
+  {
+    "id": 1590003,
+    "ticketId": 1110001,
+    "type": "assignment",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Não atribuído",
+    "newValue": "Gabriel Bino",
+    "description": "Responsável alterado para \"Gabriel Bino\"",
+    "createdAt": 1773681776449
+  },
+  {
+    "id": 1620001,
+    "ticketId": 1110001,
+    "type": "status_change",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Novos",
+    "newValue": "Em Análise",
+    "description": "Status alterado de \"Novos\" para \"Em Análise\"",
+    "createdAt": 1773690336698
+  },
+  {
+    "id": 1650001,
+    "ticketId": 1140001,
+    "type": "created",
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por VERIDIANA",
+    "createdAt": 1773751939797
+  },
+  {
+    "id": 1680001,
+    "ticketId": 1170001,
+    "type": "created",
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por VERIDIANA",
+    "createdAt": 1773755097479
+  },
+  {
+    "id": 1710001,
+    "ticketId": 1080001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1773770900182
+  },
+  {
+    "id": 1710002,
+    "ticketId": 1080001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1773771210059
+  },
+  {
+    "id": 1710003,
+    "ticketId": 1080001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1773771215790
+  },
+  {
+    "id": 1710004,
+    "ticketId": 1080001,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1773771239554
+  },
+  {
+    "id": 1710005,
+    "ticketId": 1080001,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1773771307659
+  },
+  {
+    "id": 1710006,
+    "ticketId": 1140001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1773772044567
+  },
+  {
+    "id": 1710007,
+    "ticketId": 1140001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Análise",
+    "description": "Status alterado de \"Novos\" para \"Em Análise\"",
+    "createdAt": 1773772056124
+  },
+  {
+    "id": 1710008,
+    "ticketId": 1140001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Análise",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Em Análise\" para \"Em Andamento\"",
+    "createdAt": 1773772056542
+  },
+  {
+    "id": 1710009,
+    "ticketId": 1140001,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1773772585477
   }
 ]
