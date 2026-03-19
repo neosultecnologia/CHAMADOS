@@ -547,5 +547,165 @@
     "isDefault": false,
     "createdAt": 1773248800873,
     "updatedAt": 1773248800873
+  },
+  {
+    "id": 810003,
+    "name": "Suporte Técnico 1773882149335",
+    "description": "Acesso a suporte e desenvolvimento",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1773882149341,
+    "updatedAt": 1773882149341
+  },
+  {
+    "id": 810004,
+    "name": "Updated Group Name 1773882149494",
+    "description": "Updated description",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1773882149478,
+    "updatedAt": 1773882149495
+  },
+  {
+    "id": 810005,
+    "name": "Test Group 1773882149506",
+    "description": "Test group for permission testing",
+    "permissions": {
+      "compras": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      }
+    },
+    "isDefault": false,
+    "createdAt": 1773882149506,
+    "updatedAt": 1773882149506
+  },
+  {
+    "id": 810007,
+    "name": "Assignment Test Group 1773882149572",
+    "description": "For testing assignment",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1773882149573,
+    "updatedAt": 1773882149573
+  },
+  {
+    "id": 810008,
+    "name": "Inheritance Test Group 1773882149629",
+    "description": "Testing permission inheritance",
+    "permissions": {
+      "desenvolvimento": false,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": true,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1773882149629,
+    "updatedAt": 1773882149629
+  },
+  {
+    "id": 810009,
+    "name": "Suporte Técnico 1773882159757",
+    "description": "Acesso a suporte e desenvolvimento",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1773882159762,
+    "updatedAt": 1773882159762
+  },
+  {
+    "id": 810012,
+    "name": "Updated Group Name 1773882159901",
+    "description": "Updated description",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1773882159887,
+    "updatedAt": 1773882159902
+  },
+  {
+    "id": 810013,
+    "name": "Test Group 1773882159901",
+    "description": "Test group for permission testing",
+    "permissions": {
+      "compras": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      }
+    },
+    "isDefault": false,
+    "createdAt": 1773882159901,
+    "updatedAt": 1773882159901
+  },
+  {
+    "id": 810015,
+    "name": "Assignment Test Group 1773882159967",
+    "description": "For testing assignment",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1773882159967,
+    "updatedAt": 1773882159967
+  },
+  {
+    "id": 810016,
+    "name": "Inheritance Test Group 1773882160010",
+    "description": "Testing permission inheritance",
+    "permissions": {
+      "desenvolvimento": false,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": true,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1773882160011,
+    "updatedAt": 1773882160011
   }
 ]

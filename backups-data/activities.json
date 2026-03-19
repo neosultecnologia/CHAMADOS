@@ -2341,5 +2341,16 @@
     "newValue": null,
     "description": "Comentário adicionado por Carlos TI",
     "createdAt": 1773772585477
+  },
+  {
+    "id": 1740001,
+    "ticketId": 1230001,
+    "type": "created",
+    "authorId": 480002,
+    "authorName": "Bárbara Costa",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Bárbara Costa",
+    "createdAt": 1773924448770
   }
 ]

@@ -142,5 +142,17 @@
     "uploadedById": 720001,
     "uploadedByName": "VERIDIANA",
     "createdAt": 1773755099716
+  },
+  {
+    "id": 240001,
+    "ticketId": 1230001,
+    "fileName": "ad189aae-8052-4e1c-8083-dadf7ff5ad1b.jpg",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/1230001/1773924449314-ii8o9v-ad189aae-8052-4e1c-8083-dadf7ff5ad1b.jpg",
+    "fileKey": "tickets/1230001/1773924449314-ii8o9v-ad189aae-8052-4e1c-8083-dadf7ff5ad1b.jpg",
+    "mimeType": "image/jpeg",
+    "fileSize": 36329,
+    "uploadedById": 480002,
+    "uploadedByName": "Bárbara Costa",
+    "createdAt": 1773924449740
   }
 ]
