@@ -2240,7 +2240,7 @@
     "referenceId": 1140001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1140001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1773751939910
   },
   {
@@ -2288,7 +2288,7 @@
     "referenceId": 1170001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1170001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1773755097597
   },
   {
@@ -2444,7 +2444,139 @@
     "referenceId": 1230001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1230001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1773924448915
+  },
+  {
+    "id": 1020001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "VERIDIANA abriu um novo chamado: \"liberação de módulo ESTOQUE\"",
+    "referenceId": 1260001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1260001",
+    "isRead": false,
+    "createdAt": 1773952613261
+  },
+  {
+    "id": 1020002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "VERIDIANA abriu um novo chamado: \"liberação de módulo ESTOQUE\"",
+    "referenceId": 1260001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1260001",
+    "isRead": false,
+    "createdAt": 1773952613289
+  },
+  {
+    "id": 1020003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "VERIDIANA abriu um novo chamado: \"liberação de módulo ESTOQUE\"",
+    "referenceId": 1260001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1260001",
+    "isRead": false,
+    "createdAt": 1773952613308
+  },
+  {
+    "id": 1020004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "VERIDIANA abriu um novo chamado: \"liberação de módulo ESTOQUE\"",
+    "referenceId": 1260001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1260001",
+    "isRead": true,
+    "createdAt": 1773952613326
+  },
+  {
+    "id": 1050001,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Adicionar Pasta 09 - Setor Fiscal e Contábil - Dados\"",
+    "referenceId": 1230001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1230001",
+    "isRead": false,
+    "createdAt": 1774017213575
+  },
+  {
+    "id": 1050002,
+    "userId": 480002,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 1230001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1230001",
+    "isRead": false,
+    "createdAt": 1774017256007
+  },
+  {
+    "id": 1050003,
+    "userId": 480002,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1230001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1230001",
+    "isRead": false,
+    "createdAt": 1774017260940
+  },
+  {
+    "id": 1050004,
+    "userId": 480002,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 1230001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1230001",
+    "isRead": false,
+    "createdAt": 1774017324730
+  },
+  {
+    "id": 1050005,
+    "userId": 480002,
+    "type": "ticket_comment",
+    "title": "Resposta no Chamado",
+    "message": "Carlos TI respondeu seu chamado: \"Adicionar Pasta 09 - Setor Fiscal e Contábil - Dados\"",
+    "referenceId": 1230001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1230001",
+    "isRead": false,
+    "createdAt": 1774017347369
+  },
+  {
+    "id": 1050006,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"liberação de módulo ESTOQUE\"",
+    "referenceId": 1260001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1260001",
+    "isRead": false,
+    "createdAt": 1774017436844
+  },
+  {
+    "id": 1050007,
+    "userId": 480002,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1230001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1230001",
+    "isRead": false,
+    "createdAt": 1774017612346
   }
 ]

@@ -286,5 +286,13 @@
     "authorName": "Carlos TI",
     "content": "1-Favor passar as pastas que são necessárias.\n2-Favor contatar o técnico da Alternativo para a instalação dos scanners na maquina(a tratativa é por WhatsApp e o técnico conecta na maquina)\n3-No caso da configuração de internet poderia me passar detalhadamente o que está acontecendo.",
     "createdAt": 1773772585477
+  },
+  {
+    "id": 810001,
+    "ticketId": 1230001,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "favor verificar se a pasta está aparecendo.",
+    "createdAt": 1774017347301
   }
 ]

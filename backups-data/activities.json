@@ -2352,5 +2352,93 @@
     "newValue": null,
     "description": "Chamado criado por Bárbara Costa",
     "createdAt": 1773924448770
+  },
+  {
+    "id": 1770001,
+    "ticketId": 1260001,
+    "type": "created",
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por VERIDIANA",
+    "createdAt": 1773952613192
+  },
+  {
+    "id": 1800001,
+    "ticketId": 1230001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1774017213553
+  },
+  {
+    "id": 1800002,
+    "ticketId": 1230001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1774017255989
+  },
+  {
+    "id": 1800003,
+    "ticketId": 1230001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1774017260925
+  },
+  {
+    "id": 1800004,
+    "ticketId": 1230001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Resolvido / Aguardando Validação\" para \"Em Andamento\"",
+    "createdAt": 1774017324709
+  },
+  {
+    "id": 1800005,
+    "ticketId": 1230001,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1774017347301
+  },
+  {
+    "id": 1800006,
+    "ticketId": 1260001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1774017436831
+  },
+  {
+    "id": 1800007,
+    "ticketId": 1230001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1774017612332
   }
 ]
