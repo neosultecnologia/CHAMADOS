@@ -294,5 +294,37 @@
     "authorName": "Carlos TI",
     "content": "favor verificar se a pasta está aparecendo.",
     "createdAt": 1774017347301
+  },
+  {
+    "id": 840001,
+    "ticketId": 420003,
+    "authorId": 630282,
+    "authorName": "Márcia Freitas",
+    "content": "@Daniel TI algum retorno? ",
+    "createdAt": 1774281992884
+  },
+  {
+    "id": 840002,
+    "ticketId": 420003,
+    "authorId": 630282,
+    "authorName": "Márcia Freitas",
+    "content": "@Gabriel Bino Algum retorno? ",
+    "createdAt": 1774282019910
+  },
+  {
+    "id": 870001,
+    "ticketId": 1290001,
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "content": "Feito",
+    "createdAt": 1774291008026
+  },
+  {
+    "id": 900001,
+    "ticketId": 1140001,
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "content": "sobre a internet, não aparece a rede wifi\n",
+    "createdAt": 1774443953823
   }
 ]

@@ -106,5 +106,14 @@
     "content": "Status do projeto: Foi encontrado alguns erros na quantidade de estoque dos produtos por falta de filtragem das filiais. Apliquei o filtro para garantir as quantidade corretas por filial.\n\nO próximo passo é filtrar o estabelecimento nas notas, para garantir a precificação correta. Em seguida, testar novamente.\n\n@Teo ",
     "mentions": "[90001]",
     "createdAt": 1773435214224
+  },
+  {
+    "id": 300001,
+    "projectId": 960001,
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "content": "Foi feita a configuração da integração pelo Infarma Gerador, a fim de validar se o erro seria corrigido. Após executar por lá, foi constatado que as informações estão de acordo com a nossa base de dados.\n\nPróximo passo é desenvolver a automação que irá enviar esses arquivos diariamente no horário definido.",
+    "mentions": null,
+    "createdAt": 1774645115051
   }
 ]

@@ -154,5 +154,29 @@
     "uploadedById": 480002,
     "uploadedByName": "Bárbara Costa",
     "createdAt": 1773924449740
+  },
+  {
+    "id": 270001,
+    "ticketId": 1290001,
+    "fileName": "resultado.png",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/1290001/1774290989298-wag8mu-resultado.png",
+    "fileKey": "tickets/1290001/1774290989298-wag8mu-resultado.png",
+    "mimeType": "image/png",
+    "fileSize": 159636,
+    "uploadedById": 60001,
+    "uploadedByName": "Gabriel Bino",
+    "createdAt": 1774291002057
+  },
+  {
+    "id": 300001,
+    "ticketId": 1140001,
+    "fileName": "Doc1.docx",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/1140001/1774443918342-fj7ok-Doc1.docx",
+    "fileKey": "tickets/1140001/1774443918342-fj7ok-Doc1.docx",
+    "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    "fileSize": 28417,
+    "uploadedById": 720001,
+    "uploadedByName": "VERIDIANA",
+    "createdAt": 1774443919393
   }
 ]
