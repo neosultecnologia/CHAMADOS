@@ -254,5 +254,21 @@
     "enteredAt": 1772106823305,
     "acceptedAt": 1772645719855,
     "completedAt": 1772645727758
+  },
+  {
+    "id": 150001,
+    "userId": 390001,
+    "userName": "Maria Eduarda Chagas",
+    "conversationId": null,
+    "ticketId": null,
+    "position": 1,
+    "status": "waiting",
+    "assignedOperatorId": null,
+    "assignedOperatorName": null,
+    "initialMessage": null,
+    "priority": "normal",
+    "enteredAt": 1774874335061,
+    "acceptedAt": null,
+    "completedAt": null
   }
 ]

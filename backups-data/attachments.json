@@ -178,5 +178,53 @@
     "uploadedById": 720001,
     "uploadedByName": "VERIDIANA",
     "createdAt": 1774443919393
+  },
+  {
+    "id": 330001,
+    "ticketId": 1680001,
+    "fileName": "Relatório que sai.png",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/1680001/1774874985622-r8yj39-Relatório que sai.png",
+    "fileKey": "tickets/1680001/1774874985622-r8yj39-Relatório que sai.png",
+    "mimeType": "image/png",
+    "fileSize": 67515,
+    "uploadedById": 390001,
+    "uploadedByName": "Maria Eduarda Chagas",
+    "createdAt": 1774874986686
+  },
+  {
+    "id": 330002,
+    "ticketId": 1680001,
+    "fileName": "Relatório infarma.JPG",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/1680001/1774874987024-90rdwk-Relatório infarma.JPG",
+    "fileKey": "tickets/1680001/1774874987024-90rdwk-Relatório infarma.JPG",
+    "mimeType": "image/jpeg",
+    "fileSize": 28004,
+    "uploadedById": 390001,
+    "uploadedByName": "Maria Eduarda Chagas",
+    "createdAt": 1774874987379
+  },
+  {
+    "id": 330003,
+    "ticketId": 1680001,
+    "fileName": "Personalizar relatório.png",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/1680001/1774874987636-t7zgf-Personalizar relatório.png",
+    "fileKey": "tickets/1680001/1774874987636-t7zgf-Personalizar relatório.png",
+    "mimeType": "image/png",
+    "fileSize": 11001,
+    "uploadedById": 390001,
+    "uploadedByName": "Maria Eduarda Chagas",
+    "createdAt": 1774874988003
+  },
+  {
+    "id": 330004,
+    "ticketId": 1680003,
+    "fileName": "erro.jpeg",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/1680003/1774875307187-il5oas-erro.jpeg",
+    "fileKey": "tickets/1680003/1774875307187-il5oas-erro.jpeg",
+    "mimeType": "image/jpeg",
+    "fileSize": 171687,
+    "uploadedById": 1050001,
+    "uploadedByName": "Kerolaine Morgantti da Cruz",
+    "createdAt": 1774875307537
   }
 ]

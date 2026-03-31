@@ -2946,5 +2946,115 @@
     "newValue": null,
     "description": "Chamado criado por Francielle Vieira Schmitz Bueno",
     "createdAt": 1774871065160
+  },
+  {
+    "id": 2340001,
+    "ticketId": 1680001,
+    "type": "created",
+    "authorId": 390001,
+    "authorName": "Maria Eduarda Chagas",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Maria Eduarda Chagas",
+    "createdAt": 1774874984875
+  },
+  {
+    "id": 2340002,
+    "ticketId": 1470001,
+    "type": "status_change",
+    "authorId": 390001,
+    "authorName": "Maria Eduarda Chagas",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1774874998642
+  },
+  {
+    "id": 2340003,
+    "ticketId": 1680002,
+    "type": "created",
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por VERIDIANA",
+    "createdAt": 1774875226980
+  },
+  {
+    "id": 2340004,
+    "ticketId": 1020001,
+    "type": "status_change",
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1774875257918
+  },
+  {
+    "id": 2340005,
+    "ticketId": 1680003,
+    "type": "created",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Kerolaine Morgantti da Cruz",
+    "createdAt": 1774875306254
+  },
+  {
+    "id": 2370001,
+    "ticketId": 1560001,
+    "type": "comment",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Gabriel Bino",
+    "createdAt": 1774884018497
+  },
+  {
+    "id": 2370002,
+    "ticketId": 1560001,
+    "type": "assignment",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Não atribuído",
+    "newValue": "Gabriel Bino",
+    "description": "Responsável alterado para \"Gabriel Bino\"",
+    "createdAt": 1774884094715
+  },
+  {
+    "id": 2370003,
+    "ticketId": 1560001,
+    "type": "status_change",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1774884178045
+  },
+  {
+    "id": 2400001,
+    "ticketId": 1380001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1774894556121
+  },
+  {
+    "id": 2400002,
+    "ticketId": 1380001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1774895184346
   }
 ]

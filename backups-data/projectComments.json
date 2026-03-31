@@ -115,5 +115,23 @@
     "content": "Foi feita a configuração da integração pelo Infarma Gerador, a fim de validar se o erro seria corrigido. Após executar por lá, foi constatado que as informações estão de acordo com a nossa base de dados.\n\nPróximo passo é desenvolver a automação que irá enviar esses arquivos diariamente no horário definido.",
     "mentions": null,
     "createdAt": 1774645115051
+  },
+  {
+    "id": 330001,
+    "projectId": 300004,
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "content": "Erros na geração dos arquivos do estabelecimento 2 solucionado.",
+    "mentions": null,
+    "createdAt": 1774871393710
+  },
+  {
+    "id": 360001,
+    "projectId": 300004,
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "content": "Estamos tratando a última questão pendente apresentada pelo time da Neogrid/Farmax:\n\nOs códigos de vendedores e clientes estão divergentes entre os arquivos de cadastro e vendas, em discordância com o esperado no layout da Neogrid.\n\nO infarma informou nesta manhã (30/03) que o caso segue em análise e será atualizado o quanto antes.",
+    "mentions": null,
+    "createdAt": 1774874615829
   }
 ]
