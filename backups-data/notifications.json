@@ -3706,5 +3706,53 @@
     "actionUrl": "/suporte/1380001",
     "isRead": false,
     "createdAt": 1774895184365
+  },
+  {
+    "id": 1620001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Daniel TI abriu um novo chamado: \"PEDIDO DE COMPRAS\"",
+    "referenceId": 1740001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1740001",
+    "isRead": false,
+    "createdAt": 1774989346328
+  },
+  {
+    "id": 1620002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Daniel TI abriu um novo chamado: \"PEDIDO DE COMPRAS\"",
+    "referenceId": 1740001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1740001",
+    "isRead": false,
+    "createdAt": 1774989346356
+  },
+  {
+    "id": 1620003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Daniel TI abriu um novo chamado: \"PEDIDO DE COMPRAS\"",
+    "referenceId": 1740001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1740001",
+    "isRead": true,
+    "createdAt": 1774989346374
+  },
+  {
+    "id": 1620004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Daniel TI abriu um novo chamado: \"PEDIDO DE COMPRAS\"",
+    "referenceId": 1740001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1740001",
+    "isRead": false,
+    "createdAt": 1774989346395
   }
 ]

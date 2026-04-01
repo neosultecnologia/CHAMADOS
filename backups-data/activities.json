@@ -3056,5 +3056,16 @@
     "newValue": "Resolvido / Aguardando Validação",
     "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
     "createdAt": 1774895184346
+  },
+  {
+    "id": 2430001,
+    "ticketId": 1740001,
+    "type": "created",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Daniel TI",
+    "createdAt": 1774989346256
   }
 ]

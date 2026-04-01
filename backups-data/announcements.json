@@ -38,15 +38,5 @@
     "createdById": 1,
     "createdAt": 1774889233031,
     "expiresAt": 1774889220000
-  },
-  {
-    "id": 150002,
-    "title": "Webmail com instabildiade",
-    "content": null,
-    "type": "warning",
-    "isActive": 1,
-    "createdById": 1,
-    "createdAt": 1774889269699,
-    "expiresAt": 1774975620000
   }
 ]

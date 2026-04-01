@@ -1027,5 +1027,26 @@
     "order": 0,
     "createdAt": 1774875306254,
     "updatedAt": 1774875306254
+  },
+  {
+    "id": 1740001,
+    "ticketId": "bilhete_1680004",
+    "title": "PEDIDO DE COMPRAS",
+    "description": "Precisamos entender qual o arquivo que o infarma permite na importação de pedido e compras",
+    "category": "Dúvida",
+    "priority": "Média",
+    "status": "Novos",
+    "departmentId": 17,
+    "createdById": 1,
+    "createdByName": "Daniel TI",
+    "assignedToId": 1,
+    "assignedToName": "Daniel TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1774989346256,
+    "updatedAt": 1774989346256
   }
 ]

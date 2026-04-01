@@ -837,17 +837,17 @@
     "projectId": 240002,
     "name": "Base de informações semanal",
     "description": "Cadastros\nVendedores, \nProdutos,\nClientes",
-    "status": "Pendente",
+    "status": "Concluída",
     "order": 6,
     "startDate": 1774839600000,
     "endDate": 1777518000000,
-    "completedAt": null,
+    "completedAt": 1774970159659,
     "createdById": 1,
     "createdByName": "Daniel TI",
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1774875136146,
-    "updatedAt": 1774875136146
+    "updatedAt": 1774970161175
   },
   {
     "id": 1260001,
@@ -865,5 +865,22 @@
     "updatedByName": "Daniel TI",
     "createdAt": 1774889527338,
     "updatedAt": 1774893815121
+  },
+  {
+    "id": 1320001,
+    "projectId": 1080001,
+    "name": "Testes",
+    "description": "Validação dos arquivos e acessos no FTP junto a maxinutri",
+    "status": "Pendente",
+    "order": 2,
+    "startDate": 1775012400000,
+    "endDate": 1775185200000,
+    "completedAt": null,
+    "createdById": 1,
+    "createdByName": "Daniel TI",
+    "updatedById": 1,
+    "updatedByName": "Daniel TI",
+    "createdAt": 1774974936226,
+    "updatedAt": 1774974936226
   }
 ]

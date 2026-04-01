@@ -226,5 +226,17 @@
     "uploadedById": 1050001,
     "uploadedByName": "Kerolaine Morgantti da Cruz",
     "createdAt": 1774875307537
+  },
+  {
+    "id": 360001,
+    "ticketId": 1740001,
+    "fileName": "WhatsApp Image 2026-03-31 at 17.32.07.jpeg",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/1740001/1774989347336-mb1mq7-WhatsApp Image 2026-03-31 at 17.32.07.jpeg",
+    "fileKey": "tickets/1740001/1774989347336-mb1mq7-WhatsApp Image 2026-03-31 at 17.32.07.jpeg",
+    "mimeType": "image/jpeg",
+    "fileSize": 389584,
+    "uploadedById": 1,
+    "uploadedByName": "Daniel TI",
+    "createdAt": 1774989347815
   }
 ]
