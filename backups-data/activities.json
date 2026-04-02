@@ -3067,5 +3067,71 @@
     "newValue": null,
     "description": "Chamado criado por Daniel TI",
     "createdAt": 1774989346256
+  },
+  {
+    "id": 2460001,
+    "ticketId": 1680003,
+    "type": "assignment",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Não atribuído",
+    "newValue": "Gabriel Bino",
+    "description": "Responsável alterado para \"Gabriel Bino\"",
+    "createdAt": 1775065267301
+  },
+  {
+    "id": 2460002,
+    "ticketId": 1680003,
+    "type": "status_change",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1775065277709
+  },
+  {
+    "id": 2460003,
+    "ticketId": 1740001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1775065767102
+  },
+  {
+    "id": 2460004,
+    "ticketId": 1740001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Em Análise",
+    "description": "Status alterado de \"Em Andamento\" para \"Em Análise\"",
+    "createdAt": 1775065767711
+  },
+  {
+    "id": 2460005,
+    "ticketId": 1680003,
+    "type": "status_change",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Em Andamento",
+    "newValue": "Em Análise",
+    "description": "Status alterado de \"Em Andamento\" para \"Em Análise\"",
+    "createdAt": 1775075543713
+  },
+  {
+    "id": 2460006,
+    "ticketId": 1380001,
+    "type": "status_change",
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1775076047782
   }
 ]

@@ -762,7 +762,7 @@
     "description": "Boa tarde!\nPor gentileza criar acesso no infarma- CONFERENTE\nPEDRO GABRIEL\nALEXANDRE SANTOS\nPEDRO DELFINO",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 720001,
     "createdByName": "VERIDIANA",
@@ -774,7 +774,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1774458574674,
-    "updatedAt": 1774895184383
+    "updatedAt": 1775076047804
   },
   {
     "id": 1410001,
@@ -1014,19 +1014,19 @@
     "description": "Ao importar os arquivos XML de algumas industrias para o Infarma, da erro e não importa o arquivo.",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Novos",
+    "status": "Em Análise",
     "departmentId": 90004,
     "createdById": 1050001,
     "createdByName": "Kerolaine Morgantti da Cruz",
-    "assignedToId": null,
-    "assignedToName": null,
+    "assignedToId": 60001,
+    "assignedToName": "Gabriel Bino",
     "waitingForDepartment": null,
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1774875306254,
-    "updatedAt": 1774875306254
+    "updatedAt": 1775075543747
   },
   {
     "id": 1740001,
@@ -1035,7 +1035,7 @@
     "description": "Precisamos entender qual o arquivo que o infarma permite na importação de pedido e compras",
     "category": "Dúvida",
     "priority": "Média",
-    "status": "Novos",
+    "status": "Em Análise",
     "departmentId": 17,
     "createdById": 1,
     "createdByName": "Daniel TI",
@@ -1047,6 +1047,6 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1774989346256,
-    "updatedAt": 1774989346256
+    "updatedAt": 1775065767743
   }
 ]

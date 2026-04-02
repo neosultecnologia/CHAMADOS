@@ -289,23 +289,6 @@
     "updatedAt": 1771507934183
   },
   {
-    "id": 330024,
-    "projectId": 300029,
-    "name": "Alimentando informações na base",
-    "description": null,
-    "status": "Pendente",
-    "order": 1,
-    "startDate": 1770260400000,
-    "endDate": 1770346800000,
-    "completedAt": null,
-    "createdById": null,
-    "createdByName": null,
-    "updatedById": null,
-    "updatedByName": null,
-    "createdAt": 1770398298498,
-    "updatedAt": 1770398298498
-  },
-  {
     "id": 360001,
     "projectId": 330001,
     "name": "Importação dos arquivos para o Infarma",
@@ -616,17 +599,17 @@
     "projectId": 780006,
     "name": "Ajustes tecnicos",
     "description": "Melhoria na funcionalidade",
-    "status": "Pendente",
+    "status": "Concluída",
     "order": 2,
     "startDate": null,
     "endDate": null,
-    "completedAt": null,
+    "completedAt": 1775068397728,
     "createdById": 1,
     "createdByName": "Daniel TI",
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772123959603,
-    "updatedAt": 1772123959603
+    "updatedAt": 1775068398537
   },
   {
     "id": 810004,
@@ -803,17 +786,17 @@
     "projectId": 960001,
     "name": "Automatizar processo",
     "description": "Desenvolver código Python para pegar os arquivos na pasta local e enviá-los ao acesso FTP do Tradefy.",
-    "status": "Pendente",
+    "status": "Concluída",
     "order": 4,
     "startDate": 1774839600000,
     "endDate": null,
-    "completedAt": null,
+    "completedAt": 1775069144890,
     "createdById": 60001,
     "createdByName": "Gabriel Bino",
-    "updatedById": 60001,
-    "updatedByName": "Gabriel Bino",
+    "updatedById": 1,
+    "updatedByName": "Daniel TI",
     "createdAt": 1774644975128,
-    "updatedAt": 1774644975128
+    "updatedAt": 1775069145707
   },
   {
     "id": 1200001,
@@ -882,5 +865,22 @@
     "updatedByName": "Daniel TI",
     "createdAt": 1774974936226,
     "updatedAt": 1774974936226
+  },
+  {
+    "id": 1350001,
+    "projectId": 1170001,
+    "name": "Compilação de dados",
+    "description": null,
+    "status": "Pendente",
+    "order": 1,
+    "startDate": 1775012400000,
+    "endDate": 1775098800000,
+    "completedAt": null,
+    "createdById": 1,
+    "createdByName": "Daniel TI",
+    "updatedById": 1,
+    "updatedByName": "Daniel TI",
+    "createdAt": 1775066788813,
+    "updatedAt": 1775066788813
   }
 ]

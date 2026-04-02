@@ -122,5 +122,36 @@
     "recordCount": 550,
     "createdAt": 1775044675692,
     "createdBy": "System (Automated)"
+  },
+  {
+    "id": 1440002,
+    "filename": "backup-2026-04-02T02-00-18-480Z.json",
+    "fileSize": 238543,
+    "checksum": "c67179665eec3687368df4a4e9708b9a76062a17183d4649d0c339d70ddc5459",
+    "status": "completed",
+    "s3Key": "backups/backup-2026-04-02T02-00-18-480Z.json",
+    "s3Url": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/backups/backup-2026-04-02T02-00-18-480Z.json",
+    "tablesBackedUp": [
+      "users",
+      "departments",
+      "tickets",
+      "projects",
+      "suppliers",
+      "products",
+      "purchaseOrders",
+      "purchaseOrderItems",
+      "quotations",
+      "permissionGroups",
+      "announcements",
+      "attachments",
+      "comments",
+      "projectComments",
+      "dailyTasks",
+      "activities",
+      "projectPhases"
+    ],
+    "recordCount": 552,
+    "createdAt": 1775095234780,
+    "createdBy": "System (Automated)"
   }
 ]
