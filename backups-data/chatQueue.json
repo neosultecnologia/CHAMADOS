@@ -270,5 +270,21 @@
     "enteredAt": 1774874335061,
     "acceptedAt": null,
     "completedAt": null
+  },
+  {
+    "id": 180001,
+    "userId": 60001,
+    "userName": "Gabriel Bino",
+    "conversationId": null,
+    "ticketId": null,
+    "position": 2,
+    "status": "waiting",
+    "assignedOperatorId": null,
+    "assignedOperatorName": null,
+    "initialMessage": null,
+    "priority": "normal",
+    "enteredAt": 1775139983921,
+    "acceptedAt": null,
+    "completedAt": null
   }
 ]

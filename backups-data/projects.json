@@ -141,13 +141,13 @@
     "createdById": 1,
     "createdByName": "Daniel TI",
     "updatedById": 1,
-    "updatedByName": "Daniel TI",
+    "updatedByName": "Daniel Machado",
     "createdAt": 1770379986213,
-    "updatedAt": 1775137988826,
+    "updatedAt": 1775474454760,
     "kanbanOrder": 2000,
-    "isBeingTreated": true,
-    "treatedByName": "Daniel TI",
-    "treatedAt": 1775132514811
+    "isBeingTreated": false,
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 330001,
@@ -216,13 +216,13 @@
     "createdById": 1,
     "createdByName": "Daniel TI",
     "updatedById": 1,
-    "updatedByName": "Daniel TI",
+    "updatedByName": "Daniel Machado",
     "createdAt": 1770902542514,
-    "updatedAt": 1775137988844,
+    "updatedAt": 1775474466373,
     "kanbanOrder": 2001,
     "isBeingTreated": true,
-    "treatedByName": "Daniel TI",
-    "treatedAt": 1775132516101
+    "treatedByName": "Daniel Machado",
+    "treatedAt": 1775474466373
   },
   {
     "id": 360003,
@@ -612,17 +612,17 @@
     "projectType": "Integração Externa",
     "startDate": 1774494000000,
     "endDate": 1775098800000,
-    "progress": 0,
+    "progress": 50,
     "createdById": 1,
     "createdByName": "Daniel TI",
     "updatedById": 1,
-    "updatedByName": "Daniel TI",
+    "updatedByName": "Daniel Machado",
     "createdAt": 1774870964684,
-    "updatedAt": 1775137988865,
+    "updatedAt": 1775474547881,
     "kanbanOrder": 2002,
     "isBeingTreated": true,
-    "treatedByName": "Daniel TI",
-    "treatedAt": 1775132517597
+    "treatedByName": "Daniel Machado",
+    "treatedAt": 1775474460064
   },
   {
     "id": 1140001,
@@ -668,11 +668,11 @@
     "updatedById": 1,
     "updatedByName": "Neosul - Daniel TI",
     "createdAt": 1775066743283,
-    "updatedAt": 1775138016207,
+    "updatedAt": 1775145565311,
     "kanbanOrder": 2010,
-    "isBeingTreated": false,
-    "treatedByName": null,
-    "treatedAt": null
+    "isBeingTreated": true,
+    "treatedByName": "Neosul - Daniel TI",
+    "treatedAt": 1775145565311
   },
   {
     "id": 1170023,

@@ -803,17 +803,17 @@
     "projectId": 1080001,
     "name": "Desenvolvimento",
     "description": "Criação da lista de Venda e estoque",
-    "status": "Pendente",
+    "status": "Concluída",
     "order": 1,
     "startDate": 1774839600000,
     "endDate": 1774926000000,
-    "completedAt": null,
+    "completedAt": 1775474545734,
     "createdById": 1,
     "createdByName": "Daniel TI",
     "updatedById": 1,
-    "updatedByName": "Daniel TI",
+    "updatedByName": "Daniel Machado",
     "createdAt": 1774871337304,
-    "updatedAt": 1774871337304
+    "updatedAt": 1775474547794
   },
   {
     "id": 1230001,

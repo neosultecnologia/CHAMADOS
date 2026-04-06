@@ -2480,7 +2480,7 @@
     "referenceId": 420003,
     "referenceType": "ticket",
     "actionUrl": "/suporte/420003",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774281992947
   },
   {
@@ -2504,7 +2504,7 @@
     "referenceId": 420003,
     "referenceType": "ticket",
     "actionUrl": "/suporte/420003",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774282019971
   },
   {
@@ -2552,7 +2552,7 @@
     "referenceId": 1290001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1290001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774287010499
   },
   {
@@ -2648,7 +2648,7 @@
     "referenceId": 1320001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1320001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774370263608
   },
   {
@@ -2696,7 +2696,7 @@
     "referenceId": 1350001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1350001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774381875820
   },
   {
@@ -2816,7 +2816,7 @@
     "referenceId": 1380001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1380001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774458574811
   },
   {
@@ -2864,7 +2864,7 @@
     "referenceId": 1410001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1410001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774462088501
   },
   {
@@ -2912,7 +2912,7 @@
     "referenceId": 1440001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1440001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774471966355
   },
   {
@@ -2960,7 +2960,7 @@
     "referenceId": 1470001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1470001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774525337142
   },
   {
@@ -3008,7 +3008,7 @@
     "referenceId": 1500001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1500001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774530687549
   },
   {
@@ -3092,7 +3092,7 @@
     "referenceId": 1530001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1530001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774561170363
   },
   {
@@ -3140,7 +3140,7 @@
     "referenceId": 1530002,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1530002",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774561510350
   },
   {
@@ -3308,7 +3308,7 @@
     "referenceId": 1560001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1560001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774627829709
   },
   {
@@ -3356,7 +3356,7 @@
     "referenceId": 1650001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1650001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774871065287
   },
   {
@@ -3404,7 +3404,7 @@
     "referenceId": 1680001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1680001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774874984994
   },
   {
@@ -3452,7 +3452,7 @@
     "referenceId": 1680002,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1680002",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774875227078
   },
   {
@@ -3500,7 +3500,7 @@
     "referenceId": 1680003,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1680003",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774875306420
   },
   {
@@ -3548,7 +3548,7 @@
     "referenceId": 1560001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1560001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774884094733
   },
   {
@@ -3608,7 +3608,7 @@
     "referenceId": 1740001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1740001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774989346395
   },
   {
@@ -3620,7 +3620,7 @@
     "referenceId": 1680003,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1680003",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1775065267324
   },
   {
