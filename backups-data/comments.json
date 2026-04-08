@@ -334,5 +334,37 @@
     "authorName": "Gabriel Bino",
     "content": "@ADHARA, neste caso o ideal é solicitar ao seu coordenador @Mauricio Ramos que envie um e-mail direcionado ao financeiro copiando o Téo, solicitando a compra dos leitores, com o orçamento de pelo menos três fontes distintas. Vale lembrar de já enviar os modelos para compra no próprio e-mail.\n\nEndereços para inserir no e-mail:\ncontasapagar.rs@neosuldistribuidora.com.br\ncontasapagar.sc@neosuldistribuidora.com.br\nteo@neosuldistribuidora.com.br",
     "createdAt": 1774884018497
+  },
+  {
+    "id": 960001,
+    "ticketId": 1140001,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "Aguardando retorno (aguardando conectar maquina no cabo)",
+    "createdAt": 1775500957396
+  },
+  {
+    "id": 960002,
+    "ticketId": 1650001,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "Foi feito uma limpeza no computador.",
+    "createdAt": 1775501397803
+  },
+  {
+    "id": 960003,
+    "ticketId": 1260001,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "Boa tarde, teria o perfil de alguém em que possa ser espelhado?",
+    "createdAt": 1775501821397
+  },
+  {
+    "id": 960004,
+    "ticketId": 420003,
+    "authorId": 630282,
+    "authorName": "Márcia Freitas",
+    "content": "Boa Tarde \nAlgum retorno? ",
+    "createdAt": 1775584737663
   }
 ]

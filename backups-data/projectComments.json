@@ -133,5 +133,23 @@
     "content": "Estamos tratando a última questão pendente apresentada pelo time da Neogrid/Farmax:\n\nOs códigos de vendedores e clientes estão divergentes entre os arquivos de cadastro e vendas, em discordância com o esperado no layout da Neogrid.\n\nO infarma informou nesta manhã (30/03) que o caso segue em análise e será atualizado o quanto antes.",
     "mentions": null,
     "createdAt": 1774874615829
+  },
+  {
+    "id": 390001,
+    "projectId": 1080001,
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "content": "Documentação anexada.",
+    "mentions": null,
+    "createdAt": 1775501549649
+  },
+  {
+    "id": 390003,
+    "projectId": 780009,
+    "authorId": 1,
+    "authorName": "Daniel TI",
+    "content": "Cada fase terá o seu script salvo para facilitar o entendimento futuro do que foi criado.",
+    "mentions": null,
+    "createdAt": 1775567480310
   }
 ]

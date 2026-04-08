@@ -238,5 +238,65 @@
     "uploadedById": 1,
     "uploadedByName": "Daniel TI",
     "createdAt": 1774989347815
+  },
+  {
+    "id": 390001,
+    "ticketId": 1770001,
+    "fileName": "pasta dados.PNG",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/1770001/1775483275756-arwpqf-pasta dados.PNG",
+    "fileKey": "tickets/1770001/1775483275756-arwpqf-pasta dados.PNG",
+    "mimeType": "image/png",
+    "fileSize": 98292,
+    "uploadedById": 1050001,
+    "uploadedByName": "Kerolaine Morgantti da Cruz",
+    "createdAt": 1775483276147
+  },
+  {
+    "id": 390002,
+    "ticketId": 1770005,
+    "fileName": "email.png",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/1770005/1775561484126-wjifh-email.png",
+    "fileKey": "tickets/1770005/1775561484126-wjifh-email.png",
+    "mimeType": "image/png",
+    "fileSize": 67811,
+    "uploadedById": 300002,
+    "uploadedByName": "JULIA.S",
+    "createdAt": 1775561484558
+  },
+  {
+    "id": 390003,
+    "ticketId": 1770006,
+    "fileName": "2026.04.07 - Atualização PF-PMC 2026 (PHARLAB).xls",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/1770006/1775570720628-3n9x0f-2026.04.07 - Atualização PF-PMC 2026 (PHARLAB).xls",
+    "fileKey": "tickets/1770006/1775570720628-3n9x0f-2026.04.07 - Atualização PF-PMC 2026 (PHARLAB).xls",
+    "mimeType": "application/vnd.ms-excel",
+    "fileSize": 82944,
+    "uploadedById": 390001,
+    "uploadedByName": "Maria Eduarda Chagas",
+    "createdAt": 1775570721169
+  },
+  {
+    "id": 390004,
+    "ticketId": 1770006,
+    "fileName": "ATUALIZAÇÕES GERADAS.JPG",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/1770006/1775570721732-6xojeo-ATUALIZAÇÕES GERADAS.JPG",
+    "fileKey": "tickets/1770006/1775570721732-6xojeo-ATUALIZAÇÕES GERADAS.JPG",
+    "mimeType": "image/jpeg",
+    "fileSize": 76705,
+    "uploadedById": 390001,
+    "uploadedByName": "Maria Eduarda Chagas",
+    "createdAt": 1775570722183
+  },
+  {
+    "id": 390005,
+    "ticketId": 1770006,
+    "fileName": "IMPORTAÇÃO INFARMA.JPG",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/1770006/1775570722789-ktcxka-IMPORTAÇÃO INFARMA.JPG",
+    "fileKey": "tickets/1770006/1775570722789-ktcxka-IMPORTAÇÃO INFARMA.JPG",
+    "mimeType": "image/jpeg",
+    "fileSize": 145259,
+    "uploadedById": 390001,
+    "uploadedByName": "Maria Eduarda Chagas",
+    "createdAt": 1775570723760
   }
 ]
