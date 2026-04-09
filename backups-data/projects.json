@@ -143,11 +143,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770379986213,
-    "updatedAt": 1775567348238,
+    "updatedAt": 1775734405633,
     "kanbanOrder": 2000,
-    "isBeingTreated": false,
-    "treatedByName": null,
-    "treatedAt": null
+    "isBeingTreated": true,
+    "treatedByName": "Daniel TI",
+    "treatedAt": 1775734405633
   },
   {
     "id": 330001,
@@ -218,7 +218,7 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1770902542514,
-    "updatedAt": 1775594925288,
+    "updatedAt": 1775734462933,
     "kanbanOrder": 2001,
     "isBeingTreated": false,
     "treatedByName": null,
@@ -368,7 +368,7 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772122608174,
-    "updatedAt": 1775567348327,
+    "updatedAt": 1775667547555,
     "kanbanOrder": 2004,
     "isBeingTreated": false,
     "treatedByName": null,
@@ -543,11 +543,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1772139095309,
-    "updatedAt": 1775584548376,
+    "updatedAt": 1775734408020,
     "kanbanOrder": 2003,
     "isBeingTreated": true,
     "treatedByName": "Daniel TI",
-    "treatedAt": 1775584548376
+    "treatedAt": 1775734408020
   },
   {
     "id": 810001,
@@ -618,11 +618,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1774870964684,
-    "updatedAt": 1775584550092,
+    "updatedAt": 1775734409655,
     "kanbanOrder": 2002,
-    "isBeingTreated": false,
-    "treatedByName": null,
-    "treatedAt": null
+    "isBeingTreated": true,
+    "treatedByName": "Daniel TI",
+    "treatedAt": 1775734409655
   },
   {
     "id": 1140001,

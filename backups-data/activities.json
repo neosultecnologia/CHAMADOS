@@ -3584,5 +3584,93 @@
     "newValue": null,
     "description": "Chamado criado por Márcia Freitas",
     "createdAt": 1775585550752
+  },
+  {
+    "id": 2520001,
+    "ticketId": 1800001,
+    "type": "created",
+    "authorId": 240039,
+    "authorName": "Monique",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Monique",
+    "createdAt": 1775657894293
+  },
+  {
+    "id": 2520002,
+    "ticketId": 1800001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1775671731561
+  },
+  {
+    "id": 2520003,
+    "ticketId": 1800001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1775671737164
+  },
+  {
+    "id": 2520004,
+    "ticketId": 1770008,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1775677181566
+  },
+  {
+    "id": 2520005,
+    "ticketId": 1770008,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1775677183979
+  },
+  {
+    "id": 2520006,
+    "ticketId": 1770006,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Pendente Infarma",
+    "description": "Status alterado de \"Em Andamento\" para \"Pendente Infarma\"",
+    "createdAt": 1775677203539
+  },
+  {
+    "id": 2520007,
+    "ticketId": 1770001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1775678181746
+  },
+  {
+    "id": 2520008,
+    "ticketId": 1800002,
+    "type": "created",
+    "authorId": 360002,
+    "authorName": "Renata Sousa",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Renata Sousa",
+    "createdAt": 1775679013490
   }
 ]

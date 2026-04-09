@@ -935,23 +935,6 @@
     "updatedAt": 1775564595348
   },
   {
-    "id": 1380005,
-    "projectId": 360001,
-    "name": "Reenvio das informacoes",
-    "description": "Inclusão do fabricante FLORA na lista solicitada pelo Colecta.",
-    "status": "Pendente",
-    "order": 4,
-    "startDate": 1775444400000,
-    "endDate": 1775617200000,
-    "completedAt": null,
-    "createdById": 1,
-    "createdByName": "Daniel TI",
-    "updatedById": 1,
-    "updatedByName": "Daniel TI",
-    "createdAt": 1775502017906,
-    "updatedAt": 1775502017906
-  },
-  {
     "id": 1380006,
     "projectId": 1080001,
     "name": "Ajuste no arquivo Vendas",
@@ -984,5 +967,22 @@
     "updatedByName": "Daniel TI",
     "createdAt": 1775567413455,
     "updatedAt": 1775567413455
+  },
+  {
+    "id": 1410001,
+    "projectId": 360001,
+    "name": "Envio das informações a Colecta",
+    "description": "Aguardando entrada de estoque para a geração/envio das informações.",
+    "status": "Pendente",
+    "order": 4,
+    "startDate": 1775703600000,
+    "endDate": 1776222000000,
+    "completedAt": null,
+    "createdById": 1,
+    "createdByName": "Daniel TI",
+    "updatedById": 1,
+    "updatedByName": "Daniel TI",
+    "createdAt": 1775734460786,
+    "updatedAt": 1775734460786
   }
 ]

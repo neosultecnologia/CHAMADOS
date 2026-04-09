@@ -1056,7 +1056,7 @@
     "description": "Preciso que seja liberada as pasta dado no computador do recebimento (AniDesk 204089707).\n\n* Em anexo as subpastas utilizadas.",
     "category": "Acesso",
     "priority": "Média",
-    "status": "Em Andamento",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 90004,
     "createdById": 1050001,
     "createdByName": "Kerolaine Morgantti da Cruz",
@@ -1068,7 +1068,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1775483275101,
-    "updatedAt": 1775485055693
+    "updatedAt": 1775678181778
   },
   {
     "id": 1770002,
@@ -1161,7 +1161,7 @@
     "description": "No mês de abril as indústrias de medicamentos nos enviam as tabelas de atualizações de PF e PMC dos produtos. Programamos essas atualizações no Infarma com prioridade conforme recebemos de todas as indústrias.\n\nPara fazer a atualização, importamos no Infarma a planilha em anexo '2026.04.07 - Atualização PF-PMC 2026 (PHARLAB)' com as informações de PF/PMC de cada produto.\n\nCaminho para importar a planilha: estoque > movimento > manutenção de preços > cadastro de produtos\n\nO Infarma não está gerando as atualizações de todos os produtos da planilha. A planilha de hoje, por exemplo, tem 171 itens e estão sendo gerados apenas 17 itens. Testei importar outras planilhas de outras indústrias que deram certo na semana passada e hoje também não estão sendo gerados todos os itens.\n\nTentei importar o arquivo com os produtos de diferentes formas mas nenhuma funcionou. Poderiam me ajudar a identificar o que pode estar acontecendo? Desde já, agradeço.",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Em Andamento",
+    "status": "Pendente Infarma",
     "departmentId": 20,
     "createdById": 390001,
     "createdByName": "Maria Eduarda Chagas",
@@ -1173,7 +1173,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1775570719878,
-    "updatedAt": 1775579483158
+    "updatedAt": 1775677203575
   },
   {
     "id": 1770007,
@@ -1203,19 +1203,19 @@
     "description": "Boa tarde!\npor gentileza instalar infarma no PC 01 da conferencia, possui apenas TS\n\nANIDESK 1465890513\nTS: 192.168.64.247",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Novos",
+    "status": "Em Andamento",
     "departmentId": 90004,
     "createdById": 720001,
     "createdByName": "VERIDIANA",
-    "assignedToId": null,
-    "assignedToName": null,
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
     "waitingForDepartment": null,
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1775583962918,
-    "updatedAt": 1775583962918
+    "updatedAt": 1775677184010
   },
   {
     "id": 1770009,
@@ -1237,5 +1237,47 @@
     "order": 0,
     "createdAt": 1775585550752,
     "updatedAt": 1775585550752
+  },
+  {
+    "id": 1800001,
+    "ticketId": "bilhete_1770010",
+    "title": "Ajuste Word",
+    "description": "Bom dia Meninos,\n\nNão estou conseguindo acessar o aplicativo do Word. Informa que tem uma atualização, mais quando vou na Microsoft store não consigo realizar a atualização.",
+    "category": "Acesso",
+    "priority": "Média",
+    "status": "Em Andamento",
+    "departmentId": 20,
+    "createdById": 240039,
+    "createdByName": "Monique",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1775657894293,
+    "updatedAt": 1775671737193
+  },
+  {
+    "id": 1800002,
+    "ticketId": "bilhete_1800002",
+    "title": "AJUSTE DE HORA NO PC",
+    "description": "Boa tarde, tudo bem?\n\nSolicito o ajuste da hora no meu PC, ele está 1hr adiantado com isso impacta nos envios e recebimento de e-mails.",
+    "category": "Técnico",
+    "priority": "Média",
+    "status": "Novos",
+    "departmentId": 20,
+    "createdById": 360002,
+    "createdByName": "Renata Sousa",
+    "assignedToId": null,
+    "assignedToName": null,
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1775679013490,
+    "updatedAt": 1775679013490
   }
 ]
