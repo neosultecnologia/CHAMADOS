@@ -3848,7 +3848,7 @@
     "referenceId": 1770003,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1770003",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1775499394221
   },
   {
@@ -3884,7 +3884,7 @@
     "referenceId": 1770003,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1770003",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1775499762449
   },
   {
@@ -4088,7 +4088,7 @@
     "referenceId": 1770004,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1770004",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1775561363784
   },
   {
@@ -4136,7 +4136,7 @@
     "referenceId": 1770005,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1770005",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1775561483418
   },
   {
@@ -4244,7 +4244,7 @@
     "referenceId": 1770006,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1770006",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1775570719956
   },
   {
@@ -4292,7 +4292,7 @@
     "referenceId": 1770007,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1770007",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1775572098607
   },
   {
@@ -4364,7 +4364,7 @@
     "referenceId": 1770008,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1770008",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1775583962998
   },
   {
@@ -4424,7 +4424,7 @@
     "referenceId": 1770009,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1770009",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1775585550827
   },
   {
@@ -4472,7 +4472,7 @@
     "referenceId": 1800001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1800001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1775657894388
   },
   {
@@ -4556,7 +4556,7 @@
     "referenceId": 1770001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1770001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1775678181763
   },
   {
@@ -4592,7 +4592,7 @@
     "referenceId": 1800002,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1800002",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1775679013564
   },
   {
@@ -4606,5 +4606,353 @@
     "actionUrl": "/suporte/1800002",
     "isRead": false,
     "createdAt": 1775679013580
+  },
+  {
+    "id": 1710015,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Márcia Freitas abriu um novo chamado: \"Liberação de aparelho e chip corporativo para a Operadora Maria\"",
+    "referenceId": 1800003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800003",
+    "isRead": false,
+    "createdAt": 1775750453926
+  },
+  {
+    "id": 1710016,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Márcia Freitas abriu um novo chamado: \"Liberação de aparelho e chip corporativo para a Operadora Maria\"",
+    "referenceId": 1800003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800003",
+    "isRead": false,
+    "createdAt": 1775750453942
+  },
+  {
+    "id": 1710017,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Márcia Freitas abriu um novo chamado: \"Liberação de aparelho e chip corporativo para a Operadora Maria\"",
+    "referenceId": 1800003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800003",
+    "isRead": true,
+    "createdAt": 1775750453957
+  },
+  {
+    "id": 1710018,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Márcia Freitas abriu um novo chamado: \"Liberação de aparelho e chip corporativo para a Operadora Maria\"",
+    "referenceId": 1800003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800003",
+    "isRead": false,
+    "createdAt": 1775750453975
+  },
+  {
+    "id": 1710019,
+    "userId": 360002,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1800002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800002",
+    "isRead": false,
+    "createdAt": 1775759510256
+  },
+  {
+    "id": 1710020,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"AJUSTE DE HORA NO PC\"",
+    "referenceId": 1800002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800002",
+    "isRead": false,
+    "createdAt": 1775759512973
+  },
+  {
+    "id": 1710021,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Atualização Cubos Infarma\"",
+    "referenceId": 1770009,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1770009",
+    "isRead": false,
+    "createdAt": 1775830644312
+  },
+  {
+    "id": 1710022,
+    "userId": 630282,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 1770009,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1770009",
+    "isRead": false,
+    "createdAt": 1775830645459
+  },
+  {
+    "id": 1710023,
+    "userId": 630282,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1770009,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1770009",
+    "isRead": false,
+    "createdAt": 1775836079742
+  },
+  {
+    "id": 1710024,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Habilitar as câmeras \"",
+    "referenceId": 1800015,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800015",
+    "isRead": false,
+    "createdAt": 1775839138681
+  },
+  {
+    "id": 1710025,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Habilitar as câmeras \"",
+    "referenceId": 1800015,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800015",
+    "isRead": false,
+    "createdAt": 1775839138695
+  },
+  {
+    "id": 1710026,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Habilitar as câmeras \"",
+    "referenceId": 1800015,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800015",
+    "isRead": false,
+    "createdAt": 1775839138709
+  },
+  {
+    "id": 1710027,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Habilitar as câmeras \"",
+    "referenceId": 1800015,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800015",
+    "isRead": false,
+    "createdAt": 1775839138723
+  },
+  {
+    "id": 1710028,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Criar Email para Inventário e Teams \"",
+    "referenceId": 1800016,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800016",
+    "isRead": false,
+    "createdAt": 1775841800592
+  },
+  {
+    "id": 1710029,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Criar Email para Inventário e Teams \"",
+    "referenceId": 1800016,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800016",
+    "isRead": false,
+    "createdAt": 1775841800609
+  },
+  {
+    "id": 1710030,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Criar Email para Inventário e Teams \"",
+    "referenceId": 1800016,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800016",
+    "isRead": false,
+    "createdAt": 1775841800627
+  },
+  {
+    "id": 1710031,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Criar Email para Inventário e Teams \"",
+    "referenceId": 1800016,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800016",
+    "isRead": false,
+    "createdAt": 1775841800643
+  },
+  {
+    "id": 1710032,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Liberar acesso para a colaboradora Ludmile Santiago Guimarães \"",
+    "referenceId": 1800017,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800017",
+    "isRead": false,
+    "createdAt": 1775841996070
+  },
+  {
+    "id": 1710033,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Liberar acesso para a colaboradora Ludmile Santiago Guimarães \"",
+    "referenceId": 1800017,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800017",
+    "isRead": false,
+    "createdAt": 1775841996089
+  },
+  {
+    "id": 1710034,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Liberar acesso para a colaboradora Ludmile Santiago Guimarães \"",
+    "referenceId": 1800017,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800017",
+    "isRead": false,
+    "createdAt": 1775841996104
+  },
+  {
+    "id": 1710035,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Liberar acesso para a colaboradora Ludmile Santiago Guimarães \"",
+    "referenceId": 1800017,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800017",
+    "isRead": false,
+    "createdAt": 1775841996119
+  },
+  {
+    "id": 1710036,
+    "userId": 60001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Criar Email para Inventário e Teams\"",
+    "referenceId": 1800016,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800016",
+    "isRead": false,
+    "createdAt": 1775847280015
+  },
+  {
+    "id": 1710037,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Análise",
+    "referenceId": 1800016,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800016",
+    "isRead": false,
+    "createdAt": 1775847282838
+  },
+  {
+    "id": 1710038,
+    "userId": 1050001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1110001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1110001",
+    "isRead": false,
+    "createdAt": 1775847522455
+  },
+  {
+    "id": 1710039,
+    "userId": 1050001,
+    "type": "ticket_comment",
+    "title": "Resposta no Chamado",
+    "message": "Gabriel Bino respondeu seu chamado: \"Criar E-mail - Recebimento\"",
+    "referenceId": 1110001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1110001",
+    "isRead": false,
+    "createdAt": 1775847603431
+  },
+  {
+    "id": 1710040,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 1800016,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800016",
+    "isRead": false,
+    "createdAt": 1775847631345
+  },
+  {
+    "id": 1710041,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Habilitar as câmeras\"",
+    "referenceId": 1800015,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800015",
+    "isRead": false,
+    "createdAt": 1775847783491
+  },
+  {
+    "id": 1710042,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1800016,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800016",
+    "isRead": false,
+    "createdAt": 1775850847728
+  },
+  {
+    "id": 1710043,
+    "userId": 540001,
+    "type": "ticket_comment",
+    "title": "Resposta no Chamado",
+    "message": "Gabriel Bino respondeu seu chamado: \"Criar Email para Inventário e Teams\"",
+    "referenceId": 1800016,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800016",
+    "isRead": false,
+    "createdAt": 1775850886074
   }
 ]

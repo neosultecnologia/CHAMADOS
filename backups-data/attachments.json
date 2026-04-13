@@ -298,5 +298,17 @@
     "uploadedById": 390001,
     "uploadedByName": "Maria Eduarda Chagas",
     "createdAt": 1775570723760
+  },
+  {
+    "id": 420001,
+    "ticketId": 1800003,
+    "fileName": "INTEGRAÇÃO NOVO COLABORADOR 2026 - COLABORADOR TELEVENDAS MARIA.pdf",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/1800003/1775750455034-1ansrc-INTEGRAÇÃO NOVO COLABORADOR 2026 - COLABORADOR TELEVENDAS MARIA.pdf",
+    "fileKey": "tickets/1800003/1775750455034-1ansrc-INTEGRAÇÃO NOVO COLABORADOR 2026 - COLABORADOR TELEVENDAS MARIA.pdf",
+    "mimeType": "application/pdf",
+    "fileSize": 499256,
+    "uploadedById": 630282,
+    "uploadedByName": "Márcia Freitas",
+    "createdAt": 1775750455498
   }
 ]

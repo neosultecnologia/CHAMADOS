@@ -2,7 +2,7 @@
   {
     "id": 1,
     "openId": "PtNcW8Ph6ZNx6BDomoWjgd",
-    "name": "Daniel TI",
+    "name": "Neosul - Daniel TI",
     "email": "tecnologia@neosuldistribuidora.com.br",
     "passwordHash": "$2b$10$f0z5uenLKgsVVusbpC/.teN1BoZSMOi3MKwnZacVOqYpzEbiXlSvq",
     "loginMethod": "oauth",
@@ -23,8 +23,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-04-09T12:02:49.000Z",
-    "lastSignedIn": "2026-04-09T12:02:49.000Z"
+    "updatedAt": "2026-04-12T21:29:30.000Z",
+    "lastSignedIn": "2026-04-12T21:29:31.000Z"
   },
   {
     "id": 23,
@@ -201,8 +201,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-02-06T11:27:15.000Z",
-    "updatedAt": "2026-04-08T11:05:27.000Z",
-    "lastSignedIn": "2026-04-08T11:05:28.000Z"
+    "updatedAt": "2026-04-09T16:29:13.000Z",
+    "lastSignedIn": "2026-04-09T16:29:14.000Z"
   },
   {
     "id": 300002,
@@ -833,6 +833,28 @@
     },
     "createdAt": "2026-03-30T14:12:11.000Z",
     "updatedAt": "2026-03-30T14:58:34.000Z",
+    "lastSignedIn": null
+  },
+  {
+    "id": 1260025,
+    "openId": null,
+    "name": "Sync Test User",
+    "email": "sync-test-1775753164275@example.com",
+    "passwordHash": "hashed-password",
+    "loginMethod": "internal",
+    "role": "user",
+    "approvalStatus": "approved",
+    "departmentId": null,
+    "groupId": 930017,
+    "permissions": {
+      "Desenvolvimento.create": false,
+      "Desenvolvimento.read": true,
+      "Suporte.create": true,
+      "Suporte.read": true,
+      "Suporte.update": false
+    },
+    "createdAt": "2026-04-09T16:46:04.000Z",
+    "updatedAt": "2026-04-09T16:46:04.000Z",
     "lastSignedIn": null
   }
 ]
