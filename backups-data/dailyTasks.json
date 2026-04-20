@@ -186,12 +186,12 @@
     "projectId": 300004,
     "title": "Atualizar Andamento da Integração via E-mail",
     "description": "Atualizar Neogrid sobre o andamento da integração e passar um prazo estipulado para correção das críticas.",
-    "status": "Pendente",
+    "status": "Concluída",
     "priority": "Média",
     "assignedToId": null,
     "assignedToName": null,
     "dueDate": 1771459200000,
-    "completedAt": null,
+    "completedAt": 1776364889482,
     "createdById": 60001,
     "createdByName": "Gabriel Bino",
     "points": 0,
@@ -205,6 +205,6 @@
     "updatedById": null,
     "updatedByName": null,
     "createdAt": 1771508577094,
-    "updatedAt": 1771508577094
+    "updatedAt": 1776364889482
   }
 ]

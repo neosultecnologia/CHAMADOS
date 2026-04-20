@@ -1464,18 +1464,6 @@
     "createdAt": 1773055497565
   },
   {
-    "id": 600007,
-    "userId": 1,
-    "type": "ticket_status_changed",
-    "title": "Status do Chamado Alterado",
-    "message": "O status do seu chamado foi alterado para Concluído",
-    "referenceId": 420002,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/420002",
-    "isRead": true,
-    "createdAt": 1773055504468
-  },
-  {
     "id": 600008,
     "userId": 630282,
     "type": "ticket_status_changed",
@@ -1548,18 +1536,6 @@
     "createdAt": 1773064182915
   },
   {
-    "id": 600014,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Liberar acesso no infarma - Recebimento\"",
-    "referenceId": 960001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/960001",
-    "isRead": true,
-    "createdAt": 1773064182929
-  },
-  {
     "id": 600015,
     "userId": 60001,
     "type": "ticket_created",
@@ -1606,18 +1582,6 @@
     "actionUrl": "/suporte/990001",
     "isRead": false,
     "createdAt": 1773144666627
-  },
-  {
-    "id": 660003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Monique abriu um novo chamado: \"TELEFONE FIXO RECEBIMENTO\"",
-    "referenceId": 990001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/990001",
-    "isRead": true,
-    "createdAt": 1773144666643
   },
   {
     "id": 660004,
@@ -1788,18 +1752,6 @@
     "createdAt": 1773236060561
   },
   {
-    "id": 750003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "VERIDIANA abriu um novo chamado: \"liberação de pasta DEVOLUÇÃO\"",
-    "referenceId": 1020001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1020001",
-    "isRead": true,
-    "createdAt": 1773236060577
-  },
-  {
     "id": 750004,
     "userId": 60001,
     "type": "ticket_created",
@@ -1834,18 +1786,6 @@
     "actionUrl": "/suporte/1020002",
     "isRead": false,
     "createdAt": 1773236265669
-  },
-  {
-    "id": 750007,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "VERIDIANA abriu um novo chamado: \"ESPELHAMENTO DE PERFIL DE ACESSO- GREYCI ESCOBAR\"",
-    "referenceId": 1020002,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1020002",
-    "isRead": true,
-    "createdAt": 1773236265686
   },
   {
     "id": 750008,
@@ -1896,18 +1836,6 @@
     "createdAt": 1773237684536
   },
   {
-    "id": 750015,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Monique abriu um novo chamado: \"Acesso a Qlik\"",
-    "referenceId": 1020003,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1020003",
-    "isRead": true,
-    "createdAt": 1773237684552
-  },
-  {
     "id": 750016,
     "userId": 60001,
     "type": "ticket_created",
@@ -1942,18 +1870,6 @@
     "actionUrl": "/suporte/1020003",
     "isRead": false,
     "createdAt": 1773252981703
-  },
-  {
-    "id": 780002,
-    "userId": 1,
-    "type": "ticket_assigned",
-    "title": "Novo Chamado Atribuído",
-    "message": "Você foi atribuído ao chamado: \"Acesso a Qlik\"",
-    "referenceId": 1020003,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1020003",
-    "isRead": true,
-    "createdAt": 1773253031562
   },
   {
     "id": 780003,
@@ -1992,18 +1908,6 @@
     "createdAt": 1773253501330
   },
   {
-    "id": 780008,
-    "userId": 1,
-    "type": "ticket_status_changed",
-    "title": "Status do Chamado Alterado",
-    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
-    "referenceId": 420002,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/420002",
-    "isRead": true,
-    "createdAt": 1773253518448
-  },
-  {
     "id": 810001,
     "userId": 23,
     "type": "ticket_created",
@@ -2026,18 +1930,6 @@
     "actionUrl": "/suporte/1080001",
     "isRead": false,
     "createdAt": 1773346866097
-  },
-  {
-    "id": 810003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Beatriz Sousa  abriu um novo chamado: \"Cadastro de login infarma\"",
-    "referenceId": 1080001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1080001",
-    "isRead": true,
-    "createdAt": 1773346866112
   },
   {
     "id": 810004,
@@ -2074,18 +1966,6 @@
     "actionUrl": "/suporte/1110001",
     "isRead": false,
     "createdAt": 1773681468594
-  },
-  {
-    "id": 840003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Criar E-mail - Recebimento\"",
-    "referenceId": 1110001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1110001",
-    "isRead": true,
-    "createdAt": 1773681468610
   },
   {
     "id": 840004,
@@ -2148,18 +2028,6 @@
     "createdAt": 1773751939876
   },
   {
-    "id": 900003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "VERIDIANA abriu um novo chamado: \"configuração TROCA DE PC COORDENAÇÃO\"",
-    "referenceId": 1140001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1140001",
-    "isRead": true,
-    "createdAt": 1773751939892
-  },
-  {
     "id": 900004,
     "userId": 60001,
     "type": "ticket_created",
@@ -2194,18 +2062,6 @@
     "actionUrl": "/suporte/1170001",
     "isRead": false,
     "createdAt": 1773755097567
-  },
-  {
-    "id": 930003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "VERIDIANA abriu um novo chamado: \"configuração etiquetas picklist\"",
-    "referenceId": 1170001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1170001",
-    "isRead": true,
-    "createdAt": 1773755097582
   },
   {
     "id": 930004,
@@ -2316,18 +2172,6 @@
     "createdAt": 1773924448870
   },
   {
-    "id": 990003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Bárbara Costa abriu um novo chamado: \"Adicionar Pasta 09 - Setor Fiscal e Contábil - Dados\"",
-    "referenceId": 1230001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1230001",
-    "isRead": true,
-    "createdAt": 1773924448892
-  },
-  {
     "id": 990004,
     "userId": 60001,
     "type": "ticket_created",
@@ -2362,18 +2206,6 @@
     "actionUrl": "/suporte/1260001",
     "isRead": false,
     "createdAt": 1773952613289
-  },
-  {
-    "id": 1020003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "VERIDIANA abriu um novo chamado: \"liberação de módulo ESTOQUE\"",
-    "referenceId": 1260001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1260001",
-    "isRead": true,
-    "createdAt": 1773952613308
   },
   {
     "id": 1020004,
@@ -2484,18 +2316,6 @@
     "createdAt": 1774281992947
   },
   {
-    "id": 1080002,
-    "userId": 1,
-    "type": "mention",
-    "title": "Voce foi mencionado",
-    "message": "Márcia Freitas mencionou voce em um comentario no chamado: \"FUNÇÃO COPIA DE PEDIDO - INFARMA\"",
-    "referenceId": 420003,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/420003",
-    "isRead": true,
-    "createdAt": 1774281992966
-  },
-  {
     "id": 1080003,
     "userId": 60001,
     "type": "ticket_comment",
@@ -2530,18 +2350,6 @@
     "actionUrl": "/suporte/1290001",
     "isRead": false,
     "createdAt": 1774287010466
-  },
-  {
-    "id": 1110003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Caroline Borges batista abriu um novo chamado: \"corel\"",
-    "referenceId": 1290001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1290001",
-    "isRead": true,
-    "createdAt": 1774287010482
   },
   {
     "id": 1110004,
@@ -2628,18 +2436,6 @@
     "createdAt": 1774370263579
   },
   {
-    "id": 1170003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Espelhamento de Login\"",
-    "referenceId": 1320001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1320001",
-    "isRead": true,
-    "createdAt": 1774370263594
-  },
-  {
     "id": 1170004,
     "userId": 60001,
     "type": "ticket_created",
@@ -2674,18 +2470,6 @@
     "actionUrl": "/suporte/1350001",
     "isRead": false,
     "createdAt": 1774381875794
-  },
-  {
-    "id": 1200003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Bárbara Costa abriu um novo chamado: \"Scanner Impressora\"",
-    "referenceId": 1350001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1350001",
-    "isRead": true,
-    "createdAt": 1774381875807
   },
   {
     "id": 1200004,
@@ -2796,18 +2580,6 @@
     "createdAt": 1774458574763
   },
   {
-    "id": 1260003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "VERIDIANA abriu um novo chamado: \"criação de acesso infarma\"",
-    "referenceId": 1380001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1380001",
-    "isRead": true,
-    "createdAt": 1774458574781
-  },
-  {
     "id": 1260004,
     "userId": 60001,
     "type": "ticket_created",
@@ -2842,18 +2614,6 @@
     "actionUrl": "/suporte/1410001",
     "isRead": false,
     "createdAt": 1774462088473
-  },
-  {
-    "id": 1290003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Caroline Borges batista abriu um novo chamado: \"troca de tela\"",
-    "referenceId": 1410001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1410001",
-    "isRead": true,
-    "createdAt": 1774462088487
   },
   {
     "id": 1290004,
@@ -2892,18 +2652,6 @@
     "createdAt": 1774471966322
   },
   {
-    "id": 1320003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "VERIDIANA abriu um novo chamado: \"instalação extensões FSIST\"",
-    "referenceId": 1440001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1440001",
-    "isRead": true,
-    "createdAt": 1774471966338
-  },
-  {
     "id": 1320004,
     "userId": 60001,
     "type": "ticket_created",
@@ -2940,18 +2688,6 @@
     "createdAt": 1774525337104
   },
   {
-    "id": 1350003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Maria Eduarda Chagas abriu um novo chamado: \"Liberar pasta Trade\"",
-    "referenceId": 1470001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1470001",
-    "isRead": true,
-    "createdAt": 1774525337119
-  },
-  {
     "id": 1350004,
     "userId": 60001,
     "type": "ticket_created",
@@ -2986,18 +2722,6 @@
     "actionUrl": "/suporte/1500001",
     "isRead": false,
     "createdAt": 1774530687521
-  },
-  {
-    "id": 1380003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "VERIDIANA abriu um novo chamado: \"desbloqueio de acesso infarma GREYCI ESCOBAR\"",
-    "referenceId": 1500001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1500001",
-    "isRead": true,
-    "createdAt": 1774530687536
   },
   {
     "id": 1380004,
@@ -3072,18 +2796,6 @@
     "createdAt": 1774561170324
   },
   {
-    "id": 1410003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "ADHARA abriu um novo chamado: \"ativação print \"",
-    "referenceId": 1530001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1530001",
-    "isRead": true,
-    "createdAt": 1774561170344
-  },
-  {
     "id": 1410004,
     "userId": 60001,
     "type": "ticket_created",
@@ -3120,18 +2832,6 @@
     "createdAt": 1774561510308
   },
   {
-    "id": 1410007,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "ADHARA abriu um novo chamado: \"chip recebimento \"",
-    "referenceId": 1530002,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1530002",
-    "isRead": true,
-    "createdAt": 1774561510328
-  },
-  {
     "id": 1410008,
     "userId": 60001,
     "type": "ticket_created",
@@ -3166,18 +2866,6 @@
     "actionUrl": "/suporte/1530003",
     "isRead": false,
     "createdAt": 1774561715590
-  },
-  {
-    "id": 1410011,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "ADHARA abriu um novo chamado: \"configuração impressora Fat \"",
-    "referenceId": 1530003,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1530003",
-    "isRead": true,
-    "createdAt": 1774561715608
   },
   {
     "id": 1410012,
@@ -3288,18 +2976,6 @@
     "createdAt": 1774627829672
   },
   {
-    "id": 1470003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "ADHARA abriu um novo chamado: \"solicitação de compra leitores \"",
-    "referenceId": 1560001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1560001",
-    "isRead": true,
-    "createdAt": 1774627829692
-  },
-  {
     "id": 1470004,
     "userId": 60001,
     "type": "ticket_created",
@@ -3334,18 +3010,6 @@
     "actionUrl": "/suporte/1650001",
     "isRead": false,
     "createdAt": 1774871065249
-  },
-  {
-    "id": 1500003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Francielle Vieira Schmitz Bueno abriu um novo chamado: \"FORMATAÇÃO\"",
-    "referenceId": 1650001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1650001",
-    "isRead": true,
-    "createdAt": 1774871065268
   },
   {
     "id": 1500004,
@@ -3384,18 +3048,6 @@
     "createdAt": 1774874984954
   },
   {
-    "id": 1530003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Maria Eduarda Chagas abriu um novo chamado: \"Relatório InFarma não exporta para Excel\"",
-    "referenceId": 1680001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1680001",
-    "isRead": true,
-    "createdAt": 1774874984972
-  },
-  {
     "id": 1530004,
     "userId": 60001,
     "type": "ticket_created",
@@ -3432,18 +3084,6 @@
     "createdAt": 1774875227043
   },
   {
-    "id": 1530007,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "VERIDIANA abriu um novo chamado: \"instalação icloud\"",
-    "referenceId": 1680002,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1680002",
-    "isRead": true,
-    "createdAt": 1774875227062
-  },
-  {
     "id": 1530008,
     "userId": 60001,
     "type": "ticket_created",
@@ -3478,18 +3118,6 @@
     "actionUrl": "/suporte/1680003",
     "isRead": false,
     "createdAt": 1774875306387
-  },
-  {
-    "id": 1530011,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Erro ao importar XML\"",
-    "referenceId": 1680003,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1680003",
-    "isRead": true,
-    "createdAt": 1774875306405
   },
   {
     "id": 1530012,
@@ -3588,18 +3216,6 @@
     "createdAt": 1774989346356
   },
   {
-    "id": 1620003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Daniel TI abriu um novo chamado: \"PEDIDO DE COMPRAS\"",
-    "referenceId": 1740001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1740001",
-    "isRead": true,
-    "createdAt": 1774989346374
-  },
-  {
     "id": 1620004,
     "userId": 60001,
     "type": "ticket_created",
@@ -3634,30 +3250,6 @@
     "actionUrl": "/suporte/1680003",
     "isRead": false,
     "createdAt": 1775065277729
-  },
-  {
-    "id": 1650003,
-    "userId": 1,
-    "type": "ticket_status_changed",
-    "title": "Status do Chamado Alterado",
-    "message": "O status do seu chamado foi alterado para Em Andamento",
-    "referenceId": 1740001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1740001",
-    "isRead": true,
-    "createdAt": 1775065767117
-  },
-  {
-    "id": 1650004,
-    "userId": 1,
-    "type": "ticket_status_changed",
-    "title": "Status do Chamado Alterado",
-    "message": "O status do seu chamado foi alterado para Em Análise",
-    "referenceId": 1740001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1740001",
-    "isRead": true,
-    "createdAt": 1775065767726
   },
   {
     "id": 1650005,
@@ -3696,18 +3288,6 @@
     "createdAt": 1775483275183
   },
   {
-    "id": 1680003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Liberar Pasta Dados\"",
-    "referenceId": 1770001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1770001",
-    "isRead": true,
-    "createdAt": 1775483275200
-  },
-  {
     "id": 1680004,
     "userId": 60001,
     "type": "ticket_created",
@@ -3742,18 +3322,6 @@
     "actionUrl": "/suporte/1770002",
     "isRead": false,
     "createdAt": 1775483612695
-  },
-  {
-    "id": 1680007,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Bárbara Costa abriu um novo chamado: \"Obstrução Impressora\"",
-    "referenceId": 1770002,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1770002",
-    "isRead": true,
-    "createdAt": 1775483612713
   },
   {
     "id": 1680008,
@@ -3838,18 +3406,6 @@
     "actionUrl": "/suporte/1770003",
     "isRead": false,
     "createdAt": 1775499394202
-  },
-  {
-    "id": 1680015,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Márcia Freitas abriu um novo chamado: \"Liberação de Pasta Televendas\"",
-    "referenceId": 1770003,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1770003",
-    "isRead": true,
-    "createdAt": 1775499394221
   },
   {
     "id": 1680016,
@@ -4080,18 +3636,6 @@
     "createdAt": 1775561363765
   },
   {
-    "id": 1680035,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "JULIA.S abriu um novo chamado: \"Acesso ao Qlik\"",
-    "referenceId": 1770004,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1770004",
-    "isRead": true,
-    "createdAt": 1775561363784
-  },
-  {
     "id": 1680036,
     "userId": 60001,
     "type": "ticket_created",
@@ -4126,18 +3670,6 @@
     "actionUrl": "/suporte/1770005",
     "isRead": false,
     "createdAt": 1775561483399
-  },
-  {
-    "id": 1680039,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "JULIA.S abriu um novo chamado: \"Acesso ao E-mail\"",
-    "referenceId": 1770005,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1770005",
-    "isRead": true,
-    "createdAt": 1775561483418
   },
   {
     "id": 1680040,
@@ -4236,18 +3768,6 @@
     "createdAt": 1775570719939
   },
   {
-    "id": 1680048,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Maria Eduarda Chagas abriu um novo chamado: \"Erro na atualização PF/PMC Infarma\"",
-    "referenceId": 1770006,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1770006",
-    "isRead": true,
-    "createdAt": 1775570719956
-  },
-  {
     "id": 1680049,
     "userId": 60001,
     "type": "ticket_created",
@@ -4282,18 +3802,6 @@
     "actionUrl": "/suporte/1770007",
     "isRead": false,
     "createdAt": 1775572098590
-  },
-  {
-    "id": 1680052,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Mauricio Ramos abriu um novo chamado: \"Separação de caixas fechadas e fracionados\"",
-    "referenceId": 1770007,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1770007",
-    "isRead": true,
-    "createdAt": 1775572098607
   },
   {
     "id": 1680053,
@@ -4356,18 +3864,6 @@
     "createdAt": 1775583962980
   },
   {
-    "id": 1680058,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "VERIDIANA abriu um novo chamado: \"instalação infarma no PC conferencia\"",
-    "referenceId": 1770008,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1770008",
-    "isRead": true,
-    "createdAt": 1775583962998
-  },
-  {
     "id": 1680059,
     "userId": 60001,
     "type": "ticket_created",
@@ -4416,18 +3912,6 @@
     "createdAt": 1775585550810
   },
   {
-    "id": 1680063,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Márcia Freitas abriu um novo chamado: \"Atualização Cubos Infarma \"",
-    "referenceId": 1770009,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1770009",
-    "isRead": true,
-    "createdAt": 1775585550827
-  },
-  {
     "id": 1680064,
     "userId": 60001,
     "type": "ticket_created",
@@ -4462,18 +3946,6 @@
     "actionUrl": "/suporte/1800001",
     "isRead": false,
     "createdAt": 1775657894372
-  },
-  {
-    "id": 1710003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Monique abriu um novo chamado: \"Ajuste Word\"",
-    "referenceId": 1800001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1800001",
-    "isRead": true,
-    "createdAt": 1775657894388
   },
   {
     "id": 1710004,
@@ -4584,18 +4056,6 @@
     "createdAt": 1775679013548
   },
   {
-    "id": 1710013,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Renata Sousa abriu um novo chamado: \"AJUSTE DE HORA NO PC\"",
-    "referenceId": 1800002,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1800002",
-    "isRead": true,
-    "createdAt": 1775679013564
-  },
-  {
     "id": 1710014,
     "userId": 60001,
     "type": "ticket_created",
@@ -4630,18 +4090,6 @@
     "actionUrl": "/suporte/1800003",
     "isRead": false,
     "createdAt": 1775750453942
-  },
-  {
-    "id": 1710017,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Márcia Freitas abriu um novo chamado: \"Liberação de aparelho e chip corporativo para a Operadora Maria\"",
-    "referenceId": 1800003,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1800003",
-    "isRead": true,
-    "createdAt": 1775750453957
   },
   {
     "id": 1710018,
@@ -4740,18 +4188,6 @@
     "createdAt": 1775839138695
   },
   {
-    "id": 1710026,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Mauricio Ramos abriu um novo chamado: \"Habilitar as câmeras \"",
-    "referenceId": 1800015,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1800015",
-    "isRead": false,
-    "createdAt": 1775839138709
-  },
-  {
     "id": 1710027,
     "userId": 60001,
     "type": "ticket_created",
@@ -4788,18 +4224,6 @@
     "createdAt": 1775841800609
   },
   {
-    "id": 1710030,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Mauricio Ramos abriu um novo chamado: \"Criar Email para Inventário e Teams \"",
-    "referenceId": 1800016,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1800016",
-    "isRead": false,
-    "createdAt": 1775841800627
-  },
-  {
     "id": 1710031,
     "userId": 60001,
     "type": "ticket_created",
@@ -4834,18 +4258,6 @@
     "actionUrl": "/suporte/1800017",
     "isRead": false,
     "createdAt": 1775841996089
-  },
-  {
-    "id": 1710034,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Mauricio Ramos abriu um novo chamado: \"Liberar acesso para a colaboradora Ludmile Santiago Guimarães \"",
-    "referenceId": 1800017,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1800017",
-    "isRead": false,
-    "createdAt": 1775841996104
   },
   {
     "id": 1710035,
@@ -4954,5 +4366,689 @@
     "actionUrl": "/suporte/1800016",
     "isRead": false,
     "createdAt": 1775850886074
+  },
+  {
+    "id": 1740001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Erro no Fsist\"",
+    "referenceId": 1830001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1830001",
+    "isRead": false,
+    "createdAt": 1776081749546
+  },
+  {
+    "id": 1740002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Erro no Fsist\"",
+    "referenceId": 1830001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1830001",
+    "isRead": false,
+    "createdAt": 1776081749568
+  },
+  {
+    "id": 1740003,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Erro no Fsist\"",
+    "referenceId": 1830001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1830001",
+    "isRead": false,
+    "createdAt": 1776081749583
+  },
+  {
+    "id": 1740005,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Erro no Fsist\"",
+    "referenceId": 1830001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1830001",
+    "isRead": false,
+    "createdAt": 1776084234248
+  },
+  {
+    "id": 1740006,
+    "userId": 1050001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1830001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1830001",
+    "isRead": false,
+    "createdAt": 1776084234738
+  },
+  {
+    "id": 1740007,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Liberar acesso para a colaboradora Ludmile Santiago Guimarães\"",
+    "referenceId": 1800017,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800017",
+    "isRead": false,
+    "createdAt": 1776084275979
+  },
+  {
+    "id": 1740008,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 1800017,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800017",
+    "isRead": false,
+    "createdAt": 1776084278208
+  },
+  {
+    "id": 1740009,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Liberação de aparelho e chip corporativo para a Operadora Maria\"",
+    "referenceId": 1800003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800003",
+    "isRead": false,
+    "createdAt": 1776105755090
+  },
+  {
+    "id": 1740010,
+    "userId": 630282,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1800003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800003",
+    "isRead": false,
+    "createdAt": 1776105756548
+  },
+  {
+    "id": 1740011,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 1800015,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800015",
+    "isRead": false,
+    "createdAt": 1776105768996
+  },
+  {
+    "id": 1740012,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1800015,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800015",
+    "isRead": false,
+    "createdAt": 1776109028457
+  },
+  {
+    "id": 1740013,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Márcia Freitas abriu um novo chamado: \"LIBERAÇÃO DE ACESSO PASTA TRADE\"",
+    "referenceId": 1830002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1830002",
+    "isRead": false,
+    "createdAt": 1776111856532
+  },
+  {
+    "id": 1740014,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Márcia Freitas abriu um novo chamado: \"LIBERAÇÃO DE ACESSO PASTA TRADE\"",
+    "referenceId": 1830002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1830002",
+    "isRead": false,
+    "createdAt": 1776111856550
+  },
+  {
+    "id": 1740015,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Márcia Freitas abriu um novo chamado: \"LIBERAÇÃO DE ACESSO PASTA TRADE\"",
+    "referenceId": 1830002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1830002",
+    "isRead": false,
+    "createdAt": 1776111856566
+  },
+  {
+    "id": 1740017,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Humbertho Ryan abriu um novo chamado: \"Troca de Desktop\"",
+    "referenceId": 1830003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1830003",
+    "isRead": false,
+    "createdAt": 1776196289518
+  },
+  {
+    "id": 1740018,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Humbertho Ryan abriu um novo chamado: \"Troca de Desktop\"",
+    "referenceId": 1830003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1830003",
+    "isRead": false,
+    "createdAt": 1776196289534
+  },
+  {
+    "id": 1740020,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Humbertho Ryan abriu um novo chamado: \"Troca de Desktop\"",
+    "referenceId": 1830003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1830003",
+    "isRead": false,
+    "createdAt": 1776196289567
+  },
+  {
+    "id": 1770001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Falha no abrir o INFARMA\"",
+    "referenceId": 1860001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860001",
+    "isRead": false,
+    "createdAt": 1776264725415
+  },
+  {
+    "id": 1770002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Falha no abrir o INFARMA\"",
+    "referenceId": 1860001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860001",
+    "isRead": false,
+    "createdAt": 1776264725440
+  },
+  {
+    "id": 1770004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Falha no abrir o INFARMA\"",
+    "referenceId": 1860001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860001",
+    "isRead": false,
+    "createdAt": 1776264725480
+  },
+  {
+    "id": 1770005,
+    "userId": 720001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1260001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1260001",
+    "isRead": false,
+    "createdAt": 1776280075507
+  },
+  {
+    "id": 1770006,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Falha no abrir o INFARMA\"",
+    "referenceId": 1860001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860001",
+    "isRead": false,
+    "createdAt": 1776280100141
+  },
+  {
+    "id": 1770007,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1860001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860001",
+    "isRead": false,
+    "createdAt": 1776280100851
+  },
+  {
+    "id": 1770008,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Troca de Desktop\"",
+    "referenceId": 1830003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1830003",
+    "isRead": false,
+    "createdAt": 1776280118434
+  },
+  {
+    "id": 1770009,
+    "userId": 450001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1830003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1830003",
+    "isRead": false,
+    "createdAt": 1776280119183
+  },
+  {
+    "id": 1770010,
+    "userId": 630282,
+    "type": "ticket_comment",
+    "title": "Resposta no Chamado",
+    "message": "Carlos TI respondeu seu chamado: \"LIBERAÇÃO DE ACESSO PASTA TRADE\"",
+    "referenceId": 1830002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1830002",
+    "isRead": false,
+    "createdAt": 1776280898268
+  },
+  {
+    "id": 1770011,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"LIBERAÇÃO DE ACESSO PASTA TRADE\"",
+    "referenceId": 1830002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1830002",
+    "isRead": false,
+    "createdAt": 1776280901619
+  },
+  {
+    "id": 1770012,
+    "userId": 300001,
+    "type": "ticket_comment",
+    "title": "Novo Comentario no Chamado",
+    "message": "Márcia Freitas comentou no chamado: \"LIBERAÇÃO DE ACESSO PASTA TRADE\"",
+    "referenceId": 1830002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1830002",
+    "isRead": false,
+    "createdAt": 1776285990778
+  },
+  {
+    "id": 1770013,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1800017,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800017",
+    "isRead": false,
+    "createdAt": 1776351687307
+  },
+  {
+    "id": 1770014,
+    "userId": 240039,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1800001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1800001",
+    "isRead": false,
+    "createdAt": 1776362790427
+  },
+  {
+    "id": 1770015,
+    "userId": 630282,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 1830002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1830002",
+    "isRead": false,
+    "createdAt": 1776362801290
+  },
+  {
+    "id": 1770016,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Humbertho Ryan abriu um novo chamado: \"Infarma Cubos\"",
+    "referenceId": 1860002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860002",
+    "isRead": false,
+    "createdAt": 1776364010044
+  },
+  {
+    "id": 1770017,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Humbertho Ryan abriu um novo chamado: \"Infarma Cubos\"",
+    "referenceId": 1860002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860002",
+    "isRead": false,
+    "createdAt": 1776364010060
+  },
+  {
+    "id": 1770019,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Humbertho Ryan abriu um novo chamado: \"Infarma Cubos\"",
+    "referenceId": 1860002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860002",
+    "isRead": false,
+    "createdAt": 1776364010093
+  },
+  {
+    "id": 1770020,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Humbertho Ryan abriu um novo chamado: \"Certificado Digital\"",
+    "referenceId": 1860003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860003",
+    "isRead": false,
+    "createdAt": 1776364094939
+  },
+  {
+    "id": 1770021,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Humbertho Ryan abriu um novo chamado: \"Certificado Digital\"",
+    "referenceId": 1860003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860003",
+    "isRead": false,
+    "createdAt": 1776364094956
+  },
+  {
+    "id": 1770023,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Humbertho Ryan abriu um novo chamado: \"Certificado Digital\"",
+    "referenceId": 1860003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860003",
+    "isRead": false,
+    "createdAt": 1776364094989
+  },
+  {
+    "id": 1770024,
+    "userId": 630282,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1830002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1830002",
+    "isRead": false,
+    "createdAt": 1776365465716
+  },
+  {
+    "id": 1770025,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Infarma Cubos\"",
+    "referenceId": 1860002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860002",
+    "isRead": false,
+    "createdAt": 1776365473950
+  },
+  {
+    "id": 1770026,
+    "userId": 450001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1860002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860002",
+    "isRead": false,
+    "createdAt": 1776365474880
+  },
+  {
+    "id": 1770027,
+    "userId": 450001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 1860003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860003",
+    "isRead": false,
+    "createdAt": 1776365650991
+  },
+  {
+    "id": 1770028,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Certificado Digital\"",
+    "referenceId": 1860003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860003",
+    "isRead": false,
+    "createdAt": 1776365654035
+  },
+  {
+    "id": 1770029,
+    "userId": 450001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1860003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860003",
+    "isRead": false,
+    "createdAt": 1776365936433
+  },
+  {
+    "id": 1770030,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Humbertho Ryan abriu um novo chamado: \"Lightshot\"",
+    "referenceId": 1860004,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860004",
+    "isRead": false,
+    "createdAt": 1776368382356
+  },
+  {
+    "id": 1770031,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Humbertho Ryan abriu um novo chamado: \"Lightshot\"",
+    "referenceId": 1860004,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860004",
+    "isRead": false,
+    "createdAt": 1776368382373
+  },
+  {
+    "id": 1770033,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Humbertho Ryan abriu um novo chamado: \"Lightshot\"",
+    "referenceId": 1860004,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860004",
+    "isRead": false,
+    "createdAt": 1776368382406
+  },
+  {
+    "id": 1770034,
+    "userId": 450001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 1860004,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860004",
+    "isRead": false,
+    "createdAt": 1776369695476
+  },
+  {
+    "id": 1770035,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Lightshot\"",
+    "referenceId": 1860004,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860004",
+    "isRead": false,
+    "createdAt": 1776369697592
+  },
+  {
+    "id": 1770036,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Caroline Borges batista abriu um novo chamado: \"Liberação da pasta 42 MARTINS \"",
+    "referenceId": 1860005,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860005",
+    "isRead": false,
+    "createdAt": 1776430766507
+  },
+  {
+    "id": 1770037,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Caroline Borges batista abriu um novo chamado: \"Liberação da pasta 42 MARTINS \"",
+    "referenceId": 1860005,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860005",
+    "isRead": false,
+    "createdAt": 1776430766522
+  },
+  {
+    "id": 1770039,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Caroline Borges batista abriu um novo chamado: \"Liberação da pasta 42 MARTINS \"",
+    "referenceId": 1860005,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860005",
+    "isRead": false,
+    "createdAt": 1776430766557
+  },
+  {
+    "id": 1770040,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Ajuste no processo de F11\"",
+    "referenceId": 1860006,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860006",
+    "isRead": false,
+    "createdAt": 1776431407102
+  },
+  {
+    "id": 1770041,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Ajuste no processo de F11\"",
+    "referenceId": 1860006,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860006",
+    "isRead": false,
+    "createdAt": 1776431407125
+  },
+  {
+    "id": 1770043,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Ajuste no processo de F11\"",
+    "referenceId": 1860006,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860006",
+    "isRead": false,
+    "createdAt": 1776431407157
+  },
+  {
+    "id": 1770044,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Humbertho Ryan abriu um novo chamado: \"Incluir Ponto de Wi-fi na nova sala de reunião\"",
+    "referenceId": 1860007,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860007",
+    "isRead": false,
+    "createdAt": 1776447848284
+  },
+  {
+    "id": 1770045,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Humbertho Ryan abriu um novo chamado: \"Incluir Ponto de Wi-fi na nova sala de reunião\"",
+    "referenceId": 1860007,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860007",
+    "isRead": false,
+    "createdAt": 1776447848301
+  },
+  {
+    "id": 1770047,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Humbertho Ryan abriu um novo chamado: \"Incluir Ponto de Wi-fi na nova sala de reunião\"",
+    "referenceId": 1860007,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1860007",
+    "isRead": false,
+    "createdAt": 1776447848336
   }
 ]

@@ -310,5 +310,29 @@
     "uploadedById": 630282,
     "uploadedByName": "Márcia Freitas",
     "createdAt": 1775750455498
+  },
+  {
+    "id": 450001,
+    "ticketId": 1830001,
+    "fileName": "erro.jpeg",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/1830001/1776081750344-jntc3o-erro.jpeg",
+    "fileKey": "tickets/1830001/1776081750344-jntc3o-erro.jpeg",
+    "mimeType": "image/jpeg",
+    "fileSize": 168873,
+    "uploadedById": 1050001,
+    "uploadedByName": "Kerolaine Morgantti da Cruz",
+    "createdAt": 1776081750688
+  },
+  {
+    "id": 450002,
+    "ticketId": 1830001,
+    "fileName": "autenticação.PNG",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/1830001/1776081751534-bki7r8-autenticação.PNG",
+    "fileKey": "tickets/1830001/1776081751534-bki7r8-autenticação.PNG",
+    "mimeType": "image/png",
+    "fileSize": 381578,
+    "uploadedById": 1050001,
+    "uploadedByName": "Kerolaine Morgantti da Cruz",
+    "createdAt": 1776081751912
   }
 ]

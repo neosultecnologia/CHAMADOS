@@ -390,5 +390,21 @@
     "authorName": "Gabriel Bino",
     "content": "Caixa postal criada. Acesso enviado via e-mail.",
     "createdAt": 1775850886009
+  },
+  {
+    "id": 1020001,
+    "ticketId": 1830002,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "A liberação seria pra todo mundo?",
+    "createdAt": 1776280898195
+  },
+  {
+    "id": 1020002,
+    "ticketId": 1830002,
+    "authorId": 630282,
+    "authorName": "Márcia Freitas",
+    "content": "Não, desculpe.. acabei não citando. Somente na minha maquina ",
+    "createdAt": 1776285990709
   }
 ]

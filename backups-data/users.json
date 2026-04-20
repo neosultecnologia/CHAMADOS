@@ -2,7 +2,7 @@
   {
     "id": 1,
     "openId": "PtNcW8Ph6ZNx6BDomoWjgd",
-    "name": "Neosul - Daniel TI",
+    "name": "Daniel TI",
     "email": "tecnologia@neosuldistribuidora.com.br",
     "passwordHash": "$2b$10$f0z5uenLKgsVVusbpC/.teN1BoZSMOi3MKwnZacVOqYpzEbiXlSvq",
     "loginMethod": "oauth",
@@ -23,8 +23,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-04-12T21:29:30.000Z",
-    "lastSignedIn": "2026-04-12T21:29:31.000Z"
+    "updatedAt": "2026-04-20T14:23:52.000Z",
+    "lastSignedIn": "2026-04-20T14:23:53.000Z"
   },
   {
     "id": 23,
@@ -201,8 +201,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-02-06T11:27:15.000Z",
-    "updatedAt": "2026-04-09T16:29:13.000Z",
-    "lastSignedIn": "2026-04-09T16:29:14.000Z"
+    "updatedAt": "2026-04-13T11:34:00.000Z",
+    "lastSignedIn": "2026-04-13T11:34:01.000Z"
   },
   {
     "id": 300002,
@@ -362,8 +362,8 @@
       "tecnologia": false
     },
     "createdAt": "2026-02-12T16:40:58.000Z",
-    "updatedAt": "2026-02-26T12:15:11.000Z",
-    "lastSignedIn": "2026-02-12T19:48:01.000Z"
+    "updatedAt": "2026-04-16T18:25:43.000Z",
+    "lastSignedIn": "2026-04-16T18:25:43.000Z"
   },
   {
     "id": 480001,
@@ -855,6 +855,22 @@
     },
     "createdAt": "2026-04-09T16:46:04.000Z",
     "updatedAt": "2026-04-09T16:46:04.000Z",
+    "lastSignedIn": null
+  },
+  {
+    "id": 1290001,
+    "openId": null,
+    "name": "camila soares de souza",
+    "email": "trade3@neosuldistribuidora.com.br",
+    "passwordHash": "$2b$10$bn11uWWgMVEMh38De0qtgeLtmvabt8pnoAxIKxFfgOoOnfZwEflYG",
+    "loginMethod": "internal",
+    "role": "user",
+    "approvalStatus": "approved",
+    "departmentId": null,
+    "groupId": null,
+    "permissions": [],
+    "createdAt": "2026-04-20T12:22:21.000Z",
+    "updatedAt": "2026-04-20T12:33:47.000Z",
     "lastSignedIn": null
   }
 ]
