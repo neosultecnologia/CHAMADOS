@@ -1518,19 +1518,19 @@
     "description": "Preciso do acesso a pasta",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Novos",
+    "status": "Em Andamento",
     "departmentId": 17,
     "createdById": 690001,
     "createdByName": "Caroline Borges batista",
-    "assignedToId": null,
-    "assignedToName": null,
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
     "waitingForDepartment": null,
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1776430766465,
-    "updatedAt": 1776430766465
+    "updatedAt": 1776715450152
   },
   {
     "id": 1860006,
@@ -1560,18 +1560,18 @@
     "description": "Boa tarde!\nPor gentileza, solicitar um novo ponto de rede na antiga sala do compras, onde virou uma sala para reunião. Naquele local não tem mais tomadas para acesso de rede, tornando inviavel ter uma reunião que necessite de internet, pois o sistema fica caindo e os navegadores demoram demais para carregar.",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Novos",
+    "status": "Em Análise",
     "departmentId": 17,
     "createdById": 450001,
     "createdByName": "Humbertho Ryan",
-    "assignedToId": null,
-    "assignedToName": null,
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
     "waitingForDepartment": null,
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1776447848242,
-    "updatedAt": 1776447848242
+    "updatedAt": 1776715417418
   }
 ]

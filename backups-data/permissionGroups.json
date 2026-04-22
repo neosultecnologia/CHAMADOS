@@ -545,5 +545,133 @@
     "isDefault": false,
     "createdAt": 1775755467965,
     "updatedAt": 1775755467965
+  },
+  {
+    "id": 960003,
+    "name": "Suporte Técnico 1776704803975",
+    "description": "Acesso a suporte e desenvolvimento",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776704803981,
+    "updatedAt": 1776704803981
+  },
+  {
+    "id": 960004,
+    "name": "Updated Group Name 1776704804560",
+    "description": "Updated description",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776704804458,
+    "updatedAt": 1776704804561
+  },
+  {
+    "id": 960007,
+    "name": "Assignment Test Group 1776704804980",
+    "description": "For testing assignment",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776704804981,
+    "updatedAt": 1776704804981
+  },
+  {
+    "id": 960008,
+    "name": "Inheritance Test Group 1776704805333",
+    "description": "Testing permission inheritance",
+    "permissions": {
+      "desenvolvimento": false,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": true,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776704805333,
+    "updatedAt": 1776704805333
+  },
+  {
+    "id": 960011,
+    "name": "Suporte Técnico 1776708916195",
+    "description": "Acesso a suporte e desenvolvimento",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776708916200,
+    "updatedAt": 1776708916200
+  },
+  {
+    "id": 960012,
+    "name": "Updated Group Name 1776708916783",
+    "description": "Updated description",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776708916677,
+    "updatedAt": 1776708916784
+  },
+  {
+    "id": 960015,
+    "name": "Assignment Test Group 1776708917209",
+    "description": "For testing assignment",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776708917209,
+    "updatedAt": 1776708917209
+  },
+  {
+    "id": 960016,
+    "name": "Inheritance Test Group 1776708917571",
+    "description": "Testing permission inheritance",
+    "permissions": {
+      "desenvolvimento": false,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": true,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776708917571,
+    "updatedAt": 1776708917571
   }
 ]

@@ -4376,5 +4376,49 @@
     "newValue": null,
     "description": "Chamado criado por Humbertho Ryan",
     "createdAt": 1776447848242
+  },
+  {
+    "id": 2610001,
+    "ticketId": 1860007,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1776715405063
+  },
+  {
+    "id": 2610002,
+    "ticketId": 1860007,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Análise",
+    "description": "Status alterado de \"Novos\" para \"Em Análise\"",
+    "createdAt": 1776715417383
+  },
+  {
+    "id": 2610003,
+    "ticketId": 1860005,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1776715449207
+  },
+  {
+    "id": 2610004,
+    "ticketId": 1860005,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1776715450122
   }
 ]
