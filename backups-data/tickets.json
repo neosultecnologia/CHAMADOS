@@ -1497,7 +1497,7 @@
     "description": "Por gentileza, ajustar a função de captura de tela",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Em Andamento",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 17,
     "createdById": 450001,
     "createdByName": "Humbertho Ryan",
@@ -1509,7 +1509,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1776368382312,
-    "updatedAt": 1776369697608
+    "updatedAt": 1776875905800
   },
   {
     "id": 1860005,
@@ -1518,7 +1518,7 @@
     "description": "Preciso do acesso a pasta",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Em Andamento",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 17,
     "createdById": 690001,
     "createdByName": "Caroline Borges batista",
@@ -1530,7 +1530,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1776430766465,
-    "updatedAt": 1776715450152
+    "updatedAt": 1776875876723
   },
   {
     "id": 1860006,
@@ -1573,5 +1573,47 @@
     "order": 0,
     "createdAt": 1776447848242,
     "updatedAt": 1776715417418
+  },
+  {
+    "id": 1890013,
+    "ticketId": "bilhete_1860008",
+    "title": "Ajustar o Mapa de Compras em excel",
+    "description": "Bom dia!\nPor gentileza, ajustar o mapa de compras que é por excel no meu computador. Sem o ajuste não consigo atualizar as informações. Pasta: Dados > 7. Fornecedores > MAPA DE COMPRAS - NEOSUL RS V03 e NEOSUL SC V03. Fica bem no final da pasta",
+    "category": "Funcionalidade",
+    "priority": "Média",
+    "status": "Em Andamento",
+    "departmentId": 17,
+    "createdById": 450001,
+    "createdByName": "Humbertho Ryan",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1776866975631,
+    "updatedAt": 1776875931001
+  },
+  {
+    "id": 1890014,
+    "ticketId": "bilhete_1890014",
+    "title": "Problemas com Outlook",
+    "description": "Meu outlook não esta enviando emails e não esta aparecendo a caixa de enviados tambem!\nPreciso tambem que confirmem se os emails do trade2 estão sendo direcionados para o meu email o trade3.",
+    "category": "Técnico",
+    "priority": "Média",
+    "status": "Novos",
+    "departmentId": 17,
+    "createdById": 1290001,
+    "createdByName": "camila soares de souza",
+    "assignedToId": null,
+    "assignedToName": null,
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1776869985079,
+    "updatedAt": 1776869985079
   }
 ]

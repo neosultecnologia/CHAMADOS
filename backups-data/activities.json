@@ -4420,5 +4420,71 @@
     "newValue": "Em Andamento",
     "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
     "createdAt": 1776715450122
+  },
+  {
+    "id": 2610005,
+    "ticketId": 1890013,
+    "type": "created",
+    "authorId": 450001,
+    "authorName": "Humbertho Ryan",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Humbertho Ryan",
+    "createdAt": 1776866975631
+  },
+  {
+    "id": 2610006,
+    "ticketId": 1890014,
+    "type": "created",
+    "authorId": 1290001,
+    "authorName": "camila soares de souza",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por camila soares de souza",
+    "createdAt": 1776869985079
+  },
+  {
+    "id": 2610007,
+    "ticketId": 1860005,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1776875876692
+  },
+  {
+    "id": 2610008,
+    "ticketId": 1860004,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1776875905770
+  },
+  {
+    "id": 2610009,
+    "ticketId": 1890013,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1776875925005
+  },
+  {
+    "id": 2610010,
+    "ticketId": 1890013,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1776875930962
   }
 ]

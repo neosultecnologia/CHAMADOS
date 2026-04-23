@@ -673,5 +673,325 @@
     "isDefault": false,
     "createdAt": 1776708917571,
     "updatedAt": 1776708917571
+  },
+  {
+    "id": 960019,
+    "name": "Suporte Técnico 1776864830438",
+    "description": "Acesso a suporte e desenvolvimento",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776864830443,
+    "updatedAt": 1776864830443
+  },
+  {
+    "id": 960020,
+    "name": "Updated Group Name 1776864831024",
+    "description": "Updated description",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776864830919,
+    "updatedAt": 1776864831025
+  },
+  {
+    "id": 960023,
+    "name": "Assignment Test Group 1776864831453",
+    "description": "For testing assignment",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776864831454,
+    "updatedAt": 1776864831454
+  },
+  {
+    "id": 960024,
+    "name": "Inheritance Test Group 1776864831814",
+    "description": "Testing permission inheritance",
+    "permissions": {
+      "desenvolvimento": false,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": true,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776864831814,
+    "updatedAt": 1776864831814
+  },
+  {
+    "id": 960027,
+    "name": "Suporte Técnico 1776882691175",
+    "description": "Acesso a suporte e desenvolvimento",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776882691179,
+    "updatedAt": 1776882691179
+  },
+  {
+    "id": 960028,
+    "name": "Updated Group Name 1776882691741",
+    "description": "Updated description",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776882691634,
+    "updatedAt": 1776882691742
+  },
+  {
+    "id": 960031,
+    "name": "Assignment Test Group 1776882692154",
+    "description": "For testing assignment",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776882692154,
+    "updatedAt": 1776882692154
+  },
+  {
+    "id": 960032,
+    "name": "Inheritance Test Group 1776882692505",
+    "description": "Testing permission inheritance",
+    "permissions": {
+      "desenvolvimento": false,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": true,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776882692505,
+    "updatedAt": 1776882692505
+  },
+  {
+    "id": 960035,
+    "name": "Suporte Técnico 1776882729836",
+    "description": "Acesso a suporte e desenvolvimento",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776882729840,
+    "updatedAt": 1776882729840
+  },
+  {
+    "id": 960036,
+    "name": "Updated Group Name 1776882730406",
+    "description": "Updated description",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776882730303,
+    "updatedAt": 1776882730407
+  },
+  {
+    "id": 960039,
+    "name": "Assignment Test Group 1776882730820",
+    "description": "For testing assignment",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776882730820,
+    "updatedAt": 1776882730820
+  },
+  {
+    "id": 960040,
+    "name": "Inheritance Test Group 1776882731231",
+    "description": "Testing permission inheritance",
+    "permissions": {
+      "desenvolvimento": false,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": true,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776882731231,
+    "updatedAt": 1776882731231
+  },
+  {
+    "id": 960043,
+    "name": "Suporte Técnico 1776883677573",
+    "description": "Acesso a suporte e desenvolvimento",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776883677578,
+    "updatedAt": 1776883677578
+  },
+  {
+    "id": 960044,
+    "name": "Updated Group Name 1776883678133",
+    "description": "Updated description",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776883678031,
+    "updatedAt": 1776883678134
+  },
+  {
+    "id": 960047,
+    "name": "Assignment Test Group 1776883678540",
+    "description": "For testing assignment",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776883678540,
+    "updatedAt": 1776883678540
+  },
+  {
+    "id": 960048,
+    "name": "Inheritance Test Group 1776883678887",
+    "description": "Testing permission inheritance",
+    "permissions": {
+      "desenvolvimento": false,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": true,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776883678888,
+    "updatedAt": 1776883678888
+  },
+  {
+    "id": 960051,
+    "name": "Suporte Técnico 1776884646872",
+    "description": "Acesso a suporte e desenvolvimento",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776884646878,
+    "updatedAt": 1776884646878
+  },
+  {
+    "id": 960052,
+    "name": "Updated Group Name 1776884647430",
+    "description": "Updated description",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776884647330,
+    "updatedAt": 1776884647431
+  },
+  {
+    "id": 960055,
+    "name": "Assignment Test Group 1776884647842",
+    "description": "For testing assignment",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776884647842,
+    "updatedAt": 1776884647842
+  },
+  {
+    "id": 960056,
+    "name": "Inheritance Test Group 1776884648190",
+    "description": "Testing permission inheritance",
+    "permissions": {
+      "desenvolvimento": false,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": true,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1776884648190,
+    "updatedAt": 1776884648190
   }
 ]

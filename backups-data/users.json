@@ -23,8 +23,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-04-22T12:16:54.000Z",
-    "lastSignedIn": "2026-04-22T12:16:54.000Z"
+    "updatedAt": "2026-04-23T11:05:08.000Z",
+    "lastSignedIn": "2026-04-23T11:05:09.000Z"
   },
   {
     "id": 23,
@@ -77,8 +77,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-02-04T11:57:53.000Z",
-    "updatedAt": "2026-04-20T18:39:01.000Z",
-    "lastSignedIn": "2026-04-20T18:39:01.000Z"
+    "updatedAt": "2026-04-22T22:25:10.000Z",
+    "lastSignedIn": "2026-04-22T22:25:11.000Z"
   },
   {
     "id": 90001,
@@ -867,10 +867,21 @@
     "role": "user",
     "approvalStatus": "approved",
     "departmentId": null,
-    "groupId": null,
-    "permissions": [],
+    "groupId": 300001,
+    "permissions": {
+      "almoxarifado": true,
+      "chamados": true,
+      "comercial": false,
+      "compras": false,
+      "desenvolvimento": true,
+      "marketing": false,
+      "projetos": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
     "createdAt": "2026-04-20T12:22:21.000Z",
-    "updatedAt": "2026-04-20T12:33:47.000Z",
-    "lastSignedIn": null
+    "updatedAt": "2026-04-22T14:35:05.000Z",
+    "lastSignedIn": "2026-04-22T13:54:34.000Z"
   }
 ]
