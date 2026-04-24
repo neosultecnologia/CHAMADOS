@@ -594,7 +594,7 @@
     "description": "Preciso de um e-mail para o recebimento.\nMotivo: existem duas pessoas e precisamos de e-mail separados para que não haja perdas ou falhas de informação.\n\nHoje temos o nfe.sc@neosuldistribuidora.com.br",
     "category": "Acesso",
     "priority": "Baixa",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 1050001,
     "createdByName": "Kerolaine Morgantti da Cruz",
@@ -606,7 +606,7 @@
     "lastRespondentName": "Gabriel Bino",
     "order": 0,
     "createdAt": 1773681468522,
-    "updatedAt": 1775847603413
+    "updatedAt": 1776950511633
   },
   {
     "id": 1140001,
@@ -1581,7 +1581,7 @@
     "description": "Bom dia!\nPor gentileza, ajustar o mapa de compras que é por excel no meu computador. Sem o ajuste não consigo atualizar as informações. Pasta: Dados > 7. Fornecedores > MAPA DE COMPRAS - NEOSUL RS V03 e NEOSUL SC V03. Fica bem no final da pasta",
     "category": "Funcionalidade",
     "priority": "Média",
-    "status": "Em Andamento",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 17,
     "createdById": 450001,
     "createdByName": "Humbertho Ryan",
@@ -1593,7 +1593,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1776866975631,
-    "updatedAt": 1776875931001
+    "updatedAt": 1776972086680
   },
   {
     "id": 1890014,
@@ -1615,5 +1615,47 @@
     "order": 0,
     "createdAt": 1776869985079,
     "updatedAt": 1776869985079
+  },
+  {
+    "id": 1890035,
+    "ticketId": "bilhete_1890015",
+    "title": "Instalar Java e Auxílio Cloud",
+    "description": "Instalar o Java e Auxílio Cloud nos computadores de devolução e sac.\nMotivo: Importação e desconhecimento de notas.\n\nAnidesk:\n866 440 336 - Vanessa - SAC\n1 904 118 602 - Beatriz - Devolução\n1 521 024 334 - Lívia - Devolução",
+    "category": "Acesso",
+    "priority": "Alta",
+    "status": "Novos",
+    "departmentId": 90004,
+    "createdById": 1050001,
+    "createdByName": "Kerolaine Morgantti da Cruz",
+    "assignedToId": null,
+    "assignedToName": null,
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1776950817053,
+    "updatedAt": 1776950817053
+  },
+  {
+    "id": 1890036,
+    "ticketId": "bilhete_1890036",
+    "title": "Liberar acessos de conferencia caixa fechado",
+    "description": "Preciso que seja liberado o acesso a conferencia de caixa fechada para o colaborador Leonardo Oliveira Ribeiro",
+    "category": "Técnico",
+    "priority": "Alta",
+    "status": "Novos",
+    "departmentId": 17,
+    "createdById": 540001,
+    "createdByName": "Mauricio Ramos",
+    "assignedToId": null,
+    "assignedToName": null,
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1776977727944,
+    "updatedAt": 1776977727944
   }
 ]

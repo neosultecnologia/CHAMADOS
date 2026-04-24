@@ -4486,5 +4486,49 @@
     "newValue": "Em Andamento",
     "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
     "createdAt": 1776875930962
+  },
+  {
+    "id": 2610011,
+    "ticketId": 1110001,
+    "type": "status_change",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1776950511611
+  },
+  {
+    "id": 2610012,
+    "ticketId": 1890035,
+    "type": "created",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Kerolaine Morgantti da Cruz",
+    "createdAt": 1776950817053
+  },
+  {
+    "id": 2610013,
+    "ticketId": 1890013,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1776972086645
+  },
+  {
+    "id": 2610014,
+    "ticketId": 1890036,
+    "type": "created",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mauricio Ramos",
+    "createdAt": 1776977727944
   }
 ]

@@ -1143,17 +1143,17 @@
     "projectId": 1260001,
     "name": "Teste pedido/retorno",
     "description": "Aguardando a REDE enviar o pedido no dia 22/04",
-    "status": "Pendente",
+    "status": "Concluída",
     "order": 4,
     "startDate": 1776826800000,
     "endDate": 1776826800000,
-    "completedAt": null,
+    "completedAt": 1777028888692,
     "createdById": 1,
     "createdByName": "Daniel TI",
     "updatedById": 1,
     "updatedByName": "Daniel TI",
     "createdAt": 1776705712287,
-    "updatedAt": 1776705712287
+    "updatedAt": 1777028889180
   },
   {
     "id": 1470010,
@@ -1205,5 +1205,22 @@
     "updatedByName": "Daniel TI",
     "createdAt": 1776717367834,
     "updatedAt": 1776717367834
+  },
+  {
+    "id": 1470025,
+    "projectId": 1260034,
+    "name": "Fase de ajuste",
+    "description": "Configuração das informações\ncriação de politica nas 3 UF's",
+    "status": "Pendente",
+    "order": 1,
+    "startDate": 1776913200000,
+    "endDate": 1777345200000,
+    "completedAt": null,
+    "createdById": 1,
+    "createdByName": "Daniel TI",
+    "updatedById": 1,
+    "updatedByName": "Daniel TI",
+    "createdAt": 1776967978434,
+    "updatedAt": 1776967978434
   }
 ]

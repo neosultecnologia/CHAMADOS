@@ -5144,7 +5144,7 @@
     "referenceId": 1890013,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1890013",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1776866975730
   },
   {
@@ -5192,7 +5192,7 @@
     "referenceId": 1890014,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1890014",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1776869985173
   },
   {
@@ -5242,5 +5242,113 @@
     "actionUrl": "/suporte/1890013",
     "isRead": false,
     "createdAt": 1776875930982
+  },
+  {
+    "id": 1800017,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Instalar Java e Auxílio Cloud\"",
+    "referenceId": 1890035,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1890035",
+    "isRead": false,
+    "createdAt": 1776950817098
+  },
+  {
+    "id": 1800018,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Instalar Java e Auxílio Cloud\"",
+    "referenceId": 1890035,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1890035",
+    "isRead": false,
+    "createdAt": 1776950817116
+  },
+  {
+    "id": 1800019,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Instalar Java e Auxílio Cloud\"",
+    "referenceId": 1890035,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1890035",
+    "isRead": false,
+    "createdAt": 1776950817133
+  },
+  {
+    "id": 1800020,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Instalar Java e Auxílio Cloud\"",
+    "referenceId": 1890035,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1890035",
+    "isRead": false,
+    "createdAt": 1776950817149
+  },
+  {
+    "id": 1800021,
+    "userId": 450001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1890013,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1890013",
+    "isRead": false,
+    "createdAt": 1776972086664
+  },
+  {
+    "id": 1800022,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Liberar acessos de conferencia caixa fechado\"",
+    "referenceId": 1890036,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1890036",
+    "isRead": false,
+    "createdAt": 1776977727978
+  },
+  {
+    "id": 1800023,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Liberar acessos de conferencia caixa fechado\"",
+    "referenceId": 1890036,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1890036",
+    "isRead": false,
+    "createdAt": 1776977727992
+  },
+  {
+    "id": 1800024,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Liberar acessos de conferencia caixa fechado\"",
+    "referenceId": 1890036,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1890036",
+    "isRead": false,
+    "createdAt": 1776977728006
+  },
+  {
+    "id": 1800025,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Liberar acessos de conferencia caixa fechado\"",
+    "referenceId": 1890036,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1890036",
+    "isRead": false,
+    "createdAt": 1776977728020
   }
 ]
