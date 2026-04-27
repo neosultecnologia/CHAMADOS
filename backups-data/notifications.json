@@ -5132,7 +5132,7 @@
     "referenceId": 1890013,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1890013",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1776866975713
   },
   {
@@ -5180,7 +5180,7 @@
     "referenceId": 1890014,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1890014",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1776869985157
   },
   {
@@ -5276,7 +5276,7 @@
     "referenceId": 1890035,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1890035",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1776950817133
   },
   {
@@ -5336,7 +5336,7 @@
     "referenceId": 1890036,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1890036",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1776977728006
   },
   {
@@ -5350,5 +5350,77 @@
     "actionUrl": "/suporte/1890036",
     "isRead": false,
     "createdAt": 1776977728020
+  },
+  {
+    "id": 1830001,
+    "userId": 1290001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 1890014,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1890014",
+    "isRead": false,
+    "createdAt": 1777291354024
+  },
+  {
+    "id": 1830002,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Problemas com Outlook\"",
+    "referenceId": 1890014,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1890014",
+    "isRead": false,
+    "createdAt": 1777291357584
+  },
+  {
+    "id": 1830003,
+    "userId": 1290001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Novos",
+    "referenceId": 1890014,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1890014",
+    "isRead": false,
+    "createdAt": 1777291358602
+  },
+  {
+    "id": 1830004,
+    "userId": 1290001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 1890014,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1890014",
+    "isRead": false,
+    "createdAt": 1777291361150
+  },
+  {
+    "id": 1830005,
+    "userId": 1050001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 1890035,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1890035",
+    "isRead": false,
+    "createdAt": 1777291419520
+  },
+  {
+    "id": 1830006,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Instalar Java e Auxílio Cloud\"",
+    "referenceId": 1890035,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1890035",
+    "isRead": false,
+    "createdAt": 1777291421623
   }
 ]

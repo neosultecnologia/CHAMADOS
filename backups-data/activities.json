@@ -4530,5 +4530,71 @@
     "newValue": null,
     "description": "Chamado criado por Mauricio Ramos",
     "createdAt": 1776977727944
+  },
+  {
+    "id": 2640001,
+    "ticketId": 1890014,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1777291353995
+  },
+  {
+    "id": 2640002,
+    "ticketId": 1890014,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1777291357559
+  },
+  {
+    "id": 2640003,
+    "ticketId": 1890014,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Novos",
+    "description": "Status alterado de \"Em Andamento\" para \"Novos\"",
+    "createdAt": 1777291358582
+  },
+  {
+    "id": 2640004,
+    "ticketId": 1890014,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1777291361131
+  },
+  {
+    "id": 2640005,
+    "ticketId": 1890035,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1777291419504
+  },
+  {
+    "id": 2640006,
+    "ticketId": 1890035,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1777291421606
   }
 ]
