@@ -406,5 +406,13 @@
     "authorName": "Márcia Freitas",
     "content": "Não, desculpe.. acabei não citando. Somente na minha maquina ",
     "createdAt": 1776285990709
+  },
+  {
+    "id": 1050001,
+    "ticketId": 1680003,
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "content": "A causa ocorreu por causa de alguns arquivos fora do padrão esperado pela tag de metadados. O erro não voltou a ocorrer.",
+    "createdAt": 1777464355386
   }
 ]

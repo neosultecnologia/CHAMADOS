@@ -993,7 +993,7 @@
     "description": "instalar icloud na máquina da coordenação",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Em Andamento",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 90004,
     "createdById": 720001,
     "createdByName": "VERIDIANA",
@@ -1005,7 +1005,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1774875226980,
-    "updatedAt": 1775501702334
+    "updatedAt": 1777484013159
   },
   {
     "id": 1680003,
@@ -1014,19 +1014,19 @@
     "description": "Ao importar os arquivos XML de algumas industrias para o Infarma, da erro e não importa o arquivo.",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Em Análise",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 90004,
     "createdById": 1050001,
     "createdByName": "Kerolaine Morgantti da Cruz",
     "assignedToId": 60001,
     "assignedToName": "Gabriel Bino",
-    "waitingForDepartment": null,
-    "lastRespondentRole": null,
-    "lastRespondentId": null,
-    "lastRespondentName": null,
+    "waitingForDepartment": "Logistica",
+    "lastRespondentRole": "admin",
+    "lastRespondentId": 60001,
+    "lastRespondentName": "Gabriel Bino",
     "order": 0,
     "createdAt": 1774875306254,
-    "updatedAt": 1775075543747
+    "updatedAt": 1777464355444
   },
   {
     "id": 1740001,
@@ -1644,10 +1644,31 @@
     "description": "Preciso que seja liberado o acesso a conferencia de caixa fechada para o colaborador Leonardo Oliveira Ribeiro",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Novos",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1776977727944,
+    "updatedAt": 1777321584230
+  },
+  {
+    "id": 1950001,
+    "ticketId": "bilhete_1890037",
+    "title": "Troca de monitor",
+    "description": "Troca de monitor para ficar com ambos de mesma resolução.",
+    "category": "Técnico",
+    "priority": "Média",
+    "status": "Novos",
+    "departmentId": 17,
+    "createdById": 480002,
+    "createdByName": "Bárbara Costa",
     "assignedToId": null,
     "assignedToName": null,
     "waitingForDepartment": null,
@@ -1655,7 +1676,7 @@
     "lastRespondentId": null,
     "lastRespondentName": null,
     "order": 0,
-    "createdAt": 1776977727944,
-    "updatedAt": 1776977727944
+    "createdAt": 1777405621583,
+    "updatedAt": 1777405621583
   }
 ]

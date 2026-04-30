@@ -4596,5 +4596,82 @@
     "newValue": "Carlos TI",
     "description": "Responsável alterado para \"Carlos TI\"",
     "createdAt": 1777291421606
+  },
+  {
+    "id": 2640007,
+    "ticketId": 1890036,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1777304797525
+  },
+  {
+    "id": 2640008,
+    "ticketId": 1890036,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1777304800028
+  },
+  {
+    "id": 2670001,
+    "ticketId": 1890036,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1777321584183
+  },
+  {
+    "id": 2700001,
+    "ticketId": 1950001,
+    "type": "created",
+    "authorId": 480002,
+    "authorName": "Bárbara Costa",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Bárbara Costa",
+    "createdAt": 1777405621583
+  },
+  {
+    "id": 2730001,
+    "ticketId": 1680003,
+    "type": "status_change",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Em Análise",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Análise\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1777464225855
+  },
+  {
+    "id": 2730002,
+    "ticketId": 1680003,
+    "type": "comment",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Gabriel Bino",
+    "createdAt": 1777464355386
+  },
+  {
+    "id": 2730003,
+    "ticketId": 1680002,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1777484013125
   }
 ]

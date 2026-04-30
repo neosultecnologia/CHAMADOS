@@ -1245,16 +1245,33 @@
     "projectId": 1230001,
     "name": "Configurações/Parametrizações",
     "description": "Layout confirmado PHARMALINK_V2.0",
-    "status": "Pendente",
+    "status": "Concluída",
     "order": 3,
     "startDate": 1776999600000,
     "endDate": 1776999600000,
-    "completedAt": null,
+    "completedAt": 1777380159071,
     "createdById": 1,
     "createdByName": "Daniel TI",
     "updatedById": 1,
-    "updatedByName": "Daniel TI",
+    "updatedByName": "Neosul TI",
     "createdAt": 1777052957712,
-    "updatedAt": 1777052957712
+    "updatedAt": 1777380160363
+  },
+  {
+    "id": 1530001,
+    "projectId": 1320002,
+    "name": "Analisando layouts",
+    "description": "Parametrizações - De - Para",
+    "status": "Concluída",
+    "order": 1,
+    "startDate": 1777258800000,
+    "endDate": 1777345200000,
+    "completedAt": 1777469309311,
+    "createdById": 1,
+    "createdByName": "Daniel Machado",
+    "updatedById": 1,
+    "updatedByName": "Daniel Machado",
+    "createdAt": 1777469307781,
+    "updatedAt": 1777469309714
   }
 ]
