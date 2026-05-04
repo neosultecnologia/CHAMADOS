@@ -138,15 +138,16 @@
   {
     "id": 660001,
     "name": "Diretoria",
-    "description": null,
+    "description": "",
     "permissions": {
       "almoxarifado": true,
-      "comercial": false,
+      "comercial": true,
       "desenvolvimento": true,
+      "superestocados": true,
       "suporte": true
     },
     "isDefault": false,
     "createdAt": 1771986716672,
-    "updatedAt": 1771986716672
+    "updatedAt": 1777571413615
   }
 ]

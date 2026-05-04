@@ -4673,5 +4673,27 @@
     "newValue": "Resolvido / Aguardando Validação",
     "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
     "createdAt": 1777484013125
+  },
+  {
+    "id": 2760001,
+    "ticketId": 1980001,
+    "type": "created",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mauricio Ramos",
+    "createdAt": 1777575825885
+  },
+  {
+    "id": 2760002,
+    "ticketId": 1980002,
+    "type": "created",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mauricio Ramos",
+    "createdAt": 1777576327096
   }
 ]

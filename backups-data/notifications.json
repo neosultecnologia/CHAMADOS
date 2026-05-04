@@ -5542,5 +5542,101 @@
     "actionUrl": "/suporte/1680002",
     "isRead": false,
     "createdAt": 1777484013142
+  },
+  {
+    "id": 1950001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Trocar teclado\"",
+    "referenceId": 1980001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1980001",
+    "isRead": false,
+    "createdAt": 1777575825952
+  },
+  {
+    "id": 1950002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Trocar teclado\"",
+    "referenceId": 1980001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1980001",
+    "isRead": false,
+    "createdAt": 1777575825976
+  },
+  {
+    "id": 1950003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Trocar teclado\"",
+    "referenceId": 1980001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1980001",
+    "isRead": false,
+    "createdAt": 1777575825995
+  },
+  {
+    "id": 1950004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Trocar teclado\"",
+    "referenceId": 1980001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1980001",
+    "isRead": false,
+    "createdAt": 1777575826012
+  },
+  {
+    "id": 1950005,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"mesa nova fraldas \"",
+    "referenceId": 1980002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1980002",
+    "isRead": false,
+    "createdAt": 1777576327139
+  },
+  {
+    "id": 1950006,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"mesa nova fraldas \"",
+    "referenceId": 1980002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1980002",
+    "isRead": false,
+    "createdAt": 1777576327155
+  },
+  {
+    "id": 1950007,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"mesa nova fraldas \"",
+    "referenceId": 1980002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1980002",
+    "isRead": false,
+    "createdAt": 1777576327171
+  },
+  {
+    "id": 1950008,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"mesa nova fraldas \"",
+    "referenceId": 1980002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1980002",
+    "isRead": false,
+    "createdAt": 1777576327188
   }
 ]

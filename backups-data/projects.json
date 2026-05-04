@@ -143,11 +143,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel Machado",
     "createdAt": 1770379986213,
-    "updatedAt": 1777481824504,
+    "updatedAt": 1777552442461,
     "kanbanOrder": 2000,
-    "isBeingTreated": false,
-    "treatedByName": null,
-    "treatedAt": null
+    "isBeingTreated": true,
+    "treatedByName": "Daniel Machado",
+    "treatedAt": 1777552442460
   },
   {
     "id": 330001,
@@ -218,11 +218,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel Machado",
     "createdAt": 1770902542514,
-    "updatedAt": 1777481840169,
+    "updatedAt": 1777552421273,
     "kanbanOrder": 2001,
-    "isBeingTreated": false,
-    "treatedByName": null,
-    "treatedAt": null
+    "isBeingTreated": true,
+    "treatedByName": "Daniel Machado",
+    "treatedAt": 1777552421273
   },
   {
     "id": 360003,
@@ -532,18 +532,18 @@
     "status": "Planejamento",
     "priority": "Média",
     "ownerId": 1,
-    "ownerName": "Daniel Machado",
+    "ownerName": "Neosul TI",
     "sector": "TI",
     "projectType": "Integração Externa",
     "startDate": 1775617200000,
-    "endDate": 1776999600000,
+    "endDate": 1778122800000,
     "progress": 33,
     "createdById": 1,
     "createdByName": "Daniel TI",
     "updatedById": 1,
-    "updatedByName": "Daniel Machado",
+    "updatedByName": "Neosul TI",
     "createdAt": 1772139095309,
-    "updatedAt": 1777481852704,
+    "updatedAt": 1777898004193,
     "kanbanOrder": 2003,
     "isBeingTreated": false,
     "treatedByName": null,
@@ -793,11 +793,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel Machado",
     "createdAt": 1777380571628,
-    "updatedAt": 1777481846065,
+    "updatedAt": 1777552427502,
     "kanbanOrder": 2002,
-    "isBeingTreated": false,
-    "treatedByName": null,
-    "treatedAt": null
+    "isBeingTreated": true,
+    "treatedByName": "Daniel Machado",
+    "treatedAt": 1777552427502
   },
   {
     "id": 1320002,
@@ -818,10 +818,10 @@
     "updatedById": 1,
     "updatedByName": "Daniel Machado",
     "createdAt": 1777382202781,
-    "updatedAt": 1777489677635,
+    "updatedAt": 1777552419213,
     "kanbanOrder": null,
-    "isBeingTreated": false,
-    "treatedByName": null,
-    "treatedAt": null
+    "isBeingTreated": true,
+    "treatedByName": "Daniel Machado",
+    "treatedAt": 1777552419213
   }
 ]
