@@ -2,7 +2,7 @@
   {
     "id": 1,
     "openId": "PtNcW8Ph6ZNx6BDomoWjgd",
-    "name": "Neosul TI",
+    "name": "Daniel Machado",
     "email": "tecnologia@neosuldistribuidora.com.br",
     "passwordHash": "$2b$10$f0z5uenLKgsVVusbpC/.teN1BoZSMOi3MKwnZacVOqYpzEbiXlSvq",
     "loginMethod": "oauth",
@@ -24,8 +24,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-05-04T12:33:30.000Z",
-    "lastSignedIn": "2026-05-04T12:33:30.000Z"
+    "updatedAt": "2026-05-04T12:47:21.000Z",
+    "lastSignedIn": "2026-05-04T12:47:21.000Z"
   },
   {
     "id": 23,
