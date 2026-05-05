@@ -414,5 +414,13 @@
     "authorName": "Gabriel Bino",
     "content": "A causa ocorreu por causa de alguns arquivos fora do padrão esperado pela tag de metadados. O erro não voltou a ocorrer.",
     "createdAt": 1777464355386
+  },
+  {
+    "id": 1080001,
+    "ticketId": 2010001,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "Poderia me passar mais detalhes sobre o ocorrido. Teria algum print de quando acontece o erro?",
+    "createdAt": 1777983869422
   }
 ]

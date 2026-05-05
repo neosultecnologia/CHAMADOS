@@ -334,5 +334,17 @@
     "uploadedById": 1050001,
     "uploadedByName": "Kerolaine Morgantti da Cruz",
     "createdAt": 1776081751912
+  },
+  {
+    "id": 480001,
+    "ticketId": 2010003,
+    "fileName": "Pasta DOC CLIENTES.png",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/2010003/1777986477546-zoiefn-Pasta DOC CLIENTES.png",
+    "fileKey": "tickets/2010003/1777986477546-zoiefn-Pasta DOC CLIENTES.png",
+    "mimeType": "image/png",
+    "fileSize": 115284,
+    "uploadedById": 1350001,
+    "uploadedByName": "Mariana Santos Liska",
+    "createdAt": 1777986477896
   }
 ]

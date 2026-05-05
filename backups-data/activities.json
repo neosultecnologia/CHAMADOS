@@ -4686,14 +4686,146 @@
     "createdAt": 1777575825885
   },
   {
-    "id": 2760002,
-    "ticketId": 1980002,
+    "id": 2790001,
+    "ticketId": 2010001,
     "type": "created",
     "authorId": 540001,
     "authorName": "Mauricio Ramos",
     "oldValue": null,
     "newValue": null,
     "description": "Chamado criado por Mauricio Ramos",
-    "createdAt": 1777576327096
+    "createdAt": 1777923937180
+  },
+  {
+    "id": 2790002,
+    "ticketId": 1980001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1777983508129
+  },
+  {
+    "id": 2790003,
+    "ticketId": 1980001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1777983509007
+  },
+  {
+    "id": 2790004,
+    "ticketId": 1950001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1777983523383
+  },
+  {
+    "id": 2790005,
+    "ticketId": 1950001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1777983528740
+  },
+  {
+    "id": 2790006,
+    "ticketId": 900001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1777983703690
+  },
+  {
+    "id": 2790007,
+    "ticketId": 570001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Análise",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Análise\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1777983752919
+  },
+  {
+    "id": 2790008,
+    "ticketId": 2010001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1777983820171
+  },
+  {
+    "id": 2790009,
+    "ticketId": 2010001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1777983822516
+  },
+  {
+    "id": 2790010,
+    "ticketId": 2010001,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1777983869422
+  },
+  {
+    "id": 2790011,
+    "ticketId": 1950001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1777985366877
+  },
+  {
+    "id": 2790012,
+    "ticketId": 2010002,
+    "type": "created",
+    "authorId": 1290001,
+    "authorName": "camila soares de souza",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por camila soares de souza",
+    "createdAt": 1777985999116
+  },
+  {
+    "id": 2790013,
+    "ticketId": 2010003,
+    "type": "created",
+    "authorId": 1350001,
+    "authorName": "Mariana Santos Liska",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mariana Santos Liska",
+    "createdAt": 1777986476662
   }
 ]
