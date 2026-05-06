@@ -25,9 +25,9 @@
     "name": "Financeiro ",
     "description": "Usuarios",
     "permissions": {
-      "almoxarifado": true,
+      "almoxarifado": false,
       "chamados": true,
-      "desenvolvimento": true,
+      "desenvolvimento": false,
       "marketing": false,
       "projetos": false,
       "rh": false,
@@ -36,18 +36,18 @@
     },
     "isDefault": false,
     "createdAt": 1770244407982,
-    "updatedAt": 1772108165645
+    "updatedAt": 1778071044933
   },
   {
     "id": 150022,
     "name": "Compras",
     "description": "",
     "permissions": {
-      "almoxarifado": true,
+      "almoxarifado": false,
       "chamados": true,
       "comercial": false,
       "compras": false,
-      "desenvolvimento": true,
+      "desenvolvimento": false,
       "marketing": false,
       "projetos": false,
       "rh": false,
@@ -56,17 +56,17 @@
     },
     "isDefault": false,
     "createdAt": 1770252829737,
-    "updatedAt": 1772108110826
+    "updatedAt": 1778071021548
   },
   {
     "id": 240001,
     "name": "Controladoria",
     "description": "",
     "permissions": {
-      "almoxarifado": true,
+      "almoxarifado": false,
       "chamados": true,
       "compras": false,
-      "desenvolvimento": true,
+      "desenvolvimento": false,
       "marketing": false,
       "projetos": false,
       "rh": false,
@@ -75,18 +75,18 @@
     },
     "isDefault": false,
     "createdAt": 1770661461652,
-    "updatedAt": 1772108134049
+    "updatedAt": 1778071027632
   },
   {
     "id": 300001,
     "name": "Comercial",
     "description": "",
     "permissions": {
-      "almoxarifado": true,
+      "almoxarifado": false,
       "chamados": true,
       "comercial": false,
       "compras": false,
-      "desenvolvimento": true,
+      "desenvolvimento": false,
       "marketing": false,
       "projetos": false,
       "rh": false,
@@ -95,14 +95,14 @@
     },
     "isDefault": false,
     "createdAt": 1770922468551,
-    "updatedAt": 1772108124582
+    "updatedAt": 1778071016842
   },
   {
     "id": 330001,
     "name": "Logistica",
     "description": "",
     "permissions": {
-      "almoxarifado": true,
+      "almoxarifado": false,
       "chamados": true,
       "compras": false,
       "desenvolvimento": false,
@@ -114,17 +114,17 @@
     },
     "isDefault": false,
     "createdAt": 1770925040950,
-    "updatedAt": 1772108185447
+    "updatedAt": 1778071049989
   },
   {
     "id": 360007,
     "name": "RH/DP",
     "description": "",
     "permissions": {
-      "almoxarifado": true,
+      "almoxarifado": false,
       "chamados": true,
       "compras": false,
-      "desenvolvimento": true,
+      "desenvolvimento": false,
       "marketing": false,
       "projetos": false,
       "rh": false,
@@ -133,7 +133,7 @@
     },
     "isDefault": false,
     "createdAt": 1770985333375,
-    "updatedAt": 1772108173494
+    "updatedAt": 1778071056851
   },
   {
     "id": 660001,
@@ -141,13 +141,13 @@
     "description": "",
     "permissions": {
       "almoxarifado": true,
-      "comercial": true,
+      "comercial": false,
       "desenvolvimento": true,
       "superestocados": true,
       "suporte": true
     },
     "isDefault": false,
     "createdAt": 1771986716672,
-    "updatedAt": 1777571413615
+    "updatedAt": 1778071040955
   }
 ]
