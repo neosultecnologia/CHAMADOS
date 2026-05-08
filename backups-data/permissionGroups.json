@@ -149,5 +149,133 @@
     "isDefault": false,
     "createdAt": 1771986716672,
     "updatedAt": 1778071040955
+  },
+  {
+    "id": 1020003,
+    "name": "Suporte Técnico 1778154144514",
+    "description": "Acesso a suporte e desenvolvimento",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1778154144518,
+    "updatedAt": 1778154144518
+  },
+  {
+    "id": 1020004,
+    "name": "Updated Group Name 1778154145316",
+    "description": "Updated description",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1778154145209,
+    "updatedAt": 1778154145317
+  },
+  {
+    "id": 1020007,
+    "name": "Assignment Test Group 1778154145755",
+    "description": "For testing assignment",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1778154145755,
+    "updatedAt": 1778154145755
+  },
+  {
+    "id": 1020008,
+    "name": "Inheritance Test Group 1778154146118",
+    "description": "Testing permission inheritance",
+    "permissions": {
+      "desenvolvimento": false,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": true,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1778154146118,
+    "updatedAt": 1778154146118
+  },
+  {
+    "id": 1020011,
+    "name": "Suporte Técnico 1778164691253",
+    "description": "Acesso a suporte e desenvolvimento",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1778164691257,
+    "updatedAt": 1778164691257
+  },
+  {
+    "id": 1020012,
+    "name": "Updated Group Name 1778164692047",
+    "description": "Updated description",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1778164691940,
+    "updatedAt": 1778164692048
+  },
+  {
+    "id": 1020015,
+    "name": "Assignment Test Group 1778164692475",
+    "description": "For testing assignment",
+    "permissions": {
+      "desenvolvimento": true,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1778164692475,
+    "updatedAt": 1778164692475
+  },
+  {
+    "id": 1020016,
+    "name": "Inheritance Test Group 1778164692832",
+    "description": "Testing permission inheritance",
+    "permissions": {
+      "desenvolvimento": false,
+      "ecommerce": false,
+      "marketing": false,
+      "rh": true,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "isDefault": false,
+    "createdAt": 1778164692832,
+    "updatedAt": 1778164692832
   }
 ]

@@ -1707,7 +1707,7 @@
     "description": "O PC que utilizamos na ilha, está com problemas de desconectar a internet caindo o sistema inúmeras vez",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Em Andamento",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -1719,7 +1719,7 @@
     "lastRespondentName": "Carlos TI",
     "order": 0,
     "createdAt": 1777923937180,
-    "updatedAt": 1777983869471
+    "updatedAt": 1778081036390
   },
   {
     "id": 2010002,
@@ -1804,5 +1804,26 @@
     "order": 0,
     "createdAt": 1778066728363,
     "updatedAt": 1778068089317
+  },
+  {
+    "id": 2040009,
+    "ticketId": "bilhete_2010006",
+    "title": "verificar problemas no Teams PC conferência",
+    "description": "Precisamos que verifiquem o que acontece no PC da lider conferencia onde o Teams foi instalado e não funciona mais",
+    "category": "Técnico",
+    "priority": "Média",
+    "status": "Resolvido / Aguardando Validação",
+    "departmentId": 17,
+    "createdById": 540001,
+    "createdByName": "Mauricio Ramos",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1778178195352,
+    "updatedAt": 1778178523387
   }
 ]

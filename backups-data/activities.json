@@ -5080,5 +5080,49 @@
     "newValue": "Concluído",
     "description": "Chamado concluído e avaliado pelo solicitante",
     "createdAt": 1778068089299
+  },
+  {
+    "id": 2820001,
+    "ticketId": 2010001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1778081036344
+  },
+  {
+    "id": 2850001,
+    "ticketId": 2040009,
+    "type": "created",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mauricio Ramos",
+    "createdAt": 1778178195352
+  },
+  {
+    "id": 2850002,
+    "ticketId": 2040009,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1778178522015
+  },
+  {
+    "id": 2850003,
+    "ticketId": 2040009,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1778178523356
   }
 ]

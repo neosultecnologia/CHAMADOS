@@ -6106,5 +6106,89 @@
     "actionUrl": "/suporte/2010003",
     "isRead": false,
     "createdAt": 1778067076128
+  },
+  {
+    "id": 2010001,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 2010001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2010001",
+    "isRead": false,
+    "createdAt": 1778081036367
+  },
+  {
+    "id": 2040001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"verificar problemas no Teams PC conferência \"",
+    "referenceId": 2040009,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2040009",
+    "isRead": false,
+    "createdAt": 1778178195404
+  },
+  {
+    "id": 2040002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"verificar problemas no Teams PC conferência \"",
+    "referenceId": 2040009,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2040009",
+    "isRead": false,
+    "createdAt": 1778178195425
+  },
+  {
+    "id": 2040003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"verificar problemas no Teams PC conferência \"",
+    "referenceId": 2040009,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2040009",
+    "isRead": false,
+    "createdAt": 1778178195440
+  },
+  {
+    "id": 2040004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"verificar problemas no Teams PC conferência \"",
+    "referenceId": 2040009,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2040009",
+    "isRead": false,
+    "createdAt": 1778178195455
+  },
+  {
+    "id": 2040005,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"verificar problemas no Teams PC conferência\"",
+    "referenceId": 2040009,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2040009",
+    "isRead": false,
+    "createdAt": 1778178522030
+  },
+  {
+    "id": 2040006,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 2040009,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2040009",
+    "isRead": false,
+    "createdAt": 1778178523372
   }
 ]
