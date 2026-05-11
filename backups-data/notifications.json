@@ -5672,7 +5672,7 @@
     "referenceId": 2010001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2010001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1777923937270
   },
   {
@@ -5840,7 +5840,7 @@
     "referenceId": 2010002,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2010002",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1777985999194
   },
   {
@@ -5888,7 +5888,7 @@
     "referenceId": 2010003,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2010003",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1777986476740
   },
   {
@@ -5972,7 +5972,7 @@
     "referenceId": 2010004,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2010004",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1777987286834
   },
   {
@@ -6056,7 +6056,7 @@
     "referenceId": 2010005,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2010005",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1778066728442
   },
   {
@@ -6152,7 +6152,7 @@
     "referenceId": 2040009,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2040009",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1778178195440
   },
   {
