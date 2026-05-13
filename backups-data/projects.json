@@ -143,11 +143,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel Machado",
     "createdAt": 1770379986213,
-    "updatedAt": 1778070753333,
+    "updatedAt": 1778671250919,
     "kanbanOrder": 2001,
-    "isBeingTreated": false,
-    "treatedByName": null,
-    "treatedAt": null
+    "isBeingTreated": true,
+    "treatedByName": "Daniel Machado",
+    "treatedAt": 1778671250919
   },
   {
     "id": 330001,
@@ -218,11 +218,11 @@
     "updatedById": 1,
     "updatedByName": "Daniel Machado",
     "createdAt": 1770902542514,
-    "updatedAt": 1778070753352,
+    "updatedAt": 1778671253694,
     "kanbanOrder": 2002,
-    "isBeingTreated": false,
-    "treatedByName": null,
-    "treatedAt": null
+    "isBeingTreated": true,
+    "treatedByName": "Daniel Machado",
+    "treatedAt": 1778671253694
   },
   {
     "id": 360003,
@@ -779,7 +779,7 @@
     "projectId": "proj_2911111",
     "name": "BASE DE PRODUTOS",
     "description": "Atualização",
-    "status": "Planejamento",
+    "status": "Concluído",
     "priority": "Média",
     "ownerId": 1,
     "ownerName": "Daniel Machado",
@@ -787,17 +787,17 @@
     "projectType": "Integração Externa",
     "startDate": 1777258800000,
     "endDate": 1780196400000,
-    "progress": 0,
+    "progress": 100,
     "createdById": 1,
     "createdByName": "Neosul TI",
     "updatedById": 1,
     "updatedByName": "Daniel Machado",
     "createdAt": 1777380571628,
-    "updatedAt": 1778521442199,
+    "updatedAt": 1778590881651,
     "kanbanOrder": 2003,
-    "isBeingTreated": false,
-    "treatedByName": null,
-    "treatedAt": null
+    "isBeingTreated": true,
+    "treatedByName": "Daniel Machado",
+    "treatedAt": 1778590866526
   },
   {
     "id": 1320002,
@@ -818,10 +818,35 @@
     "updatedById": 1,
     "updatedByName": "Daniel Machado",
     "createdAt": 1777382202781,
-    "updatedAt": 1778521421813,
+    "updatedAt": 1778671249797,
     "kanbanOrder": 2000,
-    "isBeingTreated": false,
-    "treatedByName": null,
-    "treatedAt": null
+    "isBeingTreated": true,
+    "treatedByName": "Daniel Machado",
+    "treatedAt": 1778671249797
+  },
+  {
+    "id": 1410001,
+    "projectId": "proj_291111111",
+    "name": "INTEGRAÇÃO - STO ANDRE",
+    "description": "",
+    "status": "Planejamento",
+    "priority": "Crítica",
+    "ownerId": 1,
+    "ownerName": "Daniel Machado",
+    "sector": "TI",
+    "projectType": "Integração Externa",
+    "startDate": 1778468400000,
+    "endDate": 1778641200000,
+    "progress": 0,
+    "createdById": 1,
+    "createdByName": "Daniel Machado",
+    "updatedById": 1,
+    "updatedByName": "Daniel Machado",
+    "createdAt": 1778588132374,
+    "updatedAt": 1778671247232,
+    "kanbanOrder": null,
+    "isBeingTreated": true,
+    "treatedByName": "Daniel Machado",
+    "treatedAt": 1778671247232
   }
 ]

@@ -5528,7 +5528,7 @@
     "referenceId": 1680003,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1680003",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1777464355463
   },
   {
@@ -6190,5 +6190,77 @@
     "actionUrl": "/suporte/2040009",
     "isRead": false,
     "createdAt": 1778178523372
+  },
+  {
+    "id": 2070001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Computador não liga\"",
+    "referenceId": 2100001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2100001",
+    "isRead": false,
+    "createdAt": 1778594908301
+  },
+  {
+    "id": 2070002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Computador não liga\"",
+    "referenceId": 2100001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2100001",
+    "isRead": false,
+    "createdAt": 1778594908322
+  },
+  {
+    "id": 2070003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Computador não liga\"",
+    "referenceId": 2100001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2100001",
+    "isRead": false,
+    "createdAt": 1778594908337
+  },
+  {
+    "id": 2070004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Computador não liga\"",
+    "referenceId": 2100001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2100001",
+    "isRead": false,
+    "createdAt": 1778594908352
+  },
+  {
+    "id": 2070005,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Computador não liga\"",
+    "referenceId": 2100001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2100001",
+    "isRead": false,
+    "createdAt": 1778594989236
+  },
+  {
+    "id": 2070006,
+    "userId": 1050001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 2100001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2100001",
+    "isRead": false,
+    "createdAt": 1778594990063
   }
 ]

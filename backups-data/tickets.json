@@ -1014,7 +1014,7 @@
     "description": "Ao importar os arquivos XML de algumas industrias para o Infarma, da erro e não importa o arquivo.",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 1050001,
     "createdByName": "Kerolaine Morgantti da Cruz",
@@ -1026,7 +1026,7 @@
     "lastRespondentName": "Gabriel Bino",
     "order": 0,
     "createdAt": 1774875306254,
-    "updatedAt": 1777464355444
+    "updatedAt": 1778594716439
   },
   {
     "id": 1740001,
@@ -1825,5 +1825,26 @@
     "order": 0,
     "createdAt": 1778178195352,
     "updatedAt": 1778178523387
+  },
+  {
+    "id": 2100001,
+    "ticketId": "bilhete_2040010",
+    "title": "Computador não liga",
+    "description": "Equipamento sem funcionamento. Ao tentar ligar, não apresenta resposta.",
+    "category": "Técnico",
+    "priority": "Baixa",
+    "status": "Resolvido / Aguardando Validação",
+    "departmentId": 90004,
+    "createdById": 1050001,
+    "createdByName": "Kerolaine Morgantti da Cruz",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1778594908257,
+    "updatedAt": 1778594990078
   }
 ]

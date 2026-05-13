@@ -5124,5 +5124,49 @@
     "newValue": "Resolvido / Aguardando Validação",
     "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
     "createdAt": 1778178523356
+  },
+  {
+    "id": 2880001,
+    "ticketId": 1680003,
+    "type": "status_change",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1778594716415
+  },
+  {
+    "id": 2880002,
+    "ticketId": 2100001,
+    "type": "created",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Kerolaine Morgantti da Cruz",
+    "createdAt": 1778594908257
+  },
+  {
+    "id": 2880003,
+    "ticketId": 2100001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1778594989218
+  },
+  {
+    "id": 2880004,
+    "ticketId": 2100001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1778594990048
   }
 ]
