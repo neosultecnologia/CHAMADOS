@@ -1846,5 +1846,26 @@
     "order": 0,
     "createdAt": 1778594908257,
     "updatedAt": 1778594990078
+  },
+  {
+    "id": 2130037,
+    "ticketId": "bilhete_2100002",
+    "title": "Troca de mesa",
+    "description": "Solicito ajuda para trocar meu computador de mesa.\nVou para a mesa que era da Elen (ao lado da Renata).\nMotivo: solicitação Leise",
+    "category": "Outro",
+    "priority": "Alta",
+    "status": "Novos",
+    "departmentId": 20,
+    "createdById": 390001,
+    "createdByName": "Maria Eduarda Chagas",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1778700637097,
+    "updatedAt": 1778703305550
   }
 ]

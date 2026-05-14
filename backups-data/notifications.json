@@ -6262,5 +6262,65 @@
     "actionUrl": "/suporte/2100001",
     "isRead": false,
     "createdAt": 1778594990063
+  },
+  {
+    "id": 2100001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Maria Eduarda Chagas abriu um novo chamado: \"Troca de mesa\"",
+    "referenceId": 2130037,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2130037",
+    "isRead": false,
+    "createdAt": 1778700637156
+  },
+  {
+    "id": 2100002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Maria Eduarda Chagas abriu um novo chamado: \"Troca de mesa\"",
+    "referenceId": 2130037,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2130037",
+    "isRead": false,
+    "createdAt": 1778700637185
+  },
+  {
+    "id": 2100003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Maria Eduarda Chagas abriu um novo chamado: \"Troca de mesa\"",
+    "referenceId": 2130037,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2130037",
+    "isRead": false,
+    "createdAt": 1778700637205
+  },
+  {
+    "id": 2100004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Maria Eduarda Chagas abriu um novo chamado: \"Troca de mesa\"",
+    "referenceId": 2130037,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2130037",
+    "isRead": false,
+    "createdAt": 1778700637224
+  },
+  {
+    "id": 2100005,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Troca de mesa\"",
+    "referenceId": 2130037,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2130037",
+    "isRead": false,
+    "createdAt": 1778703305532
   }
 ]

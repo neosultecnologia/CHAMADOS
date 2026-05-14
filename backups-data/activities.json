@@ -5168,5 +5168,27 @@
     "newValue": "Resolvido / Aguardando Validação",
     "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
     "createdAt": 1778594990048
+  },
+  {
+    "id": 2910001,
+    "ticketId": 2130037,
+    "type": "created",
+    "authorId": 390001,
+    "authorName": "Maria Eduarda Chagas",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Maria Eduarda Chagas",
+    "createdAt": 1778700637097
+  },
+  {
+    "id": 2910002,
+    "ticketId": 2130037,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1778703305516
   }
 ]
