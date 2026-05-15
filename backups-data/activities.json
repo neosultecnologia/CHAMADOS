@@ -5190,5 +5190,137 @@
     "newValue": "Carlos TI",
     "description": "Responsável alterado para \"Carlos TI\"",
     "createdAt": 1778703305516
+  },
+  {
+    "id": 2940001,
+    "ticketId": 1830002,
+    "type": "status_change",
+    "authorId": 630282,
+    "authorName": "Márcia Freitas",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1778769622599
+  },
+  {
+    "id": 2940002,
+    "ticketId": 2160001,
+    "type": "created",
+    "authorId": 630282,
+    "authorName": "Márcia Freitas",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Márcia Freitas",
+    "createdAt": 1778769705308
+  },
+  {
+    "id": 2940003,
+    "ticketId": 2160001,
+    "type": "priority_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Alta",
+    "newValue": "Média",
+    "description": "Prioridade alterada de \"Alta\" para \"Média\"",
+    "createdAt": 1778770404506
+  },
+  {
+    "id": 2940004,
+    "ticketId": 2160001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1778770407108
+  },
+  {
+    "id": 2940005,
+    "ticketId": 2160001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1778770410405
+  },
+  {
+    "id": 2940006,
+    "ticketId": 2160002,
+    "type": "created",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mauricio Ramos",
+    "createdAt": 1778770467441
+  },
+  {
+    "id": 2940007,
+    "ticketId": 2160001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1778770955208
+  },
+  {
+    "id": 2940008,
+    "ticketId": 2160001,
+    "type": "status_change",
+    "authorId": 630282,
+    "authorName": "Márcia Freitas",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1778771677516
+  },
+  {
+    "id": 2970001,
+    "ticketId": 2160002,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1778786759805
+  },
+  {
+    "id": 2970002,
+    "ticketId": 2160002,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1778786761863
+  },
+  {
+    "id": 3000001,
+    "ticketId": 1800001,
+    "type": "status_change",
+    "authorId": 240039,
+    "authorName": "Monique",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1778847404058
+  },
+  {
+    "id": 3000002,
+    "ticketId": 2190001,
+    "type": "created",
+    "authorId": 240039,
+    "authorName": "Monique",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Monique",
+    "createdAt": 1778847621602
   }
 ]
