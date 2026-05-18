@@ -1854,7 +1854,7 @@
     "description": "Solicito ajuda para trocar meu computador de mesa.\nVou para a mesa que era da Elen (ao lado da Renata).\nMotivo: solicitação Leise",
     "category": "Outro",
     "priority": "Alta",
-    "status": "Novos",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 20,
     "createdById": 390001,
     "createdByName": "Maria Eduarda Chagas",
@@ -1866,7 +1866,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1778700637097,
-    "updatedAt": 1778703305550
+    "updatedAt": 1778865299321
   },
   {
     "id": 2160001,
@@ -1930,5 +1930,26 @@
     "order": 0,
     "createdAt": 1778847621602,
     "updatedAt": 1778847621602
+  },
+  {
+    "id": 2250001,
+    "ticketId": "bilhete_2190002",
+    "title": "Precisamos de mais um monitor para o recebimento",
+    "description": "Precisamos de mais um monitor para a área do recebimento",
+    "category": "Técnico",
+    "priority": "Alta",
+    "status": "Resolvido / Aguardando Validação",
+    "departmentId": 17,
+    "createdById": 540001,
+    "createdByName": "Mauricio Ramos",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1778868811547,
+    "updatedAt": 1778869309864
   }
 ]

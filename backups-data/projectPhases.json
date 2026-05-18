@@ -1330,17 +1330,17 @@
     "projectId": 1410001,
     "name": "ERRO NO RETORNO",
     "description": "APRESENTANDO POSICIONAMENTO DO CODIGO CLIENTE, DIFERENTE DO LAYOUT NO ARQUIVO DO RETORNO.",
-    "status": "Pendente",
+    "status": "Concluída",
     "order": 1,
     "startDate": 1778468400000,
     "endDate": 1778641200000,
-    "completedAt": null,
+    "completedAt": 1778851538345,
     "createdById": 1,
     "createdByName": "Daniel Machado",
     "updatedById": 1,
     "updatedByName": "Daniel Machado",
     "createdAt": 1778588172948,
-    "updatedAt": 1778588172948
+    "updatedAt": 1778851539891
   },
   {
     "id": 1650002,
@@ -1392,5 +1392,22 @@
     "updatedByName": "Daniel Machado",
     "createdAt": 1778590857032,
     "updatedAt": 1778590858437
+  },
+  {
+    "id": 1740001,
+    "projectId": 1410001,
+    "name": "Ajuste realizado",
+    "description": "Conversão na estrutura do pedido e no retorno.",
+    "status": "Concluída",
+    "order": 2,
+    "startDate": 1778727600000,
+    "endDate": 1778814000000,
+    "completedAt": 1778851584483,
+    "createdById": 1,
+    "createdByName": "Daniel Machado",
+    "updatedById": 1,
+    "updatedByName": "Daniel Machado",
+    "createdAt": 1778851583356,
+    "updatedAt": 1778851586019
   }
 ]

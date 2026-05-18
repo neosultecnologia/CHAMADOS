@@ -5322,5 +5322,49 @@
     "newValue": null,
     "description": "Chamado criado por Monique",
     "createdAt": 1778847621602
+  },
+  {
+    "id": 3030001,
+    "ticketId": 2130037,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1778865299267
+  },
+  {
+    "id": 3060001,
+    "ticketId": 2250001,
+    "type": "created",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mauricio Ramos",
+    "createdAt": 1778868811547
+  },
+  {
+    "id": 3060002,
+    "ticketId": 2250001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1778869308936
+  },
+  {
+    "id": 3060003,
+    "ticketId": 2250001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1778869309831
   }
 ]

@@ -5516,7 +5516,7 @@
     "referenceId": 1980001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1980001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1777575826012
   },
   {
@@ -5552,7 +5552,7 @@
     "referenceId": 1980002,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1980002",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1777576327188
   },
   {
@@ -5588,7 +5588,7 @@
     "referenceId": 2010001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2010001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1777923937291
   },
   {
@@ -5744,7 +5744,7 @@
     "referenceId": 2010002,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2010002",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1777985999211
   },
   {
@@ -5780,7 +5780,7 @@
     "referenceId": 2010003,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2010003",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1777986476762
   },
   {
@@ -5852,7 +5852,7 @@
     "referenceId": 2010004,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2010004",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1777987286851
   },
   {
@@ -5924,7 +5924,7 @@
     "referenceId": 2010005,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2010005",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1778066728459
   },
   {
@@ -6008,7 +6008,7 @@
     "referenceId": 2040009,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2040009",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1778178195455
   },
   {
@@ -6068,7 +6068,7 @@
     "referenceId": 2100001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2100001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1778594908352
   },
   {
@@ -6128,7 +6128,7 @@
     "referenceId": 2130037,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2130037",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1778700637224
   },
   {
@@ -6188,7 +6188,7 @@
     "referenceId": 2160001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2160001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1778769705506
   },
   {
@@ -6260,7 +6260,7 @@
     "referenceId": 2160002,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2160002",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1778770467606
   },
   {
@@ -6344,7 +6344,91 @@
     "referenceId": 2190001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2190001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1778847621715
+  },
+  {
+    "id": 2220001,
+    "userId": 390001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 2130037,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2130037",
+    "isRead": false,
+    "createdAt": 1778865299296
+  },
+  {
+    "id": 2250001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Precisamos de mais um monitor para o recebimento\"",
+    "referenceId": 2250001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2250001",
+    "isRead": false,
+    "createdAt": 1778868811612
+  },
+  {
+    "id": 2250002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Precisamos de mais um monitor para o recebimento\"",
+    "referenceId": 2250001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2250001",
+    "isRead": false,
+    "createdAt": 1778868811633
+  },
+  {
+    "id": 2250003,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Precisamos de mais um monitor para o recebimento\"",
+    "referenceId": 2250001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2250001",
+    "isRead": true,
+    "createdAt": 1778868811647
+  },
+  {
+    "id": 2250004,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Precisamos de mais um monitor para o recebimento\"",
+    "referenceId": 2250001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2250001",
+    "isRead": false,
+    "createdAt": 1778868811664
+  },
+  {
+    "id": 2250005,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Precisamos de mais um monitor para o recebimento\"",
+    "referenceId": 2250001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2250001",
+    "isRead": false,
+    "createdAt": 1778869308951
+  },
+  {
+    "id": 2250006,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 2250001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2250001",
+    "isRead": false,
+    "createdAt": 1778869309847
   }
 ]
