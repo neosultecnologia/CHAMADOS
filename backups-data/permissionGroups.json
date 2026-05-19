@@ -8,9 +8,12 @@
       "chamados": true,
       "comercial": true,
       "compras": true,
+      "contratos": true,
       "desenvolvimento": true,
+      "gestao_negocios": true,
       "marketing": true,
       "projetos": true,
+      "repasses": true,
       "rh": true,
       "superestocados": true,
       "suporte": true,
@@ -18,7 +21,7 @@
     },
     "isDefault": true,
     "createdAt": 1770160822191,
-    "updatedAt": 1777471039026
+    "updatedAt": 1779110994856
   },
   {
     "id": 150001,
@@ -151,67 +154,20 @@
     "updatedAt": 1778071040955
   },
   {
-    "id": 1110001,
-    "name": "Suporte Técnico 1778850021319",
-    "description": "Acesso a suporte e desenvolvimento",
+    "id": 1140009,
+    "name": "Trade",
+    "description": "Equipe de Trade - Acesso a módulos comerciais e superestocados",
     "permissions": {
-      "desenvolvimento": true,
-      "ecommerce": false,
-      "marketing": false,
-      "rh": false,
-      "suporte": true,
-      "tecnologia": false
-    },
-    "isDefault": false,
-    "createdAt": 1778850021324,
-    "updatedAt": 1778850021324
-  },
-  {
-    "id": 1110003,
-    "name": "Updated Group Name 1778850022111",
-    "description": "Updated description",
-    "permissions": {
-      "desenvolvimento": true,
-      "ecommerce": false,
-      "marketing": false,
-      "rh": false,
-      "suporte": true,
-      "tecnologia": false
-    },
-    "isDefault": false,
-    "createdAt": 1778850022007,
-    "updatedAt": 1778850022112
-  },
-  {
-    "id": 1110007,
-    "name": "Assignment Test Group 1778850022518",
-    "description": "For testing assignment",
-    "permissions": {
-      "desenvolvimento": true,
-      "ecommerce": false,
-      "marketing": false,
-      "rh": false,
-      "suporte": true,
-      "tecnologia": false
-    },
-    "isDefault": false,
-    "createdAt": 1778850022519,
-    "updatedAt": 1778850022519
-  },
-  {
-    "id": 1110008,
-    "name": "Inheritance Test Group 1778850022862",
-    "description": "Testing permission inheritance",
-    "permissions": {
+      "almoxarifado": false,
+      "comercial": true,
+      "contratos": true,
       "desenvolvimento": false,
-      "ecommerce": false,
-      "marketing": false,
-      "rh": true,
-      "suporte": true,
-      "tecnologia": false
+      "repasses": true,
+      "superestocados": true,
+      "suporte": true
     },
     "isDefault": false,
-    "createdAt": 1778850022863,
-    "updatedAt": 1778850022863
+    "createdAt": 1779109323000,
+    "updatedAt": 1779110313582
   }
 ]
