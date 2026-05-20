@@ -141,13 +141,13 @@
     "createdById": 1,
     "createdByName": "Daniel TI",
     "updatedById": 1,
-    "updatedByName": "Daniel Machado",
+    "updatedByName": "Neosul TI",
     "createdAt": 1770379986213,
-    "updatedAt": 1778851529027,
+    "updatedAt": 1779191020935,
     "kanbanOrder": 2001,
-    "isBeingTreated": false,
-    "treatedByName": null,
-    "treatedAt": null
+    "isBeingTreated": true,
+    "treatedByName": "Neosul TI",
+    "treatedAt": 1779191020935
   },
   {
     "id": 330001,
@@ -216,13 +216,13 @@
     "createdById": 1,
     "createdByName": "Daniel TI",
     "updatedById": 1,
-    "updatedByName": "Daniel Machado",
+    "updatedByName": "Neosul TI",
     "createdAt": 1770902542514,
-    "updatedAt": 1778866525252,
+    "updatedAt": 1779191022575,
     "kanbanOrder": 2002,
-    "isBeingTreated": false,
-    "treatedByName": null,
-    "treatedAt": null
+    "isBeingTreated": true,
+    "treatedByName": "Neosul TI",
+    "treatedAt": 1779191022575
   },
   {
     "id": 360003,
@@ -816,13 +816,13 @@
     "createdById": 1,
     "createdByName": "Neosul TI",
     "updatedById": 1,
-    "updatedByName": "Daniel Machado",
+    "updatedByName": "Neosul TI",
     "createdAt": 1777382202781,
-    "updatedAt": 1778851527919,
+    "updatedAt": 1779191023922,
     "kanbanOrder": 2000,
-    "isBeingTreated": false,
-    "treatedByName": null,
-    "treatedAt": null
+    "isBeingTreated": true,
+    "treatedByName": "Neosul TI",
+    "treatedAt": 1779191023922
   },
   {
     "id": 1410001,

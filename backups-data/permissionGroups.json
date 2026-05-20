@@ -159,15 +159,16 @@
     "description": "Equipe de Trade - Acesso a módulos comerciais e superestocados",
     "permissions": {
       "almoxarifado": false,
-      "comercial": true,
+      "comercial": false,
       "contratos": true,
       "desenvolvimento": false,
+      "gestao_negocios": false,
       "repasses": true,
       "superestocados": true,
       "suporte": true
     },
     "isDefault": false,
     "createdAt": 1779109323000,
-    "updatedAt": 1779110313582
+    "updatedAt": 1779286489485
   }
 ]

@@ -1665,7 +1665,7 @@
     "description": "Troca de monitor para ficar com ambos de mesma resolução.",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 480002,
     "createdByName": "Bárbara Costa",
@@ -1677,7 +1677,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1777405621583,
-    "updatedAt": 1777985366915
+    "updatedAt": 1779214422018
   },
   {
     "id": 1980001,
@@ -1833,7 +1833,7 @@
     "description": "Equipamento sem funcionamento. Ao tentar ligar, não apresenta resposta.",
     "category": "Técnico",
     "priority": "Baixa",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 1050001,
     "createdByName": "Kerolaine Morgantti da Cruz",
@@ -1845,7 +1845,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1778594908257,
-    "updatedAt": 1778594990078
+    "updatedAt": 1779295661720
   },
   {
     "id": 2130037,
@@ -1917,19 +1917,19 @@
     "description": "Bom dia Meninos,\nPrecisamos que seja criado um operador e digitador para o setor de devolução de sc. Esse codigo é utilizado na emissão das NFs de cobrança de transportadora.\n\nColaboradora Livia Maria \nColaboradora Beatriz Freitas",
     "category": "Acesso",
     "priority": "Média",
-    "status": "Novos",
+    "status": "Em Andamento",
     "departmentId": 90004,
     "createdById": 240039,
     "createdByName": "Monique",
-    "assignedToId": null,
-    "assignedToName": null,
+    "assignedToId": 1,
+    "assignedToName": "Neosul TI",
     "waitingForDepartment": null,
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1778847621602,
-    "updatedAt": 1778847621602
+    "updatedAt": 1779295730957
   },
   {
     "id": 2250001,
@@ -2035,5 +2035,26 @@
     "order": 0,
     "createdAt": 1779125738964,
     "updatedAt": 1779132304926
+  },
+  {
+    "id": 2400001,
+    "ticketId": "bilhete_2340002",
+    "title": "Mudança de Mesa",
+    "description": "Ajuda para trocar os monitores, fios, e afins para a troca de mesa.",
+    "category": "Outro",
+    "priority": "Média",
+    "status": "Resolvido / Aguardando Validação",
+    "departmentId": 17,
+    "createdById": 480002,
+    "createdByName": "Bárbara Costa",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1779214462204,
+    "updatedAt": 1779285026194
   }
 ]

@@ -5542,5 +5542,82 @@
     "newValue": null,
     "description": "Comentário adicionado por Carlos TI",
     "createdAt": 1779132304879
+  },
+  {
+    "id": 3210001,
+    "ticketId": 1950001,
+    "type": "status_change",
+    "authorId": 480002,
+    "authorName": "Bárbara Costa",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1779214421993
+  },
+  {
+    "id": 3210002,
+    "ticketId": 2400001,
+    "type": "created",
+    "authorId": 480002,
+    "authorName": "Bárbara Costa",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Bárbara Costa",
+    "createdAt": 1779214462204
+  },
+  {
+    "id": 3210003,
+    "ticketId": 2400001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1779217603070
+  },
+  {
+    "id": 3240001,
+    "ticketId": 2400001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1779285026131
+  },
+  {
+    "id": 3270001,
+    "ticketId": 2100001,
+    "type": "status_change",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1779295661697
+  },
+  {
+    "id": 3270002,
+    "ticketId": 2190001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Neosul TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1779295715811
+  },
+  {
+    "id": 3270003,
+    "ticketId": 2190001,
+    "type": "assignment",
+    "authorId": 1,
+    "authorName": "Neosul TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Neosul TI",
+    "description": "Responsável alterado para \"Neosul TI\"",
+    "createdAt": 1779295730927
   }
 ]

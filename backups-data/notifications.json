@@ -1620,18 +1620,6 @@
     "createdAt": 1773154938333
   },
   {
-    "id": 690003,
-    "userId": 1050001,
-    "type": "ticket_status_changed",
-    "title": "Status do Chamado Alterado",
-    "message": "O status do seu chamado foi alterado para Em Andamento",
-    "referenceId": 960001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/960001",
-    "isRead": false,
-    "createdAt": 1773154956680
-  },
-  {
     "id": 690004,
     "userId": 300001,
     "type": "ticket_assigned",
@@ -1702,18 +1690,6 @@
     "actionUrl": "/suporte/930001",
     "isRead": false,
     "createdAt": 1773169514492
-  },
-  {
-    "id": 720002,
-    "userId": 1050001,
-    "type": "ticket_status_changed",
-    "title": "Status do Chamado Alterado",
-    "message": "O status do seu chamado foi alterado para Concluído",
-    "referenceId": 960001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/960001",
-    "isRead": true,
-    "createdAt": 1773169662622
   },
   {
     "id": 720003,
@@ -1990,18 +1966,6 @@
     "actionUrl": "/suporte/1110001",
     "isRead": true,
     "createdAt": 1773681776465
-  },
-  {
-    "id": 870001,
-    "userId": 1050001,
-    "type": "ticket_status_changed",
-    "title": "Status do Chamado Alterado",
-    "message": "O status do seu chamado foi alterado para Em Análise",
-    "referenceId": 1110001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1110001",
-    "isRead": true,
-    "createdAt": 1773690336720
   },
   {
     "id": 900001,
@@ -2494,30 +2458,6 @@
     "actionUrl": "/suporte/1320001",
     "isRead": false,
     "createdAt": 1774441903389
-  },
-  {
-    "id": 1230002,
-    "userId": 1050001,
-    "type": "ticket_status_changed",
-    "title": "Status do Chamado Alterado",
-    "message": "O status do seu chamado foi alterado para Em Andamento",
-    "referenceId": 1320001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1320001",
-    "isRead": true,
-    "createdAt": 1774441904673
-  },
-  {
-    "id": 1230003,
-    "userId": 1050001,
-    "type": "ticket_status_changed",
-    "title": "Status do Chamado Alterado",
-    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
-    "referenceId": 1320001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1320001",
-    "isRead": true,
-    "createdAt": 1774442448203
   },
   {
     "id": 1230004,
@@ -3240,30 +3180,6 @@
     "createdAt": 1775065267324
   },
   {
-    "id": 1650002,
-    "userId": 1050001,
-    "type": "ticket_status_changed",
-    "title": "Status do Chamado Alterado",
-    "message": "O status do seu chamado foi alterado para Em Andamento",
-    "referenceId": 1680003,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1680003",
-    "isRead": false,
-    "createdAt": 1775065277729
-  },
-  {
-    "id": 1650005,
-    "userId": 1050001,
-    "type": "ticket_status_changed",
-    "title": "Status do Chamado Alterado",
-    "message": "O status do seu chamado foi alterado para Em Análise",
-    "referenceId": 1680003,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1680003",
-    "isRead": false,
-    "createdAt": 1775075543730
-  },
-  {
     "id": 1680001,
     "userId": 23,
     "type": "ticket_created",
@@ -3370,18 +3286,6 @@
     "actionUrl": "/suporte/1770001",
     "isRead": false,
     "createdAt": 1775485053944
-  },
-  {
-    "id": 1680012,
-    "userId": 1050001,
-    "type": "ticket_status_changed",
-    "title": "Status do Chamado Alterado",
-    "message": "O status do seu chamado foi alterado para Em Andamento",
-    "referenceId": 1770001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1770001",
-    "isRead": false,
-    "createdAt": 1775485055675
   },
   {
     "id": 1680013,
@@ -4020,18 +3924,6 @@
     "createdAt": 1775677203556
   },
   {
-    "id": 1710010,
-    "userId": 1050001,
-    "type": "ticket_status_changed",
-    "title": "Status do Chamado Alterado",
-    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
-    "referenceId": 1770001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1770001",
-    "isRead": true,
-    "createdAt": 1775678181763
-  },
-  {
     "id": 1710011,
     "userId": 23,
     "type": "ticket_created",
@@ -4296,30 +4188,6 @@
     "createdAt": 1775847282838
   },
   {
-    "id": 1710038,
-    "userId": 1050001,
-    "type": "ticket_status_changed",
-    "title": "Status do Chamado Alterado",
-    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
-    "referenceId": 1110001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1110001",
-    "isRead": false,
-    "createdAt": 1775847522455
-  },
-  {
-    "id": 1710039,
-    "userId": 1050001,
-    "type": "ticket_comment",
-    "title": "Resposta no Chamado",
-    "message": "Gabriel Bino respondeu seu chamado: \"Criar E-mail - Recebimento\"",
-    "referenceId": 1110001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1110001",
-    "isRead": false,
-    "createdAt": 1775847603431
-  },
-  {
     "id": 1710040,
     "userId": 540001,
     "type": "ticket_status_changed",
@@ -4414,18 +4282,6 @@
     "actionUrl": "/suporte/1830001",
     "isRead": false,
     "createdAt": 1776084234248
-  },
-  {
-    "id": 1740006,
-    "userId": 1050001,
-    "type": "ticket_status_changed",
-    "title": "Status do Chamado Alterado",
-    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
-    "referenceId": 1830001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1830001",
-    "isRead": false,
-    "createdAt": 1776084234738
   },
   {
     "id": 1740007,
@@ -5352,18 +5208,6 @@
     "createdAt": 1777291361150
   },
   {
-    "id": 1830005,
-    "userId": 1050001,
-    "type": "ticket_status_changed",
-    "title": "Status do Chamado Alterado",
-    "message": "O status do seu chamado foi alterado para Em Andamento",
-    "referenceId": 1890035,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1890035",
-    "isRead": false,
-    "createdAt": 1777291419520
-  },
-  {
     "id": 1830006,
     "userId": 300001,
     "type": "ticket_assigned",
@@ -5446,30 +5290,6 @@
     "actionUrl": "/suporte/1950001",
     "isRead": true,
     "createdAt": 1777405621745
-  },
-  {
-    "id": 1920001,
-    "userId": 1050001,
-    "type": "ticket_status_changed",
-    "title": "Status do Chamado Alterado",
-    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
-    "referenceId": 1680003,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1680003",
-    "isRead": false,
-    "createdAt": 1777464225880
-  },
-  {
-    "id": 1920002,
-    "userId": 1050001,
-    "type": "ticket_comment",
-    "title": "Resposta no Chamado",
-    "message": "Gabriel Bino respondeu seu chamado: \"Erro ao importar XML\"",
-    "referenceId": 1680003,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/1680003",
-    "isRead": true,
-    "createdAt": 1777464355463
   },
   {
     "id": 1920003,
@@ -6084,18 +5904,6 @@
     "createdAt": 1778594989236
   },
   {
-    "id": 2070006,
-    "userId": 1050001,
-    "type": "ticket_status_changed",
-    "title": "Status do Chamado Alterado",
-    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
-    "referenceId": 2100001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/2100001",
-    "isRead": false,
-    "createdAt": 1778594990063
-  },
-  {
     "id": 2100001,
     "userId": 23,
     "type": "ticket_created",
@@ -6536,7 +6344,7 @@
     "referenceId": 2310005,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2310005",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1779111449980
   },
   {
@@ -6584,7 +6392,7 @@
     "referenceId": 2310006,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2310006",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1779111544545
   },
   {
@@ -6692,7 +6500,7 @@
     "referenceId": 2340001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2340001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1779125739053
   },
   {
@@ -6754,5 +6562,101 @@
     "actionUrl": "/suporte/2340001",
     "isRead": false,
     "createdAt": 1779132304942
+  },
+  {
+    "id": 2400001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Bárbara Costa abriu um novo chamado: \"Mudança de Mesa\"",
+    "referenceId": 2400001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2400001",
+    "isRead": false,
+    "createdAt": 1779214462251
+  },
+  {
+    "id": 2400002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Bárbara Costa abriu um novo chamado: \"Mudança de Mesa\"",
+    "referenceId": 2400001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2400001",
+    "isRead": false,
+    "createdAt": 1779214462272
+  },
+  {
+    "id": 2400003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Bárbara Costa abriu um novo chamado: \"Mudança de Mesa\"",
+    "referenceId": 2400001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2400001",
+    "isRead": false,
+    "createdAt": 1779214462290
+  },
+  {
+    "id": 2400004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Bárbara Costa abriu um novo chamado: \"Mudança de Mesa\"",
+    "referenceId": 2400001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2400001",
+    "isRead": true,
+    "createdAt": 1779214462308
+  },
+  {
+    "id": 2400005,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Mudança de Mesa\"",
+    "referenceId": 2400001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2400001",
+    "isRead": false,
+    "createdAt": 1779217603094
+  },
+  {
+    "id": 2430001,
+    "userId": 480002,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 2400001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2400001",
+    "isRead": false,
+    "createdAt": 1779285026154
+  },
+  {
+    "id": 2460001,
+    "userId": 240039,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 2190001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2190001",
+    "isRead": false,
+    "createdAt": 1779295715827
+  },
+  {
+    "id": 2460002,
+    "userId": 1,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Operador/ Digitador Devolução SC\"",
+    "referenceId": 2190001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2190001",
+    "isRead": false,
+    "createdAt": 1779295730941
   }
 ]
