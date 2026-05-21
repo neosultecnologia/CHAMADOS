@@ -478,5 +478,13 @@
     "authorName": "Carlos TI",
     "content": "IGOR.C\nNeosul@123",
     "createdAt": 1779132304879
+  },
+  {
+    "id": 1140001,
+    "ticketId": 2190001,
+    "authorId": 1,
+    "authorName": "Daniel Machado",
+    "content": "Boa tarde!\nSegue códigos de operador \nCodigo Lívia 2347\nCodigo Beatriz 2348",
+    "createdAt": 1779297039274
   }
 ]

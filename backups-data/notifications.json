@@ -5984,7 +5984,7 @@
     "referenceId": 2160001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2160001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1778769705425
   },
   {
@@ -6056,7 +6056,7 @@
     "referenceId": 2160002,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2160002",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1778770467575
   },
   {
@@ -6140,7 +6140,7 @@
     "referenceId": 2190001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2190001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1778847621694
   },
   {
@@ -6212,7 +6212,7 @@
     "referenceId": 2250001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2250001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1778868811664
   },
   {
@@ -6284,7 +6284,7 @@
     "referenceId": 2280005,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2280005",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1779107711018
   },
   {
@@ -6356,7 +6356,7 @@
     "referenceId": 2310005,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2310005",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1779111450002
   },
   {
@@ -6404,7 +6404,7 @@
     "referenceId": 2310006,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2310006",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1779111544561
   },
   {
@@ -6512,7 +6512,7 @@
     "referenceId": 2340001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2340001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1779125739069
   },
   {
@@ -6596,7 +6596,7 @@
     "referenceId": 2400001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2400001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1779214462290
   },
   {
@@ -6656,7 +6656,175 @@
     "referenceId": 2190001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2190001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1779295730941
+  },
+  {
+    "id": 2460003,
+    "userId": 1,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Operador/ Digitador Devolução SC\"",
+    "referenceId": 2190001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2190001",
+    "isRead": true,
+    "createdAt": 1779295979950
+  },
+  {
+    "id": 2490001,
+    "userId": 240039,
+    "type": "ticket_comment",
+    "title": "Resposta no Chamado",
+    "message": "Daniel Machado respondeu seu chamado: \"Operador/ Digitador Devolução SC\"",
+    "referenceId": 2190001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2190001",
+    "isRead": false,
+    "createdAt": 1779297039342
+  },
+  {
+    "id": 2490002,
+    "userId": 240039,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 2190001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2190001",
+    "isRead": false,
+    "createdAt": 1779297041367
+  },
+  {
+    "id": 2490003,
+    "userId": 570012,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 210004,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/210004",
+    "isRead": false,
+    "createdAt": 1779297107153
+  },
+  {
+    "id": 2490004,
+    "userId": 570012,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 210023,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/210023",
+    "isRead": false,
+    "createdAt": 1779297120578
+  },
+  {
+    "id": 2490005,
+    "userId": 540002,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 780007,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/780007",
+    "isRead": false,
+    "createdAt": 1779297132089
+  },
+  {
+    "id": 2490006,
+    "userId": 720001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1140001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1140001",
+    "isRead": false,
+    "createdAt": 1779297145231
+  },
+  {
+    "id": 2520001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"2 Pcs no setor de conferencia que desligam sozinhos \"",
+    "referenceId": 2430001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2430001",
+    "isRead": false,
+    "createdAt": 1779297746352
+  },
+  {
+    "id": 2520002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"2 Pcs no setor de conferencia que desligam sozinhos \"",
+    "referenceId": 2430001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2430001",
+    "isRead": false,
+    "createdAt": 1779297746373
+  },
+  {
+    "id": 2520003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"2 Pcs no setor de conferencia que desligam sozinhos \"",
+    "referenceId": 2430001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2430001",
+    "isRead": true,
+    "createdAt": 1779297746387
+  },
+  {
+    "id": 2520004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"2 Pcs no setor de conferencia que desligam sozinhos \"",
+    "referenceId": 2430001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2430001",
+    "isRead": true,
+    "createdAt": 1779297746402
+  },
+  {
+    "id": 2550001,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 2310006,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2310006",
+    "isRead": false,
+    "createdAt": 1779373035259
+  },
+  {
+    "id": 2580001,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"2 Pcs no setor de conferencia que desligam sozinhos\"",
+    "referenceId": 2430001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2430001",
+    "isRead": false,
+    "createdAt": 1779380386861
+  },
+  {
+    "id": 2580002,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 2430001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2430001",
+    "isRead": false,
+    "createdAt": 1779380396664
   }
 ]

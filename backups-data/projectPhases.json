@@ -1313,17 +1313,17 @@
     "projectId": 1320002,
     "name": "Pedido teste",
     "description": "Aguardando pedido teste\nContato realizado com o TI Anderson dia 29/04 via WhatsApp",
-    "status": "Pendente",
+    "status": "Concluída",
     "order": 2,
     "startDate": 1777431600000,
     "endDate": 1778209200000,
-    "completedAt": null,
+    "completedAt": 1779310233456,
     "createdById": 1,
     "createdByName": "Neosul TI",
     "updatedById": 1,
-    "updatedByName": "Neosul TI",
+    "updatedByName": "Daniel Machado",
     "createdAt": 1777898696871,
-    "updatedAt": 1777898696871
+    "updatedAt": 1779310234301
   },
   {
     "id": 1650001,

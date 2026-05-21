@@ -5619,5 +5619,126 @@
     "newValue": "Neosul TI",
     "description": "Responsável alterado para \"Neosul TI\"",
     "createdAt": 1779295730927
+  },
+  {
+    "id": 3270004,
+    "ticketId": 2190001,
+    "type": "assignment",
+    "authorId": 1,
+    "authorName": "Daniel Machado",
+    "oldValue": "Neosul TI",
+    "newValue": "Daniel Machado",
+    "description": "Responsável alterado para \"Daniel Machado\"",
+    "createdAt": 1779295979931
+  },
+  {
+    "id": 3300001,
+    "ticketId": 2190001,
+    "type": "comment",
+    "authorId": 1,
+    "authorName": "Daniel Machado",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Daniel Machado",
+    "createdAt": 1779297039274
+  },
+  {
+    "id": 3300002,
+    "ticketId": 2190001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel Machado",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1779297041352
+  },
+  {
+    "id": 3300003,
+    "ticketId": 210004,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel Machado",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1779297107137
+  },
+  {
+    "id": 3300004,
+    "ticketId": 210023,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel Machado",
+    "oldValue": "Em Análise",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Análise\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1779297120563
+  },
+  {
+    "id": 3300005,
+    "ticketId": 780007,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel Machado",
+    "oldValue": "Em Análise",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Análise\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1779297132073
+  },
+  {
+    "id": 3300006,
+    "ticketId": 1140001,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel Machado",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1779297145214
+  },
+  {
+    "id": 3330001,
+    "ticketId": 2430001,
+    "type": "created",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mauricio Ramos",
+    "createdAt": 1779297746295
+  },
+  {
+    "id": 3360001,
+    "ticketId": 2310006,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1779373035232
+  },
+  {
+    "id": 3390001,
+    "ticketId": 2430001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1779380386838
+  },
+  {
+    "id": 3390002,
+    "ticketId": 2430001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1779380396646
   }
 ]
