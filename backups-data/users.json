@@ -27,8 +27,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-05-21T16:53:22.000Z",
-    "lastSignedIn": "2026-05-21T16:53:22.000Z"
+    "updatedAt": "2026-05-22T20:55:39.000Z",
+    "lastSignedIn": "2026-05-22T20:55:40.000Z"
   },
   {
     "id": 23,
@@ -191,8 +191,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-02-06T11:27:15.000Z",
-    "updatedAt": "2026-05-21T11:57:02.000Z",
-    "lastSignedIn": "2026-05-21T11:57:03.000Z"
+    "updatedAt": "2026-05-22T12:13:21.000Z",
+    "lastSignedIn": "2026-05-22T12:13:22.000Z"
   },
   {
     "id": 300002,
@@ -838,21 +838,59 @@
     "role": "user",
     "approvalStatus": "approved",
     "departmentId": 90006,
-    "groupId": 300001,
+    "groupId": 1140009,
     "permissions": {
-      "almoxarifado": false,
-      "chamados": true,
-      "comercial": false,
-      "compras": false,
-      "desenvolvimento": false,
-      "marketing": false,
-      "projetos": false,
-      "rh": false,
-      "suporte": true,
-      "tecnologia": false
+      "almoxarifado": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "comercial": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "contratos": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "desenvolvimento": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "gestao_negocios": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "repasses": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "superestocados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "suporte": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      }
     },
     "createdAt": "2026-04-20T12:22:21.000Z",
-    "updatedAt": "2026-05-06T12:36:57.000Z",
+    "updatedAt": "2026-05-22T20:17:17.000Z",
     "lastSignedIn": "2026-04-22T13:54:34.000Z"
   },
   {
@@ -909,8 +947,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-05-07T14:36:08.000Z",
-    "updatedAt": "2026-05-18T13:29:55.000Z",
-    "lastSignedIn": "2026-05-07T14:47:49.000Z"
+    "updatedAt": "2026-05-22T16:25:33.000Z",
+    "lastSignedIn": "2026-05-22T16:25:33.000Z"
   },
   {
     "id": 1590001,
@@ -925,10 +963,10 @@
     "groupId": 150022,
     "permissions": {
       "comercial": {
-        "create": false,
-        "delete": false,
+        "create": true,
+        "delete": true,
         "read": true,
-        "update": false
+        "update": true
       },
       "contratos": {
         "create": false,
@@ -955,14 +993,104 @@
         "update": false
       },
       "suporte": {
-        "create": false,
+        "create": true,
         "delete": false,
-        "read": false,
+        "read": true,
         "update": false
       }
     },
     "createdAt": "2026-05-21T15:13:16.000Z",
-    "updatedAt": "2026-05-21T15:18:09.000Z",
+    "updatedAt": "2026-05-21T17:30:45.000Z",
     "lastSignedIn": "2026-05-21T15:18:10.000Z"
+  },
+  {
+    "id": 1620013,
+    "openId": null,
+    "name": "Cris",
+    "email": "contasapagar.rs@neosuldistribuidora.com.br",
+    "passwordHash": "$2b$10$WG7nqAPMwaPDQruJmJjWcOlixvBsNEZm9ckf1fZRI0gNsX2pe58jW",
+    "loginMethod": "internal",
+    "role": "user",
+    "approvalStatus": "approved",
+    "departmentId": 90005,
+    "groupId": 150001,
+    "permissions": {
+      "almoxarifado": false,
+      "chamados": true,
+      "desenvolvimento": false,
+      "marketing": false,
+      "projetos": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
+    "createdAt": "2026-05-21T18:30:35.000Z",
+    "updatedAt": "2026-05-21T18:32:59.000Z",
+    "lastSignedIn": "2026-05-21T18:32:59.000Z"
+  },
+  {
+    "id": 1650001,
+    "openId": null,
+    "name": "Keuriane Braga da Silva ",
+    "email": "Trade2@neosuldistribuidora.com.br",
+    "passwordHash": "$2b$10$aSz4eD9oMEv5kkH12Hh.Ref3eTSwNDgpT27eJ/aGkjPk5wPKNACW.",
+    "loginMethod": "internal",
+    "role": "user",
+    "approvalStatus": "approved",
+    "departmentId": null,
+    "groupId": 1140009,
+    "permissions": {
+      "almoxarifado": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "comercial": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "contratos": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "desenvolvimento": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "gestao_negocios": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "repasses": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "superestocados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "suporte": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      }
+    },
+    "createdAt": "2026-05-22T12:16:00.000Z",
+    "updatedAt": "2026-05-25T11:16:07.000Z",
+    "lastSignedIn": "2026-05-25T11:16:08.000Z"
   }
 ]

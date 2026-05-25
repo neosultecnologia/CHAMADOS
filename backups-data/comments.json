@@ -486,5 +486,13 @@
     "authorName": "Daniel Machado",
     "content": "Boa tarde!\nSegue códigos de operador \nCodigo Lívia 2347\nCodigo Beatriz 2348",
     "createdAt": 1779297039274
+  },
+  {
+    "id": 1170001,
+    "ticketId": 2460005,
+    "authorId": 1,
+    "authorName": "Daniel Machado",
+    "content": "Olá Cris, perfil liberado para visualização das ocorrências.",
+    "createdAt": 1779390102045
   }
 ]

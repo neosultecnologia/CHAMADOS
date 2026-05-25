@@ -5740,5 +5740,137 @@
     "newValue": "Em Andamento",
     "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
     "createdAt": 1779380396646
+  },
+  {
+    "id": 3420001,
+    "ticketId": 2460005,
+    "type": "created",
+    "authorId": 1620013,
+    "authorName": "Cris",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Cris",
+    "createdAt": 1779388432870
+  },
+  {
+    "id": 3420002,
+    "ticketId": 2460005,
+    "type": "status_change",
+    "authorId": 1,
+    "authorName": "Daniel Machado",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1779390098261
+  },
+  {
+    "id": 3420003,
+    "ticketId": 2460005,
+    "type": "comment",
+    "authorId": 1,
+    "authorName": "Daniel Machado",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Daniel Machado",
+    "createdAt": 1779390102045
+  },
+  {
+    "id": 3420004,
+    "ticketId": 2460005,
+    "type": "assignment",
+    "authorId": 1,
+    "authorName": "Daniel Machado",
+    "oldValue": "Não atribuído",
+    "newValue": "Dieison Campara",
+    "description": "Responsável alterado para \"Dieison Campara\"",
+    "createdAt": 1779390105226
+  },
+  {
+    "id": 3420005,
+    "ticketId": 2460005,
+    "type": "assignment",
+    "authorId": 1,
+    "authorName": "Daniel Machado",
+    "oldValue": "Dieison Campara",
+    "newValue": "Daniel Machado",
+    "description": "Responsável alterado para \"Daniel Machado\"",
+    "createdAt": 1779390106961
+  },
+  {
+    "id": 3420006,
+    "ticketId": 2340001,
+    "type": "status_change",
+    "authorId": 540003,
+    "authorName": "Beatriz Sousa ",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1779390571059
+  },
+  {
+    "id": 3450001,
+    "ticketId": 2430001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1779395395037
+  },
+  {
+    "id": 3450002,
+    "ticketId": 2490001,
+    "type": "created",
+    "authorId": 540003,
+    "authorName": "Beatriz Sousa ",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Beatriz Sousa ",
+    "createdAt": 1779395585941
+  },
+  {
+    "id": 3450003,
+    "ticketId": 2490001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1779396365799
+  },
+  {
+    "id": 3450004,
+    "ticketId": 2490001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1779396367350
+  },
+  {
+    "id": 3480001,
+    "ticketId": 2490001,
+    "type": "status_change",
+    "authorId": 540003,
+    "authorName": "Beatriz Sousa ",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1779396984574
+  },
+  {
+    "id": 3510001,
+    "ticketId": 2580001,
+    "type": "created",
+    "authorId": 1650001,
+    "authorName": "Keuriane Braga da Silva ",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Keuriane Braga da Silva ",
+    "createdAt": 1779707852103
   }
 ]
