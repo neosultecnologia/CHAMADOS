@@ -7052,7 +7052,79 @@
     "referenceId": 2580001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2580001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1779707852214
+  },
+  {
+    "id": 2700001,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Troca de mesa\"",
+    "referenceId": 2580001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2580001",
+    "isRead": false,
+    "createdAt": 1779718396754
+  },
+  {
+    "id": 2700002,
+    "userId": 1650001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 2580001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2580001",
+    "isRead": false,
+    "createdAt": 1779718398265
+  },
+  {
+    "id": 2730001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Liberar acesso as cameras\"",
+    "referenceId": 2610001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2610001",
+    "isRead": false,
+    "createdAt": 1779729492878
+  },
+  {
+    "id": 2730002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Liberar acesso as cameras\"",
+    "referenceId": 2610001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2610001",
+    "isRead": false,
+    "createdAt": 1779729492912
+  },
+  {
+    "id": 2730003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Liberar acesso as cameras\"",
+    "referenceId": 2610001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2610001",
+    "isRead": false,
+    "createdAt": 1779729492929
+  },
+  {
+    "id": 2730004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Liberar acesso as cameras\"",
+    "referenceId": 2610001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2610001",
+    "isRead": true,
+    "createdAt": 1779729492946
   }
 ]

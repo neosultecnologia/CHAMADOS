@@ -5872,5 +5872,38 @@
     "newValue": null,
     "description": "Chamado criado por Keuriane Braga da Silva ",
     "createdAt": 1779707852103
+  },
+  {
+    "id": 3540001,
+    "ticketId": 2580001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1779718396732
+  },
+  {
+    "id": 3540002,
+    "ticketId": 2580001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1779718398242
+  },
+  {
+    "id": 3570001,
+    "ticketId": 2610001,
+    "type": "created",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mauricio Ramos",
+    "createdAt": 1779729492813
   }
 ]

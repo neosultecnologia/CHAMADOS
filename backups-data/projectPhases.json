@@ -1296,17 +1296,17 @@
     "projectId": 300004,
     "name": "Ticket Infarma",
     "description": "Demanda aberta para o infarma sobre as criticas da neogrid\nTicket 202603010435",
-    "status": "Pendente",
+    "status": "Concluída",
     "order": 9,
     "startDate": 1777518000000,
     "endDate": 1778814000000,
-    "completedAt": null,
+    "completedAt": 1779709099547,
     "createdById": 1,
     "createdByName": "Neosul TI",
     "updatedById": 1,
-    "updatedByName": "Neosul TI",
+    "updatedByName": "Daniel Machado",
     "createdAt": 1777898593398,
-    "updatedAt": 1777898593398
+    "updatedAt": 1779709100420
   },
   {
     "id": 1560003,

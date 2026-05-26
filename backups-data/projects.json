@@ -137,17 +137,17 @@
     "projectType": "Integração Externa",
     "startDate": 1767322800000,
     "endDate": 1778814000000,
-    "progress": 89,
+    "progress": 100,
     "createdById": 1,
     "createdByName": "Daniel TI",
     "updatedById": 1,
-    "updatedByName": "Neosul TI",
+    "updatedByName": "Daniel Machado",
     "createdAt": 1770379986213,
-    "updatedAt": 1779191020935,
+    "updatedAt": 1779731554634,
     "kanbanOrder": 2001,
-    "isBeingTreated": true,
-    "treatedByName": "Neosul TI",
-    "treatedAt": 1779191020935
+    "isBeingTreated": false,
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 330001,
@@ -216,13 +216,13 @@
     "createdById": 1,
     "createdByName": "Daniel TI",
     "updatedById": 1,
-    "updatedByName": "Neosul TI",
+    "updatedByName": "Daniel Machado",
     "createdAt": 1770902542514,
-    "updatedAt": 1779191022575,
+    "updatedAt": 1779731555672,
     "kanbanOrder": 2002,
-    "isBeingTreated": true,
-    "treatedByName": "Neosul TI",
-    "treatedAt": 1779191022575
+    "isBeingTreated": false,
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 360003,

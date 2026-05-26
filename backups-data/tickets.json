@@ -2127,10 +2127,31 @@
     "description": "Bom dia, solicito a troca de mesa, conforme autorizado pela Leise.",
     "category": "Técnico",
     "priority": "Baixa",
-    "status": "Novos",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 17,
     "createdById": 1650001,
     "createdByName": "Keuriane Braga da Silva ",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1779707852103,
+    "updatedAt": 1779718398282
+  },
+  {
+    "id": 2610001,
+    "ticketId": "bilhete_2580002",
+    "title": "Liberar acesso as cameras",
+    "description": "Precisamos que as câmeras estejam liberadas no PC da Adhara do faturamento.",
+    "category": "Técnico",
+    "priority": "Crítica",
+    "status": "Novos",
+    "departmentId": 17,
+    "createdById": 540001,
+    "createdByName": "Mauricio Ramos",
     "assignedToId": null,
     "assignedToName": null,
     "waitingForDepartment": null,
@@ -2138,7 +2159,7 @@
     "lastRespondentId": null,
     "lastRespondentName": null,
     "order": 0,
-    "createdAt": 1779707852103,
-    "updatedAt": 1779707852103
+    "createdAt": 1779729492813,
+    "updatedAt": 1779729492813
   }
 ]
