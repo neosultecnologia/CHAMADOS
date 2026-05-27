@@ -640,14 +640,14 @@
     "progress": 0,
     "createdById": 1,
     "createdByName": "Daniel TI",
-    "updatedById": 60001,
-    "updatedByName": "Gabriel Bino",
+    "updatedById": 1,
+    "updatedByName": "Daniel Machado",
     "createdAt": 1774981188884,
-    "updatedAt": 1778778484701,
+    "updatedAt": 1779817860361,
     "kanbanOrder": 1000,
-    "isBeingTreated": true,
-    "treatedByName": "Gabriel Bino",
-    "treatedAt": 1778778484701
+    "isBeingTreated": false,
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 1170001,

@@ -174,7 +174,7 @@
     "description": "Providenciar lider Picking\n1º notebook\n2º E-mail\n3º Teams\n",
     "category": "Outro",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 1,
     "createdByName": "Daniel TI",
@@ -186,7 +186,7 @@
     "lastRespondentName": "Carlos TI",
     "order": 7,
     "createdAt": 1771518903335,
-    "updatedAt": 1773253518470
+    "updatedAt": 1779825202000
   },
   {
     "id": 420003,
@@ -237,7 +237,7 @@
     "description": "Os PCs do recebimento ( devolução, SAC, e recebimento ) não conseguem acessar o site portal.neosul para solicitar \"CHAMADOS\"",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -249,7 +249,7 @@
     "lastRespondentName": null,
     "order": 4,
     "createdAt": 1771865670220,
-    "updatedAt": 1777983752951
+    "updatedAt": 1779825202000
   },
   {
     "id": 570037,
@@ -300,7 +300,7 @@
     "description": "O computador 04 da conferencia esta desligando sozinho durante processo.",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -312,7 +312,7 @@
     "lastRespondentName": "Daniel TI",
     "order": 0,
     "createdAt": 1772028659135,
-    "updatedAt": 1773253501312
+    "updatedAt": 1779825202000
   },
   {
     "id": 780007,
@@ -363,7 +363,7 @@
     "description": "PC 04 desliga sozinho, PC 07 trava e precisa ser reiniciado",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -375,7 +375,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1772137287610,
-    "updatedAt": 1775501908356
+    "updatedAt": 1779825202000
   },
   {
     "id": 840001,
@@ -426,7 +426,7 @@
     "description": "o sistema infarma esta apresentando a alguns dias já travamento e demoras de ate 8 min por NF atrasando e impossibilitado o processo tenho video do occorido mas não consigo anexar",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 540002,
     "createdByName": "ADHARA",
@@ -438,7 +438,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1772570358272,
-    "updatedAt": 1777983703737
+    "updatedAt": 1779825202000
   },
   {
     "id": 930001,
@@ -678,7 +678,7 @@
     "description": "Boa tarde, por gentileza liberar essas funcionalidades dentro do módulo ESTOQUE para o colaborador LUCAS.L:\n*PRODUTOS;\n* RASTREAMENTO DE PRODUTO/LOTE;\n*TRANSFERENCIA DE LOTES;\n*POSIÇÃO DE ESTOQUE POR LOCALIZAÇÃO FÍSICA;\n*EMISSÃO DE ETIQUETAS.",
     "category": "Técnico",
     "priority": "Baixa",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 720001,
     "createdByName": "VERIDIANA",
@@ -690,7 +690,7 @@
     "lastRespondentName": "Carlos TI",
     "order": 0,
     "createdAt": 1773952613192,
-    "updatedAt": 1776280075526
+    "updatedAt": 1779825202000
   },
   {
     "id": 1290001,
@@ -783,7 +783,7 @@
     "description": "Solicito a troca da tela da Leise para a Maisa do MKT",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 690001,
     "createdByName": "Caroline Borges batista",
@@ -795,7 +795,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1774462088402,
-    "updatedAt": 1774623974164
+    "updatedAt": 1779825202000
   },
   {
     "id": 1440001,
@@ -867,7 +867,7 @@
     "description": "o print screen do me teclado faturamento 01 não esta funcionando, por favor usamos muito",
     "category": "Técnico",
     "priority": "Baixa",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 540002,
     "createdByName": "ADHARA",
@@ -879,7 +879,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1774561170229,
-    "updatedAt": 1775501636838
+    "updatedAt": 1779825202000
   },
   {
     "id": 1530002,
@@ -909,7 +909,7 @@
     "description": "solicito a configuração da impressora do faturamento 1 que esta errada ao entra no sistema ela aciona uma impressora que não condiz com a que uso, Gabriel esta ciente do ocorrido. obrigada",
     "category": "Técnico",
     "priority": "Baixa",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 540002,
     "createdByName": "ADHARA",
@@ -921,7 +921,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1774561715524,
-    "updatedAt": 1775501432637
+    "updatedAt": 1779825202000
   },
   {
     "id": 1560001,
@@ -930,7 +930,7 @@
     "description": "solicito a compra de 4 leitores para conferencia, esta apresentando falha e não lê os códigos de barra causando erros na conferencia",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 540002,
     "createdByName": "ADHARA",
@@ -942,7 +942,7 @@
     "lastRespondentName": "Gabriel Bino",
     "order": 0,
     "createdAt": 1774627829585,
-    "updatedAt": 1774884178080
+    "updatedAt": 1779825202000
   },
   {
     "id": 1650001,
@@ -951,7 +951,7 @@
     "description": "Devido lentidão no computador, travamentos, bloqueios de acessos, PDF, EXCEL travando .....ve se a necessidade de formatação do computadir com urgencia, pois está dificultando o trabalho no setor.",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90007,
     "createdById": 570012,
     "createdByName": "Francielle Vieira Schmitz Bueno",
@@ -963,7 +963,7 @@
     "lastRespondentName": "Carlos TI",
     "order": 0,
     "createdAt": 1774871065160,
-    "updatedAt": 1775501397853
+    "updatedAt": 1779825202000
   },
   {
     "id": 1680001,
@@ -993,7 +993,7 @@
     "description": "instalar icloud na máquina da coordenação",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 720001,
     "createdByName": "VERIDIANA",
@@ -1005,7 +1005,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1774875226980,
-    "updatedAt": 1777484013159
+    "updatedAt": 1779825202000
   },
   {
     "id": 1680003,
@@ -1266,7 +1266,7 @@
     "description": "Boa tarde, tudo bem?\n\nSolicito o ajuste da hora no meu PC, ele está 1hr adiantado com isso impacta nos envios e recebimento de e-mails.",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 20,
     "createdById": 360002,
     "createdByName": "Renata Sousa",
@@ -1278,7 +1278,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1775679013490,
-    "updatedAt": 1775759512992
+    "updatedAt": 1779825202000
   },
   {
     "id": 1800003,
@@ -1308,7 +1308,7 @@
     "description": "Não estou mais conseguindo acesso as câmeras",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -1320,7 +1320,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1775839138645,
-    "updatedAt": 1776109028473
+    "updatedAt": 1779825202000
   },
   {
     "id": 1800016,
@@ -1329,7 +1329,7 @@
     "description": "Criar um email para o inventário juntamente com o Teams, para facilitar comunicação e resolução de problemas.",
     "category": "Técnico",
     "priority": "Baixa",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -1341,7 +1341,7 @@
     "lastRespondentName": "Gabriel Bino",
     "order": 0,
     "createdAt": 1775841800552,
-    "updatedAt": 1775850893115
+    "updatedAt": 1779825202000
   },
   {
     "id": 1800017,
@@ -1350,7 +1350,7 @@
     "description": "Liberar acesso para faturamento.",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -1362,7 +1362,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1775841996032,
-    "updatedAt": 1776351687324
+    "updatedAt": 1779825202000
   },
   {
     "id": 1830001,
@@ -1392,7 +1392,7 @@
     "description": "Boa tarde, \nPor favor, liberação da pasta de no dados: 31. Trade, para ajudar nos acessos GP.\nLeise esta ciente!",
     "category": "Acesso",
     "priority": "Média",
-    "status": "Concluído",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 90006,
     "createdById": 630282,
     "createdByName": "Márcia Freitas",
@@ -1404,7 +1404,7 @@
     "lastRespondentName": "Márcia Freitas",
     "order": 0,
     "createdAt": 1776111856490,
-    "updatedAt": 1778769622626
+    "updatedAt": 1779825964664
   },
   {
     "id": 1830003,
@@ -1413,7 +1413,7 @@
     "description": "Boa tarde!\nBuscando melhoras para atendimento as indústrias, com a aprovação da gerencia (Leise), venho solicitar a troca da minha CPU, pelo notebook que a Elen usava. O Usuário ficará do Humbertho e a minha CPU voltará para o TI",
     "category": "Acesso",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 450001,
     "createdByName": "Humbertho Ryan",
@@ -1425,7 +1425,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1776196289437,
-    "updatedAt": 1776280119200
+    "updatedAt": 1779825202000
   },
   {
     "id": 1860001,
@@ -1434,7 +1434,7 @@
     "description": "INFARMA não abre no PC do Psico",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -1446,7 +1446,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1776264725355,
-    "updatedAt": 1776280100867
+    "updatedAt": 1779825202000
   },
   {
     "id": 1860002,
@@ -1455,7 +1455,7 @@
     "description": "Por gentileza, liberar acesso para o Infarma Cubos na minha nova máquina",
     "category": "Acesso",
     "priority": "Baixa",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 450001,
     "createdByName": "Humbertho Ryan",
@@ -1467,7 +1467,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1776364010003,
-    "updatedAt": 1776365474895
+    "updatedAt": 1779825202000
   },
   {
     "id": 1860003,
@@ -1476,7 +1476,7 @@
     "description": "Por gentileza, incluir o certificado digital na minha máquina",
     "category": "Acesso",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 450001,
     "createdByName": "Humbertho Ryan",
@@ -1488,7 +1488,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1776364094898,
-    "updatedAt": 1776365936450
+    "updatedAt": 1779825202000
   },
   {
     "id": 1860004,
@@ -1497,7 +1497,7 @@
     "description": "Por gentileza, ajustar a função de captura de tela",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 450001,
     "createdByName": "Humbertho Ryan",
@@ -1509,7 +1509,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1776368382312,
-    "updatedAt": 1776875905800
+    "updatedAt": 1779825202000
   },
   {
     "id": 1860005,
@@ -1518,7 +1518,7 @@
     "description": "Preciso do acesso a pasta",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 690001,
     "createdByName": "Caroline Borges batista",
@@ -1530,7 +1530,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1776430766465,
-    "updatedAt": 1776875876723
+    "updatedAt": 1779825202000
   },
   {
     "id": 1860006,
@@ -1581,7 +1581,7 @@
     "description": "Bom dia!\nPor gentileza, ajustar o mapa de compras que é por excel no meu computador. Sem o ajuste não consigo atualizar as informações. Pasta: Dados > 7. Fornecedores > MAPA DE COMPRAS - NEOSUL RS V03 e NEOSUL SC V03. Fica bem no final da pasta",
     "category": "Funcionalidade",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 450001,
     "createdByName": "Humbertho Ryan",
@@ -1593,7 +1593,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1776866975631,
-    "updatedAt": 1776972086680
+    "updatedAt": 1779825202000
   },
   {
     "id": 1890014,
@@ -1644,7 +1644,7 @@
     "description": "Preciso que seja liberado o acesso a conferencia de caixa fechada para o colaborador Leonardo Oliveira Ribeiro",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -1656,7 +1656,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1776977727944,
-    "updatedAt": 1777321584230
+    "updatedAt": 1779825202000
   },
   {
     "id": 1950001,
@@ -1686,7 +1686,7 @@
     "description": "Trocar teclado do PC do Maurício logística , o mesmo apresenta falhas em teclas.",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -1698,7 +1698,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1777575825885,
-    "updatedAt": 1777983509040
+    "updatedAt": 1779825202000
   },
   {
     "id": 2010001,
@@ -1719,7 +1719,7 @@
     "lastRespondentName": "Carlos TI",
     "order": 0,
     "createdAt": 1777923937180,
-    "updatedAt": 1778081036390
+    "updatedAt": 1779825946285
   },
   {
     "id": 2010002,
@@ -1812,7 +1812,7 @@
     "description": "Precisamos que verifiquem o que acontece no PC da lider conferencia onde o Teams foi instalado e não funciona mais",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -1824,7 +1824,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1778178195352,
-    "updatedAt": 1778178523387
+    "updatedAt": 1779825202000
   },
   {
     "id": 2100001,
@@ -1896,7 +1896,7 @@
     "description": "PC das fraldas não liga, o mesmo desligou sozinho e depois não ligou mais",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -1908,7 +1908,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1778770467441,
-    "updatedAt": 1778786761925
+    "updatedAt": 1779825202000
   },
   {
     "id": 2190001,
@@ -1938,7 +1938,7 @@
     "description": "Precisamos de mais um monitor para a área do recebimento",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -1950,7 +1950,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1778868811547,
-    "updatedAt": 1778869309864
+    "updatedAt": 1779825202000
   },
   {
     "id": 2280005,
@@ -1959,7 +1959,7 @@
     "description": "Bom dia, solicitado ajuda para instalar o teams no computador da Keuriane.\n\nE-mail: trade2@neosuldistribuidora.com.br\n\nAnydesk: 1 085 719 224",
     "category": "Acesso",
     "priority": "Alta",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90006,
     "createdById": 390001,
     "createdByName": "Maria Eduarda Chagas",
@@ -1971,7 +1971,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1779107710912,
-    "updatedAt": 1779114904399
+    "updatedAt": 1779825202000
   },
   {
     "id": 2310005,
@@ -1980,7 +1980,7 @@
     "description": "O PC da devolução parou de funcionar, precisamos substituir",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -1992,7 +1992,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1779111449882,
-    "updatedAt": 1779114006691
+    "updatedAt": 1779825202000
   },
   {
     "id": 2310006,
@@ -2148,10 +2148,31 @@
     "description": "Precisamos que as câmeras estejam liberadas no PC da Adhara do faturamento.",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Novos",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1779729492813,
+    "updatedAt": 1779823102798
+  },
+  {
+    "id": 2670009,
+    "ticketId": "bilhete_2610002",
+    "title": "reprocessar um pedido",
+    "description": "Consegue reprocessar um pedido de ontem, do cliente 53420",
+    "category": "Técnico",
+    "priority": "Crítica",
+    "status": "Novos",
+    "departmentId": 17,
+    "createdById": 690001,
+    "createdByName": "Caroline Borges batista",
     "assignedToId": null,
     "assignedToName": null,
     "waitingForDepartment": null,
@@ -2159,7 +2180,7 @@
     "lastRespondentId": null,
     "lastRespondentName": null,
     "order": 0,
-    "createdAt": 1779729492813,
-    "updatedAt": 1779729492813
+    "createdAt": 1779829007166,
+    "updatedAt": 1779829007166
   }
 ]

@@ -7040,7 +7040,7 @@
     "referenceId": 2580001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2580001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1779707852195
   },
   {
@@ -7112,7 +7112,7 @@
     "referenceId": 2610001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2610001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1779729492929
   },
   {
@@ -7126,5 +7126,113 @@
     "actionUrl": "/suporte/2610001",
     "isRead": true,
     "createdAt": 1779729492946
+  },
+  {
+    "id": 2760001,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Liberar acesso as cameras\"",
+    "referenceId": 2610001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2610001",
+    "isRead": false,
+    "createdAt": 1779802434023
+  },
+  {
+    "id": 2760002,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 2610001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2610001",
+    "isRead": false,
+    "createdAt": 1779802435755
+  },
+  {
+    "id": 2790001,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 2610001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2610001",
+    "isRead": false,
+    "createdAt": 1779823102774
+  },
+  {
+    "id": 2790002,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 2010001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2010001",
+    "isRead": false,
+    "createdAt": 1779825946267
+  },
+  {
+    "id": 2790003,
+    "userId": 630282,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1830002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1830002",
+    "isRead": false,
+    "createdAt": 1779825964647
+  },
+  {
+    "id": 2820001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Caroline Borges batista abriu um novo chamado: \"reprocessar um pedido\"",
+    "referenceId": 2670009,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2670009",
+    "isRead": false,
+    "createdAt": 1779829007230
+  },
+  {
+    "id": 2820002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Caroline Borges batista abriu um novo chamado: \"reprocessar um pedido\"",
+    "referenceId": 2670009,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2670009",
+    "isRead": false,
+    "createdAt": 1779829007261
+  },
+  {
+    "id": 2820003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Caroline Borges batista abriu um novo chamado: \"reprocessar um pedido\"",
+    "referenceId": 2670009,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2670009",
+    "isRead": true,
+    "createdAt": 1779829007281
+  },
+  {
+    "id": 2820004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Caroline Borges batista abriu um novo chamado: \"reprocessar um pedido\"",
+    "referenceId": 2670009,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2670009",
+    "isRead": false,
+    "createdAt": 1779829007301
   }
 ]
