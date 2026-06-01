@@ -6312,5 +6312,203 @@
     "newValue": null,
     "description": "Chamado criado por Caroline Borges batista",
     "createdAt": 1779829007166
+  },
+  {
+    "id": 3690001,
+    "ticketId": 2670009,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1779881172354
+  },
+  {
+    "id": 3690002,
+    "ticketId": 2670009,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1779881173927
+  },
+  {
+    "id": 3720001,
+    "ticketId": 2190001,
+    "type": "comment",
+    "authorId": 240039,
+    "authorName": "Monique",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Monique",
+    "createdAt": 1779912462139
+  },
+  {
+    "id": 3720002,
+    "ticketId": 2190001,
+    "type": "status_change",
+    "authorId": 240039,
+    "authorName": "Monique",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1779912498165
+  },
+  {
+    "id": 3720003,
+    "ticketId": 2760001,
+    "type": "created",
+    "authorId": 240039,
+    "authorName": "Monique",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Monique",
+    "createdAt": 1779912545362
+  },
+  {
+    "id": 3750001,
+    "ticketId": 2760001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1779912965701
+  },
+  {
+    "id": 3750002,
+    "ticketId": 2760001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1779912966856
+  },
+  {
+    "id": 3780001,
+    "ticketId": 2400001,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1779969615443
+  },
+  {
+    "id": 3780002,
+    "ticketId": 1140001,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1779969615443
+  },
+  {
+    "id": 3780003,
+    "ticketId": 780007,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1779969615443
+  },
+  {
+    "id": 3780004,
+    "ticketId": 210023,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1779969615443
+  },
+  {
+    "id": 3780005,
+    "ticketId": 210004,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1779969615443
+  },
+  {
+    "id": 3810001,
+    "ticketId": 2460005,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1780056011336
+  },
+  {
+    "id": 3810002,
+    "ticketId": 2430001,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1780056011336
+  },
+  {
+    "id": 3810003,
+    "ticketId": 2310006,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1780056011336
+  },
+  {
+    "id": 3840001,
+    "ticketId": 2580001,
+    "type": "status_change",
+    "authorId": 1650001,
+    "authorName": "Keuriane Braga da Silva ",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1780079678916
+  },
+  {
+    "id": 3840002,
+    "ticketId": 2850001,
+    "type": "created",
+    "authorId": 1650001,
+    "authorName": "Keuriane Braga da Silva ",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Keuriane Braga da Silva ",
+    "createdAt": 1780079818319
+  },
+  {
+    "id": 3870001,
+    "ticketId": 2880001,
+    "type": "created",
+    "authorId": 450001,
+    "authorName": "Humbertho Ryan",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Humbertho Ryan",
+    "createdAt": 1780094442121
   }
 ]

@@ -48,7 +48,7 @@
     "description": "Conforme conversamos e já estamos vindo desde ano passado com nossos computadores apresentando vários problemas de lentidão, travamento de aplicativos (no caso Excel quando abre 2 planilhas junto, trava tudo, levando tempo de demanda alta para execução de tarefas), o computador do DP por vezes desliga sozinho quando abre mais de 1 planilha junto,  O do RH essa semana saiu fora do ar a tela, ficando sem visualização. E o teclado do meu PC (RH) está com problemas na barra de espaço.\n \nPara isso solicitamos que verifique a possibilidade de troca dos mesmos.   ",
     "category": "Outro",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 570012,
     "createdByName": "Francielle Vieira Schmitz Bueno",
@@ -60,7 +60,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1770986731983,
-    "updatedAt": 1779297107169
+    "updatedAt": 1779969615614
   },
   {
     "id": 210023,
@@ -69,7 +69,7 @@
     "description": "Solicitamos a troca do Nobreak do computador do DP, pelo que esta aqui no computador  que era do administrativo, pois esse do DP não tem margem de tempo em queda de eenrgia",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 570012,
     "createdByName": "Francielle Vieira Schmitz Bueno",
@@ -81,7 +81,7 @@
     "lastRespondentName": null,
     "order": 12,
     "createdAt": 1770988191012,
-    "updatedAt": 1779297120593
+    "updatedAt": 1779969615579
   },
   {
     "id": 300049,
@@ -321,7 +321,7 @@
     "description": "Os novos logins do infarma, dos últimos colaboradores que entraram na empresa, estão com erro. Ao fechar o pedido, não aparece o login automaticamente pra pessoa digitar. Ele tem que ficar digitando manual e na hora de faturar, isso causa um travamento no faturamento, pois não aparece como na imagem anexada. tem que digita o separador e o faturador têm que digitar manualmente, assim travando tudo e demorando e atrasando o faturamento. E ao fecha pedido conferente não aparece o codigo",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 540002,
     "createdByName": "ADHARA",
@@ -333,7 +333,7 @@
     "lastRespondentName": null,
     "order": 2,
     "createdAt": 1772054179101,
-    "updatedAt": 1779297132105
+    "updatedAt": 1779969615533
   },
   {
     "id": 810001,
@@ -615,7 +615,7 @@
     "description": "Bom dia!\nInstalei o novo pc recebido, porém estou sem acesso às pastas.\npor gentileza preciso de configuração: CONFIGURAÇÃO DA IMPRESSORA/SCANNER, LIBERAÇÃO DE PASTAS, CONFIGURAÇÃO DE INTERNET.\nGrata,",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 720001,
     "createdByName": "VERIDIANA",
@@ -627,7 +627,7 @@
     "lastRespondentName": "Carlos TI",
     "order": 0,
     "createdAt": 1773751939797,
-    "updatedAt": 1779297145251
+    "updatedAt": 1779969615498
   },
   {
     "id": 1170001,
@@ -1917,19 +1917,19 @@
     "description": "Bom dia Meninos,\nPrecisamos que seja criado um operador e digitador para o setor de devolução de sc. Esse codigo é utilizado na emissão das NFs de cobrança de transportadora.\n\nColaboradora Livia Maria \nColaboradora Beatriz Freitas",
     "category": "Acesso",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 240039,
     "createdByName": "Monique",
     "assignedToId": 1,
     "assignedToName": "Daniel Machado",
-    "waitingForDepartment": "Logistica",
-    "lastRespondentRole": "admin",
-    "lastRespondentId": 1,
-    "lastRespondentName": "Daniel Machado",
+    "waitingForDepartment": "Suporte/TI",
+    "lastRespondentRole": "user",
+    "lastRespondentId": 240039,
+    "lastRespondentName": "Monique",
     "order": 0,
     "createdAt": 1778847621602,
-    "updatedAt": 1779297041381
+    "updatedAt": 1779912498190
   },
   {
     "id": 2250001,
@@ -2001,7 +2001,7 @@
     "description": "O PC parou de funcionar precisando ser verificado.",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -2013,7 +2013,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1779111544468,
-    "updatedAt": 1779373035282
+    "updatedAt": 1780056013098
   },
   {
     "id": 2340001,
@@ -2043,7 +2043,7 @@
     "description": "Ajuda para trocar os monitores, fios, e afins para a troca de mesa.",
     "category": "Outro",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 480002,
     "createdByName": "Bárbara Costa",
@@ -2055,7 +2055,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1779214462204,
-    "updatedAt": 1779285026194
+    "updatedAt": 1779969615453
   },
   {
     "id": 2430001,
@@ -2064,7 +2064,7 @@
     "description": "Temos dois PCs no setor de conferência que desligam sozinhos.",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -2076,7 +2076,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1779297746295,
-    "updatedAt": 1779395395090
+    "updatedAt": 1780056013060
   },
   {
     "id": 2460005,
@@ -2085,7 +2085,7 @@
     "description": "liberar ocorrencias no modulo contas a receber",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90005,
     "createdById": 1620013,
     "createdByName": "Cris",
@@ -2097,7 +2097,7 @@
     "lastRespondentName": "Daniel Machado",
     "order": 0,
     "createdAt": 1779388432870,
-    "updatedAt": 1779390106997
+    "updatedAt": 1780056013003
   },
   {
     "id": 2490001,
@@ -2127,7 +2127,7 @@
     "description": "Bom dia, solicito a troca de mesa, conforme autorizado pela Leise.",
     "category": "Técnico",
     "priority": "Baixa",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 1650001,
     "createdByName": "Keuriane Braga da Silva ",
@@ -2139,7 +2139,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1779707852103,
-    "updatedAt": 1779718398282
+    "updatedAt": 1780079678933
   },
   {
     "id": 2610001,
@@ -2169,10 +2169,52 @@
     "description": "Consegue reprocessar um pedido de ontem, do cliente 53420",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Novos",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 17,
     "createdById": 690001,
     "createdByName": "Caroline Borges batista",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1779829007166,
+    "updatedAt": 1779881173960
+  },
+  {
+    "id": 2760001,
+    "ticketId": "bilhete_2670010",
+    "title": "Notebook",
+    "description": "Boa tard,\n\nGentileza verificar minha segunda tela, não esta ligando.",
+    "category": "Técnico",
+    "priority": "Média",
+    "status": "Resolvido / Aguardando Validação",
+    "departmentId": 17,
+    "createdById": 240039,
+    "createdByName": "Monique",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1779912545362,
+    "updatedAt": 1779912966892
+  },
+  {
+    "id": 2850001,
+    "ticketId": "bilhete_2760002",
+    "title": "Troca de mesa 2",
+    "description": "Troca de mesa, autorizado pela Leise.",
+    "category": "Funcionalidade",
+    "priority": "Baixa",
+    "status": "Novos",
+    "departmentId": 20,
+    "createdById": 1650001,
+    "createdByName": "Keuriane Braga da Silva ",
     "assignedToId": null,
     "assignedToName": null,
     "waitingForDepartment": null,
@@ -2180,7 +2222,28 @@
     "lastRespondentId": null,
     "lastRespondentName": null,
     "order": 0,
-    "createdAt": 1779829007166,
-    "updatedAt": 1779829007166
+    "createdAt": 1780079818319,
+    "updatedAt": 1780079818319
+  },
+  {
+    "id": 2880001,
+    "ticketId": "bilhete_2850002",
+    "title": "Digitalização Impressora",
+    "description": "Boa noite!\nTentei fazer uma digitalização plei aplicativo da impressora e apareceu esse erro. Como prosseguir?",
+    "category": "Técnico",
+    "priority": "Média",
+    "status": "Novos",
+    "departmentId": 17,
+    "createdById": 450001,
+    "createdByName": "Humbertho Ryan",
+    "assignedToId": null,
+    "assignedToName": null,
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1780094442121,
+    "updatedAt": 1780094442121
   }
 ]

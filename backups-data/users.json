@@ -2,7 +2,7 @@
   {
     "id": 1,
     "openId": "PtNcW8Ph6ZNx6BDomoWjgd",
-    "name": "Daniel Machado",
+    "name": "Daniel R Machado",
     "email": "tecnologia@neosuldistribuidora.com.br",
     "passwordHash": "$2b$10$f0z5uenLKgsVVusbpC/.teN1BoZSMOi3MKwnZacVOqYpzEbiXlSvq",
     "loginMethod": "oauth",
@@ -27,8 +27,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-05-26T20:57:45.000Z",
-    "lastSignedIn": "2026-05-26T20:57:45.000Z"
+    "updatedAt": "2026-05-28T14:50:56.000Z",
+    "lastSignedIn": "2026-05-28T14:50:57.000Z"
   },
   {
     "id": 23,
@@ -191,8 +191,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-02-06T11:27:15.000Z",
-    "updatedAt": "2026-05-26T19:18:03.000Z",
-    "lastSignedIn": "2026-05-26T19:18:03.000Z"
+    "updatedAt": "2026-05-28T14:37:52.000Z",
+    "lastSignedIn": "2026-05-28T14:37:52.000Z"
   },
   {
     "id": 300002,

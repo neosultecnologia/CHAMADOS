@@ -5976,18 +5976,6 @@
     "createdAt": 1778769705407
   },
   {
-    "id": 2130003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Márcia Freitas abriu um novo chamado: \"Troca de Teclado suporte - Tiago\"",
-    "referenceId": 2160001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/2160001",
-    "isRead": true,
-    "createdAt": 1778769705425
-  },
-  {
     "id": 2130004,
     "userId": 60001,
     "type": "ticket_created",
@@ -6046,18 +6034,6 @@
     "actionUrl": "/suporte/2160002",
     "isRead": false,
     "createdAt": 1778770467558
-  },
-  {
-    "id": 2130009,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Mauricio Ramos abriu um novo chamado: \"PC DAS FRALDAS NÃO LIGA\"",
-    "referenceId": 2160002,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/2160002",
-    "isRead": true,
-    "createdAt": 1778770467575
   },
   {
     "id": 2130010,
@@ -6132,18 +6108,6 @@
     "createdAt": 1778847621675
   },
   {
-    "id": 2190003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Monique abriu um novo chamado: \"Operador/ Digitador Devolução SC\"",
-    "referenceId": 2190001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/2190001",
-    "isRead": true,
-    "createdAt": 1778847621694
-  },
-  {
     "id": 2190004,
     "userId": 60001,
     "type": "ticket_created",
@@ -6202,18 +6166,6 @@
     "actionUrl": "/suporte/2250001",
     "isRead": true,
     "createdAt": 1778868811647
-  },
-  {
-    "id": 2250004,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Mauricio Ramos abriu um novo chamado: \"Precisamos de mais um monitor para o recebimento\"",
-    "referenceId": 2250001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/2250001",
-    "isRead": true,
-    "createdAt": 1778868811664
   },
   {
     "id": 2250005,
@@ -6276,18 +6228,6 @@
     "createdAt": 1779107711000
   },
   {
-    "id": 2280004,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Maria Eduarda Chagas abriu um novo chamado: \"Instalar Teams\"",
-    "referenceId": 2280005,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/2280005",
-    "isRead": true,
-    "createdAt": 1779107711018
-  },
-  {
     "id": 2280005,
     "userId": 300001,
     "type": "ticket_assigned",
@@ -6348,18 +6288,6 @@
     "createdAt": 1779111449980
   },
   {
-    "id": 2310004,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Mauricio Ramos abriu um novo chamado: \"Substituir o pc da devolução\"",
-    "referenceId": 2310005,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/2310005",
-    "isRead": true,
-    "createdAt": 1779111450002
-  },
-  {
     "id": 2310005,
     "userId": 23,
     "type": "ticket_created",
@@ -6394,18 +6322,6 @@
     "actionUrl": "/suporte/2310006",
     "isRead": true,
     "createdAt": 1779111544545
-  },
-  {
-    "id": 2310008,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Mauricio Ramos abriu um novo chamado: \"Concerto do PC do recebimento (lado de fora)\"",
-    "referenceId": 2310006,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/2310006",
-    "isRead": true,
-    "createdAt": 1779111544561
   },
   {
     "id": 2310009,
@@ -6504,18 +6420,6 @@
     "createdAt": 1779125739053
   },
   {
-    "id": 2340004,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Beatriz Sousa  abriu um novo chamado: \"Cadastro de login infarma\"",
-    "referenceId": 2340001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/2340001",
-    "isRead": true,
-    "createdAt": 1779125739069
-  },
-  {
     "id": 2370001,
     "userId": 300001,
     "type": "ticket_assigned",
@@ -6588,18 +6492,6 @@
     "createdAt": 1779214462272
   },
   {
-    "id": 2400003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Bárbara Costa abriu um novo chamado: \"Mudança de Mesa\"",
-    "referenceId": 2400001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/2400001",
-    "isRead": true,
-    "createdAt": 1779214462290
-  },
-  {
     "id": 2400004,
     "userId": 60001,
     "type": "ticket_created",
@@ -6646,30 +6538,6 @@
     "actionUrl": "/suporte/2190001",
     "isRead": false,
     "createdAt": 1779295715827
-  },
-  {
-    "id": 2460002,
-    "userId": 1,
-    "type": "ticket_assigned",
-    "title": "Novo Chamado Atribuído",
-    "message": "Você foi atribuído ao chamado: \"Operador/ Digitador Devolução SC\"",
-    "referenceId": 2190001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/2190001",
-    "isRead": true,
-    "createdAt": 1779295730941
-  },
-  {
-    "id": 2460003,
-    "userId": 1,
-    "type": "ticket_assigned",
-    "title": "Novo Chamado Atribuído",
-    "message": "Você foi atribuído ao chamado: \"Operador/ Digitador Devolução SC\"",
-    "referenceId": 2190001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/2190001",
-    "isRead": true,
-    "createdAt": 1779295979950
   },
   {
     "id": 2490001,
@@ -6768,18 +6636,6 @@
     "createdAt": 1779297746373
   },
   {
-    "id": 2520003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Mauricio Ramos abriu um novo chamado: \"2 Pcs no setor de conferencia que desligam sozinhos \"",
-    "referenceId": 2430001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/2430001",
-    "isRead": true,
-    "createdAt": 1779297746387
-  },
-  {
     "id": 2520004,
     "userId": 60001,
     "type": "ticket_created",
@@ -6864,18 +6720,6 @@
     "createdAt": 1779388432956
   },
   {
-    "id": 2610004,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Cris abriu um novo chamado: \"Liberação de acesso infarma\"",
-    "referenceId": 2460005,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/2460005",
-    "isRead": true,
-    "createdAt": 1779388432973
-  },
-  {
     "id": 2610005,
     "userId": 1620013,
     "type": "ticket_status_changed",
@@ -6912,18 +6756,6 @@
     "createdAt": 1779390105243
   },
   {
-    "id": 2610008,
-    "userId": 1,
-    "type": "ticket_assigned",
-    "title": "Novo Chamado Atribuído",
-    "message": "Você foi atribuído ao chamado: \"Liberação de acesso infarma\"",
-    "referenceId": 2460005,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/2460005",
-    "isRead": true,
-    "createdAt": 1779390106977
-  },
-  {
     "id": 2640001,
     "userId": 540001,
     "type": "ticket_status_changed",
@@ -6958,18 +6790,6 @@
     "actionUrl": "/suporte/2490001",
     "isRead": false,
     "createdAt": 1779395586015
-  },
-  {
-    "id": 2640004,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Beatriz Sousa  abriu um novo chamado: \"Acesso para excluir f11\"",
-    "referenceId": 2490001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/2490001",
-    "isRead": true,
-    "createdAt": 1779395586033
   },
   {
     "id": 2640005,
@@ -7032,18 +6852,6 @@
     "createdAt": 1779707852179
   },
   {
-    "id": 2670003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Keuriane Braga da Silva  abriu um novo chamado: \"Troca de mesa \"",
-    "referenceId": 2580001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/2580001",
-    "isRead": true,
-    "createdAt": 1779707852195
-  },
-  {
     "id": 2670004,
     "userId": 60001,
     "type": "ticket_created",
@@ -7102,18 +6910,6 @@
     "actionUrl": "/suporte/2610001",
     "isRead": false,
     "createdAt": 1779729492912
-  },
-  {
-    "id": 2730003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Mauricio Ramos abriu um novo chamado: \"Liberar acesso as cameras\"",
-    "referenceId": 2610001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/2610001",
-    "isRead": true,
-    "createdAt": 1779729492929
   },
   {
     "id": 2730004,
@@ -7212,18 +7008,6 @@
     "createdAt": 1779829007261
   },
   {
-    "id": 2820003,
-    "userId": 1,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Caroline Borges batista abriu um novo chamado: \"reprocessar um pedido\"",
-    "referenceId": 2670009,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/2670009",
-    "isRead": true,
-    "createdAt": 1779829007281
-  },
-  {
     "id": 2820004,
     "userId": 60001,
     "type": "ticket_created",
@@ -7232,7 +7016,187 @@
     "referenceId": 2670009,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2670009",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1779829007301
+  },
+  {
+    "id": 2850001,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"reprocessar um pedido\"",
+    "referenceId": 2670009,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2670009",
+    "isRead": false,
+    "createdAt": 1779881172380
+  },
+  {
+    "id": 2850002,
+    "userId": 690001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 2670009,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2670009",
+    "isRead": false,
+    "createdAt": 1779881173944
+  },
+  {
+    "id": 2880002,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Monique abriu um novo chamado: \"Notebook \"",
+    "referenceId": 2760001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2760001",
+    "isRead": false,
+    "createdAt": 1779912545420
+  },
+  {
+    "id": 2880003,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Monique abriu um novo chamado: \"Notebook \"",
+    "referenceId": 2760001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2760001",
+    "isRead": false,
+    "createdAt": 1779912545440
+  },
+  {
+    "id": 2880004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Monique abriu um novo chamado: \"Notebook \"",
+    "referenceId": 2760001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2760001",
+    "isRead": true,
+    "createdAt": 1779912545458
+  },
+  {
+    "id": 2910001,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Notebook\"",
+    "referenceId": 2760001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2760001",
+    "isRead": false,
+    "createdAt": 1779912965729
+  },
+  {
+    "id": 2910002,
+    "userId": 240039,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 2760001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2760001",
+    "isRead": false,
+    "createdAt": 1779912966874
+  },
+  {
+    "id": 2940001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Keuriane Braga da Silva  abriu um novo chamado: \"Troca de mesa 2\"",
+    "referenceId": 2850001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2850001",
+    "isRead": false,
+    "createdAt": 1780079818368
+  },
+  {
+    "id": 2940002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Keuriane Braga da Silva  abriu um novo chamado: \"Troca de mesa 2\"",
+    "referenceId": 2850001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2850001",
+    "isRead": false,
+    "createdAt": 1780079818393
+  },
+  {
+    "id": 2940003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Keuriane Braga da Silva  abriu um novo chamado: \"Troca de mesa 2\"",
+    "referenceId": 2850001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2850001",
+    "isRead": false,
+    "createdAt": 1780079818409
+  },
+  {
+    "id": 2940004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Keuriane Braga da Silva  abriu um novo chamado: \"Troca de mesa 2\"",
+    "referenceId": 2850001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2850001",
+    "isRead": true,
+    "createdAt": 1780079818426
+  },
+  {
+    "id": 2970001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Humbertho Ryan abriu um novo chamado: \"Digitalização Impressora\"",
+    "referenceId": 2880001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2880001",
+    "isRead": false,
+    "createdAt": 1780094442177
+  },
+  {
+    "id": 2970002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Humbertho Ryan abriu um novo chamado: \"Digitalização Impressora\"",
+    "referenceId": 2880001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2880001",
+    "isRead": false,
+    "createdAt": 1780094442201
+  },
+  {
+    "id": 2970003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Humbertho Ryan abriu um novo chamado: \"Digitalização Impressora\"",
+    "referenceId": 2880001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2880001",
+    "isRead": false,
+    "createdAt": 1780094442216
+  },
+  {
+    "id": 2970004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Humbertho Ryan abriu um novo chamado: \"Digitalização Impressora\"",
+    "referenceId": 2880001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2880001",
+    "isRead": false,
+    "createdAt": 1780094442230
   }
 ]

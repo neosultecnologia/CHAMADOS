@@ -346,5 +346,17 @@
     "uploadedById": 1350001,
     "uploadedByName": "Mariana Santos Liska",
     "createdAt": 1777986477896
+  },
+  {
+    "id": 510001,
+    "ticketId": 2880001,
+    "fileName": "Screenshot_2.png",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/2880001/1780094442799-zdqy07-Screenshot_2.png",
+    "fileKey": "tickets/2880001/1780094442799-zdqy07-Screenshot_2.png",
+    "mimeType": "image/png",
+    "fileSize": 57967,
+    "uploadedById": 450001,
+    "uploadedByName": "Humbertho Ryan",
+    "createdAt": 1780094443169
   }
 ]

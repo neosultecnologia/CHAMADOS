@@ -494,5 +494,13 @@
     "authorName": "Daniel Machado",
     "content": "Olá Cris, perfil liberado para visualização das ocorrências.",
     "createdAt": 1779390102045
+  },
+  {
+    "id": 1200001,
+    "ticketId": 2190001,
+    "authorId": 240039,
+    "authorName": "Monique",
+    "content": "Muito obrigado pelo retorno.",
+    "createdAt": 1779912462139
   }
 ]
