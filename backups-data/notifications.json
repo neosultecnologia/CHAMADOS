@@ -7136,7 +7136,7 @@
     "referenceId": 2850001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2850001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1780079818409
   },
   {
@@ -7184,7 +7184,7 @@
     "referenceId": 2880001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2880001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1780094442216
   },
   {
@@ -7196,7 +7196,55 @@
     "referenceId": 2880001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2880001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1780094442230
+  },
+  {
+    "id": 3000001,
+    "userId": 1290001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1890014,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1890014",
+    "isRead": false,
+    "createdAt": 1780318077339
+  },
+  {
+    "id": 3000002,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Troca de mesa 2\"",
+    "referenceId": 2850001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2850001",
+    "isRead": false,
+    "createdAt": 1780318142283
+  },
+  {
+    "id": 3000003,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Digitalização Impressora\"",
+    "referenceId": 2880001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2880001",
+    "isRead": false,
+    "createdAt": 1780318256653
+  },
+  {
+    "id": 3030001,
+    "userId": 450001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 2880001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2880001",
+    "isRead": false,
+    "createdAt": 1780330034138
   }
 ]

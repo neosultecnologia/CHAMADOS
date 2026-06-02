@@ -6510,5 +6510,49 @@
     "newValue": null,
     "description": "Chamado criado por Humbertho Ryan",
     "createdAt": 1780094442121
+  },
+  {
+    "id": 3900001,
+    "ticketId": 1890014,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1780318077317
+  },
+  {
+    "id": 3900002,
+    "ticketId": 2850001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1780318142266
+  },
+  {
+    "id": 3900003,
+    "ticketId": 2880001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1780318256637
+  },
+  {
+    "id": 3930001,
+    "ticketId": 2880001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1780330034118
   }
 ]
