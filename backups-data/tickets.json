@@ -2245,5 +2245,26 @@
     "order": 0,
     "createdAt": 1780094442121,
     "updatedAt": 1780330034159
+  },
+  {
+    "id": 2940001,
+    "ticketId": "bilhete_2880002",
+    "title": "Acesso a chamados antigos - Softdesk",
+    "description": "Solicito acesso aos chamados do Softdesk, pois preciso consultar chamados antigos que já foram finalizados. \n\nVanessa Reis - SAC\nAnydesk: 866 440 336",
+    "category": "Acesso",
+    "priority": "Média",
+    "status": "Novos",
+    "departmentId": 90004,
+    "createdById": 1050001,
+    "createdByName": "Kerolaine Morgantti da Cruz",
+    "assignedToId": null,
+    "assignedToName": null,
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1780419375509,
+    "updatedAt": 1780419375509
   }
 ]

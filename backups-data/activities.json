@@ -6554,5 +6554,16 @@
     "newValue": "Resolvido / Aguardando Validação",
     "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
     "createdAt": 1780330034118
+  },
+  {
+    "id": 3960001,
+    "ticketId": 2940001,
+    "type": "created",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Kerolaine Morgantti da Cruz",
+    "createdAt": 1780419375509
   }
 ]

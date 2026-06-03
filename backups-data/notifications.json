@@ -7246,5 +7246,53 @@
     "actionUrl": "/suporte/2880001",
     "isRead": false,
     "createdAt": 1780330034138
+  },
+  {
+    "id": 3060001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Acesso a chamados antigos - Softdesk\"",
+    "referenceId": 2940001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2940001",
+    "isRead": false,
+    "createdAt": 1780419375564
+  },
+  {
+    "id": 3060002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Acesso a chamados antigos - Softdesk\"",
+    "referenceId": 2940001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2940001",
+    "isRead": false,
+    "createdAt": 1780419375585
+  },
+  {
+    "id": 3060003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Acesso a chamados antigos - Softdesk\"",
+    "referenceId": 2940001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2940001",
+    "isRead": false,
+    "createdAt": 1780419375603
+  },
+  {
+    "id": 3060004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Acesso a chamados antigos - Softdesk\"",
+    "referenceId": 2940001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2940001",
+    "isRead": true,
+    "createdAt": 1780419375620
   }
 ]
