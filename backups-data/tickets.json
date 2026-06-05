@@ -1392,7 +1392,7 @@
     "description": "Boa tarde, \nPor favor, liberação da pasta de no dados: 31. Trade, para ajudar nos acessos GP.\nLeise esta ciente!",
     "category": "Acesso",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90006,
     "createdById": 630282,
     "createdByName": "Márcia Freitas",
@@ -1404,7 +1404,7 @@
     "lastRespondentName": "Márcia Freitas",
     "order": 0,
     "createdAt": 1776111856490,
-    "updatedAt": 1779825964664
+    "updatedAt": 1780488084466
   },
   {
     "id": 1830003,
@@ -1707,7 +1707,7 @@
     "description": "O PC que utilizamos na ilha, está com problemas de desconectar a internet caindo o sistema inúmeras vez",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -1719,7 +1719,7 @@
     "lastRespondentName": "Carlos TI",
     "order": 0,
     "createdAt": 1777923937180,
-    "updatedAt": 1779825946285
+    "updatedAt": 1780488084431
   },
   {
     "id": 2010002,
@@ -2148,7 +2148,7 @@
     "description": "Precisamos que as câmeras estejam liberadas no PC da Adhara do faturamento.",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -2160,7 +2160,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1779729492813,
-    "updatedAt": 1779823102798
+    "updatedAt": 1780488084394
   },
   {
     "id": 2670009,
@@ -2169,7 +2169,7 @@
     "description": "Consegue reprocessar um pedido de ontem, do cliente 53420",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 690001,
     "createdByName": "Caroline Borges batista",
@@ -2181,7 +2181,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1779829007166,
-    "updatedAt": 1779881173960
+    "updatedAt": 1780488084351
   },
   {
     "id": 2760001,
@@ -2190,7 +2190,7 @@
     "description": "Boa tard,\n\nGentileza verificar minha segunda tela, não esta ligando.",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 240039,
     "createdByName": "Monique",
@@ -2202,7 +2202,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1779912545362,
-    "updatedAt": 1779912966892
+    "updatedAt": 1780574501493
   },
   {
     "id": 2850001,
@@ -2266,5 +2266,26 @@
     "order": 0,
     "createdAt": 1780419375509,
     "updatedAt": 1780419375509
+  },
+  {
+    "id": 3000005,
+    "ticketId": "bilhete_2940002",
+    "title": "PC da conferência não liga",
+    "description": "PC da conferencia não liga , dá um sinal mas não funciona.",
+    "category": "Técnico",
+    "priority": "Crítica",
+    "status": "Novos",
+    "departmentId": 17,
+    "createdById": 540001,
+    "createdByName": "Mauricio Ramos",
+    "assignedToId": null,
+    "assignedToName": null,
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1780493089318,
+    "updatedAt": 1780493089318
   }
 ]

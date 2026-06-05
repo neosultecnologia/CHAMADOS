@@ -169,5 +169,14 @@
     "content": "Layout escolhido foi  (layoutbigpadraoprecoFTP) para alem disso foi realizado uma adaptação para utilizar o PHARMALINK2.0",
     "mentions": null,
     "createdAt": 1776686077841
+  },
+  {
+    "id": 480001,
+    "projectId": 330002,
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "content": "@Teo o setor de Logística precisa realizar o cadastro das dimensões de caixas do Flow Rack no Infarma. Alguns campos já estão preenchidos, mas a maioria está em branco. Com essas informações a segunda versão da automação será lançada no nosso portal, com controle de quantidade de itens por endereço.",
+    "mentions": "[90001]",
+    "createdAt": 1780518852618
   }
 ]

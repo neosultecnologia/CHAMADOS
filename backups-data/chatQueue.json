@@ -302,5 +302,53 @@
     "enteredAt": 1777899079393,
     "acceptedAt": null,
     "completedAt": null
+  },
+  {
+    "id": 240001,
+    "userId": 60001,
+    "userName": "Gabriel Bino",
+    "conversationId": 150001,
+    "ticketId": null,
+    "position": 1,
+    "status": "completed",
+    "assignedOperatorId": 1,
+    "assignedOperatorName": "Daniel R Machado",
+    "initialMessage": null,
+    "priority": "normal",
+    "enteredAt": 1780516098603,
+    "acceptedAt": 1780516140814,
+    "completedAt": 1780516316272
+  },
+  {
+    "id": 240002,
+    "userId": 300001,
+    "userName": "Carlos TI",
+    "conversationId": null,
+    "ticketId": null,
+    "position": 2,
+    "status": "cancelled",
+    "assignedOperatorId": null,
+    "assignedOperatorName": null,
+    "initialMessage": null,
+    "priority": "normal",
+    "enteredAt": 1780516119590,
+    "acceptedAt": null,
+    "completedAt": null
+  },
+  {
+    "id": 240003,
+    "userId": 300001,
+    "userName": "Carlos TI",
+    "conversationId": null,
+    "ticketId": null,
+    "position": 1,
+    "status": "cancelled",
+    "assignedOperatorId": null,
+    "assignedOperatorName": null,
+    "initialMessage": null,
+    "priority": "normal",
+    "enteredAt": 1780517270180,
+    "acceptedAt": null,
+    "completedAt": null
   }
 ]

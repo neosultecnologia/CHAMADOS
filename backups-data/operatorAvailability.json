@@ -2,14 +2,14 @@
   {
     "id": 1,
     "operatorId": 1,
-    "operatorName": "Daniel Machado",
+    "operatorName": "Daniel R Machado",
     "isAvailableForChat": false,
     "status": "offline",
     "maxConcurrentChats": 3,
     "currentActiveChats": 0,
-    "lastActiveAt": 1779363561868,
+    "lastActiveAt": 1780517205528,
     "statusMessage": null,
-    "updatedAt": 1779363561868
+    "updatedAt": 1780517205528
   },
   {
     "id": 30001,
@@ -22,5 +22,17 @@
     "lastActiveAt": 1770643709837,
     "statusMessage": null,
     "updatedAt": 1770643709837
+  },
+  {
+    "id": 60001,
+    "operatorId": 300001,
+    "operatorName": "Carlos TI",
+    "isAvailableForChat": false,
+    "status": "offline",
+    "maxConcurrentChats": 3,
+    "currentActiveChats": 0,
+    "lastActiveAt": 1780516162273,
+    "statusMessage": null,
+    "updatedAt": 1780516162273
   }
 ]

@@ -27,8 +27,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-06-02T20:36:40.000Z",
-    "lastSignedIn": "2026-06-02T20:36:40.000Z"
+    "updatedAt": "2026-06-03T20:52:58.000Z",
+    "lastSignedIn": "2026-06-03T20:52:58.000Z"
   },
   {
     "id": 23,
@@ -104,14 +104,57 @@
     "departmentId": 19,
     "groupId": 660001,
     "permissions": {
-      "almoxarifado": true,
-      "comercial": false,
-      "desenvolvimento": true,
-      "superestocados": true,
-      "suporte": true
+      "almoxarifado": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "comercial": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "contratos": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "desenvolvimento": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "gestao_negocios": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "repasses": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "superestocados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "suporte": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      }
     },
     "createdAt": "2026-02-04T13:17:56.000Z",
-    "updatedAt": "2026-05-08T20:58:55.000Z",
+    "updatedAt": "2026-06-03T13:40:29.000Z",
     "lastSignedIn": "2026-05-08T20:58:55.000Z"
   },
   {
@@ -191,8 +234,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-02-06T11:27:15.000Z",
-    "updatedAt": "2026-06-03T10:59:23.000Z",
-    "lastSignedIn": "2026-06-03T10:59:24.000Z"
+    "updatedAt": "2026-06-03T16:57:35.000Z",
+    "lastSignedIn": "2026-06-03T16:57:36.000Z"
   },
   {
     "id": 300002,

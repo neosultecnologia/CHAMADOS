@@ -6565,5 +6565,71 @@
     "newValue": null,
     "description": "Chamado criado por Kerolaine Morgantti da Cruz",
     "createdAt": 1780419375509
+  },
+  {
+    "id": 3990001,
+    "ticketId": 2670009,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1780488083630
+  },
+  {
+    "id": 3990002,
+    "ticketId": 2610001,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1780488083630
+  },
+  {
+    "id": 3990003,
+    "ticketId": 2010001,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1780488083630
+  },
+  {
+    "id": 3990004,
+    "ticketId": 1830002,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1780488083630
+  },
+  {
+    "id": 4020001,
+    "ticketId": 3000005,
+    "type": "created",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mauricio Ramos",
+    "createdAt": 1780493089318
+  },
+  {
+    "id": 4020002,
+    "ticketId": 2760001,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1780574501484
   }
 ]

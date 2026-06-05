@@ -186,12 +186,12 @@
     "projectId": 1170023,
     "title": "Inserir colunas na tabela",
     "description": "Inserir colunas: Data Última Compra e Última Transferência, ao lado de Fornecedor.",
-    "status": "Pendente",
+    "status": "Concluída",
     "priority": "Média",
     "assignedToId": null,
     "assignedToName": null,
     "dueDate": 1780444800000,
-    "completedAt": null,
+    "completedAt": 1780491459059,
     "createdById": 60001,
     "createdByName": "Gabriel Bino",
     "points": 0,
@@ -205,7 +205,7 @@
     "updatedById": 60001,
     "updatedByName": "Gabriel Bino",
     "createdAt": 1780321319848,
-    "updatedAt": 1780321319848
+    "updatedAt": 1780491459059
   },
   {
     "id": 180007,
@@ -264,12 +264,12 @@
     "projectId": 1170023,
     "title": "Aplicar cálculo de projeção de vendas",
     "description": "Inserir coluna com a projeção de venda do mês atual:\n\nCálculo da projeção:\n(vendas dentro do mês / quantidade de dias vendidos) * dias úteis do mês\n\nAtualizar campo diariamente com base nas informações de venda diária.",
-    "status": "Pendente",
+    "status": "Concluída",
     "priority": "Média",
     "assignedToId": null,
     "assignedToName": null,
     "dueDate": 1780444800000,
-    "completedAt": null,
+    "completedAt": 1780494238792,
     "createdById": 60001,
     "createdByName": "Gabriel Bino",
     "points": 0,
@@ -283,7 +283,7 @@
     "updatedById": 60001,
     "updatedByName": "Gabriel Bino",
     "createdAt": 1780321581418,
-    "updatedAt": 1780321581418
+    "updatedAt": 1780494238792
   },
   {
     "id": 180010,
@@ -394,12 +394,12 @@
     "projectId": 1170023,
     "title": "Inserir Coluna Preço de Venda Unitário",
     "description": "Coletar informações de preço mínimo de venda das tabelas 3. Inserir valores em uma nova coluna na tabela do painel.",
-    "status": "Pendente",
+    "status": "Concluída",
     "priority": "Média",
     "assignedToId": null,
     "assignedToName": null,
     "dueDate": 1780358400000,
-    "completedAt": null,
+    "completedAt": 1780491474496,
     "createdById": 60001,
     "createdByName": "Gabriel Bino",
     "points": 0,
@@ -413,7 +413,7 @@
     "updatedById": 60001,
     "updatedByName": "Gabriel Bino",
     "createdAt": 1780336174005,
-    "updatedAt": 1780336174005
+    "updatedAt": 1780491474496
   },
   {
     "id": 210002,
