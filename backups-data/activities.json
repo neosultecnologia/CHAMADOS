@@ -6631,5 +6631,27 @@
     "newValue": "Concluído",
     "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
     "createdAt": 1780574501484
+  },
+  {
+    "id": 4050001,
+    "ticketId": 3000005,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1780660766878
+  },
+  {
+    "id": 4050002,
+    "ticketId": 3000005,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1780660767394
   }
 ]

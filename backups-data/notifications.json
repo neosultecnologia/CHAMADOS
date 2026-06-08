@@ -5926,5 +5926,29 @@
     "actionUrl": "/suporte/3000005",
     "isRead": false,
     "createdAt": 1780493089388
+  },
+  {
+    "id": 3120001,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"PC da conferência não liga\"",
+    "referenceId": 3000005,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3000005",
+    "isRead": false,
+    "createdAt": 1780660766901
+  },
+  {
+    "id": 3120002,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 3000005,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3000005",
+    "isRead": false,
+    "createdAt": 1780660767416
   }
 ]

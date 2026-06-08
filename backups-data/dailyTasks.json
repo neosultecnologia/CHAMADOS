@@ -570,5 +570,31 @@
     "updatedByName": "Gabriel Bino",
     "createdAt": 1780340003630,
     "updatedAt": 1780340005533
+  },
+  {
+    "id": 240001,
+    "projectId": 1170023,
+    "title": "Inserir Detalhes da Campanha",
+    "description": "Criar campos de Descrição, duração e observação no momento da criar a Campanha. Adicionar funcionalidade de alterar os detalhes da Campanha e gerar histórico das campanhas",
+    "status": "Concluída",
+    "priority": "Média",
+    "assignedToId": null,
+    "assignedToName": null,
+    "dueDate": 1780704000000,
+    "completedAt": 1780687755606,
+    "createdById": 60001,
+    "createdByName": "Gabriel Bino",
+    "points": 0,
+    "difficulty": "Normal",
+    "assignedToIds": [],
+    "tags": [],
+    "isRecurring": false,
+    "recurrencePattern": null,
+    "templateId": null,
+    "order": 0,
+    "updatedById": 60001,
+    "updatedByName": "Gabriel Bino",
+    "createdAt": 1780687752235,
+    "updatedAt": 1780687755606
   }
 ]

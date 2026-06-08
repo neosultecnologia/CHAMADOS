@@ -2274,18 +2274,18 @@
     "description": "PC da conferencia não liga , dá um sinal mas não funciona.",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Novos",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
-    "assignedToId": null,
-    "assignedToName": null,
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
     "waitingForDepartment": null,
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1780493089318,
-    "updatedAt": 1780493089318
+    "updatedAt": 1780660767435
   }
 ]
