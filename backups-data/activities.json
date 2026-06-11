@@ -6653,5 +6653,71 @@
     "newValue": "Resolvido / Aguardando Validação",
     "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
     "createdAt": 1780660767394
+  },
+  {
+    "id": 4080001,
+    "ticketId": 2850001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1780946716822
+  },
+  {
+    "id": 4110001,
+    "ticketId": 3000005,
+    "type": "status_change",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1781006202100
+  },
+  {
+    "id": 4110002,
+    "ticketId": 2880001,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1781006472048
+  },
+  {
+    "id": 4110003,
+    "ticketId": 1890014,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1781006472048
+  },
+  {
+    "id": 4110004,
+    "ticketId": 3120001,
+    "type": "created",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mauricio Ramos",
+    "createdAt": 1781006537217
+  },
+  {
+    "id": 4140001,
+    "ticketId": 3150001,
+    "type": "created",
+    "authorId": 570012,
+    "authorName": "Francielle Vieira Schmitz Bueno",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Francielle Vieira Schmitz Bueno",
+    "createdAt": 1781093596743
   }
 ]

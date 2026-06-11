@@ -1564,23 +1564,6 @@
     "updatedAt": 1780407214309
   },
   {
-    "id": 2220007,
-    "projectId": 1170023,
-    "name": "Painel de Estoque",
-    "description": "Incluir estoque geral dos estabelecimentos; exibir itens com validade curta abaixo de 12 meses caso o estoque não projete vender em 5 meses. Alertas visuais para o item não entrar na lista de 180 dias: 10 a 12 meses alerta de manutenção; 10 meses atenção; 8 risco; 6 alto risco; 4 lista bonificável; 2 descarte. Contar estoque em dias.",
-    "status": "Pendente",
-    "order": 2,
-    "startDate": 1780974000000,
-    "endDate": 1781492400000,
-    "completedAt": null,
-    "createdById": 60001,
-    "createdByName": "Gabriel Bino",
-    "updatedById": 60001,
-    "updatedByName": "Gabriel Bino",
-    "createdAt": 1780489968734,
-    "updatedAt": 1780489968734
-  },
-  {
     "id": 2250012,
     "projectId": 780001,
     "name": "Criar automação via WhatsApp",
@@ -1613,5 +1596,39 @@
     "updatedByName": "Gabriel Bino",
     "createdAt": 1780509458983,
     "updatedAt": 1780509458983
+  },
+  {
+    "id": 2370001,
+    "projectId": 330002,
+    "name": "Cadastro da cubagem dos endereços",
+    "description": "Setor de Logística deve realizar o cadastro da cubagem dos endereços do Flow Rack no Infarma.",
+    "status": "Pendente",
+    "order": 6,
+    "startDate": null,
+    "endDate": null,
+    "completedAt": null,
+    "createdById": 60001,
+    "createdByName": "Gabriel Bino",
+    "updatedById": 60001,
+    "updatedByName": "Gabriel Bino",
+    "createdAt": 1781010249508,
+    "updatedAt": 1781010249508
+  },
+  {
+    "id": 2400001,
+    "projectId": 1470001,
+    "name": "Trazer Total de Compras",
+    "description": "Exibir valor total de compras por contrato",
+    "status": "Pendente",
+    "order": 3,
+    "startDate": 1780974000000,
+    "endDate": 1782183600000,
+    "completedAt": null,
+    "createdById": 60001,
+    "createdByName": "Gabriel Bino",
+    "updatedById": 60001,
+    "updatedByName": "Gabriel Bino",
+    "createdAt": 1781031619007,
+    "updatedAt": 1781031619007
   }
 ]

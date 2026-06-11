@@ -5950,5 +5950,89 @@
     "actionUrl": "/suporte/3000005",
     "isRead": false,
     "createdAt": 1780660767416
+  },
+  {
+    "id": 3150001,
+    "userId": 1650001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 2850001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2850001",
+    "isRead": false,
+    "createdAt": 1780946716845
+  },
+  {
+    "id": 3180001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Solicitação de faturamento separado(fracionado x cx fechada) no recebimento\"",
+    "referenceId": 3120001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3120001",
+    "isRead": false,
+    "createdAt": 1781006537277
+  },
+  {
+    "id": 3180002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Solicitação de faturamento separado(fracionado x cx fechada) no recebimento\"",
+    "referenceId": 3120001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3120001",
+    "isRead": false,
+    "createdAt": 1781006537299
+  },
+  {
+    "id": 3180003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Solicitação de faturamento separado(fracionado x cx fechada) no recebimento\"",
+    "referenceId": 3120001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3120001",
+    "isRead": false,
+    "createdAt": 1781006537316
+  },
+  {
+    "id": 3210001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Francielle Vieira Schmitz Bueno abriu um novo chamado: \"AUMENTAR MEMORIA RAM\"",
+    "referenceId": 3150001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3150001",
+    "isRead": false,
+    "createdAt": 1781093596807
+  },
+  {
+    "id": 3210002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Francielle Vieira Schmitz Bueno abriu um novo chamado: \"AUMENTAR MEMORIA RAM\"",
+    "referenceId": 3150001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3150001",
+    "isRead": false,
+    "createdAt": 1781093596827
+  },
+  {
+    "id": 3210003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Francielle Vieira Schmitz Bueno abriu um novo chamado: \"AUMENTAR MEMORIA RAM\"",
+    "referenceId": 3150001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3150001",
+    "isRead": false,
+    "createdAt": 1781093596843
   }
 ]

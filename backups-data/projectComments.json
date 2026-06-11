@@ -178,5 +178,14 @@
     "content": "@Teo o setor de Logística precisa realizar o cadastro das dimensões de caixas do Flow Rack no Infarma. Alguns campos já estão preenchidos, mas a maioria está em branco. Com essas informações a segunda versão da automação será lançada no nosso portal, com controle de quantidade de itens por endereço.",
     "mentions": "[90001]",
     "createdAt": 1780518852618
+  },
+  {
+    "id": 510001,
+    "projectId": 330002,
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "content": "@Teo , assim que o cadastro dos endereços estiverem atualizados no Infarma, o projeto avança para a etapa de desenvolvimento da nova versão com sugestão de mínimo e máximo. Vou acompanhar o progresso junto com o @Mauricio Ramos .",
+    "mentions": "[90001,540001]",
+    "createdAt": 1781010336968
   }
 ]
