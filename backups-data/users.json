@@ -27,8 +27,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-06-10T20:54:51.000Z",
-    "lastSignedIn": "2026-06-10T20:54:52.000Z"
+    "updatedAt": "2026-06-11T19:03:12.000Z",
+    "lastSignedIn": "2026-06-11T19:03:12.000Z"
   },
   {
     "id": 23,
@@ -1135,5 +1135,21 @@
     "createdAt": "2026-05-22T12:16:00.000Z",
     "updatedAt": "2026-05-25T11:16:07.000Z",
     "lastSignedIn": "2026-05-25T11:16:08.000Z"
+  },
+  {
+    "id": 2160001,
+    "openId": null,
+    "name": "Greyse Almeida",
+    "email": "trade1@neosuldistribuidora.com.br",
+    "passwordHash": "$2b$10$aEf67v8fB0PDXLe9ZSx01OJxmcwSHVVf5M1m/BVgr6CRWlhsAJG3O",
+    "loginMethod": "internal",
+    "role": "user",
+    "approvalStatus": "pending",
+    "departmentId": null,
+    "groupId": null,
+    "permissions": [],
+    "createdAt": "2026-06-12T12:10:37.000Z",
+    "updatedAt": "2026-06-12T12:10:37.000Z",
+    "lastSignedIn": null
   }
 ]
