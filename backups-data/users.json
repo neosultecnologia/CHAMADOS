@@ -27,8 +27,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-06-11T19:03:12.000Z",
-    "lastSignedIn": "2026-06-11T19:03:12.000Z"
+    "updatedAt": "2026-06-12T15:59:53.000Z",
+    "lastSignedIn": "2026-06-12T15:59:54.000Z"
   },
   {
     "id": 23,
@@ -234,8 +234,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-02-06T11:27:15.000Z",
-    "updatedAt": "2026-06-05T11:23:41.000Z",
-    "lastSignedIn": "2026-06-05T11:23:42.000Z"
+    "updatedAt": "2026-06-12T14:38:51.000Z",
+    "lastSignedIn": "2026-06-12T14:38:52.000Z"
   },
   {
     "id": 300002,
@@ -933,7 +933,7 @@
       }
     },
     "createdAt": "2026-04-20T12:22:21.000Z",
-    "updatedAt": "2026-05-22T20:17:17.000Z",
+    "updatedAt": "2026-06-12T17:45:50.000Z",
     "lastSignedIn": "2026-04-22T13:54:34.000Z"
   },
   {
@@ -1006,10 +1006,10 @@
     "groupId": 150022,
     "permissions": {
       "comercial": {
-        "create": true,
-        "delete": true,
-        "read": true,
-        "update": true
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
       },
       "contratos": {
         "create": true,
@@ -1043,7 +1043,7 @@
       }
     },
     "createdAt": "2026-05-21T15:13:16.000Z",
-    "updatedAt": "2026-06-02T20:33:52.000Z",
+    "updatedAt": "2026-06-12T17:47:16.000Z",
     "lastSignedIn": "2026-06-01T12:31:01.000Z"
   },
   {
@@ -1144,12 +1144,61 @@
     "passwordHash": "$2b$10$aEf67v8fB0PDXLe9ZSx01OJxmcwSHVVf5M1m/BVgr6CRWlhsAJG3O",
     "loginMethod": "internal",
     "role": "user",
-    "approvalStatus": "pending",
+    "approvalStatus": "approved",
     "departmentId": null,
-    "groupId": null,
-    "permissions": [],
+    "groupId": 1140009,
+    "permissions": {
+      "almoxarifado": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "comercial": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "contratos": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "desenvolvimento": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "gestao_negocios": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "repasses": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "superestocados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "suporte": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      }
+    },
     "createdAt": "2026-06-12T12:10:37.000Z",
-    "updatedAt": "2026-06-12T12:10:37.000Z",
-    "lastSignedIn": null
+    "updatedAt": "2026-06-12T17:43:27.000Z",
+    "lastSignedIn": "2026-06-12T17:40:20.000Z"
   }
 ]
