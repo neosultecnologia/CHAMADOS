@@ -6763,5 +6763,148 @@
     "newValue": null,
     "description": "Chamado criado por Mauricio Ramos",
     "createdAt": 1781293042111
+  },
+  {
+    "id": 4230001,
+    "ticketId": 3150001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1781535118916
+  },
+  {
+    "id": 4230002,
+    "ticketId": 3150001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1781535120758
+  },
+  {
+    "id": 4260001,
+    "ticketId": 3390001,
+    "type": "created",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Kerolaine Morgantti da Cruz",
+    "createdAt": 1781541835051
+  },
+  {
+    "id": 4260002,
+    "ticketId": 3390002,
+    "type": "created",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Kerolaine Morgantti da Cruz",
+    "createdAt": 1781549029012
+  },
+  {
+    "id": 4260003,
+    "ticketId": 1890035,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1781553026646
+  },
+  {
+    "id": 4260004,
+    "ticketId": 3270001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1781553270877
+  },
+  {
+    "id": 4260005,
+    "ticketId": 3270001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1781553273121
+  },
+  {
+    "id": 4260006,
+    "ticketId": 3300001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1781553516426
+  },
+  {
+    "id": 4260007,
+    "ticketId": 3300001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1781553518286
+  },
+  {
+    "id": 4260008,
+    "ticketId": 3300002,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1781553656244
+  },
+  {
+    "id": 4260009,
+    "ticketId": 3300002,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1781553657192
+  },
+  {
+    "id": 4260010,
+    "ticketId": 3390002,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1781553679277
+  },
+  {
+    "id": 4260011,
+    "ticketId": 3390002,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1781553680230
   }
 ]

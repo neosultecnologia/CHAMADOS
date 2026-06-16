@@ -643,11 +643,11 @@
     "updatedById": 60001,
     "updatedByName": "Gabriel Bino",
     "createdAt": 1774981188884,
-    "updatedAt": 1781178797063,
+    "updatedAt": 1781527303780,
     "kanbanOrder": 1001,
-    "isBeingTreated": true,
-    "treatedByName": "Gabriel Bino",
-    "treatedAt": 1781178797063
+    "isBeingTreated": false,
+    "treatedByName": null,
+    "treatedAt": null
   },
   {
     "id": 1170001,
@@ -693,11 +693,11 @@
     "updatedById": 60001,
     "updatedByName": "Gabriel Bino",
     "createdAt": 1775072195659,
-    "updatedAt": 1781178814792,
+    "updatedAt": 1781534437795,
     "kanbanOrder": 1000,
-    "isBeingTreated": false,
-    "treatedByName": null,
-    "treatedAt": null
+    "isBeingTreated": true,
+    "treatedByName": "Gabriel Bino",
+    "treatedAt": 1781527302093
   },
   {
     "id": 1230001,
