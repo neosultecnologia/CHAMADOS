@@ -1568,34 +1568,34 @@
     "projectId": 780001,
     "name": "Criar automação via WhatsApp",
     "description": "Implementar o envio de parcial automaticamente via WhatsApp [Responsável: Daniel]",
-    "status": "Pendente",
+    "status": "Concluída",
     "order": 1,
     "startDate": 1780455600000,
     "endDate": 1781233200000,
-    "completedAt": null,
+    "completedAt": 1781616473033,
     "createdById": 60001,
     "createdByName": "Gabriel Bino",
     "updatedById": 60001,
     "updatedByName": "Gabriel Bino",
     "createdAt": 1780509267983,
-    "updatedAt": 1780509267983
+    "updatedAt": 1781616473215
   },
   {
     "id": 2250013,
     "projectId": 780001,
     "name": "Criar Interface Web",
     "description": "Desenvolver interface web da automação para controle do envio de parcial. Usuário deve definir a periodicidade do envio, automático ou manual. Campo para preview da imagem.",
-    "status": "Pendente",
+    "status": "Concluída",
     "order": 2,
     "startDate": 1781492400000,
     "endDate": 1781838000000,
-    "completedAt": null,
+    "completedAt": 1781791753340,
     "createdById": 60001,
     "createdByName": "Gabriel Bino",
     "updatedById": 60001,
     "updatedByName": "Gabriel Bino",
     "createdAt": 1780509458983,
-    "updatedAt": 1780509458983
+    "updatedAt": 1781791753476
   },
   {
     "id": 2370001,
@@ -1630,5 +1630,22 @@
     "updatedByName": "Gabriel Bino",
     "createdAt": 1781031619007,
     "updatedAt": 1781031619007
+  },
+  {
+    "id": 2640001,
+    "projectId": 1170023,
+    "name": "Carregar todos os superestocados",
+    "description": "Exibir todos os produtos superestocados na tabela do painel.",
+    "status": "Concluída",
+    "order": 2,
+    "startDate": 1781492400000,
+    "endDate": 1781665200000,
+    "completedAt": 1781643638848,
+    "createdById": 60001,
+    "createdByName": "Gabriel Bino",
+    "updatedById": 60001,
+    "updatedByName": "Gabriel Bino",
+    "createdAt": 1781616241262,
+    "updatedAt": 1781643639077
   }
 ]

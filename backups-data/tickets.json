@@ -1623,7 +1623,7 @@
     "description": "Instalar o Java e Auxílio Cloud nos computadores de devolução e sac.\nMotivo: Importação e desconhecimento de notas.\n\nAnidesk:\n866 440 336 - Vanessa - SAC\n1 904 118 602 - Beatriz - Devolução\n1 521 024 334 - Lívia - Devolução",
     "category": "Acesso",
     "priority": "Alta",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 1050001,
     "createdByName": "Kerolaine Morgantti da Cruz",
@@ -1635,7 +1635,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1776950817053,
-    "updatedAt": 1781553026720
+    "updatedAt": 1781729801941
   },
   {
     "id": 1890036,
@@ -2295,19 +2295,19 @@
     "description": "Solicito que os próximos faturamentos para a Neosul Distribuidora, sejam emitidos com notas fiscais separadas.\n Ex: NF 01 - Apenas produtos cx de embarque.\n       NF 02 - Apenas produtos fracionados.",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Novos",
+    "status": "Em Andamento",
     "departmentId": 20,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
-    "assignedToId": null,
-    "assignedToName": null,
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
     "waitingForDepartment": null,
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1781006537217,
-    "updatedAt": 1781006537217
+    "updatedAt": 1781702773205
   },
   {
     "id": 3150001,
@@ -2316,7 +2316,7 @@
     "description": "MEU COM COMPUTAR ESTA COM 5 PRECISA PASSAR PARA 8\nTodos os acessos estão com lentidão, escrever e enviar mensagem no watss, abrir pdf, excel....",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Em Andamento",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 17,
     "createdById": 570012,
     "createdByName": "Francielle Vieira Schmitz Bueno",
@@ -2328,7 +2328,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1781093596743,
-    "updatedAt": 1781535120808
+    "updatedAt": 1781699093580
   },
   {
     "id": 3270001,
@@ -2337,7 +2337,7 @@
     "description": "Sem acesso ao Teams",
     "category": "Técnico",
     "priority": "Baixa",
-    "status": "Em Andamento",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 20,
     "createdById": 1650001,
     "createdByName": "Keuriane Braga da Silva ",
@@ -2349,7 +2349,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1781277238138,
-    "updatedAt": 1781553273154
+    "updatedAt": 1781699088399
   },
   {
     "id": 3300001,
@@ -2358,7 +2358,7 @@
     "description": "Espelhar login para uso em outros setores",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Em Andamento",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -2370,7 +2370,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1781292974263,
-    "updatedAt": 1781553518326
+    "updatedAt": 1781633553251
   },
   {
     "id": 3300002,
@@ -2379,7 +2379,7 @@
     "description": "Espelhar para uso no Psico",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Em Andamento",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -2391,7 +2391,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1781293042111,
-    "updatedAt": 1781553657222
+    "updatedAt": 1781633465298
   },
   {
     "id": 3390001,
@@ -2400,19 +2400,19 @@
     "description": "Algumas notas que recebemos não aparecem para recebimento e armazenagem via coletor.\n\nAbaixo exemplo:\nVitamedic\nNF: 77189\nProtocolo: 210136\nchave da nf: 52260530222814000131550050000771891223388039",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Novos",
+    "status": "Em Andamento",
     "departmentId": 90004,
     "createdById": 1050001,
     "createdByName": "Kerolaine Morgantti da Cruz",
-    "assignedToId": null,
-    "assignedToName": null,
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
     "waitingForDepartment": null,
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1781541835051,
-    "updatedAt": 1781541835051
+    "updatedAt": 1781702765327
   },
   {
     "id": 3390002,
@@ -2421,7 +2421,7 @@
     "description": "Favor vincular o e-mail nfe.sc@neosuldistribuidora.com.br ao infarma do usuário KEROLAINE.C.",
     "category": "Acesso",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 1050001,
     "createdByName": "Kerolaine Morgantti da Cruz",
@@ -2433,6 +2433,69 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1781549029012,
-    "updatedAt": 1781553680257
+    "updatedAt": 1781729771600
+  },
+  {
+    "id": 3570001,
+    "ticketId": "bilhete_3390003",
+    "title": "alteração PERFIL colaborador Pedro Gabriel",
+    "description": "Boa tarde!\nPor gentileza meninos ajustar perfil do colaborador Pedro.T para que ele tenha acesso igual ao da Ana Paula Santos.",
+    "category": "Técnico",
+    "priority": "Média",
+    "status": "Concluído",
+    "departmentId": 90004,
+    "createdById": 720001,
+    "createdByName": "VERIDIANA",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1781632660455,
+    "updatedAt": 1781633206883
+  },
+  {
+    "id": 3600001,
+    "ticketId": "bilhete_3570002",
+    "title": "Movimentação de Computador",
+    "description": "Favor trocar o computador do recebimento de mesa dentro da sala.",
+    "category": "Outro",
+    "priority": "Média",
+    "status": "Novos",
+    "departmentId": 90004,
+    "createdById": 1050001,
+    "createdByName": "Kerolaine Morgantti da Cruz",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1781730012695,
+    "updatedAt": 1781794064045
+  },
+  {
+    "id": 3600002,
+    "ticketId": "bilhete_3600002",
+    "title": "Instalar digitalizador",
+    "description": "Favor instalar o digitalizador no computador da Lívia da devolução.",
+    "category": "Acesso",
+    "priority": "Média",
+    "status": "Concluído",
+    "departmentId": 90004,
+    "createdById": 1050001,
+    "createdByName": "Kerolaine Morgantti da Cruz",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1781782146018,
+    "updatedAt": 1781802337098
   }
 ]
