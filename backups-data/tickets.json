@@ -2358,7 +2358,7 @@
     "description": "Espelhar login para uso em outros setores",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -2370,7 +2370,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1781292974263,
-    "updatedAt": 1781633553251
+    "updatedAt": 1781882925999
   },
   {
     "id": 3300002,
@@ -2379,7 +2379,7 @@
     "description": "Espelhar para uso no Psico",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -2391,7 +2391,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1781293042111,
-    "updatedAt": 1781633465298
+    "updatedAt": 1781882930752
   },
   {
     "id": 3390001,
@@ -2463,7 +2463,7 @@
     "description": "Favor trocar o computador do recebimento de mesa dentro da sala.",
     "category": "Outro",
     "priority": "Média",
-    "status": "Novos",
+    "status": "Em Andamento",
     "departmentId": 90004,
     "createdById": 1050001,
     "createdByName": "Kerolaine Morgantti da Cruz",
@@ -2475,7 +2475,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1781730012695,
-    "updatedAt": 1781794064045
+    "updatedAt": 1782144166652
   },
   {
     "id": 3600002,
@@ -2497,5 +2497,47 @@
     "order": 0,
     "createdAt": 1781782146018,
     "updatedAt": 1781802337098
+  },
+  {
+    "id": 3630017,
+    "ticketId": "bilhete_3600003",
+    "title": "Computador com defeito ( desliga sozinho)",
+    "description": "Urgentemente, precisamos que seja concertado o PC da Adhara do faturamento, está atrapalhando o processo",
+    "category": "Técnico",
+    "priority": "Crítica",
+    "status": "Em Andamento",
+    "departmentId": 17,
+    "createdById": 540001,
+    "createdByName": "Mauricio Ramos",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1781883021423,
+    "updatedAt": 1782128914309
+  },
+  {
+    "id": 3660001,
+    "ticketId": "bilhete_3630018",
+    "title": "Incompatibilidade: Novo Sistema de Separação impede Impressão de Etiquetas (Espelho)",
+    "description": "Ao utilizar o novo processo de separação, ocorre um conflito com o sistema atual. Como consequência, o sistema não gera e não emite o \"espelho\" (a folha com a lista de produtos a serem separados) na impressão de etiquetas.",
+    "category": "Técnico",
+    "priority": "Crítica",
+    "status": "Pendente Infarma",
+    "departmentId": 17,
+    "createdById": 540001,
+    "createdByName": "Mauricio Ramos",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1782143038906,
+    "updatedAt": 1782144155761
   }
 ]

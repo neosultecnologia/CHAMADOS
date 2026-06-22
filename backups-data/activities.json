@@ -7148,5 +7148,126 @@
     "newValue": "Concluído",
     "description": "Chamado concluído e avaliado pelo solicitante",
     "createdAt": 1781802337081
+  },
+  {
+    "id": 4410001,
+    "ticketId": 3300001,
+    "type": "status_change",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1781882925972
+  },
+  {
+    "id": 4410002,
+    "ticketId": 3300002,
+    "type": "status_change",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1781882930731
+  },
+  {
+    "id": 4410003,
+    "ticketId": 3630017,
+    "type": "created",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mauricio Ramos",
+    "createdAt": 1781883021423
+  },
+  {
+    "id": 4440001,
+    "ticketId": 3630017,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1782128913383
+  },
+  {
+    "id": 4440002,
+    "ticketId": 3630017,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1782128914253
+  },
+  {
+    "id": 4440003,
+    "ticketId": 3660001,
+    "type": "created",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mauricio Ramos",
+    "createdAt": 1782143038906
+  },
+  {
+    "id": 4440004,
+    "ticketId": 3660001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1782144077313
+  },
+  {
+    "id": 4440005,
+    "ticketId": 3660001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1782144078531
+  },
+  {
+    "id": 4440006,
+    "ticketId": 3660001,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1782144151196
+  },
+  {
+    "id": 4440007,
+    "ticketId": 3660001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Pendente Infarma",
+    "description": "Status alterado de \"Em Andamento\" para \"Pendente Infarma\"",
+    "createdAt": 1782144155523
+  },
+  {
+    "id": 4440008,
+    "ticketId": 3600001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1782144166621
   }
 ]

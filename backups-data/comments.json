@@ -502,5 +502,13 @@
     "authorName": "Monique",
     "content": "Muito obrigado pelo retorno.",
     "createdAt": 1779912462139
+  },
+  {
+    "id": 1230001,
+    "ticketId": 3660001,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "Um chamado com o infarma foi aberto. Assim que tiver um retorno entro em contato.\nSegue ticket do chamado: 202606022525",
+    "createdAt": 1782144151196
   }
 ]

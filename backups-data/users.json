@@ -27,8 +27,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-06-18T21:02:29.000Z",
-    "lastSignedIn": "2026-06-18T21:02:30.000Z"
+    "updatedAt": "2026-06-19T21:03:56.000Z",
+    "lastSignedIn": "2026-06-19T21:03:56.000Z"
   },
   {
     "id": 23,
@@ -89,8 +89,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-02-04T11:57:53.000Z",
-    "updatedAt": "2026-06-10T17:15:16.000Z",
-    "lastSignedIn": "2026-06-10T17:15:16.000Z"
+    "updatedAt": "2026-06-19T12:22:38.000Z",
+    "lastSignedIn": "2026-06-19T12:22:38.000Z"
   },
   {
     "id": 90001,
@@ -631,10 +631,10 @@
         "update": true
       },
       "comercial": {
-        "create": true,
-        "delete": true,
-        "read": true,
-        "update": true
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
       },
       "compras": {
         "create": false,
@@ -692,8 +692,8 @@
       }
     },
     "createdAt": "2026-02-16T18:16:05.000Z",
-    "updatedAt": "2026-06-18T12:19:42.000Z",
-    "lastSignedIn": "2026-02-16T19:05:27.000Z"
+    "updatedAt": "2026-06-19T12:44:07.000Z",
+    "lastSignedIn": "2026-06-19T11:57:35.000Z"
   },
   {
     "id": 660062,
