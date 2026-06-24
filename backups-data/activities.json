@@ -7269,5 +7269,82 @@
     "newValue": "Em Andamento",
     "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
     "createdAt": 1782144166621
+  },
+  {
+    "id": 4470001,
+    "ticketId": 3690001,
+    "type": "created",
+    "authorId": 360002,
+    "authorName": "Renata Sousa",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Renata Sousa",
+    "createdAt": 1782227414220
+  },
+  {
+    "id": 4470002,
+    "ticketId": 3690002,
+    "type": "created",
+    "authorId": 630282,
+    "authorName": "Márcia Freitas",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Márcia Freitas",
+    "createdAt": 1782231113802
+  },
+  {
+    "id": 4470003,
+    "ticketId": 3690003,
+    "type": "created",
+    "authorId": 630282,
+    "authorName": "Márcia Freitas",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Márcia Freitas",
+    "createdAt": 1782231404008
+  },
+  {
+    "id": 4500001,
+    "ticketId": 3690002,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1782248129918
+  },
+  {
+    "id": 4500002,
+    "ticketId": 3690002,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1782248130851
+  },
+  {
+    "id": 4500003,
+    "ticketId": 3690003,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1782248138272
+  },
+  {
+    "id": 4500004,
+    "ticketId": 3690003,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1782248139245
   }
 ]

@@ -27,8 +27,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-06-22T19:34:16.000Z",
-    "lastSignedIn": "2026-06-22T19:34:16.000Z"
+    "updatedAt": "2026-06-23T17:51:22.000Z",
+    "lastSignedIn": "2026-06-23T17:51:23.000Z"
   },
   {
     "id": 23,
@@ -128,13 +128,31 @@
         "read": true,
         "update": true
       },
+      "envio_parcial": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
       "gestao_negocios": {
         "create": true,
         "delete": true,
         "read": true,
         "update": true
       },
+      "pescador": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
       "repasses": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "rupturas": {
         "create": true,
         "delete": true,
         "read": true,
@@ -154,7 +172,7 @@
       }
     },
     "createdAt": "2026-02-04T13:17:56.000Z",
-    "updatedAt": "2026-06-03T13:40:29.000Z",
+    "updatedAt": "2026-06-23T20:55:17.000Z",
     "lastSignedIn": "2026-05-08T20:58:55.000Z"
   },
   {
@@ -191,19 +209,99 @@
     "departmentId": 20,
     "groupId": 150022,
     "permissions": {
-      "almoxarifado": false,
-      "chamados": true,
-      "comercial": false,
-      "compras": false,
-      "desenvolvimento": false,
-      "marketing": false,
-      "projetos": false,
-      "rh": false,
-      "suporte": true,
-      "tecnologia": false
+      "almoxarifado": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "chamados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "comercial": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "compras": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "desenvolvimento": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "envio_parcial": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "marketing": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "pescador": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "projetos": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "repasses": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "rh": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "rupturas": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "superestocados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "suporte": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "tecnologia": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      }
     },
     "createdAt": "2026-02-05T01:16:56.000Z",
-    "updatedAt": "2026-05-06T12:37:02.000Z",
+    "updatedAt": "2026-06-23T16:23:22.000Z",
     "lastSignedIn": "2026-04-08T14:16:35.000Z"
   },
   {
@@ -249,19 +347,81 @@
     "departmentId": 20,
     "groupId": 150022,
     "permissions": {
-      "almoxarifado": false,
-      "chamados": true,
-      "comercial": false,
-      "compras": false,
-      "desenvolvimento": false,
-      "marketing": false,
-      "projetos": false,
-      "rh": false,
-      "suporte": true,
-      "tecnologia": false
+      "almoxarifado": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "chamados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "comercial": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "compras": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "desenvolvimento": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "marketing": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "projetos": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "rh": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "rupturas": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "superestocados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "suporte": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "tecnologia": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      }
     },
     "createdAt": "2026-02-06T11:49:24.000Z",
-    "updatedAt": "2026-05-06T12:37:02.000Z",
+    "updatedAt": "2026-06-23T16:24:02.000Z",
     "lastSignedIn": "2026-02-10T17:02:39.000Z"
   },
   {
@@ -329,19 +489,81 @@
     "departmentId": 20,
     "groupId": 150022,
     "permissions": {
-      "almoxarifado": false,
-      "chamados": true,
-      "comercial": false,
-      "compras": false,
-      "desenvolvimento": false,
-      "marketing": false,
-      "projetos": false,
-      "rh": false,
-      "suporte": true,
-      "tecnologia": false
+      "almoxarifado": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "chamados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "comercial": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "compras": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "desenvolvimento": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "marketing": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "projetos": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "rh": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "rupturas": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "superestocados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "suporte": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "tecnologia": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      }
     },
     "createdAt": "2026-02-10T17:05:04.000Z",
-    "updatedAt": "2026-05-06T12:37:02.000Z",
+    "updatedAt": "2026-06-23T16:25:49.000Z",
     "lastSignedIn": "2026-02-11T14:50:52.000Z"
   },
   {
@@ -356,19 +578,87 @@
     "departmentId": 20,
     "groupId": 150022,
     "permissions": {
-      "almoxarifado": false,
-      "chamados": true,
-      "comercial": false,
-      "compras": false,
-      "desenvolvimento": false,
-      "marketing": false,
-      "projetos": false,
-      "rh": false,
-      "suporte": true,
-      "tecnologia": false
+      "almoxarifado": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "chamados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "comercial": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "compras": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "desenvolvimento": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "envio_parcial": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "marketing": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "projetos": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "rh": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "rupturas": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "superestocados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "suporte": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "tecnologia": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      }
     },
     "createdAt": "2026-02-10T17:43:46.000Z",
-    "updatedAt": "2026-05-06T12:37:02.000Z",
+    "updatedAt": "2026-06-23T16:25:28.000Z",
     "lastSignedIn": "2026-02-11T14:24:42.000Z"
   },
   {
@@ -383,19 +673,81 @@
     "departmentId": 20,
     "groupId": 150022,
     "permissions": {
-      "almoxarifado": false,
-      "chamados": true,
-      "comercial": false,
-      "compras": false,
-      "desenvolvimento": false,
-      "marketing": false,
-      "projetos": false,
-      "rh": false,
-      "suporte": true,
-      "tecnologia": false
+      "almoxarifado": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "chamados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "comercial": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "compras": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "desenvolvimento": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "marketing": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "projetos": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "rh": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "rupturas": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "superestocados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "suporte": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "tecnologia": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      }
     },
     "createdAt": "2026-02-12T16:40:58.000Z",
-    "updatedAt": "2026-05-06T12:37:02.000Z",
+    "updatedAt": "2026-06-23T16:23:45.000Z",
     "lastSignedIn": "2026-04-16T18:25:43.000Z"
   },
   {
@@ -591,19 +943,75 @@
     "departmentId": 90006,
     "groupId": 300001,
     "permissions": {
-      "almoxarifado": false,
-      "chamados": true,
-      "comercial": false,
-      "compras": false,
-      "desenvolvimento": false,
-      "marketing": false,
-      "projetos": false,
-      "rh": false,
-      "suporte": true,
-      "tecnologia": false
+      "almoxarifado": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "chamados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "comercial": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "compras": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "desenvolvimento": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "envio_parcial": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "marketing": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "projetos": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "rh": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "suporte": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "tecnologia": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      }
     },
     "createdAt": "2026-02-13T18:37:55.000Z",
-    "updatedAt": "2026-05-06T12:36:57.000Z",
+    "updatedAt": "2026-06-23T15:44:03.000Z",
     "lastSignedIn": "2026-02-16T19:05:11.000Z"
   },
   {
@@ -707,19 +1115,75 @@
     "departmentId": 90006,
     "groupId": 300001,
     "permissions": {
-      "almoxarifado": false,
-      "chamados": true,
-      "comercial": false,
-      "compras": false,
-      "desenvolvimento": false,
-      "marketing": false,
-      "projetos": false,
-      "rh": false,
-      "suporte": true,
-      "tecnologia": false
+      "almoxarifado": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "chamados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "comercial": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "compras": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "desenvolvimento": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "envio_parcial": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "marketing": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "projetos": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "rh": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "suporte": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "tecnologia": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      }
     },
     "createdAt": "2026-02-16T18:18:27.000Z",
-    "updatedAt": "2026-05-06T12:36:57.000Z",
+    "updatedAt": "2026-06-23T15:44:45.000Z",
     "lastSignedIn": "2026-02-16T19:04:42.000Z"
   },
   {
@@ -734,19 +1198,99 @@
     "departmentId": 90006,
     "groupId": 300001,
     "permissions": {
-      "almoxarifado": false,
-      "chamados": true,
-      "comercial": false,
-      "compras": false,
-      "desenvolvimento": false,
-      "marketing": false,
-      "projetos": false,
-      "rh": false,
-      "suporte": true,
-      "tecnologia": false
+      "almoxarifado": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "chamados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "comercial": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "compras": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "desenvolvimento": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "envio_parcial": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "marketing": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "pescador": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "projetos": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "repasses": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "rh": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "rupturas": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "superestocados": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "suporte": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "tecnologia": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      }
     },
     "createdAt": "2026-02-16T19:01:39.000Z",
-    "updatedAt": "2026-05-06T12:36:57.000Z",
+    "updatedAt": "2026-06-23T15:43:47.000Z",
     "lastSignedIn": null
   },
   {
@@ -761,19 +1305,75 @@
     "departmentId": 90006,
     "groupId": 300001,
     "permissions": {
-      "almoxarifado": false,
-      "chamados": true,
-      "comercial": false,
-      "compras": false,
-      "desenvolvimento": false,
-      "marketing": false,
-      "projetos": false,
-      "rh": false,
-      "suporte": true,
-      "tecnologia": false
+      "almoxarifado": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "chamados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "comercial": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "compras": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "desenvolvimento": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "envio_parcial": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "marketing": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "projetos": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "rh": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "suporte": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "tecnologia": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      }
     },
     "createdAt": "2026-02-16T19:04:18.000Z",
-    "updatedAt": "2026-06-18T20:10:47.000Z",
+    "updatedAt": "2026-06-23T15:44:26.000Z",
     "lastSignedIn": "2026-06-18T20:10:47.000Z"
   },
   {
@@ -981,6 +1581,12 @@
         "read": true,
         "update": true
       },
+      "rupturas": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
       "superestocados": {
         "create": true,
         "delete": true,
@@ -995,7 +1601,7 @@
       }
     },
     "createdAt": "2026-04-20T12:22:21.000Z",
-    "updatedAt": "2026-06-12T17:45:50.000Z",
+    "updatedAt": "2026-06-23T16:24:31.000Z",
     "lastSignedIn": "2026-04-22T13:54:34.000Z"
   },
   {
@@ -1079,6 +1685,12 @@
         "read": true,
         "update": true
       },
+      "envio_parcial": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
       "gestao_negocios": {
         "create": true,
         "delete": true,
@@ -1086,6 +1698,12 @@
         "update": true
       },
       "repasses": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "rupturas": {
         "create": true,
         "delete": true,
         "read": true,
@@ -1105,7 +1723,7 @@
       }
     },
     "createdAt": "2026-05-21T15:13:16.000Z",
-    "updatedAt": "2026-06-12T17:47:16.000Z",
+    "updatedAt": "2026-06-23T16:26:08.000Z",
     "lastSignedIn": "2026-06-01T12:31:01.000Z"
   },
   {
@@ -1181,6 +1799,12 @@
         "read": true,
         "update": true
       },
+      "rupturas": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
       "superestocados": {
         "create": true,
         "delete": true,
@@ -1195,7 +1819,7 @@
       }
     },
     "createdAt": "2026-05-22T12:16:00.000Z",
-    "updatedAt": "2026-05-25T11:16:07.000Z",
+    "updatedAt": "2026-06-23T16:24:19.000Z",
     "lastSignedIn": "2026-05-25T11:16:08.000Z"
   },
   {
@@ -1246,6 +1870,12 @@
         "read": true,
         "update": true
       },
+      "rupturas": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
       "superestocados": {
         "create": true,
         "delete": true,
@@ -1260,7 +1890,7 @@
       }
     },
     "createdAt": "2026-06-12T12:10:37.000Z",
-    "updatedAt": "2026-06-12T17:43:27.000Z",
+    "updatedAt": "2026-06-23T16:24:43.000Z",
     "lastSignedIn": "2026-06-12T17:40:20.000Z"
   }
 ]
