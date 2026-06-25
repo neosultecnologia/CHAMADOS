@@ -7346,5 +7346,27 @@
     "newValue": "Resolvido / Aguardando Validação",
     "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
     "createdAt": 1782248139245
+  },
+  {
+    "id": 4530001,
+    "ticketId": 3270001,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1782389048945
+  },
+  {
+    "id": 4530002,
+    "ticketId": 3150001,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1782389048945
   }
 ]

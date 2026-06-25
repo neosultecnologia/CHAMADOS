@@ -2316,7 +2316,7 @@
     "description": "MEU COM COMPUTAR ESTA COM 5 PRECISA PASSAR PARA 8\nTodos os acessos estão com lentidão, escrever e enviar mensagem no watss, abrir pdf, excel....",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 570012,
     "createdByName": "Francielle Vieira Schmitz Bueno",
@@ -2328,7 +2328,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1781093596743,
-    "updatedAt": 1781699093580
+    "updatedAt": 1782389049003
   },
   {
     "id": 3270001,
@@ -2337,7 +2337,7 @@
     "description": "Sem acesso ao Teams",
     "category": "Técnico",
     "priority": "Baixa",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 20,
     "createdById": 1650001,
     "createdByName": "Keuriane Braga da Silva ",
@@ -2349,7 +2349,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1781277238138,
-    "updatedAt": 1781699088399
+    "updatedAt": 1782389048953
   },
   {
     "id": 3300001,

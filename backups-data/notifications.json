@@ -6384,18 +6384,6 @@
     "createdAt": 1781632660549
   },
   {
-    "id": 3360004,
-    "userId": 60001,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "VERIDIANA abriu um novo chamado: \"alteração PERFIL colaborador Pedro Gabriel\"",
-    "referenceId": 3570001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/3570001",
-    "isRead": false,
-    "createdAt": 1781632660565
-  },
-  {
     "id": 3360005,
     "userId": 720001,
     "type": "ticket_status_changed",
@@ -6576,18 +6564,6 @@
     "createdAt": 1781730012801
   },
   {
-    "id": 3450004,
-    "userId": 60001,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Movimentação de Computador\"",
-    "referenceId": 3600001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/3600001",
-    "isRead": false,
-    "createdAt": 1781730012820
-  },
-  {
     "id": 3450005,
     "userId": 23,
     "type": "ticket_created",
@@ -6622,18 +6598,6 @@
     "actionUrl": "/suporte/3600002",
     "isRead": false,
     "createdAt": 1781782146100
-  },
-  {
-    "id": 3450008,
-    "userId": 60001,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Instalar digitalizador\"",
-    "referenceId": 3600002,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/3600002",
-    "isRead": false,
-    "createdAt": 1781782146115
   },
   {
     "id": 3450009,
@@ -6708,18 +6672,6 @@
     "createdAt": 1781883021527
   },
   {
-    "id": 3480004,
-    "userId": 60001,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Mauricio Ramos abriu um novo chamado: \"Computador com defeito ( desliga sozinho)\"",
-    "referenceId": 3630017,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/3630017",
-    "isRead": false,
-    "createdAt": 1781883021550
-  },
-  {
     "id": 3510001,
     "userId": 300001,
     "type": "ticket_assigned",
@@ -6778,18 +6730,6 @@
     "actionUrl": "/suporte/3660001",
     "isRead": false,
     "createdAt": 1782143039006
-  },
-  {
-    "id": 3510006,
-    "userId": 60001,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Mauricio Ramos abriu um novo chamado: \"Incompatibilidade: Novo Sistema de Separação impede Impressão de Etiquetas (Espelho)\"",
-    "referenceId": 3660001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/3660001",
-    "isRead": false,
-    "createdAt": 1782143039022
   },
   {
     "id": 3510007,
@@ -6888,18 +6828,6 @@
     "createdAt": 1782227414365
   },
   {
-    "id": 3540004,
-    "userId": 60001,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Renata Sousa abriu um novo chamado: \"INSTALAÇÃO DO INFARMA CUBOS\"",
-    "referenceId": 3690001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/3690001",
-    "isRead": false,
-    "createdAt": 1782227414389
-  },
-  {
     "id": 3540005,
     "userId": 23,
     "type": "ticket_created",
@@ -6936,18 +6864,6 @@
     "createdAt": 1782231113891
   },
   {
-    "id": 3540008,
-    "userId": 60001,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Márcia Freitas abriu um novo chamado: \"Baixar APP Whats - Suporte \"",
-    "referenceId": 3690002,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/3690002",
-    "isRead": false,
-    "createdAt": 1782231113925
-  },
-  {
     "id": 3540009,
     "userId": 23,
     "type": "ticket_created",
@@ -6982,18 +6898,6 @@
     "actionUrl": "/suporte/3690003",
     "isRead": false,
     "createdAt": 1782231404080
-  },
-  {
-    "id": 3540012,
-    "userId": 60001,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Márcia Freitas abriu um novo chamado: \"Problema com fone em ligação whats \"",
-    "referenceId": 3690003,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/3690003",
-    "isRead": false,
-    "createdAt": 1782231404096
   },
   {
     "id": 3570001,
