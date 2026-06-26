@@ -358,5 +358,41 @@
     "uploadedById": 450001,
     "uploadedByName": "Humbertho Ryan",
     "createdAt": 1780094443169
+  },
+  {
+    "id": 540001,
+    "ticketId": 3720001,
+    "fileName": "WhatsApp Image 2026-06-25 at 08.56.31.jpeg",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/3720001/1782394665267-9rqytg-WhatsApp Image 2026-06-25 at 08.56.31.jpeg",
+    "fileKey": "tickets/3720001/1782394665267-9rqytg-WhatsApp Image 2026-06-25 at 08.56.31.jpeg",
+    "mimeType": "image/jpeg",
+    "fileSize": 180618,
+    "uploadedById": 720001,
+    "uploadedByName": "VERIDIANA",
+    "createdAt": 1782394665671
+  },
+  {
+    "id": 540002,
+    "ticketId": 3720002,
+    "fileName": "WhatsApp Image 2026-06-25 at 10.42.33.jpeg",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/3720002/1782395008611-za27i8-WhatsApp Image 2026-06-25 at 10.42.33.jpeg",
+    "fileKey": "tickets/3720002/1782395008611-za27i8-WhatsApp Image 2026-06-25 at 10.42.33.jpeg",
+    "mimeType": "image/jpeg",
+    "fileSize": 266606,
+    "uploadedById": 720001,
+    "uploadedByName": "VERIDIANA",
+    "createdAt": 1782395008982
+  },
+  {
+    "id": 540003,
+    "ticketId": 3720002,
+    "fileName": "WhatsApp Image 2026-06-25 at 10.42.32.jpeg",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/3720002/1782395009643-9b3u63-WhatsApp Image 2026-06-25 at 10.42.32.jpeg",
+    "fileKey": "tickets/3720002/1782395009643-9b3u63-WhatsApp Image 2026-06-25 at 10.42.32.jpeg",
+    "mimeType": "image/jpeg",
+    "fileSize": 235413,
+    "uploadedById": 720001,
+    "uploadedByName": "VERIDIANA",
+    "createdAt": 1782395009958
   }
 ]
