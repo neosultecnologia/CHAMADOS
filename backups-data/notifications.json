@@ -6984,18 +6984,6 @@
     "createdAt": 1782394664479
   },
   {
-    "id": 3600004,
-    "userId": 60001,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "VERIDIANA abriu um novo chamado: \"retirada do contato de  telefone do cabeçalho de NFes RS\"",
-    "referenceId": 3720001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/3720001",
-    "isRead": false,
-    "createdAt": 1782394664495
-  },
-  {
     "id": 3600005,
     "userId": 23,
     "type": "ticket_created",
@@ -7030,18 +7018,6 @@
     "actionUrl": "/suporte/3720002",
     "isRead": false,
     "createdAt": 1782395007751
-  },
-  {
-    "id": 3600008,
-    "userId": 60001,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "VERIDIANA abriu um novo chamado: \"envio de arquivo XML- arquivos pendentes na fila de envio\"",
-    "referenceId": 3720002,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/3720002",
-    "isRead": false,
-    "createdAt": 1782395007768
   },
   {
     "id": 3600009,
@@ -7080,15 +7056,87 @@
     "createdAt": 1782395203756
   },
   {
-    "id": 3600012,
-    "userId": 60001,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "VERIDIANA abriu um novo chamado: \"liberação de acesso INFARMA e COLETORES\"",
+    "id": 3630001,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"liberação de acesso INFARMA e COLETORES\"",
     "referenceId": 3720003,
     "referenceType": "ticket",
     "actionUrl": "/suporte/3720003",
     "isRead": false,
-    "createdAt": 1782395203775
+    "createdAt": 1782765319907
+  },
+  {
+    "id": 3630002,
+    "userId": 720001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 3720003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3720003",
+    "isRead": false,
+    "createdAt": 1782765321333
+  },
+  {
+    "id": 3630003,
+    "userId": 720001,
+    "type": "ticket_comment",
+    "title": "Resposta no Chamado",
+    "message": "Carlos TI respondeu seu chamado: \"liberação de acesso INFARMA e COLETORES\"",
+    "referenceId": 3720003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3720003",
+    "isRead": false,
+    "createdAt": 1782765362732
+  },
+  {
+    "id": 3660001,
+    "userId": 720001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 3720001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3720001",
+    "isRead": false,
+    "createdAt": 1782822805965
+  },
+  {
+    "id": 3660002,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"retirada do contato de  telefone do cabeçalho de NFes RS\"",
+    "referenceId": 3720001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3720001",
+    "isRead": false,
+    "createdAt": 1782822808033
+  },
+  {
+    "id": 3660003,
+    "userId": 720001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 3720002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3720002",
+    "isRead": false,
+    "createdAt": 1782822835725
+  },
+  {
+    "id": 3660004,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"envio de arquivo XML- arquivos pendentes na fila de envio\"",
+    "referenceId": 3720002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3720002",
+    "isRead": false,
+    "createdAt": 1782822838349
   }
 ]
