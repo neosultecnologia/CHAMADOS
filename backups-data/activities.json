@@ -7478,5 +7478,82 @@
     "newValue": "Carlos TI",
     "description": "Responsável alterado para \"Carlos TI\"",
     "createdAt": 1782822838331
+  },
+  {
+    "id": 4590005,
+    "ticketId": 3750001,
+    "type": "created",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mauricio Ramos",
+    "createdAt": 1782849018910
+  },
+  {
+    "id": 4590006,
+    "ticketId": 3750001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Caroline Borges batista",
+    "description": "Responsável alterado para \"Caroline Borges batista\"",
+    "createdAt": 1782849878152
+  },
+  {
+    "id": 4590007,
+    "ticketId": 3750001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Caroline Borges batista",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1782849883854
+  },
+  {
+    "id": 4590008,
+    "ticketId": 3750001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1782849885097
+  },
+  {
+    "id": 4590009,
+    "ticketId": 3720003,
+    "type": "comment",
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por VERIDIANA",
+    "createdAt": 1782906114312
+  },
+  {
+    "id": 4590010,
+    "ticketId": 3690003,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1782907221485
+  },
+  {
+    "id": 4590011,
+    "ticketId": 3690002,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1782907221485
   }
 ]

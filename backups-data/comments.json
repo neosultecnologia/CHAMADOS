@@ -518,5 +518,13 @@
     "authorName": "Carlos TI",
     "content": "Boa tarde, Necessito do perfil de alguém para usar de espelho.",
     "createdAt": 1782765362667
+  },
+  {
+    "id": 1290001,
+    "ticketId": 3720003,
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "content": "Bom dia!\n*Liberar acesso ao COLETOR:* espelhar Tailana\n*Liberar acesso ao Módulo ESTOQUE*: espelhar Ana Paula Santos\n",
+    "createdAt": 1782906114312
   }
 ]

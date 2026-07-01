@@ -7138,5 +7138,101 @@
     "actionUrl": "/suporte/3720002",
     "isRead": false,
     "createdAt": 1782822838349
+  },
+  {
+    "id": 3660005,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"PC/impressora Arcox da impressão de pedidos falhando\"",
+    "referenceId": 3750001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3750001",
+    "isRead": false,
+    "createdAt": 1782849018963
+  },
+  {
+    "id": 3660006,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"PC/impressora Arcox da impressão de pedidos falhando\"",
+    "referenceId": 3750001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3750001",
+    "isRead": false,
+    "createdAt": 1782849018980
+  },
+  {
+    "id": 3660007,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"PC/impressora Arcox da impressão de pedidos falhando\"",
+    "referenceId": 3750001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3750001",
+    "isRead": false,
+    "createdAt": 1782849019001
+  },
+  {
+    "id": 3660008,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"PC/impressora Arcox da impressão de pedidos falhando\"",
+    "referenceId": 3750001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3750001",
+    "isRead": false,
+    "createdAt": 1782849019018
+  },
+  {
+    "id": 3660009,
+    "userId": 690001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"PC/impressora Arcox da impressão de pedidos falhando\"",
+    "referenceId": 3750001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3750001",
+    "isRead": false,
+    "createdAt": 1782849878170
+  },
+  {
+    "id": 3660010,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"PC/impressora Arcox da impressão de pedidos falhando\"",
+    "referenceId": 3750001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3750001",
+    "isRead": false,
+    "createdAt": 1782849883874
+  },
+  {
+    "id": 3660011,
+    "userId": 540001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 3750001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3750001",
+    "isRead": false,
+    "createdAt": 1782849885113
+  },
+  {
+    "id": 3660012,
+    "userId": 300001,
+    "type": "ticket_comment",
+    "title": "Novo Comentario no Chamado",
+    "message": "VERIDIANA comentou no chamado: \"liberação de acesso INFARMA e COLETORES\"",
+    "referenceId": 3720003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3720003",
+    "isRead": false,
+    "createdAt": 1782906114366
   }
 ]

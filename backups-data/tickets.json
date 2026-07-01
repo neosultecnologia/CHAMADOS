@@ -2568,7 +2568,7 @@
     "description": "Bom dia, Carlos,\nPor favor, baixar o aplicativo do whats na maquina do colaborador Tiago. Tivemos problemas com o mesmo.",
     "category": "Funcionalidade",
     "priority": "Crítica",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90006,
     "createdById": 630282,
     "createdByName": "Márcia Freitas",
@@ -2580,7 +2580,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1782231113802,
-    "updatedAt": 1782248130881
+    "updatedAt": 1782907221522
   },
   {
     "id": 3690003,
@@ -2589,7 +2589,7 @@
     "description": "Oi, Carlos, \nColaborador Tiago não consegue atender as ligados via whats, por problemas no reconhecimento do fone no app whtas. Por favor, verificar.",
     "category": "Funcionalidade",
     "priority": "Crítica",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90006,
     "createdById": 630282,
     "createdByName": "Márcia Freitas",
@@ -2601,7 +2601,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1782231404008,
-    "updatedAt": 1782248139278
+    "updatedAt": 1782907221492
   },
   {
     "id": 3720001,
@@ -2658,12 +2658,33 @@
     "createdByName": "VERIDIANA",
     "assignedToId": 300001,
     "assignedToName": "Carlos TI",
-    "waitingForDepartment": "Logistica",
-    "lastRespondentRole": "admin",
-    "lastRespondentId": 300001,
-    "lastRespondentName": "Carlos TI",
+    "waitingForDepartment": "Suporte/TI",
+    "lastRespondentRole": "user",
+    "lastRespondentId": 720001,
+    "lastRespondentName": "VERIDIANA",
     "order": 0,
     "createdAt": 1782395203685,
-    "updatedAt": 1782765362716
+    "updatedAt": 1782906114351
+  },
+  {
+    "id": 3750001,
+    "ticketId": "bilhete_3720004",
+    "title": "PC/impressora Arcox da impressão de pedidos falhando",
+    "description": "PC/impressora Arcox da impressão de etiquetas está falhando não imprimindo corretamente na sequencia.",
+    "category": "Técnico",
+    "priority": "Crítica",
+    "status": "Resolvido / Aguardando Validação",
+    "departmentId": 17,
+    "createdById": 540001,
+    "createdByName": "Mauricio Ramos",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1782849018910,
+    "updatedAt": 1782849885129
   }
 ]
