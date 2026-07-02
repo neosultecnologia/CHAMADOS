@@ -7234,5 +7234,29 @@
     "actionUrl": "/suporte/3720003",
     "isRead": false,
     "createdAt": 1782906114366
+  },
+  {
+    "id": 3660013,
+    "userId": 720001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 3720003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3720003",
+    "isRead": false,
+    "createdAt": 1782933692734
+  },
+  {
+    "id": 3690001,
+    "userId": 720001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 3720001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3720001",
+    "isRead": false,
+    "createdAt": 1783001655907
   }
 ]

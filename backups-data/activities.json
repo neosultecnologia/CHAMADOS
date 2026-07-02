@@ -7555,5 +7555,38 @@
     "newValue": "Concluído",
     "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
     "createdAt": 1782907221485
+  },
+  {
+    "id": 4590012,
+    "ticketId": 3720003,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1782933692709
+  },
+  {
+    "id": 4590013,
+    "ticketId": 3720003,
+    "type": "status_change",
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1782934996235
+  },
+  {
+    "id": 4620001,
+    "ticketId": 3720001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1783001655887
   }
 ]

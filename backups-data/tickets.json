@@ -2610,7 +2610,7 @@
     "description": "Gostaria de verificar para retirar do cabeçalho das NFe's de venda/bonificação o número de telefone fixo que consta ali, pois não temos telefone fixo no RS.\n alguns clientes relataram terem tentado entrar em contato pelo numero que consta ali.\nSegue print em anexo.",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Em Andamento",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 90004,
     "createdById": 720001,
     "createdByName": "VERIDIANA",
@@ -2622,7 +2622,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1782394664393,
-    "updatedAt": 1782822808055
+    "updatedAt": 1783001655929
   },
   {
     "id": 3720002,
@@ -2652,7 +2652,7 @@
     "description": "BOM DIA!\nGostaria de ajustar o perfil destes colaboradores:\n*Liberar acesso ao COLETOR:*\n-JAQUELINE, PEDRO GABRIEL, ALEXANDRE, GIOVANA e ANA.P\n\n*Liberar acesso ao Módulo ESTOQUE*:\n-ALEXANDRE",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Em Andamento",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 720001,
     "createdByName": "VERIDIANA",
@@ -2664,7 +2664,7 @@
     "lastRespondentName": "VERIDIANA",
     "order": 0,
     "createdAt": 1782395203685,
-    "updatedAt": 1782906114351
+    "updatedAt": 1782934996260
   },
   {
     "id": 3750001,
