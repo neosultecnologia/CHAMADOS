@@ -394,5 +394,29 @@
     "uploadedById": 720001,
     "uploadedByName": "VERIDIANA",
     "createdAt": 1782395009958
+  },
+  {
+    "id": 570001,
+    "ticketId": 3810001,
+    "fileName": "WhatsApp Image 2026-07-07 at 10.55.57.jpeg",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/3810001/1783451313718-89wz1-WhatsApp Image 2026-07-07 at 10.55.57.jpeg",
+    "fileKey": "tickets/3810001/1783451313718-89wz1-WhatsApp Image 2026-07-07 at 10.55.57.jpeg",
+    "mimeType": "image/jpeg",
+    "fileSize": 42617,
+    "uploadedById": 390001,
+    "uploadedByName": "Maria Eduarda Chagas",
+    "createdAt": 1783451314072
+  },
+  {
+    "id": 600001,
+    "ticketId": 3870001,
+    "fileName": "WhatsApp Image 2026-07-15 at 09.58.51.jpeg",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/3870001/1784120823416-jjcbgq-WhatsApp Image 2026-07-15 at 09.58.51.jpeg",
+    "fileKey": "tickets/3870001/1784120823416-jjcbgq-WhatsApp Image 2026-07-15 at 09.58.51.jpeg",
+    "mimeType": "image/jpeg",
+    "fileSize": 39439,
+    "uploadedById": 1050001,
+    "uploadedByName": "Kerolaine Morgantti da Cruz",
+    "createdAt": 1784120823753
   }
 ]

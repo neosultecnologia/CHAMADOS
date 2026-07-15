@@ -526,5 +526,13 @@
     "authorName": "VERIDIANA",
     "content": "Bom dia!\n*Liberar acesso ao COLETOR:* espelhar Tailana\n*Liberar acesso ao Módulo ESTOQUE*: espelhar Ana Paula Santos\n",
     "createdAt": 1782906114312
+  },
+  {
+    "id": 1320001,
+    "ticketId": 3720002,
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "content": "oi Carlos, foi resolvido?\n",
+    "createdAt": 1783448273938
   }
 ]

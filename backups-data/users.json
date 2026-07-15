@@ -27,8 +27,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-07-02T21:00:37.000Z",
-    "lastSignedIn": "2026-07-02T21:00:37.000Z"
+    "updatedAt": "2026-07-13T20:59:16.000Z",
+    "lastSignedIn": "2026-07-13T19:31:23.000Z"
   },
   {
     "id": 23,
@@ -140,6 +140,12 @@
         "read": true,
         "update": true
       },
+      "monitor_tv": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
       "pescador": {
         "create": true,
         "delete": true,
@@ -172,7 +178,7 @@
       }
     },
     "createdAt": "2026-02-04T13:17:56.000Z",
-    "updatedAt": "2026-06-23T20:55:17.000Z",
+    "updatedAt": "2026-07-08T11:15:32.000Z",
     "lastSignedIn": "2026-05-08T20:58:55.000Z"
   },
   {
@@ -332,8 +338,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-02-06T11:27:15.000Z",
-    "updatedAt": "2026-07-01T13:21:42.000Z",
-    "lastSignedIn": "2026-07-01T13:21:42.000Z"
+    "updatedAt": "2026-07-13T21:06:42.000Z",
+    "lastSignedIn": "2026-07-13T21:06:43.000Z"
   },
   {
     "id": 300002,
@@ -658,8 +664,8 @@
       }
     },
     "createdAt": "2026-02-10T17:43:46.000Z",
-    "updatedAt": "2026-06-23T16:25:28.000Z",
-    "lastSignedIn": "2026-02-11T14:24:42.000Z"
+    "updatedAt": "2026-07-09T15:05:12.000Z",
+    "lastSignedIn": "2026-07-09T15:05:13.000Z"
   },
   {
     "id": 450001,
@@ -1697,6 +1703,12 @@
         "read": true,
         "update": true
       },
+      "monitor_tv": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
       "repasses": {
         "create": true,
         "delete": true,
@@ -1723,7 +1735,7 @@
       }
     },
     "createdAt": "2026-05-21T15:13:16.000Z",
-    "updatedAt": "2026-06-23T16:26:08.000Z",
+    "updatedAt": "2026-07-10T18:18:07.000Z",
     "lastSignedIn": "2026-06-01T12:31:01.000Z"
   },
   {
@@ -1892,5 +1904,36 @@
     "createdAt": "2026-06-12T12:10:37.000Z",
     "updatedAt": "2026-06-23T16:24:43.000Z",
     "lastSignedIn": "2026-06-12T17:40:20.000Z"
+  },
+  {
+    "id": 2550001,
+    "openId": null,
+    "name": "Marcelo",
+    "email": "inovacao@neosuldistribuidora.com.br",
+    "passwordHash": "$2b$10$CaMSVlKPFdKZdmm5C3cf1ubqFOG8fmi/be/a.QVFDMkvXs.R0UNKO",
+    "loginMethod": "internal",
+    "role": "admin",
+    "approvalStatus": "approved",
+    "departmentId": null,
+    "groupId": 4,
+    "permissions": {
+      "almoxarifado": true,
+      "chamados": true,
+      "comercial": true,
+      "compras": true,
+      "contratos": true,
+      "desenvolvimento": true,
+      "gestao_negocios": true,
+      "marketing": true,
+      "projetos": true,
+      "repasses": true,
+      "rh": true,
+      "superestocados": true,
+      "suporte": true,
+      "tecnologia": true
+    },
+    "createdAt": "2026-07-13T13:28:42.000Z",
+    "updatedAt": "2026-07-13T13:31:49.000Z",
+    "lastSignedIn": "2026-07-13T13:31:50.000Z"
   }
 ]

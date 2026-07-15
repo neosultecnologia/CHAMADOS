@@ -7588,5 +7588,203 @@
     "newValue": "Resolvido / Aguardando Validação",
     "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
     "createdAt": 1783001655887
+  },
+  {
+    "id": 4650001,
+    "ticketId": 3720001,
+    "type": "status_change",
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1783345700592
+  },
+  {
+    "id": 4650002,
+    "ticketId": 3780001,
+    "type": "created",
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por VERIDIANA",
+    "createdAt": 1783345783513
+  },
+  {
+    "id": 4680001,
+    "ticketId": 3690001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1783369312063
+  },
+  {
+    "id": 4680002,
+    "ticketId": 3690001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1783370337917
+  },
+  {
+    "id": 4680003,
+    "ticketId": 3720002,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1783370358735
+  },
+  {
+    "id": 4680004,
+    "ticketId": 3720002,
+    "type": "comment",
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por VERIDIANA",
+    "createdAt": 1783448273938
+  },
+  {
+    "id": 4680005,
+    "ticketId": 3810001,
+    "type": "created",
+    "authorId": 390001,
+    "authorName": "Maria Eduarda Chagas",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Maria Eduarda Chagas",
+    "createdAt": 1783451313079
+  },
+  {
+    "id": 4710001,
+    "ticketId": 3720002,
+    "type": "status_change",
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1783511916225
+  },
+  {
+    "id": 4710002,
+    "ticketId": 3750001,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1783512192585
+  },
+  {
+    "id": 4740001,
+    "ticketId": 3840001,
+    "type": "created",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Kerolaine Morgantti da Cruz",
+    "createdAt": 1783538763251
+  },
+  {
+    "id": 4740002,
+    "ticketId": 3840001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1783540872741
+  },
+  {
+    "id": 4740003,
+    "ticketId": 3840001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1783540874133
+  },
+  {
+    "id": 4740004,
+    "ticketId": 3810001,
+    "type": "status_change",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1783620186225
+  },
+  {
+    "id": 4740005,
+    "ticketId": 3810001,
+    "type": "assignment",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Não atribuído",
+    "newValue": "Gabriel Bino",
+    "description": "Responsável alterado para \"Gabriel Bino\"",
+    "createdAt": 1783620191898
+  },
+  {
+    "id": 4740006,
+    "ticketId": 3810001,
+    "type": "status_change",
+    "authorId": 390001,
+    "authorName": "Maria Eduarda Chagas",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1783621081517
+  },
+  {
+    "id": 4770001,
+    "ticketId": 3690001,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1784030611013
+  },
+  {
+    "id": 4800001,
+    "ticketId": 3840001,
+    "type": "status_change",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1784120038398
+  },
+  {
+    "id": 4800002,
+    "ticketId": 3870001,
+    "type": "created",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Kerolaine Morgantti da Cruz",
+    "createdAt": 1784120822625
   }
 ]

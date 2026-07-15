@@ -3032,7 +3032,7 @@
     "referenceId": 1770006,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1770006",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1775579483139
   },
   {
@@ -3164,7 +3164,7 @@
     "referenceId": 1770006,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1770006",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1775677203556
   },
   {
@@ -4964,7 +4964,7 @@
     "referenceId": 2130037,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2130037",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1778865299296
   },
   {
@@ -5060,7 +5060,7 @@
     "referenceId": 2280005,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2280005",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1779108668483
   },
   {
@@ -5168,7 +5168,7 @@
     "referenceId": 2280005,
     "referenceType": "ticket",
     "actionUrl": "/suporte/2280005",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1779114904382
   },
   {
@@ -7176,18 +7176,6 @@
     "createdAt": 1782849019001
   },
   {
-    "id": 3660008,
-    "userId": 60001,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Mauricio Ramos abriu um novo chamado: \"PC/impressora Arcox da impressão de pedidos falhando\"",
-    "referenceId": 3750001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/3750001",
-    "isRead": false,
-    "createdAt": 1782849019018
-  },
-  {
     "id": 3660009,
     "userId": 690001,
     "type": "ticket_assigned",
@@ -7258,5 +7246,245 @@
     "actionUrl": "/suporte/3720001",
     "isRead": false,
     "createdAt": 1783001655907
+  },
+  {
+    "id": 3720001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "VERIDIANA abriu um novo chamado: \"Sugestão de Melhoria no Módulo Estoque: Conferência de Recebimento de NF-e em Lote / Agrupamento\"",
+    "referenceId": 3780001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3780001",
+    "isRead": false,
+    "createdAt": 1783345783579
+  },
+  {
+    "id": 3720002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "VERIDIANA abriu um novo chamado: \"Sugestão de Melhoria no Módulo Estoque: Conferência de Recebimento de NF-e em Lote / Agrupamento\"",
+    "referenceId": 3780001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3780001",
+    "isRead": false,
+    "createdAt": 1783345783617
+  },
+  {
+    "id": 3720003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "VERIDIANA abriu um novo chamado: \"Sugestão de Melhoria no Módulo Estoque: Conferência de Recebimento de NF-e em Lote / Agrupamento\"",
+    "referenceId": 3780001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3780001",
+    "isRead": false,
+    "createdAt": 1783345783641
+  },
+  {
+    "id": 3750001,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"INSTALAÇÃO DO INFARMA CUBOS\"",
+    "referenceId": 3690001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3690001",
+    "isRead": false,
+    "createdAt": 1783369312096
+  },
+  {
+    "id": 3750002,
+    "userId": 360002,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 3690001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3690001",
+    "isRead": false,
+    "createdAt": 1783370337938
+  },
+  {
+    "id": 3750003,
+    "userId": 720001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 3720002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3720002",
+    "isRead": false,
+    "createdAt": 1783370358755
+  },
+  {
+    "id": 3750004,
+    "userId": 300001,
+    "type": "ticket_comment",
+    "title": "Novo Comentario no Chamado",
+    "message": "VERIDIANA comentou no chamado: \"envio de arquivo XML- arquivos pendentes na fila de envio\"",
+    "referenceId": 3720002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3720002",
+    "isRead": false,
+    "createdAt": 1783448274045
+  },
+  {
+    "id": 3750005,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Maria Eduarda Chagas abriu um novo chamado: \"Erro Conta Corrente\"",
+    "referenceId": 3810001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3810001",
+    "isRead": false,
+    "createdAt": 1783451313168
+  },
+  {
+    "id": 3750006,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Maria Eduarda Chagas abriu um novo chamado: \"Erro Conta Corrente\"",
+    "referenceId": 3810001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3810001",
+    "isRead": false,
+    "createdAt": 1783451313188
+  },
+  {
+    "id": 3750007,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Maria Eduarda Chagas abriu um novo chamado: \"Erro Conta Corrente\"",
+    "referenceId": 3810001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3810001",
+    "isRead": false,
+    "createdAt": 1783451313215
+  },
+  {
+    "id": 3780001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Formatação e Instalação de Programas\"",
+    "referenceId": 3840001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3840001",
+    "isRead": false,
+    "createdAt": 1783538763314
+  },
+  {
+    "id": 3780002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Formatação e Instalação de Programas\"",
+    "referenceId": 3840001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3840001",
+    "isRead": false,
+    "createdAt": 1783538763350
+  },
+  {
+    "id": 3780003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Formatação e Instalação de Programas\"",
+    "referenceId": 3840001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3840001",
+    "isRead": false,
+    "createdAt": 1783538763368
+  },
+  {
+    "id": 3780005,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Formatação e Instalação de Programas\"",
+    "referenceId": 3840001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3840001",
+    "isRead": false,
+    "createdAt": 1783540872763
+  },
+  {
+    "id": 3780006,
+    "userId": 1050001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 3840001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3840001",
+    "isRead": false,
+    "createdAt": 1783540874232
+  },
+  {
+    "id": 3780007,
+    "userId": 390001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 3810001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3810001",
+    "isRead": true,
+    "createdAt": 1783620186485
+  },
+  {
+    "id": 3810001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Logar Teams\"",
+    "referenceId": 3870001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3870001",
+    "isRead": false,
+    "createdAt": 1784120822691
+  },
+  {
+    "id": 3810002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Logar Teams\"",
+    "referenceId": 3870001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3870001",
+    "isRead": false,
+    "createdAt": 1784120822729
+  },
+  {
+    "id": 3810003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Logar Teams\"",
+    "referenceId": 3870001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3870001",
+    "isRead": false,
+    "createdAt": 1784120822748
+  },
+  {
+    "id": 3810005,
+    "userId": 2550001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Logar Teams\"",
+    "referenceId": 3870001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3870001",
+    "isRead": false,
+    "createdAt": 1784120822905
   }
 ]
