@@ -2770,5 +2770,26 @@
     "order": 0,
     "createdAt": 1784120822625,
     "updatedAt": 1784120822625
+  },
+  {
+    "id": 3900001,
+    "ticketId": "bilhete_3870002",
+    "title": "E-mail não abre",
+    "description": "O e-mail não está abrindo.\n\nAnidesk: 796 946 943",
+    "category": "Técnico",
+    "priority": "Alta",
+    "status": "Novos",
+    "departmentId": 90004,
+    "createdById": 1050001,
+    "createdByName": "Kerolaine Morgantti da Cruz",
+    "assignedToId": null,
+    "assignedToName": null,
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1784211142227,
+    "updatedAt": 1784211142227
   }
 ]

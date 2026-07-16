@@ -7486,5 +7486,65 @@
     "actionUrl": "/suporte/3870001",
     "isRead": false,
     "createdAt": 1784120822905
+  },
+  {
+    "id": 3840001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"E-mail não abre\"",
+    "referenceId": 3900001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3900001",
+    "isRead": false,
+    "createdAt": 1784211142309
+  },
+  {
+    "id": 3840002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"E-mail não abre\"",
+    "referenceId": 3900001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3900001",
+    "isRead": false,
+    "createdAt": 1784211142348
+  },
+  {
+    "id": 3840003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"E-mail não abre\"",
+    "referenceId": 3900001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3900001",
+    "isRead": false,
+    "createdAt": 1784211142379
+  },
+  {
+    "id": 3840004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"E-mail não abre\"",
+    "referenceId": 3900001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3900001",
+    "isRead": false,
+    "createdAt": 1784211142398
+  },
+  {
+    "id": 3840005,
+    "userId": 2550001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"E-mail não abre\"",
+    "referenceId": 3900001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3900001",
+    "isRead": false,
+    "createdAt": 1784211142414
   }
 ]

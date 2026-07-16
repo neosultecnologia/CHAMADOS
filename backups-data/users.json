@@ -27,8 +27,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-07-13T20:59:16.000Z",
-    "lastSignedIn": "2026-07-13T19:31:23.000Z"
+    "updatedAt": "2026-07-15T20:40:31.000Z",
+    "lastSignedIn": "2026-07-15T20:40:31.000Z"
   },
   {
     "id": 23,
@@ -371,6 +371,12 @@
         "read": false,
         "update": false
       },
+      "compradores": {
+        "create": false,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
       "compras": {
         "create": false,
         "delete": false,
@@ -427,7 +433,7 @@
       }
     },
     "createdAt": "2026-02-06T11:49:24.000Z",
-    "updatedAt": "2026-06-23T16:24:02.000Z",
+    "updatedAt": "2026-07-15T20:51:22.000Z",
     "lastSignedIn": "2026-02-10T17:02:39.000Z"
   },
   {
@@ -602,6 +608,12 @@
         "read": false,
         "update": false
       },
+      "compradores": {
+        "create": false,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
       "compras": {
         "create": false,
         "delete": false,
@@ -664,7 +676,7 @@
       }
     },
     "createdAt": "2026-02-10T17:43:46.000Z",
-    "updatedAt": "2026-07-09T15:05:12.000Z",
+    "updatedAt": "2026-07-15T20:52:27.000Z",
     "lastSignedIn": "2026-07-09T15:05:13.000Z"
   },
   {
@@ -696,6 +708,12 @@
         "delete": false,
         "read": false,
         "update": false
+      },
+      "compradores": {
+        "create": false,
+        "delete": true,
+        "read": true,
+        "update": true
       },
       "compras": {
         "create": false,
@@ -753,7 +771,7 @@
       }
     },
     "createdAt": "2026-02-12T16:40:58.000Z",
-    "updatedAt": "2026-06-23T16:23:45.000Z",
+    "updatedAt": "2026-07-15T20:52:59.000Z",
     "lastSignedIn": "2026-04-16T18:25:43.000Z"
   },
   {
@@ -1685,6 +1703,12 @@
         "read": false,
         "update": false
       },
+      "compradores": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
       "contratos": {
         "create": true,
         "delete": true,
@@ -1735,7 +1759,7 @@
       }
     },
     "createdAt": "2026-05-21T15:13:16.000Z",
-    "updatedAt": "2026-07-10T18:18:07.000Z",
+    "updatedAt": "2026-07-15T20:50:36.000Z",
     "lastSignedIn": "2026-06-01T12:31:01.000Z"
   },
   {

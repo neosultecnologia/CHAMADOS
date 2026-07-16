@@ -7786,5 +7786,16 @@
     "newValue": null,
     "description": "Chamado criado por Kerolaine Morgantti da Cruz",
     "createdAt": 1784120822625
+  },
+  {
+    "id": 4830001,
+    "ticketId": 3900001,
+    "type": "created",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Kerolaine Morgantti da Cruz",
+    "createdAt": 1784211142227
   }
 ]

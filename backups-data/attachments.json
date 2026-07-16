@@ -418,5 +418,17 @@
     "uploadedById": 1050001,
     "uploadedByName": "Kerolaine Morgantti da Cruz",
     "createdAt": 1784120823753
+  },
+  {
+    "id": 630001,
+    "ticketId": 3900001,
+    "fileName": "Capturar.PNG",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/3900001/1784211142766-que0yj-Capturar.PNG",
+    "fileKey": "tickets/3900001/1784211142766-que0yj-Capturar.PNG",
+    "mimeType": "image/png",
+    "fileSize": 7965,
+    "uploadedById": 1050001,
+    "uploadedByName": "Kerolaine Morgantti da Cruz",
+    "createdAt": 1784211143203
   }
 ]
