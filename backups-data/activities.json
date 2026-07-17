@@ -7797,5 +7797,27 @@
     "newValue": null,
     "description": "Chamado criado por Kerolaine Morgantti da Cruz",
     "createdAt": 1784211142227
+  },
+  {
+    "id": 4860001,
+    "ticketId": 3900001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1784230994051
+  },
+  {
+    "id": 4860002,
+    "ticketId": 3900001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1784230997644
   }
 ]
