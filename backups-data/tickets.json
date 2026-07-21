@@ -2757,19 +2757,19 @@
     "description": "Favor logar o teams no computador da Livia (devolução)\nAniDesk: 1 578 575 896",
     "category": "Técnico",
     "priority": "Baixa",
-    "status": "Novos",
+    "status": "Em Andamento",
     "departmentId": 90004,
     "createdById": 1050001,
     "createdByName": "Kerolaine Morgantti da Cruz",
-    "assignedToId": null,
-    "assignedToName": null,
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
     "waitingForDepartment": null,
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1784120822625,
-    "updatedAt": 1784120822625
+    "updatedAt": 1784550209243
   },
   {
     "id": 3900001,

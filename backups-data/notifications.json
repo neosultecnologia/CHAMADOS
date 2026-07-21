@@ -7558,5 +7558,29 @@
     "actionUrl": "/suporte/3900001",
     "isRead": false,
     "createdAt": 1784230997670
+  },
+  {
+    "id": 3900001,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Logar Teams\"",
+    "referenceId": 3870001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3870001",
+    "isRead": false,
+    "createdAt": 1784550206425
+  },
+  {
+    "id": 3900002,
+    "userId": 1050001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 3870001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3870001",
+    "isRead": false,
+    "createdAt": 1784550209222
   }
 ]
