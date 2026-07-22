@@ -2778,7 +2778,7 @@
     "description": "O e-mail não está abrindo.\n\nAnidesk: 796 946 943",
     "category": "Técnico",
     "priority": "Alta",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 1050001,
     "createdByName": "Kerolaine Morgantti da Cruz",
@@ -2790,6 +2790,27 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1784211142227,
-    "updatedAt": 1784230997704
+    "updatedAt": 1784719815515
+  },
+  {
+    "id": 3960001,
+    "ticketId": "bilhete_3900002",
+    "title": "Cadastrar impressora",
+    "description": "Favor cadastrar a impressora no notebook.\n\nanydesk: 1 918 516 911",
+    "category": "Técnico",
+    "priority": "Média",
+    "status": "Em Andamento",
+    "departmentId": 90004,
+    "createdById": 1050001,
+    "createdByName": "Kerolaine Morgantti da Cruz",
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1784719907015,
+    "updatedAt": 1784720110461
   }
 ]

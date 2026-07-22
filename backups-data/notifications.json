@@ -7582,5 +7582,89 @@
     "actionUrl": "/suporte/3870001",
     "isRead": false,
     "createdAt": 1784550209222
+  },
+  {
+    "id": 3930001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Cadastrar impressora\"",
+    "referenceId": 3960001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3960001",
+    "isRead": false,
+    "createdAt": 1784719907089
+  },
+  {
+    "id": 3930002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Cadastrar impressora\"",
+    "referenceId": 3960001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3960001",
+    "isRead": false,
+    "createdAt": 1784719907123
+  },
+  {
+    "id": 3930003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Cadastrar impressora\"",
+    "referenceId": 3960001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3960001",
+    "isRead": false,
+    "createdAt": 1784719907143
+  },
+  {
+    "id": 3930004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Cadastrar impressora\"",
+    "referenceId": 3960001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3960001",
+    "isRead": false,
+    "createdAt": 1784719907164
+  },
+  {
+    "id": 3930005,
+    "userId": 2550001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Cadastrar impressora\"",
+    "referenceId": 3960001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3960001",
+    "isRead": false,
+    "createdAt": 1784719907192
+  },
+  {
+    "id": 3930006,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Cadastrar impressora\"",
+    "referenceId": 3960001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3960001",
+    "isRead": false,
+    "createdAt": 1784720109306
+  },
+  {
+    "id": 3930007,
+    "userId": 1050001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Em Andamento",
+    "referenceId": 3960001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3960001",
+    "isRead": false,
+    "createdAt": 1784720110439
   }
 ]
