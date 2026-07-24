@@ -7885,5 +7885,27 @@
     "newValue": "Em Andamento",
     "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
     "createdAt": 1784720110418
+  },
+  {
+    "id": 4950001,
+    "ticketId": 3960001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1784813311043
+  },
+  {
+    "id": 4950002,
+    "ticketId": 3990001,
+    "type": "created",
+    "authorId": 540001,
+    "authorName": "Mauricio Ramos",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mauricio Ramos",
+    "createdAt": 1784820178427
   }
 ]

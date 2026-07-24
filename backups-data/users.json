@@ -27,8 +27,8 @@
       "tecnologia": true
     },
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-07-21T19:19:11.000Z",
-    "lastSignedIn": "2026-07-21T19:19:11.000Z"
+    "updatedAt": "2026-07-23T20:12:48.000Z",
+    "lastSignedIn": "2026-07-23T20:12:49.000Z"
   },
   {
     "id": 23,
@@ -128,6 +128,12 @@
         "read": true,
         "update": true
       },
+      "diretoria_pedidos_layout": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
       "envio_parcial": {
         "create": true,
         "delete": true,
@@ -178,7 +184,7 @@
       }
     },
     "createdAt": "2026-02-04T13:17:56.000Z",
-    "updatedAt": "2026-07-08T11:15:32.000Z",
+    "updatedAt": "2026-07-23T14:45:32.000Z",
     "lastSignedIn": "2026-05-08T20:58:55.000Z"
   },
   {
@@ -433,7 +439,7 @@
       }
     },
     "createdAt": "2026-02-06T11:49:24.000Z",
-    "updatedAt": "2026-07-15T20:51:22.000Z",
+    "updatedAt": "2026-07-22T18:58:13.000Z",
     "lastSignedIn": "2026-02-10T17:02:39.000Z"
   },
   {
@@ -676,7 +682,7 @@
       }
     },
     "createdAt": "2026-02-10T17:43:46.000Z",
-    "updatedAt": "2026-07-17T12:26:08.000Z",
+    "updatedAt": "2026-07-22T18:58:24.000Z",
     "lastSignedIn": "2026-07-17T12:26:09.000Z"
   },
   {
@@ -771,7 +777,7 @@
       }
     },
     "createdAt": "2026-02-12T16:40:58.000Z",
-    "updatedAt": "2026-07-15T20:52:59.000Z",
+    "updatedAt": "2026-07-22T18:58:34.000Z",
     "lastSignedIn": "2026-04-16T18:25:43.000Z"
   },
   {
@@ -1963,7 +1969,7 @@
       "tecnologia": true
     },
     "createdAt": "2026-07-13T13:28:42.000Z",
-    "updatedAt": "2026-07-13T13:31:49.000Z",
-    "lastSignedIn": "2026-07-13T13:31:50.000Z"
+    "updatedAt": "2026-07-23T17:54:14.000Z",
+    "lastSignedIn": "2026-07-23T17:54:14.000Z"
   }
 ]

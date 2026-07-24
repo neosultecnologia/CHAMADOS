@@ -2799,7 +2799,7 @@
     "description": "Favor cadastrar a impressora no notebook.\n\nanydesk: 1 918 516 911",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Em Andamento",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 90004,
     "createdById": 1050001,
     "createdByName": "Kerolaine Morgantti da Cruz",
@@ -2811,6 +2811,27 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1784719907015,
-    "updatedAt": 1784720110461
+    "updatedAt": 1784813311098
+  },
+  {
+    "id": 3990001,
+    "ticketId": "bilhete_3960002",
+    "title": "Impressora da Picking com defeito",
+    "description": "Impressora não esta imprimindo corretamente, e a backup também está apresentando problemas",
+    "category": "Técnico",
+    "priority": "Crítica",
+    "status": "Novos",
+    "departmentId": 17,
+    "createdById": 540001,
+    "createdByName": "Mauricio Ramos",
+    "assignedToId": null,
+    "assignedToName": null,
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1784820178427,
+    "updatedAt": 1784820178427
   }
 ]

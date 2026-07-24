@@ -7666,5 +7666,77 @@
     "actionUrl": "/suporte/3960001",
     "isRead": false,
     "createdAt": 1784720110439
+  },
+  {
+    "id": 3960001,
+    "userId": 1050001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 3960001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3960001",
+    "isRead": false,
+    "createdAt": 1784813311073
+  },
+  {
+    "id": 3960002,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Impressora da Picking com defeito \"",
+    "referenceId": 3990001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3990001",
+    "isRead": false,
+    "createdAt": 1784820178494
+  },
+  {
+    "id": 3960003,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Impressora da Picking com defeito \"",
+    "referenceId": 3990001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3990001",
+    "isRead": false,
+    "createdAt": 1784820178514
+  },
+  {
+    "id": 3960004,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Impressora da Picking com defeito \"",
+    "referenceId": 3990001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3990001",
+    "isRead": false,
+    "createdAt": 1784820178539
+  },
+  {
+    "id": 3960005,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Impressora da Picking com defeito \"",
+    "referenceId": 3990001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3990001",
+    "isRead": false,
+    "createdAt": 1784820178571
+  },
+  {
+    "id": 3960006,
+    "userId": 2550001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Mauricio Ramos abriu um novo chamado: \"Impressora da Picking com defeito \"",
+    "referenceId": 3990001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3990001",
+    "isRead": false,
+    "createdAt": 1784820178593
   }
 ]
