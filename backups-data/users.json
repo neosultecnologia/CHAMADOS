@@ -26,9 +26,10 @@
       "suporte": true,
       "tecnologia": true
     },
+    "enabled": true,
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-07-23T20:12:48.000Z",
-    "lastSignedIn": "2026-07-23T20:12:49.000Z"
+    "updatedAt": "2026-07-24T19:14:59.000Z",
+    "lastSignedIn": "2026-07-24T19:15:00.000Z"
   },
   {
     "id": 23,
@@ -57,6 +58,7 @@
       "suporte": true,
       "tecnologia": true
     },
+    "enabled": true,
     "createdAt": "2026-01-27T00:20:12.000Z",
     "updatedAt": "2026-06-16T14:20:55.000Z",
     "lastSignedIn": "2026-06-16T14:20:56.000Z"
@@ -88,6 +90,7 @@
       "suporte": true,
       "tecnologia": true
     },
+    "enabled": true,
     "createdAt": "2026-02-04T11:57:53.000Z",
     "updatedAt": "2026-07-02T11:39:26.000Z",
     "lastSignedIn": "2026-07-02T11:39:26.000Z"
@@ -123,6 +126,12 @@
         "update": true
       },
       "desenvolvimento": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "diretoria_cortes_bi": {
         "create": true,
         "delete": true,
         "read": true,
@@ -183,8 +192,9 @@
         "update": true
       }
     },
+    "enabled": true,
     "createdAt": "2026-02-04T13:17:56.000Z",
-    "updatedAt": "2026-07-23T14:45:32.000Z",
+    "updatedAt": "2026-07-24T12:34:18.000Z",
     "lastSignedIn": "2026-05-08T20:58:55.000Z"
   },
   {
@@ -205,6 +215,7 @@
       "superestocados": true,
       "suporte": true
     },
+    "enabled": true,
     "createdAt": "2026-02-04T13:22:36.000Z",
     "updatedAt": "2026-05-06T12:37:21.000Z",
     "lastSignedIn": "2026-02-12T18:56:48.000Z"
@@ -312,6 +323,7 @@
         "update": false
       }
     },
+    "enabled": true,
     "createdAt": "2026-02-05T01:16:56.000Z",
     "updatedAt": "2026-07-21T16:37:59.000Z",
     "lastSignedIn": "2026-04-08T14:16:35.000Z"
@@ -343,9 +355,10 @@
       "suporte": true,
       "tecnologia": true
     },
+    "enabled": true,
     "createdAt": "2026-02-06T11:27:15.000Z",
-    "updatedAt": "2026-07-21T18:16:29.000Z",
-    "lastSignedIn": "2026-07-21T18:16:30.000Z"
+    "updatedAt": "2026-07-24T14:24:09.000Z",
+    "lastSignedIn": "2026-07-24T14:24:09.000Z"
   },
   {
     "id": 300002,
@@ -438,6 +451,7 @@
         "update": false
       }
     },
+    "enabled": true,
     "createdAt": "2026-02-06T11:49:24.000Z",
     "updatedAt": "2026-07-22T18:58:13.000Z",
     "lastSignedIn": "2026-02-10T17:02:39.000Z"
@@ -464,6 +478,7 @@
       "suporte": true,
       "tecnologia": false
     },
+    "enabled": true,
     "createdAt": "2026-02-09T17:40:14.000Z",
     "updatedAt": "2026-06-18T13:53:22.000Z",
     "lastSignedIn": "2026-06-18T13:53:23.000Z"
@@ -491,8 +506,9 @@
       "suporte": true,
       "tecnologia": false
     },
+    "enabled": false,
     "createdAt": "2026-02-10T17:00:56.000Z",
-    "updatedAt": "2026-05-06T12:37:02.000Z",
+    "updatedAt": "2026-07-24T14:24:32.000Z",
     "lastSignedIn": "2026-02-12T17:55:18.000Z"
   },
   {
@@ -580,6 +596,7 @@
         "update": false
       }
     },
+    "enabled": true,
     "createdAt": "2026-02-10T17:05:04.000Z",
     "updatedAt": "2026-06-23T16:25:49.000Z",
     "lastSignedIn": "2026-02-11T14:50:52.000Z"
@@ -681,6 +698,7 @@
         "update": false
       }
     },
+    "enabled": true,
     "createdAt": "2026-02-10T17:43:46.000Z",
     "updatedAt": "2026-07-22T18:58:24.000Z",
     "lastSignedIn": "2026-07-17T12:26:09.000Z"
@@ -776,6 +794,7 @@
         "update": false
       }
     },
+    "enabled": true,
     "createdAt": "2026-02-12T16:40:58.000Z",
     "updatedAt": "2026-07-22T18:58:34.000Z",
     "lastSignedIn": "2026-04-16T18:25:43.000Z"
@@ -803,8 +822,9 @@
       "suporte": true,
       "tecnologia": false
     },
+    "enabled": false,
     "createdAt": "2026-02-12T17:52:57.000Z",
-    "updatedAt": "2026-05-06T12:36:57.000Z",
+    "updatedAt": "2026-07-24T14:24:21.000Z",
     "lastSignedIn": null
   },
   {
@@ -828,6 +848,7 @@
       "suporte": true,
       "tecnologia": false
     },
+    "enabled": true,
     "createdAt": "2026-02-12T18:07:55.000Z",
     "updatedAt": "2026-05-06T12:37:25.000Z",
     "lastSignedIn": "2026-04-06T13:51:46.000Z"
@@ -853,8 +874,9 @@
       "suporte": true,
       "tecnologia": false
     },
+    "enabled": false,
     "createdAt": "2026-02-12T18:40:52.000Z",
-    "updatedAt": "2026-05-06T12:37:25.000Z",
+    "updatedAt": "2026-07-24T14:24:26.000Z",
     "lastSignedIn": "2026-02-12T18:44:05.000Z"
   },
   {
@@ -879,6 +901,7 @@
       "suporte": true,
       "tecnologia": false
     },
+    "enabled": true,
     "createdAt": "2026-02-12T22:36:37.000Z",
     "updatedAt": "2026-05-06T12:37:30.000Z",
     "lastSignedIn": "2026-04-07T14:23:48.000Z"
@@ -905,6 +928,7 @@
       "suporte": true,
       "tecnologia": false
     },
+    "enabled": true,
     "createdAt": "2026-02-12T22:37:12.000Z",
     "updatedAt": "2026-05-06T12:37:30.000Z",
     "lastSignedIn": "2026-02-16T23:46:34.000Z"
@@ -931,6 +955,7 @@
       "suporte": true,
       "tecnologia": false
     },
+    "enabled": true,
     "createdAt": "2026-02-12T22:39:47.000Z",
     "updatedAt": "2026-05-06T12:37:30.000Z",
     "lastSignedIn": "2026-03-06T19:49:55.000Z"
@@ -957,6 +982,7 @@
       "suporte": true,
       "tecnologia": false
     },
+    "enabled": true,
     "createdAt": "2026-02-13T12:07:28.000Z",
     "updatedAt": "2026-06-10T12:10:16.000Z",
     "lastSignedIn": "2026-06-10T12:10:17.000Z"
@@ -1040,6 +1066,7 @@
         "update": false
       }
     },
+    "enabled": true,
     "createdAt": "2026-02-13T18:37:55.000Z",
     "updatedAt": "2026-06-23T15:44:03.000Z",
     "lastSignedIn": "2026-02-16T19:05:11.000Z"
@@ -1129,6 +1156,7 @@
         "update": false
       }
     },
+    "enabled": true,
     "createdAt": "2026-02-16T18:16:05.000Z",
     "updatedAt": "2026-06-19T12:44:07.000Z",
     "lastSignedIn": "2026-06-19T11:57:35.000Z"
@@ -1212,6 +1240,7 @@
         "update": false
       }
     },
+    "enabled": true,
     "createdAt": "2026-02-16T18:18:27.000Z",
     "updatedAt": "2026-06-23T15:44:45.000Z",
     "lastSignedIn": "2026-02-16T19:04:42.000Z"
@@ -1319,6 +1348,7 @@
         "update": false
       }
     },
+    "enabled": true,
     "createdAt": "2026-02-16T19:01:39.000Z",
     "updatedAt": "2026-06-23T15:43:47.000Z",
     "lastSignedIn": null
@@ -1402,6 +1432,7 @@
         "update": false
       }
     },
+    "enabled": true,
     "createdAt": "2026-02-16T19:04:18.000Z",
     "updatedAt": "2026-06-23T15:44:26.000Z",
     "lastSignedIn": "2026-06-18T20:10:47.000Z"
@@ -1429,6 +1460,7 @@
       "suporte": true,
       "tecnologia": false
     },
+    "enabled": true,
     "createdAt": "2026-02-19T14:19:27.000Z",
     "updatedAt": "2026-05-06T12:36:57.000Z",
     "lastSignedIn": "2026-03-23T15:08:04.000Z"
@@ -1455,6 +1487,7 @@
       "suporte": true,
       "tecnologia": false
     },
+    "enabled": true,
     "createdAt": "2026-02-19T17:04:45.000Z",
     "updatedAt": "2026-05-06T12:37:30.000Z",
     "lastSignedIn": "2026-03-25T20:32:12.000Z"
@@ -1481,6 +1514,7 @@
       "suporte": true,
       "tecnologia": false
     },
+    "enabled": true,
     "createdAt": "2026-02-23T18:57:42.000Z",
     "updatedAt": "2026-05-06T12:37:08.000Z",
     "lastSignedIn": "2026-02-23T18:59:13.000Z"
@@ -1507,6 +1541,7 @@
       "suporte": true,
       "tecnologia": false
     },
+    "enabled": true,
     "createdAt": "2026-02-27T13:21:22.000Z",
     "updatedAt": "2026-06-02T20:42:32.000Z",
     "lastSignedIn": "2026-06-02T20:42:33.000Z"
@@ -1533,6 +1568,7 @@
       "suporte": true,
       "tecnologia": false
     },
+    "enabled": true,
     "createdAt": "2026-03-09T12:07:35.000Z",
     "updatedAt": "2026-05-06T12:37:30.000Z",
     "lastSignedIn": "2026-03-09T12:50:47.000Z"
@@ -1559,6 +1595,7 @@
       "suporte": true,
       "tecnologia": false
     },
+    "enabled": true,
     "createdAt": "2026-03-30T14:12:11.000Z",
     "updatedAt": "2026-05-06T12:37:30.000Z",
     "lastSignedIn": null
@@ -1630,6 +1667,7 @@
         "update": true
       }
     },
+    "enabled": true,
     "createdAt": "2026-04-20T12:22:21.000Z",
     "updatedAt": "2026-06-23T16:24:31.000Z",
     "lastSignedIn": "2026-04-22T13:54:34.000Z"
@@ -1656,6 +1694,7 @@
       "suporte": true,
       "tecnologia": false
     },
+    "enabled": true,
     "createdAt": "2026-04-27T11:45:20.000Z",
     "updatedAt": "2026-05-06T12:37:30.000Z",
     "lastSignedIn": "2026-05-06T11:23:01.000Z"
@@ -1687,6 +1726,7 @@
       "suporte": true,
       "tecnologia": true
     },
+    "enabled": true,
     "createdAt": "2026-05-07T14:36:08.000Z",
     "updatedAt": "2026-05-22T16:25:33.000Z",
     "lastSignedIn": "2026-05-22T16:25:33.000Z"
@@ -1770,6 +1810,7 @@
         "update": false
       }
     },
+    "enabled": true,
     "createdAt": "2026-05-21T15:13:16.000Z",
     "updatedAt": "2026-07-17T11:59:35.000Z",
     "lastSignedIn": "2026-06-01T12:31:01.000Z"
@@ -1795,6 +1836,7 @@
       "suporte": true,
       "tecnologia": false
     },
+    "enabled": true,
     "createdAt": "2026-05-21T18:30:35.000Z",
     "updatedAt": "2026-05-21T18:32:59.000Z",
     "lastSignedIn": "2026-05-21T18:32:59.000Z"
@@ -1866,6 +1908,7 @@
         "update": true
       }
     },
+    "enabled": true,
     "createdAt": "2026-05-22T12:16:00.000Z",
     "updatedAt": "2026-06-23T16:24:19.000Z",
     "lastSignedIn": "2026-05-25T11:16:08.000Z"
@@ -1937,6 +1980,7 @@
         "update": true
       }
     },
+    "enabled": true,
     "createdAt": "2026-06-12T12:10:37.000Z",
     "updatedAt": "2026-06-23T16:24:43.000Z",
     "lastSignedIn": "2026-06-12T17:40:20.000Z"
@@ -1968,8 +2012,105 @@
       "suporte": true,
       "tecnologia": true
     },
+    "enabled": true,
     "createdAt": "2026-07-13T13:28:42.000Z",
-    "updatedAt": "2026-07-23T17:54:14.000Z",
-    "lastSignedIn": "2026-07-23T17:54:14.000Z"
+    "updatedAt": "2026-07-25T22:11:38.000Z",
+    "lastSignedIn": "2026-07-25T22:11:38.000Z"
+  },
+  {
+    "id": 2610109,
+    "openId": null,
+    "name": "Aclair Machado",
+    "email": "machado.gmm@gmail.com",
+    "passwordHash": "$2b$10$Xc3ujMtNV149pwmiQOPtB.mtOdUCW90yfNq7dd6hdZZ4DYrbl4R/6",
+    "loginMethod": "internal",
+    "role": "user",
+    "approvalStatus": "approved",
+    "departmentId": 19,
+    "groupId": 660001,
+    "permissions": {
+      "almoxarifado": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "comercial": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "compradores": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "desenvolvimento": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "diretoria_cortes_bi": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "diretoria_pedidos_layout": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "envio_parcial": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "monitor_tv": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "pescador": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "repasses": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "rupturas": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "superestocados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "suporte": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      }
+    },
+    "enabled": true,
+    "createdAt": "2026-07-24T15:16:36.000Z",
+    "updatedAt": "2026-07-24T15:47:00.000Z",
+    "lastSignedIn": "2026-07-24T15:47:00.000Z"
   }
 ]

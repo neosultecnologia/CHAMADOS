@@ -2820,18 +2820,18 @@
     "description": "Impressora não esta imprimindo corretamente, e a backup também está apresentando problemas",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Novos",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
-    "assignedToId": null,
-    "assignedToName": null,
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
     "waitingForDepartment": null,
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1784820178427,
-    "updatedAt": 1784820178427
+    "updatedAt": 1784902704086
   }
 ]
