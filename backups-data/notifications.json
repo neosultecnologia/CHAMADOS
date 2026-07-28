@@ -6164,7 +6164,7 @@
     "referenceId": 1890035,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1890035",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1781553026661
   },
   {
@@ -6260,7 +6260,7 @@
     "referenceId": 3390002,
     "referenceType": "ticket",
     "actionUrl": "/suporte/3390002",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1781553680244
   },
   {
@@ -6392,7 +6392,7 @@
     "referenceId": 3390001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/3390001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1781702765315
   },
   {
@@ -6512,7 +6512,7 @@
     "referenceId": 3600002,
     "referenceType": "ticket",
     "actionUrl": "/suporte/3600002",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1781794073900
   },
   {
@@ -6644,7 +6644,7 @@
     "referenceId": 3600001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/3600001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1782144166637
   },
   {
@@ -7160,7 +7160,7 @@
     "referenceId": 3840001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/3840001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1783540874232
   },
   {
@@ -7256,7 +7256,7 @@
     "referenceId": 3900001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/3900001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1784230994074
   },
   {
@@ -7292,7 +7292,7 @@
     "referenceId": 3870001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/3870001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1784550209222
   },
   {
@@ -7352,7 +7352,7 @@
     "referenceId": 3960001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/3960001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1784720110439
   },
   {
@@ -7364,7 +7364,7 @@
     "referenceId": 3960001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/3960001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1784813311073
   },
   {
@@ -7426,5 +7426,413 @@
     "actionUrl": "/suporte/3990001",
     "isRead": false,
     "createdAt": 1784902704056
+  },
+  {
+    "id": 4020001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "VANESSA REIS  abriu um novo chamado: \" substituição headset - Sac \"",
+    "referenceId": 4080017,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4080017",
+    "isRead": false,
+    "createdAt": 1785245971434
+  },
+  {
+    "id": 4020002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "VANESSA REIS  abriu um novo chamado: \" substituição headset - Sac \"",
+    "referenceId": 4080017,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4080017",
+    "isRead": false,
+    "createdAt": 1785245971466
+  },
+  {
+    "id": 4020003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "VANESSA REIS  abriu um novo chamado: \" substituição headset - Sac \"",
+    "referenceId": 4080017,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4080017",
+    "isRead": false,
+    "createdAt": 1785245971485
+  },
+  {
+    "id": 4020004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "VANESSA REIS  abriu um novo chamado: \" substituição headset - Sac \"",
+    "referenceId": 4080017,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4080017",
+    "isRead": false,
+    "createdAt": 1785245971521
+  },
+  {
+    "id": 4020005,
+    "userId": 2550001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "VANESSA REIS  abriu um novo chamado: \" substituição headset - Sac \"",
+    "referenceId": 4080017,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4080017",
+    "isRead": false,
+    "createdAt": 1785245971548
+  },
+  {
+    "id": 4020006,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Solicitação de Headset - Recebimento\"",
+    "referenceId": 4080018,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4080018",
+    "isRead": false,
+    "createdAt": 1785246342791
+  },
+  {
+    "id": 4020007,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Solicitação de Headset - Recebimento\"",
+    "referenceId": 4080018,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4080018",
+    "isRead": false,
+    "createdAt": 1785246342809
+  },
+  {
+    "id": 4020008,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Solicitação de Headset - Recebimento\"",
+    "referenceId": 4080018,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4080018",
+    "isRead": false,
+    "createdAt": 1785246342830
+  },
+  {
+    "id": 4020009,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Solicitação de Headset - Recebimento\"",
+    "referenceId": 4080018,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4080018",
+    "isRead": false,
+    "createdAt": 1785246342850
+  },
+  {
+    "id": 4020010,
+    "userId": 2550001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Solicitação de Headset - Recebimento\"",
+    "referenceId": 4080018,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4080018",
+    "isRead": false,
+    "createdAt": 1785246342870
+  },
+  {
+    "id": 4050001,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Aquisição de Headset \"",
+    "referenceId": 4110001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110001",
+    "isRead": false,
+    "createdAt": 1785247333099
+  },
+  {
+    "id": 4050002,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Aquisição de Headset \"",
+    "referenceId": 4110001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110001",
+    "isRead": false,
+    "createdAt": 1785247333134
+  },
+  {
+    "id": 4050003,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Aquisição de Headset \"",
+    "referenceId": 4110001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110001",
+    "isRead": false,
+    "createdAt": 1785247333158
+  },
+  {
+    "id": 4050004,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Aquisição de Headset \"",
+    "referenceId": 4110001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110001",
+    "isRead": false,
+    "createdAt": 1785247333186
+  },
+  {
+    "id": 4050005,
+    "userId": 2550001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Aquisição de Headset \"",
+    "referenceId": 4110001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110001",
+    "isRead": false,
+    "createdAt": 1785247333213
+  },
+  {
+    "id": 4050006,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Falha no recebimento de e-mails\"",
+    "referenceId": 4110002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110002",
+    "isRead": false,
+    "createdAt": 1785271068326
+  },
+  {
+    "id": 4050007,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Falha no recebimento de e-mails\"",
+    "referenceId": 4110002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110002",
+    "isRead": false,
+    "createdAt": 1785271068449
+  },
+  {
+    "id": 4050008,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Falha no recebimento de e-mails\"",
+    "referenceId": 4110002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110002",
+    "isRead": false,
+    "createdAt": 1785271068510
+  },
+  {
+    "id": 4050009,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Falha no recebimento de e-mails\"",
+    "referenceId": 4110002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110002",
+    "isRead": false,
+    "createdAt": 1785271068595
+  },
+  {
+    "id": 4050010,
+    "userId": 2550001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Falha no recebimento de e-mails\"",
+    "referenceId": 4110002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110002",
+    "isRead": false,
+    "createdAt": 1785271068643
+  },
+  {
+    "id": 4050011,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Falha no sistema Infarma - Devolução\"",
+    "referenceId": 4110003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110003",
+    "isRead": false,
+    "createdAt": 1785271302031
+  },
+  {
+    "id": 4050012,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Falha no sistema Infarma - Devolução\"",
+    "referenceId": 4110003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110003",
+    "isRead": false,
+    "createdAt": 1785271302083
+  },
+  {
+    "id": 4050013,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Falha no sistema Infarma - Devolução\"",
+    "referenceId": 4110003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110003",
+    "isRead": false,
+    "createdAt": 1785271302114
+  },
+  {
+    "id": 4050014,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Falha no sistema Infarma - Devolução\"",
+    "referenceId": 4110003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110003",
+    "isRead": false,
+    "createdAt": 1785271302163
+  },
+  {
+    "id": 4050015,
+    "userId": 2550001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "Kerolaine Morgantti da Cruz abriu um novo chamado: \"Falha no sistema Infarma - Devolução\"",
+    "referenceId": 4110003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110003",
+    "isRead": false,
+    "createdAt": 1785271302191
+  },
+  {
+    "id": 4050016,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Falha no recebimento de e-mails\"",
+    "referenceId": 4110002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110002",
+    "isRead": false,
+    "createdAt": 1785271684174
+  },
+  {
+    "id": 4050017,
+    "userId": 1050001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 4110002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110002",
+    "isRead": false,
+    "createdAt": 1785271685033
+  },
+  {
+    "id": 4050018,
+    "userId": 1050001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 4110003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110003",
+    "isRead": true,
+    "createdAt": 1785271687891
+  },
+  {
+    "id": 4050019,
+    "userId": 300001,
+    "type": "ticket_assigned",
+    "title": "Novo Chamado Atribuído",
+    "message": "Você foi atribuído ao chamado: \"Falha no sistema Infarma - Devolução\"",
+    "referenceId": 4110003,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110003",
+    "isRead": false,
+    "createdAt": 1785271689672
+  },
+  {
+    "id": 4050020,
+    "userId": 23,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "VERIDIANA abriu um novo chamado: \"liberação de acessos LOGISTICA\"",
+    "referenceId": 4110004,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110004",
+    "isRead": false,
+    "createdAt": 1785271696812
+  },
+  {
+    "id": 4050021,
+    "userId": 300001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "VERIDIANA abriu um novo chamado: \"liberação de acessos LOGISTICA\"",
+    "referenceId": 4110004,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110004",
+    "isRead": false,
+    "createdAt": 1785271696839
+  },
+  {
+    "id": 4050022,
+    "userId": 1,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "VERIDIANA abriu um novo chamado: \"liberação de acessos LOGISTICA\"",
+    "referenceId": 4110004,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110004",
+    "isRead": false,
+    "createdAt": 1785271696865
+  },
+  {
+    "id": 4050023,
+    "userId": 60001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "VERIDIANA abriu um novo chamado: \"liberação de acessos LOGISTICA\"",
+    "referenceId": 4110004,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110004",
+    "isRead": false,
+    "createdAt": 1785271696904
+  },
+  {
+    "id": 4050024,
+    "userId": 2550001,
+    "type": "ticket_created",
+    "title": "Novo Chamado Aberto",
+    "message": "VERIDIANA abriu um novo chamado: \"liberação de acessos LOGISTICA\"",
+    "referenceId": 4110004,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110004",
+    "isRead": false,
+    "createdAt": 1785271696938
   }
 ]

@@ -7929,5 +7929,148 @@
     "newValue": "Carlos TI",
     "description": "Responsável alterado para \"Carlos TI\"",
     "createdAt": 1784902704034
+  },
+  {
+    "id": 5010001,
+    "ticketId": 3960001,
+    "type": "status_change",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1785245339017
+  },
+  {
+    "id": 5010002,
+    "ticketId": 4080017,
+    "type": "created",
+    "authorId": 990001,
+    "authorName": "VANESSA REIS ",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por VANESSA REIS ",
+    "createdAt": 1785245971380
+  },
+  {
+    "id": 5010003,
+    "ticketId": 4080018,
+    "type": "created",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Kerolaine Morgantti da Cruz",
+    "createdAt": 1785246342731
+  },
+  {
+    "id": 5040001,
+    "ticketId": 4110001,
+    "type": "created",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Kerolaine Morgantti da Cruz",
+    "createdAt": 1785247333034
+  },
+  {
+    "id": 5040002,
+    "ticketId": 4110002,
+    "type": "created",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Kerolaine Morgantti da Cruz",
+    "createdAt": 1785271068231
+  },
+  {
+    "id": 5040003,
+    "ticketId": 4110003,
+    "type": "created",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Kerolaine Morgantti da Cruz",
+    "createdAt": 1785271301961
+  },
+  {
+    "id": 5040004,
+    "ticketId": 4110002,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1785271684147
+  },
+  {
+    "id": 5040005,
+    "ticketId": 4110002,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1785271685002
+  },
+  {
+    "id": 5040006,
+    "ticketId": 4110003,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1785271687864
+  },
+  {
+    "id": 5040007,
+    "ticketId": 4110003,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1785271689638
+  },
+  {
+    "id": 5040008,
+    "ticketId": 4110004,
+    "type": "created",
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por VERIDIANA",
+    "createdAt": 1785271696727
+  },
+  {
+    "id": 5040009,
+    "ticketId": 4110003,
+    "type": "status_change",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1785271820673
+  },
+  {
+    "id": 5040010,
+    "ticketId": 4110002,
+    "type": "status_change",
+    "authorId": 1050001,
+    "authorName": "Kerolaine Morgantti da Cruz",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1785271868810
   }
 ]
