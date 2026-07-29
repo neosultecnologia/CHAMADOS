@@ -534,5 +534,13 @@
     "authorName": "VERIDIANA",
     "content": "oi Carlos, foi resolvido?\n",
     "createdAt": 1783448273938
+  },
+  {
+    "id": 1350001,
+    "ticketId": 4110001,
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "content": "Entregue fone 02 Logi - PID AL 535",
+    "createdAt": 1785326160663
   }
 ]

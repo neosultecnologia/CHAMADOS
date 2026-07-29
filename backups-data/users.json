@@ -1047,6 +1047,12 @@
         "read": false,
         "update": false
       },
+      "diretoria_pedidos_layout": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
       "envio_parcial": {
         "create": true,
         "delete": true,
@@ -1086,7 +1092,7 @@
     },
     "enabled": true,
     "createdAt": "2026-02-13T18:37:55.000Z",
-    "updatedAt": "2026-06-23T15:44:03.000Z",
+    "updatedAt": "2026-07-29T13:54:12.000Z",
     "lastSignedIn": "2026-02-16T19:05:11.000Z"
   },
   {
