@@ -7786,5 +7786,65 @@
     "actionUrl": "/suporte/4110001",
     "isRead": false,
     "createdAt": 1785326160745
+  },
+  {
+    "id": 4110001,
+    "userId": 720001,
+    "type": "ticket_comment",
+    "title": "Resposta no Chamado",
+    "message": "Carlos TI respondeu seu chamado: \"liberação de acessos LOGISTICA\"",
+    "referenceId": 4110004,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/4110004",
+    "isRead": false,
+    "createdAt": 1785342592447
+  },
+  {
+    "id": 4110002,
+    "userId": 1050001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 3870001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/3870001",
+    "isRead": false,
+    "createdAt": 1785349241831
+  },
+  {
+    "id": 4110003,
+    "userId": 720001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1440001,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1440001",
+    "isRead": false,
+    "createdAt": 1785349268378
+  },
+  {
+    "id": 4110004,
+    "userId": 720001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 1770008,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/1770008",
+    "isRead": false,
+    "createdAt": 1785349274556
+  },
+  {
+    "id": 4110005,
+    "userId": 1290001,
+    "type": "ticket_status_changed",
+    "title": "Status do Chamado Alterado",
+    "message": "O status do seu chamado foi alterado para Resolvido / Aguardando Validação",
+    "referenceId": 2010002,
+    "referenceType": "ticket",
+    "actionUrl": "/suporte/2010002",
+    "isRead": false,
+    "createdAt": 1785349321833
   }
 ]

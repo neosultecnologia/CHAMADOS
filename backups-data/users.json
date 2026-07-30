@@ -28,8 +28,8 @@
     },
     "enabled": true,
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-07-28T20:18:41.000Z",
-    "lastSignedIn": "2026-07-28T20:18:41.000Z"
+    "updatedAt": "2026-07-29T16:09:53.000Z",
+    "lastSignedIn": "2026-07-29T16:09:53.000Z"
   },
   {
     "id": 23,
@@ -1149,6 +1149,12 @@
         "read": true,
         "update": true
       },
+      "indicadores_pedidos_layout": {
+        "create": false,
+        "delete": false,
+        "read": true,
+        "update": false
+      },
       "marketing": {
         "create": false,
         "delete": false,
@@ -1182,7 +1188,7 @@
     },
     "enabled": true,
     "createdAt": "2026-02-16T18:16:05.000Z",
-    "updatedAt": "2026-06-19T12:44:07.000Z",
+    "updatedAt": "2026-07-29T15:25:29.000Z",
     "lastSignedIn": "2026-06-19T11:57:35.000Z"
   },
   {
@@ -1233,6 +1239,12 @@
         "read": true,
         "update": true
       },
+      "indicadores_pedidos_layout": {
+        "create": false,
+        "delete": false,
+        "read": true,
+        "update": false
+      },
       "marketing": {
         "create": false,
         "delete": false,
@@ -1266,7 +1278,7 @@
     },
     "enabled": true,
     "createdAt": "2026-02-16T18:18:27.000Z",
-    "updatedAt": "2026-06-23T15:44:45.000Z",
+    "updatedAt": "2026-07-29T15:24:29.000Z",
     "lastSignedIn": "2026-02-16T19:04:42.000Z"
   },
   {
@@ -1425,6 +1437,12 @@
         "read": true,
         "update": true
       },
+      "indicadores_pedidos_layout": {
+        "create": false,
+        "delete": false,
+        "read": true,
+        "update": false
+      },
       "marketing": {
         "create": false,
         "delete": false,
@@ -1458,7 +1476,7 @@
     },
     "enabled": true,
     "createdAt": "2026-02-16T19:04:18.000Z",
-    "updatedAt": "2026-06-23T15:44:26.000Z",
+    "updatedAt": "2026-07-29T15:25:05.000Z",
     "lastSignedIn": "2026-06-18T20:10:47.000Z"
   },
   {

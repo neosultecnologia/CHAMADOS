@@ -804,7 +804,7 @@
     "description": "Boa tarde, por gentileza instalar extensões necessárias no pc coordenação",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Em Andamento",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 90004,
     "createdById": 720001,
     "createdByName": "VERIDIANA",
@@ -816,7 +816,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1774471966246,
-    "updatedAt": 1775501666751
+    "updatedAt": 1785349268397
   },
   {
     "id": 1470001,
@@ -1203,7 +1203,7 @@
     "description": "Boa tarde!\npor gentileza instalar infarma no PC 01 da conferencia, possui apenas TS\n\nANIDESK 1465890513\nTS: 192.168.64.247",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Em Andamento",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 90004,
     "createdById": 720001,
     "createdByName": "VERIDIANA",
@@ -1215,7 +1215,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1775583962918,
-    "updatedAt": 1775677184010
+    "updatedAt": 1785349274592
   },
   {
     "id": 1770009,
@@ -1728,7 +1728,7 @@
     "description": "Minha tela maior queimou o cabo HDMI , gostaria que fosse trocado o cabo e devolvida essa tela para mim , pois a tela do note é muito pequena e a resolução dela esta forçando muito a minha vista , e visto que trabalho com relatórios o dia inteiro esta se tornando muito dificil de entregar bons resultados.",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Em Análise",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 17,
     "createdById": 1290001,
     "createdByName": "camila soares de souza",
@@ -1740,7 +1740,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1777985999116,
-    "updatedAt": 1777990520739
+    "updatedAt": 1785349321857
   },
   {
     "id": 2010003,
@@ -2757,7 +2757,7 @@
     "description": "Favor logar o teams no computador da Livia (devolução)\nAniDesk: 1 578 575 896",
     "category": "Técnico",
     "priority": "Baixa",
-    "status": "Em Andamento",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 90004,
     "createdById": 1050001,
     "createdByName": "Kerolaine Morgantti da Cruz",
@@ -2769,7 +2769,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1784120822625,
-    "updatedAt": 1784550209243
+    "updatedAt": 1785349241884
   },
   {
     "id": 3900001,
@@ -2952,12 +2952,12 @@
     "createdByName": "VERIDIANA",
     "assignedToId": null,
     "assignedToName": null,
-    "waitingForDepartment": null,
-    "lastRespondentRole": null,
-    "lastRespondentId": null,
-    "lastRespondentName": null,
+    "waitingForDepartment": "Suporte/TI",
+    "lastRespondentRole": "user",
+    "lastRespondentId": 720001,
+    "lastRespondentName": "VERIDIANA",
     "order": 0,
     "createdAt": 1785271696727,
-    "updatedAt": 1785271696727
+    "updatedAt": 1785354891452
   }
 ]

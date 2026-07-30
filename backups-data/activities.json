@@ -8105,5 +8105,71 @@
     "newValue": null,
     "description": "Comentário adicionado por Gabriel Bino",
     "createdAt": 1785326160663
+  },
+  {
+    "id": 5100001,
+    "ticketId": 4110004,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1785342592336
+  },
+  {
+    "id": 5100002,
+    "ticketId": 3870001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1785349241811
+  },
+  {
+    "id": 5100003,
+    "ticketId": 1440001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1785349268359
+  },
+  {
+    "id": 5100004,
+    "ticketId": 1770008,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1785349274538
+  },
+  {
+    "id": 5100005,
+    "ticketId": 2010002,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Análise",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Análise\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1785349321814
+  },
+  {
+    "id": 5100006,
+    "ticketId": 4110004,
+    "type": "comment",
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por VERIDIANA",
+    "createdAt": 1785354891401
   }
 ]

@@ -542,5 +542,21 @@
     "authorName": "Gabriel Bino",
     "content": "Entregue fone 02 Logi - PID AL 535",
     "createdAt": 1785326160663
+  },
+  {
+    "id": 1380001,
+    "ticketId": 4110004,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "Me passa usuarios que eu possa usar de espelho pf.",
+    "createdAt": 1785342592336
+  },
+  {
+    "id": 1380002,
+    "ticketId": 4110004,
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "content": "MÓDULO ESTOQUE: PEDRO RENNER espelhar igual PEDRO GABRIEL\nMÓDULO ESTOQUE/ ABASTECIMENTO: GIOVANA E CHANTIELY espelhar igual BRENDA TATIELY",
+    "createdAt": 1785354891401
   }
 ]
