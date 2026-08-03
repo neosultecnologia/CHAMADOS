@@ -2757,7 +2757,7 @@
     "description": "Favor logar o teams no computador da Livia (devolução)\nAniDesk: 1 578 575 896",
     "category": "Técnico",
     "priority": "Baixa",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 1050001,
     "createdByName": "Kerolaine Morgantti da Cruz",
@@ -2769,7 +2769,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1784120822625,
-    "updatedAt": 1785349241884
+    "updatedAt": 1785517312428
   },
   {
     "id": 3900001,
@@ -2820,7 +2820,7 @@
     "description": "Impressora não esta imprimindo corretamente, e a backup também está apresentando problemas",
     "category": "Técnico",
     "priority": "Crítica",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 540001,
     "createdByName": "Mauricio Ramos",
@@ -2832,7 +2832,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1784820178427,
-    "updatedAt": 1784902704086
+    "updatedAt": 1785758807777
   },
   {
     "id": 4080017,
@@ -2883,7 +2883,7 @@
     "description": "Preciso da aquisição de um headset para notebook.\nO material será usado para realizar contato com as industrias, transportadoras e representantes comerciais.",
     "category": "Outro",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 90004,
     "createdById": 1050001,
     "createdByName": "Kerolaine Morgantti da Cruz",
@@ -2895,7 +2895,7 @@
     "lastRespondentName": "Gabriel Bino",
     "order": 0,
     "createdAt": 1785247333034,
-    "updatedAt": 1785326160724
+    "updatedAt": 1785517345289
   },
   {
     "id": 4110002,

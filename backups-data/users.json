@@ -28,8 +28,8 @@
     },
     "enabled": true,
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-07-29T16:09:53.000Z",
-    "lastSignedIn": "2026-07-29T16:09:53.000Z"
+    "updatedAt": "2026-07-31T20:11:14.000Z",
+    "lastSignedIn": "2026-07-31T20:11:14.000Z"
   },
   {
     "id": 23,
@@ -167,6 +167,36 @@
         "read": true,
         "update": true
       },
+      "indicadores_cortes_bi": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "indicadores_iqvia_bi": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "indicadores_monitor_arquivos": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "indicadores_pedidos_layout": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "indicadores_vendas_bi": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
       "monitor_tv": {
         "create": true,
         "delete": true,
@@ -212,7 +242,7 @@
     },
     "enabled": true,
     "createdAt": "2026-02-04T13:17:56.000Z",
-    "updatedAt": "2026-07-28T20:51:10.000Z",
+    "updatedAt": "2026-07-31T19:08:42.000Z",
     "lastSignedIn": "2026-05-08T20:58:55.000Z"
   },
   {
@@ -1476,8 +1506,8 @@
     },
     "enabled": true,
     "createdAt": "2026-02-16T19:04:18.000Z",
-    "updatedAt": "2026-07-29T15:25:05.000Z",
-    "lastSignedIn": "2026-06-18T20:10:47.000Z"
+    "updatedAt": "2026-07-31T14:49:38.000Z",
+    "lastSignedIn": "2026-07-31T14:49:38.000Z"
   },
   {
     "id": 690001,
@@ -2125,6 +2155,36 @@
         "read": true,
         "update": true
       },
+      "indicadores_cortes_bi": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "indicadores_iqvia_bi": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "indicadores_monitor_arquivos": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "indicadores_pedidos_layout": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "indicadores_vendas_bi": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
       "monitor_tv": {
         "create": true,
         "delete": true,
@@ -2170,7 +2230,7 @@
     },
     "enabled": true,
     "createdAt": "2026-07-24T15:16:36.000Z",
-    "updatedAt": "2026-07-28T17:54:29.000Z",
+    "updatedAt": "2026-07-31T19:09:05.000Z",
     "lastSignedIn": "2026-07-24T15:47:00.000Z"
   }
 ]
