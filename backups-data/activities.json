@@ -8204,5 +8204,159 @@
     "newValue": "Concluído",
     "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
     "createdAt": 1785758807768
+  },
+  {
+    "id": 5160002,
+    "ticketId": 4140001,
+    "type": "created",
+    "authorId": 450001,
+    "authorName": "Humbertho Ryan",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Humbertho Ryan",
+    "createdAt": 1785779888132
+  },
+  {
+    "id": 5160003,
+    "ticketId": 4140001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1785783390811
+  },
+  {
+    "id": 5160004,
+    "ticketId": 4140001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Novos\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1785783391647
+  },
+  {
+    "id": 5160005,
+    "ticketId": 4110004,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1785783415449
+  },
+  {
+    "id": 5160006,
+    "ticketId": 4110004,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1785783417031
+  },
+  {
+    "id": 5160007,
+    "ticketId": 4140002,
+    "type": "created",
+    "authorId": 1650001,
+    "authorName": "Keuriane Braga da Silva ",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Keuriane Braga da Silva ",
+    "createdAt": 1785784932219
+  },
+  {
+    "id": 5160008,
+    "ticketId": 4140002,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1785785640524
+  },
+  {
+    "id": 5160009,
+    "ticketId": 4140002,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1785785644815
+  },
+  {
+    "id": 5190001,
+    "ticketId": 4170001,
+    "type": "created",
+    "authorId": 1350001,
+    "authorName": "Mariana Santos Liska",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Mariana Santos Liska",
+    "createdAt": 1785844964563
+  },
+  {
+    "id": 5190002,
+    "ticketId": 4170001,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1785846402334
+  },
+  {
+    "id": 5190003,
+    "ticketId": 4170001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1785846403733
+  },
+  {
+    "id": 5190004,
+    "ticketId": 4170001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1785846406835
+  },
+  {
+    "id": 5220001,
+    "ticketId": 4140002,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1785849133761
+  },
+  {
+    "id": 5220002,
+    "ticketId": 4110004,
+    "type": "comment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Carlos TI",
+    "createdAt": 1785849182853
   }
 ]

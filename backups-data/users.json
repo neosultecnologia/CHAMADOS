@@ -28,8 +28,8 @@
     },
     "enabled": true,
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-07-31T20:11:14.000Z",
-    "lastSignedIn": "2026-07-31T20:11:14.000Z"
+    "updatedAt": "2026-08-03T20:57:04.000Z",
+    "lastSignedIn": "2026-08-03T20:57:04.000Z"
   },
   {
     "id": 23,
@@ -1089,6 +1089,12 @@
         "read": true,
         "update": true
       },
+      "indicadores_pedidos_layout": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
       "marketing": {
         "create": false,
         "delete": false,
@@ -1122,7 +1128,7 @@
     },
     "enabled": true,
     "createdAt": "2026-02-13T18:37:55.000Z",
-    "updatedAt": "2026-07-29T13:54:12.000Z",
+    "updatedAt": "2026-08-03T18:40:36.000Z",
     "lastSignedIn": "2026-02-16T19:05:11.000Z"
   },
   {
@@ -1569,7 +1575,7 @@
     "openId": null,
     "name": "Yasmim Azevedo de Araujo",
     "email": "suportefiscal1.sc@neosuldistribuidora.com.br",
-    "passwordHash": "$2b$10$vdJ3DYnzKzgRAzxRiZiPjePa.gyOffL71Uap2/IjZRltJOh6eHV5S",
+    "passwordHash": "$2b$10$bayxGHnVJMGIpI.8zS41ruNRITu4VCuZs2xkLX21E1FjQ1HF6HK0C",
     "loginMethod": "internal",
     "role": "user",
     "approvalStatus": "approved",
@@ -1588,8 +1594,8 @@
     },
     "enabled": true,
     "createdAt": "2026-02-23T18:57:42.000Z",
-    "updatedAt": "2026-05-06T12:37:08.000Z",
-    "lastSignedIn": "2026-02-23T18:59:13.000Z"
+    "updatedAt": "2026-08-03T18:20:24.000Z",
+    "lastSignedIn": "2026-08-03T18:20:25.000Z"
   },
   {
     "id": 990001,
@@ -1768,8 +1774,8 @@
     },
     "enabled": true,
     "createdAt": "2026-04-27T11:45:20.000Z",
-    "updatedAt": "2026-05-06T12:37:30.000Z",
-    "lastSignedIn": "2026-05-06T11:23:01.000Z"
+    "updatedAt": "2026-08-04T11:56:29.000Z",
+    "lastSignedIn": "2026-08-04T11:56:30.000Z"
   },
   {
     "id": 1380013,
@@ -2232,5 +2238,22 @@
     "createdAt": "2026-07-24T15:16:36.000Z",
     "updatedAt": "2026-07-31T19:09:05.000Z",
     "lastSignedIn": "2026-07-24T15:47:00.000Z"
+  },
+  {
+    "id": 2700001,
+    "openId": null,
+    "name": "Yasmim Azevedo de araujo ",
+    "email": "azevedoyasmim807@gmail.com",
+    "passwordHash": "$2b$10$uUW3XaoMWpPf7FE./LJ0p.6pJewbyGp82TFy3Jaa4cqexeJxoRr2y",
+    "loginMethod": "internal",
+    "role": "user",
+    "approvalStatus": "rejected",
+    "departmentId": null,
+    "groupId": null,
+    "permissions": [],
+    "enabled": true,
+    "createdAt": "2026-08-03T18:10:10.000Z",
+    "updatedAt": "2026-08-03T18:15:41.000Z",
+    "lastSignedIn": null
   }
 ]

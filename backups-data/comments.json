@@ -558,5 +558,21 @@
     "authorName": "VERIDIANA",
     "content": "MÓDULO ESTOQUE: PEDRO RENNER espelhar igual PEDRO GABRIEL\nMÓDULO ESTOQUE/ ABASTECIMENTO: GIOVANA E CHANTIELY espelhar igual BRENDA TATIELY",
     "createdAt": 1785354891401
+  },
+  {
+    "id": 1410001,
+    "ticketId": 4170001,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "Pode mandar o anydesk pf.",
+    "createdAt": 1785846402334
+  },
+  {
+    "id": 1440001,
+    "ticketId": 4110004,
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "content": "Necessito dos nomes completos. ",
+    "createdAt": 1785849182853
   }
 ]

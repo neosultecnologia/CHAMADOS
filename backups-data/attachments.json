@@ -430,5 +430,17 @@
     "uploadedById": 1050001,
     "uploadedByName": "Kerolaine Morgantti da Cruz",
     "createdAt": 1784211143203
+  },
+  {
+    "id": 660001,
+    "ticketId": 4170001,
+    "fileName": "Screenshot_1.png",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/4170001/1785844965395-icjgdl-Screenshot_1.png",
+    "fileKey": "tickets/4170001/1785844965395-icjgdl-Screenshot_1.png",
+    "mimeType": "image/png",
+    "fileSize": 108579,
+    "uploadedById": 1350001,
+    "uploadedByName": "Mariana Santos Liska",
+    "createdAt": 1785844965757
   }
 ]
