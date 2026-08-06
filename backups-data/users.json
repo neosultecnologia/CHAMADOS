@@ -28,8 +28,8 @@
     },
     "enabled": true,
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-08-04T20:59:31.000Z",
-    "lastSignedIn": "2026-08-04T20:59:32.000Z"
+    "updatedAt": "2026-08-05T21:41:09.000Z",
+    "lastSignedIn": "2026-08-05T21:41:09.000Z"
   },
   {
     "id": 23,
@@ -1524,7 +1524,7 @@
     "loginMethod": "internal",
     "role": "user",
     "approvalStatus": "approved",
-    "departmentId": 90006,
+    "departmentId": 1950002,
     "groupId": 300001,
     "permissions": {
       "almoxarifado": false,
@@ -1540,7 +1540,7 @@
     },
     "enabled": true,
     "createdAt": "2026-02-19T14:19:27.000Z",
-    "updatedAt": "2026-05-06T12:36:57.000Z",
+    "updatedAt": "2026-08-05T19:53:14.000Z",
     "lastSignedIn": "2026-03-23T15:08:04.000Z"
   },
   {
@@ -1687,7 +1687,7 @@
     "loginMethod": "internal",
     "role": "user",
     "approvalStatus": "approved",
-    "departmentId": 90006,
+    "departmentId": 1950001,
     "groupId": 1140009,
     "permissions": {
       "almoxarifado": {
@@ -1743,11 +1743,17 @@
         "delete": true,
         "read": true,
         "update": true
+      },
+      "validades_curtas": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
       }
     },
     "enabled": true,
     "createdAt": "2026-04-20T12:22:21.000Z",
-    "updatedAt": "2026-06-23T16:24:31.000Z",
+    "updatedAt": "2026-08-05T19:50:59.000Z",
     "lastSignedIn": "2026-04-22T13:54:34.000Z"
   },
   {
@@ -1786,7 +1792,7 @@
     "loginMethod": "internal",
     "role": "user",
     "approvalStatus": "approved",
-    "departmentId": null,
+    "departmentId": 17,
     "groupId": 4,
     "permissions": {
       "almoxarifado": true,
@@ -1806,7 +1812,7 @@
     },
     "enabled": true,
     "createdAt": "2026-05-07T14:36:08.000Z",
-    "updatedAt": "2026-05-22T16:25:33.000Z",
+    "updatedAt": "2026-08-05T19:47:06.000Z",
     "lastSignedIn": "2026-05-22T16:25:33.000Z"
   },
   {
@@ -1934,7 +1940,7 @@
     "loginMethod": "internal",
     "role": "user",
     "approvalStatus": "approved",
-    "departmentId": null,
+    "departmentId": 1950001,
     "groupId": 1140009,
     "permissions": {
       "almoxarifado": {
@@ -1994,7 +2000,7 @@
     },
     "enabled": true,
     "createdAt": "2026-05-22T12:16:00.000Z",
-    "updatedAt": "2026-06-23T16:24:19.000Z",
+    "updatedAt": "2026-08-05T19:50:07.000Z",
     "lastSignedIn": "2026-05-25T11:16:08.000Z"
   },
   {
@@ -2006,7 +2012,7 @@
     "loginMethod": "internal",
     "role": "user",
     "approvalStatus": "approved",
-    "departmentId": null,
+    "departmentId": 1950001,
     "groupId": 1140009,
     "permissions": {
       "almoxarifado": {
@@ -2066,7 +2072,7 @@
     },
     "enabled": true,
     "createdAt": "2026-06-12T12:10:37.000Z",
-    "updatedAt": "2026-06-23T16:24:43.000Z",
+    "updatedAt": "2026-08-05T19:49:56.000Z",
     "lastSignedIn": "2026-06-12T17:40:20.000Z"
   },
   {
@@ -2078,7 +2084,7 @@
     "loginMethod": "internal",
     "role": "admin",
     "approvalStatus": "approved",
-    "departmentId": null,
+    "departmentId": 17,
     "groupId": 4,
     "permissions": {
       "almoxarifado": true,
@@ -2098,7 +2104,7 @@
     },
     "enabled": true,
     "createdAt": "2026-07-13T13:28:42.000Z",
-    "updatedAt": "2026-07-25T22:11:38.000Z",
+    "updatedAt": "2026-08-05T19:46:54.000Z",
     "lastSignedIn": "2026-07-25T22:11:38.000Z"
   },
   {
@@ -2240,20 +2246,31 @@
     "lastSignedIn": "2026-07-24T15:47:00.000Z"
   },
   {
-    "id": 2700001,
+    "id": 2730001,
     "openId": null,
-    "name": "Yasmim Azevedo de araujo ",
-    "email": "azevedoyasmim807@gmail.com",
-    "passwordHash": "$2b$10$uUW3XaoMWpPf7FE./LJ0p.6pJewbyGp82TFy3Jaa4cqexeJxoRr2y",
+    "name": "Adrielly silva ",
+    "email": "contas@neosuldistribuidora.com.br",
+    "passwordHash": "$2b$10$JZGM9nT5rZeDD/rLkhvG9OYmbcULar22b6Y9KWTJdfkYgR3GniMAK",
     "loginMethod": "internal",
     "role": "user",
-    "approvalStatus": "rejected",
-    "departmentId": null,
-    "groupId": null,
-    "permissions": [],
+    "approvalStatus": "approved",
+    "departmentId": 90006,
+    "groupId": 300001,
+    "permissions": {
+      "almoxarifado": false,
+      "chamados": true,
+      "comercial": false,
+      "compras": false,
+      "desenvolvimento": false,
+      "marketing": false,
+      "projetos": false,
+      "rh": false,
+      "suporte": true,
+      "tecnologia": false
+    },
     "enabled": true,
-    "createdAt": "2026-08-03T18:10:10.000Z",
-    "updatedAt": "2026-08-03T18:15:41.000Z",
+    "createdAt": "2026-08-05T20:29:44.000Z",
+    "updatedAt": "2026-08-06T11:48:44.000Z",
     "lastSignedIn": null
   }
 ]

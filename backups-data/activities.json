@@ -8358,5 +8358,38 @@
     "newValue": null,
     "description": "Comentário adicionado por Carlos TI",
     "createdAt": 1785849182853
+  },
+  {
+    "id": 5250001,
+    "ticketId": 2010002,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1786017836051
+  },
+  {
+    "id": 5250002,
+    "ticketId": 1770008,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1786017836051
+  },
+  {
+    "id": 5250003,
+    "ticketId": 1440001,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1786017836051
   }
 ]

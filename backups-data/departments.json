@@ -61,5 +61,19 @@
     "description": null,
     "createdAt": "2026-03-06T19:49:27.000Z",
     "updatedAt": "2026-03-06T19:49:27.000Z"
+  },
+  {
+    "id": 1950001,
+    "name": "Trade",
+    "description": null,
+    "createdAt": "2026-08-05T19:49:56.000Z",
+    "updatedAt": "2026-08-05T19:49:56.000Z"
+  },
+  {
+    "id": 1950002,
+    "name": "E-commerce",
+    "description": null,
+    "createdAt": "2026-08-05T19:53:14.000Z",
+    "updatedAt": "2026-08-05T19:53:14.000Z"
   }
 ]

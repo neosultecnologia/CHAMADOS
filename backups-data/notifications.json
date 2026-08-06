@@ -4788,15 +4788,15 @@
     "createdAt": 1785849182947
   },
   {
-    "id": 4290001,
+    "id": 4320001,
     "userId": 60001,
     "type": "system",
     "title": "🔎 whatsapp-web.js — sem novidade",
-    "message": "Verificação diária: a whatsapp-web.js segue em 1.34.7 (baseline 1.34.7).\nO envio a GRUPOS do bot \"Envio de Parcial\" continua quebrado, aguardando correção da biblioteca.\nContatos/gerentes recebem normal; grupos por encaminhamento manual.\nVerificado em: 05/08/2026, 08:04:28",
+    "message": "Verificação diária: a whatsapp-web.js segue em 1.34.7 (baseline 1.34.7).\nO envio a GRUPOS do bot \"Envio de Parcial\" continua quebrado, aguardando correção da biblioteca.\nContatos/gerentes recebem normal; grupos por encaminhamento manual.\nVerificado em: 06/08/2026, 08:02:41",
     "referenceId": null,
     "referenceType": null,
     "actionUrl": null,
     "isRead": false,
-    "createdAt": 1785927868717
+    "createdAt": 1786014161473
   }
 ]
