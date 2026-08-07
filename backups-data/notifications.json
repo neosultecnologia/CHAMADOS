@@ -1520,7 +1520,7 @@
     "referenceId": 1470001,
     "referenceType": "ticket",
     "actionUrl": "/suporte/1470001",
-    "isRead": false,
+    "isRead": true,
     "createdAt": 1774531414020
   },
   {
@@ -4608,18 +4608,6 @@
     "createdAt": 1785783391669
   },
   {
-    "id": 4200010,
-    "userId": 300001,
-    "type": "ticket_assigned",
-    "title": "Novo Chamado Atribuído",
-    "message": "Você foi atribuído ao chamado: \"liberação de acessos LOGISTICA\"",
-    "referenceId": 4110004,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/4110004",
-    "isRead": false,
-    "createdAt": 1785783415476
-  },
-  {
     "id": 4200011,
     "userId": 720001,
     "type": "ticket_status_changed",
@@ -4642,18 +4630,6 @@
     "actionUrl": "/suporte/4140002",
     "isRead": false,
     "createdAt": 1785784932281
-  },
-  {
-    "id": 4200013,
-    "userId": 300001,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Keuriane Braga da Silva  abriu um novo chamado: \"Problemas com E-mail \"",
-    "referenceId": 4140002,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/4140002",
-    "isRead": false,
-    "createdAt": 1785784932304
   },
   {
     "id": 4200016,
@@ -4680,18 +4656,6 @@
     "createdAt": 1785785640549
   },
   {
-    "id": 4200018,
-    "userId": 300001,
-    "type": "ticket_assigned",
-    "title": "Novo Chamado Atribuído",
-    "message": "Você foi atribuído ao chamado: \"Problemas com E-mail\"",
-    "referenceId": 4140002,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/4140002",
-    "isRead": false,
-    "createdAt": 1785785644840
-  },
-  {
     "id": 4230002,
     "userId": 23,
     "type": "ticket_created",
@@ -4702,18 +4666,6 @@
     "actionUrl": "/suporte/4170001",
     "isRead": false,
     "createdAt": 1785844964651
-  },
-  {
-    "id": 4230003,
-    "userId": 300001,
-    "type": "ticket_created",
-    "title": "Novo Chamado Aberto",
-    "message": "Mariana Santos Liska abriu um novo chamado: \"Liberação de Acesso a pasta \"",
-    "referenceId": 4170001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/4170001",
-    "isRead": false,
-    "createdAt": 1785844964673
   },
   {
     "id": 4230006,
@@ -4752,18 +4704,6 @@
     "createdAt": 1785846403757
   },
   {
-    "id": 4230009,
-    "userId": 300001,
-    "type": "ticket_assigned",
-    "title": "Novo Chamado Atribuído",
-    "message": "Você foi atribuído ao chamado: \"Liberação de Acesso a pasta\"",
-    "referenceId": 4170001,
-    "referenceType": "ticket",
-    "actionUrl": "/suporte/4170001",
-    "isRead": false,
-    "createdAt": 1785846406865
-  },
-  {
     "id": 4260001,
     "userId": 1650001,
     "type": "ticket_status_changed",
@@ -4788,15 +4728,15 @@
     "createdAt": 1785849182947
   },
   {
-    "id": 4320001,
+    "id": 4350001,
     "userId": 60001,
     "type": "system",
     "title": "🔎 whatsapp-web.js — sem novidade",
-    "message": "Verificação diária: a whatsapp-web.js segue em 1.34.7 (baseline 1.34.7).\nO envio a GRUPOS do bot \"Envio de Parcial\" continua quebrado, aguardando correção da biblioteca.\nContatos/gerentes recebem normal; grupos por encaminhamento manual.\nVerificado em: 06/08/2026, 08:02:41",
+    "message": "Verificação diária: a whatsapp-web.js segue em 1.34.7 (baseline 1.34.7).\nO envio a GRUPOS do bot \"Envio de Parcial\" continua quebrado, aguardando correção da biblioteca.\nContatos/gerentes recebem normal; grupos por encaminhamento manual.\nVerificado em: 07/08/2026, 08:02:32",
     "referenceId": null,
     "referenceType": null,
     "actionUrl": null,
     "isRead": false,
-    "createdAt": 1786014161473
+    "createdAt": 1786100552268
   }
 ]

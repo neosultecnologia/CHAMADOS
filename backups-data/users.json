@@ -28,8 +28,8 @@
     },
     "enabled": true,
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-08-05T21:41:09.000Z",
-    "lastSignedIn": "2026-08-05T21:41:09.000Z"
+    "updatedAt": "2026-08-06T20:59:29.000Z",
+    "lastSignedIn": "2026-08-06T20:59:29.000Z"
   },
   {
     "id": 23,
@@ -1128,8 +1128,8 @@
     },
     "enabled": true,
     "createdAt": "2026-02-13T18:37:55.000Z",
-    "updatedAt": "2026-08-03T18:40:36.000Z",
-    "lastSignedIn": "2026-02-16T19:05:11.000Z"
+    "updatedAt": "2026-08-07T00:24:34.000Z",
+    "lastSignedIn": "2026-08-07T00:24:34.000Z"
   },
   {
     "id": 660061,
@@ -2257,20 +2257,82 @@
     "departmentId": 90006,
     "groupId": 300001,
     "permissions": {
-      "almoxarifado": false,
-      "chamados": true,
-      "comercial": false,
-      "compras": false,
-      "desenvolvimento": false,
-      "marketing": false,
-      "projetos": false,
-      "rh": false,
-      "suporte": true,
-      "tecnologia": false
+      "almoxarifado": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "chamados": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "comercial": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "compras": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "desenvolvimento": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "indicadores_cortes_bi": {
+        "create": false,
+        "delete": false,
+        "read": true,
+        "update": false
+      },
+      "marketing": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "pescador": {
+        "create": true,
+        "delete": false,
+        "read": true,
+        "update": true
+      },
+      "projetos": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "rh": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      },
+      "suporte": {
+        "create": true,
+        "delete": true,
+        "read": true,
+        "update": true
+      },
+      "tecnologia": {
+        "create": false,
+        "delete": false,
+        "read": false,
+        "update": false
+      }
     },
     "enabled": true,
     "createdAt": "2026-08-05T20:29:44.000Z",
-    "updatedAt": "2026-08-06T11:48:44.000Z",
-    "lastSignedIn": null
+    "updatedAt": "2026-08-06T12:21:59.000Z",
+    "lastSignedIn": "2026-08-06T12:21:59.000Z"
   }
 ]
