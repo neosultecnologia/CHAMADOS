@@ -4738,5 +4738,53 @@
     "actionUrl": null,
     "isRead": false,
     "createdAt": 1786100552268
+  },
+  {
+    "id": 4380001,
+    "userId": 60001,
+    "type": "system",
+    "title": "🔎 whatsapp-web.js — sem novidade",
+    "message": "Verificação diária: a whatsapp-web.js segue em 1.34.7 (baseline 1.34.7).\nO envio a GRUPOS do bot \"Envio de Parcial\" continua quebrado, aguardando correção da biblioteca.\nContatos/gerentes recebem normal; grupos por encaminhamento manual.\nVerificado em: 08/08/2026, 08:01:10",
+    "referenceId": null,
+    "referenceType": null,
+    "actionUrl": null,
+    "isRead": false,
+    "createdAt": 1786186870508
+  },
+  {
+    "id": 4410001,
+    "userId": 60001,
+    "type": "system",
+    "title": "🔎 whatsapp-web.js — sem novidade",
+    "message": "Verificação diária: a whatsapp-web.js segue em 1.34.7 (baseline 1.34.7).\nO envio a GRUPOS do bot \"Envio de Parcial\" continua quebrado, aguardando correção da biblioteca.\nContatos/gerentes recebem normal; grupos por encaminhamento manual.\nVerificado em: 09/08/2026, 08:06:34",
+    "referenceId": null,
+    "referenceType": null,
+    "actionUrl": null,
+    "isRead": false,
+    "createdAt": 1786273594727
+  },
+  {
+    "id": 4440001,
+    "userId": 60001,
+    "type": "system",
+    "title": "⚠️ Backup de pedidos concluído com falhas",
+    "message": "Arquivados pedidos anteriores a 2026-08-10: 0 pasta(s), 0 arquivo(s) em 0 zip(s).\n30 pasta(s) com erro:\n• /mnt/medmais/fctimbi/SC/envio: EACCES: permission denied, mkdir '/mnt/medmais-rw/fctimbi/SC/envio_backup/2026/08'\n• /mnt/medmais/fctimbi/RS/envio: EACCES: permission denied, mkdir '/mnt/medmais-rw/fctimbi/RS/envio_backup/2026/08'\n• /mnt/medmais/Fct/SC/envio: EACCES: permission denied, open '/mnt/medmais-rw/Fct/SC/envio_backup/2026/07/2026-08-10.zip.tmp'\n• /mnt/medmais/PoupaMil/envio: EACCES: permission denied, mkdir '/mnt/medmais-rw/PoupaMil/envio_backup/2026/08'\n• /mnt/medmais/Catarinense/neosul/pedidos: EACCES: permission denied, open '/mnt/medmais-rw/Catarinense/neosul/pedidos_backup/2026/07/2026-08-10.zip.tmp'\n• /mnt/medmais/Masterfarma/Pedido: EACCES: permission denied, open '/mnt/medmais-rw/Masterfarma/Pedido_backup/2026/07/2026-08-10.zip.tmp'\n• /mnt/medmais/pdvlink-teuto/SC/ENVIO: EACCES: permission denied, mkdir '/mnt/medmais-rw/pdvlink-teuto/SC/ENVIO_backup/2026/08'\n• /mnt/medmais/Hypera/PEDIDO: EACCES: permission denied, open '/mnt/medmais-rw/Hypera/PEDIDO_backup/2026/07/2026-08-10.zip.tmp'\n• /mnt/medmais/sesi/sesi/pedido/gestao40sesi: EACCES: permission denied, open '/mnt/medmais-rw/sesi/sesi/pedido/gestao40sesi_backup/2026/07/2026-08-10.zip.tmp'\n• /mnt/medmais/PdvLinkPlus2.0.1 (Vitamedic)/SC/Pedido: EACCES: permission denied, mkdir '/mnt/medmais-rw/PdvLinkPlus2.0.1 (Vitamedic)/SC/Pedido_backup/2026/08'",
+    "referenceId": null,
+    "referenceType": null,
+    "actionUrl": "/indicadores/monitor-pedidos",
+    "isRead": false,
+    "createdAt": 1786352465157
+  },
+  {
+    "id": 4440002,
+    "userId": 60001,
+    "type": "system",
+    "title": "🔎 whatsapp-web.js — sem novidade",
+    "message": "Verificação diária: a whatsapp-web.js segue em 1.34.7 (baseline 1.34.7).\nO envio a GRUPOS do bot \"Envio de Parcial\" continua quebrado, aguardando correção da biblioteca.\nContatos/gerentes recebem normal; grupos por encaminhamento manual.\nVerificado em: 10/08/2026, 08:10:25",
+    "referenceId": null,
+    "referenceType": null,
+    "actionUrl": null,
+    "isRead": false,
+    "createdAt": 1786360225320
   }
 ]

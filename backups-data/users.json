@@ -28,8 +28,8 @@
     },
     "enabled": true,
     "createdAt": "2026-01-26T23:57:22.000Z",
-    "updatedAt": "2026-08-06T20:59:29.000Z",
-    "lastSignedIn": "2026-08-06T20:59:29.000Z"
+    "updatedAt": "2026-08-10T11:15:54.000Z",
+    "lastSignedIn": "2026-08-10T11:15:55.000Z"
   },
   {
     "id": 23,
@@ -2332,7 +2332,7 @@
     },
     "enabled": true,
     "createdAt": "2026-08-05T20:29:44.000Z",
-    "updatedAt": "2026-08-06T12:21:59.000Z",
-    "lastSignedIn": "2026-08-06T12:21:59.000Z"
+    "updatedAt": "2026-08-10T11:12:40.000Z",
+    "lastSignedIn": "2026-08-10T11:12:41.000Z"
   }
 ]
