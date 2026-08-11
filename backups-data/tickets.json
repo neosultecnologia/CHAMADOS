@@ -2967,7 +2967,7 @@
     "description": "Boa tarde!\nPor gentileza, liberar acesso na seguinte pasta:\nZ:\\17 - Logística\\Gestão da qualidade\\Documentos CD Palhoça\n\nEnviado e autorizado pelo Mauricio",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Resolvido / Aguardando Validação",
+    "status": "Concluído",
     "departmentId": 17,
     "createdById": 450001,
     "createdByName": "Humbertho Ryan",
@@ -2979,7 +2979,7 @@
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1785779888132,
-    "updatedAt": 1785783391695
+    "updatedAt": 1786449684879
   },
   {
     "id": 4140002,
@@ -3009,7 +3009,7 @@
     "description": "Preciso de Liberação de Acesso a pasta de Documentos Administrativos no PC da Farmacêutica RS MARIANA. No anexo enviei o print da pasta sem acesso.",
     "category": "Acesso",
     "priority": "Média",
-    "status": "Em Andamento",
+    "status": "Resolvido / Aguardando Validação",
     "departmentId": 90004,
     "createdById": 1350001,
     "createdByName": "Mariana Santos Liska",
@@ -3021,6 +3021,27 @@
     "lastRespondentName": "Carlos TI",
     "order": 0,
     "createdAt": 1785844964563,
-    "updatedAt": 1785846406890
+    "updatedAt": 1786388814440
+  },
+  {
+    "id": 4200001,
+    "ticketId": "bilhete_4170002",
+    "title": "Erro no infarma",
+    "description": "ao tentar gerar um PDF  de uma nota o infarma está fechando",
+    "category": "Funcionalidade",
+    "priority": "Baixa",
+    "status": "Pendente Infarma",
+    "departmentId": 90004,
+    "createdById": 990001,
+    "createdByName": "VANESSA REIS ",
+    "assignedToId": 60001,
+    "assignedToName": "Gabriel Bino",
+    "waitingForDepartment": null,
+    "lastRespondentRole": null,
+    "lastRespondentId": null,
+    "lastRespondentName": null,
+    "order": 0,
+    "createdAt": 1786374550877,
+    "updatedAt": 1786387210287
   }
 ]

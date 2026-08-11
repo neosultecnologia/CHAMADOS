@@ -8391,5 +8391,93 @@
     "newValue": "Concluído",
     "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
     "createdAt": 1786017836051
+  },
+  {
+    "id": 5280001,
+    "ticketId": 4200001,
+    "type": "created",
+    "authorId": 990001,
+    "authorName": "VANESSA REIS ",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por VANESSA REIS ",
+    "createdAt": 1786374550877
+  },
+  {
+    "id": 5280002,
+    "ticketId": 4200001,
+    "type": "assignment",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Não atribuído",
+    "newValue": "Gabriel Bino",
+    "description": "Responsável alterado para \"Gabriel Bino\"",
+    "createdAt": 1786386629573
+  },
+  {
+    "id": 5280003,
+    "ticketId": 4200001,
+    "type": "priority_change",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Alta",
+    "newValue": "Baixa",
+    "description": "Prioridade alterada de \"Alta\" para \"Baixa\"",
+    "createdAt": 1786386635452
+  },
+  {
+    "id": 5280004,
+    "ticketId": 4200001,
+    "type": "status_change",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Novos",
+    "newValue": "Em Análise",
+    "description": "Status alterado de \"Novos\" para \"Em Análise\"",
+    "createdAt": 1786386646417
+  },
+  {
+    "id": 5280005,
+    "ticketId": 4200001,
+    "type": "comment",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Comentário adicionado por Gabriel Bino",
+    "createdAt": 1786387203708
+  },
+  {
+    "id": 5280006,
+    "ticketId": 4200001,
+    "type": "status_change",
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "oldValue": "Em Análise",
+    "newValue": "Pendente Infarma",
+    "description": "Status alterado de \"Em Análise\" para \"Pendente Infarma\"",
+    "createdAt": 1786387210244
+  },
+  {
+    "id": 5280007,
+    "ticketId": 4170001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1786388814383
+  },
+  {
+    "id": 5310001,
+    "ticketId": 4140001,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1786449684860
   }
 ]

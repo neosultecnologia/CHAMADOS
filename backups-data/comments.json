@@ -574,5 +574,13 @@
     "authorName": "Carlos TI",
     "content": "Necessito dos nomes completos. ",
     "createdAt": 1785849182853
+  },
+  {
+    "id": 1470001,
+    "ticketId": 4200001,
+    "authorId": 60001,
+    "authorName": "Gabriel Bino",
+    "content": "Em contato com o suporte Infarma, será iniciado uma análise para corrigir o cenário. Durante esse período, a instrução é efetuar o download das notas no caminho padrão já definido pelo sistema: C:\\Infarma\\Nfe.",
+    "createdAt": 1786387203708
   }
 ]

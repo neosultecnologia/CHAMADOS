@@ -442,5 +442,17 @@
     "uploadedById": 1350001,
     "uploadedByName": "Mariana Santos Liska",
     "createdAt": 1785844965757
+  },
+  {
+    "id": 690001,
+    "ticketId": 4200001,
+    "fileName": "contato_infarma.png",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/4200001/1786387275833-03jev-contato_infarma.png",
+    "fileKey": "tickets/4200001/1786387275833-03jev-contato_infarma.png",
+    "mimeType": "image/png",
+    "fileSize": 58688,
+    "uploadedById": 60001,
+    "uploadedByName": "Gabriel Bino",
+    "createdAt": 1786387276715
   }
 ]
