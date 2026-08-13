@@ -8479,5 +8479,71 @@
     "newValue": "Concluído",
     "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
     "createdAt": 1786449684860
+  },
+  {
+    "id": 5340001,
+    "ticketId": 4140002,
+    "type": "status_change",
+    "authorId": 0,
+    "authorName": "Sistema",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Encerrado automaticamente por falta de resposta do solicitante após 7 dias.",
+    "createdAt": 1786536779874
+  },
+  {
+    "id": 5340002,
+    "ticketId": 4110004,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Em Andamento",
+    "newValue": "Resolvido / Aguardando Validação",
+    "description": "Status alterado de \"Em Andamento\" para \"Resolvido / Aguardando Validação\"",
+    "createdAt": 1786538288606
+  },
+  {
+    "id": 5370001,
+    "ticketId": 4110004,
+    "type": "status_change",
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "oldValue": "Resolvido / Aguardando Validação",
+    "newValue": "Concluído",
+    "description": "Chamado concluído e avaliado pelo solicitante",
+    "createdAt": 1786560749951
+  },
+  {
+    "id": 5370002,
+    "ticketId": 4230001,
+    "type": "created",
+    "authorId": 720001,
+    "authorName": "VERIDIANA",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por VERIDIANA",
+    "createdAt": 1786560966096
+  },
+  {
+    "id": 5370003,
+    "ticketId": 4230002,
+    "type": "created",
+    "authorId": 630282,
+    "authorName": "Márcia Freitas",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por Márcia Freitas",
+    "createdAt": 1786562817498
+  },
+  {
+    "id": 5370004,
+    "ticketId": 4230003,
+    "type": "created",
+    "authorId": 540002,
+    "authorName": "ADHARA",
+    "oldValue": null,
+    "newValue": null,
+    "description": "Chamado criado por ADHARA",
+    "createdAt": 1786566309226
   }
 ]

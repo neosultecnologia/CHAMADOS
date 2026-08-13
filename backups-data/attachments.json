@@ -454,5 +454,41 @@
     "uploadedById": 60001,
     "uploadedByName": "Gabriel Bino",
     "createdAt": 1786387276715
+  },
+  {
+    "id": 720001,
+    "ticketId": 4230001,
+    "fileName": "WhatsApp Image 2026-08-12 at 15.50.57.jpeg",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/4230001/1786560967000-83b83h-WhatsApp Image 2026-08-12 at 15.50.57.jpeg",
+    "fileKey": "tickets/4230001/1786560967000-83b83h-WhatsApp Image 2026-08-12 at 15.50.57.jpeg",
+    "mimeType": "image/jpeg",
+    "fileSize": 133236,
+    "uploadedById": 720001,
+    "uploadedByName": "VERIDIANA",
+    "createdAt": 1786560967366
+  },
+  {
+    "id": 720002,
+    "ticketId": 4230001,
+    "fileName": "WhatsApp Image 2026-08-12 at 15.51.24.jpeg",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/4230001/1786560967746-a5fe4h-WhatsApp Image 2026-08-12 at 15.51.24.jpeg",
+    "fileKey": "tickets/4230001/1786560967746-a5fe4h-WhatsApp Image 2026-08-12 at 15.51.24.jpeg",
+    "mimeType": "image/jpeg",
+    "fileSize": 48672,
+    "uploadedById": 720001,
+    "uploadedByName": "VERIDIANA",
+    "createdAt": 1786560968057
+  },
+  {
+    "id": 720003,
+    "ticketId": 4230003,
+    "fileName": "WhatsApp Image 2026-08-12 at 13.31.28.jpeg",
+    "fileUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663283984968/JLPd83LStLYaV7mJXtu8eL/tickets/4230003/1786566309908-e47k83-WhatsApp Image 2026-08-12 at 13.31.28.jpeg",
+    "fileKey": "tickets/4230003/1786566309908-e47k83-WhatsApp Image 2026-08-12 at 13.31.28.jpeg",
+    "mimeType": "image/jpeg",
+    "fileSize": 37550,
+    "uploadedById": 540002,
+    "uploadedByName": "ADHARA",
+    "createdAt": 1786566310278
   }
 ]
