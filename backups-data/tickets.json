@@ -3051,19 +3051,19 @@
     "description": "Boa tarde!\nIdentificamos uma inconsistência na emissão de coletas pelo SISWEB. O endereço do cliente consta atualizado e correto no sistema Infarma, porém é importado incorretamente para o SISWEB.\nSolicito suporte para correção desse erro de sincronização.",
     "category": "Técnico",
     "priority": "Média",
-    "status": "Novos",
+    "status": "Em Andamento",
     "departmentId": 90006,
     "createdById": 720001,
     "createdByName": "VERIDIANA",
-    "assignedToId": null,
-    "assignedToName": null,
+    "assignedToId": 300001,
+    "assignedToName": "Carlos TI",
     "waitingForDepartment": null,
     "lastRespondentRole": null,
     "lastRespondentId": null,
     "lastRespondentName": null,
     "order": 0,
     "createdAt": 1786560966096,
-    "updatedAt": 1786560966096
+    "updatedAt": 1786706300179
   },
   {
     "id": 4230002,

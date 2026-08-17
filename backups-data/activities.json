@@ -8545,5 +8545,27 @@
     "newValue": null,
     "description": "Chamado criado por ADHARA",
     "createdAt": 1786566309226
+  },
+  {
+    "id": 5400001,
+    "ticketId": 4230001,
+    "type": "status_change",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Novos",
+    "newValue": "Em Andamento",
+    "description": "Status alterado de \"Novos\" para \"Em Andamento\"",
+    "createdAt": 1786706297718
+  },
+  {
+    "id": 5400002,
+    "ticketId": 4230001,
+    "type": "assignment",
+    "authorId": 300001,
+    "authorName": "Carlos TI",
+    "oldValue": "Não atribuído",
+    "newValue": "Carlos TI",
+    "description": "Responsável alterado para \"Carlos TI\"",
+    "createdAt": 1786706300113
   }
 ]
