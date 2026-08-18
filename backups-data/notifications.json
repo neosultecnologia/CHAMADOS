@@ -4980,30 +4980,6 @@
     "createdAt": 1786566309421
   },
   {
-    "id": 4560001,
-    "userId": 60001,
-    "type": "system",
-    "title": "🔎 whatsapp-web.js — sem novidade",
-    "message": "Verificação diária: a whatsapp-web.js segue em 1.34.7 (baseline 1.34.7).\nO envio a GRUPOS do bot \"Envio de Parcial\" continua quebrado, aguardando correção da biblioteca.\nContatos/gerentes recebem normal; grupos por encaminhamento manual.\nVerificado em: 13/08/2026, 08:08:06",
-    "referenceId": null,
-    "referenceType": null,
-    "actionUrl": null,
-    "isRead": false,
-    "createdAt": 1786619286935
-  },
-  {
-    "id": 4590001,
-    "userId": 60001,
-    "type": "system",
-    "title": "🔎 whatsapp-web.js — sem novidade",
-    "message": "Verificação diária: a whatsapp-web.js segue em 1.34.7 (baseline 1.34.7).\nO envio a GRUPOS do bot \"Envio de Parcial\" continua quebrado, aguardando correção da biblioteca.\nContatos/gerentes recebem normal; grupos por encaminhamento manual.\nVerificado em: 14/08/2026, 08:10:17",
-    "referenceId": null,
-    "referenceType": null,
-    "actionUrl": null,
-    "isRead": false,
-    "createdAt": 1786705817779
-  },
-  {
     "id": 4590002,
     "userId": 720001,
     "type": "ticket_status_changed",
